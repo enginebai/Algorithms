@@ -123,3 +123,4 @@ Temporary Items
 hs_err_pid*
 .idea/
 .gradle/
+build/
