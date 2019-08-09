@@ -1,0 +1,5 @@
+rootProject.name = 'solution'
+rootProject.name = 'LeetCode'
+include 'solutions'
+findProject(':solutions')?.name = 'leetcode'
+
