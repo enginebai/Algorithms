@@ -9,3 +9,4 @@ LeetCode
 | #   | Problem         | Solution | Difficulty |
 |-----|------------------|----------|------------|
 | 125 | [Valid Palindrome](./problems/125.valid-palindrome.md) |[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution125.kt)          | Easy       |
+|941|[Valid Mountain Array](./problems/941.valid-mountain-array.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution941.kt)|Easy|
