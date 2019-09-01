@@ -13,6 +13,6 @@ LeetCode
 |349|[Intersection of Two Arrays](./problems/349.intersection-of-two-arrays.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution349.kt)|Easy|
 |811|[Subdomain Visit Count](./problems/811.subdomain-visit-count.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution811.kt)|Easy|
 |392|[Is Subsequence](./problems/392.is-subsequence.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution392.kt)|Easy|
-|806|[Number of Lines To Write String](./problems/806.number-of-lines-to-write-string.md)||Easy|
-|21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)||Easy|
-|237|[Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/description/)||Easy|
+|121|[Best Time to Buy and Sell Stock](./problems/121.best-time-to-buy-and-sell-stock.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution121.kt)|Easy|
+
+## References
