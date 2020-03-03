@@ -7,7 +7,8 @@ LeetCode
 
 | #   | Problem         | Solution | Difficulty |
 |-----|------------------|----------|------------|
-|1|[Tow Sum](./problems/1.two-sum.md)|[Kotlin](qg./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution1.kt)|Easy|
+|1|[Tow Sum](./problems/1.two-sum.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution1.kt)|Easy|
+|7|[Reverse Integer](./problems/7.reverse-integer.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution7.kt)|Easy|
 |125|[Valid Palindrome](./problems/125.valid-palindrome.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution125.kt)| Easy|
 |941|[Valid Mountain Array](./problems/941.valid-mountain-array.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution941.kt)|Easy|
 |349|[Intersection of Two Arrays](./problems/349.intersection-of-two-arrays.md)|[Kotlin](./solutions/src/main/kotlin/com/enginebai/leetcode/easy/Solution349.kt)|Easy|
