@@ -12,3 +12,4 @@
 - [ ] https://github.com/orrsella/soft-eng-interview-prep
 - [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
 - [ ] https://www.khanacademy.org/computing/computer-science/algorithms
+- [ ] http://infolab.stanford.edu/~ullman/focs.html
