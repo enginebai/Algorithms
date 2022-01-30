@@ -6,6 +6,7 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 ![Google UK](./media/google1.jpg)
 
 ## Topics
+- [Introduction](./topics/introduction.md)
 - [Complexity](./topics/complexity.md)
 - [Array & String](./topics/array.md)
 - [Stack & Queue](./topics/stack-queue.md)
