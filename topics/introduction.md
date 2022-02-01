@@ -5,14 +5,22 @@
 3. Analysis of DSA: average and worst case.
 
 ## Abstract Data Structure (ADT)
+1. The first step to design data structure: to know the **specification** (i.e. its behavior) ot how to implement from the user perspective, that is, to comprehend in **abstract** way (or mathematical). 
+2. For ADT, we define the logical behavior by a set of values (`Domain`) and operations (`Functions` + `Axiom`), we just define **what** to store/operate the data, not **how** to implement the way to store/operate the data.
+
+> // TODO: translate into English and organize.
+> Source: // https://en.wikipedia.org/wiki/Abstract_data_type
+
+```
 1. 設計資料結構的第一步：知道規格而不需要知道如何實作，也就是以「抽象」的（數學模型）方式去理解和設計，可以當作純粹理論的實體，用來簡化描述抽象演算法、分類和評價資料結構，抽象資料結構的選擇決定了演算法的設計以及評估複雜度。
 2. 定義的時候，我們需要知道 `Domain` + `Functions` + `Axiom`，這時候我們只定義「行為」+「介面」，不定義實作細節（介面實作分離，使用者只關心公開的介面，不知道且不在意如何實作、也不受實作影響）。
+```
 
 <img src='../media/ADT.png' alt='ADT'/>
 
 3. 資料結構就是一個 ADT 不斷做 refinement 的過程，一直到所有運算都能夠「直接執行的函式」表示出來為止。
 
-以抽象的 `List` 的規格為例：
+For the abstract `List` specification：
 
 ```md
 # Domain
@@ -27,7 +35,7 @@
 5. Size(i): Get the list size.
 ```
 
-或者抽象的 `Set`：
+Or the abstract `Set`：
 
 ```md
 # Domain
@@ -54,7 +62,7 @@ So learning algorithm is trying to:
 
 <img src='../media/problem-algorithm.png' alt='ADT'/>
 
-For example, let's solve the problem: "In a classroom, find the students with same birthday?" Then an algorithm to solve this problem will be:
+For example, let's solve the problem: `"In a classroom, find the students with same birthday?"`. Then an algorithm to solve this problem will be:
 
 ```md
 1. Maintain a record of (name, birthday).
@@ -76,7 +84,7 @@ We will say that the algorithm said to be **correct** if it halts with correct o
 
 How to prove correctness of algorithm? For arbitrarily large inputs, algorithms repeat the instructions via loops or **recursion**, so we have to prove correctness via **induction**. One of the nice things about `induction` is that is isolates our problem to not consider everthing all at once, but break it down into smaller interface so that we can do less work at each step.
 
-> // TODO: We don't spend too much time on induction, may take a close look back.
+> // TODO: We don't spend too much time on induction, may take a close look back later.
 
 <img src='../media/induction.png' alt='ADT'/>
 
@@ -86,4 +94,4 @@ See [Complexity](./complexity.md) topic.
 ## Resources
 - [X] Fundamental of Data Structure - Ch1. Introduction
 - [X] CLRS - Ch1. Introduction
-- [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/index.htm)
+- [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
