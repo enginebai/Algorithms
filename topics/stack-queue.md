@@ -1,4 +1,6 @@
 # Stack & Queue
+
+## Resources
 - [ ] Fundamental of Data Structure
 - [ ] CLRS (Simple)
 - [ ] CTCI
@@ -8,7 +10,7 @@
 - [ ] https://github.com/youngyangyang04/leetcode-master#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97 // Note with illustration
 - [ ] [LC Learn](https://leetcode.com/explore/learn/card/queue-stack/)
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Queue)
-- [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/)
+- [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/) // Coding questions collection with easy/medium/hard levels
 - [ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#stack) // Simple note
 - [ ] Tech Interview Handbook - [Queue](https://www.techinterviewhandbook.org/algorithms/queue) & [Stack](https://www.techinterviewhandbook.org/algorithms/stack) // Simple note
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/basic-data-structure // Simple note
