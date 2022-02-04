@@ -14,11 +14,10 @@
 ```
 1. 設計資料結構的第一步：知道規格而不需要知道如何實作，也就是以「抽象」的（數學模型）方式去理解和設計，可以當作純粹理論的實體，用來簡化描述抽象演算法、分類和評價資料結構，抽象資料結構的選擇決定了演算法的設計以及評估複雜度。
 2. 定義的時候，我們需要知道 `Domain` + `Functions` + `Axiom`，這時候我們只定義「行為」+「介面」，不定義實作細節（介面實作分離，使用者只關心公開的介面，不知道且不在意如何實作、也不受實作影響）。
+3. 資料結構就是一個 ADT 不斷做 refinement 的過程，一直到所有運算都能夠「直接執行的函式」表示出來為止。
 ```
 
 <img src='../media/ADT.png' alt='ADT'/>
-
-3. 資料結構就是一個 ADT 不斷做 refinement 的過程，一直到所有運算都能夠「直接執行的函式」表示出來為止。
 
 For the abstract `List` specification：
 
@@ -92,6 +91,7 @@ How to prove correctness of algorithm? For arbitrarily large inputs, algorithms 
 See [Complexity](./complexity.md) topic.
 
 ## Resources
-- [X] Fundamental of Data Structure - Ch1. Introduction
-- [X] CLRS - Ch1. Introduction
+- [X] Fundamental of Data Structure - Introduction
+- [X] CLRS - Introduction
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
+- [ ] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
