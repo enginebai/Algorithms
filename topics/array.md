@@ -9,10 +9,10 @@
 - [ ] [Google Tech Dev Guide - Map/Dictionary](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#linear) // Note + coding questions (8)
 - [ ] [LC Learn - Array 101](https://leetcode.com/explore/learn/card/fun-with-arrays/) // Note + coding questions
 - [ ] [LC Learn - Array and String](https://leetcode.com/explore/learn/card/array-and-string/) // Note + coding questions
-- [ ] [LC Top Interview Questions - Array and String](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/) // Note + coding questions
-- [ ] [Google Recuriter Recommended Problems List - Array](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Array)
-- [ ] [Tech Interview Handbook - Array](https://www.techinterviewhandbook.org/algorithms/array) // Note + coding questions
-- [ ] [Coding Interview University - Array](https://github.com/jwasham/coding-interview-university#arrays) // (Old videos + **curated note**) (1)
-- [ ] [Tech Interview Cheat Sheet - Arrays](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#array) // Note
-- [ ] [Software Engineering Interview Preparation - Array](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#arrays) // Simple note
+- [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/) // Coding questions collection with easy/medium/hard levels
+- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Array)
+- [ ] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/array) // Note + coding questions
+- [ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#arrays) // (Old videos + **curated note**) (1)
+- [ ] [Tech Interview Cheat Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#array) // Note
+- [ ] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#arrays) // Simple note
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/basic-data-structure // Simple DS Array note
