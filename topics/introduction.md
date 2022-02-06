@@ -1,8 +1,14 @@
 # Introduction
 ## Goals of Learning Data Structure
-1. Be able to describe DSA in high-level and abstract way.
+1. Be able to describe DSA in high-level and abstract way. (Interface, see below)
 2. Design and implement the DSA.
 3. Analysis of DSA: average and worst case.
+
+| Interface (API / ADT) | Data Structure                     |
+|-----------------------|------------------------------------|
+| - Specification       | - Representation                   |
+| - What data can store | - How to store data                |
+| - What operations are | - Algorithms to support operations |
 
 ## Abstract Data Structure (ADT)
 1. The first step to design data structure: to know the **specification** (i.e. its behavior) ot how to implement from the user perspective, that is, to comprehend in **abstract** way (or mathematical). 
@@ -94,4 +100,4 @@ See [Complexity](./complexity.md) topic.
 - [X] Fundamental of Data Structure - Introduction
 - [X] CLRS - Introduction
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
-- [ ] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
+- [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
