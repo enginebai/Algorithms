@@ -96,6 +96,17 @@ How to prove correctness of algorithm? For arbitrarily large inputs, algorithms 
 ### Efficiency
 See [Complexity](./complexity.md) topic.
 
+## How to Solve an Algorithm Problem?
+1. Reduce to a problem you already know (using data structure or algorithm):
+    * Searching
+    * Sorting
+    * Shortest Path
+2. Design your own (recursive) algorithm:
+    * Brute Force
+    * Divide and Conquer
+    * Dynamic Programming
+    * Greedy
+
 ## Resources
 - [X] Fundamental of Data Structure - Introduction
 - [X] CLRS - Introduction
