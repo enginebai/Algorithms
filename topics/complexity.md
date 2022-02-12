@@ -1,12 +1,98 @@
 # Complexity
 
 ## Efficiency
-How could we measure how fast an algorithm runs? The *efficiency* means not only 1) how fast the algorithm does run, but also 2)  how fast does it compare to others. It depends on the algorithm itself (implementation) and the machine, but we want to measure without knowing how fast the machine is, that is, want measure the performance to be **machine independent**. 
+How could we measure how fast an algorithm runs? The *efficiency* means not only 
 
-We don't want to count how long it runs on a real machine, we don't measure the time, instead, we want to abstract the time, count fundamental operations, expect performance to depend on **the size of our input**.
+1) how fast the algorithm does run, but also 
+2) how fast does it compare to others. 
+
+It depends on the algorithm itself (implementation) and the machine, but we want to measure without knowing how fast the machine is, that is, want to measure the performance to be **machine independent**. 
+
+We don't want to count how long it runs on a real machine, we don't measure the time, instead, we want to abstract the time, count the fundamental operations, expect performance to depend on **the size of our input**.
+
+The *running time* of an algorithm on a particular inputs is **the number of statements/operations/steps executed** which is to define the notation of step so that it's machine-independent.
+
+## Analysis of Runtime
+For *insertion sort*, the code is below: 
+```kotlin
+fun insertSort(A) {
+    for (j = 2 to A.size()) {           // For loop of unsorted array
+        var key = A[j]                  // Current element to sort
+        var i = j - 1                   // Previous element to compare
+        while (i > 0 && A[i] > key) {   // Compare key with sorted array
+            A[i + 1] = A[i]             // Shift elements if greater than key
+            i = i - 1                   
+        }
+        A[i + 1] = key                  // Insert the key to right place where the previous is less than the key
+    }
+}
+```
+
+We start the running time analysis by presenting the time of seach tatements:
+```kotlin
+fun insertSort(A) {                     // ---- Times ----
+    for (j = 2 to A.size()) {           // n, without -1 means the iteration that tests to break for-loop
+        var key = A[j]                  // n - 1
+        var i = j - 1                   // n - 1
+        while (i > 0 && A[i] > key) {   // SUM(j = 2 to n) {j}, without -1 means the iteration that tests to break while-loop
+            A[i + 1] = A[i]             // SUM(j = 2 to n) {j - 1},
+            i = i - 1                   // SUM(j = 2 to n) {j - 1}
+        }
+        A[i + 1] = key                  // n - 1
+    }
+}
+```
+
+In insertion sort, the best case occurs if the array is already sorted, and its running time will be:
+
+```kotlin
+fun insertSort(A) {                     // ---- Times ----
+    for (j = 2 to A.size()) {           // n
+        var key = A[j]                  // n - 1
+        var i = j - 1                   // n - 1
+        while (i > 0 && A[i] > key) {   // n - 1, 
+            A[i + 1] = A[i]             // 0, not running
+            i = i - 1                   // 0, not running
+        }
+        A[i + 1] = key                  // n - 1
+    }
+}
+```
+
+It is **linear function** of `n` for the best case. What about the case that the array is in reverse sorted order - the worst case results, means that we must compare each keys `A[j]` with each element in the entire sorted sbuarray `A[1..j-1]`, so the running time will be:
+
+```kotlin
+fun insertSort(A) {                     // ---- Times ----
+    for (j = 2 to A.size()) {           // n
+        var key = A[j]                  // n - 1
+        var i = j - 1                   // n - 1
+        while (i > 0 && A[i] > key) {   // SUM(j = 2 to n) {j} = n(n + 1)/2 - 1, 
+            A[i + 1] = A[i]             // SUM(j = 2 to n) {j - 1} = n(n - 1) / 2
+            i = i - 1                   // SUM(j = 2 to n) {j - 1} = n(n - 1) / 2
+        }
+        A[i + 1] = key                  // n - 1
+    }
+}
+```
+
+This worst running time can expressed as `a*n^2 + b*n + c`, it's a **quadratic function** of `n`.
+
+We shall usually conccentrate on the worst-case running time, because of the three reasons:
+1. It's the upper bound of running time for any input, it gives us a guarantee that the algorithm will never tak any longer.
+2. For some algorithm, the worst case occurs fairly often.
+3. The "average case" is often roughly as bad as the worst case.
+
+We expect that the same algorithm running on a fast machine will run faster than the same algorithm on a slow one, however, we'd like to be able to compare without worrying about how fast the machine is, so we compare the running time based on *asymptotic performance* (abstraction way) relative to the input size.
 
 ## Asymptotic Notation
-We use *asymptotic notation* to ignore constants and low order terms that do not change with the input size, we use this notation to express the **rate of growth** of an algorithm's running time in terms of the input size `n`.
+We use *asymptotic notation* to express the **rate of growth** of an algorithm's running time in terms of the input size `n`.
+
+For the worst-case running time of *insert sort* is `a*n^2 + b*n + c`, what we care about is the **order of growth**, we therefore consider:
+
+1. Keep only the leading terms (`a*n^2`) and drop lower-order terms (`b*n + c`), since the lower-order terms are relatively insignificant for large `n`.
+2. Ignore the constant coefficient in the leading term, i.e. `a`.
+
+Thus, we write that *insertion sort* has a worst-case running time of `Θ(n^2)`.
 
 - O Notation: *Upper* bound, an algorithm takes *at most* a certain amount of time.
 - Ω Notation: *Lower* bound, an algorithm takes *at least* a certain amount of time.
@@ -21,20 +107,19 @@ The following table lists the common runtime from the fastest for slowest ones.
 
 > Source: https://www.bigocheatsheet.com/
 
-## Analysis of Runtime
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
 - [ ] CLRS
     - [ ] Ch 2. Getting Started
     - [ ] Ch 3. Growth of Functions
-- [ ] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf) // Definition, very detailed, too long might skip.
+- [ ] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf)
 - [ ] CTCI
 - [X] Fundamental of Data Structure
 - [X] [Google Tech Dev Guide - Runtime Analysis](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-7) // Curated resources & links
 - [X] [Khan Academy - Asymptotic Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation)
 
-- [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction)
+- [ ] ~~[Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction)~~
 - [ ] [Complexity：Asymptotic Notation(漸進符號)](http://alrightchiu.github.io/SecondRound/complexityasymptotic-notationjian-jin-fu-hao.html) // Nice introductory post
 - [ ] [Coding Interview University - Complexity](https://github.com/jwasham/coding-interview-university#algorithmic-complexity--big-o--asymptotic-analysis) // Curated resources & links, however, they might be skipped after all since it's out-of-date.
 - [ ] [Software Engineering Interview Preparation - Complexity](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/complexity.md) // Like cheat sheet
