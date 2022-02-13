@@ -35,7 +35,7 @@ fun insertSort(A) {                     // ---- Times ----
         var key = A[j]                  // n - 1
         var i = j - 1                   // n - 1
         while (i > 0 && A[i] > key) {   // SUM(j = 2 to n) {j}, without -1 means the iteration that tests to break while-loop
-            A[i + 1] = A[i]             // SUM(j = 2 to n) {j - 1},
+            A[i + 1] = A[i]             // SUM(j = 2 to n) {j - 1}
             i = i - 1                   // SUM(j = 2 to n) {j - 1}
         }
         A[i + 1] = key                  // n - 1
@@ -66,7 +66,7 @@ fun insertSort(A) {                     // ---- Times ----
     for (j = 2 to A.size()) {           // n
         var key = A[j]                  // n - 1
         var i = j - 1                   // n - 1
-        while (i > 0 && A[i] > key) {   // SUM(j = 2 to n) {j} = n(n + 1)/2 - 1, 
+        while (i > 0 && A[i] > key) {   // SUM(j = 2 to n) {j} = n(n + 1) / 2 - 1, 
             A[i + 1] = A[i]             // SUM(j = 2 to n) {j - 1} = n(n - 1) / 2
             i = i - 1                   // SUM(j = 2 to n) {j - 1} = n(n - 1) / 2
         }
@@ -82,26 +82,29 @@ We shall usually conccentrate on the worst-case running time, because of the thr
 2. For some algorithm, the worst case occurs fairly often.
 3. The "average case" is often roughly as bad as the worst case.
 
-We expect that the same algorithm running on a fast machine will run faster than the same algorithm on a slow one, however, we'd like to be able to compare without worrying about how fast the machine is, so we compare the running time based on *asymptotic performance* (abstraction way) relative to the input size.
+We expect that the same algorithm running on a fast machine will run faster than the same algorithm on a slow one, however, we'd like to be able to compare without worrying about how fast the machine is, so we compare the running time based on *asymptotic performance* (the abstraction way) relative to the input size.
 
 ## Asymptotic Notation
-We use *asymptotic notation* to express the **rate of growth** of an algorithm's running time in terms of the input size `n`.
+When look at input sizes large engough to make only the order of growth of the running time relevant, we use *asymptotic notation* to express the **rate of growth** of an algorithm's running time in terms of the input size `n`.
 
 For the worst-case running time of *insert sort* is `a*n^2 + b*n + c`, what we care about is the **order of growth**, we therefore consider:
 
-1. Keep only the leading terms (`a*n^2`) and drop lower-order terms (`b*n + c`), since the lower-order terms are relatively insignificant for large `n`.
-2. Ignore the constant coefficient in the leading term, i.e. `a`.
+1. Keep only the leading terms (`a*n^2`) and drop *lower-order terms* (`b*n + c`), since the lower-order terms are relatively insignificant for large `n`.
+2. Ignore the *constant coefficient* in the leading term, i.e. `a`.
 
 Thus, we write that *insertion sort* has a worst-case running time of `Θ(n^2)`.
 
-- O Notation: *Upper* bound, an algorithm takes *at most* a certain amount of time.
-- Ω Notation: *Lower* bound, an algorithm takes *at least* a certain amount of time.
-- Θ Notation: Both, tight bound
+| O Notation                                                                   | Ω Notation                                                                    | Θ Notation                                           |
+|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|------------------------------------------------------|
+| **Upper**  bound, an algorithm takes  **at most**  a certain amount of time. | **Lower**  bound, an algorithm takes  **at least**  a certain amount of time. | Both, tight bound.                                    |
+| <img src='../media/o-notation.png' width='150'/>                             | <img src='../media/omega-notation.png' width='150'/>                          | <img src='../media/theta-notation.png' width='150'/> |
+> Image source: [Khan Academy - Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms#asymptotic-notation)
 
-The following table lists the common runtime from the fastest for slowest ones.
+The following table lists the common runtime from the fastest to slowest ones.
+
 | constant | logarithmic | linear | log-linear | quadratic | polynomial | exponential | factorial |
 |----------|-------------|--------|------------|-----------|------------|-------------|-----------|
-| Θ(1)     | Θ(log n)    | Θ(n)   | Θ(n log n) | Θ(n2)     | Θ(n^c)     | 2^Θ(n^c)    | Θ(n!)     |
+| Θ(1)     | Θ(log n)    | Θ(n)   | Θ(n log n) | Θ(n^2)     | Θ(n^c)     | 2^Θ(n^c)    | Θ(n!)     |
 
 <img src='../media/complexity.png' alt='Complexity'/>
 
@@ -110,15 +113,14 @@ The following table lists the common runtime from the fastest for slowest ones.
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
-- [ ] CLRS
-    - [ ] Ch 2. Getting Started
-    - [ ] Ch 3. Growth of Functions
+- [X] CLRS
+    - [X] Ch 2. Getting Started
+    - [X] Ch 3. Growth of Functions
 - [ ] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf)
 - [ ] CTCI
 - [X] Fundamental of Data Structure
 - [X] [Google Tech Dev Guide - Runtime Analysis](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-7) // Curated resources & links
 - [X] [Khan Academy - Asymptotic Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation)
-
 - [ ] ~~[Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction)~~
 - [ ] [Complexity：Asymptotic Notation(漸進符號)](http://alrightchiu.github.io/SecondRound/complexityasymptotic-notationjian-jin-fu-hao.html) // Nice introductory post
 - [ ] [Coding Interview University - Complexity](https://github.com/jwasham/coding-interview-university#algorithmic-complexity--big-o--asymptotic-analysis) // Curated resources & links, however, they might be skipped after all since it's out-of-date.
