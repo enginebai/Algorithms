@@ -12,7 +12,7 @@ We don't want to count how long it runs on a real machine, we don't measure the 
 
 The *running time* of an algorithm on a particular inputs is **the number of statements/operations/steps executed** which is to define the notation of step so that it's machine-independent.
 
-## Analysis of Runtime
+## Runtime Analysis
 For *insertion sort*, the code is below: 
 ```kotlin
 fun insertSort(A) {
@@ -96,8 +96,8 @@ Thus, we write that *insertion sort* has a worst-case running time of `Θ(n^2)`.
 
 | O Notation                                                                   | Ω Notation                                                                    | Θ Notation                                           |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------------|------------------------------------------------------|
-| **Upper**  bound, an algorithm takes  **at most**  a certain amount of time. | **Lower**  bound, an algorithm takes  **at least**  a certain amount of time. | Both, tight bound.                                    |
-| <img src='../media/o-notation.png' width='150'/>                             | <img src='../media/omega-notation.png' width='150'/>                          | <img src='../media/theta-notation.png' width='150'/> |
+| **Upper**  bound, an algorithm takes  **at most**  a certain amount of time. | **Lower**  bound, an algorithm takes  **at least**  a certain amount of time. | Both, tight bound                                    |
+| <img src='../media/o-notation.png' />                             | <img src='../media/omega-notation.png' />                          | <img src='../media/theta-notation.png'/> |
 > Image source: [Khan Academy - Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms#asymptotic-notation)
 
 The following table lists the common runtime from the fastest to slowest ones.
@@ -110,6 +110,77 @@ The following table lists the common runtime from the fastest to slowest ones.
 
 > Source: https://www.bigocheatsheet.com/
 
+## Runtime Analysis Techniques
+
+### Summation Rules
+Support an algorithm consists of two parts, one part takes `O(n^2)`, another take `O(n^3)`, we can simply "add" these two parts to be the running time of the entire algorithm. 
+
+For example, an function that make `A` an n x n identity matrix (All the values are 1 in the diagonal position):
+
+```kotlin
+fun generateIdentityMatrix(n: Int) {    // Time
+    for (i = 0; i < n; i++) {           // n + 1
+        for (j = 0; j < n, j++) {       // n
+            A[i][j] = 0                 // n * n = O(n^2)
+        }
+    }
+    for (i = 0; i < n; i++) {           // n + 1 = O(n)
+        A[i][i] = 1                     // n
+    }
+}
+```
+The running time of `generateIdentityMatrix()` is `O(n)` + `O(n^2)` by summation rule.
+
+### For Simple Statement
+There are several kinds of statements can run in `O(1)` time, that is independent of the input size.
+* Arithmetic: `+` or `%`.
+* Logical: `&&` or `||`.
+* Comparison: `<=`.
+* Structure accessing: `A[i]`
+* Assigment: `A[j + 1] = A[i]`
+* Function calls not evaluating arguments: `print(...)` or `logger.debug(...)`
+* Jump: `break` or `return`.
+
+### For For-Loops Statement
+For example, the for-loop `for (i = 0; i < n - 1; i++)`, it iterates *((n - 1) - 0) / 1 = n - 1* times (that is *(end - start) / step* formular).
+
+To bound the running time of for-loop, we must obtain an upper bound on **the number of loop iteration** times **the time to perform per iteration**, we can multiple the Big-O for the body by the Big-O of the loop, that is,
+
+```kotlin
+for (i = 0; i < n; i++) {           // O(n) 
+    A[i][i] = 1                     // O(1)
+}
+```
+
+The running time will be `O(1) * O(n) = O(n)`.
+
+For some loops don't have an explicit count of number around the loop, we still can apply this rule:
+
+```kotlin
+fun linearSearch(A, value): Int {
+    // ...
+    var i = 0
+    while (value != A[i]) { // Run n times at most, O(n)
+        i++                 // O(1)
+        // ...
+    }
+    // ...
+}
+```
+The running time of function `linearSearch()` is `O(n) * O(1) = O(n)` .
+
+### For If-Else Conditional Statement
+```kotlin
+fun doSomething() {
+    if (...) {
+        here()      // Takes f(n) 
+    } else {
+        there()     // Takes g(n)
+    }
+}
+```
+
+The running time of `doSomething()` is very straightforward, that is `O(max(f(n), g(n)))`.
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
