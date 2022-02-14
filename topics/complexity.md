@@ -98,7 +98,7 @@ Thus, we write that *insertion sort* has a worst-case running time of `Θ(n^2)`.
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------------|------------------------------------------------------|
 | **Upper**  bound, an algorithm takes  **at most**  a certain amount of time. | **Lower**  bound, an algorithm takes  **at least**  a certain amount of time. | Both, tight bound                                    |
 | <img src='../media/o-notation.png' />                             | <img src='../media/omega-notation.png' />                          | <img src='../media/theta-notation.png'/> |
-> Image source: [Khan Academy - Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms#asymptotic-notation)
+> Source: [Khan Academy - Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms#asymptotic-notation)
 
 The following table lists the common runtime from the fastest to slowest ones.
 
@@ -182,12 +182,20 @@ fun doSomething() {
 
 The running time of `doSomething()` is very straightforward, that is `O(max(f(n), g(n)))`.
 
+### Summary
+| For Loop                                        | While Loop                                        | Selection                                        | Block                                        |
+|-------------------------------------------------|---------------------------------------------------|--------------------------------------------------|----------------------------------------------|
+| <img src='../media/for-loop-running-time.png'/> | <img src='../media/while-loop-running-time.png'/> | <img src='../media/selection-running-time.png'/> | <img src='../media/block-running-time.png'/> |
+> Source: http://infolab.stanford.edu/~ullman/focs/ch03.pdf
+
+> // TODO: We will revisit this topic for "recursion" concept.
+
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
 - [X] CLRS
     - [X] Ch 2. Getting Started
     - [X] Ch 3. Growth of Functions
-- [ ] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf)
+- [X] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf)
 - [ ] CTCI
 - [X] Fundamental of Data Structure
 - [X] [Google Tech Dev Guide - Runtime Analysis](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-7) // Curated resources & links
