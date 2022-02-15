@@ -113,23 +113,27 @@ The following table lists the common runtime from the fastest to slowest ones.
 ## Runtime Analysis Techniques
 
 ### Summation Rules
-Support an algorithm consists of two parts, one part takes `O(n^2)`, another take `O(n^3)`, we can simply "add" these two parts to be the running time of the entire algorithm. 
+Support an algorithm consists of two parts, one part takes `O(n^2)`, another take `O(n^3)`, we can simply "add" these two parts and drop the lower-order terms to be the running time of the entire algorithm.
+
+Or more simple way for this rule: `O(f(n)) + O(g(n))` = `O(max(f(n), g(n)))`, for example, `6n^3 + 4n^2 + 10n + 1` is `O(n^3)` by summation rule.
+
+What about `O(f(n)) * O(g(n))`? That would be `O(f(n) * g(n))`.
 
 For example, an function that make `A` an n x n identity matrix (All the values are 1 in the diagonal position):
 
 ```kotlin
-fun generateIdentityMatrix(n: Int) {    // Time
-    for (i = 0; i < n; i++) {           // n + 1
+fun generateIdentityMatrix(n: Int) {    // Times
+    for (i = 0; i < n; i++) {           // n + 1 
         for (j = 0; j < n, j++) {       // n
-            A[i][j] = 0                 // n * n = O(n^2)
+            A[i][j] = 0                 // n * n
         }
     }
-    for (i = 0; i < n; i++) {           // n + 1 = O(n)
+    for (i = 0; i < n; i++) {           // n + 1
         A[i][i] = 1                     // n
     }
 }
 ```
-The running time of `generateIdentityMatrix()` is `O(n)` + `O(n^2)` by summation rule.
+The running time of `generateIdentityMatrix()` is `O(n^2)` + `O(n)` = `O(n^2)` by summation rule.
 
 ### For Simple Statement
 There are several kinds of statements can run in `O(1)` time, that is independent of the input size.
@@ -147,12 +151,12 @@ For example, the for-loop `for (i = 0; i < n - 1; i++)`, it iterates *((n - 1) -
 To bound the running time of for-loop, we must obtain an upper bound on **the number of loop iteration** times **the time to perform per iteration**, we can multiple the Big-O for the body by the Big-O of the loop, that is,
 
 ```kotlin
-for (i = 0; i < n; i++) {           // O(n) 
-    A[i][i] = 1                     // O(1)
+for (i = 0; i < n; i++) {           // n + 1
+    A[i][i] = 1                     // n
 }
 ```
 
-The running time will be `O(1) * O(n) = O(n)`.
+The running time will be `O(n)`.
 
 For some loops don't have an explicit count of number around the loop, we still can apply this rule:
 
@@ -160,22 +164,22 @@ For some loops don't have an explicit count of number around the loop, we still 
 fun linearSearch(A, value): Int {
     // ...
     var i = 0
-    while (value != A[i]) { // Run n times at most, O(n)
-        i++                 // O(1)
+    while (value != A[i]) { // Run n times at most = O(n)
+        i++                 // n
         // ...
     }
     // ...
 }
 ```
-The running time of function `linearSearch()` is `O(n) * O(1) = O(n)` .
+The running time of function `linearSearch()` is `O(n)` .
 
 ### For If-Else Conditional Statement
 ```kotlin
 fun doSomething() {
     if (...) {
-        here()      // Takes f(n) 
+        here()      // Takes O(f(n))
     } else {
-        there()     // Takes g(n)
+        there()     // Takes O(g(n))
     }
 }
 ```
@@ -188,21 +192,30 @@ The running time of `doSomething()` is very straightforward, that is `O(max(f(n)
 | <img src='../media/for-loop-running-time.png'/> | <img src='../media/while-loop-running-time.png'/> | <img src='../media/selection-running-time.png'/> | <img src='../media/block-running-time.png'/> |
 > Source: http://infolab.stanford.edu/~ullman/focs/ch03.pdf
 
-> // TODO: We will revisit this topic for "recursion" concept.
+### Common Combinatorics
+| Combinations                                                                  | Running Times                      |
+|-------------------------------------------------------------------------------|------------------------------------|
+| All pairs                                                                     | O(n^2)                             |
+| All triples                                                                   | O(n^3)                             |
+| Number of all permutations                                                    | n!                                 |
+| `n` over `k`, number of combinations for choosing `k` items from a set of `n` | C(n over k) = n! / (k! * (n - k)!) |
+| Number of subsets from a set of `n`                                           | 2^n                                |                             |
+
+> // TODO: We will revisit this topic for "recursion" concept or move to standalone topic.
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
 - [X] CLRS
     - [X] Ch 2. Getting Started
     - [X] Ch 3. Growth of Functions
-- [X] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf)
-- [ ] CTCI
+- [X] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf) // Comprehensive analysis of running time.
+- [ ] CTCI // For interview keypoints
 - [X] Fundamental of Data Structure
 - [X] [Google Tech Dev Guide - Runtime Analysis](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-7) // Curated resources & links
-- [X] [Khan Academy - Asymptotic Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation)
+- [X] [Khan Academy - Asymptotic Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation) 
 - [ ] ~~[Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction)~~
-- [ ] [Complexity：Asymptotic Notation(漸進符號)](http://alrightchiu.github.io/SecondRound/complexityasymptotic-notationjian-jin-fu-hao.html) // Nice introductory post
-- [ ] [Coding Interview University - Complexity](https://github.com/jwasham/coding-interview-university#algorithmic-complexity--big-o--asymptotic-analysis) // Curated resources & links, however, they might be skipped after all since it's out-of-date.
-- [ ] [Software Engineering Interview Preparation - Complexity](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/complexity.md) // Like cheat sheet
-- [ ] [Tech Interview Cheat Sheet - Asymptotic Analysis](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#asymptotic-notation) // Cheat sheet
+- [X] [Complexity：Asymptotic Notation(漸進符號)](http://alrightchiu.github.io/SecondRound/complexityasymptotic-notationjian-jin-fu-hao.html) // Nice introductory post
+- [-] [Coding Interview University - Complexity](https://github.com/jwasham/coding-interview-university#algorithmic-complexity--big-o--asymptotic-analysis) // Curated resources & links, but lots of resourse are old videos.
+- [X] [Software Engineering Interview Preparation - Complexity](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/complexity.md) // Like cheat sheet
+- [ ] [Tech Interview Cheat Sheet - Asymptotic Analysis](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#asymptotic-notation) // Quick notes
 
