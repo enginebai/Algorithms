@@ -186,6 +186,35 @@ fun doSomething() {
 
 The running time of `doSomething()` is very straightforward, that is `O(max(f(n), g(n)))`.
 
+### Multi-Part Algorithms: Add vs. Multiple
+```kotlin
+// A block
+arrayA.forEach { item ->
+    print(item)
+}
+
+// B block
+arrayB.forEach { item ->
+    print(item)
+}
+```
+We do A block then B block later, the total amount of work is `O(A + B)`.
+
+```kotlin
+// A block
+arrayA.forEach { a ->
+    // B block
+    arrayB.forEach { b ->
+        print("$a, $b")
+    }
+}
+```
+We do B block for each element in A, then the total amount of work is `O(A * B)`.
+
+In other words:
+* `"Do this, and when you're done, then do that"` --> **add** the runtime.
+* `"Do this for each time you do that"` --> **multiple** the runtime.
+
 ### Summary
 | For Loop                                        | While Loop                                        | Selection                                        | Block                                        |
 |-------------------------------------------------|---------------------------------------------------|--------------------------------------------------|----------------------------------------------|
@@ -201,6 +230,10 @@ The running time of `doSomething()` is very straightforward, that is `O(max(f(n)
 | `n` over `k`, number of combinations for choosing `k` items from a set of `n` | C(n over k) = n! / (k! * (n - k)!) |
 | Number of subsets from a set of `n`                                           | 2^n                                |                             |
 
+## Space Complexity
+1. Space complexity is a parallel concept to time complexity. For an array of size `n`, it requires `O(n)` space, and for two-dimensional array of `n x m`, it will requires `O(n * m)`.
+> // TODO: add note for space complexity.
+
 > // TODO: We will revisit this topic for "recursion" concept or move to standalone topic.
 
 ## Resources
@@ -209,13 +242,14 @@ The running time of `doSomething()` is very straightforward, that is `O(max(f(n)
     - [X] Ch 2. Getting Started
     - [X] Ch 3. Growth of Functions
 - [X] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf) // Comprehensive analysis of running time.
-- [ ] CTCI // For interview keypoints
+- [-] CTCI // For interview keypoints, concepts and practices.
+> CTCI contains some topics that you haven't studied yet, might revisit this book once you have been studied.
 - [X] Fundamental of Data Structure
 - [X] [Google Tech Dev Guide - Runtime Analysis](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-7) // Curated resources & links
 - [X] [Khan Academy - Asymptotic Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation) 
-- [ ] ~~[Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction)~~
+- ~~[ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction)~~
 - [X] [Complexity：Asymptotic Notation(漸進符號)](http://alrightchiu.github.io/SecondRound/complexityasymptotic-notationjian-jin-fu-hao.html) // Nice introductory post
 - [-] [Coding Interview University - Complexity](https://github.com/jwasham/coding-interview-university#algorithmic-complexity--big-o--asymptotic-analysis) // Curated resources & links, but lots of resourse are old videos.
 - [X] [Software Engineering Interview Preparation - Complexity](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/complexity.md) // Like cheat sheet
-- [ ] [Tech Interview Cheat Sheet - Asymptotic Analysis](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#asymptotic-notation) // Quick notes
+- [X] [Tech Interview Cheat Sheet - Asymptotic Analysis](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#asymptotic-notation) // Very short note
 
