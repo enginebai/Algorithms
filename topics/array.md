@@ -1,6 +1,6 @@
 # Array
 ## Sequences & Sets
-### Interface
+### Interface (ADT)
 *Sequences* maintain a collection of items in an *extrinsic* order. By extrinsic, it means the first item is "first" not because of what the item is (such as it is the largest number), but because the external position puts it there. Sequances are generalizations of `array`, `stack`, `queue` and `linked list`.
 
 | Usages    | Operations        | Descriptions                                          |
@@ -31,6 +31,18 @@ By contrast, *Sets* maintain a collection of items in an *intrinsic* order based
 |           | `find_min()`   | Return item with smallest key.                       |
 |           | `find_max()`   | Return item with largest key.                        |
 
+### Implementation
+There are two main data structure approaches:
+1. Array-based
+2. Pointer-based
+
+#### Array
+Implementing a sequence using an array, which index `i` is the item `i` allows `get_at(i)` and `set_at(i, x)` to be `O(1)` (*random access*, it is great for static operations!). However, when deleting or inserting, we have to reallocate the array and shift all items (by creating a new array with updated size and coping the existing items to the new array), it take `O(n)` in the worst case.
+
+| Data Structure | Container   | Static                     | Dynamic                             | Dynamic                            | Dynamic                            |
+|----------------|-------------|----------------------------|-------------------------------------|------------------------------------|------------------------------------|
+|                | `create(X)` | `get_at(i)` `set_at(i, x)` | `insert_at(i, x)` `delete_at(i, x)` | `insert_first(x)` `delete_first()` | `insert_first(x)` `delete_first()` |
+| Array          | `O(n)`      | `O(1)`                     | `O(n)`                              | `O(n)`                             | `O(n)`                             |
 
 ## Resources
 - [ ] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
