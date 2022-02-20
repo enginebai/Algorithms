@@ -90,6 +90,8 @@ When look at input sizes large engough to make only the order of growth of the r
 For the worst-case running time of *insert sort* is `a*n^2 + b*n + c`, what we care about is the **order of growth**, we therefore consider:
 
 1. Keep only the leading terms (`a*n^2`) and drop *lower-order terms* (`b*n + c`), since the lower-order terms are relatively insignificant for large `n`.
+> `O(n^2 + n)` becomes `O(n^2)`. `O(n + log n)` becomes `O(n)`. `O(5 * 2 ^ n + 1000 * n ^ 100)` becomes `O(2^n)`.
+
 2. Ignore the *constant coefficient* in the leading term, i.e. `a`.
 
 Thus, we write that *insertion sort* has a worst-case running time of `Θ(n^2)`.
@@ -135,6 +137,8 @@ fun generateIdentityMatrix(n: Int) {    // Times
 ```
 The running time of `generateIdentityMatrix()` is `O(n^2)` + `O(n)` = `O(n^2)` by summation rule.
 
+How about the case `O(n + n/2)`, `O(2 * n)` or `O(n + log n)`? We can drop the constants (1.5, 2, (1 + log n) respectively) and keep the dominant term, so they are still `O(n)`. However, for `O(n + m)` we can not drop the term `m` since it is not relative to `n`.
+
 ### For Simple Statement
 There are several kinds of statements can run in `O(1)` time, that is independent of the input size.
 * Arithmetic: `+` or `%`.
@@ -145,8 +149,21 @@ There are several kinds of statements can run in `O(1)` time, that is independen
 * Function calls not evaluating arguments: `print(...)` or `logger.debug(...)`
 * Jump: `break` or `return`.
 
+### For If-Else Conditional Statement
+```kotlin
+fun doSomething() {
+    if (...) {
+        here()      // Takes O(f(n))
+    } else {
+        there()     // Takes O(g(n))
+    }
+}
+```
+
+The running time of `doSomething()` is very straightforward, that is `O(max(f(n), g(n)))`.
+
 ### For For-Loops Statement
-For example, the for-loop `for (i = 0; i < n - 1; i++)`, it iterates *((n - 1) - 0) / 1 = n - 1* times (that is *(end - start) / step* formular).
+For example, the for-loop `for (i = 0; i < n; i++)`, it iterates `n` times (including the last time that tests to break the for-loop).
 
 To bound the running time of for-loop, we must obtain an upper bound on **the number of loop iteration** times **the time to perform per iteration**, we can multiple the Big-O for the body by the Big-O of the loop, that is,
 
@@ -173,18 +190,26 @@ fun linearSearch(A, value): Int {
 ```
 The running time of function `linearSearch()` is `O(n)` .
 
-### For If-Else Conditional Statement
+For the nested loop:
 ```kotlin
-fun doSomething() {
-    if (...) {
-        here()      // Takes O(f(n))
-    } else {
-        there()     // Takes O(g(n))
+fun printPairs(array: Int[][]) {
+    for (i = 0; i < array.length; i++) {
+        for (j = i + 1; j < array.length; j++) {
+            print(array[i][j])
+        }
     }
 }
 ```
+We can **count the number of iteration** as we mention above, when i = 0, we have to run `n - 1` steps in j-loop and so on:
+| Loop `i`             | 0     | 1     | 2    | ... | n - 1 |
+|----------------------|-------|-------|------|-----|-------|
+| Times of running `j` | n - 1 | n - 2 | n -3 | ... | 1     |
 
-The running time of `doSomething()` is very straightforward, that is `O(max(f(n), g(n)))`.
+Therefore, the total steps is: `(n - 1) + (n - 2) + ... + 2 + 1` = `n * (n - 1) / 2`, that is `O(n^2)`.
+
+How about we iterate an array with *only half of items*, that is `for (int i = 0; i < array.length / 2; i++)`? It does **NOT** impack the big O time, it's still `O(n)`.
+
+⭐⭐ We just need to know **how many iterations** the for loop goes through in *the worst case*.
 
 ### Multi-Part Algorithms: Add vs. Multiple
 ```kotlin
@@ -212,28 +237,78 @@ arrayA.forEach { a ->
 We do B block for each element in A, then the total amount of work is `O(A * B)`.
 
 In other words:
-* `"Do this, and when you're done, then do that"` --> **add** the runtime.
-* `"Do this for each time you do that"` --> **multiple** the runtime.
+* `"Do this, and when you're done, then do that"` ➡️ **add** the runtime.
+* `"Do this for each time you do that"` ➡️ **multiple** the runtime.
 
-### Summary
-| For Loop                                        | While Loop                                        | Selection                                        | Block                                        |
-|-------------------------------------------------|---------------------------------------------------|--------------------------------------------------|----------------------------------------------|
-| <img src='../media/for-loop-running-time.png'/> | <img src='../media/while-loop-running-time.png'/> | <img src='../media/selection-running-time.png'/> | <img src='../media/block-running-time.png'/> |
-> Source: http://infolab.stanford.edu/~ullman/focs/ch03.pdf
+## Running Time: log n
+Let's use *binary search* as an example, we start searching from middle of `n`, then search left- (0 ~ n/2) or right-hand side (n/2 + 1 ~ n), and so on. We keep dividing by 2 until `n` reaches to 1.
+
+```
+For n = 16
+n = 16
+n = 8   // divide by 2
+...
+n = 1   // divide by 2   
+```
+How many times does `n` divide by 2 to be 1? Let's look in reverse, *how may time we can multiple 1 by 2 until we get `n`?
+
+```
+2 ^ 4 = 16, log 16 = 4
+2 ^ k = n, log n = k
+```
+
+That we can conclude the runtime of binary search is `O(log n)`.
+
+> What the base of the `log`? The short answer is that it doesn't matter for Big O at all.
 
 ### Common Combinatorics
 | Combinations                                                                  | Running Times                      |
 |-------------------------------------------------------------------------------|------------------------------------|
 | All pairs                                                                     | O(n^2)                             |
 | All triples                                                                   | O(n^3)                             |
+| Divide by x                                                                   | O(log n)                           |
 | Number of all permutations                                                    | n!                                 |
 | `n` over `k`, number of combinations for choosing `k` items from a set of `n` | C(n over k) = n! / (k! * (n - k)!) |
-| Number of subsets from a set of `n`                                           | 2^n                                |                             |
+| Number of subsets from a set of `n`                                           | 2^n                                |
+
+> Usually, not always!!
 
 ## Space Complexity
 1. Space complexity is a parallel concept to time complexity. For an array of size `n`, it requires `O(n)` space, and for two-dimensional array of `n x m`, it will requires `O(n * m)`.
-> // TODO: add note for space complexity.
 
+Stack space in recursive calls counts, the following code would take `O(n)` space and time:
+
+```kotlin
+fun sum(n: Int): Int {
+    if (n <= 0) return 0
+    else return n + sum(n - 1)
+}
+```
+
+Each function call adds a level to the stack (and exists for each call):
+```
+sum(4)
+    -> sum(3)
+        -> sum(2)
+            -> sum(1)
+                -> sum(0)
+```
+
+However, if the calls do not exist simultaneously on the call stack, you don't need `O(n)` space. For example,
+```kotlin
+fun sumPairSequence(n: Int): Int {
+    var sum = 0;
+    for (i in 0..n) {
+        sum += sumPair(i, i + 1)
+    }
+    return sum
+}
+
+fun sumPair(a: Int, b: Int) = a + b
+```
+The function `sumPairSequence()` has runtime `O(n)` but only need `O(1)` space.
+
+----
 > // TODO: We will revisit this topic for "recursion" concept or move to standalone topic.
 
 ## Resources
@@ -243,7 +318,7 @@ In other words:
     - [X] Ch 3. Growth of Functions
 - [X] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf) // Comprehensive analysis of running time.
 - [-] CTCI // For interview keypoints, concepts and practices.
-> CTCI contains some topics that you haven't studied yet, might revisit this book once you have been studied.
+> CTCI contains some topics that you haven't studied yet, might revisit this book once you have been studied. (Especially for recursion)
 - [X] Fundamental of Data Structure
 - [X] [Google Tech Dev Guide - Runtime Analysis](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-7) // Curated resources & links
 - [X] [Khan Academy - Asymptotic Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation) 
