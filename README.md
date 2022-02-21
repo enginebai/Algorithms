@@ -40,6 +40,7 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] [LC Learn](https://leetcode.com/explore/learn/)
 - [ ] https://github.com/jwasham/coding-interview-university
 - [ ] [Tech Interview Handbook](https://techinterviewhandbook.org/algorithms/introduction/)
+- [ ] [Google Tech Dev Guide - Map/Dictionary](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#linear)
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
 - [ ] https://github.com/youngyangyang04/leetcode-master
 - [ ] https://github.com/orrsella/soft-eng-interview-prep
