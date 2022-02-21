@@ -42,7 +42,17 @@ Implementing a sequence using an array, which index `i` is the item `i` allows `
 | Data Structure | Container   | Static                     | Dynamic                             | Dynamic                            | Dynamic                            |
 |----------------|-------------|----------------------------|-------------------------------------|------------------------------------|------------------------------------|
 |                | `create(X)` | `get_at(i)` `set_at(i, x)` | `insert_at(i, x)` `delete_at(i, x)` | `insert_first(x)` `delete_first()` | `insert_first(x)` `delete_first()` |
-| Array          | `O(n)`      | `O(1)`                     | `O(n)`                              | `O(n)`                             | `O(n)`                             |
+| Array          | `O(n)`      | **`O(1)`**                     | `O(n)`                              | `O(n)`                             | `O(n)`                             |
+
+#### Linked List
+*Linked List* is a pointer-based data structure, each item has a *node* with two properties: `node.item` (the value) and `node.next` (the link to next node), and maintain pointers to the first node, called *head*.
+
+Linked list takes `O(1)` for inserting or deleting first item simply by relinking the pointer. However, it takes `O(n)` for the getter/setter function since it finds the i-th element through items one-by-one.
+
+| Data Structure | Container   | Static                     | Dynamic                             | Dynamic                            | Dynamic                            |
+|----------------|-------------|----------------------------|-------------------------------------|------------------------------------|------------------------------------|
+|                | `create(X)` | `get_at(i)` `set_at(i, x)` | `insert_at(i, x)` `delete_at(i, x)` | `insert_first(x)` `delete_first()` | `insert_first(x)` `delete_first()` |
+| Linked List    | `O(n)`      | `O(n)`                     | `O(n)`                              | **`O(1)`**                         | `O(n)`                             |
 
 ## Resources
 - [ ] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
