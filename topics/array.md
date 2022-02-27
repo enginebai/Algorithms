@@ -75,11 +75,15 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
 |------------------|----------|------------|
-|[485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)|[Divider & Conquer](../leetcode/485.max-consecutive-ones.md)|Easy|
+|[485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)|[Straightforward](../leetcode/485.max-consecutive-ones.md)|Easy|
+|[1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)|[Straightforward](../leetcode/1295.find-numbers-with-even-number-of-digits.md)|Easy|
 
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
+- [ ] Kotlin document
+    - [ ] [Array](https://kotlinlang.org/docs/basic-types.html#arrays)
+    - [ ] [Collections](https://kotlinlang.org/docs/collections-overview.html)
 - [ ] [LC Learn - Array 101](https://leetcode.com/explore/learn/card/fun-with-arrays/) // Note + coding questions
 - [ ] [LC Learn - Array and String](https://leetcode.com/explore/learn/card/array-and-string/) // Note + coding questions
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Array)
