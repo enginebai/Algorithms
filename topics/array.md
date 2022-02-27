@@ -72,6 +72,12 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 * Operation has **amortized cost** `T(n)` if `k` operations cost at most `k * T(n)`, that is *on average* over may operations.
 * Inserting into a dynamic array take `O(1)` amortized time. (It might still take `O(n)` for some worst case)
 
+## Problems & Solutions
+| Problem         | Solution | Difficulty |
+|------------------|----------|------------|
+|[485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)|[Divider & Conquer](../leetcode/485.max-consecutive-ones.md)|Easy|
+
+
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
 - [ ] [LC Learn - Array 101](https://leetcode.com/explore/learn/card/fun-with-arrays/) // Note + coding questions
@@ -80,7 +86,6 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/) // Coding questions collection with easy/medium/hard levels
 > Write some note or summary + do problems below
 - [ ] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/array) // Note + coding questions
-- [ ] [Kotlin - Array](https://kotlinlang.org/docs/basic-types.html#arrays) + [Primitive type arrays](https://kotlinlang.org/docs/basic-types.html#primitive-type-arrays)
 - [ ] CTCI // Simple notes + some problems
 - [ ] https://github.com/youngyangyang04/leetcode-master // Note + problems with nice illustration.
 - [ ] [Tech Interview Cheat Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#array) // Simple note summary
