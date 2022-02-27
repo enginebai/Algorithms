@@ -1,7 +1,9 @@
 Googler - Data Structures & Algorithms (DSA)
 ========
 
-The notes here are to contain all basic/fundamental/popular data strcutures and algorithms needed to pass a Google software engineer (SWE) position interview.
+The notes here are to contain all basic/fundamental/popular data strcutures and algorithms needed to pass a Google software engineer  position interview. (actually, not only for Google, it's more like *general* DSA study & practice plan)
+
+> This is a curated resources and notes for interview preparation, however, it's working in progress and might contains my personal study progress. Feel free to fork (contribution is not available for now), remove them and keep the curated resources and notes as your study resource. Happy studying :) 💪 
 
 ![Google UK](./media/google1.jpg)
 
@@ -26,7 +28,7 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Other](./topics/other.md)
 
 ----
-> // TODO: Remove the following resources.
+> // TODO: Move the following resources to dedicated topic notes.
 
 ## Hash Table
 - [ ] Fundamental of Data Structure
