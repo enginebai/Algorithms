@@ -78,8 +78,8 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 |[485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)|[Straightforward](../leetcode/485.max-consecutive-ones.md)|Easy|
 |[1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)|[Straightforward](../leetcode/1295.find-numbers-with-even-number-of-digits.md)|Easy|
 |[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[Two Pointers](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
-|[1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)|[TBD]()|Easy|
-|[27. Remove Element](https://leetcode.com/problems/remove-element/)|[Two Pointer](../leetcode/27.remove-element.md)|Easy|
+|[1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)|[Two Pointers](../leetcode/1089.duplicate-zeros.md)|Easy|
+|[27. Remove Element](https://leetcode.com/problems/remove-element/)|[Two Pointers](../leetcode/27.remove-element.md)|Easy|
 
 
 ## Resources
