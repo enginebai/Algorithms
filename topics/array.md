@@ -80,6 +80,7 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 |[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[Two Pointers](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
 |[1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)|[Two Pointers](../leetcode/1089.duplicate-zeros.md)|Easy|
 |[27. Remove Element](https://leetcode.com/problems/remove-element/)|[Two Pointers](../leetcode/27.remove-element.md)|Easy|
+|[88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[Two Pointers](../leetcode/88.merge-sorted-array.md)|Easy|
 
 
 ## Resources
