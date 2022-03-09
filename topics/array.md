@@ -83,6 +83,7 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 |[88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[Two Pointers](../leetcode/88.merge-sorted-array.md)|Easy|
 |[26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[Two Pointers](../leetcode/26.remove-duplicates-from-sorted-array.md)|Easy|
 |[1346. Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/)|[Hash Table](../leetcode/1346.check-if-n-and-its-double-exist.md)|Easy|
+|[941. Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/)|[Two Pointers](../leetcode/941.valid-mountain-array.md)|Easy|
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
