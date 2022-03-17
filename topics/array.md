@@ -87,6 +87,7 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 |[1299. Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/)|[Straightforward](../leetcode/1299.replace-elements-with-greatest-element-on-right-side.md)|Easy|
 |[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Two Pointers](../leetcode/283.move-zeros.md)|Easy|
 |[905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|[Two Pointers](../leetcode/905.sort-array-by-parity.md)|Easy|
+|[1051. Height Checker](https://leetcode.com/problems/height-checker/)|[Straightforward](../leetcode/1051.height-checker.md)|Easy|
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
