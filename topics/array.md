@@ -88,13 +88,14 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 |[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Two Pointers](../leetcode/283.move-zeros.md)|Easy|
 |[905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|[Two Pointers](../leetcode/905.sort-array-by-parity.md)|Easy|
 |[1051. Height Checker](https://leetcode.com/problems/height-checker/)|[Straightforward](../leetcode/1051.height-checker.md)|Easy|
+|[448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)|[In-place Negative Seen](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
 - [ ] Kotlin document
-    - [ ] [Array](https://kotlinlang.org/docs/basic-types.html#arrays)
+    - [X] [Array](https://kotlinlang.org/docs/basic-types.html#arrays)
     - [ ] [Collections](https://kotlinlang.org/docs/collections-overview.html)
-- [ ] [LC Learn - Array 101](https://leetcode.com/explore/learn/card/fun-with-arrays/) // Note + coding questions
+- [X] [LC Learn - Array 101](https://leetcode.com/explore/learn/card/fun-with-arrays/) // Note + coding questions
 - [ ] [LC Learn - Array and String](https://leetcode.com/explore/learn/card/array-and-string/) // Note + coding questions
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Array)
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/) // Coding questions collection with easy/medium/hard levels
