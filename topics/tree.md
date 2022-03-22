@@ -1,4 +1,11 @@
 # Tree & Binary (Search) Tree
+* Tree
+* Heap
+* Priority
+* Binary Tree
+* Binary Search Tree
+* BFS/DFS
+
 - [ ] Fundamental of Data Structure
 - [ ] CLRS (Simple)
 - [ ] CTCI

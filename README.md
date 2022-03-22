@@ -13,18 +13,18 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Array & String](./topics/array.md)
 - [Stack & Queue](./topics/stack-queue.md)
 - [Linked List](./topics/linked-list.md)
-- [Tree](./topcis/tree.md)
-- [Hash Table](./topics/hash-table.md)
+- [Tree](./topics/tree.md)
 - [Heap](./topics/heap.md)
+- [Priority Queue](./topics/priority-queue.md)
 - [Graph](./topics/graph.md)
+- [Searching](./topics/searching.md)
 - [Minimum Spanning Tree](./topics/minimum-spinning-tree.md)
 - [Shortest Path](./topics/shortest-path.md)
 - [Sorting](./topics/sorting.md)
-- [Searching](./topics/searching.md)
+- [Hash Table](./topics/hash-table.md)
+- [Recursion](./topics/recursion.md)
 - [Dynamic Programming](./topics/dynamic-programming.md)
 - [Greedy](./topics/greedy.md)
-- [Recursion](./topics/recursion.md)
-- [Priority Queue](./topics/priority-queue.md)
 - [Other](./topics/other.md)
 
 ----
@@ -96,6 +96,7 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] https://www.khanacademy.org/computing/computer-science/algorithms
 
 ## Searching & Binary Searching
+* BFS/DFS for trea and graph
 - [ ] CTCI
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
 - [ ] https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-8
@@ -157,7 +158,6 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings
 - [ ] https://github.com/youngyangyang04/leetcode-master
 
-## Two Pointers
 ## Union Find
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
 
