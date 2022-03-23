@@ -1,4 +1,41 @@
 # Stack & Queue
+## Stack
+A *stack* is an ordered list in which all insertions and deletions are made at one end, called the *top*.
+
+```
+|A| <- Top
+|B|
+|C|
+|D|
+|_|
+```
+
+* Last In First Out (LIFO): The last inserted element will be removed first.
+
+### ADT
+```kotlin
+interface Stack<T> {
+    // Create new empty stack.
+    fun create(): Stack
+    // Insert item and return the new stack.
+    fun add(item: T): Stack
+    // Remove the top item and return new stack.
+    fun delete(): Stack
+    // Return true if the stack is empty
+    fun isEmpty(): Boolean
+}
+```
+
+## Queue
+A *queue* is an order list in which all insertions take place at one end, called the *rear*, while all deletions take place at aonther end, called the *front*.
+
+``` 
+        -------
+Front <- ABCDE <- Rear
+        -------
+```
+
+* First In First Out (FIFO): The first inserted element will be removed first.
 
 ## Resources
 - [ ] Fundamental of Data Structure
