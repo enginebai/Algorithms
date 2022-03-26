@@ -54,6 +54,8 @@ Linked list takes `O(1)` for inserting or deleting first item simply by relinkin
 |                | `create(X)` | `get_at(i)` `set_at(i, x)` | `insert_at(i, x)` `delete_at(i, x)` | `insert_first(x)` `delete_first()` | `insert_last(x)` `delete_last()` |
 | Linked List    | `O(n)`      | `O(n)`                     | `O(n)`                              | **`O(1)`**                         | `O(n)`                           |
 
+> More detail, see [Linked List](../topics/linked-list.md) topic.
+
 #### Dynamic Array
 The `insert_last(x)` takes `O(n)` for every time, however, there is way to relax constraint size of array: *over-allocate*, we reallocate `Θ(n)` extrac space (0.5n or 2n) so that **reallocation does not occur with every dynamic operation**.
 
