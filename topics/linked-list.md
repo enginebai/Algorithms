@@ -61,10 +61,66 @@ fun LinkedList.insertLast(data: T) {
 
 ### Deletion
 ![Linked List Delete](../media/linked-list-delete.png)
+To delete the first node, we simply **assign the next node to head**, it takes `O(1)`.
 
 ```kotlin
-fun deleteFirst(linkedList: LinkedList) {
+fun LinkedList.deleteFirst() {
+    val nextNode = this.head.next
+    this.head = nextNode
+}
+```
 
+To delete specific node from the linked list, we have to iterate to find the previous node before the node to delete and relink to delete. It takes `O(n)` because it iterates the list to locate the node to delete.
+
+```kotlin
+fun LinkedList.delete(node: Node) {
+    var nodeToDelete = this.head
+    var previousNode: Node? = null
+
+    // We find the node to delete at the beginning.
+    if (nodeToDelete != null && nodeToDelete.data == node.data) {
+        head = null
+        return
+    }
+
+    // Iterate to find the node to delete
+    while (nodeToDelete != null && nodeToDelete?.data != node.data) {
+        previousNode = nodeToDelete
+        nodeToDelete = nodeToDelete.next
+    }
+
+    // If we found it, relink the node
+    if (nodeToDelete != null) {
+        previousNode = nodeToDelete.next
+    }
+}
+```
+
+To delete at the specific index, we have to iterate the linked list to locate the node of that index, it also takes `O(n)`.
+
+```kotlin
+fun LinkedList.deleteAt(indexToDelete: Int) {
+    if (indexToDelete < 0) return
+
+    var currentIndex = 0
+    var currentNode: Node? = this.head
+
+    if (indexToDelete == 0) {
+        this.head = currentNode.next
+        return
+    }
+
+    var previousNode: Node? = null
+    while (currentIndex < indexToDelete && currentNode != null) {
+        currentIndex++
+        previousNode = currentNode
+        currentNode = currentNode.next
+    }
+
+    // We actually find the index to delete.
+    if (currentIndex == indexToDelete) {
+        previousNode.next = currentNode.next
+    }
 }
 ```
 
