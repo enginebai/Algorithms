@@ -124,6 +124,52 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
 }
 ```
 
+### Get Length
+There are two ways: iterative and recursive to calculate the number of nodes, both take `O(n)` time complexity.
+
+We start with iterative way, it's very straightforward:
+
+```kotlin
+fun LinkedList.getSize(): Int {
+    var size = 0
+    var node = this.head
+
+    while (node != null) {
+        size++
+        node = node.next
+    }
+    return size
+}
+```
+
+And for recursive way, suppose we define the function `getSize(node: Node): Int`:
+1. If `head` is null, return 0.
+2. Else return `1 + getSize(node.next)`.
+
+```kotlin
+fun LinkedList.getSize(node: Node = this.head): Int {
+    if (node == null) return 0
+    else return 1 + getSize(node.next)
+}
+```
+
+### Search
+```kotlin
+fun LinkedList.search(data: T): Boolean {
+    var node = this.head
+    while (node != null) {
+        if (node.data == data) return true
+        node = node.next
+    }
+    return false
+}
+
+fun LinkedList.searchRecursively(node: Node? = head, data: T): Boolean {
+    if (node == null) return false
+    return if (node.data == data) true
+    else searchRecursively(node.next, data)
+}
+```
 ## Doubly Linked List
 
 ## Circular Linked List
