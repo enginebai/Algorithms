@@ -74,6 +74,13 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 * Operation has **amortized cost** `T(n)` if `k` operations cost at most `k * T(n)`, that is *on average* over may operations.
 * Inserting into a dynamic array take `O(1)` amortized time. (It might still take `O(n)` for some worst case)
 
+## Pros. & Cons.
+| Pros.                                                  | Cons.                                                                                 | Usages                         |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------|
+| 1. Random access.<br>2. No `next` field, saving space. (vs Linked List) | 1. Bad at insert/delete. (Copy to new array)<br>2. Bad at resize. (Copy to new array) | 1. Fast access.<br>2. Fix size |
+
+> Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
+
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
 |------------------|----------|------------|

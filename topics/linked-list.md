@@ -5,7 +5,12 @@ A *linked list* is a pointer-based data structure that store each item in a *nod
 
 > For linked list, we don't have to store item in contiguous memory address like array anymore, we can store item anywhere in memory since we have pointer to next item.
 
-## Pros & Cons v.s. Array
+## Pros. & Cons.
+| Pros.                                                                   | Cons.                                                            | Usages                                                                                           |
+|-------------------------------------------------------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| 1. Fast when inserting/deleting at the beginning.<br>2. Easy to resize. | 1. Bad at random access<br>2. Extra space to store `next` field. | 1. D<br>ynamic size<br>2. Insert/delete frequently<br>3. Don't need to access element very much. |
+
+> Comparison to array, see [Array](../topics/array.md) topic.
 
 ## Singly Linked List
 
@@ -208,17 +213,17 @@ fun LinkedList.searchRecursively(node: Node? = head, data: T): Boolean {
 |[707. Design Linked List](https://leetcode.com/problems/design-linked-list/)|[Implementation](../leetcode/707.design-linked-list.md)|Medium|
 
 ## Resources
-- [ ] Fundamental of Data Structure
+- [X] Fundamental of Data Structure
 - [ ] CLRS (Simple)
 - [ ] CTCI
 - [ ] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-2) // Simple note + simple coding problem
-- [ ] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html) // Nice introductory note
+- [X] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html) // Nice introductory note
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list // Nice introductory note + illustration
 - [ ] https://github.com/youngyangyang04/leetcode-master#%E9%93%BE%E8%A1%A8 // Nice introductory note
 - [ ] [LC Learn](https://leetcode.com/explore/learn/card/linked-list/) 
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Linked_List)
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/) // Coding questions with easy/medium/hard levels
-- [ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#linked-lists) // Simple note + few videos
+- [ ] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#linked-lists)~~ // Simple note + few videos
 - [ ] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/linked-list) // Simple note + some relative LC coding questions
 - [ ] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#linked-lists) // Simple note, like cheat sheet
 - [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet#linked-list // // Simple note, like cheat sheet
