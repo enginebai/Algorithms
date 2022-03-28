@@ -19,7 +19,6 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Priority Queue](./topics/priority-queue.md)
 - [Graph](./topics/graph.md)
 - [Searching](./topics/searching.md)
-- [Minimum Spanning Tree](./topics/minimum-spinning-tree.md)
 - [Shortest Path](./topics/shortest-path.md)
 - [Sorting](./topics/sorting.md)
 - [Hash Table](./topics/hash-table.md)

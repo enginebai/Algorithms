@@ -5,6 +5,8 @@ A *linked list* is a pointer-based data structure that store each item in a *nod
 
 > For linked list, we don't have to store item in contiguous memory address like array anymore, we can store item anywhere in memory since we have pointer to next item.
 
+## Pros & Cons v.s. Array
+
 ## Singly Linked List
 
 ### ADT
@@ -49,9 +51,14 @@ However, it takes `O(n)` to insert a new node at the end, because it has to iter
 ```kotlin
 fun LinkedList.insertLast(data: T) {
     val newNode = Node(data)
-
     var lastNode = this.head
-    while (nextNode != null) {
+
+    if (lastNode == null) {
+        this.head = newNode
+        return
+    }
+
+    while (lastNode.next != null) {
         lastNode = lastNode.next
     }
 
@@ -173,6 +180,11 @@ fun LinkedList.searchRecursively(node: Node? = head, data: T): Boolean {
 ## Doubly Linked List
 
 ## Circular Linked List
+
+## Problems & Solutions
+| Problem         | Solution | Difficulty |
+|------------------|----------|------------|
+|[707. Design Linked List](https://leetcode.com/problems/design-linked-list/)|[Implementation](../leetcode/707.design-linked-list.md)|Medium|
 
 ## Resources
 - [ ] Fundamental of Data Structure
