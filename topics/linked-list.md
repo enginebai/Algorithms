@@ -39,30 +39,47 @@ fun LinkedList.insertFirst(data: T) {
 It also takes `O(1)` to insert after a specific node.
 
 ```kotlin
-fun LinkedList.insertAfter(previousNode: Node, data: T) {
+fun LinkedList.insertAfter(node: Node, data: T) {
     val newNode = Node(data)
-    newNode.next = previousNode.next
-    previousNode.next = newNode
+    newNode.next = node.next
+    node.next = newNode
 }
 ```
 
-However, it takes `O(n)` to insert a new node at the end, because it has to iterate all node to find the last node.
+However, it takes `O(n)` to insert a new node at the index `i` or the end, because it has to iterate some (all) nodes to find the node to insert.
 
 ```kotlin
 fun LinkedList.insertLast(data: T) {
     val newNode = Node(data)
     var lastNode = this.head
 
+    // We have to consider the empty list since we can't find the last node, the insertion will not execute below.
     if (lastNode == null) {
         this.head = newNode
         return
     }
 
-    while (lastNode.next != null) {
+    while (lastNode?.next != null) {
         lastNode = lastNode.next
     }
+    lastNode?.next = newNode
+}
 
-    lastNode.next = newNode
+fun LinkedList.insertAt(index: Int, data: T) {
+    val newNode = Node(data)
+    if (index == 0) {
+        newNode.next = this.head.next
+        this.head = newNode
+        return
+    }
+
+    // Find the (index - 1)-th node
+    var node = this.head
+    for (i in 0 until index - 1) {
+        node = node?.next
+    }
+    newNode.next = node?.next
+    node?.next = newNode
 }
 ```
 
@@ -103,13 +120,10 @@ fun LinkedList.delete(node: Node) {
 }
 ```
 
-To delete at the specific index, we have to iterate the linked list to locate the node of that index, it also takes `O(n)`.
+To delete at the specific index, we have to iterate the linked list to locate the previous node of that index, it also takes `O(n)`.
 
 ```kotlin
 fun LinkedList.deleteAt(indexToDelete: Int) {
-    if (indexToDelete < 0) return
-
-    var currentIndex = 0
     var currentNode: Node? = this.head
 
     if (indexToDelete == 0) {
@@ -117,6 +131,13 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
         return
     }
 
+    // Equivalence to find the previous node of index-th:
+    // var node = this.head
+    // for (i in 0 until index - 1) {
+    //    node = node?.next
+    // }
+    // See `insertAt()` function above.
+    var currentIndex = 0
     var previousNode: Node? = null
     while (currentIndex < indexToDelete && currentNode != null) {
         currentIndex++
@@ -124,9 +145,9 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
         currentNode = currentNode.next
     }
 
-    // We actually find the index to delete.
-    if (currentIndex == indexToDelete) {
-        previousNode.next = currentNode.next
+    // We actually find the index to delete. If current node is null, that means the index exceeds the size.
+    if (currentIndex == indexToDelete && currentNode != null) {
+        previousNode?.next = currentNode.next
     }
 }
 ```
