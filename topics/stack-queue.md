@@ -1,6 +1,6 @@
 # Stack & Queue
 ## Stack
-A *stack* is an ordered list in which all insertions and deletions are made at one end, called the *top*. It acts as *Last In First Out (LIFO)*, the last inserted element will be removed first.
+A *stack* is an ordered list in which all insertions and deletions are made at one end, called the *top*. It implements a *Last In First Out (LIFO)* policy, the last inserted element will be removed first.
 
 ```
 |A| <- Top
@@ -11,8 +11,8 @@ A *stack* is an ordered list in which all insertions and deletions are made at o
 ```
 
 There are some common usages or applications of stack:
-1. Back-tracking: **undo** action of editor, or **back** navigation of browser.
-2. Compiler parser.
+1. Backtracking: depth-first search (DFS), maze path, **undo** action of editor, or **back** navigation of browser.
+2. Expression evaluation and syntax parsing.
 3. Recursion or function call.
 
 ### ADT
@@ -28,7 +28,6 @@ interface Stack<T> {
 
 ### Implementation
 #### By Linked List
-[Linked List](../topics/linked-list.md]) takes `O(1)` when inserting/deleting/getting the first item. 
 
 ```kotlin
 data class Node<T>(
@@ -60,27 +59,31 @@ class LinkedListStack<T> : Stack<T> {
 }
 ```
 
+[Linked List](../topics/linked-list.md]) takes `O(1)` when inserting/deleting/getting the first item, however, it needs the extra space for storing `next` node.
+
+
 #### By Array
 ```kotlin
+const val N = 10
+
 class ArrayStack<T>: Stack<T> {
 
-    // Here we don't consider the resize problem.
-    private val internalArray = arrayOf<T>()
+    private val internalArray = arrayOfNulls<T>(N)
     private var top = 0;
 
     override fun create(): Stack<T> = ArrayStack()
 
     override fun push(item: T): Stack<T> {
-        internalArray[top++] = item
+        if (top == N) throw OverflowError()
+        else {
+            internalArray[top++] = item
+        }
         return this
     }
 
     override fun pop(): T? {
-        return if (isEmpty()) null else {
-            val itemToPop = internalArray.getOrNull(--top)
-            internalArray[top] = null
-            return itemToPop
-        };
+        return if (isEmpty()) throw UnderflowError() 
+        else internalArray.getOrNull(--top);
     }
 
     override fun top(): T? {
@@ -91,6 +94,8 @@ class ArrayStack<T>: Stack<T> {
 }
 ```
 
+Every operation takes constants **amortized** time (for dynamic array), and less wasted space.
+
 ## Queue
 A *queue* is an order list in which all insertions take place at one end, called the *rear*, while all deletions take place at aonther end, called the *front*. It acts as *First In First Out (FIFO)*, the first inserted element will be removed first.
 
@@ -100,6 +105,10 @@ Front <- ABCDE <- Rear
         -------
 ```
 
+There are some applications of queue:
+* Breadth-First Search (BFS).
+* Operating system job queue.
+
 ### ADT
 
 ```kotlin
@@ -107,18 +116,96 @@ interface Queue<T> {
     fun create(): Queue<T>
     fun enqueue(item: T): Queue<T>
     fun dequeue(): T?
+    fun front(): T?
+    fun rear(): T?
     fun isEmpty(): Boolean
 }
-
 ```
+
+### Implementation
+#### By Linked List
+
+```kotlin
+data class Node<T>(
+    val data: T,
+    var next: Node<T>? = null
+)
+
+class LinkedListQueue<T>: Queue<T> {
+
+    private var firstNode: Node<T>? = null
+    private var lastNode: Node<T>? = null
+
+    override fun create(): Queue<T> = LinkedListQueue<T>()
+
+    override fun enqueue(item: T): Queue<T> {
+        val oldLastNode = lastNode
+        lastNode = Node(data = item)
+        if (isEmpty()) {
+            firstNode = lastNode
+        } else {
+            oldLastNode?.next = lastNode
+        }
+        return this
+    }
+
+    override fun dequeue(): T? {
+        val node = this.firstNode
+        firstNode = firstNode?.next
+        if (isEmpty()) lastNode = null
+        return node?.data
+    }
+
+    override fun front(): T? = this.firstNode?.data
+
+    override fun rear(): T? = this.lastNode?.data
+
+    override fun isEmpty(): Boolean = (this.firstNode == null)
+}
+```
+
+Here we have to update `front` and `rear` node when enqueue and dequeue, it's the special cases for empty queue.
+
+#### By Array
+```kotlin
+const val N = 10
+
+class ArrayQueue<T>: Queue<T> {
+
+    private val internalArray = arrayOfNulls<T>(N)
+    private var front: Int = 0
+    private var rear: Int = 0
+
+    override fun create(): Queue<T> = ArrayQueue<T>()
+
+    override fun enqueue(item: T): Queue<T> {
+        if (rear == N) throw OverflowError()
+        internalArray[rear++] = item
+        return this
+    }
+
+    override fun dequeue(): T? {
+        if (front == rear) throw UnderflowError()
+        return internalArray[front++]
+    }
+
+    override fun front(): T? = internalArray.getOrNull(front)
+
+    override fun rear(): T? = internalArray.getOrNull(rear - 1)
+
+    override fun isEmpty(): Boolean = (front == rear)
+}
+```
+
+## Circular Queue
 
 ## Resources
 - [ ] Fundamental of Data Structure
 - [ ] CLRS (Simple)
 - [ ] CTCI
-- [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/week/2) // Introductory videos
+- [X] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/week/2) // Introductory videos
 - [ ] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-4) // Simple video + coding questions
-- [ ] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html) // Introductory note + illustration
+- [X] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html) // Introductory note + illustration
 - [ ] https://github.com/youngyangyang04/leetcode-master#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97 // Note with illustration
 - [ ] [LC Learn](https://leetcode.com/explore/learn/card/queue-stack/)
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Queue)
