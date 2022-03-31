@@ -66,12 +66,12 @@ class LinkedListStack<T> : Stack<T> {
 ```kotlin
 const val N = 10
 
-class ArrayStack<T>: Stack<T> {
+class StaticArrayStack<T>: Stack<T> {
 
     private val internalArray = arrayOfNulls<T>(N)
     private var top = 0;
 
-    override fun create(): Stack<T> = ArrayStack()
+    override fun create(): Stack<T> = StaticArrayStack()
 
     override fun push(item: T): Stack<T> {
         if (top == N) throw OverflowError()
@@ -170,13 +170,13 @@ Here we have to update `front` and `rear` node when enqueue and dequeue, it's th
 ```kotlin
 const val N = 10
 
-class ArrayQueue<T>: Queue<T> {
+class StaticArrayQueue<T>: Queue<T> {
 
     private val internalArray = arrayOfNulls<T>(N)
     private var front: Int = 0
     private var rear: Int = 0
 
-    override fun create(): Queue<T> = ArrayQueue<T>()
+    override fun create(): Queue<T> = StaticArrayQueue<T>()
 
     override fun enqueue(item: T): Queue<T> {
         if (rear == N) throw OverflowError()
@@ -197,20 +197,22 @@ class ArrayQueue<T>: Queue<T> {
 }
 ```
 
-## Circular Queue
+There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `front` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce *Circular Queue*:
+
+> TODO: Implementation [622. Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
 
 ## Resources
-- [ ] Fundamental of Data Structure
-- [ ] CLRS (Simple)
+- [X] Fundamental of Data Structure
+- [X] CLRS (Simple)
 - [ ] CTCI
 - [X] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/week/2) // Introductory videos
-- [ ] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-4) // Simple video + coding questions
+- [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-4) // Simple video + coding questions
 - [X] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html) // Introductory note + illustration
-- [ ] https://github.com/youngyangyang04/leetcode-master#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97 // Note with illustration
-- [ ] [LC Learn](https://leetcode.com/explore/learn/card/queue-stack/)
+- [/] https://github.com/youngyangyang04/leetcode-master#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97 // Note with illustration
+- [/] [LC Learn](https://leetcode.com/explore/learn/card/queue-stack/)
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Queue)
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/) // Coding questions collection with easy/medium/hard levels
-- [ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#stack) // Simple note
-- [ ] Tech Interview Handbook - [Queue](https://www.techinterviewhandbook.org/algorithms/queue) & [Stack](https://www.techinterviewhandbook.org/algorithms/stack) // Simple note
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/basic-data-structure // Simple note
-- [ ] https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#stacks-and-queues // Simple note
+- ~~[ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#stack)~~ // Simple note
+- [X] Tech Interview Handbook - [Queue](https://www.techinterviewhandbook.org/algorithms/queue) & [Stack](https://www.techinterviewhandbook.org/algorithms/stack) // Sample questions only
+- [X] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/basic-data-structure // Simple note
+- [X] https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#stacks-and-queues // Simple note
