@@ -17,7 +17,7 @@ A *linked list* is a pointer-based data structure that store each item in a *nod
 ### ADT
 ```kotlin
 data class Node<T>(
-    val data: T,
+    val value: T,
     var next: Node<T>? = null
 )
 
@@ -28,14 +28,14 @@ interface LinkedList<T> {
 
 ### Operations
 
-### Insertion
+#### Insertion
 Linked list takes `O(1)` for inserting or deleting first item simply by relinking the pointer.
 
 ![Linked List Insert](../media/linked-list-insert.png)
 
 ```kotlin
-fun LinkedList.insertFirst(data: T) {
-    val newNode = Node(data)
+fun LinkedList.insertFirst(value: T) {
+    val newNode = Node(value)
     newNode.next = this.head
     this.head = newNode
 }
@@ -44,8 +44,8 @@ fun LinkedList.insertFirst(data: T) {
 It also takes `O(1)` to insert after a specific node.
 
 ```kotlin
-fun LinkedList.insertAfter(node: Node, data: T) {
-    val newNode = Node(data)
+fun LinkedList.insertAfter(node: Node, value: T) {
+    val newNode = Node(value)
     newNode.next = node.next
     node.next = newNode
 }
@@ -54,8 +54,8 @@ fun LinkedList.insertAfter(node: Node, data: T) {
 However, it takes `O(n)` to insert a new node at the index `i` or the end, because it has to iterate some (all) nodes to find the node to insert.
 
 ```kotlin
-fun LinkedList.insertLast(data: T) {
-    val newNode = Node(data)
+fun LinkedList.insertLast(value: T) {
+    val newNode = Node(value)
     var lastNode = this.head
 
     // We have to consider the empty list since we can't find the last node, the insertion will not execute below.
@@ -70,10 +70,10 @@ fun LinkedList.insertLast(data: T) {
     lastNode?.next = newNode
 }
 
-fun LinkedList.insertAt(index: Int, data: T) {
-    val newNode = Node(data)
+fun LinkedList.insertAt(index: Int, value: T) {
+    val newNode = Node(value)
     if (index == 0) {
-        newNode.next = this.head.next
+        newNode.next = this.head?.next
         this.head = newNode
         return
     }
@@ -88,13 +88,13 @@ fun LinkedList.insertAt(index: Int, data: T) {
 }
 ```
 
-### Deletion
+#### Deletion
 ![Linked List Delete](../media/linked-list-delete.png)
 To delete the first node, we simply **assign the next node to head**, it takes `O(1)`.
 
 ```kotlin
 fun LinkedList.deleteFirst() {
-    val nextNode = this.head.next
+    val nextNode = this.head?.next
     this.head = nextNode
 }
 ```
@@ -107,7 +107,7 @@ fun LinkedList.delete(node: Node) {
     var previousNode: Node? = null
 
     // We find the node to delete at the beginning.
-    if (nodeToDelete != null && nodeToDelete.data == node.data) {
+    if (this.head != null && this.head.data == node.data) {
         head = null
         return
     }
@@ -129,10 +129,8 @@ To delete at the specific index, we have to iterate the linked list to locate th
 
 ```kotlin
 fun LinkedList.deleteAt(indexToDelete: Int) {
-    var currentNode: Node? = this.head
-
     if (indexToDelete == 0) {
-        this.head = currentNode.next
+        this.head = this.head?.next
         return
     }
 
@@ -144,6 +142,7 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
     // See `insertAt()` function above.
     var currentIndex = 0
     var previousNode: Node? = null
+    var currentNode: Node? = this.head
     while (currentIndex < indexToDelete && currentNode != null) {
         currentIndex++
         previousNode = currentNode
@@ -157,7 +156,7 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
 }
 ```
 
-### Get Length
+#### Get Length
 There are two ways: iterative and recursive to calculate the number of nodes, both take `O(n)` time complexity.
 
 We start with iterative way, it's very straightforward:
@@ -186,24 +185,93 @@ fun LinkedList.getSize(node: Node = this.head): Int {
 }
 ```
 
-### Search
+#### Search
 ```kotlin
-fun LinkedList.search(data: T): Boolean {
+fun LinkedList.search(value: T): Boolean {
     var node = this.head
     while (node != null) {
-        if (node.data == data) return true
+        if (node.value == value) return true
         node = node.next
     }
     return false
 }
 
-fun LinkedList.searchRecursively(node: Node? = head, data: T): Boolean {
+fun LinkedList.searchRecursively(node: Node? = head, value: T): Boolean {
     if (node == null) return false
-    return if (node.data == data) true
-    else searchRecursively(node.next, data)
+    return if (node.value == value) true
+    else searchRecursively(node.next, value)
 }
 ```
 ## Doubly Linked List
+It contains the extra *previous* pointer and the data + *next* pointer in singly linked list.
+
+### ADT
+```kotlin
+data class Node<T>(
+    var value: T? = null,
+    var previous: Node<T>? = null,
+    var next: Node<T>? = null
+)
+```
+
+### Operations
+
+#### Insertion
+```kotlin
+// Origin is `head <- -> node` becomes
+// `head <- newNode -> node`
+fun LinkedList.insertFirst(value: T) {
+    val newNode = Node(value, next = this.head, previous = null)
+    this.head?.previous = newNode
+    this.head = newNode
+}
+
+// Origin is `node <- -> next` becomes
+// `node <- -> newNode <- -> next`
+fun LinkedList.insertAfter(node: Node, value: T) {
+    val nextNode = node?.next
+    val newNode = Node(value, next = nextNode, previous = node)
+    nextNode?.previous = newNode
+    node?.next = newNode
+}
+
+// Origin is `node <- -> null` becomes
+// `node <- -> newNode <- -> null`
+fun LinkedList.insertLast(value: T) {
+    val newNode(value, next = null)
+    var lastNode = this.head
+    if (lastNode == null) {
+        this.head = newNode
+        return
+    }
+
+    while (lastNode?.next != null) {
+        lastNode = lastNode.next
+    }
+    newNode.previous = lastNode
+    lastNode?.next = newNode
+}
+```
+
+#### Deletion
+```kotlin
+```
+
+## Comparision
+Let compare the time complexity among array, singly linked list and doubly linked list:
+
+> For doubly linked list, we store the both `head` and `tail` reference to achieve the most-efficient time complexity, otherwise, addition and deletion of last node will be `O(n)`.
+
+| Operations |                   | Array  | Singly Linked List | Doubly Linked List                           |
+|------------|-------------------|--------|--------------------|----------------------------------------------|
+| Access     | by index          | `O(1)` | O(n)               | O(n)                                         |
+| Addition   | before first node | O(n)   | `O(1)`             | `O(1)`                                       |
+| Addition   | after given node  | O(n)   | `O(1)`             | `O(1)`                                       |
+| Addition   | after last node   | `O(1)` | O(n)               | `O(1)` // optimized by storing `tail` node   |
+| Deletion   | the first node    | O(n)   | `O(1)`             | `O(1)`                                       |
+| Deletion   | a given node      | O(n)   | O(n)               | `O(1)`                                       |
+| Deletion   | the last node     | `O(1)` | O(n)               | `O(1)` // optimized by storing  `tail`  node |
+| Search     | a given node      | O(n)   | O(n)               | O(n)                                         |
 
 ## Circular Linked List
 
@@ -220,10 +288,10 @@ fun LinkedList.searchRecursively(node: Node? = head, data: T): Boolean {
 - [X] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html) // Nice introductory note
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list // Nice introductory note + illustration
 - [ ] https://github.com/youngyangyang04/leetcode-master#%E9%93%BE%E8%A1%A8 // Nice introductory note
-- [ ] [LC Learn](https://leetcode.com/explore/learn/card/linked-list/) 
+- [/] [LC Learn](https://leetcode.com/explore/learn/card/linked-list/) 
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Linked_List)
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/) // Coding questions with easy/medium/hard levels
 - [ ] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#linked-lists)~~ // Simple note + few videos
 - [ ] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/linked-list) // Simple note + some relative LC coding questions
-- [ ] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#linked-lists) // Simple note, like cheat sheet
+- [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#linked-lists) // Simple note, like cheat sheet
 - [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet#linked-list // // Simple note, like cheat sheet
