@@ -273,6 +273,23 @@ fun LinkedList.insertAfter(node: Node, value: T) {
 }
 
 fun LinkedList.insertAt(index: Int, value: T) {
+    if (index == 0) {
+        insertFirst()
+        return
+    }
+    var i = 0
+    var node = this.head
+    while (i < index && node != null) {
+        i++
+        node = node.next
+    }
+
+    if (i == index && node != null) {
+        val nextNode = node.next
+        val newNode = Node(value, next = nextNode, previous = node)
+        nextNode.previous = newNode
+        node.next = newNode
+    }
 }
 ```
 
@@ -289,6 +306,18 @@ fun LinkedList.deleteFirst() {
 // `previous <- -> last <- -> null` becomes
 // `previous <- -> null`
 fun LinkedList.deleteLast() {
+    var node = this.head
+    if (node?.next == null) {
+        deleteFirst()
+        return
+    }
+    while (node?.next != null) {
+        node = node.next
+    }
+    if (node != null) {
+        val previousNode = node.previous
+        previousNode?.next = null
+    }
 }
 
 // Origin is `previous <- -> node <- -> next` becomes
