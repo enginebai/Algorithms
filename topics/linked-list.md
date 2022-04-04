@@ -156,6 +156,21 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
 }
 
 fun LinkedList.deleteLast() {
+    var previous: Node<T>? = null
+    var current = this.head
+
+    // For linked list has only one node
+    if (current?.next == null) {
+        this.head = null
+        return
+    }
+    while (current?.next != null) {
+        previous = current
+        current = current.next
+    }
+    if (previous != null && current != null) {
+        previous.next = current.next
+    }
 }
 ```
 
@@ -291,7 +306,6 @@ fun LinkedList.deleteAfter(node: Node) {
     previousNode.next = nextNode
     nextNode.previous = previousNode
 }
-
 
 fun LinkedList.deleteAt(index: Int) {
     if (index == 0) {
