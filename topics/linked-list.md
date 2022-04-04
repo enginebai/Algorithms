@@ -154,6 +154,9 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
         previousNode?.next = currentNode.next
     }
 }
+
+fun LinkedList.deleteLast() {
+}
 ```
 
 #### Get Length
@@ -205,6 +208,8 @@ fun LinkedList.searchRecursively(node: Node? = head, value: T): Boolean {
 ## Doubly Linked List
 It contains the extra *previous* pointer and the data + *next* pointer in singly linked list.
 
+![Doubly Linked List](../media/doubly-linked-list.png)
+
 ### ADT
 ```kotlin
 data class Node<T>(
@@ -226,15 +231,6 @@ fun LinkedList.insertFirst(value: T) {
     this.head = newNode
 }
 
-// Origin is `node <- -> next` becomes
-// `node <- -> newNode <- -> next`
-fun LinkedList.insertAfter(node: Node, value: T) {
-    val nextNode = node?.next
-    val newNode = Node(value, next = nextNode, previous = node)
-    nextNode?.previous = newNode
-    node?.next = newNode
-}
-
 // Origin is `node <- -> null` becomes
 // `node <- -> newNode <- -> null`
 fun LinkedList.insertLast(value: T) {
@@ -251,10 +247,69 @@ fun LinkedList.insertLast(value: T) {
     newNode.previous = lastNode
     lastNode?.next = newNode
 }
+
+// Origin is `node <- -> next` becomes
+// `node <- -> newNode <- -> next`
+fun LinkedList.insertAfter(node: Node, value: T) {
+    val nextNode = node?.next
+    val newNode = Node(value, next = nextNode, previous = node)
+    nextNode?.previous = newNode
+    node?.next = newNode
+}
+
+fun LinkedList.insertAt(index: Int, value: T) {
+}
 ```
 
 #### Deletion
 ```kotlin
+// head = `node <- -> next` (null) becomes
+// head = `next <- -> next.next` (null)
+fun LinkedList.deleteFirst() {
+    val nextNode = this.head?.next
+    nextNode?.previous = null
+    this.head = nextNode
+}
+
+// `previous <- -> last <- -> null` becomes
+// `previous <- -> null`
+fun LinkedList.deleteLast() {
+}
+
+// Origin is `previous <- -> node <- -> next` becomes
+// `previous <- -> next`
+fun LinkedList.deleteAfter(node: Node) {
+    val previousNode: Node<T>? = node.previous
+    val nextNode: Node<T>? = node.next
+    if (previousNode == null) {
+        deleteFirst()
+        return
+    } else if (nextNode == null) {
+        deleteLast()
+        return
+    }
+    previousNode.next = nextNode
+    nextNode.previous = previousNode
+}
+
+
+fun LinkedList.deleteAt(index: Int) {
+    if (index == 0) {
+        deleteFirst()
+        return
+    }
+    
+    var i = 0
+    var node = this.head
+    while (i < index && node != null) {
+        i++
+        node = node.next
+    }
+
+    if (i == index && node != null) {
+        deleteAfter(node)
+    }
+}
 ```
 
 ## Comparision
