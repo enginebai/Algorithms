@@ -212,7 +212,7 @@ There is a drawback from the above implementation, our size is limited even if w
 - [/] [LC Learn](https://leetcode.com/explore/learn/card/queue-stack/)
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Queue)
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/) // Coding questions collection with easy/medium/hard levels
-- ~~[ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#stack)~~ // Simple note
+- [ ] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#stack)~~ // Simple note
 - [X] Tech Interview Handbook - [Queue](https://www.techinterviewhandbook.org/algorithms/queue) & [Stack](https://www.techinterviewhandbook.org/algorithms/stack) // Sample questions only
 - [X] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/basic-data-structure // Simple note
 - [X] https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#stacks-and-queues // Simple note
