@@ -126,16 +126,6 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] https://github.com/youngyangyang04/leetcode-master
 - [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
 
-## Recursion
-- [ ] CLRS
-- [ ] CTCI
-- [ ] https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-9
-- [ ] [LC Learn](https://leetcode.com/explore/learn/)
-- [ ] https://github.com/jwasham/coding-interview-university
-- [ ] [Tech Interview Handbook](https://techinterviewhandbook.org/algorithms/introduction/)
-- [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
-- [ ] https://www.khanacademy.org/computing/computer-science/algorithms
-
 ## Priority Queue
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
 - [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
