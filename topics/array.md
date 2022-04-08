@@ -54,6 +54,8 @@ Linked list takes `O(1)` for inserting or deleting first item simply by relinkin
 |                | `create(X)` | `get_at(i)` `set_at(i, x)` | `insert_at(i, x)` `delete_at(i, x)` | `insert_first(x)` `delete_first()` | `insert_last(x)` `delete_last()` |
 | Linked List    | `O(n)`      | `O(n)`                     | `O(n)`                              | **`O(1)`**                         | `O(n)`                           |
 
+> More detail, see [Linked List](../topics/linked-list.md) topic.
+
 #### Dynamic Array
 The `insert_last(x)` takes `O(n)` for every time, however, there is way to relax constraint size of array: *over-allocate*, we reallocate `Θ(n)` extrac space (0.5n or 2n) so that **reallocation does not occur with every dynamic operation**.
 
@@ -71,6 +73,13 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 ### Amortization
 * Operation has **amortized cost** `T(n)` if `k` operations cost at most `k * T(n)`, that is *on average* over may operations.
 * Inserting into a dynamic array take `O(1)` amortized time. (It might still take `O(n)` for some worst case)
+
+## Pros. & Cons.
+| Pros.                                                  | Cons.                                                                                 | Usages                         |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------|
+| 1. Random access.<br>2. No `next` field, saving space. (vs Linked List) | 1. Bad at insert/delete. (Copy to new array)<br>2. Bad at resize. (Copy to new array) | 1. Fast access.<br>2. Fix size |
+
+> Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
