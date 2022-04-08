@@ -27,6 +27,10 @@ interface LinkedList<T> {
 ```
 
 ### Operations
+For the following operations, we have to mind the boundary and corner cases:
+* Empty linked list (`head` is null)
+* Linked list with only one or two nodes.
+* Head or last node.
 
 #### Insertion
 Linked list takes `O(1)` for inserting or deleting first item simply by relinking the pointer.
@@ -91,6 +95,8 @@ fun LinkedList.insertAt(index: Int, value: T) {
 #### Deletion
 ![Linked List Delete](../media/linked-list-delete.png)
 To delete the first node, we simply **assign the next node to head**, it takes `O(1)`.
+
+> We have to mind the boundary, such as first or last.
 
 ```kotlin
 fun LinkedList.deleteFirst() {
@@ -372,24 +378,38 @@ Let compare the time complexity among array, singly linked list and doubly linke
 | Search     | a given node      | O(n)   | O(n)               | O(n)                                         |
 
 ## Circular Linked List
+Linked list with the last node has reference to the head.
+
+> // TODO
 
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
 |------------------|----------|------------|
 |[707. Design Linked List](https://leetcode.com/problems/design-linked-list/)|[Implementation](../leetcode/707.design-linked-list.md)|Medium|
 
+### Tips for Problem Solving
+* Get familiar with the following operations:
+    * Count the node number
+    * Reverse in-place or update the node references
+    * Find the middle node using two pointers technique
+    * Merge (connect) two linked lists
+* Corner cases:
+    * Empty linked list
+    * Linked list with one / two nodes
+    * Linked list has cycles. Clarify before solving problem!
+
 ## Resources
 - [X] Fundamental of Data Structure
-- [ ] CLRS (Simple)
+- [X] CLRS (Simple)
 - [ ] CTCI
-- [ ] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-2) // Simple note + simple coding problem
+- [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-2) // Simple note + simple coding problem
 - [X] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html) // Nice introductory note
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list // Nice introductory note + illustration
-- [ ] https://github.com/youngyangyang04/leetcode-master#%E9%93%BE%E8%A1%A8 // Nice introductory note
+- [/] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list // Nice introductory note + illustration
+- [/] https://github.com/youngyangyang04/leetcode-master#%E9%93%BE%E8%A1%A8 // Nice introductory note
 - [/] [LC Learn](https://leetcode.com/explore/learn/card/linked-list/) 
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Linked_List)
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/) // Coding questions with easy/medium/hard levels
 - [ ] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#linked-lists)~~ // Simple note + few videos
-- [ ] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/linked-list) // Simple note + some relative LC coding questions
+- [/] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/linked-list) // Simple note + some relative LC coding questions
 - [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#linked-lists) // Simple note, like cheat sheet
-- [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet#linked-list // // Simple note, like cheat sheet
+- [X] https://github.com/TSiege/Tech-Interview-Cheat-Sheet#linked-list // // Simple note, like cheat sheet
