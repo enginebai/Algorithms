@@ -129,8 +129,8 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 > Write some note or summary + do problems below
 - [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/array) // Note + coding questions
 - [ ] CTCI // Simple notes + some problems
-- [ ] https://github.com/youngyangyang04/leetcode-master // Note + problems with nice illustration.
+- [/] https://github.com/youngyangyang04/leetcode-master // Note + problems with nice illustration.
 - [X] [Tech Interview Cheat Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#array) // Simple note summary
 - [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#arrays) // Simple note summary
-- [ ] ~~Fundamental of Data Structure - Arrays~~  // Polynomial + Sparse matrices.
-- ~~[ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#arrays)~~ // Old videos + Vector
+- [X] ~~Fundamental of Data Structure - Arrays~~  // Polynomial + Sparse matrices.
+- [X] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#arrays)~~ // Old videos + Vector
