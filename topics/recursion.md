@@ -29,6 +29,18 @@ fun fibonacci(n: Int): Int {
 }
 ```
 
+## Time Complexity (Recurrences)
+A *recurrence* is an equation or inequality that describes a function in terms of its value on *smaller inputs*.
+
+There are three ways to solve recurrence:
+1. **Substitution method**: We make a guess and use mathentical induction to prove the guess correct.
+2. **Recursion tree**: We draw all the nodes represents the cost of the subproblems, then sum all costs per levels to determine the total cost of all levels of recursion.
+3. **Master method**: It provides the bounds for the recurrences of the form `T(n) = a * T(n / b) + f(n)`, where `a >= 1`, `b > 1`, `f(n)` is a given function.
+
+> More detail, see CLRS Chapter 4.
+
+## Problems & Solutions
+
 ### Tips for Problem Solving
 * Make sure to define **all** base cases to cover.
 * Recursion is useful for *permutation*, it generates all combinations and tree-based problems.
