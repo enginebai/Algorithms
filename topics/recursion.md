@@ -29,7 +29,7 @@ fun fibonacci(n: Int): Int {
 }
 ```
 
-## Memoization
+### Memoization
 We might encounter the duplicate calculation in recursive call, that is undesired penalty to the performance. To solve this situation, we will **store** the intermediate results of recursive call, this is known as *memoization*.
 
 Let's take a look at *Fibonacci Number* example, `F(4) = F(3) + F(2) = (F(2) + F(1)) + F(2)`, where `F(2)` are duplicate calculations and we can use memoization to help.
@@ -51,7 +51,7 @@ object Calculator {
 }
 ```
 
-## Time Complexity (Recurrences)
+### Time Complexity (Recurrences)
 A *recurrence* is an equation or inequality that describes a function in terms of its value on *smaller inputs*.
 
 There are three ways to solve recurrence:
@@ -61,6 +61,14 @@ There are three ways to solve recurrence:
 
 > More detail, see CLRS Chapter 4.
 
+With memoization, we can reduct the number of recursive calls, for the Fabonacci Number example, since we save every result of each `n`, it would invoke at more `n - 1` times function calls for `f(n)`, hence, the time complexity will be reduced to `O(n)`.
+
+### Space Complexity
+We have to allocate stack space to the recursive function calls which depends on the leaf counts of recursion tree and extra space for memoization.
+
+### Relation with Dynamic Programming (DP)
+Recursive algorithm involves a function calling itself with smaller instance, similarly, DP breaks down problems into subproblems to solve a larger problem, DP often implemented recursively.
+
 ## Problems & Solutions
 
 ### Tips for Problem Solving
@@ -68,14 +76,13 @@ There are three ways to solve recurrence:
 * Recursion is useful for *permutation*, it generates all combinations and tree-based problems.
 * Recursion implicitly uses a [stack](../topics/stack-queue.md), hence, the recursive algorithm can be rewritten iteratively using a stack. (Mind the stack overflow issue).
 
-## Relation with Dynamic Programming (DP)
-Recursive algorithm involves a function calling itself with smaller instance, similarly, DP breaks down problems into subproblems to solve a larger problem, DP often implemented recursively.
-
 ## Resources
 - [X] [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/recursion)
-- [ ] CLRS // Recurrences
+- [X] CLRS // Recurrences
 - [ ] CTCI
-- [ ] LC Learn [Part 1](https://leetcode.com/explore/learn/card/recursion-i/) / [Part 2](https://leetcode.com/explore/learn/card/recursion-ii/)
+- [ ] LC Learn 
+    - [X] [Part 1](https://leetcode.com/explore/learn/card/recursion-i/) 
+    - [ ] [Part 2](https://leetcode.com/explore/learn/card/recursion-ii/)
 - [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/recursion/)
 - [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-9)
 - [X] [Tech-Interview-Cheat-Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#recursive-algorithms)
