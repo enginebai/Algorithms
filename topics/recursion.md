@@ -29,6 +29,28 @@ fun fibonacci(n: Int): Int {
 }
 ```
 
+## Memoization
+We might encounter the duplicate calculation in recursive call, that is undesired penalty to the performance. To solve this situation, we will **store** the intermediate results of recursive call, this is known as *memoization*.
+
+Let's take a look at *Fibonacci Number* example, `F(4) = F(3) + F(2) = (F(2) + F(1)) + F(2)`, where `F(2)` are duplicate calculations and we can use memoization to help.
+
+```kotlin
+object Calculator {
+    val cachedMap = HashMap<Int, Int>()
+
+    fun fabonacci(n: Int): Int {
+        if (cachedMap.containsKey(n)) {
+            return cachedMap[n]
+        }
+        var result = 0
+        if (n <= 1) result = n
+        else result = fabonacci(n - 1) + fabonacci(n - 2)
+        cachedMap.put(n, result)
+        return result
+    }
+}
+```
+
 ## Time Complexity (Recurrences)
 A *recurrence* is an equation or inequality that describes a function in terms of its value on *smaller inputs*.
 
