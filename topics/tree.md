@@ -1,11 +1,29 @@
-# Tree & Binary (Search) Tree
-* Tree
+# Tree
+## Definitions & Terminology
+A *tree* is a finite set of *nodes* such that:
+* Specially designated node called the *root*.
+* The remaining nodes are the disjoint sets `T1, ..., Tn` where `Ti` is a tree, they are called the *subtrees* of the root. `T1, ..., Tn` are disjoint sets prohibits subtrees from connecting together (no cross breeding).
+
+![Tree](../media/tree.png)
+
+* A *node* stands for the item of data and branches to other nodes.
+* The number of subtrees of a node is called its *degree*. For example, the degree of `A` is 3, `C` is 1, `E` is 0. The degree of a tree is the maximum degree, for this tree is degree 3.
+* For those nodes that have degree zero are called *leaf*. (`{E, F, G, K, I, J}`)
+* The root of the subtree is the *parent*, and the subtree is the *children*. (`B` is parent of `{E, F}`, whereas `{E, F}` are children of `B`)
+* Children of the same parent are called *siblings*. (`{B, C, D}`, `{E, F}`, `{H, I, J}`)
+* The *ancestor* of a node are all the nodes along the path from the root to that node, the ancestor for node `K` are `{A, D, H}`.
+* The *height* or *depth* of a tree is the maximum level, for the tree is 4.
+* A *forest* is the disjoint sets `T1, ..., Tn` that remove the root of the tree. (`{B, E, F}`, `{C, G}`, `{D, H, I, J, K}`)
+
+
+## Sub-toptics
 * Heap
 * Priority
 * Binary Tree
 * Binary Search Tree
 * BFS/DFS
 
+## Resources
 - [ ] Fundamental of Data Structure
 - [ ] CLRS (Simple)
 - [ ] CTCI
