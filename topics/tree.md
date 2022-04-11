@@ -8,11 +8,13 @@ A *tree* is a finite set of *nodes* such that:
 
 * A *node* stands for the item of data and branches to other nodes.
 * The number of subtrees of a node is called its *degree*. For example, the degree of `A` is 3, `C` is 1, `E` is 0. The degree of a tree is the maximum degree, for this tree is degree 3.
-* For those nodes that have degree zero (has no child) are called *leaf*. (`{E, F, G, K, I, J}`)
+* For node that has no parent is *root*. (`A`)
+* For those nodes that have no child (degree zero) are called *leaf*. (`{E, F, G, K, I, J}`)
 * The root of the subtree is the *parent*, and the subtree is the *children*. (`B` is parent of `{E, F}`, whereas `{E, F}` are children of `B`)
 * Children of the same parent are called *siblings*. (`{B, C, D}`, `{E, F}`, `{H, I, J}`)
-* The *ancestor* of a node are all the nodes along the path from the root to that node, the ancestor for node `K` are `{A, D, H}`.
-* The *height* or *depth* of a tree is the maximum level, for the tree is 4.
+* The *ancestor* of a node are all the nodes along the path from the root to that node (the ancestor for node `K` are `{A, D, H}`).
+* The *depth* (measuring downward) of a node `X` is the number of ancestors = the number of edges in the path from `X` up to the root. (depth of `H` is 2, `K` is 3)
+* The *height* (measuing upward) of a node `X` is the number of edge in the longest downward path from `X` = the max depth of subtree of `X`. (the heights of all leaf are 0, `C` is 1, `D` is 2).
 * A *forest* is the disjoint sets `T1, ..., Tn` that remove the root of the tree. (`{B, E, F}`, `{C, G}`, `{D, H, I, J, K}`)
 
 ## Type of Trees
@@ -22,6 +24,20 @@ A *tree* is a finite set of *nodes* such that:
 | <img src='../media/general-tree.png'/>                        | <img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Binary_tree_v2.svg'/> | <img src='https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg'/>                           | <img src='https://upload.wikimedia.org/wikipedia/commons/a/ad/AVL-tree-wBalance_K.svg'/>      | <img src='https://upload.wikimedia.org/wikipedia/commons/4/41/Red-black_tree_example_with_NIL.svg'/>       | <img src='https://upload.wikimedia.org/wikipedia/en/b/b8/Karytree.png'/>                                                           |
 
 ## Binary Tree
+A *binary tree* is a tree of binary nodes.
+
+![Binary Tree](../media/binary-tree.png)
+
+```kotlin
+data class BinaryNode<T>(
+    val item: T,
+    val parent: Binary<T>? = null,
+    val left: BinaryNode<T>? = null,
+    val right: BInaryNode<T>? = null
+)
+```
+
+**Idea**: We're going to design operations that runs in `O(H)` time for height `H`, and maintain `H = O(lg n)`. (For [Array](../topics/array.md) or [Linked List](../topics/linked-list.md), there are good and bad running time of different operations. Here we want a better running time for all operations)
 
 
 ## Sub-toptics
