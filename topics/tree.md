@@ -66,7 +66,7 @@ data class BinaryTree<T> (
 )
 ```
 
-**Idea**: We're going to design operations that runs in `O(H)` time for height `H`, and maintain `H = O(lg n)`. For [Array](../topics/array.md) or [Linked List](../topics/linked-list.md), there are good and bad running time of different operations. Here we want a better running time for all operations.
+**Idea**: We're going to design operations that runs in `O(h)` time for height `h`, and maintain `O(h) = O(lg n)`. For [Array](../topics/array.md) or [Linked List](../topics/linked-list.md), there are good and bad running time of different operations. Here we want a better running time for all operations.
 
 ### Complete/Full Binary Tree
 ![Complete or Full binary tree](../media/binary-tree-complete-full.png)
@@ -95,6 +95,24 @@ fun subtreeIteration(node: Node<T>) {
 
 ![Binary Tree In-Order Traversal Order](../media/binary-tree-in-order-traversal.png)
 
+### Traversal Operations
+* **Find first** (last is symmetric) node in the traversal order of node `X`'s subtree. We just go left (right) as much as possible to find the left most (right most) leaf.
+
+![Binary Tree Traversal Order First Last](../media/binary-tree-traversal-order-first-last.png)
+
+```kotlin
+fun subtreeFirst(node: Node<T>): Node {
+    return if (node.left != null) subtreeFirst(node.left)
+    else node
+}
+
+fun subtreeLast(node: Node<T>): Node {
+    return if (node.right != null) subtreeLast(node.right)
+    else node
+}
+```
+
+It take `O(h) = O(lg n)` because each step of th recursion moves down the tree. (at most `h` times)
 
 ## Sub-toptics
 * Heap
