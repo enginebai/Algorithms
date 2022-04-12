@@ -1,10 +1,27 @@
 # Tree
-## Definitions & Terminology
+## Definitions
 A *tree* is a finite set of *nodes* such that:
 * Specially designated node called the *root*.
 * The remaining nodes are the disjoint sets `T1, ..., Tn` where `Ti` is a tree, they are called the *subtrees* of the root. `T1, ..., Tn` are disjoint sets prohibits subtrees from connecting together (no cross breeding or no cycle).
 
 ![Tree](../media/tree.png)
+
+We can use [linked list](../topics/linked-list.md) to represent the tree:
+
+```kotlin
+data class Node<T>(
+    val item: T,
+    val children: List<Node>? = emptyListOf()
+)
+
+data class GeneralTree<T>(
+    val root: Node<T>
+)
+```
+
+
+## Terminology
+![Tree](../media/tree-definition.png)
 
 * A *node* stands for the item of data and branches to other nodes.
 * The number of subtrees of a node is called its *degree*. For example, the degree of `A` is 3, `C` is 1, `E` is 0. The degree of a tree is the maximum degree, for this tree is degree 3.
@@ -38,7 +55,7 @@ A *binary tree* is a tree of binary nodes (every node has at most two children).
 
 ```kotlin
 data class BinaryNode<T>(
-    val item: T,
+    val data: T,
     val parent: Binary<T>? = null,
     val left: BinaryNode<T>? = null,
     val right: BInaryNode<T>? = null
@@ -48,6 +65,8 @@ data class BinaryTree<T> (
     val root: BinaryNode<T>
 )
 ```
+
+**Idea**: We're going to design operations that runs in `O(H)` time for height `H`, and maintain `H = O(lg n)`. For [Array](../topics/array.md) or [Linked List](../topics/linked-list.md), there are good and bad running time of different operations. Here we want a better running time for all operations.
 
 ### Complete/Full Binary Tree
 ![Complete or Full binary tree](../media/binary-tree-complete-full.png)
@@ -59,8 +78,22 @@ A *full*  binary tree of level `k` is a binary tree that has `2^k - 1` nodes.
 
 A binary tree with `n` nodes of level `k` is *complete* iff its nodes are numbered 1 to `n` in the full binary tree of level `k`.
 
+## Traversal
+Traversal of a binary tree means to **visit each node in the tree exactly once**. (get a linear order of node data) We define a binary tree's *traversal order* (also called *in-order*) based on the following characterization:
+* Each node in the left subtree of node `X` visits **before** `X`.
+* Each node in the right subtree of node `X` visits **after** `X`.
 
-**Idea**: We're going to design operations that runs in `O(H)` time for height `H`, and maintain `H = O(lg n)`. (For [Array](../topics/array.md) or [Linked List](../topics/linked-list.md), there are good and bad running time of different operations. Here we want a better running time for all operations)
+That is, given a binary node `X`, we can list all the nodes by recursively listing the nodes in `X`'s left subtree, list `X` itself, and then recursively listing the nodes in `X`'s right subtree. (It takes `O(n)` where `n` is the number of nodes.)
+
+```kotlin
+fun subtreeIteration(node: Node<T>) {
+    if (node.left != null) subtreeIteration(node.left)
+    print(node.data)
+    if (node.right != null) subtreeIteration(node.right)
+}
+```
+
+![Binary Tree In-Order Traversal Order](../media/binary-tree-in-order-traversal.png)
 
 
 ## Sub-toptics
