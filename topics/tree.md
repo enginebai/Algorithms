@@ -2,7 +2,7 @@
 ## Definitions & Terminology
 A *tree* is a finite set of *nodes* such that:
 * Specially designated node called the *root*.
-* The remaining nodes are the disjoint sets `T1, ..., Tn` where `Ti` is a tree, they are called the *subtrees* of the root. `T1, ..., Tn` are disjoint sets prohibits subtrees from connecting together (no cross breeding).
+* The remaining nodes are the disjoint sets `T1, ..., Tn` where `Ti` is a tree, they are called the *subtrees* of the root. `T1, ..., Tn` are disjoint sets prohibits subtrees from connecting together (no cross breeding or no cycle).
 
 ![Tree](../media/tree.png)
 
@@ -10,11 +10,19 @@ A *tree* is a finite set of *nodes* such that:
 * The number of subtrees of a node is called its *degree*. For example, the degree of `A` is 3, `C` is 1, `E` is 0. The degree of a tree is the maximum degree, for this tree is degree 3.
 * For node that has no parent is *root*. (`A`)
 * For those nodes that have no child (degree zero) are called *leaf*. (`{E, F, G, K, I, J}`)
-* The root of the subtree is the *parent*, and the subtree is the *children*. (`B` is parent of `{E, F}`, whereas `{E, F}` are children of `B`)
+* The root of the subtree is the *parent*, and the subtree is the *children* (branch). (`B` is parent of `{E, F}`, whereas `{E, F}` are children of `B`)
 * Children of the same parent are called *siblings*. (`{B, C, D}`, `{E, F}`, `{H, I, J}`)
-* The *ancestor* of a node are all the nodes along the path from the root to that node (the ancestor for node `K` are `{A, D, H}`).
-* The *depth* (measuring downward) of a node `X` is the number of ancestors = the number of edges in the path from `X` up to the root. (depth of `H` is 2, `K` is 3)
-* The *height* (measuing upward) of a node `X` is the number of edge in the longest downward path from `X` = the max depth of subtree of `X`. (the heights of all leaf are 0, `C` is 1, `D` is 2).
+* The *ancestor* of a node are all the nodes along the path from the root to that node (the ancestor for node `K` are `{H, D, A}`).
+* The *depth* (measuring downward) of a node `X` (depth of `H` is 2, `K` is 3): 
+    * = the number of ancestors.
+    * = the number of edges in the path from `X` up to the root. 
+
+![Tree Depth](../media/tree-depth.png)
+* The *height* (measuing upward) of a node `X` (the heights of all leaf are 0, `C` is 1, `D` is 2): 
+    * = the number of edge in the longest downward path from `X`. 
+    * = the max depth of subtree of `X`.
+
+![Tree Height](../media/tree-height.png)
 * A *forest* is the disjoint sets `T1, ..., Tn` that remove the root of the tree. (`{B, E, F}`, `{C, G}`, `{D, H, I, J, K}`)
 
 ## Type of Trees
@@ -24,7 +32,7 @@ A *tree* is a finite set of *nodes* such that:
 | <img src='../media/general-tree.png'/>                        | <img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Binary_tree_v2.svg'/> | <img src='https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg'/>                           | <img src='https://upload.wikimedia.org/wikipedia/commons/a/ad/AVL-tree-wBalance_K.svg'/>      | <img src='https://upload.wikimedia.org/wikipedia/commons/4/41/Red-black_tree_example_with_NIL.svg'/>       | <img src='https://upload.wikimedia.org/wikipedia/en/b/b8/Karytree.png'/>                                                           |
 
 ## Binary Tree
-A *binary tree* is a tree of binary nodes.
+A *binary tree* is a tree of binary nodes (every node has at most two children).
 
 ![Binary Tree](../media/binary-tree.png)
 
@@ -35,7 +43,22 @@ data class BinaryNode<T>(
     val left: BinaryNode<T>? = null,
     val right: BInaryNode<T>? = null
 )
+
+data class BinaryTree<T> (
+    val root: BinaryNode<T>
+)
 ```
+
+### Complete/Full Binary Tree
+![Complete or Full binary tree](../media/binary-tree-complete-full.png)
+
+A *full*  binary tree of level `k` is a binary tree that has `2^k - 1` nodes.
+
+* Each nodes have two children.
+* Each leafs are at the same depth (or height).
+
+A binary tree with `n` nodes of level `k` is *complete* iff its nodes are numbered 1 to `n` in the full binary tree of level `k`.
+
 
 **Idea**: We're going to design operations that runs in `O(H)` time for height `H`, and maintain `H = O(lg n)`. (For [Array](../topics/array.md) or [Linked List](../topics/linked-list.md), there are good and bad running time of different operations. Here we want a better running time for all operations)
 
