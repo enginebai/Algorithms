@@ -91,12 +91,16 @@ fun subtreeIteration(node: Node<T>) {
     print(node.data)
     if (node.right != null) subtreeIteration(node.right)
 }
+
+val tree = BinaryTree(A)
+subtreeIteration(tree.root)
 ```
 
 ![Binary Tree In-Order Traversal Order](../media/binary-tree-in-order-traversal.png)
 
 ### Traversal Operations
-* **Find first** (last is symmetric) node in the traversal order of node `X`'s subtree. We just go left (right) as much as possible to find the left most (right most) leaf.
+#### Find First / Last
+* To find the first (last is symmetric) node in the traversal order of node `X`'s subtree, we just go left (right) as much as possible to find the left most (right most) leaf.
 
 ![Binary Tree Traversal Order First Last](../media/binary-tree-traversal-order-first-last.png)
 
@@ -110,9 +114,47 @@ fun subtreeLast(node: Node<T>): Node {
     return if (node.right != null) subtreeLast(node.right)
     else node
 }
+
+val tree = BinaryTree(A)
+subtreeFirst(tree.root)
+subtreeLast(tree.root)
+``` 
+
+Both operations take `O(h) = O(lg n)` because each step of th recursion moves down the tree. (at most `h` times)
+
+#### Find Successor / Predecessor
+Successor (predecessor is symmetric) is the next (previous) node after node `X` in traversal order. There are two cases:
+1. If the node has right child: we find the left most node of it subtree of right child, that is, `subtreeFirst(node.right)`.
+2. Otherwise, we find the lowest ancestor of `X` for which `X` is in its subtree.
+2. Else: walk up tree from the parent of node `X` until go up a left branch where `X == X.parent.left`.
+
+![Binary Tree Traversal Successor](../media/binary-tree-traversal-successor.png)
+
+```kotlin
+fun successor(node: Node<T>): Node {
+    if (node.right != null) return subtreeFirst(node.right)
+    else {
+        var parentNode = node
+        while (parentNode != null && parentNode == parentNode.parent?.right) {
+            parentNode = parentNode?.parent
+        }
+        return parentNode.parent
+    }
+}
+
+fun predecessor(node: Node<T>): Node {
+    if (node.left != null) return substreeLast(node.left)
+    else {
+        var parentNode = node
+        while (parentNode != null && parentNode == parentNode?.parent?.left) {
+            parentNode = parentNode.parent
+        }
+        return parentNode.parent
+    }
+}
 ```
 
-It take `O(h) = O(lg n)` because each step of th recursion moves down the tree. (at most `h` times)
+Both operations also take `O(h) = O(lg n)` since the worst case is to run the height of tree.
 
 ## Sub-toptics
 * Heap
