@@ -48,6 +48,8 @@ data class GeneralTree<T>(
 | A tree with no constraints imposed on the hierarchy or nodes. | A tree in which each parents can have at most 2 children.                           | An extension of binary tree, where the value fo left child <= parent <= right child. It can be used in searching. | A self-balancing binary search tree, the heights of two child subtrees differ by at most one. | A self-balancing binary search tree, each node will be painted in "red" or "black" based on the balancing. | A tree of that the max number of children is limited to N. Binary tree is 2-ary tree. `Trie` is used implementation of N-ary tree. |
 | <img src='../media/general-tree.png'/>                        | <img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Binary_tree_v2.svg'/> | <img src='https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg'/>                           | <img src='https://upload.wikimedia.org/wikipedia/commons/a/ad/AVL-tree-wBalance_K.svg'/>      | <img src='https://upload.wikimedia.org/wikipedia/commons/4/41/Red-black_tree_example_with_NIL.svg'/>       | <img src='https://upload.wikimedia.org/wikipedia/en/b/b8/Karytree.png'/>                                                           |
 
+> Source: [Wikipedia](https://en.wikipedia.org/wiki/Binary_tree)
+
 ## Binary Tree
 A *binary tree* is a tree of binary nodes (every node has at most two children).
 
@@ -100,7 +102,7 @@ subtreeIteration(tree.root)
 
 ### Traversal Operations
 #### Find First / Last
-* To find the first (last is symmetric) node in the traversal order of node `X`'s subtree, we just go left (right) as much as possible to find the left most (right most) leaf.
+To find the first (last is symmetric) node in the traversal order of node `X`'s subtree, we just go left (right) as much as possible to find the left most (right most) leaf.
 
 ![Binary Tree Traversal Order First Last](../media/binary-tree-traversal-order-first-last.png)
 
@@ -123,7 +125,7 @@ subtreeLast(tree.root)
 Both operations take `O(h) = O(lg n)` because each step of th recursion moves down the tree. (at most `h` times)
 
 #### Find Successor / Predecessor
-Successor (predecessor is symmetric) is the next (previous) node after node `X` in traversal order. There are two cases:
+The *successor* (*predecessor* is symmetric) is the next (previous) node after node `X` in traversal order. There are two cases:
 1. If the node has right child: we find the left most node of it subtree of right child, that is, `subtreeFirst(node.right)`.
 2. Otherwise, we find the lowest ancestor of `X` for which `X` is in its subtree.
 2. Else: walk up tree from the parent of node `X` until go up a left branch where `X == X.parent.left`.
@@ -155,6 +157,45 @@ fun predecessor(node: Node<T>): Node {
 ```
 
 Both operations also take `O(h) = O(lg n)` since the worst case is to run the height of tree.
+
+### Insertion
+We must preserve the traversal order after inserting or deleting a node in a binary tree.
+
+To insert a new node after (before is symmetric) the node `X`, there also are two cases:
+1. If the right (left) child is not there, we just add the new node to right (left) child.
+2. Otherwise, find the `subtreeFirst(node.right)` which is also the `successor(node)` and add the new node as a left child to it, since `subtreeFirst(node.right)` will find the left most node, this guarantees the left most node has no left node anymore, we just add new node as new left child of that left most node.
+
+![Binary Tree Insert After](../media/binary-tree-traversal-insert-after.png)
+
+```kotlin
+fun insertBefore(node: Node<T>, newNode: Node<T>) {
+    if (node.right == null) {
+        node.right = newNode
+        newNode.parent = node
+    } else {
+        val leftMostNode = subtreeFirst(node.right)
+        leftMostNode.left = newNode
+        newNode.parent = leftMostNode
+    }
+}
+
+fun insertBefore(node: Node<T>, newNode: Node<T>) {
+    if (node.left == null) {
+        node.left = newNode
+        newNode.parent = node
+    } else {
+        val rightMostNode = subtreeLast(node.left)
+        rightMostNode.right = newNode
+        newNode.parent = rightMostNode
+    }
+}
+```
+
+Both takes `O(h)` since the worst case is to call `subtreeFirst()` or `subtreeLast()`.
+
+
+
+### Deletion
 
 ## Sub-toptics
 * Heap
