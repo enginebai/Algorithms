@@ -2,9 +2,11 @@
 ## Definitions
 A *tree* is a finite set of *nodes* such that:
 * Specially designated node called the *root*.
-* The remaining nodes are the disjoint sets `T1, ..., Tn` where `Ti` is a tree, they are called the *subtrees* of the root. `T1, ..., Tn` are disjoint sets prohibits subtrees from connecting together (no cross breeding or no cycle).
+* The remaining nodes are the disjoint sets `T1, ..., Tn` where `Ti` is a tree, they are called the *subtrees* of the root. The disjoint sets `T1, ..., Tn` prohibit subtrees from connecting together (no cross breeding or no cycle).
 
 ![Tree](../media/tree.png)
+
+> It looks upside down in computer science world.
 
 We can use [linked list](../topics/linked-list.md) to represent the tree:
 
@@ -29,17 +31,13 @@ data class GeneralTree<T>(
 * For those nodes that have no child (degree zero) are called *leaf*. (`{E, F, G, K, I, J}`)
 * The root of the subtree is the *parent*, and the subtree is the *children* (branch). (`B` is parent of `{E, F}`, whereas `{E, F}` are children of `B`)
 * Children of the same parent are called *siblings*. (`{B, C, D}`, `{E, F}`, `{H, I, J}`)
-* The *ancestor* of a node are all the nodes along the path from the root to that node (the ancestor for node `K` are `{H, D, A}`).
-* The *depth* (measuring downward) of a node `X` (depth of `H` is 2, `K` is 3): 
-    * = the number of ancestors.
-    * = the number of edges in the path from `X` up to the root. 
-
+* The *ancestor* of a node `X` are all the nodes along the path from `X` to the root (the ancestor for node `K` are `{H, D, A}`).
+* The *depth* (measuring downward in real world) of a node `X` is the number of edges of the path to its root. (depth of `H` is 2, `K` is 3)
 ![Tree Depth](../media/tree-depth.png)
-* The *height* (measuing upward) of a node `X` (the heights of all leaf are 0, `C` is 1, `D` is 2): 
-    * = the number of edge in the longest downward path from `X`. 
-    * = the max depth of subtree of `X`.
 
+* The *height* (measuing upward in real world) of a node `X` is the number of edge in the longest path to its leaf. (the heights of all leaf are 0, `C` is 1, `D` is 2, `A` = `the height of tree` is 3)
 ![Tree Height](../media/tree-height.png)
+
 * A *forest* is the disjoint sets `T1, ..., Tn` that remove the root of the tree. (`{B, E, F}`, `{C, G}`, `{D, H, I, J, K}`)
 
 ## Type of Trees
@@ -81,7 +79,8 @@ A *full*  binary tree of level `k` is a binary tree that has `2^k - 1` nodes.
 A binary tree with `n` nodes of level `k` is *complete* iff its nodes are numbered 1 to `n` in the full binary tree of level `k`.
 
 ## Traversal
-Traversal of a binary tree means to **visit each node in the tree exactly once**. (get a linear order of node data) We define a binary tree's *traversal order* (also called *in-order*) based on the following characterization:
+Traversal of a binary tree means to **visit each node in the tree exactly once** (get a linear order of node data). We define a binary tree's *traversal order* (also called *in-order*) based on the following characterization:
+
 * Each node in the left subtree of node `X` visits **before** `X`.
 * Each node in the right subtree of node `X` visits **after** `X`.
 
@@ -99,6 +98,8 @@ subtreeIteration(tree.root)
 ```
 
 ![Binary Tree In-Order Traversal Order](../media/binary-tree-in-order-traversal.png)
+
+> We store data in tree structure, NOT storing the real traversal order which maintaining costs is more than tree structure itself.
 
 ### Traversal Operations
 #### Find First / Last
@@ -127,8 +128,7 @@ Both operations take `O(h) = O(lg n)` because each step of th recursion moves do
 #### Find Successor / Predecessor
 The *successor* (*predecessor* is symmetric) is the next (previous) node after node `X` in traversal order. There are two cases:
 1. If the node has right child: we find the left most node of it subtree of right child, that is, `subtreeFirst(node.right)`.
-2. Otherwise, we find the lowest ancestor of `X` for which `X` is in its subtree.
-2. Else: walk up tree from the parent of node `X` until go up a left branch where `X == X.parent.left`.
+2. Otherwise, go to find the parent. We walk up tree from the parent of node `X` until reaching a node `K` where `K == K.parent.left` (left branch). (Find the lowest ancestor of node `X` such that `X` is in the ancestor's left subtree)
 
 ![Binary Tree Traversal Successor](../media/binary-tree-traversal-successor.png)
 
@@ -159,7 +159,7 @@ fun predecessor(node: Node<T>): Node {
 Both operations also take `O(h) = O(lg n)` since the worst case is to run the height of tree.
 
 ### Insertion
-We must preserve the traversal order after inserting or deleting a node in a binary tree.
+**We must preserve the traversal order after inserting or deleting a node in a binary tree.**
 
 To insert a new node after (before is symmetric) the node `X`, there also are two cases:
 1. If the right (left) child is not there, we just add the new node to right (left) child.
@@ -168,7 +168,7 @@ To insert a new node after (before is symmetric) the node `X`, there also are tw
 ![Binary Tree Insert After](../media/binary-tree-traversal-insert-after.png)
 
 ```kotlin
-fun insertBefore(node: Node<T>, newNode: Node<T>) {
+fun insertAfter(node: Node<T>, newNode: Node<T>) {
     if (node.right == null) {
         node.right = newNode
         newNode.parent = node
@@ -193,10 +193,6 @@ fun insertBefore(node: Node<T>, newNode: Node<T>) {
 
 Both takes `O(h)` since the worst case is to call `subtreeFirst()` or `subtreeLast()`.
 
-
-
-### Deletion
-
 ## Sub-toptics
 * Heap
 * Priority
@@ -212,7 +208,7 @@ Both takes `O(h)` since the worst case is to call `subtreeFirst()` or `subtreeLa
 - [ ] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/treeshu-introjian-jie.html) // Nice introductory note
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/tree // Nice introductory note
 - [ ] https://github.com/youngyangyang04/leetcode-master#%E4%BA%8C%E5%8F%89%E6%A0%91 // Nice introductory note
-- [ ] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-3)
+- [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-3)
 - [ ] [LC Learn](https://leetcode.com/explore/learn/card/data-structure-tree/) 
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/) // Coding problems With easy/medium/hard levels
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Tree) 
