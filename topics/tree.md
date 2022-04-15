@@ -55,7 +55,8 @@ A *binary tree* is a tree of binary nodes (every node has at most two children).
 
 ```kotlin
 data class BinaryNode<T>(
-    val data: T,
+    // Set variable not value to swap in deletion
+    var data: T,
     val parent: Binary<T>? = null,
     val left: BinaryNode<T>? = null,
     val right: BInaryNode<T>? = null
@@ -193,6 +194,43 @@ fun insertBefore(node: Node<T>, newNode: Node<T>) {
 
 Both takes `O(h)` since the worst case is to call `subtreeFirst()` or `subtreeLast()`.
 
+### Deletion
+> Can't get to much from this operation.
+> Continue the MIT course of deletion: https://youtu.be/76dhtgZt38A?t=2466
+
+To delete a node `X`, there are two cases:
+
+* Leaves are easy to delete, just detach (removing the child reference from parent node)
+![Traversal Order Delete Leaf](../media/binary-tree-traversal-delete-leaf.png)
+
+* For root, it's the most tricky one, we have to find its predecessor, and **move down `X` by swapping with its predecessor until `X` becomes the leaf**, and detach. (We want the node to delete to keep moving down until it becomes the leaf, then detach)
+
+![Traversal Order Delete Root](../media/binary-tree-traversal-delete-root.png)
+
+if node.left != null, the predecessor is lower (what we want), 
+
+```kotlin
+fun delete(node: Node<T>) {
+    val parent = node.parent
+    if (parent != null) {
+        if (parent.left == node) parent.left = null
+        else parent.right = null
+    } 
+
+    if (node.left != null || node.right != null) {
+        val nodeToSwap = if (node.left != null) predecessor(node)
+        else successor(node)
+
+        val temp = nodeToSwap.data
+        nodeToSwap.data = node.data
+        node.data = temp
+
+        // Recursively moving down the node to delete until it becomes leaf
+        delete(nodeToSwap)
+    }
+}
+```
+
 ## Sub-toptics
 * Heap
 * Priority
@@ -204,7 +242,7 @@ Both takes `O(h)` since the worst case is to call `subtreeFirst()` or `subtreeLa
 - [ ] Fundamental of Data Structure
 - [ ] CLRS (Simple)
 - [ ] CTCI
-- [ ] [MIT 6.006 Introduction to Algorithm - Lecture 6: Binary Trees, Part 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-6-binary-trees-part-1/)
+- [X] [MIT 6.006 Introduction to Algorithm - Lecture 6: Binary Trees, Part 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-6-binary-trees-part-1/)
 - [ ] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/treeshu-introjian-jie.html) // Nice introductory note
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/tree // Nice introductory note
 - [ ] https://github.com/youngyangyang04/leetcode-master#%E4%BA%8C%E5%8F%89%E6%A0%91 // Nice introductory note
