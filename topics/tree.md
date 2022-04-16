@@ -80,7 +80,10 @@ A *full*  binary tree of level `k` is a binary tree that has `2^k - 1` nodes.
 A binary tree with `n` nodes of level `k` is *complete* iff its nodes are numbered 1 to `n` in the full binary tree of level `k`.
 
 ## Traversal
-Traversal of a binary tree means to **visit each node in the tree exactly once** (get a linear order of node data). We define a binary tree's *traversal order* (also called *in-order*) based on the following characterization:
+Traversal of a binary tree means to **visit each node in the tree exactly once** (get a linear order of node data). Let `L`, `D`, `R` stand for moving left, print the data, moving right, repectively, and we adopt the convention that we traverse left before right, then we have three traversals: `DLR`, `LDR`, `LRD`, that are *pre-order*, *in-order* and *post-order* (depends on `D`).
+
+### In-Order Traversal
+We define a binary tree's *traversal order* (also called *in-order*) based on the following characterization:
 
 * Each node in the left subtree of node `X` visits **before** `X`.
 * Each node in the right subtree of node `X` visits **after** `X`.
@@ -88,21 +91,20 @@ Traversal of a binary tree means to **visit each node in the tree exactly once**
 That is, given a binary node `X`, we can list all the nodes by recursively listing the nodes in `X`'s left subtree, list `X` itself, and then recursively listing the nodes in `X`'s right subtree. (It takes `O(n)` where `n` is the number of nodes.)
 
 ```kotlin
-fun subtreeIteration(node: Node<T>) {
-    if (node.left != null) subtreeIteration(node.left)
+fun treeTraversal(node: Node<T>) {
+    if (node.left != null) treeTraversal(node.left)
     print(node.data)
-    if (node.right != null) subtreeIteration(node.right)
+    if (node.right != null) treeTraversal(node.right)
 }
 
 val tree = BinaryTree(A)
-subtreeIteration(tree.root)
+treeTraversal(tree.root)
 ```
 
 ![Binary Tree In-Order Traversal Order](../media/binary-tree-in-order-traversal.png)
 
 > We store data in tree structure, NOT storing the real traversal order which maintaining costs is more than tree structure itself.
 
-### Traversal Operations
 #### Find First / Last
 To find the first (last is symmetric) node in the traversal order of node `X`'s subtree, we just go left (right) as much as possible to find the left most (right most) leaf.
 
@@ -159,7 +161,7 @@ fun predecessor(node: Node<T>): Node {
 
 Both operations also take `O(h) = O(lg n)` since the worst case is to run the height of tree.
 
-### Insertion
+#### Insertion
 **We must preserve the traversal order after inserting or deleting a node in a binary tree.**
 
 To insert a new node after (before is symmetric) the node `X`, there also are two cases:
@@ -194,7 +196,7 @@ fun insertBefore(node: Node<T>, newNode: Node<T>) {
 
 Both takes `O(h)` since the worst case is to call `subtreeFirst()` or `subtreeLast()`.
 
-### Deletion
+#### Deletion
 > Can't get to much from this operation.
 > Continue the MIT course of deletion: https://youtu.be/76dhtgZt38A?t=2466
 
@@ -231,6 +233,54 @@ fun delete(node: Node<T>) {
 }
 ```
 
+### Pre-Order Traversal
+![Binary Tree Pre-Order Traversal](../media/binary-tree-pre-order-traversal.png)
+
+```kotlin
+fun treeTraversal(node: Node<T>) {
+    print(node.data)
+    if (node.left != null) treeTraversal(node.left)
+    if (node.right != null) treeTraversal(node.right)
+}
+```
+
+### Post-Order Traversal
+![Binary Tree Post-Order Traversal](../media/binary-tree-post-order-traversal.png)
+
+```kotlin
+fun treeTraversal(node: Node<T>) {
+    if (node.left != null) treeTraversal(node.left)
+    if (node.right != null) treeTraversal(node.right)
+    print(node.data)
+}
+```
+
+## Problems & Solutions
+| Problem         | Solution | Difficulty |
+|------------------|----------|------------|
+
+### Tips for Problem Solving
+* [Recursion] is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
+    * *Top-Down* solution: It can be considered as **pre-order** traversal order.
+        ```kotlin
+        fun topDown(node) {
+            1. Update the answer from current node (like `print(node.data)`
+            2. Left answer = topDown(node.left)
+            3. Right answer = topDown(node.right)
+            4. Return answer
+        }
+        ```
+    * *Bottom-Up* solution: We call function for all the children recursively, it regards as *post-order* traversal order.
+        ```kotlin
+        fun buttomUp(node) {
+            1. Left answer = buttomUp(node.left)
+            2. Right answer = buttomUp(node.right)
+            3. Update the answer from current node
+            4. Return answer
+        }
+        ```
+
+
 ## Sub-toptics
 * Heap
 * Priority
@@ -240,18 +290,20 @@ fun delete(node: Node<T>) {
 
 ## Resources
 - [ ] Fundamental of Data Structure
-- [ ] CLRS (Simple)
 - [ ] CTCI
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 6: Binary Trees, Part 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-6-binary-trees-part-1/)
 - [ ] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/treeshu-introjian-jie.html) // Nice introductory note
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/tree // Nice introductory note
-- [ ] https://github.com/youngyangyang04/leetcode-master#%E4%BA%8C%E5%8F%89%E6%A0%91 // Nice introductory note
+- [/] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/tree // Traversal + BFS/DFS
 - [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-3)
-- [ ] [LC Learn](https://leetcode.com/explore/learn/card/data-structure-tree/) 
+- [/] [LC Learn](https://leetcode.com/explore/learn/card/data-structure-tree/) 
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/) // Coding problems With easy/medium/hard levels
+- [ ] https://github.com
+/youngyangyang04/leetcode-master#%E4%BA%8C%E5%8F%89%E6%A0%91 // Nice problem illustrations
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Tree) 
 - [ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#trees) // Simple note
 - [ ] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/tree) // Simple note + relative coding problems
 - [ ] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#binary-search-trees) // Binary search tree, cheat sheet
 - [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet#binary-tree // Simple note
 - [ ] [Stadford Foundations of Computer Science - The Tree Data Model](http://infolab.stanford.edu/~ullman/focs/ch05.pdf)
+- [ ] CLRS (Binary Search Tree)
+
