@@ -55,11 +55,10 @@ A *binary tree* is a tree of binary nodes (every node has at most two children).
 
 ```kotlin
 data class BinaryNode<T>(
-    // Set variable not value to swap in deletion
     var data: T,
-    val parent: Binary<T>? = null,
-    val left: BinaryNode<T>? = null,
-    val right: BInaryNode<T>? = null
+    var parent: Binary<T>? = null,
+    var left: BinaryNode<T>? = null,
+    var right: BInaryNode<T>? = null
 )
 
 data class BinaryTree<T> (
@@ -309,6 +308,46 @@ searchIteratively(tree.root, k)
 
 * To find the *minimum / maximum* is very straightforward, just find the left / right most node. (Simply use `subtreeFirst()` and `subtreeLast()` in binary tree)
 * To find the *successor / predecessor*, we also simply use `successor()` and `predecessor()` in binary tree)
+
+> The order of every nodes in binary search tree is as same as "in-order" traversal order.
+
+### Insertion & Deletion
+The insertion and deletion cause the binary search tree to change to hold the binary-search-tree property continues to hold.
+
+```kotlin
+fun BinarySearchTree.insert(k: <T>) {
+    val newNode = BinaryNode(data = k)
+    
+    // Locate the correct place to insert:
+    //  `node` traces the path, and
+    //  `nodeParent` traces the `node`'s parent.
+    var node = this.root
+    var nodeParent: Node<T>? = this.root?.parent
+    while (node != null) {
+        nodeParent = node
+        if (k < node.data) {
+            node = node.left
+        } else {
+            node = node.right
+        }
+    }
+
+    // Find the parent node to insert
+    newNode.parent = nodeParent
+
+    // The tree is empty
+    if (nodeParent == null) {
+        this.root = newNode
+    } else {
+        // Determine to insert left or right child
+        if (k < nodeParent.data) {
+            nodeParent.left = newNode
+        } else {
+            nodeParent.right = newNode
+        }
+    }
+}
+```
 
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
