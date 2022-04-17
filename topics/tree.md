@@ -54,7 +54,7 @@ A *binary tree* is a tree of binary nodes (every node has at most two children).
 ![Binary Tree](../media/binary-tree.png)
 
 ```kotlin
-data class BinaryNode<T>(
+data class Node<T>(
     var data: T,
     var parent: Binary<T>? = null,
     var left: BinaryNode<T>? = null,
@@ -144,7 +144,7 @@ The *successor* (*predecessor* is symmetric) is the next (previous) node after n
 ![Binary Tree Traversal Successor](../media/binary-tree-traversal-successor.png)
 
 ```kotlin
-fun successor(node: Node<T>): Node {
+fun successor(node: Node<T>): Node? {
     if (node.right != null) return subtreeFirst(node.right)
     else {
         var parentNode = node
@@ -155,7 +155,7 @@ fun successor(node: Node<T>): Node {
     }
 }
 
-fun predecessor(node: Node<T>): Node {
+fun predecessor(node: Node<T>): Node? {
     if (node.left != null) return substreeLast(node.left)
     else {
         var parentNode = node
@@ -217,16 +217,8 @@ To delete a node `X`, there are two cases:
 
 ![Traversal Order Delete Root](../media/binary-tree-traversal-delete-root.png)
 
-if node.left != null, the predecessor is lower (what we want), 
-
 ```kotlin
 fun delete(node: Node<T>) {
-    val parent = node.parent
-    if (parent != null) {
-        if (parent.left == node) parent.left = null
-        else parent.right = null
-    } 
-
     if (node.left != null || node.right != null) {
         val nodeToSwap = if (node.left != null) predecessor(node)
         else successor(node)
@@ -238,6 +230,12 @@ fun delete(node: Node<T>) {
         // Recursively moving down the node to delete until it becomes leaf
         delete(nodeToSwap)
     }
+
+    val parent = node.parent
+    if (parent != null) {
+        if (parent.left == node) parent.left = null
+        else parent.right = null
+    } 
 }
 ```
 
@@ -316,7 +314,7 @@ The insertion and deletion cause the binary search tree to change to hold the bi
 
 ```kotlin
 fun BinarySearchTree.insert(k: <T>) {
-    val newNode = BinaryNode(data = k)
+    val newNode = Node(data = k)
     
     // Locate the correct place to insert:
     //  `node` traces the path, and
@@ -349,9 +347,50 @@ fun BinarySearchTree.insert(k: <T>) {
 }
 ```
 
+The deletion operations considers the tree cases:
+1. Leaves (node has no child): It's easy to delete, just detach. (Like binary tree deletion)
+2. Node has one child: We splice out by modifying pointer from parent to its child.
+![Binary Search Tree Delete](../media/binary-search-tree-delete-one-child.png)
+3. Node have two children: We perform the same operation as [binary tree deletion](#deletion), we keep moving down the `X` by swapping with `X` and its successor (its successor will never be the parent of `X`, it never goes up), until `X` reaches the leaf, then detach.
+![Binary Search Tree Delete Node With Two Children](../media/binary-search-tree-delete-two-children.png)
+
+```kotlin
+fun BinarySearchTree.delete(node: Node<T>) {
+    if (node.left == null && node.right == null) {
+        val parent = node.parent
+        if (paret.left == node) parent.left = null else parent.right = null
+        return
+    }
+
+    // Determine the left or right child of the node to delete for splicing out
+    if (node.left == null || node.right == null) {
+        val child = if (node.left != null) node.left else node.right
+        child.parent = node.parent
+        return 
+    }
+
+    // Keep moving down the node by swapping with its successor
+    var successorNode = successor(node)
+    while (successorNode != null) {
+        swapData(node, successNode)
+        // Move successor
+        node = successorNode
+        successorNode = successor(node)
+    }
+    // Detach leaf node
+    delete(node)
+}
+
+private fun swapData(node1: Node<T>, node2: Node<T>) {
+    val temp = node1.data
+    node1.data = node2.data
+    node1.data = temp
+}
+```
+
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
-|------------------|----------|------------|
+|-----------------|----------|------------|
 
 ### Tips for Problem Solving
 * [Recursion] is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
@@ -379,12 +418,11 @@ fun BinarySearchTree.insert(k: <T>) {
     * Two nodes
     * Skewed tree (like a linked list)
 
-## Sub-toptics
-* Heap
-* Priority
-* Binary Tree
-* Binary Search Tree
+## Sub-Toptics
+> TODO: see if we have to study those topics.
 * BFS/DFS
+* Heap
+* Priority Queue
 
 ## Resources
 - [X] Fundamental of Data Structure
@@ -401,6 +439,6 @@ fun BinarySearchTree.insert(k: <T>) {
 - [ ] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#binary-search-trees) // Binary search tree, cheat sheet
 - [X] [Tech-Interview-Cheat-Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#binary-tree) // Simple note
 - [X] [Stadford Foundations of Computer Science - The Tree Data Model](http://infolab.stanford.edu/~ullman/focs/ch05.pdf) // Very general and broad concepts covered for tree: general tree, binary tree, binary search tree, trie.
-- [ ] CLRS // Binary search tree
+- [X] CLRS // Binary search tree
 - [X] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#trees)~~ // Old resources.
 
