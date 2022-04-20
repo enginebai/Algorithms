@@ -70,7 +70,58 @@ Undirected          Directed
 * `A` is equal to the *transpose* of matrix `A` for undirected graph.
 * We also can define `A(i, j) = w` for weighted graph.
 
-## Breath-first Search (BFS)
+## Breadth-first Search (BFS)
+Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s.` It visits all vertices at level `k` before visiting level `k+1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.
+
+For our algorithm, we store some properties to the vertex:
+* To track the visit, we color each vertex "white" (not visited yet), "gray" (enqueue to visit next) and "black" (visited). `VisitState`
+* We also store the distance and it predecessor (parent) in the breadth-first tree.
+
+```kotlin
+enum VisitState { NOT_VISIT, ENQUEUE_VISIT, VISITED }
+
+data class Node<T>(
+    val data: T
+) {
+    // Initialize all vertices with color, inifinite distance and null predecessor.
+    var visitState: VisitState = NOT_VISIT
+    var distance: Int = Int.MAX
+    var predecessor: Node<T>? = null
+}
+
+fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
+    // We define a queue for each vertex to visit next, and enqueue the source vertex.
+    val queue = Queue<Node<T>>()
+    source.visitState = ENQUEUE_VISIT
+    source.distance = 0
+    source.predecessor = null
+    queue.enqueue(source)
+
+    while (!queue.isEmpty()) {
+        val vertexToVisit = queue.dequeue()
+
+        // Queue all its non-visiting adjacent vertices.
+        val adjacentVertices = graph[vertexToVisit]
+        adjacentVertices.forEach { v ->
+            if (v.visitState == NOT_VISIT) {
+                v.visitState = ENQUEUE_VISIT
+                v.distance = vertexToVisit.distance + 1
+                v.predecessor = vertexToVisit
+                queue.enqueue(v)
+            }
+        }
+
+        // Visit the current vertex
+        vertexToVisit.visitState = VISITED
+    }
+}
+```
+
+> The breadth-first tree may vary, depending upon the order of adjacent list visiting, but the distances of each visited vertex will not.
+
+### Time Complexity
+All vertices will be enqueued and dequeued at more once, it takes `O(V)` for all vertices. And the size of adjacent list is `O(E)`, it takes `O(E)` to scan all the vertice of adjacent list when dequeuing the vertex, thus the total running time if `O(V + E)` (linear time).
+
 ## Depth-first Search (DFS)
 
 ## Resources

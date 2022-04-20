@@ -263,7 +263,7 @@ fun treeTraversal(node: Node<T>) {
 
 ### Level-Order Traversal (BFS)
 ```kotlin
-fun breathFirstSearch(node: Node<T>) {
+fun breadthFirstSearch(node: Node<T>) {
     val queue = Queue()
     queue.enqueue(node)
     while (!queue.isEmpty()) {
@@ -275,7 +275,7 @@ fun breathFirstSearch(node: Node<T>) {
 }
 
 val tree = BinaryTree()
-breathFirstSearch(tree.node)
+breadthFirstSearch(tree.node)
 ```
 
 
