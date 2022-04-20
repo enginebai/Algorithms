@@ -1,5 +1,11 @@
 # Graph
-A graph `G = (V, E)`, consists of `V` (set of *vertices*) and `E` (*edges* of vertices). There are *undirected* and *directed* graph, the pair `(x, y)` and `(y, x)` represent the same edge in a undirected graph, however, it's two different edge in directed graph, where `(x, y)` represents `x` (head) to `y` (tail).
+A graph `G = (V, E)`, consists of `V` (set of *vertices*) and `E` (*edges* of vertices). 
+
+* There are *undirected* and *directed* graph, the pair `(x, y)` and `(y, x)` represent the same edge in a undirected graph, whereas, it's two different edge in directed graph, where `(x, y)` represents `x` (head) to `y` (tail). 
+* For the edge `e = (x, y)`, we will say `e` is an *incoming* edge of `y` and an *outgoing* edge of `x`.
+* The *in-degree* and *out-degree* of a vertex denotes the number of incoming and outgoing edges of the vertex. 
+
+> We refer to *out-degree* when mentioned witout specified.
 
 ![Graph](../media/graph.png)
 
@@ -9,6 +15,8 @@ A graph `G = (V, E)`, consists of `V` (set of *vertices*) and `E` (*edges* of ve
 * G2: Directed
     * V(G2) = {1, 2, 3, 4, 5, 6}
     * E(G2) = {(1, 2), (3, 4), (4, 5), (6, 1), (6, 3)}
+
+> V and E are set, the item in the set is unordered.
 
 ## Representation
 We can represent a graph `G = (V, E)` in adjacency list or matrix.
@@ -20,8 +28,25 @@ We define a list that contains all the vertices such that there is an edge betwe
 |------|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | List | 1 -> 2 -> 4 -> 5 -> 6<br>2 -> 1 -> 4<br>3 -> 4 -> 5 -> 6<br>4 -> 1 -> 2 -> 3<br>5 -> 1 -> 3<br>6 -> 1 -> 3 | 1 -> 2<br>2 -> null<br>3 -> 4<br>4 -> 2 -> 5<br>5 -> null<br>6 -> 1 -> 3 |
 
+```python
+## It takes Ω(|V|) time to determine if an edge is in the graph. (Loop for each vertices)
+## It takes Θ(|V} + |E|) space to store in array.
+A1 = [
+    [2, 4, 5 ,6],
+    [1, 4],
+    ...
+]
+
+## It takes O(1) to check edge existence and still takes Θ(|V} + |E|) space to store in hash table.
+S1 = {
+    1: {2, 4, 5, 6},
+    2: {1, 4}
+    ...
+}
+```
+
 * The vertices in each adjacency list are typically stored in a arbitrary order.
-* For both undirected and directed graph, the amount of memory is `Θ(V + E)` space complexity. (`|V| + |E|` for directed, `|V| + 2 * |E|` for undirected)
+* For both undirected and directed graph, the amount of memory is `Θ(|V} + |E|)` space complexity. (`|V| + |E|` for directed, `|V| + 2 * |E|` for undirected)
 * We also can associate *weight* on the edge by storing the weight on the node of the adjacency list. (linked list node can attach extra properties)
 
 > |V| means the size of V.
