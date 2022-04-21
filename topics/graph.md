@@ -91,7 +91,7 @@ data class Node<T>(
 
 fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
     // We define a queue for each vertex to visit next, and enqueue the source vertex.
-    val queue = Queue<Node<T>>()
+    val queue = Queue.create<Node<T>>()
     source.visitState = ENQUEUE_VISIT
     source.distance = 0
     source.predecessor = null
@@ -123,6 +123,32 @@ fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
 All vertices will be enqueued and dequeued at more once, it takes `O(V)` for all vertices. And the size of adjacent list is `O(E)`, it takes `O(E)` to scan all the vertice of adjacent list when dequeuing the vertex, thus the total running time if `O(V + E)` (linear time).
 
 ## Depth-first Search (DFS)
+```kotlin
+fun depthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
+    source.visitState == VISITED
+    val adjacentVertices = graph[source]
+    adjacentVertices.forEach { node ->
+        if (node.visitState != VISITED) {
+            depthFirstSearch(graph, node)
+        }
+    }
+}
+
+fun depthFirstSearchIterative(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>) {
+    val stack = Stack.create<Node<T>>()
+    stack.push(source)
+    while (!stack.isEmpty()) {
+        val node = stack.pop()
+        if (node.visitState != VISITED) {
+            node.visitState = VISITED
+            val adjacentVertices = graph[node]
+            adjaccentVertices.forEach { x ->
+                stack.push(x)
+            }
+        }
+    }
+}
+```
 
 ## Resources
 - [ ] Fundamental of Data Structure
