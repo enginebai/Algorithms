@@ -74,11 +74,11 @@ Undirected          Directed
 Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s.` It visits all vertices at level `k` before visiting level `k+1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.
 
 For our algorithm, we store some properties to the vertex:
-* To track the visit, we color each vertex "white" (not visited yet), "gray" (enqueue to visit next) and "black" (visited). `VisitState`
+* To track the visit, we color each vertex "white" (not visited yet), "gray" (enqueue to visit next) and "black" (visited). (Here we use `VisitState` enum to represent)
 * We also store the distance and it predecessor (parent) in the breadth-first tree.
 
 ```kotlin
-enum VisitState { NOT_VISIT, ENQUEUE_VISIT, VISITED }
+enum VisitState { NOT_VISIT, DISCOVERED, VISITED }
 
 data class Node<T>(
     val data: T
@@ -92,7 +92,7 @@ data class Node<T>(
 fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
     // We define a queue for each vertex to visit next, and enqueue the source vertex.
     val queue = Queue.create<Node<T>>()
-    source.visitState = ENQUEUE_VISIT
+    source.visitState = DISCOVERED
     source.distance = 0
     source.predecessor = null
     queue.enqueue(source)
@@ -104,7 +104,7 @@ fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
         val adjacentVertices = graph[vertexToVisit]
         adjacentVertices.forEach { v ->
             if (v.visitState == NOT_VISIT) {
-                v.visitState = ENQUEUE_VISIT
+                v.visitState = DISCOVERED
                 v.distance = vertexToVisit.distance + 1
                 v.predecessor = vertexToVisit
                 queue.enqueue(v)
@@ -135,6 +135,7 @@ fun depthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
 }
 
 fun depthFirstSearchIterative(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>) {
+    // The algorithm is similar to BFS except for using stack here.
     val stack = Stack.create<Node<T>>()
     stack.push(source)
     while (!stack.isEmpty()) {
@@ -147,6 +148,41 @@ fun depthFirstSearchIterative(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>)
             }
         }
     }
+}
+```
+
+We also can discover all vertices, use the similar color scheme (to BFS) and provides some timestapms while searching. Each vertices has two timestampes: *discover* (first discovered, and grayed) and *finish* (finishing examining its adjaceny list and blacken)
+
+The color sheme is slightly different with BFS:
+* White: Not visit yet.
+* Gray: Discovered = **visited**.
+* Black: Finished (finish examining it adjaceny list)
+
+```kotlin
+enum VisitState { NOT_VISIT, VISITED, FINISHED }
+
+var time = 0
+
+fun depthFirstSearchAllVertices(graph: Map<Node<T>, Set<Node<T>>) {
+    graph.key.forEach { vertex ->
+        if (vertex.visitState == NOT_VISIT) {
+            dfs(graph, vertex)
+        }
+    }
+}
+
+private fun dfs(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>) {
+    source.visitState = VISITED
+    source.discoverTime = ++time
+    val adjacentVertices = graph[source]
+    adjacentVertices.forEach { node ->
+        if (node.visitState == NOT_VISIT) {
+            node.parent = source
+            dfs(graph, node)
+        }
+    }
+    source.visitState = FINISHED
+    source.finishTime = ++time
 }
 ```
 
