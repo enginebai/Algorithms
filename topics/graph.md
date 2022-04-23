@@ -190,6 +190,9 @@ enum VisitState { NOT_VISIT, VISITED, FINISHED }
 
 var time = 0
 
+// Used for topological sort
+val topologicalSortLinkedList = LinkedList()
+
 fun depthFirstSearchAllVertices(graph: Map<Node<T>, Set<Node<T>>) {
     graph.key.forEach { vertex ->
         if (vertex.visitState == NOT_VISIT) {
@@ -210,6 +213,9 @@ private fun dfs(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>) {
     }
     source.visitState = FINISHED
     source.finishTime = ++time
+
+    // Insert onto a linked list for topological sort.
+    topologicalSortLinkedList.insertFirst(source)
 }
 ```
 
@@ -219,8 +225,24 @@ The `depthFirstSearchAllVertices()` take `O(|V|)` time for every vertices (not v
 > Take a look at the sameple at P.542 of CLRS.
 
 ## Topological Sort
+A *topological sort* of a directed acyclic graph (DAG) is a *linear ordering * of all vertices such that `(x, y)` which `x` appears before `y` in the ordering.
 
 It's most commonly used for job scheduling a sequence of jobs which has dependencies on the others. The jobs are represented by vertices and the edge from `x` to `y` if job `y` is dependent on `x` (`x` must be finished before `y`)
+
+```kotlin
+fun topologicalSort(graph: Map) {
+    // Step 1. call DFS(graph) and compute finish time for every vertex
+    // Step 2. When a vertex finished, insert to first of linked list
+    // Step 3. Return this linked list.
+}
+```
+
+In another way, you can run DFS first and sort the vertices by finish time descending order, it will be topological sort as well.
+
+> The correct topological sort has more than one results. (DFS generates more than one orders)
+
+### Time Complexity
+It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to insert first of linked list.
 
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
@@ -245,12 +267,12 @@ The *connected component* is a set of nodes with paths from any nodes of the com
 
 ## Resources
 - [X] Fundamental of Data Structure
-- [ ] CLRS
+- [X] CLRS
 - [X] [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs)
 - [X] MIT
     - [X] [DFS](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-10-depth-first-search/)
     - [X] [BFS](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-9-breadth-first-search/)
-- [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html // Nice introductory note
+- [X] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html // Nice introductory note
 - [X] [Stanford](http://infolab.stanford.edu/~ullman/focs/ch09.pdf) // Nice course
 - [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-6)
 - [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/graph/) // Simple note
