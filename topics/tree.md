@@ -262,7 +262,21 @@ fun treeTraversal(node: Node<T>) {
 ```
 
 ### Level-Order Traversal (BFS)
-> Implement by a queue, visit all nodes at the same level, then go next level.
+```kotlin
+fun breadthFirstSearch(node: Node<T>) {
+    val queue = Queue()
+    queue.enqueue(node)
+    while (!queue.isEmpty()) {
+        val nextNode = queue.dequeue()
+        if (nextNode.left != null) queue.enqueue(nextNode.left)
+        if (nextNode.right != null) queue.enqueue(nextNode.right)
+        print(nextNode.data)
+    }
+}
+
+val tree = BinaryTree()
+breadthFirstSearch(tree.node)
+```
 
 
 ## Binary Search Tree
@@ -421,6 +435,7 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
 ## Sub-Toptics
 > TODO: see if we have to study those topics.
 * BFS/DFS
+* Trie
 * Heap
 * Priority Queue
 
