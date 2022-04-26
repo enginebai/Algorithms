@@ -59,13 +59,6 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
 - [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
 
-## Shortest Path
-- [ ] Fundamental of Data Structure
-- [ ] CLRS
-- [ ] [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/index.htm)
-- [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-- [ ] [Stanford](http://infolab.stanford.edu/~ullman/focs/ch09.pdf) // Nice course
-
 ## Sorting
 - [ ] Fundamental of Data Structure
 - [ ] CLRS

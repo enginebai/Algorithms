@@ -176,7 +176,7 @@ fun depthFirstSearchIterative(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>)
 }
 ```
 
-We also can discover all vertices and construct depth-first search tree (forest), we use the similar color scheme (to BFS) and provides some timestapms while searching. Each vertices has two timestampes: *discover* (first discovered, and grayed) and *finish* (finishing examining its adjaceny list and blacken)
+We also can discover all vertices (fully depth-first search) and construct depth-first search tree (forest), we use the similar color scheme (to BFS) and provides some timestapms while searching. Each vertices has two timestampes: *discover* (first discovered, and grayed) and *finish* (finishing examining its adjaceny list and blacken)
 
 The color sheme is slightly different with BFS:
 * White: Not visit yet.
@@ -264,6 +264,9 @@ The *connected component* is a set of nodes with paths from any nodes of the com
 
 ## Minimum Spanning Tree
 > Skip first, study if necessary.
+
+## Shortest Path
+See topic: [Shortest Path](../topics/shortest-path.md)
 
 ## Resources
 - [X] Fundamental of Data Structure
