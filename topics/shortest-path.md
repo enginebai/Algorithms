@@ -56,6 +56,49 @@ fun initialize(G, s) {
 
 The shortest path algorithms, including *Bellman-Ford*, *DAG Relaxation*, and *Dijkstra*, call the `initialize()` and repeatedly call `relax()` on edges, they differ in how many times and the order in which they relax edges.
 
+## Bellman-Ford Algorithm
+The *Bellman-Ford* algorithm solves the single source shortest path problem in the graph in which edge weights may be negative. (also might contain cycle) The algorithm can not only find the path, but also detect if there is negative-weight cycle in the graph.
+
+The algorithm is straightforward: initialize relaxation, and then relax every edges in `|V| - 1` times.
+
+```kotlin
+/**
+ * Return true means the graph does not contain negative-weight cycle.
+ */
+fun bellmanFord(G, s): Boolean {
+    initialize(G, s)
+    for (i in 1 to G.vertices - 1) {
+        for (e in G.edges) {
+            relax(s, u, v)
+        }
+    }
+
+    // Check if any edge is still relaxable for negative-weight cycle.
+    // (still violates the triangle inequality)
+    for (e in G.edges) {
+        if (distance(s, v) > distance(s, u) + weight(u, s)) {
+            return false
+        }
+    }
+    return true
+} 
+```
+
+> Take a look at the sameple at P.589 of CLRS.
+
+**Idea!** The shortest path contains at most `|V| - 1` edges as it traverses any vertex of the graph at most once. Here we can conduct *graph duplication*: make `|V| + 1` level of copies. (Level 0 is for initialization, Level 1 ~ (`|V|` - 1) for relaxation, and last level for check negative-weight cycle.)
+
+![Bellman-Ford](../media/shortest-path-bellman-ford.png)
+> Source: [MIT Open Courseware - Introduction To Algorithms - Bellman-Ford](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec12/)
+
+For the graph copy, we run `|V| + 1` round of relaxation for every edges. At level `|V| - 1`, we will get the shortest path, and the last round will know if the graph contains negative-weight cycle. (still can relax, violates triangle inequality)
+
+### Time Complexity
+The algorithm runs `|V|` rounds and each round performs on each edges, so it takes `O(|V|*|E|)` time. However, we can obtain significatn savings by stoping relaxation round for which no edge relaxation is modifying.
+
+### Space Complexity
+We duplciate the graph `O(|V|)` times, so the space complexity will be `O(|V| * (|V| + |E|))`.
+
 ## Resources
 - [ ] Fundamental of Data Structure
 - [ ] CLRS
