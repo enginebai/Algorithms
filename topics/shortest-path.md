@@ -25,6 +25,11 @@ If the distance of the path passing `u` is less than the current path, then we c
 ## Relaxation
 The single-source shortest path algorithm use the technique of *relaxation*, the process of *relaxing* an edge `(u, v)` consists of testing whether we can improve the current shortest path from `s` to `v` found so far by "going through the edge `(u, v)`".
 
+If `d(s, v)` > `d(s, u)` + `w(u, v)` for some edge `u`, then triangle inequality is violated, and we have to fix by lowering `d(s, v)` = `d(s, u)` + `w(u, v)`, that is, *relaxing* edge by passing through `u`.
+
+
+> Triangle inequality: `s(s, v)` <= `s(s, u)` + `w(u, v)`, means that we can't find the shortest path from `s` to `v` through another vertex `u` anymore.
+
 ![Relaxation General](../media/relaxation-general.png)
 
 > The distance of `(s, v)` is 12, and we can reduce the distance by passing `u`, so the distance of `(s, v)` can relax to distance of `(s, u)` = 7 + edge weight of `(u, v)` = 2, that becomes 9.
@@ -32,7 +37,7 @@ The single-source shortest path algorithm use the technique of *relaxation*, the
 That is, if we can find the shortest path of `s(s, v)` = `s(s, u)` + `w(u, v)`, then there exists a shortest path through edge `(u, v)`.
 
 ```kotlin
-fun relax(s: Node<T>, u: Node<T>, v: Node<T>) {
+fun relax(u: Node<T>, v: Node<T>) {
     if (distance(s, v) > distance(s, u) + weight(u, v)) {
         // Relaxation is to update the distance estimation and the predecessor
         distance(s, v) = distance(s, u) + weight(u, v)
@@ -44,7 +49,7 @@ fun relax(s: Node<T>, u: Node<T>, v: Node<T>) {
 Before relaxation, we have to initialize:
 
 ```kotlin
-fun initialize(G, s) {
+fun initializeRelaxation(G, s) {
     val vertices = G.keys
     vertices.forEach { v ->
         v.distance = Int.MAX
@@ -54,7 +59,7 @@ fun initialize(G, s) {
 }
 ```
 
-The shortest path algorithms, including *Bellman-Ford*, *DAG Relaxation*, and *Dijkstra*, call the `initialize()` and repeatedly call `relax()` on edges, they differ in how many times and the order in which they relax edges.
+The shortest path algorithms, including *Bellman-Ford*, *DAG Relaxation*, and *Dijkstra*, all call the `initialize()` and repeatedly call `relax()` on edges, they differ in how many times and the order in which they relax edges.
 
 ## Bellman-Ford Algorithm
 The *Bellman-Ford* algorithm solves the single source shortest path problem in the graph in which edge weights may be negative. (also might contain cycle) The algorithm can not only find the path, but also detect if there is negative-weight cycle in the graph.
@@ -66,10 +71,10 @@ The algorithm is straightforward: initialize relaxation, and then relax every ed
  * Return true means the graph does not contain negative-weight cycle.
  */
 fun bellmanFord(G, s): Boolean {
-    initialize(G, s)
+    initializeRelaxation(G, s)
     for (i in 1 to G.vertices - 1) {
-        for (e in G.edges) {
-            relax(s, u, v)
+        for ((u, v) in G.edges) {
+            relax(u, v)
         }
     }
 
@@ -98,6 +103,26 @@ The algorithm runs `|V|` rounds and each round performs on each edges, so it tak
 
 ### Space Complexity
 We duplciate the graph `O(|V|)` times, so the space complexity will be `O(|V| * (|V| + |E|))`.
+
+## DAG Relaxation
+**Idea!** Maintain a distance estimation `d(s, v)` (initially infinite) for each vertex, then find an edge violates the *triangle inequality*, go through that edge to gradually lower the distance estimation until `d(s, v)` is the shortest-path weight `s(s, v)`. It takes `O(|V| + |E|)` time.
+
+> DAG = Directed Acyclic Graph, negative weight may exist, but there is no any cycle.
+
+```kotlin
+fun dagShortestPath(G, s) {
+    val topologicalSortList = topologicalSort(G)    // O(V + E)
+    initializeRelaxation(G, s)                      // O(V)
+    topologicalSortList.forEach { vertex ->         // O(E)
+        val adjacentVertices = G[vertex]
+        adjacentVertices.forEach { adj ->
+            relax(vertex, adj)
+        }
+    }
+}
+```
+
+> Take a look at the sameple at P.593 of CLRS.
 
 ## Resources
 - [ ] Fundamental of Data Structure
