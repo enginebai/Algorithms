@@ -5,19 +5,25 @@
 * The [BFS](../topics/graph.md#breadth-first-search-bfs) is a shortest path algorithm on unweighted graph (unit weight).
 * A *negative-weight cycle* is a path starting and ending at the same vertex with the weight of path is less than 0, and if there is a egative-weight cycle reachable from `s`, then the shortest-path weight are not well defined. (We can keep going from 4 -> 5 -> 6 and back to 4, the total distance keeps decreasing by -11 for this circle) So there is no the shortest path for the graph with negative-weight cycle. (But positive-weight cycle is allowed)
 
-For the most simple case, how to find the shortest path from `s` to `v` of the graph containing only three vertices `s`, `u`, `v`? The shortest path is either `weight(s, v)` (arriving directly) or `weight(s, u)` + `weight(u, v)` (passing through `u`)
+To find the shortest path, we maintain two attributes for every node in the graph:
+* `v.distance`: upper bound weight of path from source `s` to `v`. (distance estimate of the shortest path)
+* `v.predecessor`: the chain of predecessors originating at the vertex `v` runs backwards along a shortest path from `s` to `v`. (used to backtrace to find the shortest path)
+
+> Notation: `d` means distance, `w` means weight for short in the following note.
+
+For the most simple case, how to find the shortest path from `s` to `v` of the graph containing only three vertices `s`, `u`, `v`? The shortest path is either `w(s, v)` (arriving directly) or `w(s, u)` + `w(u, v)` (passing through `u`)
 
 ![Relaxation Example](../media/relaxation-example.png)
 
 ```js
-if distance(s, v) > distance(s, u) + weight(u, v)
-    distance(s, v) = distance(s, u) + weight(u, v)
+if d(s, v) > d(s, u) + w(u, v)
+    d(s, v) = d(s, u) + w(u, v)
 ```
 
 If the distance of the path passing `u` is less than the current path, then we can find a shorter path through edge `(u, v)`, and we have to update the current path. This gives us the general idea of finding the shortest path: **Relaxation**.
 
 ## Relaxation
-The process of *relaxing* an edge `(u, v)` consists of testing whether we can improve the current shortest path from `s` to `v` found so far by "going through the edge `(u, v)`".
+The single-source shortest path algorithm use the technique of *relaxation*, the process of *relaxing* an edge `(u, v)` consists of testing whether we can improve the current shortest path from `s` to `v` found so far by "going through the edge `(u, v)`".
 
 ![Relaxation General](../media/relaxation-general.png)
 
@@ -28,9 +34,27 @@ That is, if we can find the shortest path of `s(s, v)` = `s(s, u)` + `w(u, v)`, 
 ```kotlin
 fun relax(s: Node<T>, u: Node<T>, v: Node<T>) {
     if (distance(s, v) > distance(s, u) + weight(u, v)) {
+        // Relaxation is to update the distance estimation and the predecessor
         distance(s, v) = distance(s, u) + weight(u, v)
+        v.parent = u
     }
+}
 ```
+
+Before relaxation, we have to initialize:
+
+```kotlin
+fun initialize(G, s) {
+    val vertices = G.keys
+    vertices.forEach { v ->
+        v.distance = Int.MAX
+        v.parent = null
+    }
+    s.distance = 0
+}
+```
+
+The shortest path algorithms, including *Bellman-Ford*, *DAG Relaxation*, and *Dijkstra*, call the `initialize()` and repeatedly call `relax()` on edges, they differ in how many times and the order in which they relax edges.
 
 ## Resources
 - [ ] Fundamental of Data Structure
