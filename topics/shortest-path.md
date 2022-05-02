@@ -96,6 +96,10 @@ fun bellmanFord(G, s): Boolean {
 ![Bellman-Ford](../media/shortest-path-bellman-ford.png)
 > Source: [MIT Open Courseware - Introduction To Algorithms - Bellman-Ford](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec12/)
 
+1. `k` represents level. `k` = 0 for relax initialization.
+2. For `k` = 1 ~ 3, relax all edges from the duplication levels.
+3. For `k` = 4, check if negative-weight cycle, since there is an edge still able to relax (-7), the graph contains negative-weight cycle.
+
 For the graph copy, we run `|V| + 1` round of relaxation for every edges. At level `|V| - 1`, we will get the shortest path, and the last round will know if the graph contains negative-weight cycle. (still can relax, violates triangle inequality)
 
 ### Time Complexity
@@ -124,19 +128,66 @@ fun dagShortestPath(G, s) {
 
 > Take a look at the sameple at P.593 of CLRS.
 
+## Dijkstra's Algorithm
+The *Dijkstra's algorithm* is asymptotically faster than Bellman-Ford, but only applies to graphs containing non-negative edge weights.
+
+**Analogy!** Think of a graph as a network of pipes, we turn one a water faucet at source `s`, and the water will reach each vertex in the order of their shortest distance from source.
+
+**Idea!!** 
+* We maintain `S` representing the vertices whose final shortest-path estimate have already been determined. (We use minimum priority queue)
+* Repeatedly select a vertex `v` from `V - S` with minimum shortest-path estimate and relax its all out-going edges.
+
+> We always choose the "closest" vertex with minumum distance estimate, we say that is uses a greedy strategy.
+
+```kotlin
+fun dijkstra(G, s) {
+    val verticesQueue = PriorityQueue()
+    initializeRelaxation(G)
+    for (v in G.vertices) {
+        verticesQueue.enqueue(v)
+    }
+    while (!verticesQueue.isEmpty()) {
+        val vertex = verticesQueue.extractMin()
+        val adjacentVertices = G[vertex]
+        adjacentVertices.forEach { adj ->
+            relax(vertex, adj)
+        }
+    }
+}
+```
+
+![Dijkstra](../media/shortest-path-dijkstra.png)
+
+> Source: [MIT Open Courseware - Introduction To Algorithms - Dijkstra's Algorithm](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec13/)
+
+1. Enqueue `s`, `a`, `b`, `c`, `d` into queue.
+2. Initialize relaxation.
+3. Extract minimum from queue: `s`.
+4. Relax all out-going edges of `s`, update distance estimate of `a` and `c`.
+4. Extract minimum from queue: `c`.
+5. Relax all out-going edges of `c`, update distance estimate of `a`, `b` and `d`.
+6. And so on.
+
+> Take a look at the sameple at P.596 of CLRS.
+
+### Time Complexity
+The running time depends on how the priority queue is implemented, we can achieve `O(V * lg V + E)` with *Fibonacci Heap* and `O(V ^ 2 + E)` with *Binary Heap*.
+
+## All-Pairs Shortest Path
+> // TODO: study if necessary.
+
 ## Resources
-- [ ] Fundamental of Data Structure
 - [ ] CLRS
-    - [ ] Single-Source Shortest Paths
+    - [X] Single-Source Shortest Paths
     - [ ] All-Pairs Shortest Paths
 - [ ] MIT
-    - [ ] [Shortest Path](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-11-weighted-shortest-paths/)
-    - [ ] [Bellman-Ford](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-12-bellman-ford/)
-    - [ ] [Dijkstra](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-13-dijkstra/)
+    - [X] [Shortest Path](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-11-weighted-shortest-paths/)
+    - [X] [Bellman-Ford](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-12-bellman-ford/)
+    - [X] [Dijkstra](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-13-dijkstra/)
     - [ ] [All Pair Shortest Path](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-14-apsp-and-johnson/)
-- [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html // Nice introductory note
-- [ ] [Stanford](http://infolab.stanford.edu/~ullman/focs/ch09.pdf) // Nice course
-- [ ] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#shortest-paths)
+- [/] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html // Nice introductory note
+- [X] [Stanford](http://infolab.stanford.edu/~ullman/focs/ch09.pdf) // Nice course
+- [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#shortest-paths)
 - [ ] ~~[LC Learn](https://leetcode.com/explore/learn/card/graph/)~~ // Some topics are locked!! We could try to do all the problem to lock.
     * Disjoint Set
     * DFS
@@ -144,5 +195,3 @@ fun dagShortestPath(G, s) {
     * Minimum Spanning Tree
     * Single Source Shortest Path
     * Topological Sort
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Graph_Breadth-FS)
-- [ ] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#graphs)~~
