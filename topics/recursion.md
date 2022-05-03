@@ -66,7 +66,7 @@ With memoization, we can reduct the number of recursive calls, for the Fabonacci
 ### Space Complexity
 We have to allocate stack space to the recursive function calls which depends on the leaf counts of recursion tree and extra space for memoization.
 
-### Relation with Dynamic Programming (DP)
+### Relation with [Dynamic Programming](../topics/dynamic-programming.md) (DP)
 Recursive algorithm involves a function calling itself with smaller instance, similarly, DP breaks down problems into subproblems to solve a larger problem, DP often implemented recursively.
 
 ## Problems & Solutions
