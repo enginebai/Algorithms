@@ -14,11 +14,11 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Stack & Queue](./topics/stack-queue.md)
 - [Linked List](./topics/linked-list.md)
 - [Tree](./topics/tree.md)
+- [Graph](./topics/graph.md)
+- [Shortest Path](./topics/shortest-path.md)
 - (Upcoming) [Heap](./topics/heap.md)
 - (Upcoming) [Priority Queue](./topics/priority-queue.md)
-- (Upcoming) [Graph](./topics/graph.md)
 - (Upcoming) [Searching](./topics/searching.md)
-- (Upcoming) [Shortest Path](./topics/shortest-path.md)
 - (Upcoming) [Sorting](./topics/sorting.md)
 - (Upcoming) [Hash Table](./topics/hash-table.md)
 - [Recursion](./topics/recursion.md)
@@ -58,13 +58,6 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] CLRS
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
 - [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-
-## Shortest Path
-- [ ] Fundamental of Data Structure
-- [ ] CLRS
-- [ ] [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/index.htm)
-- [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-- [ ] [Stanford](http://infolab.stanford.edu/~ullman/focs/ch09.pdf) // Nice course
 
 ## Sorting
 - [ ] Fundamental of Data Structure
