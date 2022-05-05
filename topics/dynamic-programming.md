@@ -83,6 +83,11 @@ For the assembly line scheduling problem (CLRS P.324):
 3. Calculate `f1(n)` and `f2(n)` for each station, and store the "parent pointer".
 4. Construct the fast path from the stored "parent pointer" of step 3.
 
+## Elements of Dynamic Programming
+* **Optimal substructure**: The optimal solution to the original problem contains within its optimal solutions to subproblems. That is, we can build the solution from the solutions to subproblem.
+* **Overlapping subproblem**: We can develop the recursive algorithm that solves the same subproblems over and over (memoization).
+* **Memoization**: We maintain a table with subproblem solutions so that we can re-use to build the solution from bottom-up.
+
 ## References
 - [ ] CLRS
 - [ ] [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-15-dynamic-programming-part-1-srtbot-fib-dags-bowling/) // There are four videos
