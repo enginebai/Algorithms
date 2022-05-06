@@ -22,7 +22,7 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - (Upcoming) [Sorting](./topics/sorting.md)
 - (Upcoming) [Hash Table](./topics/hash-table.md)
 - [Recursion](./topics/recursion.md)
-- (Upcoming) [Dynamic Programming](./topics/dynamic-programming.md)
+- [Dynamic Programming](./topics/dynamic-programming.md)
 - (Upcoming) [Greedy](./topics/greedy.md)
 - (Upcoming) [Other](./topics/other.md)
 
@@ -85,19 +85,6 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings
 - [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
 - [ ] https://www.khanacademy.org/computing/computer-science/algorithms
-
-## Divide-and-conque
-## DP
-- [ ] CLRS
-- [ ] CTCI
-- [ ] [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/index.htm)
-- [ ] https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-9
-- [ ] [LC Learn + Top Interview Questions](https://leetcode.com/explore/learn/)
-- [ ] https://github.com/jwasham/coding-interview-university
-- [ ] [Tech Interview Handbook](https://techinterviewhandbook.org/algorithms/introduction/)
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings
-- [ ] https://github.com/youngyangyang04/leetcode-master
 
 ## Greedy
 - [ ] CLRS
