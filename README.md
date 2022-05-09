@@ -86,12 +86,6 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
 - [ ] https://www.khanacademy.org/computing/computer-science/algorithms
 
-## Greedy
-- [ ] CLRS
-- [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
-- [ ] https://github.com/youngyangyang04/leetcode-master
-- [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
-
 ## Priority Queue
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
 - [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
