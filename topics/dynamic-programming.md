@@ -115,8 +115,9 @@ For our example will be:
 O(k, j) = max{1 * x1 + 10 * x2 + 7 * x3 + 13 * x4} for some j and is subject to 2 * x1 + 5 * x2 + 3 * x3 + 8 * x4 <= k
 ```
 
-### Recursion by Brute-Force
-The recursive solution is 
+### Recursive Solution
+We can determine if we're going to take the item or skip, or just skip it if it's overweighted.
+
 ```
 O(k, j) =
     max{v(j) + O(k - w(j), j - 1),  O(k, j - 1)} if we take or skip itmm 
