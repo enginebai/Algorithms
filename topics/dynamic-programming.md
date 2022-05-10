@@ -129,9 +129,15 @@ And the base case is `O(k, 0) = 0` we don't take anything.
 val values: IntArray = (...)
 val weights: IntArray = (...)
 
+// Here we use 1 as first index
+val memo = [values.size][values.size]
+
 fun knapsack(capacity: Int, j: Int): Int {
     // Empty or no knapsack
     if (j < 0 || capacity <= 0) return 0
+
+    // Memoization
+    if (memo[capacity][j] != null) return memo[capacity][j]
 
     // Overweight
     if (weights[j] > capacity) return knapsack(capacity, j - 1)
@@ -141,14 +147,15 @@ fun knapsack(capacity: Int, j: Int): Int {
             values[j] + knapsack(capacity - weights[j], j - 1),
             knapsack(capacity, j - 1)
         )
+        memo[capacity][j] = value
     }
 }
 
 knapsack(10, values.size - 1)
 ```
 
-* **Time Complexity**: `O(2^n)`, there are either selected / skipped for each item.
-* **Space Complexity**: `O(1)`, no extra space.
+* **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
+* **Space Complexity**: `O(W * N)` for 2D array for memoization.
 
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
