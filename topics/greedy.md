@@ -20,7 +20,38 @@ The setup is as same as [0/1 Knapsack Problem](../topics/dynamic-programming.md#
 
 We calculate `v(i)/w(i)` for each item and sort by the value, pick the most valuable item first until the knapsack is full. It take `O(n * log n)` for sorting.
 
+```kotlin
+data class Item(
+    val value: Float,
+    val weight: Float
+)
+
+val items = arrayOf(
+    Item(100f, 20f),
+    Item(120f, 30f),
+    Item(60f, 10f),
+)
+val capacity = 50f
+
+fun knapsackFractional(): Float {
+    items.sortByDescending { it.value.div(it.weight) }
+    var leftWeights = capacity
+    var totalValues = 0f
+    items.forEach { item ->
+        // Take the whole item
+        if (item.weight <= leftWeights) {
+            totalValues += item.value
+            leftWeights -= item.weight
+        } else {
+            // Take the partial item to fill in the knapsack
+            totalValues += leftWeights * (item.value.div(item.weight))
+        }
+    }
+    return totalValues
+}
+```
+
 ## Resources
-- [ ] CLRS
+- [X] CLRS
 - [ ] https://github.com/youngyangyang04/leetcode-master#%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95
-- [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
+- [X] [Tech Interview Cheat Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#greedy-algorithms)
