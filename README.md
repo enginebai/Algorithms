@@ -59,32 +59,11 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
 - [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
 
-## Sorting
-- [ ] Fundamental of Data Structure
-- [ ] CLRS
+## Searching
 - [ ] CTCI
-- [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
-- [ ] [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/index.htm)
-- [ ] https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-8
-- [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-- [ ] [LC Learn + Top Interview Questions](https://leetcode.com/explore/learn/)
-- [ ] https://github.com/jwasham/coding-interview-university
-- [ ] [Tech Interview Handbook](https://techinterviewhandbook.org/algorithms/introduction/)
-- [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
-- [ ] https://www.khanacademy.org/computing/computer-science/algorithms
-
-## Searching & Binary Searching
-* BFS/DFS for trea and graph
-- [ ] CTCI
-- [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
-- [ ] https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-8
-- [ ] [LC Learn + Top Interview Questions](https://leetcode.com/explore/learn/)
-- [ ] https://github.com/jwasham/coding-interview-university
-- [ ] [Tech Interview Handbook](https://techinterviewhandbook.org/algorithms/introduction/)
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings
-- [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
-- [ ] https://www.khanacademy.org/computing/computer-science/algorithms
+- [ ] [LC Learn - Binary Search](https://leetcode.com/explore/learn/card/binary-search/)
+- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Binary_Search)
+- [ ] [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
 
 ## Priority Queue
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
