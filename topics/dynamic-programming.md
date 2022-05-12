@@ -90,6 +90,74 @@ For the assembly line scheduling problem (CLRS P.324):
 * **Overlapping subproblem**: The problem can be broken down into *overlapping subproblems". We can develop the recursive algorithm that solves the same subproblems over and over (memoization).
 * **Memoization**: We maintain a table with subproblem solutions so that we can re-use to build the solution from bottom-up.
 
+## 0-1 Knapsack Problem
+
+```
+Items: (value / weight)
+X1: $1 / 2kg
+X2: $10 / 5kg
+X3: $7 / 3kg
+X4: $13 / 8kg
+
+Knapsack = 10kg max capacity
+```
+
+### Modeling the Problem
+We have weight `w(i)`, value `v(i)` for each item, capacity = `k` for knapsack, to find the subset of items which value is max and sum of weights <= `k`. We also define `x(i)` to represent if an item is selected `1` or not `0`.
+
+* Constraint: `SUM(i = 1 to N) {w(i) * x(i)} <= k`
+* Objective: `SUM(i = 1 to N) {v(i) * x(i)}` is maximum and subject to the above problem constraint.
+
+Optimal structure is `O(k, j)` is capacity `k` of selected items `{1...j}`, which maximize `SUM(i = 1 to N) {v(i) * x(i)}` and is subject to `SUM(i = 1 to N) {w(i) * x(i)} <= k`
+
+For our example will be:
+```
+O(k, j) = max{1 * x1 + 10 * x2 + 7 * x3 + 13 * x4} for some j and is subject to 2 * x1 + 5 * x2 + 3 * x3 + 8 * x4 <= k
+```
+
+### Recursive Solution
+We can determine if we're going to take the item or skip, or just skip it if it's overweighted.
+
+```
+O(k, j) =
+    max{v(j) + O(k - w(j), j - 1),  O(k, j - 1)} if we take or skip itmm 
+    O(k, j - 1) if item j is overweighted, w(j) > k, then we skip it
+```
+
+And the base case is `O(k, 0) = 0` we don't take anything.
+
+```kotlin
+val values: IntArray = (...)
+val weights: IntArray = (...)
+
+// Here we use 1 as first index
+val memo = [values.size][values.size]
+
+fun knapsack(capacity: Int, j: Int): Int {
+    // Empty or no knapsack
+    if (j < 0 || capacity <= 0) return 0
+
+    // Memoization
+    if (memo[capacity][j] != null) return memo[capacity][j]
+
+    // Overweight
+    if (weights[j] > capacity) return knapsack(capacity, j - 1)
+    else {
+        // Take or skip j-th item
+        val value = max(
+            values[j] + knapsack(capacity - weights[j], j - 1),
+            knapsack(capacity, j - 1)
+        )
+        memo[capacity][j] = value
+    }
+}
+
+knapsack(10, values.size - 1)
+```
+
+* **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
+* **Space Complexity**: `O(W * N)` for 2D array for memoization.
+
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
 |------------------|----------|------------|
@@ -106,6 +174,18 @@ The problem meets the both two characteristics:
 
 Sometimes, only meets the first but not the second might be the greedy algorithm, not DP.
 
+#### Memoization Recipe
+Overall, try to think about your recursive functions call in terms of a **tree**, try to brute force all solutions, then you can recognize **where can I optimize the brute force solution.
+
+1. Make it work.
+    * Visualize the problem as a *tree*.
+    * Implement the tree using *recursion*.
+    * Verify your solution works.
+
+2. Make it efficient.
+    * Design the *memo* data structure.
+    * Check the memo first and return it.
+    * Store into memo if it doesn't exist and calculate the solution.
 
 ## References
 - [X] CLRS
