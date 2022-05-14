@@ -16,14 +16,14 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Tree](./topics/tree.md)
 - [Graph](./topics/graph.md)
 - [Shortest Path](./topics/shortest-path.md)
-- (Upcoming) [Heap](./topics/heap.md)
-- (Upcoming) [Priority Queue](./topics/priority-queue.md)
-- (Upcoming) [Searching](./topics/searching.md)
-- (Upcoming) [Sorting](./topics/sorting.md)
-- (Upcoming) [Hash Table](./topics/hash-table.md)
 - [Recursion](./topics/recursion.md)
 - [Dynamic Programming](./topics/dynamic-programming.md)
-- (Upcoming) [Greedy](./topics/greedy.md)
+- [Greedy](./topics/greedy.md)
+- [Sorting](./topics/sorting.md)
+- (Upcoming) [Searching](./topics/searching.md)
+- (Upcoming) [Heap](./topics/heap.md)
+- (Upcoming) [Priority Queue](./topics/priority-queue.md)
+- (Upcoming) [Hash Table](./topics/hash-table.md)
 - (Upcoming) [Other](./topics/other.md)
 
 ----
@@ -49,11 +49,6 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] CLRS
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
 - [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-
-## Priority Queue
-- [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
-- [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-- [ ] https://github.com/orrsella/soft-eng-interview-prep
 
 ## Treap
 
