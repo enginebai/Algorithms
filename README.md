@@ -16,14 +16,14 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Tree](./topics/tree.md)
 - [Graph](./topics/graph.md)
 - [Shortest Path](./topics/shortest-path.md)
-- (Upcoming) [Heap](./topics/heap.md)
-- (Upcoming) [Priority Queue](./topics/priority-queue.md)
-- (Upcoming) [Searching](./topics/searching.md)
-- (Upcoming) [Sorting](./topics/sorting.md)
-- (Upcoming) [Hash Table](./topics/hash-table.md)
 - [Recursion](./topics/recursion.md)
 - [Dynamic Programming](./topics/dynamic-programming.md)
-- (Upcoming) [Greedy](./topics/greedy.md)
+- [Greedy](./topics/greedy.md)
+- [Sorting](./topics/sorting.md)
+- (Upcoming) [Searching](./topics/searching.md)
+- (Upcoming) [Heap](./topics/heap.md)
+- (Upcoming) [Priority Queue](./topics/priority-queue.md)
+- (Upcoming) [Hash Table](./topics/hash-table.md)
 - (Upcoming) [Other](./topics/other.md)
 
 ----
@@ -45,51 +45,10 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] https://github.com/orrsella/soft-eng-interview-prep
 - [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
 
-## Heap
-- [ ] CLRS
-- [ ] [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/index.htm)
-- [ ] https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-5
-- [ ] [LC Learn](https://leetcode.com/explore/learn/)
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings
-- [ ] https://github.com/orrsella/soft-eng-interview-prep
-
 ## Minimum Spanning Tree
 - [ ] CLRS
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
 - [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-
-## Sorting
-- [ ] Fundamental of Data Structure
-- [ ] CLRS
-- [ ] CTCI
-- [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
-- [ ] [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/index.htm)
-- [ ] https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-8
-- [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-- [ ] [LC Learn + Top Interview Questions](https://leetcode.com/explore/learn/)
-- [ ] https://github.com/jwasham/coding-interview-university
-- [ ] [Tech Interview Handbook](https://techinterviewhandbook.org/algorithms/introduction/)
-- [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
-- [ ] https://www.khanacademy.org/computing/computer-science/algorithms
-
-## Searching & Binary Searching
-* BFS/DFS for trea and graph
-- [ ] CTCI
-- [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
-- [ ] https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-8
-- [ ] [LC Learn + Top Interview Questions](https://leetcode.com/explore/learn/)
-- [ ] https://github.com/jwasham/coding-interview-university
-- [ ] [Tech Interview Handbook](https://techinterviewhandbook.org/algorithms/introduction/)
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings
-- [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
-- [ ] https://www.khanacademy.org/computing/computer-science/algorithms
-
-## Priority Queue
-- [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
-- [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-- [ ] https://github.com/orrsella/soft-eng-interview-prep
 
 ## Treap
 

@@ -9,7 +9,7 @@ We shall consider a [dynamic programming](../topics/dynamic-programming.md) solu
 3. We conbine an optimal solution to the subproblem with the greedy choice, we can arrive at the optimal solution to the original problem.
 
 ## Elements of Greedy
-* **Greedy choice property**: A globally optimal solution can be arrived at by making a locally optimal choice. We make the choice at each step that looks the best for now, not from the results from subproblems (DP),  and then keep solving the subproblems arising after the choice is made.
+* **Greedy choice property**: A globally optimal solution can be arrived at by making a locally optimal choice. We make the choic e at each step that looks the best for now, not from the results from subproblems (DP),  and then keep solving the subproblems arising after the choice is made.
 
 > We often say that greedy algorithm never reconsiders its choices. However, DP will, it makes decisions based on all the decisions made in the previous subproblem.
 

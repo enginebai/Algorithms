@@ -187,7 +187,7 @@ Overall, try to think about your recursive functions call in terms of a **tree**
     * Check the memo first and return it.
     * Store into memo if it doesn't exist and calculate the solution.
 
-## References
+## Resources
 - [X] CLRS
 - [X] [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-15-dynamic-programming-part-1-srtbot-fib-dags-bowling/) // There are four videos
 - [ ] CTCI
