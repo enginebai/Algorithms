@@ -4,7 +4,7 @@
 
 ```kotlin
 fun insertionSort(A) {
-    for (j = 2 untils A.size) {
+    for (j in 2 untils A.size) {
         val key = A[j]
         var i = j - 1
         while (i > 0 && A[i] > key) {
@@ -20,6 +20,63 @@ fun insertionSort(A) {
 * **Space Complexity**: `O(n)` sorted in place.
 
 ## Merge Sort
+**Idea!** We will use *divide-and-conquer* approach to implement merge sort.
+
+* **Divide**: Divide `n` elements sequence into subsequences of `n/2` elements.
+* **Conquer**: Sort the two subsequences recursively using merge sort.
+* **Combine**: Merge two sorted subsequences.
+
+```kotlin
+fun mergeSort(A, start, end) {
+    if (start < end) {
+        val half = (start + end).div(2).floor()
+        mergeSort(A, start, half)
+        mergeSort(A, half + 1, end)
+        // merge two sorted array
+        merge(A, start, half, end)
+    }
+    // start == end, one element, it's already sorted, this is the base case.
+    // start > end, invalid case.
+}
+
+private fun merge(A, p, q, r) {
+    // Copy array into two left/right arrays
+    val left = q - p + 1
+    val right = r - q
+    // +1 for sentinel value
+    val leftArray = arrayOf(left + 1)
+    val rightArray = arrayOf(right + 1)
+    for (i in 0 untils left) {
+        leftArray[i] = A[i]
+    }
+    for (j in 0 until right) {
+        rightArray[j] = A[j]
+    }
+    // We set the last element to be sentinel value
+    leftArray[left] = MAX
+    rightArray[right] = MAX
+
+    // Start to merge
+    left = 0
+    right = 0
+    for (k in p until r) {
+        if (leftArray[left] < rightArray[right]) {
+            A[k] = leftArray[left]
+            left++
+        } else {
+            A[k] = rightArray[right]
+            right++
+        }
+    }
+}
+
+mergeSort(A, 0, A.size - 1)
+```
+
+> See the sameple at P.30 of CLRS.
+
+* **Time Complexity**: `O(n log n)` from recurrence and solved by *[master method](../topics/recursion.md)*. (See P.35 of CLRS.)
+* **Space Complexity**: `O(n)`, extra space to copy array for merging, it's still `O(n)`.
 
 ## Quick Sort
 
