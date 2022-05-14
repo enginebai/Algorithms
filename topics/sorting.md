@@ -148,8 +148,9 @@ private fun partition(A, p, r): Int {
 ```
 
 ## Heap Sort
+See [Heap](../topics/heap.md) topic.
 
-## References
+## Resources
 - [X] CLRS
 - [X] [MIT](https://ocw.mit.edu/courses/6-046j-introduction-to-algorithms-sma-5503-fall-2005/video_galleries/video-lectures)
 - [X] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html)

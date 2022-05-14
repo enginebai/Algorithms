@@ -45,25 +45,10 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [ ] https://github.com/orrsella/soft-eng-interview-prep
 - [ ] https://github.com/TSiege/Tech-Interview-Cheat-Sheet
 
-## Heap
-- [ ] CLRS
-- [ ] [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/index.htm)
-- [ ] https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-5
-- [ ] [LC Learn](https://leetcode.com/explore/learn/)
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings
-- [ ] https://github.com/orrsella/soft-eng-interview-prep
-
 ## Minimum Spanning Tree
 - [ ] CLRS
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
 - [ ] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html
-
-## Searching
-- [ ] CTCI
-- [ ] [LC Learn - Binary Search](https://leetcode.com/explore/learn/card/binary-search/)
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Binary_Search)
-- [ ] [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
 
 ## Priority Queue
 - [ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/welcome)
