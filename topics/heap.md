@@ -13,7 +13,7 @@ And given `i` index of node:
 * `floor(i / 2)` is the parent index. (`floor((i - 1) / 2` for 0-based index)
 * `i * 2` is the left index. (`2 * i + 1`)
 * `i * 2 + 1` is right index. (`2 * i + 2`)
-* `heapSize` return the actual used size of heap in the array.
+* `heapSize` return the actual used size of heap in the array, which `heapSize <= A.size`
 
 > The index implicitly plays the role of the pointers.
 
@@ -46,7 +46,7 @@ class MaxHeap<T> {
     }
 
     private fun ensureExtraCapacity() {
-        if (size == capacity) {
+        if (heapSize == capacity) {
             capacity *= 2
             items = items.copyOf(capacity)
         }
@@ -113,9 +113,10 @@ interface PriorityQueue<T> {
 * Build the heap: We build a max heap by running `heapifyDown()` from the bottom to up of the array. That is, all the nodes having children nodes, from index `floor(A.size / 2)` down to 0. (from the last item to the first is also right, just wasting time on the leaf)
 
 ```kotlin
-fun build(A) {
+fun buildMaxHeap(A) {
+    heapSize = A.size
     for (i in floor(A.size / 2) downTo 0) {
-        maxHeap(A, i)
+        heapifyDown(A, i)
     }
 }
 ```
@@ -131,7 +132,7 @@ fun peek(A): T? = A.getOrNull(1)
 // Return the max and delete from heap
 // Similar to delete(i) function
 fun poll(A): T? {
-    if (A.size <= 1) return null
+    if (heapSize <= 1) return null
     val max = A[1]
     // We move the last item to the first
     A[1] = A[heapSize - 1]
@@ -142,9 +143,9 @@ fun poll(A): T? {
 
 fun insert(A, item: T) {
     ensureExtraCapacity()
-    A[size] = item
-    size++
-    heapifyUp(A, size - 1)
+    A[heapSize] = item
+    heapSize++
+    heapifyUp(A, heapSize - 1)
 }
 
 fun increasePriority(A, i: Int, newPriority: Int) {
@@ -164,13 +165,37 @@ Different time complexity of different implementation of priority queue:
 | Binary Search Tree | `O(1)` | `O(lg n)` | `O(lg n)` |
 | Binary Heap        | `O(1)` | `O(lg n)` | `O(lg n)` |
 
+## Heap Sort
+Max heap property shows that the value of first item is the maximum, and other part is unordered, so if we would to sort in ascending order, there are our steps:
+
+1. Run `buildMaxHeap(A)` so that `A[1]` will be the largest item. (`[Largest item | Unordered items]`)
+2. Then swap `A[1]` with the last item of array. (`[Unordered items | Largest item]`)
+3. "Discard" the largest item (now it moved to the last item), since it's sorted. (`[Unordered items]`)
+4. Keep heapify down from the first item of the array that just discards the largest item until all items are discarded.
+
+```kotlin
+fun heapSort(A) {
+    buildMaxHeap(A)
+    for (i in A.size downTo 2) {
+        swap(1, i)
+        // Discard the last item (the largest one)
+        heapSize--
+        heapifyDown(A, 1)
+    }
+}
+```
+
+![Heap Sort](../media/heap-sort.png)
+
+* **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
+
 ## Resources
-- [ ] CLRS
-- [ ] [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-8-binary-heaps/)
+- [X] CLRS
+- [X] [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-8-binary-heaps/)
 - [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-5)
 - [ ] [LC Learn](https://leetcode.com/explore/learn/card/heap/) // Some sections are locked.
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Heap)
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/heap
-- [ ] [Software Engineer Interview Preparation // Introductory notes
+- [X] [Software Engineer Interview Preparation // Introductory notes
     - [X] [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#heap)
-    - [ ] [Algorithm](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#heapsort)
+    - [X] [Algorithm](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#heapsort)
