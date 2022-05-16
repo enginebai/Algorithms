@@ -20,9 +20,8 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Dynamic Programming](./topics/dynamic-programming.md)
 - [Greedy](./topics/greedy.md)
 - [Sorting](./topics/sorting.md)
+- [Heap & Priority Queue](./topics/heap.md)
 - (Upcoming) [Searching](./topics/searching.md)
-- (Upcoming) [Heap](./topics/heap.md)
-- (Upcoming) [Priority Queue](./topics/priority-queue.md)
 - (Upcoming) [Hash Table](./topics/hash-table.md)
 - (Upcoming) [Other](./topics/other.md)
 
