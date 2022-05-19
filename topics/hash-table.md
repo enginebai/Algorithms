@@ -1,5 +1,5 @@
 # Hash Table
-A dynamic set that supports the *dictionary* operations: `insert()`, `delete()` and `search()`, and there are some way for this:
+A dynamic set that supports the *dictionary* operations: `insert()`, `delete()` and `search()`, and there are some to fulfill this:
 * **Direct access address**: it's effificent to `search()`, however, it takes lots of space.
 * **Hashing**: We compute the array index from key.
 * **Chaining**: It's a way to handle *collisions* for hashing.
@@ -10,8 +10,10 @@ A dynamic set that supports the *dictionary* operations: `insert()`, `delete()` 
 > 2. `T`: Table, the array we represent the dynamic set.
 > 3. `Slot`: `T[i]`, the position of the array.
 
-## Direct Access Address
+## Direct Access Table
 It works well when the universe `U` of key is small, we use array, key as index, store the value corresponds to key index.
+
+![Direct Access Table](../media/hashing-direct-address-table.png)
 
 ```kotlin
 
@@ -24,7 +26,9 @@ class DirectAccessAddress<T> {
 }
 ```
 
-Each operations take `O(1)` time.
+Each operations take `O(1)` time, but it requires `O(|U|)` size to save all possible keys.
+
+
 
 ## References
 - [ ] CLRS
