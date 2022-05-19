@@ -433,7 +433,7 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
     * Skewed tree (like a linked list)
 
 ## Sub-Toptics
-> TODO: see if we have to study those topics.
+> TODO: see if we have to study those topis.
 * BFS/DFS
 * Trie
 * Heap

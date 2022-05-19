@@ -9,6 +9,7 @@ A dynamic set that supports the *dictionary* operations: `insert()`, `delete()` 
 > 1. `U`: Universe, represents all the possible keys.
 > 2. `T`: Table, the array we represent the dynamic set.
 > 3. `Slot`: `T[i]`, the position of the array.
+> 4. `K`: Keys, the actual keys in the universe.
 
 ## Direct Access Table
 It works well when the universe `U` of key is small, we use array, key as index, store the value corresponds to key index.
@@ -28,7 +29,40 @@ class DirectAccessAddress<T> {
 
 Each operations take `O(1)` time, but it requires `O(|U|)` size to save all possible keys.
 
+## Hash Tables
+The disadvantage of direct access table is obvious, the actual keys might be small relative to `U`. To fix this, we can use *hash function* `h(key)` to reduce space to `Θ(|K|)` and it still takes only `O(1)` for searching. 
 
+The hash function `h(key)` calculates the *hash value* of key `k`, maps the universe `U` into the slots of a *hash table* `T[i]`.
+
+For this mechanism, we will face a problem: *collision*, that is, the two different keys may hash to the same slot.
+
+![Hashing Collision](../media/hashing-collision.png)
+
+There are two ways to resolve this:
+1. Chaining
+2. Open Address
+
+### Chaining
+In *chaining*, we store all values that have the same hash value in a [linked list](../topics/linked-list.md)
+
+![Hash Chaining](../media/hashing-chaining.png)
+
+* `insert(value: T)`: Insert to the head of list `T[h(key(value))]`.
+* `search(key: Int)`: search key  in list `T[h(key)]`.
+* `delete(value: T)`: Delete from list `T[h(key(value))]`.
+
+The running time of insertion is `O(1)` and deletion is also `O(1)` if the list is doubly linked list. How about searching? It needs analysis based on some factor.
+
+> We assume that hash function calculation takes `O(1)` time.
+
+#### Analysis of Searching
+Given a hash table `T` with `m` slots that stores `n` elements, *load factor* `n / m` defines the average number of elements stored in the chain of one slot.
+
+The worst case running time is `Θ(n)` when all elements storing to the same slot. 
+
+The average running time depends the list length of a slot, and the list length depends on **how well the hash function** distributes key among the slots, we assume that any element is **equally likely** to hash into any slots, it called *simple uniform hashing*, the list length will be `n / m` mentioned above on average, so successful or unsuccessful search takes `Θ(1 + n / m)` time. (`Θ(1)` for hash function calculation).
+
+If the number of slots `m` is proportional to the number of elements `n`, that is, `n` = `O(m)`, then `n / m` will be 1, and `Θ(1 + n / m)` will be `O(1)`. The searching takes `O(1)` constant time.
 
 ## References
 - [ ] CLRS
