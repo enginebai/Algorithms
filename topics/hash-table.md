@@ -18,7 +18,7 @@ It works well when the universe `U` of key is small, we use array, key as index,
 
 ```kotlin
 
-class DirectAccessAddress<T> {
+class DirectAccessAddressHashTable<T> {
     private val table = ArrayOf<T>(UNIVERSE_SIZE)
 
     fun search(key: Int): T? = table[key]
@@ -60,9 +60,44 @@ Given a hash table `T` with `m` slots that stores `n` elements, *load factor* `n
 
 The worst case running time is `Θ(n)` when all elements storing to the same slot. 
 
-The average running time depends the list length of a slot, and the list length depends on **how well the hash function** distributes key among the slots, we assume that any element is **equally likely** to hash into any slots, it called *simple uniform hashing*, the list length will be `n / m` mentioned above on average, so successful or unsuccessful search takes `Θ(1 + n / m)` time. (`Θ(1)` for hash function calculation).
+The average running time depends the list length of a slot, and the list length depends on **how well the hash function** distributes key among the slots, we assume that any element is **equally likely** to hash into any slots, independently of where any other element hash hashed to, it called *simple uniform hashing*, the list length will be `n / m` mentioned above on average, so successful or unsuccessful search takes `Θ(1 + n / m)` time. (`Θ(1)` for hash function calculation).
 
 If the number of slots `m` is proportional to the number of elements `n`, that is, `n` = `O(m)`, then `n / m` will be 1, and `Θ(1 + n / m)` will be `O(1)`. The searching takes `O(1)` constant time.
+
+### Open Addressing
+We store all element directly in the hash table itself and we keep looking for next empty slot to insert the key until we find it or the table is full. (called *probe*)
+
+To determine which slots to probe, we extend the has function to include the probe number, i.e. `h(key, probe)` where 0 <= `probe` <= `m` (slots)
+
+```kotlin
+class OpenAddress<T> {
+    private val table = ArrayOf<T>(UNIVERSE_SIZE)
+
+    fun insert(key: Int): Int {
+        var probe = 0
+        do {
+            val hash = h(key(value), probe)
+            if (table[hash] == null) {
+                table[hash] = value
+                return hash
+            }
+            probe++
+        } while (probe < table.size)
+        throw OverflowException()
+    }
+
+    fun search(key: Int): Int? {
+        var probe = 0
+        do {
+            var hash = h(key, probe)
+            if (table[hash] == key) {
+                return hash
+            }
+            probe++
+        } while (table[hash] == null || probe == table.size)
+        return null
+    }
+```
 
 ## References
 - [ ] CLRS
