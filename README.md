@@ -21,6 +21,6 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Greedy](./topics/greedy.md)
 - [Sorting](./topics/sorting.md)
 - [Heap & Priority Queue](./topics/heap.md)
-- [Searching](./topics/searching.md)
 - [Hash Table](./topics/hash-table.md)
+- [Searching](./topics/searching.md)
 - (Upcoming) [Other](./topics/other.md)
