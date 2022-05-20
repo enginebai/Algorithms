@@ -8,7 +8,7 @@ A *linked list* is a pointer-based data structure that store each item in a *nod
 ## Pros. & Cons.
 | Pros.                                                                   | Cons.                                                            | Usages                                                                                           |
 |-------------------------------------------------------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| 1. Fast when inserting/deleting at the beginning.<br>2. Easy to resize. | 1. Bad at random access<br>2. Extra space to store `next` field. | 1. D<br>ynamic size<br>2. Insert/delete frequently<br>3. Don't need to access element very much. |
+| 1. Fast when inserting/deleting at the beginning.<br>2. Easy to resize. | 1. Bad at random access<br>2. Extra space to store `next` field. | 1. Dynamic size<br>2. Insert/delete frequently<br>3. Don't need to access element very much. |
 
 > Comparison to array, see [Array](../topics/array.md) topic.
 

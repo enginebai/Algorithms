@@ -308,23 +308,18 @@ fun sumPair(a: Int, b: Int) = a + b
 ```
 The function `sumPairSequence()` has runtime `O(n)` but only need `O(1)` space.
 
-----
-> // TODO: We will revisit this topic for "recursion" concept or move to standalone topic.
-
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
 - [X] CLRS
     - [X] Ch 2. Getting Started
     - [X] Ch 3. Growth of Functions
 - [X] [Stadford Foundations of Computer Science - The Running Time of Programs](http://infolab.stanford.edu/~ullman/focs/ch03.pdf) // Comprehensive analysis of running time.
-- [-] CTCI // For interview keypoints, concepts and practices.
-> CTCI contains some topics that you haven't studied yet, might revisit this book once you have been studied. (Especially for recursion)
+- [ ] CTCI // For interview keypoints, concepts and practices.
 - [X] Fundamental of Data Structure
 - [X] [Google Tech Dev Guide - Runtime Analysis](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-7) // Curated resources & links
 - [X] [Khan Academy - Asymptotic Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation) 
-- ~~[ ] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction)~~
 - [X] [Complexity：Asymptotic Notation(漸進符號)](http://alrightchiu.github.io/SecondRound/complexityasymptotic-notationjian-jin-fu-hao.html) // Nice introductory post
-- [-] [Coding Interview University - Complexity](https://github.com/jwasham/coding-interview-university#algorithmic-complexity--big-o--asymptotic-analysis) // Curated resources & links, but lots of resourse are old videos.
+- [ ] [Coding Interview University - Complexity](https://github.com/jwasham/coding-interview-university#algorithmic-complexity--big-o--asymptotic-analysis) // Curated resources & links, but lots of resourse are old videos.
 - [X] [Software Engineering Interview Preparation - Complexity](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/complexity.md) // Like cheat sheet
 - [X] [Tech Interview Cheat Sheet - Asymptotic Analysis](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#asymptotic-notation) // Very short note
 

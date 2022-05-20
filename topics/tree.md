@@ -433,11 +433,11 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
     * Skewed tree (like a linked list)
 
 ## Sub-Toptics
-> TODO: see if we have to study those topics.
-* BFS/DFS
+> TODO: see if we have to study those topis.
+* [BFS/DFS](../topics/graph.md#breadth-first-search-bfs)
+* [Heap](../topics/heap.md)
+* [Priority Queue](../topics/heap.md#priority-queue)
 * Trie
-* Heap
-* Priority Queue
 
 ## Resources
 - [X] Fundamental of Data Structure
