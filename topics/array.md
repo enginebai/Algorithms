@@ -1,6 +1,5 @@
 # Array
-## Sequences & Sets
-### Interface (ADT)
+## Sequences
 *Sequences* maintain a collection of items in an *extrinsic* order. By extrinsic, it means the first item is "first" not because of what the item is (such as it is the largest number), but because the external position puts it there. Sequances are generalizations of `array`, `stack`, `queue` and `linked list`.
 
 | Usages    | Operations        | Descriptions                                          |
@@ -17,26 +16,12 @@
 |           | `insert_last(x)`   | Add item `x` to the last item.                          |
 |           | `delete_at(i, x)` | Remove and return the last item.                      |
 
-By contrast, *Sets* maintain a collection of items in an *intrinsic* order based on a **unique key**, each item `x` has key `x.key`. Sets are generattion of `set` and `dictionary`.
-
-| Usages    | Operations     | Descriptions                                         |
-|-----------|----------------|------------------------------------------------------|
-| Container | `create(X)`    | Given an iterable `X`, create set from items in `X`. |
-|           | `size()`       | The number of items.                                 |
-| Static    | `find(k)`      | Return items with key `k`.                           |
-|           | `set_at(i, x)` | Replace the i-th item with `x`.                      |
-| Dynamic   | `insert(x)`    | Add item `x` (Replace if `x.key` exists).            |
-|           | `delete(k)`    | Remove and return the i-th item.                     |
-| Order     | `iterator()`   | Return items one-by-one in key order.                |
-|           | `find_min()`   | Return item with smallest key.                       |
-|           | `find_max()`   | Return item with largest key.                        |
-
-### Implementation
+## Implementation
 There are two main data structure approaches:
 1. Array-based
 2. Pointer-based
 
-#### Array
+### Array
 Implementing a sequence using an array, which index `i` is the item `i` allows `get_at(i)` and `set_at(i, x)` to be `O(1)` (*random access*, it is great for static operations!). However, when deleting or inserting, we have to reallocate the array and shift all items (by creating a new array with updated size and coping the existing items to the new array), it take `O(n)` in the worst case.
 
 | Data Structure | Container   | Static                     | Dynamic                             | Dynamic                            | Dynamic                          |
@@ -126,10 +111,9 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 - [ ] [LC Learn - Array and String](https://leetcode.com/explore/learn/card/array-and-string/) // Note + coding questions
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Array)
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/) // Coding questions collection with easy/medium/hard levels
-> Write some note or summary + do problems below
 - [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/array) // Note + coding questions
 - [ ] CTCI // Simple notes + some problems
-- [/] https://github.com/youngyangyang04/leetcode-master // Note + problems with nice illustration.
+- [ ] [leetcode-master](https://github.com/youngyangyang04/leetcode-master#%E6%95%B0%E7%BB%84) // Note + problems with nice illustration.
 - [X] [Tech Interview Cheat Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#array) // Simple note summary
 - [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#arrays) // Simple note summary
 - [X] ~~Fundamental of Data Structure - Arrays~~  // Polynomial + Sparse matrices.

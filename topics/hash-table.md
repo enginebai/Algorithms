@@ -1,4 +1,20 @@
 # Hash Table
+
+## Set Interface
+*Sets* maintain a collection of items in an *intrinsic* order based on a **unique key**, each item `x` has key `x.key`. Sets are generattion of `set` and `dictionary`.
+
+| Usages    | Operations     | Descriptions                                         |
+|-----------|----------------|------------------------------------------------------|
+| Container | `create(X)`    | Given an iterable `X`, create set from items in `X`. |
+|           | `size()`       | The number of items.                                 |
+| Static    | `find(k)`      | Return items with key `k`.                           |
+|           | `set_at(i, x)` | Replace the i-th item with `x`.                      |
+| Dynamic   | `insert(x)`    | Add item `x` (Replace if `x.key` exists).            |
+|           | `delete(k)`    | Remove and return the i-th item.                     |
+| Order     | `iterator()`   | Return items one-by-one in key order.                |
+|           | `find_min()`   | Return item with smallest key.                       |
+|           | `find_max()`   | Return item with largest key.              
+
 A dynamic set that supports the *dictionary* operations: `insert()`, `delete()` and `search()`, and there are some to fulfill this:
 * **Direct access address**: it's effificent to `search()`, however, it takes lots of space.
 * **Hashing**: We compute the array index from key.

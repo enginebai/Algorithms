@@ -240,6 +240,16 @@ data class Node<T>(
 )
 ```
 
+> // TODO: add `tail` node to linked list
+> ```
+> interface LinkedList<T> {
+>    val head: Node<T>
+>    val tail: Node<T>
+> }
+> ```
+>
+> Then update the following operations for this `tail` update.
+
 ### Operations
 
 #### Insertion

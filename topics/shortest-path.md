@@ -167,7 +167,6 @@ fun dijkstra(G, s) {
 4. Extract minimum from queue: `c`.
 5. Relax all out-going edges of `c`, update distance estimate of `a`, `b` and `d`.
 6. And so on.
-
 > Take a look at the sameple at P.596 of CLRS.
 
 ### Time Complexity

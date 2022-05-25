@@ -24,3 +24,20 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Hash Table](./topics/hash-table.md)
 - [Searching](./topics/searching.md)
 - (Upcoming) [Other](./topics/other.md)
+
+## Complexity
+![Sequence Complexity](./media/complexity-sequence.png)
+
+![Sets Complexity](./media/complexity-set.png)
+
+![Linked List Complexity](./media/complexity-linked-list.png)
+
+![Stack Complexity](./media/complexity-stack.png)
+
+![Queue Complexity](./media/complexity-queue.png)
+
+![Heap Complexity](./media/complexity-heap.png)
+
+![Single-Source Shortest Path Complexity](./media/complexity-sssp.png)
+
+![Sorting Complexity](./media/complexity-sorting.png)

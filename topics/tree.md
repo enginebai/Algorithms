@@ -324,7 +324,7 @@ searchIteratively(tree.root, k)
 > The order of every nodes in binary search tree is as same as "in-order" traversal order.
 
 ### Insertion & Deletion
-The insertion and deletion cause the binary search tree to change to hold the binary-search-tree property continues to hold.
+The insertion and deletion cause the binary search tree to change to hold the binary-search-tree property continues to hold. It also take `O(h)` time.
 
 ```kotlin
 fun BinarySearchTree.insert(k: <T>) {
@@ -407,7 +407,7 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
 |-----------------|----------|------------|
 
 ### Tips for Problem Solving
-* [Recursion] is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
+* [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
     * *Top-Down* solution: It can be considered as **pre-order** traversal order.
         ```kotlin
         fun topDown(node) {
@@ -433,11 +433,11 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
     * Skewed tree (like a linked list)
 
 ## Sub-Toptics
-> TODO: see if we have to study those topis.
 * [BFS/DFS](../topics/graph.md#breadth-first-search-bfs)
 * [Heap](../topics/heap.md)
 * [Priority Queue](../topics/heap.md#priority-queue)
-* Trie
+> TODO: see if we have to study those topis.
+* [Trie](../topics/other.md)
 
 ## Resources
 - [X] Fundamental of Data Structure
