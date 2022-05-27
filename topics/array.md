@@ -29,7 +29,7 @@ Implementing a sequence using an array, which index `i` is the item `i` allows `
 |                | `create(X)` | `get_at(i)` `set_at(i, x)` | `insert_at(i, x)` `delete_at(i, x)` | `insert_first(x)` `delete_first()` | `insert_last(x)` `delete_last()` |
 | Array          | `O(n)`      | **`O(1)`**                 | `O(n)`                              | `O(n)`                             | `O(n)`                           |
 
-#### Linked List
+### Linked List
 *Linked List* is a pointer-based data structure, each item has a *node* with two properties: `node.item` (the value) and `node.next` (the link to next node), and maintain pointers to the first node, called *head*.
 
 Linked list takes `O(1)` for inserting or deleting first item simply by relinking the pointer. However, it takes `O(n)` for the getter/setter function since it finds the i-th element through items one-by-one.
@@ -41,7 +41,7 @@ Linked list takes `O(1)` for inserting or deleting first item simply by relinkin
 
 > More detail, see [Linked List](../topics/linked-list.md) topic.
 
-#### Dynamic Array
+### Dynamic Array
 The `insert_last(x)` takes `O(n)` for every time, however, there is way to relax constraint size of array: *over-allocate*, we reallocate `Θ(n)` extrac space (0.5n or 2n) so that **reallocation does not occur with every dynamic operation**.
 
 Suppose we allocate new array to double size (2n) when `insert_last(x)` as array is full, and we do `n` time of `insert_last(x)` from empty array, we have to resize 1, 2, 4, 8...etc items for each round of reallocation, it takes `Θ(1 + 2 + 4 + 8 + ... + n)`, which is `Θ(SUM(i = 1 to log n) {2^i})` = `Θ(n)`, linear time for `n` times operations, then that is constant time for each opeation on average.
@@ -55,7 +55,7 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 |                | `create(X)` | `get_at(i)` `set_at(i, x)` | `insert_at(i, x)` `delete_at(i, x)` | `insert_first(x)` `delete_first()` | `insert_last(x)` `delete_last()` |
 | Dynamic Array  | `O(n)`      | **`O(1)`**                     | `O(n)`                              | `O(n)`                             | **`O(1)`**                       |
 
-### Amortization
+## Amortization
 * Operation has **amortized cost** `T(n)` if `k` operations cost at most `k * T(n)`, that is *on average* over may operations.
 * Inserting into a dynamic array take `O(1)` amortized time. (It might still take `O(n)` for some worst case)
 
@@ -69,6 +69,7 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 | Problem         | Solution | Difficulty |
 |------------------|----------|------------|
 |[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[Two Pointers](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
+|[209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[Sliding Window](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 
 ### Tips for Problem Solving
 * Mind the bound or size of array. Think about empty array or with few element (1, 2, or less than the problem requirement).
