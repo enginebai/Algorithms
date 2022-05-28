@@ -69,7 +69,10 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 * Mind the bound or size of array. Think about empty array or with few element (1, 2, or less than the problem requirement).
 * Think about the case that the array with the duplicate or repeated element.
 * Is the array sorted (partially)? Yes, try *binary search*. No, try to sort first?
-* *Two pointers* or *sliding window* techniques.
+* *Two pointers* or *sliding window* techniques. 
+
+> Understand what the problems are suitable to use `two pointer` and `sliding window` approaches to solve.
+
 * Swap or ignore element (only take the element met the requirement)
 * We can iterate array from left to right, also from *right to left*.
 * `O(n)` time complexity **doesn't** mean you can only iterate the array **once**. Iterate the array several times might help solve the problem, for example, pre-computation (iterate array at least one time first) using hashing might be useful.
