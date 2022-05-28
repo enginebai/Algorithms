@@ -3,6 +3,14 @@
 ## Arrays
 | Problem         | Solution | Difficulty |
 |------------------|----------|------------|
+|[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[Two Pointers](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
+|[209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[Sliding Window](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
+|[1. Two Sum](https://leetcode.com/problems/two-sum/)|[Hash Table](../leetcode/1.two-sum.md)|Easy|
+
+> Below are from LeetCode Explore.
+
+| Problem         | Solution | Difficulty |
+|------------------|----------|------------|
 |[485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)|[Straightforward](../leetcode/485.max-consecutive-ones.md)|Easy|
 |[1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)|[Straightforward](../leetcode/1295.find-numbers-with-even-number-of-digits.md)|Easy|
 |[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[Two Pointers](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
@@ -17,4 +25,3 @@
 |[905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|[Two Pointers](../leetcode/905.sort-array-by-parity.md)|Easy|
 |[1051. Height Checker](https://leetcode.com/problems/height-checker/)|[Straightforward](../leetcode/1051.height-checker.md)|Easy|
 |[448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)|[In-place Negative Seen](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
-|[704. Binary Search](https://leetcode.com/problems/binary-search/)||Easy|

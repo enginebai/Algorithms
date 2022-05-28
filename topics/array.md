@@ -65,13 +65,7 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 |--------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------|
 | 1. Random access.<br>2. No `next` field, saving space. (vs Linked List) | 1. Bad at insert/delete. (Copy to new array)<br>2. Bad at resize. (Copy to new array) | 1. Fast access.<br>2. Fix size |
 
-## Problems & Solutions
-| Problem         | Solution | Difficulty |
-|------------------|----------|------------|
-|[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[Two Pointers](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
-|[209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[Sliding Window](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
-
-### Tips for Problem Solving
+## Tips for Problem Solving
 * Mind the bound or size of array. Think about empty array or with few element (1, 2, or less than the problem requirement).
 * Think about the case that the array with the duplicate or repeated element.
 * Is the array sorted (partially)? Yes, try *binary search*. No, try to sort first?
