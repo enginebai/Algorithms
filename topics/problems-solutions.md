@@ -7,6 +7,7 @@
 |[209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[Sliding Window](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 |[1. Two Sum](https://leetcode.com/problems/two-sum/)|[Hash Table](../leetcode/1.two-sum.md)|Easy|
 |[15. 3Sum](https://leetcode.com/problems/3sum/)|[Two Pointers](../leetcode/15.3sum.md)|Medium|
+|[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[Dynamic Programming](../leetcode/53.maximum-subarray.md)|Easy|
 
 > Below are from LeetCode Explore.
 
