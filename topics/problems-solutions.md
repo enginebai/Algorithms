@@ -8,6 +8,7 @@
 |[1. Two Sum](https://leetcode.com/problems/two-sum/)|[Hash Table](../leetcode/1.two-sum.md)|Easy|
 |[15. 3Sum](https://leetcode.com/problems/3sum/)|[Two Pointers](../leetcode/15.3sum.md)|Medium|
 |[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[Dynamic Programming](../leetcode/53.maximum-subarray.md)|Easy|
+|[59. Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)|[Array Manipulation](../leetcode/59.spiral-matrix-ii.md)|Medium|
 
 > Below are from LeetCode Explore.
 
