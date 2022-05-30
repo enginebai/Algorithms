@@ -9,6 +9,12 @@
 |[15. 3Sum](https://leetcode.com/problems/3sum/)|[Two Pointers](../leetcode/15.3sum.md)|Medium|
 |[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[Dynamic Programming](../leetcode/53.maximum-subarray.md)|Easy|
 |[59. Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)|[Array Manipulation](../leetcode/59.spiral-matrix-ii.md)|Medium|
+|[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[Straightforward](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
+
+> Best Time to Buy and Sell Stock
+> 189. Rotate Array
+> Plus One
+> 6. ZigZag Conversion
 
 > Below are from LeetCode Explore.
 
