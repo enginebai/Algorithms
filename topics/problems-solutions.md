@@ -13,8 +13,8 @@
 |[122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[Straightforward](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[189. Rotate Array](https://leetcode.com/problems/rotate-array/)|[Reserve Without Extra Space](../leetcode/189.rotate-array.md)|Medium|
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[Hash Table](../leetcode/217.contains-duplicate.md)|Easy|
+|[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Two Pointers](../leetcode/283.move-zeros.md)|Easy|
 
-> https://leetcode.com/problems/contains-duplicate/
 > https://leetcode.com/problems/move-zeroes/
 > https://leetcode.com/problems/intersection-of-two-arrays-ii/
 > https://leetcode.com/problems/single-number/
@@ -36,7 +36,6 @@
 |[1346. Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/)|[Hash Table](../leetcode/1346.check-if-n-and-its-double-exist.md)|Easy|
 |[941. Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/)|[Two Pointers](../leetcode/941.valid-mountain-array.md)|Easy|
 |[1299. Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/)|[Straightforward](../leetcode/1299.replace-elements-with-greatest-element-on-right-side.md)|Easy|
-|[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Two Pointers](../leetcode/283.move-zeros.md)|Easy|
 |[905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|[Two Pointers](../leetcode/905.sort-array-by-parity.md)|Easy|
 |[1051. Height Checker](https://leetcode.com/problems/height-checker/)|[Straightforward](../leetcode/1051.height-checker.md)|Easy|
 |[448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)|[In-place Negative Seen](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
