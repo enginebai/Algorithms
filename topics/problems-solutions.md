@@ -14,9 +14,8 @@
 |[189. Rotate Array](https://leetcode.com/problems/rotate-array/)|[Reserve Without Extra Space](../leetcode/189.rotate-array.md)|Medium|
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[Hash Table](../leetcode/217.contains-duplicate.md)|Easy|
 |[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Two Pointers](../leetcode/283.move-zeros.md)|Easy|
+|[350. Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[Hash Table](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
 
-> https://leetcode.com/problems/move-zeroes/
-> https://leetcode.com/problems/intersection-of-two-arrays-ii/
 > https://leetcode.com/problems/single-number/
 > https://leetcode.com/problems/rotate-image/
 > https://leetcode.com/problems/reverse-string/
@@ -28,7 +27,6 @@
 |------------------|----------|------------|
 |[485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)|[Straightforward](../leetcode/485.max-consecutive-ones.md)|Easy|
 |[1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)|[Straightforward](../leetcode/1295.find-numbers-with-even-number-of-digits.md)|Easy|
-|[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[Two Pointers](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
 |[1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)|[Two Pointers](../leetcode/1089.duplicate-zeros.md)|Easy|
 |[27. Remove Element](https://leetcode.com/problems/remove-element/)|[Two Pointers](../leetcode/27.remove-element.md)|Easy|
 |[88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[Two Pointers](../leetcode/88.merge-sorted-array.md)|Easy|
