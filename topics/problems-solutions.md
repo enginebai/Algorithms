@@ -12,11 +12,15 @@
 |[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[Straightforward](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
 |[122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[Straightforward](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[189. Rotate Array](https://leetcode.com/problems/rotate-array/)|[Reserve Without Extra Space](../leetcode/189.rotate-array.md)|Medium|
+|[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[Hash Table](../leetcode/217.contains-duplicate.md)|Easy|
 
-> Best Time to Buy and Sell Stock
-> 189. Rotate Array
-> Plus One
-> 6. ZigZag Conversion
+> https://leetcode.com/problems/contains-duplicate/
+> https://leetcode.com/problems/move-zeroes/
+> https://leetcode.com/problems/intersection-of-two-arrays-ii/
+> https://leetcode.com/problems/single-number/
+> https://leetcode.com/problems/rotate-image/
+> https://leetcode.com/problems/reverse-string/
+> Then pick the most liked problems from [Google Recruiter List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Array) and [Tech Interview](https://www.techinterviewhandbook.org/algorithms/array/)
 
 > Below are from LeetCode Explore.
 
