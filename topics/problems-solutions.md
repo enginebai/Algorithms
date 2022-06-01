@@ -15,11 +15,29 @@
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[Hash Table](../leetcode/217.contains-duplicate.md)|Easy|
 |[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Two Pointers](../leetcode/283.move-zeros.md)|Easy|
 |[350. Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[Hash Table](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
+|[136. Single Number](https://leetcode.com/problems/single-number/)|[Bit Manipulation](../leetcode/136.single-number.md)|Easy|
 
-> https://leetcode.com/problems/single-number/
 > https://leetcode.com/problems/rotate-image/
 > https://leetcode.com/problems/reverse-string/
+> https://leetcode.com/problems/longest-substring-without-repeating-characters/
+> https://leetcode.com/problems/first-unique-character-in-a-string/
+> https://leetcode.com/problems/valid-anagram/
+> https://leetcode.com/problems/longest-palindromic-substring/
+> https://leetcode.com/problems/longest-repeating-character-replacement/
+> https://leetcode.com/problems/find-all-anagrams-in-a-string/
+> https://leetcode.com/problems/minimum-window-substring/description/
+> https://leetcode.com/problems/group-anagrams/
+> https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+> https://leetcode.com/problems/merge-intervals/
+> https://leetcode.com/problems/container-with-most-water/
+> https://leetcode.com/problems/next-permutation/
+> https://leetcode.com/problems/find-all-duplicates-in-an-array/
+> https://leetcode.com/problems/sort-colors/
+>
+> https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
+> 
 > Then pick the most liked problems from [Google Recruiter List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Array) and [Tech Interview](https://www.techinterviewhandbook.org/algorithms/array/)
+> Final, do the remaining problems from LC top interview questions.
 
 > Below are from LeetCode Explore.
 
