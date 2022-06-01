@@ -17,8 +17,8 @@
 |[350. Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[Hash Table](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
 |[136. Single Number](https://leetcode.com/problems/single-number/)|[Bit Manipulation](../leetcode/136.single-number.md)|Easy|
 |[48. Rotate Image](https://leetcode.com/problems/rotate-image/)|[Matrix Transformation](../leetcode/48.rotate-image.md)|Medium|
+|[344. Reverse String](https://leetcode.com/problems/reverse-string/)|[Straightforward](../leetcode/344.reverse-string.md)|Easy|
 
-> https://leetcode.com/problems/reverse-string/
 > https://leetcode.com/problems/longest-substring-without-repeating-characters/
 > https://leetcode.com/problems/first-unique-character-in-a-string/
 > https://leetcode.com/problems/valid-anagram/
