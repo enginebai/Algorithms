@@ -16,8 +16,8 @@
 |[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Two Pointers](../leetcode/283.move-zeros.md)|Easy|
 |[350. Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[Hash Table](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
 |[136. Single Number](https://leetcode.com/problems/single-number/)|[Bit Manipulation](../leetcode/136.single-number.md)|Easy|
+|[48. Rotate Image](https://leetcode.com/problems/rotate-image/)|[Matrix Transformation](../leetcode/48.rotate-image.md)|Medium|
 
-> https://leetcode.com/problems/rotate-image/
 > https://leetcode.com/problems/reverse-string/
 > https://leetcode.com/problems/longest-substring-without-repeating-characters/
 > https://leetcode.com/problems/first-unique-character-in-a-string/
