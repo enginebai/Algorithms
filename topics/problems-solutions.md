@@ -55,3 +55,28 @@
 |[905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|[Two Pointers](../leetcode/905.sort-array-by-parity.md)|Easy|
 |[1051. Height Checker](https://leetcode.com/problems/height-checker/)|[Straightforward](../leetcode/1051.height-checker.md)|Easy|
 |[448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)|[In-place Negative Seen](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
+
+## Linked List
+| Problem         | Solution | Difficulty |
+|------------------|----------|------------|
+
+> https://leetcode.com/problems/design-linked-list/
+> https://leetcode.com/problems/middle-of-the-linked-list/
+> https://leetcode.com/problems/reverse-linked-list/
+> https://leetcode.com/problems/reverse-linked-list-ii/
+> https://leetcode.com/problems/linked-list-cycle/
+> https://leetcode.com/problems/linked-list-cycle-ii/
+> https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+> https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+> https://leetcode.com/problems/merge-two-sorted-lists/
+> https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+> https://leetcode.com/problems/add-two-numbers/
+> https://leetcode.com/problems/palindrome-linked-list/
+> https://leetcode.com/problems/reorder-list/
+> 
+> Less common:
+>
+> https://leetcode.com/problems/intersection-of-two-linked-lists/
+> https://leetcode.com/problems/odd-even-linked-list/
+>
+> Hard: https://leetcode.com/problems/merge-k-sorted-lists/
