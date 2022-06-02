@@ -19,8 +19,7 @@
 |[48. Rotate Image](https://leetcode.com/problems/rotate-image/)|[Matrix Transformation](../leetcode/48.rotate-image.md)|Medium|
 |[344. Reverse String](https://leetcode.com/problems/reverse-string/)|[Straightforward](../leetcode/344.reverse-string.md)|Easy|
 |[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|[Hash Table](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
-
-> https://leetcode.com/problems/longest-substring-without-repeating-characters/
+|[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)||Medium|
 > https://leetcode.com/problems/valid-anagram/
 > https://leetcode.com/problems/longest-palindromic-substring/
 > https://leetcode.com/problems/longest-repeating-character-replacement/
