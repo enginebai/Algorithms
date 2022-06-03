@@ -21,11 +21,12 @@
 |[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|[Hash Table](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
 |[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[Sliding Window](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[Hash Table](../leetcode/242.valid-anagram.md)|Easy|
+|[5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[Straightforward](../leetcode/5.longest-palindromic-substring.md)|Medium|
 
 > https://leetcode.com/problems/longest-palindromic-substring/
 > https://leetcode.com/problems/longest-repeating-character-replacement/
 > https://leetcode.com/problems/find-all-anagrams-in-a-string/
-> https://leetcode.com/problems/minimum-window-substring/description/
+> https://leetcode.com/problems/minimum-window-substring/
 > https://leetcode.com/problems/group-anagrams/
 > https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 > https://leetcode.com/problems/merge-intervals/
