@@ -397,16 +397,24 @@ Linked list with the last node has reference to the head.
 |------------------|----------|------------|
 |[707. Design Linked List](https://leetcode.com/problems/design-linked-list/)|[Implementation](../leetcode/707.design-linked-list.md)|Medium|
 
-### Tips for Problem Solving
+## Tips for Problem Solving
+* Corner cases:
+    * **Empty linked list**
+    * Linked list with **one / two nodes**
+    * Linked list has cycles. Clarify before solving problem!
+
+```js
+1. head -> null
+2. head -> A -> null
+3. head -> A -> B -> null
+```
+* Consider to operate on the specific node before or after.
 * Get familiar with the following operations:
     * Count the node number
     * Reverse in-place or update the node references
     * Find the middle node using two pointers technique
     * Merge (connect) two linked lists
-* Corner cases:
-    * Empty linked list
-    * Linked list with one / two nodes
-    * Linked list has cycles. Clarify before solving problem!
+
 
 ## Resources
 - [X] Fundamental of Data Structure
