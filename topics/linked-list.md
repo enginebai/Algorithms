@@ -77,12 +77,13 @@ fun LinkedList.insertLast(value: T) {
 fun LinkedList.insertAt(index: Int, value: T) {
     val newNode = Node(value)
     if (index == 0) {
-        newNode.next = this.head?.next
-        this.head = newNode
+        insertFirst(value)
         return
     }
 
     // Find the (index - 1)-th node
+    // i = index - 2, node will move to index - 1, this is what we're looking for.
+    // i = index - 1 node will move to index.
     var node = this.head
     for (i in 0 until index - 1) {
         node = node?.next
@@ -109,25 +110,22 @@ To delete specific node from the linked list, we have to iterate to find the pre
 
 ```kotlin
 fun LinkedList.delete(node: Node) {
+    // We find the node to delete at the beginning.
+    if (head == node) {
+        deleteFirst()
+        return
+    }
     var nodeToDelete = this.head
     var previousNode: Node? = null
 
-    // We find the node to delete at the beginning.
-    if (this.head != null && this.head.data == node.data) {
-        head = null
-        return
-    }
-
     // Iterate to find the node to delete
-    while (nodeToDelete != null && nodeToDelete?.data != node.data) {
+    while (nodeToDelete != null && nodeToDelete != node) {
         previousNode = nodeToDelete
         nodeToDelete = nodeToDelete.next
     }
 
     // If we found it, relink the node
-    if (nodeToDelete != null) {
-        previousNode = nodeToDelete.next
-    }
+    previousNode?.next = nodeToDelete?.next
 }
 ```
 
@@ -136,7 +134,7 @@ To delete at the specific index, we have to iterate the linked list to locate th
 ```kotlin
 fun LinkedList.deleteAt(indexToDelete: Int) {
     if (indexToDelete == 0) {
-        this.head = this.head?.next
+        deleteFirst()
         return
     }
 
@@ -154,29 +152,22 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
         previousNode = currentNode
         currentNode = currentNode.next
     }
-
-    // We actually find the index to delete. If current node is null, that means the index exceeds the size.
-    if (currentIndex == indexToDelete && currentNode != null) {
-        previousNode?.next = currentNode.next
-    }
+    previousNode?.next = currentNode?.next
 }
 
 fun LinkedList.deleteLast() {
-    var previous: Node<T>? = null
-    var current = this.head
-
     // For linked list has only one node
-    if (current?.next == null) {
+    if (this.head?.next == null) {
         this.head = null
         return
     }
+    var previous: Node<T>? = null
+    var current = this.head
     while (current?.next != null) {
         previous = current
         current = current.next
     }
-    if (previous != null && current != null) {
-        previous.next = current.next
-    }
+    previous?.next = current?.next
 }
 ```
 
