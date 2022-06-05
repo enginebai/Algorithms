@@ -83,7 +83,7 @@ fun LinkedList.insertAt(index: Int, value: T) {
 
     // Find the (index - 1)-th node
     // i = index - 2, node will move to index - 1, this is what we're looking for.
-    // i = index - 1 node will move to index.
+    // i = index - 1 node will move to index, since we have to find the previous node to insert, so this round is not what we're looking for.
     var node = this.head
     for (i in 0 until index - 1) {
         node = node?.next
@@ -109,14 +109,14 @@ fun LinkedList.deleteFirst() {
 To delete specific node from the linked list, we have to iterate to find the previous node before the node to delete and relink to delete. It takes `O(n)` because it iterates the list to locate the node to delete.
 
 ```kotlin
-fun LinkedList.delete(node: Node) {
+fun LinkedList.delete(node: Node<T>) {
     // We find the node to delete at the beginning.
     if (head == node) {
         deleteFirst()
         return
     }
     var nodeToDelete = this.head
-    var previousNode: Node? = null
+    var previousNode: Node<T>? = null
 
     // Iterate to find the node to delete
     while (nodeToDelete != null && nodeToDelete != node) {
@@ -145,8 +145,8 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
     // }
     // See `insertAt()` function above.
     var currentIndex = 0
-    var previousNode: Node? = null
-    var currentNode: Node? = this.head
+    var previousNode: Node<T>? = null
+    var currentNode: Node<T>? = this.head
     while (currentIndex < indexToDelete && currentNode != null) {
         currentIndex++
         previousNode = currentNode
@@ -194,15 +194,15 @@ And for recursive way, suppose we define the function `getSize(node: Node): Int`
 2. Else return `1 + getSize(node.next)`.
 
 ```kotlin
-fun LinkedList.getSize(node: Node = this.head): Int {
-    if (node == null) return 0
-    else return 1 + getSize(node.next)
+fun LinkedList.getSize(node: Node<T>? = this.head): Int {
+    return if (node == null) 0
+    else 1 + getSize(node.next)
 }
 ```
 
 #### Search
 ```kotlin
-fun LinkedList.search(value: T): Boolean {
+fun LinkedList.contains(value: T): Boolean {
     var node = this.head
     while (node != null) {
         if (node.value == value) return true
@@ -211,7 +211,7 @@ fun LinkedList.search(value: T): Boolean {
     return false
 }
 
-fun LinkedList.searchRecursively(node: Node? = head, value: T): Boolean {
+fun LinkedList.containsRecursively(node: Node? = head, value: T): Boolean {
     if (node == null) return false
     return if (node.value == value) true
     else searchRecursively(node.next, value)
