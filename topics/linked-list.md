@@ -91,6 +91,8 @@ fun LinkedList.insertAt(index: Int, value: T) {
     newNode.next = node?.next
     node?.next = newNode
 }
+
+// We also can write in while loop, see insertAt() in doubly linked list.
 ```
 
 #### Deletion
@@ -202,6 +204,7 @@ fun LinkedList.getSize(node: Node<T>? = this.head): Int {
 
 #### Search
 ```kotlin
+// Iteratively
 fun LinkedList.contains(value: T): Boolean {
     var node = this.head
     while (node != null) {
@@ -211,10 +214,14 @@ fun LinkedList.contains(value: T): Boolean {
     return false
 }
 
-fun LinkedList.containsRecursively(node: Node? = head, value: T): Boolean {
+// Recursively
+fun LinkedList.contains(node: Node? = head, value: T): Boolean {
+    // Base cases
     if (node == null) return false
-    return if (node.value == value) true
-    else searchRecursively(node.next, value)
+    if (node.value == value) return true
+
+    // Recursive case
+    return searchRecursively(node.next, value)
 }
 ```
 ## Doubly Linked List
@@ -245,16 +252,16 @@ data class Node<T>(
 
 #### Insertion
 ```kotlin
-// Origin is `head <- -> node` becomes
-// `head <- newNode -> node`
+// head <- -> node
+// head <- -> new <- -> node
 fun LinkedList.insertFirst(value: T) {
     val newNode = Node(value, next = this.head, previous = null)
     this.head?.previous = newNode
     this.head = newNode
 }
 
-// Origin is `node <- -> null` becomes
-// `node <- -> newNode <- -> null`
+// last -> null
+// last <- -> new -> null
 fun LinkedList.insertLast(value: T) {
     val newNode(value, next = null)
     var lastNode = this.head
@@ -270,8 +277,8 @@ fun LinkedList.insertLast(value: T) {
     lastNode?.next = newNode
 }
 
-// Origin is `node <- -> next` becomes
-// `node <- -> newNode <- -> next`
+// node <- -> next
+// node <- -> new <- -> next
 fun LinkedList.insertAfter(node: Node, value: T) {
     val nextNode = node?.next
     val newNode = Node(value, next = nextNode, previous = node)
@@ -279,24 +286,69 @@ fun LinkedList.insertAfter(node: Node, value: T) {
     node?.next = newNode
 }
 
-fun LinkedList.insertAt(index: Int, value: T) {
+// previous (index - 1) <- -> current (index) <- -> next (index + 1)
+// previous <- -> new <- -> current <- -> next
+// TODO: insertAt() in for loop
+
+// Equivalence written in while loop
+fun insertAt(index: Int, value: T) {
     if (index == 0) {
-        insertFirst()
+        insertFirst(value)
         return
     }
+
+    var previous: Node<T>? = null
+    var current: Node<T>? = head
     var i = 0
-    var node = this.head
-    while (i < index && node != null) {
+    while (current != null && i < index) {
         i++
-        node = node.next
+        previous = current
+        current = current.next
     }
 
-    if (i == index && node != null) {
-        val nextNode = node.next
-        val newNode = Node(value, next = nextNode, previous = node)
-        nextNode.previous = newNode
-        node.next = newNode
+    val newNode = Node(data = value)
+    newNode.previous = previous
+    newNode.next = current
+    previous?.next = newNode
+    current?.previous = newNode
+}
+```
+
+> NOTE: If we use while loop (the equivalence) but don't keep the previous node pointer (we trace current node pointer only), we will fail to insert when index = size since the the current node pointer will be null and it can't get the previous node. (See below code)
+>
+> ```kotlin
+> linkedList.insertFirst(0)
+> linkedList.insertLast(1)
+> // For now, list is 0 -> 1, size = 2
+> 
+> // It will fail but should succeed, 0 -> 1 -> 2
+> linkedList.insertAt(2, 2)
+> ```
+
+```kotlin
+// This does not work when insert after the last index.
+fun insertAt(index: Int, value: T) {
+    if (index == 0) {
+        insertFirst(value)
+        return
     }
+
+    var node: Node<T>? = head
+    var i = 0
+    while (i < index) {
+        i++
+        node = node?.next
+    }
+    // node moves to the next of last node, which is null when leaving the while loop.
+
+    val newNode = Node(data = value)
+    // This is null, since node is null.
+    val previousNode = node?.previous
+    newNode.previous = previousNode
+    newNode.next = node
+    previousNode?.next = newNode
+    // It won't execute since node is null so the insertAt() will fail
+    node?.previous = newNode
 }
 ```
 
