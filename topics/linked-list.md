@@ -457,15 +457,13 @@ Linked list with the last node has reference to the head.
 ## Problems & Solutions
 > // TODO: move away
 
-| Problem          | Solution | Difficulty |
-|------------------|----------|------------|
-|[707. Design Linked List](https://leetcode.com/problems/design-linked-list/)|[Implementation](../leetcode/707.design-linked-list.md)|Medium|
+| Problem|Difficulty|
+|-|-|
+|[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
+|[707. Design Linked List](../leetcode/707.design-linked-list.md)|Medium|
 
-## Linked List
-| Problem          | Solution | Difficulty |
-|------------------|----------|------------|
+
 > https://leetcode.com/problems/middle-of-the-linked-list/
-> https://leetcode.com/problems/reverse-linked-list/
 > https://leetcode.com/problems/reverse-linked-list-ii/
 > https://leetcode.com/problems/linked-list-cycle/
 > https://leetcode.com/problems/linked-list-cycle-ii/
