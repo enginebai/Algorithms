@@ -38,7 +38,7 @@ Linked list takes `O(1)` for inserting or deleting first item simply by relinkin
 ![Linked List Insert](../media/linked-list-insert.png)
 
 ```kotlin
-fun LinkedList.insertFirst(value: T) {
+fun insertFirst(value: T) {
     val newNode = Node(value)
     newNode.next = this.head
     this.head = newNode
@@ -48,7 +48,7 @@ fun LinkedList.insertFirst(value: T) {
 It also takes `O(1)` to insert after a specific node.
 
 ```kotlin
-fun LinkedList.insertAfter(node: Node, value: T) {
+fun insertAfter(node: Node, value: T) {
     val newNode = Node(value)
     newNode.next = node.next
     node.next = newNode
@@ -58,7 +58,7 @@ fun LinkedList.insertAfter(node: Node, value: T) {
 However, it takes `O(n)` to insert a new node at the index `i` or the end, because it has to iterate some (all) nodes to find the node to insert.
 
 ```kotlin
-fun LinkedList.insertLast(value: T) {
+fun insertLast(value: T) {
     val newNode = Node(value)
     var lastNode = this.head
 
@@ -74,7 +74,7 @@ fun LinkedList.insertLast(value: T) {
     lastNode?.next = newNode
 }
 
-fun LinkedList.insertAt(index: Int, value: T) {
+fun insertAt(index: Int, value: T) {
     val newNode = Node(value)
     if (index == 0) {
         insertFirst(value)
@@ -102,7 +102,7 @@ To delete the first node, we simply **assign the next node to head**, it takes `
 > We have to mind the boundary, such as first or last.
 
 ```kotlin
-fun LinkedList.deleteFirst() {
+fun deleteFirst() {
     val nextNode = this.head?.next
     this.head = nextNode
 }
@@ -111,7 +111,7 @@ fun LinkedList.deleteFirst() {
 To delete specific node from the linked list, we have to iterate to find the previous node before the node to delete and relink to delete. It takes `O(n)` because it iterates the list to locate the node to delete.
 
 ```kotlin
-fun LinkedList.delete(node: Node<T>) {
+fun deleteNode(node: Node<T>) {
     // We find the node to delete at the beginning.
     if (head == node) {
         deleteFirst()
@@ -134,7 +134,7 @@ fun LinkedList.delete(node: Node<T>) {
 To delete at the specific index, we have to iterate the linked list to locate the previous node of that index, it also takes `O(n)`.
 
 ```kotlin
-fun LinkedList.deleteAt(indexToDelete: Int) {
+fun deleteAt(indexToDelete: Int) {
     if (indexToDelete == 0) {
         deleteFirst()
         return
@@ -157,7 +157,7 @@ fun LinkedList.deleteAt(indexToDelete: Int) {
     previousNode?.next = currentNode?.next
 }
 
-fun LinkedList.deleteLast() {
+fun deleteLast() {
     // For linked list has only one node
     if (this.head?.next == null) {
         this.head = null
@@ -169,7 +169,7 @@ fun LinkedList.deleteLast() {
         previous = current
         current = current.next
     }
-    previous?.next = current?.next
+    previous?.next = null
 }
 ```
 
@@ -179,7 +179,7 @@ There are two ways: iterative and recursive to calculate the number of nodes, bo
 We start with iterative way, it's very straightforward:
 
 ```kotlin
-fun LinkedList.getSize(): Int {
+fun getSize(): Int {
     var size = 0
     var node = this.head
 
@@ -196,7 +196,7 @@ And for recursive way, suppose we define the function `getSize(node: Node): Int`
 2. Else return `1 + getSize(node.next)`.
 
 ```kotlin
-fun LinkedList.getSize(node: Node<T>? = this.head): Int {
+fun getSize(node: Node<T>? = this.head): Int {
     return if (node == null) 0
     else 1 + getSize(node.next)
 }
@@ -205,7 +205,7 @@ fun LinkedList.getSize(node: Node<T>? = this.head): Int {
 #### Search
 ```kotlin
 // Iteratively
-fun LinkedList.contains(value: T): Boolean {
+fun contains(value: T): Boolean {
     var node = this.head
     while (node != null) {
         if (node.value == value) return true
@@ -215,7 +215,7 @@ fun LinkedList.contains(value: T): Boolean {
 }
 
 // Recursively
-fun LinkedList.contains(node: Node? = head, value: T): Boolean {
+fun contains(node: Node? = head, value: T): Boolean {
     // Base cases
     if (node == null) return false
     if (node.value == value) return true
@@ -254,7 +254,7 @@ data class Node<T>(
 ```kotlin
 // head <- -> node
 // head <- -> new <- -> node
-fun LinkedList.insertFirst(value: T) {
+fun insertFirst(value: T) {
     val newNode = Node(value, next = this.head, previous = null)
     this.head?.previous = newNode
     this.head = newNode
@@ -262,7 +262,7 @@ fun LinkedList.insertFirst(value: T) {
 
 // last -> null
 // last <- -> new -> null
-fun LinkedList.insertLast(value: T) {
+fun insertLast(value: T) {
     val newNode(value, next = null)
     var lastNode = this.head
     if (lastNode == null) {
@@ -279,7 +279,7 @@ fun LinkedList.insertLast(value: T) {
 
 // node <- -> next
 // node <- -> new <- -> next
-fun LinkedList.insertAfter(node: Node, value: T) {
+fun insertAfter(node: Node, value: T) {
     val nextNode = node?.next
     val newNode = Node(value, next = nextNode, previous = node)
     nextNode?.previous = newNode
@@ -288,7 +288,24 @@ fun LinkedList.insertAfter(node: Node, value: T) {
 
 // previous (index - 1) <- -> current (index) <- -> next (index + 1)
 // previous <- -> new <- -> current <- -> next
-// TODO: insertAt() in for loop
+fun insertAt(index: Int, value: T) {
+    if (index == 0) {
+        insertFirst(value)
+        return
+    }
+
+    var previous = head
+    for (i in 0 until index - 1) {
+        previous = previous?.next
+    }
+
+    val newNode = Node(value)
+    val currentNode = previous?.next
+    currentNode?.previous = newNode
+    newNode.next = currentNode
+    newNode.previous = previous
+    previous?.next = newNode
+}
 
 // Equivalence written in while loop
 fun insertAt(index: Int, value: T) {
@@ -354,36 +371,36 @@ fun insertAt(index: Int, value: T) {
 
 #### Deletion
 ```kotlin
-// head = `node <- -> next` (null) becomes
-// head = `next <- -> next.next` (null)
-fun LinkedList.deleteFirst() {
+// head = current <- -> next (null)
+// head = next <- -> next.next (null)
+fun deleteFirst() {
     val nextNode = this.head?.next
     nextNode?.previous = null
     this.head = nextNode
 }
 
-// `previous <- -> last <- -> null` becomes
-// `previous <- -> null`
-fun LinkedList.deleteLast() {
-    var node = this.head
-    if (node?.next == null) {
+// previous <- -> current <- -> null
+// previous <- -> null
+fun deleteLast() {
+    if (head?.next == null) {
         deleteFirst()
         return
     }
-    while (node?.next != null) {
-        node = node.next
+    var previous: Node<T>? = null
+    var current: Node<T>? = head
+    while (current?.next != null) {
+        previous = current
+        current = current.next
     }
-    if (node != null) {
-        val previousNode = node.previous
-        previousNode?.next = null
-    }
+    previous?.next = null
 }
 
-// Origin is `previous <- -> node <- -> next` becomes
-// `previous <- -> next`
-fun LinkedList.deleteAfter(node: Node) {
+// previous <- -> current <- -> next
+// previous <- -> next
+fun deleteNode(node: Node) {
     val previousNode: Node<T>? = node.previous
     val nextNode: Node<T>? = node.next
+    // Consider the corner cases
     if (previousNode == null) {
         deleteFirst()
         return
@@ -395,22 +412,24 @@ fun LinkedList.deleteAfter(node: Node) {
     nextNode.previous = previousNode
 }
 
-fun LinkedList.deleteAt(index: Int) {
+fun deleteAt(index: Int) {
     if (index == 0) {
         deleteFirst()
         return
     }
-    
+
+    var previous: Node<T>? = null
+    var current: Node<T>? = head
     var i = 0
-    var node = this.head
-    while (i < index && node != null) {
+    while (i < index && current != null) {
         i++
-        node = node.next
+        previous = current
+        current = current.next
     }
 
-    if (i == index && node != null) {
-        deleteAfter(node)
-    }
+    val next = current?.next
+    previous?.next = next
+    next?.previous = previous
 }
 ```
 
@@ -436,9 +455,34 @@ Linked list with the last node has reference to the head.
 > // TODO
 
 ## Problems & Solutions
-| Problem         | Solution | Difficulty |
+> // TODO: move away
+
+| Problem          | Solution | Difficulty |
 |------------------|----------|------------|
 |[707. Design Linked List](https://leetcode.com/problems/design-linked-list/)|[Implementation](../leetcode/707.design-linked-list.md)|Medium|
+
+## Linked List
+| Problem          | Solution | Difficulty |
+|------------------|----------|------------|
+> https://leetcode.com/problems/middle-of-the-linked-list/
+> https://leetcode.com/problems/reverse-linked-list/
+> https://leetcode.com/problems/reverse-linked-list-ii/
+> https://leetcode.com/problems/linked-list-cycle/
+> https://leetcode.com/problems/linked-list-cycle-ii/
+> https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+> https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+> https://leetcode.com/problems/merge-two-sorted-lists/
+> https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+> https://leetcode.com/problems/add-two-numbers/
+> https://leetcode.com/problems/palindrome-linked-list/
+> https://leetcode.com/problems/reorder-list/
+>
+> Less common:
+>
+> https://leetcode.com/problems/intersection-of-two-linked-lists/
+> https://leetcode.com/problems/odd-even-linked-list/
+>
+> Hard: https://leetcode.com/problems/merge-k-sorted-lists/
 
 ## Tips for Problem Solving
 * Corner cases:
