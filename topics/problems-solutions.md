@@ -1,6 +1,6 @@
 # Problems & Solutions
 
-## Arrays
+## Arrays & Strings
 | Problem         | Solution | Difficulty |
 |------------------|----------|------------|
 |[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[Two Pointers](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
@@ -22,7 +22,7 @@
 |[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[Sliding Window](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[Hash Table](../leetcode/242.valid-anagram.md)|Easy|
 |[5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[Straightforward](../leetcode/5.longest-palindromic-substring.md)|Medium|
-|[424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)|[Unfinished](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
+|[424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)|[--](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 
 > https://leetcode.com/problems/find-all-anagrams-in-a-string/
 > https://leetcode.com/problems/minimum-window-substring/
@@ -55,28 +55,3 @@
 |[905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|[Two Pointers](../leetcode/905.sort-array-by-parity.md)|Easy|
 |[1051. Height Checker](https://leetcode.com/problems/height-checker/)|[Straightforward](../leetcode/1051.height-checker.md)|Easy|
 |[448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)|[In-place Negative Seen](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
-
-## Linked List
-| Problem         | Solution | Difficulty |
-|------------------|----------|------------|
-
-> https://leetcode.com/problems/design-linked-list/
-> https://leetcode.com/problems/middle-of-the-linked-list/
-> https://leetcode.com/problems/reverse-linked-list/
-> https://leetcode.com/problems/reverse-linked-list-ii/
-> https://leetcode.com/problems/linked-list-cycle/
-> https://leetcode.com/problems/linked-list-cycle-ii/
-> https://leetcode.com/problems/remove-duplicates-from-sorted-list/
-> https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
-> https://leetcode.com/problems/merge-two-sorted-lists/
-> https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-> https://leetcode.com/problems/add-two-numbers/
-> https://leetcode.com/problems/palindrome-linked-list/
-> https://leetcode.com/problems/reorder-list/
-> 
-> Less common:
->
-> https://leetcode.com/problems/intersection-of-two-linked-lists/
-> https://leetcode.com/problems/odd-even-linked-list/
->
-> Hard: https://leetcode.com/problems/merge-k-sorted-lists/
