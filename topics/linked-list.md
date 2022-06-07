@@ -460,12 +460,11 @@ Linked list with the last node has reference to the head.
 | Problem|Difficulty|
 |-|-|
 |[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
+|[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)|Medium|
 |[707. Design Linked List](../leetcode/707.design-linked-list.md)|Medium|
 |[876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)|Easy|
 |[141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)|Easy|
 
-> https://leetcode.com/problems/middle-of-the-linked-list/
-> https://leetcode.com/problems/reverse-linked-list-ii/
 > https://leetcode.com/problems/linked-list-cycle-ii/
 > https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 > https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
