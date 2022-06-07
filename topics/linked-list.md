@@ -461,6 +461,7 @@ Linked list with the last node has reference to the head.
 |-|-|
 |[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
 |[707. Design Linked List](../leetcode/707.design-linked-list.md)|Medium|
+|[876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)|Easy|
 
 
 > https://leetcode.com/problems/middle-of-the-linked-list/
