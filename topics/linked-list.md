@@ -464,9 +464,9 @@ Linked list with the last node has reference to the head.
 |[707. Design Linked List](../leetcode/707.design-linked-list.md)|Medium|
 |[876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)|Easy|
 |[141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)|Easy|
+|[83. Remove Duplicates from Sorted List](../leetcode/83.remove-duplicates-from-sorted-list.md)|Easy|
 
 > https://leetcode.com/problems/linked-list-cycle-ii/
-> https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 > https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
 > https://leetcode.com/problems/merge-two-sorted-lists/
 > https://leetcode.com/problems/remove-nth-node-from-end-of-list/
