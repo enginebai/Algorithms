@@ -467,6 +467,7 @@ Linked list with the last node has reference to the head.
 |[142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)|Medium|
 |[83. Remove Duplicates from Sorted List](../leetcode/83.remove-duplicates-from-sorted-list.md)|Easy|
 |[21. Merge Two Sorted Lists](../leetcode/21.merge-two-sorted-lists.md)|Easy|
+|[82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md)|Medium|
 
 > https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
 > https://leetcode.com/problems/remove-nth-node-from-end-of-list/
