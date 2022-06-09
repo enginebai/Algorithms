@@ -449,6 +449,9 @@ Let compare the time complexity among array, singly linked list and doubly linke
 | Deletion   | the last node     | `O(1)` | O(n)               | `O(1)` // optimized by storing  `tail`  node |
 | Search     | a given node      | O(n)   | O(n)               | O(n)                                         |
 
+## Sentinel Node
+The code would be simpler if we could ignore the boundary conditions at the head and tail. A *sentinel* is a dummy node that help us to simiplify the boundary conditions. For more example, please see [203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md) and [82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md).
+
 ## Circular Linked List
 Linked list with the last node has reference to the head.
 
@@ -467,10 +470,10 @@ Linked list with the last node has reference to the head.
 |[142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)|Medium|
 |[83. Remove Duplicates from Sorted List](../leetcode/83.remove-duplicates-from-sorted-list.md)|Easy|
 |[21. Merge Two Sorted Lists](../leetcode/21.merge-two-sorted-lists.md)|Easy|
-|[82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md)|Medium|
 |[203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md)|Easy|
+|[82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md)|Medium|
 
-> https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+
 > https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 > https://leetcode.com/problems/add-two-numbers/
 > https://leetcode.com/problems/palindrome-linked-list/
