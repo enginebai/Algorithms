@@ -450,7 +450,7 @@ Let compare the time complexity among array, singly linked list and doubly linke
 | Search     | a given node      | O(n)   | O(n)               | O(n)                                         |
 
 ## Sentinel Node
-The code would be simpler if we could ignore the boundary conditions at the head and tail. A *sentinel* is a dummy node that help us to simiplify the boundary conditions. For more example, please see [203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md) and [82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md).
+The code would be simpler if we could ignore the boundary conditions at the head and tail (such checking if `head` is null since the statement will not be executed `head?.next = ...`). A *sentinel* is a dummy node that help us to simiplify the boundary conditions so that we can apply the same flow or logic without worring about if `head` is null. For more example, please see [203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md) and [82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md).
 
 ## Circular Linked List
 Linked list with the last node has reference to the head.
@@ -472,7 +472,7 @@ Linked list with the last node has reference to the head.
 |[21. Merge Two Sorted Lists](../leetcode/21.merge-two-sorted-lists.md)|Easy|
 |[203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md)|Easy|
 |[82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md)|Medium|
-
+|[19. Remove Nth Node From End of List](../leetcode/19.remove-nth-node-from-end-of-list.md)|Medium|
 
 > https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 > https://leetcode.com/problems/add-two-numbers/
