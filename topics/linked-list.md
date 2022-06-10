@@ -473,10 +473,9 @@ Linked list with the last node has reference to the head.
 |[203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md)|Easy|
 |[82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md)|Medium|
 |[19. Remove Nth Node From End of List](../leetcode/19.remove-nth-node-from-end-of-list.md)|Medium|
+|[234. Palindrome Linked List](../leetcode/234.palindrome-linked-list.md)|Easy|
 
-> https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 > https://leetcode.com/problems/add-two-numbers/
-> https://leetcode.com/problems/palindrome-linked-list/
 > https://leetcode.com/problems/reorder-list/
 >
 > Less common:
