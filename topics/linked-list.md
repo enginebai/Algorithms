@@ -476,11 +476,8 @@ Linked list with the last node has reference to the head.
 |[234. Palindrome Linked List](../leetcode/234.palindrome-linked-list.md)|Easy|
 |[2. Add Two Numbers](../leetcode/2.add-tow-numbers.md)|Medium|
 |[143. Reorder List](../leetcode/143.reorder-list.md)|Medium|
+|[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
 
->
-> Less common:
->
-> https://leetcode.com/problems/intersection-of-two-linked-lists/
 > https://leetcode.com/problems/odd-even-linked-list/
 >
 > Hard: https://leetcode.com/problems/merge-k-sorted-lists/
@@ -502,6 +499,7 @@ Linked list with the last node has reference to the head.
     * Reverse in-place or update the node references
     * Find the middle node using two pointers technique
     * Merge (connect) two linked lists
+* Sentinel node.
 
 
 ## Resources
