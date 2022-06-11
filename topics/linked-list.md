@@ -477,10 +477,9 @@ Linked list with the last node has reference to the head.
 |[2. Add Two Numbers](../leetcode/2.add-tow-numbers.md)|Medium|
 |[143. Reorder List](../leetcode/143.reorder-list.md)|Medium|
 |[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
+|[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
 
 > https://leetcode.com/problems/odd-even-linked-list/
->
-> Hard: https://leetcode.com/problems/merge-k-sorted-lists/
 
 ## Tips for Problem Solving
 * Corner cases:
