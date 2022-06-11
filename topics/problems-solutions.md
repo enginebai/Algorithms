@@ -23,8 +23,8 @@
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[Hash Table](../leetcode/242.valid-anagram.md)|Easy|
 |[5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[Straightforward](../leetcode/5.longest-palindromic-substring.md)|Medium|
 |[424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)|[--](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
+|[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 
-> https://leetcode.com/problems/find-all-anagrams-in-a-string/
 > https://leetcode.com/problems/minimum-window-substring/
 > https://leetcode.com/problems/group-anagrams/
 > https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
