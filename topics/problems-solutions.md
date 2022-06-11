@@ -90,3 +90,26 @@
 > * https://leetcode.com/problems/copy-list-with-random-pointer/
 > * https://leetcode.com/problems/sort-list/
 > * https://leetcode.com/problems/partition-list/
+
+## Stack & Queue
+| Problem          | Difficulty |
+|------------------|------------|
+> * https://leetcode.com/problems/min-stack/
+> * https://leetcode.com/problems/implement-queue-using-stacks/
+> * https://leetcode.com/problems/implement-stack-using-queues/
+> * https://leetcode.com/problems/design-circular-queue/
+> * https://leetcode.com/problems/valid-parentheses/
+> * https://leetcode.com/problems/generate-parentheses/
+> * https://leetcode.com/problems/longest-valid-parentheses/
+> * https://leetcode.com/problems/basic-calculator/
+> * https://leetcode.com/problems/next-greater-element-ii/
+> * https://leetcode.com/problems/daily-temperatures/
+> * https://leetcode.com/problems/decode-string/
+> * https://leetcode.com/problems/largest-rectangle-in-histogram/
+> * https://leetcode.com/problems/trapping-rain-water/
+>
+> Less Like:
+> * https://leetcode.com/problems/next-greater-element-i/
+> * https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
+> * https://leetcode.com/problems/asteroid-collision/
+> * https://leetcode.com/problems/simplify-path/

@@ -23,7 +23,8 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - [Heap & Priority Queue](./topics/heap.md)
 - [Hash Table](./topics/hash-table.md)
 - [Searching](./topics/searching.md)
-- (Upcoming) [Other](./topics/other.md)
+- (TODO) [Other](./topics/other.md)
+- 👉 [Problems & Solutions](./topics/problems-solutions.md)
 
 ## Complexity
 ![Sequence Complexity](./media/complexity-sequence.png)
