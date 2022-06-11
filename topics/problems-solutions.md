@@ -85,5 +85,6 @@
 |[143. Reorder List](../leetcode/143.reorder-list.md)|Medium|
 |[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
 |[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
+|[328. Odd Even Linked List](../leetcode/328.odd-even-linked-list.md)|Medium|
 
 > https://leetcode.com/problems/odd-even-linked-list/
