@@ -457,30 +457,6 @@ Linked list with the last node has reference to the head.
 
 > // TODO
 
-## Problems & Solutions
-> // TODO: move away
-
-| Problem|Difficulty|
-|-|-|
-|[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
-|[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)|Medium|
-|[707. Design Linked List](../leetcode/707.design-linked-list.md)|Medium|
-|[876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)|Easy|
-|[141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)|Easy|
-|[142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)|Medium|
-|[83. Remove Duplicates from Sorted List](../leetcode/83.remove-duplicates-from-sorted-list.md)|Easy|
-|[21. Merge Two Sorted Lists](../leetcode/21.merge-two-sorted-lists.md)|Easy|
-|[203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md)|Easy|
-|[82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md)|Medium|
-|[19. Remove Nth Node From End of List](../leetcode/19.remove-nth-node-from-end-of-list.md)|Medium|
-|[234. Palindrome Linked List](../leetcode/234.palindrome-linked-list.md)|Easy|
-|[2. Add Two Numbers](../leetcode/2.add-tow-numbers.md)|Medium|
-|[143. Reorder List](../leetcode/143.reorder-list.md)|Medium|
-|[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
-|[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
-
-> https://leetcode.com/problems/odd-even-linked-list/
-
 ## Tips for Problem Solving
 * Corner cases:
     * **Empty linked list**
@@ -507,12 +483,12 @@ Linked list with the last node has reference to the head.
 - [ ] CTCI
 - [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-2) // Simple note + simple coding problem
 - [X] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html) // Nice introductory note
-- [/] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list // Nice introductory note + illustration
-- [/] https://github.com/youngyangyang04/leetcode-master#%E9%93%BE%E8%A1%A8 // Nice introductory note
-- [/] [LC Learn](https://leetcode.com/explore/learn/card/linked-list/) 
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Linked_List)
-- [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/) // Coding questions with easy/medium/hard levels
+- [X] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list // Nice introductory note + illustration
+- [X] https://github.com/youngyangyang04/leetcode-master#%E9%93%BE%E8%A1%A8 // Nice introductory note
+- [X] [LC Learn](https://leetcode.com/explore/learn/card/linked-list/) 
+- [X] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Linked_List)
+- [X] [LC Top Interview Questions](https://leetcode.com/explore/interview/) // Coding questions with easy/medium/hard levels
 - [ ] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#linked-lists)~~ // Simple note + few videos
-- [/] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/linked-list) // Simple note + some relative LC coding questions
+- [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/linked-list) // Simple note + some relative LC coding questions
 - [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#linked-lists) // Simple note, like cheat sheet
 - [X] https://github.com/TSiege/Tech-Interview-Cheat-Sheet#linked-list // // Simple note, like cheat sheet
