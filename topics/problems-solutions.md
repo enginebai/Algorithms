@@ -1,8 +1,8 @@
 # Problems & Solutions
 
 ## Arrays
-| Problem         | Difficulty |
-|------------------|----------|
+| Problem          | Difficulty |
+|------------------|------------|
 |[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
 |[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
@@ -30,7 +30,7 @@
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
 > * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
-> Below are from LeetCode Explore.
+### [LeetCode Explore - Arrays 101](https://leetcode.com/explore/learn/card/fun-with-arrays/)
 
 | Problem         | Solution | Difficulty |
 |------------------|----------|------------|
@@ -48,8 +48,8 @@
 |[448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)|[In-place Negative Seen](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
 
 ## Strings
-| Problem         | Difficulty |
-|------------------|----------|
+| Problem          | Difficulty |
+|------------------|------------|
 |[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
 |[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
 |[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
@@ -66,3 +66,25 @@
 > * [Sliding Windows Problem List](https://leetcode.com/list/e5na1hcg/)
 > * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
 
+## Linked List
+| Problem          | Difficulty |
+|------------------|------------|
+|[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
+|[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)|Medium|
+|[707. Design Linked List](../leetcode/707.design-linked-list.md)|Medium|
+|[876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)|Easy|
+|[141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)|Easy|
+|[142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)|Medium|
+|[83. Remove Duplicates from Sorted List](../leetcode/83.remove-duplicates-from-sorted-list.md)|Easy|
+|[21. Merge Two Sorted Lists](../leetcode/21.merge-two-sorted-lists.md)|Easy|
+|[203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md)|Easy|
+|[82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md)|Medium|
+|[19. Remove Nth Node From End of List](../leetcode/19.remove-nth-node-from-end-of-list.md)|Medium|
+|[234. Palindrome Linked List](../leetcode/234.palindrome-linked-list.md)|Easy|
+|[2. Add Two Numbers](../leetcode/2.add-tow-numbers.md)|Medium|
+|[143. Reorder List](../leetcode/143.reorder-list.md)|Medium|
+|[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
+|[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
+|[328. Odd Even Linked List](../leetcode/328.odd-even-linked-list.md)|Medium|
+
+> https://leetcode.com/problems/odd-even-linked-list/
