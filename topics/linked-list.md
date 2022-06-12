@@ -494,7 +494,7 @@ fun deleteLast() {
     }
     val previous: Node? = null
     // looking for previous node of last node
-    
+
     previous?.next = null
     tail = previous
 }
@@ -918,5 +918,25 @@ class DoublyLinkedList<T> : LinkedList<T> {
         previous.next = next
         next.previous = previous
     }
+}
+
+fun main() {
+    testLinkedList(false)
+    testLinkedList(true)
+}
+
+private fun testLinkedList(singly: Boolean = true) {
+    val linkedList = if (singly) SinglyLinkedList<Int>() else DoublyLinkedList<Int>()
+    linkedList.insertFirst(2)
+    linkedList.insertFirst(1)
+    linkedList.insertLast(3)
+    linkedList.insertFirst(0)
+    linkedList.deleteLast()
+    linkedList.deleteLast()
+    linkedList.deleteLast()
+    linkedList.deleteLast()
+    linkedList.print()
+    println("\nSize=${linkedList.getSize()}")
+    println("${linkedList.contains(0)}")
 }
 ```
