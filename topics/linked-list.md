@@ -433,6 +433,85 @@ fun deleteAt(index: Int) {
 }
 ```
 
+### With Tail Node
+We use singly linked list as example.
+
+```kotlin
+private var tail: Node? = null
+private var size: Int = 0
+
+fun insertFirst(value: T) {
+    val newNode = Node(item, next = head)
+    if (head == null) {
+        tail = newNode
+    }
+    head = newNode
+    size++
+}
+
+fun insertLast(value: T) {
+    val newNode = Node(item)
+    size++
+    if (head == null) {
+        head = newNode
+        tail = newNode
+        return
+    }
+    tail?.next = newNode
+    tail = newNode
+}
+
+fun insertAt(index: Int, value: T) {
+    if (index == 0) {
+        insertFirst(value)
+        return
+    } else if (index == size) {
+        insertLast(value)
+        return
+    }
+    size++
+
+    // look for index-th node to insert
+    // ...
+}
+
+fun deleteFirst() {
+    // Empty or list with only one node
+    if (head == tail) {
+        tail = tail?.next
+    }
+    head = head?.next
+    size--
+}
+
+fun deleteLast() {
+    // Empty or list with only one node
+    if (head == tail) {
+        head = null
+        tail = null
+        if (size == 1) size--
+        return
+    }
+    val previous: Node? = null
+    // looking for previous node of last node
+
+    previous?.next = null
+    tail = previous
+}
+
+fun deleteAt(index: Int) {
+    if (index == 0) {
+        deleteFirst()
+        return
+    } else if (index == size - 1) {
+        deleteLast()
+        return
+    }
+    size--
+    // run normal deleteAt(index) operation 
+}
+```
+
 ## Comparision
 Let compare the time complexity among array, singly linked list and doubly linked list:
 
@@ -459,23 +538,37 @@ Linked list with the last node has reference to the head.
 
 ## Tips for Problem Solving
 * Corner cases:
-    * **Empty linked list**
+    * **Empty linked list** (before operation or **after!**, such as deleting the only node)
     * Linked list with **one / two nodes**
-    * Linked list has cycles. Clarify before solving problem!
+    * Linked list has cycles. Clarify before solving problem! And pay attention to the result after performing the functions.
 
 ```js
 1. head -> null
 2. head -> A -> null
 3. head -> A -> B -> null
 ```
-* Consider to operate on the specific node before or after.
-* Get familiar with the following operations:
-    * Count the node number
-    * Reverse in-place or update the node references
-    * Find the middle node using two pointers technique
-    * Merge (connect) two linked lists
-* Sentinel node.
+For some cases we have to insert when head is null or deleting head and after that the head will be null, then we can introduct *sentinel node* to help.
 
+```kotlin
+fun solveProblem(head?: Node): Node? {
+    val sentinel = Node(-1)
+    var node: Node? = sentinel
+    /// do something to modify the `node`
+
+    return sentinel.next
+}
+```
+
+* Pay attention to operate on the specific node before or after, especially on head and last node or the pointer nodoe after while loop.
+* **Drawing** could be really help!!
+* Get familiar with the following operations:
+    * Reverse in-place or update the node references (be careful of cycle references)
+    * Merge (connect/chain) two linked lists
+    * Count the node number
+    * Find the middle node using two pointers technique
+* Fast/slow pointers to solve cycle or interaction problems.
+
+> [Nice post](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list) to read that need to keep in mind.
 
 ## Resources
 - [X] Fundamental of Data Structure
@@ -492,3 +585,358 @@ Linked list with the last node has reference to the head.
 - [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/linked-list) // Simple note + some relative LC coding questions
 - [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#linked-lists) // Simple note, like cheat sheet
 - [X] https://github.com/TSiege/Tech-Interview-Cheat-Sheet#linked-list // // Simple note, like cheat sheet
+
+## Full Code
+```kotlin
+data class Node<T>(
+    val data: T,
+    var next: Node<T>? = null,
+    // For doubly linked list
+    var previous: Node<T>? = null
+)
+
+interface LinkedList<T> {
+    fun insertFirst(value: T)
+    fun insertAfter(node: Node<T>, value: T)
+    fun insertLast(value: T)
+    fun insertAt(index: Int, value: T)
+    fun print()
+    fun deleteFirst()
+    fun deleteNode(node: Node<T>)
+    fun deleteAt(index: Int)
+    fun deleteLast()
+    fun getSize(): Int
+    fun contains(value: T): Boolean
+}
+
+class SinglyLinkedList<T> : LinkedList<T> {
+
+    private var head: Node<T>? = null
+
+    override fun insertFirst(value: T) {
+        val newNode = Node(data = value, next = head)
+        head = newNode
+    }
+
+    override fun insertAfter(node: Node<T>, value: T) {
+        val newNode = Node(data = value, next = node.next)
+        node.next = newNode
+    }
+
+    override fun insertLast(value: T) {
+        if (head == null) {
+            insertFirst(value)
+            return
+        }
+        var lastNode = head
+        while (lastNode?.next != null) {
+            lastNode = lastNode.next
+        }
+        val newNode = Node(data = value)
+        lastNode?.next = newNode
+    }
+
+    override fun insertAt(index: Int, value: T) {
+        if (index == 0) {
+            insertFirst(value)
+            return
+        }
+        var node = head
+        for (i in 0 until index - 1) {
+            node = node?.next
+        }
+        val newNode = Node(data = value, next = node?.next)
+        node?.next = newNode
+    }
+
+    override fun print() {
+        if (head == null) {
+            println("Empty list")
+            return
+        }
+        var node: Node<T>? = head
+        while (node != null) {
+            print("${node.data}")
+            node = node.next
+            if (node != null) {
+                print(" -> ")
+            }
+        }
+    }
+
+    override fun deleteFirst() {
+        head = head?.next
+    }
+
+    override fun deleteNode(node: Node<T>) {
+        if (node == head) {
+            deleteFirst()
+            return
+        }
+        var previous: Node<T>? = null
+        var current: Node<T>? = head
+        while (current != null && current != node) {
+            previous = current
+            current = current.next
+        }
+        previous?.next = current?.next
+    }
+
+    override fun deleteAt(index: Int) {
+        if (index == 0) {
+            deleteFirst()
+            return
+        }
+        var previousNode: Node<T>? = head
+        for (i in 0 until index - 1) {
+            previousNode = previousNode?.next
+        }
+        previousNode?.next = previousNode?.next?.next
+    }
+
+    fun deleteAtWhile(index: Int) {
+        if (index == 0) {
+            deleteFirst()
+            return
+        }
+        var previous: Node<T>? = null
+        var current: Node<T>? = head
+        var i = 0
+        while (current != null && i < index) {
+            i++
+            previous = current
+            current = current.next
+        }
+        previous?.next = current?.next
+    }
+
+    override fun deleteLast() {
+        if (head?.next == null) {
+            deleteFirst()
+            return
+        }
+        var previousNode: Node<T>? = null
+        var currentNode: Node<T>? = head
+        while (currentNode?.next != null) {
+            previousNode = currentNode
+            currentNode = currentNode.next
+        }
+        previousNode?.next = currentNode?.next
+    }
+
+    override fun getSize(): Int {
+        var size = 0
+        var node: Node<T>? = head
+        while (node != null) {
+            size++
+            node = node.next
+        }
+        return size
+    }
+
+    fun getSizeRecursively(node: Node<T>? = head): Int {
+        return if (node == null) 0
+        else 1 + getSizeRecursively(node.next)
+    }
+
+    override fun contains(value: T): Boolean {
+        var node: Node<T>? = head
+        while (node != null) {
+            if (node.data == value) return true
+            node = node.next
+        }
+        return false
+    }
+
+    fun containsRecursively(value: T, node: Node<T>? = head): Boolean {
+        return if (node == null) false
+        else if (node.data == value) true
+        else containsRecursively(value, node.next)
+    }
+}
+
+class DoublyLinkedList<T> : LinkedList<T> {
+
+    private var head: Node<T>? = null
+
+    // Head <- -> Node
+    // Head <- -> New <- -> Node
+    override fun insertFirst(value: T) {
+        val newNode = Node(data = value, next = head)
+        head?.previous = newNode
+        head = newNode
+
+    }
+
+    // Node <- -> Next
+    // Node <- -> New <- -> Next
+    override fun insertAfter(node: Node<T>, value: T) {
+        val newNode = Node(data = value)
+        val nextNode = node.next
+        newNode.next = nextNode
+        nextNode?.previous = newNode
+        node.next = newNode
+        newNode.previous = node
+    }
+
+    // Last <- -> Null
+    // Last <- -> New
+    override fun insertLast(value: T) {
+        val newNode = Node(data = value)
+        if (head == null) {
+            head = newNode
+            return
+        }
+        var last = head
+        while (last?.next != null) {
+            last = last.next
+        }
+        newNode.previous = last
+        last?.next = newNode
+    }
+
+    // previous (index - 1) <- -> current (index) <- -> next (index + 1)
+    // previous <- -> new <- -> current <- -> next
+    override fun insertAt(index: Int, value: T) {
+        if (index == 0) {
+            insertFirst(value)
+            return
+        }
+
+        var previous: Node<T>? = null
+        var current: Node<T>? = head
+        var i = 0
+        while (current != null && i < index) {
+            i++
+            previous = current
+            current = current.next
+        }
+
+        val newNode = Node(data = value)
+        newNode.previous = previous
+        newNode.next = current
+        previous?.next = newNode
+        current?.previous = newNode
+    }
+
+    override fun print() {
+        if (head == null) {
+            println("Empty List")
+            return
+        }
+        var node: Node<T>? = head
+        while (node != null) {
+            print("${node.data}")
+            node = node.next
+            if (node != null) {
+                print(" <- -> ")
+            }
+        }
+        println()
+    }
+
+    override fun deleteFirst() {
+        val next = head?.next
+        next?.previous = null
+        head = next
+    }
+
+    override fun deleteAt(index: Int) {
+        if (index == 0) {
+            deleteFirst()
+            return
+        }
+
+        var previous: Node<T>? = null
+        var current: Node<T>? = head
+        var i = 0
+        while (i < index && current != null) {
+            i++
+            previous = current
+            current = current.next
+        }
+
+        val next = current?.next
+        previous?.next = next
+        next?.previous = previous
+    }
+
+    override fun deleteLast() {
+        if (head?.next == null) {
+            deleteFirst()
+            return
+        }
+        var previous: Node<T>? = null
+        var current: Node<T>? = head
+        while (current?.next != null) {
+            previous = current
+            current = current.next
+        }
+        previous?.next = null
+    }
+
+    override fun getSize(): Int {
+        var size = 0
+        var node: Node<T>? = head
+        while (node != null) {
+            size++
+            node = node.next
+        }
+        return size
+    }
+
+    fun getSizeRecursively(node: Node<T>? = null): Int {
+        return if (node == null) 0 else 1 + getSizeRecursively(node.next)
+    }
+
+    override fun contains(value: T): Boolean {
+        var node: Node<T>? = head
+        while (node != null) {
+            if (node.data == value) return true
+            node = node.next
+        }
+        return false
+    }
+
+    fun containsRecursively(value: T, node: Node<T>? = null): Boolean {
+        if (node == null) return false
+        else if (node.data == value) return true
+        else return containsRecursively(value, node.next)
+    }
+
+    override fun deleteNode(node: Node<T>) {
+        val next = node.next
+        val previous = node.previous
+        // Consider when delete only one node in the list
+        if (previous == null) {
+            deleteFirst()
+            return
+        } else if (next == null) {
+            deleteLast()
+            return
+        }
+        previous.next = next
+        next.previous = previous
+    }
+}
+
+fun main() {
+    testLinkedList(false)
+    testLinkedList(true)
+}
+
+private fun testLinkedList(singly: Boolean = true) {
+    val linkedList = if (singly) SinglyLinkedList<Int>() else DoublyLinkedList<Int>()
+    linkedList.insertFirst(2)
+    linkedList.insertFirst(1)
+    linkedList.insertLast(3)
+    linkedList.insertFirst(0)
+    linkedList.deleteLast()
+    linkedList.deleteLast()
+    linkedList.deleteLast()
+    linkedList.deleteLast()
+    linkedList.print()
+    println("\nSize=${linkedList.getSize()}")
+    println("${linkedList.contains(0)}")
+}
+```

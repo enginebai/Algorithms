@@ -87,4 +87,6 @@
 |[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
 |[328. Odd Even Linked List](../leetcode/328.odd-even-linked-list.md)|Medium|
 
-> https://leetcode.com/problems/odd-even-linked-list/
+> * https://leetcode.com/problems/copy-list-with-random-pointer/
+> * https://leetcode.com/problems/sort-list/
+> * https://leetcode.com/problems/partition-list/
