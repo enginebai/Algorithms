@@ -433,6 +433,85 @@ fun deleteAt(index: Int) {
 }
 ```
 
+### With Tail Node
+We use singly linked list as example.
+
+```kotlin
+private var tail: Node? = null
+private var size: Int = 0
+
+fun insertFirst(value: T) {
+    val newNode = Node(item, next = head)
+    if (head == null) {
+        tail = newNode
+    }
+    head = newNode
+    size++
+}
+
+fun insertLast(value: T) {
+    val newNode = Node(item)
+    size++
+    if (head == null) {
+        head = newNode
+        tail = newNode
+        return
+    }
+    tail?.next = newNode
+    tail = newNode
+}
+
+fun insertAt(index: Int, value: T) {
+    if (index == 0) {
+        insertFirst(value)
+        return
+    } else if (index == size) {
+        insertLast(value)
+        return
+    }
+    size++
+
+    // look for index-th node to insert
+    // ...
+}
+
+fun deleteFirst() {
+    // Empty or list with only one node
+    if (head == tail) {
+        tail = tail?.next
+    }
+    head = head?.next
+    size--
+}
+
+fun deleteLast() {
+    // Empty or list with only one node
+    if (head == tail) {
+        head = null
+        tail = null
+        if (size == 1) size--
+        return
+    }
+    val previous: Node? = null
+    // looking for previous node of last node
+    
+    previous?.next = null
+    tail = previous
+}
+
+fun deleteAt(index: Int) {
+    if (index == 0) {
+        deleteFirst()
+        return
+    } else if (index == size - 1) {
+        deleteLast()
+        return
+    }
+    size--
+    // run normal deleteAt(index) operation 
+}
+```
+
 ## Comparision
 Let compare the time complexity among array, singly linked list and doubly linked list:
 
@@ -459,23 +538,37 @@ Linked list with the last node has reference to the head.
 
 ## Tips for Problem Solving
 * Corner cases:
-    * **Empty linked list**
+    * **Empty linked list** (before operation or **after!**, such as deleting the only node)
     * Linked list with **one / two nodes**
-    * Linked list has cycles. Clarify before solving problem!
+    * Linked list has cycles. Clarify before solving problem! And pay attention to the result after performing the functions.
 
 ```js
 1. head -> null
 2. head -> A -> null
 3. head -> A -> B -> null
 ```
-* Consider to operate on the specific node before or after.
-* Get familiar with the following operations:
-    * Count the node number
-    * Reverse in-place or update the node references
-    * Find the middle node using two pointers technique
-    * Merge (connect) two linked lists
-* Sentinel node.
+For some cases we have to insert when head is null or deleting head and after that the head will be null, then we can introduct *sentinel node* to help.
 
+```kotlin
+fun solveProblem(head?: Node): Node? {
+    val sentinel = Node(-1)
+    var node: Node? = sentinel
+    /// do something to modify the `node`
+
+    return sentinel.next
+}
+```
+
+* Pay attention to operate on the specific node before or after, especially on head and last node or the pointer nodoe after while loop.
+* **Drawing** could be really help!!
+* Get familiar with the following operations:
+    * Reverse in-place or update the node references (be careful of cycle references)
+    * Merge (connect/chain) two linked lists
+    * Count the node number
+    * Find the middle node using two pointers technique
+* Fast/slow pointers to solve cycle or interaction problems.
+
+> [Nice post](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list) to read that need to keep in mind.
 
 ## Resources
 - [X] Fundamental of Data Structure
