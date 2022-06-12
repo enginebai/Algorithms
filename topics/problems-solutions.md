@@ -77,7 +77,8 @@
 ## Stack & Queue
 | Problem          | Difficulty |
 |------------------|------------|
-> * https://leetcode.com/problems/min-stack/
+|[155. Min Stack](../leetcode/155.min-stack.md)|Easy|
+
 > * https://leetcode.com/problems/implement-queue-using-stacks/
 > * https://leetcode.com/problems/implement-stack-using-queues/
 > * https://leetcode.com/problems/design-circular-queue/
