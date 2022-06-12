@@ -66,37 +66,45 @@ class LinkedListStack<T>: Stack<T> {
 
 #### By Array
 ```kotlin
-const val N = 10
+class StaticArrayStack<T>(private val capacity: Int): Stack<T> {
+    private val array = arrayOfNulls<T>(capacity)
+    private var top = 0
 
-class StaticArrayStack<T>: Stack<T> {
-
-    private val internalArray = arrayOfNulls<T>(N)
-    private var top = 0;
-
-    override fun create(): Stack<T> = StaticArrayStack()
-
-    override fun push(item: T): Stack<T> {
-        if (top == N) throw OverflowError()
-        else {
-            internalArray[top++] = item
-        }
-        return this
+    override fun push(item: T) {
+        if (top == capacity) throw StackOverflowException("Stack is full")
+        array[top++] = item
     }
 
     override fun pop(): T? {
-        return if (isEmpty()) throw UnderflowError() 
-        else internalArray.getOrNull(--top);
+        if (isEmpty()) throw StackUnderflowException("Stack is empty")
+        // Top will be ahead by one when calling push(), so we have to decrement first
+        return array[--top]
     }
 
-    override fun top(): T? {
-        return if (isEmpty()) null else internalArray.getOrNull(top - 1)
+    override fun peek(): T? {
+        if (isEmpty()) throw StackUnderflowException("Stack is empty")
+        return array[top - 1]
     }
 
-    override fun isEmpty(): Boolean = (top == 0)
+    override fun isEmpty(): Boolean = top == 0
+}
+
+class DynamicArrayStack<T>: Stack<T> {
+    private val dynamicArray = arrayListOf<T>()
+    private var top = 0
+
+    override fun push(item: T) {
+        dynamicArray.add(item)
+        top++
+    }
+
+    override fun pop(): T? = dynamicArray[--top]
+    override fun peek(): T? = dynamicArray[top - 1]
+    override fun isEmpty(): Boolean = top == 0
 }
 ```
 
-Every operation takes constants **amortized** time (for dynamic array), and less wasted space.
+Every operation takes **amortized** constant time `O(1)` (for dynamic array),and less wasted space (comparing with linked-list implementation).
 
 ## Queue
 A *queue* is an order list in which all insertions take place at one end, called the *rear*, while all deletions take place at aonther end, called the *front*. It acts as *First In First Out (FIFO)*, the first inserted element will be removed first.
