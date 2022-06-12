@@ -19,9 +19,13 @@ There are some common usages or applications of stack:
 ```kotlin
 interface Stack<T> {
     fun create(): Stack<T>
-    fun push(item: T): Stack<T>
+    // Push an item into the top of this stack.
+    fun push(item: T)
+    // Remove the item at the top and return that item.
     fun pop(): T?
-    fun top(): T?
+    // Return the item at the top without removing it from stack.
+    fun peek(): T?
+    // Test if this stack is empty.
     fun isEmpty(): Boolean
 }
 ```
@@ -35,31 +39,29 @@ data class Node<T>(
     var next: Node<T>? = null
 )
 
-class LinkedListStack<T> : Stack<T> {
-    
-    private var top: Node<T>? = null
-    
+class LinkedListStack<T>: Stack<T> {
+
+    private var head: Node<T>? = null
+
     override fun create(): Stack<T> = LinkedListStack()
 
-    override fun push(item: T): Stack<T> {
-        val newNode = Node(data = item, next = top?.next)
-        top = newNode
-        return this 
+    override fun push(item: T) {
+        val newNode = Node(data = item, next = head)
+        head = newNode
     }
 
     override fun pop(): T? {
-        val popItem = top
-        top = top?.next
-        return popItem?.data
+        val item = head?.data
+        head = head?.next
+        return item
     }
 
-    override fun top(): T? = top?.data
-
-    override fun isEmpty(): Boolean = (top == null)
+    override fun peek(): T? = head?.data
+    override fun isEmpty(): Boolean = head == null
 }
 ```
 
-[Linked List](../topics/linked-list.md]) takes `O(1)` when inserting/deleting/getting the first item, however, it needs the extra space for storing `next` node.
+* **Time Complexity**: All operations take `O(1)` time, since [linked list](../topics/linked-list.md]) takes `O(1)` when inserting/deleting/getting the first item, however, it needs the extra space for storing `next` node.
 
 
 #### By Array
