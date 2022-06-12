@@ -65,6 +65,9 @@ class LinkedListStack<T>: Stack<T> {
 
 
 #### By Array
+
+> NOTE: We can use 0 (first free index) or -1 (last used index) for `top`.
+
 ```kotlin
 class StaticArrayStack<T>(private val capacity: Int): Stack<T> {
     private val array = arrayOfNulls<T>(capacity)
@@ -78,18 +81,19 @@ class StaticArrayStack<T>(private val capacity: Int): Stack<T> {
     override fun pop(): T? {
         if (isEmpty()) throw StackUnderflowException("Stack is empty")
         // Top will be ahead by one when calling push(), so we have to decrement first
-        return array[--top]
+        return array.getOrNull(--top)
     }
 
     override fun peek(): T? {
         if (isEmpty()) throw StackUnderflowException("Stack is empty")
-        return array[top - 1]
+        return array.getOrNull(top - 1)
     }
 
     override fun isEmpty(): Boolean = top == 0
 }
 
 class DynamicArrayStack<T>: Stack<T> {
+    // We skip the amorization and ensureCapacity() + grow() functions.
     private val dynamicArray = arrayListOf<T>()
     private var top = 0
 
@@ -98,8 +102,8 @@ class DynamicArrayStack<T>: Stack<T> {
         top++
     }
 
-    override fun pop(): T? = dynamicArray[--top]
-    override fun peek(): T? = dynamicArray[top - 1]
+    override fun pop(): T? = dynamicArray.getOrNull(--top)
+    override fun peek(): T? = dynamicArray.getOrNull(top - 1)
     override fun isEmpty(): Boolean = top == 0
 }
 ```
@@ -107,11 +111,11 @@ class DynamicArrayStack<T>: Stack<T> {
 Every operation takes **amortized** constant time `O(1)` (for dynamic array),and less wasted space (comparing with linked-list implementation).
 
 ## Queue
-A *queue* is an order list in which all insertions take place at one end, called the *rear*, while all deletions take place at aonther end, called the *front*. It acts as *First In First Out (FIFO)*, the first inserted element will be removed first.
+A *queue* is an order list in which all insertions take place at one end, called the *rear* (tail), while all deletions take place at aonther end, called the *head* (front). It acts as *First In First Out (FIFO)*, the first inserted element will be removed first.
 
 ``` 
         -------
-Front <- ABCDE <- Rear
+Head <- ABCDE <- Rear
         -------
 ```
 
@@ -169,42 +173,52 @@ Here we have to update `head` and `rear` node when enqueue and dequeue, it's the
 
 #### By Array
 ```kotlin
-const val N = 10
+class StaticArrayQueue<T>(private val capacity: Int) : Queue<T> {
 
-class StaticArrayQueue<T>: Queue<T> {
+    private val array = arrayOfNulls<Any>(capacity)
+    private var head = 0
+    private var rear = 0
 
-    private val internalArray = arrayOfNulls<T>(N)
-    private var front: Int = 0
-    private var rear: Int = 0
-
-    override fun create(): Queue<T> = StaticArrayQueue<T>()
-
-    override fun enqueue(item: T): Queue<T> {
-        if (rear == N) throw OverflowError()
-        internalArray[rear++] = item
-        return this
+    override fun enqueue(item: T) {
+        if (rear == capacity) throw OverflowException("Queue is full")
+        array[rear++] = item
     }
 
     override fun dequeue(): T? {
-        if (front == rear) throw UnderflowError()
-        return internalArray[front++]
+        if (isEmpty()) throw UnderflowException("Queue is empty")
+        return array.getOrNull(head++) as T?
     }
 
-    override fun front(): T? = internalArray.getOrNull(front)
+    override fun peek(): T? = array.getOrNull(head) as T?
+    override fun isEmpty(): Boolean = (head == rear)
+}
 
-    override fun rear(): T? = internalArray.getOrNull(rear - 1)
+class DynamicArrayQueue<T>: Queue<T> {
+    private val dynamicArray = arrayListOf<T>()
+    private var head = 0
+    private var rear = 0
 
-    override fun isEmpty(): Boolean = (front == rear)
+    override fun enqueue(item: T) {
+        dynamicArray.add(item)
+        rear++
+    }
+
+    override fun dequeue(): T? {
+        val value = dynamicArray.getOrNull(head++)
+        if (head >= rear) {
+            head = 0
+            rear = 0
+        }
+        return value
+    }
+
+    override fun peek(): T? = dynamicArray.getOrNull(head)
+    override fun isEmpty(): Boolean = (head == rear)
 }
 ```
 
-There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `front` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce *Circular Queue*:
-
-## Problems & Solutions
-| Problem         | Solution | Difficulty |
-|------------------|----------|------------|
-
-> TODO: Implementation [622. Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
+> Verify if it's still true.
+There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `head` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce *Circular Queue*. (See problem)
 
 ### Tips for Problem Solving
 > TODO: 
@@ -216,8 +230,8 @@ There is a drawback from the above implementation, our size is limited even if w
 - [X] [Coursera: Algorithm, Princeton](https://www.coursera.org/learn/algorithms-part1/home/week/2) // Introductory videos
 - [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-4) // Simple video + coding questions
 - [X] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html) // Introductory note + illustration
-- [/] https://github.com/youngyangyang04/leetcode-master#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97 // Note with illustration
-- [/] [LC Learn](https://leetcode.com/explore/learn/card/queue-stack/)
+- [ ] [代码随想录 - 栈与队列](https://github.com/youngyangyang04/leetcode-master#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97) // Note with illustration
+- [ ] [LC Learn](https://leetcode.com/explore/learn/card/queue-stack/)
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Queue)
 - [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/) // Coding questions collection with easy/medium/hard levels
 - [ ] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#stack)~~ // Simple note
