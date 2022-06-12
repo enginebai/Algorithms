@@ -123,11 +123,12 @@ There are some applications of queue:
 
 ```kotlin
 interface Queue<T> {
-    fun create(): Queue<T>
-    fun enqueue(item: T): Queue<T>
+    // Insert new item into queue
+    fun enqueue(item: T)
+    // Retrieve and remove the head of this queue
     fun dequeue(): T?
-    fun front(): T?
-    fun rear(): T?
+    // Return the head of this queue without removing it
+    fun peek(): T?
     fun isEmpty(): Boolean
 }
 ```
@@ -136,45 +137,35 @@ interface Queue<T> {
 #### By Linked List
 
 ```kotlin
-data class Node<T>(
-    val data: T,
-    var next: Node<T>? = null
-)
-
 class LinkedListQueue<T>: Queue<T> {
 
-    private var firstNode: Node<T>? = null
-    private var lastNode: Node<T>? = null
+    private var head: Node<T>? = null
+    private var rear: Node<T>? = null
 
-    override fun create(): Queue<T> = LinkedListQueue<T>()
-
-    override fun enqueue(item: T): Queue<T> {
-        val oldLastNode = lastNode
-        lastNode = Node(data = item)
+    override fun enqueue(item: T) {
+        val newNode = Node(data = item)
         if (isEmpty()) {
-            firstNode = lastNode
+            head = newNode
+            rear = newNode
         } else {
-            oldLastNode?.next = lastNode
+            rear?.next = newNode
+            rear = rear?.next
         }
-        return this
     }
 
     override fun dequeue(): T? {
-        val node = this.firstNode
-        firstNode = firstNode?.next
-        if (isEmpty()) lastNode = null
-        return node?.data
+        val value = head?.data
+        head = head?.next
+        if (isEmpty()) rear = null
+        return value
     }
 
-    override fun front(): T? = this.firstNode?.data
-
-    override fun rear(): T? = this.lastNode?.data
-
-    override fun isEmpty(): Boolean = (this.firstNode == null)
+    override fun peek(): T? = head?.data
+    override fun isEmpty(): Boolean = (head == null)
 }
 ```
 
-Here we have to update `front` and `rear` node when enqueue and dequeue, it's the special cases for empty queue.
+Here we have to update `head` and `rear` node when enqueue and dequeue, it's the special cases for empty queue. All operations take `O(1)` time.
 
 #### By Array
 ```kotlin
