@@ -80,19 +80,20 @@
 |[155. Min Stack](../leetcode/155.min-stack.md)|Easy|
 |[232. Implement Queue using Stacks](../leetcode/232.implement-queue-using-stacks.md)|Easy|
 |[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
+|[20. Valid Parentheses](../leetcode/20.valid-parentheses.md)|Easy|
 
-> * https://leetcode.com/problems/design-circular-queue/
-> * https://leetcode.com/problems/valid-parentheses/
 > * https://leetcode.com/problems/generate-parentheses/
 > * https://leetcode.com/problems/longest-valid-parentheses/
 > * https://leetcode.com/problems/basic-calculator/
-> * https://leetcode.com/problems/next-greater-element-ii/
 > * https://leetcode.com/problems/daily-temperatures/
 > * https://leetcode.com/problems/decode-string/
 > * https://leetcode.com/problems/largest-rectangle-in-histogram/
 > * https://leetcode.com/problems/trapping-rain-water/
+
 >
 > Less Like:
+> * https://leetcode.com/problems/design-circular-queue/
+> * https://leetcode.com/problems/next-greater-element-ii/
 > * https://leetcode.com/problems/next-greater-element-i/
 > * https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 > * https://leetcode.com/problems/asteroid-collision/
