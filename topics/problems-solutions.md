@@ -78,9 +78,9 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[155. Min Stack](../leetcode/155.min-stack.md)|Easy|
+|[232. Implement Queue using Stacks](../leetcode/232.implement-queue-using-stacks.md)|Easy|
+|[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
 
-> * https://leetcode.com/problems/implement-queue-using-stacks/
-> * https://leetcode.com/problems/implement-stack-using-queues/
 > * https://leetcode.com/problems/design-circular-queue/
 > * https://leetcode.com/problems/valid-parentheses/
 > * https://leetcode.com/problems/generate-parentheses/
