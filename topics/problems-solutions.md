@@ -81,6 +81,7 @@
 |[232. Implement Queue using Stacks](../leetcode/232.implement-queue-using-stacks.md)|Easy|
 |[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
 |[20. Valid Parentheses](../leetcode/20.valid-parentheses.md)|Easy|
+|[22. Generate Parentheses](../leetcode/22.generate-parentheses.md)|Medium|
 
 > * https://leetcode.com/problems/generate-parentheses/
 > * https://leetcode.com/problems/longest-valid-parentheses/
