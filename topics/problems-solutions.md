@@ -82,14 +82,14 @@
 |[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
 |[20. Valid Parentheses](../leetcode/20.valid-parentheses.md)|Easy|
 |[22. Generate Parentheses](../leetcode/22.generate-parentheses.md)|Medium|
+|[739. Daily Temperatures](../leetcode/739.daily-temperatures.md)|Medium|
 
-> * https://leetcode.com/problems/generate-parentheses/
+> * https://leetcode.com/problems/trapping-rain-water/
+> * https://leetcode.com/problems/largest-rectangle-in-histogram/
 > * https://leetcode.com/problems/longest-valid-parentheses/
-> * https://leetcode.com/problems/basic-calculator/
 > * https://leetcode.com/problems/daily-temperatures/
 > * https://leetcode.com/problems/decode-string/
-> * https://leetcode.com/problems/largest-rectangle-in-histogram/
-> * https://leetcode.com/problems/trapping-rain-water/
+> * https://leetcode.com/problems/basic-calculator/
 
 >
 > Less Like:
