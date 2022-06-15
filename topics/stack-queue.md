@@ -110,6 +110,33 @@ class DynamicArrayStack<T>: Stack<T> {
 
 Every operation takes **amortized** constant time `O(1)` (for dynamic array),and less wasted space (comparing with linked-list implementation).
 
+### Monotonic
+A *monotonic* stack is a normal stack whose elements are always increasing or decreasing.
+
+```js
+|50| | 0|
+|20| |10|
+|10| |20|
+| 0| |50|
+|__| |__|
+```
+
+What happen if we're going to push `30` into the above two monotonic stacks? Before pushing `30`, we have to pop the top element until pushing the new item no longer breaks the monotonic condition (always increasing or decreasing).
+
+That is, we have to pop `50` / `0`, `10` respectively off from the above stacks so that we can push `30`.
+
+```js
+|30| |  |
+|20| |  |
+|10| |30|
+| 0| |50|
+|__| |__|
+```
+
+#### Applications
+* Next largest or smallest element in a list, `O(n)`. ([739. Daily Temperatures](../leetcode/739.daily-temperatures.md))
+* Maximum or minimum item in a sliding winndow or so far, even knowing the 2nd maximum/minimum for now.
+
 ## Queue
 A *queue* is an order list in which all insertions take place at one end, called the *rear* (tail), while all deletions take place at aonther end, called the *head* (front). It acts as *First In First Out (FIFO)*, the first inserted element will be removed first.
 
