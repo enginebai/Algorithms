@@ -83,11 +83,11 @@
 |[20. Valid Parentheses](../leetcode/20.valid-parentheses.md)|Easy|
 |[22. Generate Parentheses](../leetcode/22.generate-parentheses.md)|Medium|
 |[739. Daily Temperatures](../leetcode/739.daily-temperatures.md)|Medium|
+|[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)|Hard|
 
 > * https://leetcode.com/problems/trapping-rain-water/
 > * https://leetcode.com/problems/largest-rectangle-in-histogram/
 > * https://leetcode.com/problems/longest-valid-parentheses/
-> * https://leetcode.com/problems/daily-temperatures/
 > * https://leetcode.com/problems/decode-string/
 > * https://leetcode.com/problems/basic-calculator/
 
