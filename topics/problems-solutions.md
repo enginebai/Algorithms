@@ -86,6 +86,7 @@
 |[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)|Hard|
 |[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)|Easy|
 |[503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)|Medium|
+|[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium|
 
 > * https://leetcode.com/problems/largest-rectangle-in-histogram/
 > * https://leetcode.com/problems/longest-valid-parentheses/
@@ -95,7 +96,6 @@
 >
 > Less Like:
 > * https://leetcode.com/problems/design-circular-queue/
-> * https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
 > * https://leetcode.com/problems/asteroid-collision/
 > * https://leetcode.com/problems/simplify-path/
