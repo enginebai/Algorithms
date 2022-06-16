@@ -84,8 +84,8 @@
 |[22. Generate Parentheses](../leetcode/22.generate-parentheses.md)|Medium|
 |[739. Daily Temperatures](../leetcode/739.daily-temperatures.md)|Medium|
 |[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)|Hard|
+|[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)|Easy|
 
-> * https://leetcode.com/problems/trapping-rain-water/
 > * https://leetcode.com/problems/largest-rectangle-in-histogram/
 > * https://leetcode.com/problems/longest-valid-parentheses/
 > * https://leetcode.com/problems/decode-string/
@@ -95,7 +95,6 @@
 > Less Like:
 > * https://leetcode.com/problems/design-circular-queue/
 > * https://leetcode.com/problems/next-greater-element-ii/
-> * https://leetcode.com/problems/next-greater-element-i/
 > * https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 > * https://leetcode.com/problems/asteroid-collision/
 > * https://leetcode.com/problems/simplify-path/
