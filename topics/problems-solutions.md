@@ -87,9 +87,10 @@
 |[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)|Easy|
 |[503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)|Medium|
 |[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium|
+|[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
+|[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
+|[394. Decode String](../leetcode/394.decode-string.md)|Medium|
 
-> * https://leetcode.com/problems/largest-rectangle-in-histogram/
-> * https://leetcode.com/problems/longest-valid-parentheses/
 > * https://leetcode.com/problems/decode-string/
 > * https://leetcode.com/problems/basic-calculator/
 
@@ -97,5 +98,4 @@
 > Less Like:
 > * https://leetcode.com/problems/design-circular-queue/
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
-> * https://leetcode.com/problems/asteroid-collision/
 > * https://leetcode.com/problems/simplify-path/
