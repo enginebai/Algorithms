@@ -90,8 +90,8 @@
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[394. Decode String](../leetcode/394.decode-string.md)|Medium|
+|[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
 
-> * https://leetcode.com/problems/decode-string/
 > * https://leetcode.com/problems/basic-calculator/
 
 >
