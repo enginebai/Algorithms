@@ -91,12 +91,7 @@
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[394. Decode String](../leetcode/394.decode-string.md)|Medium|
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
-|[1047. Remove All Adjacent Duplicates In String]()|Easy|
+|[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy|
 
-> * https://leetcode.com/problems/basic-calculator/
-
->
-> Less Like:
 > * https://leetcode.com/problems/design-circular-queue/
-> * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
-> * https://leetcode.com/problems/simplify-path/
+> * https://leetcode.com/problems/basic-calculator/
