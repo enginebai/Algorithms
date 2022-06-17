@@ -91,6 +91,7 @@
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[394. Decode String](../leetcode/394.decode-string.md)|Medium|
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
+|[1047. Remove All Adjacent Duplicates In String]()|Easy|
 
 > * https://leetcode.com/problems/basic-calculator/
 
