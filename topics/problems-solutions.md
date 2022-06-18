@@ -95,3 +95,4 @@
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 
 > * https://leetcode.com/problems/basic-calculator/
+> * https://leetcode.com/problems/maximal-rectangle/

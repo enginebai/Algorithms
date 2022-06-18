@@ -133,9 +133,7 @@ That is, we have to pop `50` / `0`, `10` respectively off from the above stacks 
 |__| |__|
 ```
 
-#### Applications
-* Next largest or smallest element in a list, `O(n)`. ([739. Daily Temperatures](../leetcode/739.daily-temperatures.md))
-* Maximum or minimum item in a sliding winndow or so far, even knowing the 2nd maximum/minimum for now.
+For the problems when we're looking for **the next (previous) greater (less) item than the current one** or **maintain the max/min item and keep the order of items in a range**, we can use monotonic stack, so we don't have to compare items again and again to get the max/min in that range. With one iteration, we can find the next greater/less element of item `i` in `O(n)` time. (Every items will enter/exit the stack once)
 
 ## Queue
 A *queue* is an order list in which all insertions take place at one end, called the *rear* (tail), while all deletions take place at aonther end, called the *head* (front). It acts as *First In First Out (FIFO)*, the first inserted element will be removed first.
@@ -259,7 +257,36 @@ There is a drawback from the above implementation, our size is limited even if w
 
 ### Tips for Problem Solving
 * For stack question, we can push the index/position or value, remember that we still can get the original value from `array[stack.peek()]` when pushing the index.
-* Monotonic stack.
+* *Monotonic stack*:
+
+    * Code template:
+        ```kotlin
+        fun problem(nums: IntArray) {
+            ...
+            val stack = Stack<Int>()
+            for (i in 0 until nums.size) {
+                // We might change the condition of value comparison.
+                // And consider if the condition is strict (<) or not (<=)
+                while (!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
+                    // We might not pop at once, just peek first
+                    val value = stack.pop()
+                    
+                    // Something we have to check if stack is empty now, and then pop item or peek.
+
+                    // calculate something and update the result
+                }
+                stack.push(i)
+            }
+        }
+        ```
+    * Usually, we will push index to stack rather than array value. And something, we need to push `0` or `-1` at the beginning and the end of array so that we can calculate the first / last item of array. (See [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md))
+    * Classic problems:
+        * [496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)
+        * [503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)
+        * [739. Daily Temperatures](../leetcode/739.daily-temperatures.md)
+        * [42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)
+        * [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)
+
 * Stack for recursive call or DFS, queue for BFS.
 
 ## Resources
