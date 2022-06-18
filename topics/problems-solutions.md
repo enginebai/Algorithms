@@ -87,12 +87,11 @@
 |[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)|Easy|
 |[503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)|Medium|
 |[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium|
-|[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[394. Decode String](../leetcode/394.decode-string.md)|Medium|
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
 |[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy|
 |[622. Design Circular Queue](../leetcode/622.design-circular-queue.md)|Medium|
+|[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 
-> * https://leetcode.com/problems/design-circular-queue/
 > * https://leetcode.com/problems/basic-calculator/
