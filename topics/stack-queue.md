@@ -160,6 +160,7 @@ interface Queue<T> {
     fun dequeue(): T?
     // Return the head of this queue without removing it
     fun peek(): T?
+    fun rear(): T?
     fun isEmpty(): Boolean
 }
 ```
@@ -172,6 +173,7 @@ class LinkedListQueue<T>: Queue<T> {
 
     private var head: Node<T>? = null
     private var rear: Node<T>? = null
+    private var size = 0
 
     override fun enqueue(item: T) {
         val newNode = Node(data = item)
@@ -182,17 +184,21 @@ class LinkedListQueue<T>: Queue<T> {
             rear?.next = newNode
             rear = rear?.next
         }
+        size++
     }
 
     override fun dequeue(): T? {
+        if (isEmpty()) return null
         val value = head?.data
         head = head?.next
         if (isEmpty()) rear = null
+        size--
         return value
     }
 
     override fun peek(): T? = head?.data
-    override fun isEmpty(): Boolean = (head == null)
+    override fun rear(): T? = rear?.data
+    override fun isEmpty(): Boolean = size == 0
 }
 ```
 
@@ -204,51 +210,57 @@ class StaticArrayQueue<T>(private val capacity: Int) : Queue<T> {
 
     private val array = arrayOfNulls<Any>(capacity)
     private var head = 0
-    private var rear = 0
+    private var rear = -1
+    private var size = 0
 
     override fun enqueue(item: T) {
-        if (rear == capacity) throw OverflowException("Queue is full")
-        array[rear++] = item
+        if (size == capacity) throw OverflowException("Queue is full")
+        array[++rear] = item
+        size++
     }
 
     override fun dequeue(): T? {
         if (isEmpty()) throw UnderflowException("Queue is empty")
+        size--
         return array.getOrNull(head++) as T?
     }
 
-    override fun peek(): T? = array.getOrNull(head) as T?
-    override fun isEmpty(): Boolean = (head == rear)
+    override fun peek(): T? = array.getOrNull(head)
+    override fun rear(): T? = array.getOrNull(rear)
+    override fun isEmpty(): Boolean = size == 0
 }
 
 class DynamicArrayQueue<T>: Queue<T> {
     private val dynamicArray = arrayListOf<T>()
     private var head = 0
-    private var rear = 0
+    private var rear = -1
+    private var size = 0
 
     override fun enqueue(item: T) {
         dynamicArray.add(item)
         rear++
+        size++
     }
 
     override fun dequeue(): T? {
         val value = dynamicArray.getOrNull(head++)
-        if (head >= rear) {
-            head = 0
-            rear = 0
-        }
+        size--
         return value
     }
 
     override fun peek(): T? = dynamicArray.getOrNull(head)
-    override fun isEmpty(): Boolean = (head == rear)
+    override fun rear(): T? = dynamicArray.getOrNull(rear)
+    override fun isEmpty(): Boolean = size == 0
 }
 ```
 
 > Verify if it's still true.
-There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `head` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce *Circular Queue*. (See problem)
+There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `head` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce [*Circular Queue*](../leetcode/622.design-circular-queue.md).
 
 ### Tips for Problem Solving
-> TODO: 
+* For stack question, we can push the index/position or value, remember that we still can get the original value from `array[stack.peek()]` when pushing the index.
+* Monotonic stack.
+* Stack for recursive call or DFS, queue for BFS.
 
 ## Resources
 - [X] Fundamental of Data Structure
