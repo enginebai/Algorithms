@@ -21,11 +21,10 @@
 > Unfinished Problems:
 > * https://leetcode.com/problems/merge-sorted-array/
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/
-> * https://leetcode.com/problems/merge-intervals/
+> * https://leetcode.com/problems/merge-intervals/ 14k
 > * https://leetcode.com/problems/container-with-most-water/
-> * https://leetcode.com/problems/sort-colors/
+> * https://leetcode.com/problems/sort-colors/ 10k
 > * https://leetcode.com/problems/insert-interval/
-> * Hard: https://leetcode.com/problems/trapping-rain-water/
 > * https://leetcode.com/problems/next-permutation/
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
 > * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
@@ -42,12 +41,8 @@
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 
-> https://leetcode.com/problems/minimum-window-substring/
-> 
-> Practice `Sliding Window` Techniques:
-> * https://leetcode.cn/problems/find-all-anagrams-in-a-string/solution/hua-dong-chuang-kou-tong-yong-si-xiang-jie-jue-zi-/
-> * [Sliding Windows Problem List](https://leetcode.com/list/e5na1hcg/)
 > * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
+> * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
 
 ## Linked List
 | Problem          | Difficulty |
