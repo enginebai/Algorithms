@@ -93,6 +93,4 @@
 |[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy|
 |[622. Design Circular Queue](../leetcode/622.design-circular-queue.md)|Medium|
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
-
-> * https://leetcode.com/problems/basic-calculator/
-> * https://leetcode.com/problems/maximal-rectangle/
+|[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
