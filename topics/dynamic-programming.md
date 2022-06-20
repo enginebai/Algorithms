@@ -158,6 +158,8 @@ knapsack(10, values.size - 1)
 * **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
 * **Space Complexity**: `O(W * N)` for 2D array for memoization.
 
+> TODO: study + coding from [动态规划：关于01背包问题，你该了解这些！](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-1.md)
+
 ## Problems & Solutions
 | Problem         | Solution | Difficulty |
 |------------------|----------|------------|

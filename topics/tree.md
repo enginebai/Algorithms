@@ -402,10 +402,6 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
 }
 ```
 
-## Problems & Solutions
-| Problem         | Solution | Difficulty |
-|-----------------|----------|------------|
-
 ### Tips for Problem Solving
 * [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
     * *Top-Down* solution: It can be considered as **pre-order** traversal order.
