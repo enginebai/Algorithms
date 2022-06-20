@@ -43,7 +43,7 @@ data class GeneralTree<T>(
 ## Type of Trees
 | General Tree                                                  | Binary Tree                                                                         | Binary Search Tree                                                                                                | AVL Tree                                                                                      | Red-Black Tree                                                                                             | N-ary Tree                                                                                                                         |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| A tree with no constraints imposed on the hierarchy or nodes. | A tree in which each parents can have at most 2 children.                           | An extension of binary tree, where the value fo left child <= parent <= right child. It can be used in searching. | A self-balancing binary search tree, the heights of two child subtrees differ by at most one. | A self-balancing binary search tree, each node will be painted in "red" or "black" based on the balancing. | A tree of that the max number of children is limited to N. Binary tree is 2-ary tree. `Trie` is used implementation of N-ary tree. |
+| A tree with no constraints imposed on the hierarchy or nodes. | A tree in which each parents can have at most 2 children.                           | An extension of binary tree, where the value of left child <= parent <= right child. It can be used in searching. | A self-balancing binary search tree, the heights of two children subtrees differ by at most one. | A self-balancing binary search tree, each node will be painted in "red" or "black" based on the balancing. | A tree of that the max number of children is limited to N. Binary tree is 2-ary tree. `Trie` is used implementation of N-ary tree. |
 | <img src='../media/general-tree.png'/>                        | <img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Binary_tree_v2.svg'/> | <img src='https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg'/>                           | <img src='https://upload.wikimedia.org/wikipedia/commons/a/ad/AVL-tree-wBalance_K.svg'/>      | <img src='https://upload.wikimedia.org/wikipedia/commons/4/41/Red-black_tree_example_with_NIL.svg'/>       | <img src='https://upload.wikimedia.org/wikipedia/en/b/b8/Karytree.png'/>                                                           |
 
 > Source: [Wikipedia](https://en.wikipedia.org/wiki/Binary_tree)
@@ -169,76 +169,6 @@ fun predecessor(node: Node<T>): Node? {
 
 Both operations also take `O(h) = O(lg n)` since the worst case is to run the height of tree.
 
-#### Insertion
-**We must preserve the traversal order after inserting or deleting a node in a binary tree.**
-
-To insert a new node after (before is symmetric) the node `X`, there also are two cases:
-1. If the right (left) child is not there, we just add the new node to right (left) child.
-2. Otherwise, find the `subtreeFirst(node.right)` which is also the `successor(node)` and add the new node as a left child to it, since `subtreeFirst(node.right)` will find the left most node, this guarantees the left most node has no left node anymore, we just add new node as new left child of that left most node.
-
-![Binary Tree Insert After](../media/binary-tree-traversal-insert-after.png)
-
-```kotlin
-fun insertAfter(node: Node<T>, newNode: Node<T>) {
-    if (node.right == null) {
-        node.right = newNode
-        newNode.parent = node
-    } else {
-        val leftMostNode = subtreeFirst(node.right)
-        leftMostNode.left = newNode
-        newNode.parent = leftMostNode
-    }
-}
-
-fun insertBefore(node: Node<T>, newNode: Node<T>) {
-    if (node.left == null) {
-        node.left = newNode
-        newNode.parent = node
-    } else {
-        val rightMostNode = subtreeLast(node.left)
-        rightMostNode.right = newNode
-        newNode.parent = rightMostNode
-    }
-}
-```
-
-Both takes `O(h)` since the worst case is to call `subtreeFirst()` or `subtreeLast()`.
-
-#### Deletion
-> Can't get to much from this operation.
-> Continue the MIT course of deletion: https://youtu.be/76dhtgZt38A?t=2466
-
-To delete a node `X`, there are two cases:
-
-* Leaves are easy to delete, just detach (removing the child reference from parent node)
-![Traversal Order Delete Leaf](../media/binary-tree-traversal-delete-leaf.png)
-
-* For root, it's the most tricky one, we have to find its predecessor, and **move down `X` by swapping with its predecessor until `X` becomes the leaf**, and detach. (We want the node to delete to keep moving down until it becomes the leaf, then detach)
-
-![Traversal Order Delete Root](../media/binary-tree-traversal-delete-root.png)
-
-```kotlin
-fun delete(node: Node<T>) {
-    if (node.left != null || node.right != null) {
-        val nodeToSwap = if (node.left != null) predecessor(node)
-        else successor(node)
-
-        val temp = nodeToSwap.data
-        nodeToSwap.data = node.data
-        node.data = temp
-
-        // Recursively moving down the node to delete until it becomes leaf
-        delete(nodeToSwap)
-    }
-
-    val parent = node.parent
-    if (parent != null) {
-        if (parent.left == node) parent.left = null
-        else parent.right = null
-    } 
-}
-```
-
 ### Pre-Order Traversal
 ![Binary Tree Pre-Order Traversal](../media/binary-tree-pre-order-traversal.png)
 
@@ -278,6 +208,75 @@ val tree = BinaryTree()
 breadthFirstSearch(tree.node)
 ```
 
+## Insertion
+**We must preserve the traversal order after inserting or deleting a node in a binary tree.**
+
+To insert a new node after (before is symmetric) the node `X`, there also are two cases:
+1. If the right (left) child is not there, we just add the new node to right (left) child.
+2. Otherwise, find the `subtreeFirst(node.right)` which is also the `successor(node)` and add the new node as a left child to it, since `subtreeFirst(node.right)` will find the left most node, this guarantees the left most node has no left node anymore, we just add new node as new left child of that left most node.
+
+![Binary Tree Insert After](../media/binary-tree-traversal-insert-after.png)
+
+```kotlin
+fun insertAfter(node: Node<T>, newNode: Node<T>) {
+    if (node.right == null) {
+        node.right = newNode
+        newNode.parent = node
+    } else {
+        val leftMostNode = subtreeFirst(node.right)
+        leftMostNode.left = newNode
+        newNode.parent = leftMostNode
+    }
+}
+
+fun insertBefore(node: Node<T>, newNode: Node<T>) {
+    if (node.left == null) {
+        node.left = newNode
+        newNode.parent = node
+    } else {
+        val rightMostNode = subtreeLast(node.left)
+        rightMostNode.right = newNode
+        newNode.parent = rightMostNode
+    }
+}
+```
+
+Both takes `O(h)` since the worst case is to call `subtreeFirst()` or `subtreeLast()`.
+
+## Deletion
+> Can't get to much from this operation.
+> Continue the MIT course of deletion: https://youtu.be/76dhtgZt38A?t=2466
+
+To delete a node `X`, there are two cases:
+
+* Leaves are easy to delete, just detach (removing the child reference from parent node)
+![Traversal Order Delete Leaf](../media/binary-tree-traversal-delete-leaf.png)
+
+* For root, it's the most tricky one, we have to find its predecessor, and **move down `X` by swapping with its predecessor until `X` becomes the leaf**, and detach. (We want the node to delete to keep moving down until it becomes the leaf, then detach)
+
+![Traversal Order Delete Root](../media/binary-tree-traversal-delete-root.png)
+
+```kotlin
+fun delete(node: Node<T>) {
+    if (node.left != null || node.right != null) {
+        val nodeToSwap = if (node.left != null) predecessor(node)
+        else successor(node)
+
+        val temp = nodeToSwap.data
+        nodeToSwap.data = node.data
+        node.data = temp
+
+        // Recursively moving down the node to delete until it becomes leaf
+        delete(nodeToSwap)
+    }
+
+    val parent = node.parent
+    if (parent != null) {
+        if (parent.left == node) parent.left = null
+        else parent.right = null
+    } 
+}
+```
 
 ## Binary Search Tree
 A *binary search tree* is an extension of binary tree that its keys are always stored in such a way to satisfy the property:
