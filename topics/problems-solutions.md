@@ -19,13 +19,11 @@
 |[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
 
 > Unfinished Problems:
-> * https://leetcode.com/problems/merge-sorted-array/
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/
 > * https://leetcode.com/problems/merge-intervals/ 14k
 > * https://leetcode.com/problems/container-with-most-water/
 > * https://leetcode.com/problems/sort-colors/ 10k
 > * https://leetcode.com/problems/insert-interval/
-> * https://leetcode.com/problems/next-permutation/
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
 > * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
@@ -41,6 +39,11 @@
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 
+### Nice Posts
+> * https://www.geekxh.com/1.3.%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B3%BB%E5%88%97/301.html
+> * https://github.com/youngyangyang04/leetcode-master#%E5%AD%97%E7%AC%A6%E4%B8%B2
+
+### Problem List
 > * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
 > * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
 
@@ -93,6 +96,8 @@
 ## Tree
 | Problem          | Difficulty |
 |------------------|------------|
+
+### Problem List
 > * https://leetcode.com/problems/binary-tree-inorder-traversal/ 8k
 > * https://leetcode.com/problems/binary-tree-level-order-traversal/ 8.5k
 > * https://leetcode.com/problems/maximum-depth-of-binary-tree/ 7k
@@ -116,13 +121,154 @@
 > * https://leetcode.com/problems/same-tree/ 6k
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ hard 5k
 
-> BST:
+### BST
 > * https://leetcode.com/problems/delete-node-in-a-bst/ 5.5k
 > * https://leetcode.com/problems/search-in-a-binary-search-tree/
 > * https://leetcode.com/problems/validate-binary-search-tree/ 10k
 > * https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 > * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ 6.5k
 
-> Nice posts:
+### Nice Posts
 > * https://leetcode.com/discuss/general-discussion/937307/iterative-recursive-dfs-bfs-tree-traversal-in-pre-post-levelorder-views
 > * https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
+
+## Graph
+> Including non-graph DFS, BFS problems
+
+> * https://leetcode.com/problems/number-of-islands/ 14k
+> * https://leetcode.com/problems/01-matrix/ 5k
+> * https://leetcode.com/problems/network-delay-time/ 5k
+> * https://leetcode.com/problems/flood-fill/ 4k
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k
+> * https://leetcode.com/problems/rotting-oranges/ 7k
+> * https://leetcode.com/problems/minimum-height-trees/ 5k
+> * https://leetcode.com/problems/surrounded-regions/ 5k
+> * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k
+> * https://leetcode.com/problems/is-graph-bipartite/ 5k
+> * https://leetcode.com/problems/evaluate-division/ 5k
+> * https://leetcode.com/problems/word-ladder/ 8k
+
+> Topological Sort:
+> * https://leetcode.com/problems/course-schedule/ 9.6k
+> * https://leetcode.com/problems/course-schedule-ii/ 7k
+> * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k
+
+### Nice Posts
+> * https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions/
+
+## Dynamic Programming
+### Reading List
+> * https://www.geekxh.com/1.2.%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/205.html
+> * https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
+> * https://labuladong.gitee.io/algo/3/
+> * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
+>   * See above linke and practice **by sub-topics**
+>   * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
+>   * https://leetcode.com/discuss/general-discussion/592146/dynamic-programming-summary
+>   * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
+
+### Problems List
+> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ 16k
+> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ 7k
+> * Some stock problems variants
+> * https://leetcode.com/problems/climbing-stairs/ 12k
+> * https://leetcode.com/problems/coin-change/ 12k
+> * https://leetcode.com/problems/coin-change-2/ 5k
+> * https://leetcode.com/problems/house-robber/ 12k
+> * https://leetcode.com/problems/house-robber-ii/ 6k
+> * https://leetcode.com/problems/longest-increasing-subsequence/ 12k
+> * https://leetcode.com/problems/longest-common-subsequence/ 7k
+> * https://leetcode.com/problems/longest-valid-parentheses/ 
+> * Some longest xxx variants
+> * https://leetcode.com/problems/word-break/ 10k
+> * https://leetcode.com/problems/partition-equal-subset-sum/ 7k
+> * https://leetcode.com/problems/unique-paths/ 9k
+> * https://leetcode.com/problems/jump-game/ 11k
+> * https://leetcode.com/problems/minimum-path-sum/ 7k
+> * https://leetcode.com/problems/maximum-subarray/ **21k**
+> * https://leetcode.com/problems/maximum-product-subarray/ 11k
+> * https://leetcode.com/problems/perfect-squares/ 7k
+> * https://leetcode.com/problems/maximal-rectangle/ 6k
+> * https://leetcode.com/problems/edit-distance/ 8k
+
+## Backtracking
+### Reading List
+> * https://github.com/youngyangyang04/leetcode-master#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95
+> * https://labuladong.gitee.io/algo/4/29/103/
+
+### Problems List
+> * https://leetcode.com/problems/combinations/ 4k
+> * https://leetcode.com/problems/combination-sum/ 11k
+> * https://leetcode.com/problems/combination-sum-ii/ 5k
+> * https://leetcode.com/problems/generate-parentheses/ 13k
+> * https://leetcode.com/problems/letter-combinations-of-a-phone-number/ 11k
+> * https://leetcode.com/problems/palindrome-partitioning/ 7k
+> * https://leetcode.com/problems/word-search/ 9k
+> * https://leetcode.com/problems/subsets/ 10k
+> * https://leetcode.com/problems/subsets-ii/ 5k
+> * https://leetcode.com/problems/permutations/ 11k
+> * https://leetcode.com/problems/permutations-ii/ 6k
+> * https://leetcode.com/problems/path-sum-ii/ 
+> * https://leetcode.com/problems/remove-invalid-parentheses/ 4k
+> * https://leetcode.com/problems/regular-expression-matching/ 8k
+
+### Summary 
+> * https://leetcode.com/problems/permutations/discuss/18239/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partioning
+> * https://leetcode.com/problems/permutations/discuss/18284/Backtrack-Summary:-General-Solution-for-10-Questionsh
+> * https://leetcode.com/discuss/general-discussion/680269/a-general-approach-to-backtracking-problems-in-cexhaustive-searching
+
+## Greedy
+> TODO
+
+## Hash & Searching & Sorting
+> * https://labuladong.gitee.io/algo/2/18/26/
+> * https://leetcode.com/problems/two-sum/ 35k
+> * https://leetcode.com/problems/merge-sorted-array/ 8k
+> * https://leetcode.com/problems/group-anagrams/ 10k
+> * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
+> * https://leetcode.com/problems/first-missing-positive/ 10k
+> * https://leetcode.com/problems/lru-cache/ 13k
+> * https://leetcode.com/problems/binary-search/ 5k
+> * https://leetcode.com/problems/search-in-rotated-sorted-array/ 15k
+> * https://leetcode.com/problems/subarray-sum-equals-k/ 13k
+> * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 7k
+> * https://leetcode.com/problems/copy-list-with-random-pointer/ 8k
+> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
+> * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ 11k
+> * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 7k
+> * https://leetcode.com/problems/search-a-2d-matrix/ 8k
+> * https://leetcode.com/problems/task-scheduler/ 6k
+
+## Two Pointers
+### Reading List:
+> * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
+> * https://labuladong.gitee.io/algo/1/9/ (For Linked List, might skip)
+> * https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers
+
+## Sliding Windows
+### Reading List: 
+> * https://github.com/labuladong/fucking-algorithm/blob/master/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E7%B3%BB%E5%88%97/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%8A%80%E5%B7%A7.md
+> * https://labuladong.gitee.io/algo/1/11/ [Same](https://leetcode.cn/problems/find-all-anagrams-in-a-string/solution/hua-dong-chuang-kou-tong-yong-si-xiang-jie-jue-zi-/)
+>   * https://leetcode.com/problems/longest-substring-without-repeating-characters/ 25k
+>   * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 7k
+>   * https://leetcode.com/problems/permutation-in-string/ 6k
+>   * https://leetcode.com/problems/minimum-window-substring/ 10k hard
+> * https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/slide-window
+> * https://www.geekxh.com/1.5.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%B3%BB%E5%88%97/501.html#_01%E3%80%81%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90
+> * From LeetCode Recommendation: 
+>   * https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem (Templates + Some problems)
+>   * https://leetcode.com/discuss/general-discussion/657507/sliding-window-for-beginners-problems-template-sample-solutions/
+> https://medium.com/outco/how-to-solve-sliding-window-problems-28d67601a66
+
+### Problems List:
+> * [Sliding Windows Problem List](https://leetcode.com/list/x17aw7vm/) (Already listed below)
+> * https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3
+> * https://leetcode.com/problems/minimum-size-subarray-sum/ 7k
+> * https://leetcode.com/problems/longest-repeating-character-replacement/ 4k
+> * https://leetcode.com/problems/max-consecutive-ones-iii/ 4k
+> * https://leetcode.com/problems/subarrays-with-k-different-integers/ 3k hard
+> * https://leetcode.com/problems/sliding-window-maximum/ 10k hard
+
+## Listing By Topics
+* https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns
+* https://leetcode.com/discuss/career/448024/Topic-wise-problems-for-Beginners
