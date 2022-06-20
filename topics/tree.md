@@ -402,44 +402,6 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
 }
 ```
 
-## Problems & Solutions
-| Problem         | Solution | Difficulty |
-|-----------------|----------|------------|
-> * https://leetcode.com/problems/binary-tree-inorder-traversal/ 8k
-> * https://leetcode.com/problems/binary-tree-level-order-traversal/ 8.5k
-> * https://leetcode.com/problems/maximum-depth-of-binary-tree/ 7k
-> * https://leetcode.com/problems/invert-binary-tree/ 8.6k
-> * https://leetcode.com/problems/symmetric-tree/ 9.7k
-> * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ 8.7k
-> * https://leetcode.com/problems/path-sum/ 6k
-> * https://leetcode.com/problems/binary-tree-maximum-path-sum/ 9.8k hard
-> * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/ 10k
-> * https://leetcode.com/problems/diameter-of-binary-tree/ 8k
-> * https://leetcode.com/problems/flatten-binary-tree-to-linked-list/ 7.3k
-> * https://leetcode.com/problems/populating-next-right-pointers-in-each-node/ 6.7k
-> * https://leetcode.com/problems/binary-tree-right-side-view/ 6.7k
-> * https://leetcode.com/problems/subtree-of-another-tree/ 5k
-> * https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ 6k hard
-> * https://leetcode.com/problems/balanced-binary-tree/ 6k
-> * https://leetcode.com/problems/house-robber-iii/ 6k
-> * https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/ 6k
-
-> * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k
-> * https://leetcode.com/problems/same-tree/ 6k
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ hard 5k
-
-> BST:
-> * https://leetcode.com/problems/delete-node-in-a-bst/ 5.5k
-> * https://leetcode.com/problems/search-in-a-binary-search-tree/
-> * https://leetcode.com/problems/validate-binary-search-tree/ 10k
-> * https://leetcode.com/problems/kth-smallest-element-in-a-bst/
-> * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ 6.5k
-
-> Nice posts:
-> * https://leetcode.com/discuss/general-discussion/937307/iterative-recursive-dfs-bfs-tree-traversal-in-pre-post-levelorder-views
-> * https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
-
-
 ### Tips for Problem Solving
 * [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
     * *Top-Down* solution: It can be considered as **pre-order** traversal order.
