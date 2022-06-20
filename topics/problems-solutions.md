@@ -30,23 +30,6 @@
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
 > * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
-### [LeetCode Explore - Arrays 101](https://leetcode.com/explore/learn/card/fun-with-arrays/)
-
-| Problem         | Solution | Difficulty |
-|------------------|----------|------------|
-|[485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)|[Straightforward](../leetcode/485.max-consecutive-ones.md)|Easy|
-|[1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)|[Straightforward](../leetcode/1295.find-numbers-with-even-number-of-digits.md)|Easy|
-|[1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)|[Two Pointers](../leetcode/1089.duplicate-zeros.md)|Easy|
-|[27. Remove Element](https://leetcode.com/problems/remove-element/)|[Two Pointers](../leetcode/27.remove-element.md)|Easy|
-|[88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[Two Pointers](../leetcode/88.merge-sorted-array.md)|Easy|
-|[26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[Two Pointers](../leetcode/26.remove-duplicates-from-sorted-array.md)|Easy|
-|[1346. Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/)|[Hash Table](../leetcode/1346.check-if-n-and-its-double-exist.md)|Easy|
-|[941. Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/)|[Two Pointers](../leetcode/941.valid-mountain-array.md)|Easy|
-|[1299. Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/)|[Straightforward](../leetcode/1299.replace-elements-with-greatest-element-on-right-side.md)|Easy|
-|[905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|[Two Pointers](../leetcode/905.sort-array-by-parity.md)|Easy|
-|[1051. Height Checker](https://leetcode.com/problems/height-checker/)|[Straightforward](../leetcode/1051.height-checker.md)|Easy|
-|[448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)|[In-place Negative Seen](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
-
 ## Strings
 | Problem          | Difficulty |
 |------------------|------------|
@@ -81,7 +64,7 @@
 |[82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md)|Medium|
 |[19. Remove Nth Node From End of List](../leetcode/19.remove-nth-node-from-end-of-list.md)|Medium|
 |[234. Palindrome Linked List](../leetcode/234.palindrome-linked-list.md)|Easy|
-|[2. Add Two Numbers](../leetcode/2.add-tow-numbers.md)|Medium|
+|[2. Add Two Numbers](../leetcode/2.add-two-numbers.md)|Medium|
 |[143. Reorder List](../leetcode/143.reorder-list.md)|Medium|
 |[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
 |[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
@@ -90,3 +73,24 @@
 > * https://leetcode.com/problems/copy-list-with-random-pointer/
 > * https://leetcode.com/problems/sort-list/
 > * https://leetcode.com/problems/partition-list/
+
+## Stack & Queue
+| Problem          | Difficulty |
+|------------------|------------|
+|[155. Min Stack](../leetcode/155.min-stack.md)|Easy|
+|[232. Implement Queue using Stacks](../leetcode/232.implement-queue-using-stacks.md)|Easy|
+|[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
+|[20. Valid Parentheses](../leetcode/20.valid-parentheses.md)|Easy|
+|[22. Generate Parentheses](../leetcode/22.generate-parentheses.md)|Medium|
+|[739. Daily Temperatures](../leetcode/739.daily-temperatures.md)|Medium|
+|[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)|Hard|
+|[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)|Easy|
+|[503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)|Medium|
+|[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium|
+|[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
+|[394. Decode String](../leetcode/394.decode-string.md)|Medium|
+|[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
+|[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy|
+|[622. Design Circular Queue](../leetcode/622.design-circular-queue.md)|Medium|
+|[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
+|[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|

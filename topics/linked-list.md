@@ -451,7 +451,6 @@ fun insertFirst(value: T) {
 
 fun insertLast(value: T) {
     val newNode = Node(item)
-    size++
     if (head == null) {
         head = newNode
         tail = newNode
@@ -459,9 +458,11 @@ fun insertLast(value: T) {
     }
     tail?.next = newNode
     tail = newNode
+    size++
 }
 
 fun insertAt(index: Int, value: T) {
+    if (index < 0 || index >= size) throw IllegalArguementException()
     if (index == 0) {
         insertFirst(value)
         return
@@ -476,7 +477,10 @@ fun insertAt(index: Int, value: T) {
 }
 
 fun deleteFirst() {
-    // Empty or list with only one node
+    if (head == null) {
+        return
+    }
+    // List with only one node
     if (head == tail) {
         tail = tail?.next
     }
@@ -485,11 +489,13 @@ fun deleteFirst() {
 }
 
 fun deleteLast() {
-    // Empty or list with only one node
+    if (head == null) {
+        return
+    }
+    // List with only one node
     if (head == tail) {
         head = null
         tail = null
-        if (size == 1) size--
         return
     }
     val previous: Node? = null
@@ -500,6 +506,7 @@ fun deleteLast() {
 }
 
 fun deleteAt(index: Int) {
+    if (index < 0 || index >= size) throw IllegalArguementException()
     if (index == 0) {
         deleteFirst()
         return
