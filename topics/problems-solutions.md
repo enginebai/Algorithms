@@ -100,13 +100,13 @@
 |[102. Binary Tree Level Order Traversal](../leetcode/102.binary-tree-level-order-traversal.md)|Medium|
 |[104. Maximum Depth of Binary Tree](../leetcode/104.maximum-depth-of-binary-tree.md)|Easy|
 |[226. Invert Binary Tree](../leetcode/226.invert-binary-tree.md)|Easy|
+|[101. Symmetric Tree](../leetcode/101.symmetric-tree.md)|Easy|
+|[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
+|[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
+|[236. Lowest Common Ancestor of a Binary Tree](../leetcode/236.lowest-common-ancestor-of-a-binary-tree.md)|Medium|
 
 ### Problem List
-> * https://leetcode.com/problems/symmetric-tree/ 9.7k
-> * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ 8.7k
-> * https://leetcode.com/problems/path-sum/ 6k
 > * https://leetcode.com/problems/binary-tree-maximum-path-sum/ 9.8k hard
-> * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/ 10k
 > * https://leetcode.com/problems/diameter-of-binary-tree/ 8k
 > * https://leetcode.com/problems/flatten-binary-tree-to-linked-list/ 7.3k
 > * https://leetcode.com/problems/populating-next-right-pointers-in-each-node/ 6.7k
@@ -127,6 +127,7 @@
 > * https://leetcode.com/problems/validate-binary-search-tree/ 10k
 > * https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 > * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ 6.5k
+> * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ 6k
 
 ### Nice Posts
 > * https://leetcode.com/discuss/general-discussion/937307/iterative-recursive-dfs-bfs-tree-traversal-in-pre-post-levelorder-views
