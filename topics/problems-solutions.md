@@ -97,10 +97,9 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[94. Binary Tree Inorder Traversal](../leetcode/94.binary-tree-inorder-traversal.md)|Easy|
+|[102. Binary Tree Level Order Traversal](../leetcode/102.binary-tree-level-order-traversal.md)|Medium|
 
 ### Problem List
-> * https://leetcode.com/problems/binary-tree-inorder-traversal/ 8k
-> * https://leetcode.com/problems/binary-tree-level-order-traversal/ 8.5k
 > * https://leetcode.com/problems/maximum-depth-of-binary-tree/ 7k
 > * https://leetcode.com/problems/invert-binary-tree/ 8.6k
 > * https://leetcode.com/problems/symmetric-tree/ 9.7k
