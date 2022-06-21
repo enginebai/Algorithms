@@ -421,9 +421,9 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
         }
         ```
 * Corner cases:
-    * Empty tree
-    * Single node
-    * Two nodes
+    * Empty tree (`node == null`)
+    * Single node (`node!!.left == null || node!!.right == null`)
+    * Two nodes 
     * Skewed tree (like a linked list)
 
 ## Sub-Toptics
