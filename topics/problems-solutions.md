@@ -96,6 +96,7 @@
 ## Tree
 | Problem          | Difficulty |
 |------------------|------------|
+|[94. Binary Tree Inorder Traversal](../leetcode/94.binary-tree-inorder-traversal.md)|Easy|
 
 ### Problem List
 > * https://leetcode.com/problems/binary-tree-inorder-traversal/ 8k

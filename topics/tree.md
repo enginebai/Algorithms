@@ -244,15 +244,14 @@ fun insertBefore(node: Node<T>, newNode: Node<T>) {
 Both takes `O(h)` since the worst case is to call `subtreeFirst()` or `subtreeLast()`.
 
 ## Deletion
-> Can't get to much from this operation.
-> Continue the MIT course of deletion: https://youtu.be/76dhtgZt38A?t=2466
-
 To delete a node `X`, there are two cases:
 
 * Leaves are easy to delete, just detach (removing the child reference from parent node)
 ![Traversal Order Delete Leaf](../media/binary-tree-traversal-delete-leaf.png)
 
-* For root, it's the most tricky one, we have to find its predecessor, and **move down `X` by swapping with its predecessor until `X` becomes the leaf**, and detach. (We want the node to delete to keep moving down until it becomes the leaf, then detach)
+* For root (most tricky one) or node that is not leaf, we have to find its predecessor/successor, and **move down `X` by swapping with its predecessor/successor until `X` becomes the leaf**, and detach. 
+    * We want the node to delete to keep moving down until it becomes the leaf, then detach.
+    * We just **change the `data` field, not change the node** directly when swipping.
 
 ![Traversal Order Delete Root](../media/binary-tree-traversal-delete-root.png)
 
