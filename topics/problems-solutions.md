@@ -99,9 +99,9 @@
 |[94. Binary Tree Inorder Traversal](../leetcode/94.binary-tree-inorder-traversal.md)|Easy|
 |[102. Binary Tree Level Order Traversal](../leetcode/102.binary-tree-level-order-traversal.md)|Medium|
 |[104. Maximum Depth of Binary Tree](../leetcode/104.maximum-depth-of-binary-tree.md)|Easy|
+|[226. Invert Binary Tree](../leetcode/226.invert-binary-tree.md)|Easy|
 
 ### Problem List
-> * https://leetcode.com/problems/invert-binary-tree/ 8.6k
 > * https://leetcode.com/problems/symmetric-tree/ 9.7k
 > * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ 8.7k
 > * https://leetcode.com/problems/path-sum/ 6k
