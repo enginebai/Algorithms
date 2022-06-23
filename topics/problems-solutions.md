@@ -104,18 +104,18 @@
 |[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
 |[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
 |[236. Lowest Common Ancestor of a Binary Tree](../leetcode/236.lowest-common-ancestor-of-a-binary-tree.md)|Medium|
+|[543. Diameter of Binary Tree](../leetcode/543.diameter-of-binary-tree.md)|Easy|
 
 ### Problem List
-> * https://leetcode.com/problems/binary-tree-maximum-path-sum/ 9.8k hard
-> * https://leetcode.com/problems/diameter-of-binary-tree/ 8k
-> * https://leetcode.com/problems/flatten-binary-tree-to-linked-list/ 7.3k
-> * https://leetcode.com/problems/populating-next-right-pointers-in-each-node/ 6.7k
-> * https://leetcode.com/problems/binary-tree-right-side-view/ 6.7k
-> * https://leetcode.com/problems/subtree-of-another-tree/ 5k
-> * https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ 6k hard
-> * https://leetcode.com/problems/balanced-binary-tree/ 6k
-> * https://leetcode.com/problems/house-robber-iii/ 6k
-> * https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/ 6k
+> * https://leetcode.com/problems/binary-tree-maximum-path-sum/ 9.8k h
+> * https://leetcode.com/problems/flatten-binary-tree-to-linked-list/ 7.3k m
+> * https://leetcode.com/problems/populating-next-right-pointers-in-each-node/ 6.7k m
+> * https://leetcode.com/problems/binary-tree-right-side-view/ 6.7k m
+> * https://leetcode.com/problems/subtree-of-another-tree/ 5k e
+> * https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ 6k h
+> * https://leetcode.com/problems/balanced-binary-tree/ 6k e
+> * https://leetcode.com/problems/house-robber-iii/ 6k m
+> * https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/ 6k m
 
 > * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k
 > * https://leetcode.com/problems/same-tree/ 6k
