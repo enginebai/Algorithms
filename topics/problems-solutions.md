@@ -112,10 +112,10 @@
 |[100. Same Tree](../leetcode/100.same-tree.md)|Easy|
 |[863. All Nodes Distance K in Binary Tree](../leetcode/863.all-nodes-distance-k-in-binary-tree.md)|Medium|
 |[110. Balanced Binary Tree](../leetcode/110.balanced-binary-tree.md)|Easy|
+|[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
 
 ### Problem List
 > * https://leetcode.com/problems/subtree-of-another-tree/ 5k e
-> * https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ 6k h
 > * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ hard 5k
 
