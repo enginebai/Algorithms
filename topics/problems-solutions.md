@@ -117,7 +117,8 @@
 ### Problem List
 > * https://leetcode.com/problems/subtree-of-another-tree/ 5k e
 > * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k m
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ hard 5k
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5k hard
+> * https://leetcode.com/problems/binary-tree-pruning/ 2k m
 
 ### BST
 > * https://leetcode.com/problems/delete-node-in-a-bst/ 5.5k

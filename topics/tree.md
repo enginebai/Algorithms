@@ -56,9 +56,11 @@ A *binary tree* is a tree of binary nodes (every node has at most two children).
 ```kotlin
 data class Node<T>(
     var data: T,
-    var parent: Binary<T>? = null,
     var left: BinaryNode<T>? = null,
     var right: BInaryNode<T>? = null
+
+    // Most of problems won't provide the parent pointer
+    var parent: Binary<T>? = null,
 )
 
 data class BinaryTree<T> (
@@ -79,10 +81,10 @@ A *full*  binary tree of level `k` is a binary tree that has `2^k - 1` nodes.
 A binary tree with `n` nodes of level `k` is *complete* iff its nodes are numbered 1 to `n` in the full binary tree of level `k`.
 
 ## Traversal
-Traversal of a binary tree means to **visit each node in the tree exactly once** (get a linear order of node data). Let `L`, `D`, `R` stand for moving left, print the data, moving right, repectively, and we adopt the convention that we traverse left before right, then we have three traversals: `DLR`, `LDR`, `LRD`, that are *pre-order*, *in-order* and *post-order* (depends on `D`) (also known as *depth-first search*, *DFS*).
+Traversal of a binary tree means to **visit each node in the tree exactly once** (get a linear order of node data). Let `L`, `D`, `R` stand for moving left, print the data, moving right, repectively, and we adopt the convention that we traverse left before right, then we have three traversals: `DLR`, `LDR`, `LRD`, that are *preorder*, *inorder* and *postorder* (depends on `D`) (also known as *depth-first search*, *DFS*).
 
-### In-Order Traversal
-We define a binary tree's *traversal order* (also called *in-order*) based on the following characterization:
+### Inorder Traversal
+We define a binary tree's *traversal order* (*inorder* as default) based on the following characterization:
 
 * Each node in the left subtree of node `X` visits **before** `X`.
 * Each node in the right subtree of node `X` visits **after** `X`.
@@ -90,17 +92,34 @@ We define a binary tree's *traversal order* (also called *in-order*) based on th
 That is, given a binary node `X`, we can list all the nodes by recursively listing the nodes in `X`'s left subtree, list `X` itself, and then recursively listing the nodes in `X`'s right subtree. (It takes `O(n)` where `n` is the number of nodes.)
 
 ```kotlin
-fun treeTraversal(node: Node<T>) {
-    if (node.left != null) treeTraversal(node.left)
-    print(node.data)
-    if (node.right != null) treeTraversal(node.right)
+fun inorderTraversal(node: Node<T>?) {
+    if (node?.left != null) inorderTraversal(node.left!!)
+    print(node?.data)
+    if (node?.right != null) inorderTraversal(node.right!!)
 }
 
 val tree = BinaryTree(A)
-treeTraversal(tree.root)
+inorderTraversal(tree.root)
+
+fun inorderTraversalIterative(root: Node<T>?) {
+    if (root == null) return
+    val stack = Stack<Node>()
+    stack.push(root)
+    var node: Node<T>? = root
+    while (!stack.isEmpty() && node != null) {
+        // Traverse all left child
+        while (node != null) {
+            if (node.left != null) stack.push(node.left)
+            node = node.left
+        }
+        node = stack.pop()
+        println(node.data)
+        node = node.right
+    }
+}
 ```
 
-![Binary Tree In-Order Traversal Order](../media/binary-tree-in-order-traversal.png)
+![Binary Tree Inorder Traversal Order](../media/binary-tree-in-order-traversal.png)
 
 > We store data in tree structure, NOT storing the real traversal order which maintaining costs is more than tree structure itself.
 
@@ -169,25 +188,57 @@ fun predecessor(node: Node<T>): Node? {
 
 Both operations also take `O(h) = O(lg n)` since the worst case is to run the height of tree.
 
-### Pre-Order Traversal
+### Preorder Traversal
 ![Binary Tree Pre-Order Traversal](../media/binary-tree-pre-order-traversal.png)
 
 ```kotlin
-fun treeTraversal(node: Node<T>) {
-    print(node.data)
-    if (node.left != null) treeTraversal(node.left)
-    if (node.right != null) treeTraversal(node.right)
+fun preorderTraversal(node: Node<T>?) {
+    print(node?.data)
+    if (node?.left != null) preorderTraversal(node.left!!)
+    if (node?.right != null) preorderTraversal(node.right!!)
+}
+
+fun preorderTraversalIteratively(node: Node<T>?) {
+    if (node == null) return
+    val stack = Stack<Node>()
+    stack.push(node)
+    while (!stack.isEmpty()) {
+        val n = stack.pop()
+        println(n.data)
+        // Mind the order, right goes first (stack)
+        if (n.right != null) stack.push(n.right!!)
+        if (n.left != null) stack.push(n.left!!)
+    }
 }
 ```
 
-### Post-Order Traversal
+### Postorder Traversal
 ![Binary Tree Post-Order Traversal](../media/binary-tree-post-order-traversal.png)
 
 ```kotlin
-fun treeTraversal(node: Node<T>) {
-    if (node.left != null) treeTraversal(node.left)
-    if (node.right != null) treeTraversal(node.right)
-    print(node.data)
+fun postorderTraversal(node: Node<T>?) {
+    if (node?.left != null) postorderTraversal(node.left!!)
+    if (node?.right != null) postorderTraversal(node.right!!)
+    print(node?.data)
+}
+
+/** 
+ * Idea:
+ *  Preorder = DLR, we modify the preorderTraversalIterative(), we push left child first, so the order will become DRL, then we reverse it so  it becomes LRD in the final.
+ */
+fun postorderTraversal(root: Node<T>?): Node<T>? {
+    if (root == null) return null
+    val results = mutableListOf<T>()
+    val stack = Stack<Node>()
+    stack.push(root)
+    while (!stack.isEmpty()) {
+        val node = stack.pop()
+        println(node.`val`)
+        if (node.left != null) stack.push(node.left!!)
+        if (node.right != null) stack.push(node.right!!)
+    }
+    results.reverse()
+    return results
 }
 ```
 
@@ -319,7 +370,7 @@ searchIteratively(tree.root, k)
 * To find the *minimum / maximum* is very straightforward, just find the left / right most node. (Simply use `subtreeFirst()` and `subtreeLast()` in binary tree)
 * To find the *successor / predecessor*, we also simply use `successor()` and `predecessor()` in binary tree)
 
-> The order of every nodes in binary search tree is as same as "in-order" traversal order.
+> The order of every nodes in binary search tree is as same as "inorder" traversal order.
 
 ### Insertion & Deletion
 The insertion and deletion cause the binary search tree to change to hold the binary-search-tree property continues to hold. It also take `O(h)` time.
@@ -400,9 +451,9 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
 }
 ```
 
-### Tips for Problem Solving
+### Tips for [Problem Solving](../topics/problems-solutions.md#tree)
 * [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
-    * *Top-Down* solution: It can be considered as **pre-order** traversal order.
+    * *Top-Down* solution: It can be considered as **preorder** traversal order.
         ```kotlin
         fun topDown(node) {
             1. Update the answer from current node (like `print(node.data)`
@@ -411,7 +462,7 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
             4. Return answer
         }
         ```
-    * *Bottom-Up* solution: We call function for all the children recursively, it regards as *post-order* traversal order.
+    * *Bottom-Up* solution: We call function for all the children recursively, it regards as *postorder* traversal order.
         ```kotlin
         fun buttomUp(node) {
             1. Left answer = buttomUp(node.left)
@@ -424,7 +475,47 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
     * Empty tree (`node == null`)
     * Single node (`node!!.left == null || node!!.right == null`)
     * Two nodes 
-    * Skewed tree (like a linked list)
+    * Skewed tree (like a linked list), height will be `n`, not `lg n`.
+* The node in problems doesn't have the parent pointer, we can run DFS/BFS once and use hash table to store its parent.
+* DFS template (recursive):
+
+```kotlin
+fun dfs(root: TreeNode?) {
+    // Some termaination condition or end of search path (base case)
+    if (root == null || ...) {
+        // Do somthing and return
+    }
+    
+    // We push right child first (stack FILO)
+    if (root?.right != null) dfs(root.right!!)
+    if (root?.left != null) dfs(root.left!!)
+
+    // Might do somthin extra
+}
+```
+
+* BFS template with level annotation (remove the inner for loop for non-level annotation):
+
+```kotlin
+fun bfs(root: TreeNode?) {
+    if (root == null) return
+    val queue = ArrayDeque<TreeNode>()
+    queue.addLast(root)
+    while (!queue.isEmpty()) {
+        // Do something in the same level
+        val size = queue.size()
+        for (i in 0 until size) {
+            val node = queue.removeFirst()
+            // do something or update result
+            
+            if (node.left != null) queue.addLast(node.left!!)
+            if (node.right != null) queue.addLast(node.right!!)
+        }
+
+        // Do something extra
+    }
+}
+```
 
 ## Sub-Toptics
 * [BFS/DFS](../topics/graph.md#breadth-first-search-bfs)
