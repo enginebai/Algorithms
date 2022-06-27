@@ -123,9 +123,12 @@
 > * https://leetcode.com/problems/binary-tree-paths/ 4k e
 > * **Listing**: https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
 
-### BST
+## Binary Search Tree
+| Problem          | Difficulty |
+|------------------|------------|
+|[700. Search in a Binary Search Tree](../leetcode/700.search-in-a-binary-search-tree.md)|Easy|
+
 > * https://leetcode.com/problems/delete-node-in-a-bst/ 5.5k m
-> * https://leetcode.com/problems/search-in-a-binary-search-tree/ 3k e
 > * https://leetcode.com/problems/validate-binary-search-tree/ 10k m
 > * https://leetcode.com/problems/kth-smallest-element-in-a-bst/ 7k m
 > * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ 6.5k e
