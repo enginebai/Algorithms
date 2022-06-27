@@ -428,7 +428,9 @@ fun BinarySearchTree.delete(node: Node<T>) {
     // Determine the left or right child of the node to delete for splicing out
     if (node.left == null || node.right == null) {
         val child = if (node.left != null) node.left else node.right
-        child.parent = node.parent
+        var parent = node.parent
+        if (parent?.left == node) parent?.left = child else parent?.right = child
+        child.parent = parent
         return 
     }
 
@@ -516,6 +518,8 @@ fun bfs(root: TreeNode?) {
     }
 }
 ```
+
+> Some nice templates: https://leetcode.com/discuss/general-discussion/937307/iterative-recursive-dfs-bfs-tree-traversal-in-pre-post-levelorder-views
 
 ## Sub-Toptics
 * [BFS/DFS](../topics/graph.md#breadth-first-search-bfs)

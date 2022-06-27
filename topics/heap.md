@@ -190,25 +190,25 @@ fun heapSort(A) {
 * **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
 
 ## Problems
-> * https://leetcode.com/problems/kth-largest-element-in-an-array/ 9k
-> * https://leetcode.com/problems/top-k-frequent-elements/ 9k
-> * https://leetcode.com/problems/top-k-frequent-words/ 4k
-> * https://leetcode.com/problems/find-median-from-data-stream/ hard 7k
-> * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k
-> * https://leetcode.com/problems/k-closest-points-to-origin/ 5k
-> * https://leetcode.com/problems/ugly-number-ii/ 4k
-> * https://leetcode.com/problems/reorganize-string/ 4k
-> * https://leetcode.com/problems/sort-characters-by-frequency/ 4k
-> * https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ 3k
-> * https://leetcode.com/problems/last-stone-weight/ 3k
+> * https://leetcode.com/problems/kth-largest-element-in-an-array/ 10k m
+> * https://leetcode.com/problems/top-k-frequent-elements/ 9k m
+> * https://leetcode.com/problems/top-k-frequent-words/ 4k m
+> * https://leetcode.com/problems/find-median-from-data-stream/ 7k h
+> * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
+> * https://leetcode.com/problems/k-closest-points-to-origin/ 5k m
+> * https://leetcode.com/problems/ugly-number-ii/ 4k m
+> * https://leetcode.com/problems/reorganize-string/ 4k m
+> * https://leetcode.com/problems/sort-characters-by-frequency/ 4k m
+> * https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ 3k m
+> * https://leetcode.com/problems/last-stone-weight/ 3k e
 
 ## Resources
 - [X] CLRS
 - [X] [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-8-binary-heaps/)
 - [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-5)
-- [ ] [LC Learn](https://leetcode.com/explore/learn/card/heap/) // Some sections are locked.
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Heap)
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/heap
+- [X] [LC Learn](https://leetcode.com/explore/learn/card/heap/) // Some sections are locked.
+- [X] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Heap)
+- [X] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/heap
 - [X] [Software Engineer Interview Preparation // Introductory notes
     - [X] [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#heap)
     - [X] [Algorithm](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#heapsort)

@@ -121,42 +121,36 @@
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5k hard
 > * https://leetcode.com/problems/binary-tree-pruning/ 2k m
 > * https://leetcode.com/problems/binary-tree-paths/ 4k e
+> * **Listing**: https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
 
 ### BST
-> * https://leetcode.com/problems/delete-node-in-a-bst/ 5.5k
-> * https://leetcode.com/problems/search-in-a-binary-search-tree/
-> * https://leetcode.com/problems/validate-binary-search-tree/ 10k
-> * https://leetcode.com/problems/kth-smallest-element-in-a-bst/
-> * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ 6.5k
-> * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ 6k
-
-### Nice Posts
-> * https://leetcode.com/discuss/general-discussion/937307/iterative-recursive-dfs-bfs-tree-traversal-in-pre-post-levelorder-views
-> * https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
+> * https://leetcode.com/problems/delete-node-in-a-bst/ 5.5k m
+> * https://leetcode.com/problems/search-in-a-binary-search-tree/ 3k e
+> * https://leetcode.com/problems/validate-binary-search-tree/ 10k m
+> * https://leetcode.com/problems/kth-smallest-element-in-a-bst/ 7k m
+> * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ 6.5k e
+> * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ 6k e
 
 ## Graph
 > Including non-graph DFS, BFS problems
 
-> * https://leetcode.com/problems/number-of-islands/ 14k
-> * https://leetcode.com/problems/01-matrix/ 5k
-> * https://leetcode.com/problems/network-delay-time/ 5k
-> * https://leetcode.com/problems/flood-fill/ 4k
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k
-> * https://leetcode.com/problems/rotting-oranges/ 7k
-> * https://leetcode.com/problems/minimum-height-trees/ 5k
-> * https://leetcode.com/problems/surrounded-regions/ 5k
-> * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k
-> * https://leetcode.com/problems/is-graph-bipartite/ 5k
-> * https://leetcode.com/problems/evaluate-division/ 5k
-> * https://leetcode.com/problems/word-ladder/ 8k
+> * https://leetcode.com/problems/number-of-islands/ 14k m
+> * https://leetcode.com/problems/01-matrix/ 5k m
+> * https://leetcode.com/problems/network-delay-time/ 5k m
+> * https://leetcode.com/problems/flood-fill/ 4k e
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
+> * https://leetcode.com/problems/rotting-oranges/ 7k m
+> * https://leetcode.com/problems/minimum-height-trees/ 5k m
+> * https://leetcode.com/problems/surrounded-regions/ 5k m
+> * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k m
+> * https://leetcode.com/problems/is-graph-bipartite/ 5k m
+> * https://leetcode.com/problems/evaluate-division/ 5k m
+> * https://leetcode.com/problems/word-ladder/ 8k h
 
 > Topological Sort:
-> * https://leetcode.com/problems/course-schedule/ 9.6k
-> * https://leetcode.com/problems/course-schedule-ii/ 7k
-> * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k
-
-### Nice Posts
-> * https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions/
+> * https://leetcode.com/problems/course-schedule/ 9.6k m
+> * https://leetcode.com/problems/course-schedule-ii/ 7k m
+> * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
 
 ## Dynamic Programming
 ### Reading List
@@ -252,7 +246,7 @@
 ### Reading List: 
 > * https://github.com/labuladong/fucking-algorithm/blob/master/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E7%B3%BB%E5%88%97/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%8A%80%E5%B7%A7.md
 > * https://labuladong.gitee.io/algo/1/11/ [Same](https://leetcode.cn/problems/find-all-anagrams-in-a-string/solution/hua-dong-chuang-kou-tong-yong-si-xiang-jie-jue-zi-/)
->   * https://leetcode.com/problems/longest-substring-without-repeating-characters/ 25k
+>   * https://leetcode.com/problems/longest-substring-without-repeating-characters/ **25k**
 >   * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 7k
 >   * https://leetcode.com/problems/permutation-in-string/ 6k
 >   * https://leetcode.com/problems/minimum-window-substring/ 10k hard
