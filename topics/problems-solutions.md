@@ -19,13 +19,12 @@
 |[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
 
 > Unfinished Problems:
-> * https://leetcode.com/problems/find-all-duplicates-in-an-array/
-> * https://leetcode.com/problems/merge-intervals/ 14k
-> * https://leetcode.com/problems/container-with-most-water/
-> * https://leetcode.com/problems/sort-colors/ 10k
-> * https://leetcode.com/problems/insert-interval/
-> * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
-> * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+> * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
+> * https://leetcode.com/problems/merge-intervals/ 14k m
+> * https://leetcode.com/problems/container-with-most-water/ 17k m
+> * https://leetcode.com/problems/sort-colors/ 10k m
+> * https://leetcode.com/problems/insert-interval/ 5k m
+> * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 3k m
 
 ## Strings
 | Problem          | Difficulty |
@@ -128,8 +127,8 @@
 |------------------|------------|
 |[700. Search in a Binary Search Tree](../leetcode/700.search-in-a-binary-search-tree.md)|Easy|
 |[108. Convert Sorted Array to Binary Search Tree](../leetcode/108.convert-sorted-array-to-binary-search-tree.md)|Easy|
+|[450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md)|Medium|
 
-> * https://leetcode.com/problems/delete-node-in-a-bst/ 5.5k m
 > * https://leetcode.com/problems/validate-binary-search-tree/ 10k m
 > * https://leetcode.com/problems/kth-smallest-element-in-a-bst/ 7k m
 > * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ 6k e
