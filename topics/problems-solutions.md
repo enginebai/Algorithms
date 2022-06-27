@@ -98,6 +98,7 @@
 |------------------|------------|
 |[94. Binary Tree Inorder Traversal](../leetcode/94.binary-tree-inorder-traversal.md)|Easy|
 |[102. Binary Tree Level Order Traversal](../leetcode/102.binary-tree-level-order-traversal.md)|Medium|
+|[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
 |[104. Maximum Depth of Binary Tree](../leetcode/104.maximum-depth-of-binary-tree.md)|Easy|
 |[226. Invert Binary Tree](../leetcode/226.invert-binary-tree.md)|Easy|
 |[101. Symmetric Tree](../leetcode/101.symmetric-tree.md)|Easy|
@@ -119,6 +120,7 @@
 > * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5k hard
 > * https://leetcode.com/problems/binary-tree-pruning/ 2k m
+> * https://leetcode.com/problems/binary-tree-paths/ 4k e
 
 ### BST
 > * https://leetcode.com/problems/delete-node-in-a-bst/ 5.5k
