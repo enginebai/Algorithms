@@ -129,7 +129,7 @@ To find the first (last is symmetric) node in the traversal order of node `X`'s 
 ![Binary Tree Traversal Order First Last](../media/binary-tree-traversal-order-first-last.png)
 
 ```kotlin
-fun subtreeFirst(node: Node<T>): Node {
+fun subtreeFirst(node: Node<T>): Node? {
     return if (node.left != null) subtreeFirst(node.left)
     else node
 }
@@ -452,6 +452,8 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
     node1.data = temp
 }
 ```
+
+> For the full implementation that covered every test cases (and without `parent` pointer), we can see problem [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/).
 
 ### Tips for [Problem Solving](../topics/problems-solutions.md#tree)
 * [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
