@@ -127,9 +127,11 @@
 |------------------|------------|
 |[700. Search in a Binary Search Tree](../leetcode/700.search-in-a-binary-search-tree.md)|Easy|
 |[108. Convert Sorted Array to Binary Search Tree](../leetcode/108.convert-sorted-array-to-binary-search-tree.md)|Easy|
+|[701. Insert into a Binary Search Tree](../leetcode/701.insert-into-a-binary-search-tree.md)|Medium|
 |[450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md)|Medium|
 
 > * https://leetcode.com/problems/validate-binary-search-tree/ 10k m
+> * https://leetcode.com/problems/insert-into-a-binary-search-tree/ 3k m
 > * https://leetcode.com/problems/kth-smallest-element-in-a-bst/ 7k m
 > * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ 6k e
 

@@ -369,8 +369,7 @@ searchIteratively(tree.root, k)
 
 * To find the *minimum / maximum* is very straightforward, just find the left / right most node. (Simply use `subtreeFirst()` and `subtreeLast()` in binary tree)
 * To find the *successor / predecessor*, we also simply use `successor()` and `predecessor()` in binary tree)
-
-> The order of every nodes in binary search tree is as same as "inorder" traversal order.
+* The inorder traversal of BST will be in ascending order, the order of every nodes in binary search tree is as same as "inorder" traversal order.
 
 ### Insertion & Deletion
 The insertion and deletion cause the binary search tree to change to hold the binary-search-tree property continues to hold. It also take `O(h)` time.
@@ -410,6 +409,8 @@ fun BinarySearchTree.insert(k: <T>) {
 }
 ```
 
+> For full implementation, take a look at [701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/).
+
 The deletion operations considers the tree cases:
 1. Leaves (node has no child): It's easy to delete, just detach. (Like binary tree deletion)
 2. Node has one child: We splice out by modifying pointer from parent to its child.
@@ -446,6 +447,12 @@ fun BinarySearchTree.delete(node: Node<T>) {
     delete(node)
 }
 
+private fun successor(node: Node<T>): Node<T>? {
+    return if (node.right != null) substreeFirst(node.right!!)
+    // Different from binary free, we don't find the lowest ancestor.
+    else null
+}
+
 private fun swapData(node1: Node<T>, node2: Node<T>) {
     val temp = node1.data
     node1.data = node2.data
@@ -453,7 +460,7 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
 }
 ```
 
-> For the full implementation that covered every test cases (and without `parent` pointer), we can see problem [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/).
+> Above is rough pseudocode, for the full implementation that covered every test cases and null-safety (and without `parent` pointer), we can see problem [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/).
 
 ### Tips for [Problem Solving](../topics/problems-solutions.md#tree)
 * [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
