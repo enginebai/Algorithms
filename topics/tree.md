@@ -106,7 +106,7 @@ fun inorderTraversalIterative(root: Node<T>?) {
     val stack = Stack<Node>()
     stack.push(root)
     var node: Node<T>? = root
-    while (!stack.isEmpty() && node != null) {
+    while (!stack.isEmpty() || node != null) {
         // Traverse all left child
         while (node != null) {
             if (node.left != null) stack.push(node.left)
