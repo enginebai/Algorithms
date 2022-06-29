@@ -125,7 +125,7 @@
 > * https://leetcode.com/problems/binary-tree-pruning/ 2k m
 > * https://leetcode.com/problems/binary-tree-paths/ 4k e
 > * **Listing**: https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
-
+e
 ## Binary Search Tree
 | Problem          | Difficulty |
 |------------------|------------|
@@ -134,8 +134,8 @@
 |[701. Insert into a Binary Search Tree](../leetcode/701.insert-into-a-binary-search-tree.md)|Medium|
 |[450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md)|Medium|
 |[98. Validate Binary Search Tree](../leetcode/98.validate-binary-search-tree.md)|Medium|
+|[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
 
-> * https://leetcode.com/problems/kth-smallest-element-in-a-bst/ 7k m
 > * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ 6k e
 
 ## Graph

@@ -68,7 +68,9 @@ data class BinaryTree<T> (
 )
 ```
 
-**Idea**: We're going to design operations that runs in `O(h)` time for height `h`, and maintain `O(h) = O(lg n)`. For [Array](../topics/array.md) or [Linked List](../topics/linked-list.md), there are good and bad running time of different operations. Here we want a better running time for all operations.
+**Idea**: We're going to design operations that runs in `O(h)` time for height `h`, and maintain `O(h)`. For [Array](../topics/array.md) or [Linked List](../topics/linked-list.md), there are good and bad running time of different operations. Here we want a better running time for all operations.
+
+> The `h` is `lg n` for average case (balanced), but `n` for skewed tree, it doesn't guarantee to be `lg n`.
 
 ### Complete/Full Binary Tree
 ![Complete or Full binary tree](../media/binary-tree-complete-full.png)
@@ -153,7 +155,7 @@ subtreeFirst(tree.root)
 subtreeLast(tree.root)
 ``` 
 
-Both operations take `O(h) = O(lg n)` because each step of th recursion moves down the tree. (at most `h` times)
+Both operations take `O(h)` because each step of th recursion moves down the tree. (at most `h` times)
 
 #### Find Successor / Predecessor
 The *successor* (*predecessor* is symmetric) is the next (previous) node after node `X` in traversal order. There are two cases:
@@ -186,7 +188,7 @@ fun predecessor(node: Node<T>): Node? {
 }
 ```
 
-Both operations also take `O(h) = O(lg n)` since the worst case is to run the height of tree.
+Both operations also take `O(h)` since the worst case is to run the height of tree.
 
 ### Preorder Traversal
 ![Binary Tree Pre-Order Traversal](../media/binary-tree-pre-order-traversal.png)
@@ -529,6 +531,8 @@ fun bfs(root: TreeNode?) {
 ```
 
 > Some nice templates: https://leetcode.com/discuss/general-discussion/937307/iterative-recursive-dfs-bfs-tree-traversal-in-pre-post-levelorder-views
+
+* Inorder traversal (iterative) template might be helpful when solving BST problem.
 
 ## Sub-Toptics
 * [BFS/DFS](../topics/graph.md#breadth-first-search-bfs)
