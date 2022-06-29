@@ -118,14 +118,13 @@
 |[110. Balanced Binary Tree](../leetcode/110.balanced-binary-tree.md)|Easy|
 |[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
 
-### Problem List
 > * https://leetcode.com/problems/subtree-of-another-tree/ 5k e
 > * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5k hard
 > * https://leetcode.com/problems/binary-tree-pruning/ 2k m
 > * https://leetcode.com/problems/binary-tree-paths/ 4k e
 > * **Listing**: https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
-e
+
 ## Binary Search Tree
 | Problem          | Difficulty |
 |------------------|------------|
@@ -135,8 +134,7 @@ e
 |[450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md)|Medium|
 |[98. Validate Binary Search Tree](../leetcode/98.validate-binary-search-tree.md)|Medium|
 |[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
-
-> * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ 6k e
+|[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
 
 ## Graph
 > Including non-graph DFS, BFS problems

@@ -384,7 +384,7 @@ fun BinarySearchTree.insert(k: <T>) {
     //  `node` traces the path, and
     //  `nodeParent` traces the `node`'s parent.
     var node = this.root
-    var nodeParent: Node<T>? = this.root?.parent
+    var nodeParent: Node<T>? = null
     while (node != null) {
         nodeParent = node
         if (k < node.data) {
@@ -532,7 +532,7 @@ fun bfs(root: TreeNode?) {
 
 > Some nice templates: https://leetcode.com/discuss/general-discussion/937307/iterative-recursive-dfs-bfs-tree-traversal-in-pre-post-levelorder-views
 
-* Inorder traversal (iterative) template might be helpful when solving BST problem.
+* [Inorder traversal (**iterative**)](#inorder-traversal) template might be helpful when solving BST problem.
 
 ## Sub-Toptics
 * [BFS/DFS](../topics/graph.md#breadth-first-search-bfs)
