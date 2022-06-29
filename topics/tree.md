@@ -104,6 +104,7 @@ inorderTraversal(tree.root)
 fun inorderTraversalIterative(root: Node<T>?) {
     if (root == null) return
     val stack = Stack<Node>()
+    // We don't push root here!!
     var node: Node<T>? = root
     while (!stack.isEmpty() || node != null) {
         // Traverse all left child
@@ -157,7 +158,7 @@ Both operations take `O(h) = O(lg n)` because each step of th recursion moves do
 #### Find Successor / Predecessor
 The *successor* (*predecessor* is symmetric) is the next (previous) node after node `X` in traversal order. There are two cases:
 1. If the node has right child: we find the left most node of it subtree of right child, that is, `subtreeFirst(node.right)`.
-2. Otherwise, go to find the parent. We walk up tree from the parent of node `X` until reaching a node `K` where `K == K.parent.left` (left branch). (Find the lowest ancestor of node `X` such that `X` is in the ancestor's left subtree)
+2. Otherwise, go to find the parent. We walk up tree from the parent of node `X` until reaching a node `K` where `K == K.parent.left` (left branch). (*Find the lowest ancestor of node `X` such that `X` is in the ancestor's left subtree*)
 
 ![Binary Tree Traversal Successor](../media/binary-tree-traversal-successor.png)
 
@@ -408,7 +409,7 @@ fun BinarySearchTree.insert(k: <T>) {
 }
 ```
 
-> For full implementation, take a look at [701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/).
+> For full implementation, take a look at [701. Insert into a Binary Search Tree](../leetcode/701.insert-into-a-binary-search-tree.md).
 
 The deletion operations considers the tree cases:
 1. Leaves (node has no child): It's easy to delete, just detach. (Like binary tree deletion)
@@ -459,7 +460,7 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
 }
 ```
 
-> Above is rough pseudocode, for the full implementation that covered every test cases and null-safety (and without `parent` pointer), we can see problem [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/).
+> Above is rough pseudocode, for the full implementation that covered every test cases and null-safety (and without `parent` pointer), we can see problem [450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md).
 
 ### Tips for [Problem Solving](../topics/problems-solutions.md#tree)
 * [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:

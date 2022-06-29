@@ -26,6 +26,10 @@
 > * https://leetcode.com/problems/insert-interval/ 5k m
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 3k m
 
+### Two Pointers
+> * https://leetcode.com/problems/backspace-string-compare/
+> * https://leetcode.com/problems/valid-palindrome-ii/
+
 ## Strings
 | Problem          | Difficulty |
 |------------------|------------|
@@ -239,13 +243,12 @@
 > * https://leetcode.com/problems/search-a-2d-matrix/ 8k
 > * https://leetcode.com/problems/task-scheduler/ 6k
 
-## Two Pointers
 ### Reading List:
 > * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
 > * https://labuladong.gitee.io/algo/1/9/ (For Linked List, might skip)
 > * https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers
 
-## Sliding Windows
+## Sliding Window
 ### Reading List: 
 > * https://github.com/labuladong/fucking-algorithm/blob/master/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E7%B3%BB%E5%88%97/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%8A%80%E5%B7%A7.md
 > * https://labuladong.gitee.io/algo/1/11/ [Same](https://leetcode.cn/problems/find-all-anagrams-in-a-string/solution/hua-dong-chuang-kou-tong-yong-si-xiang-jie-jue-zi-/)
@@ -261,7 +264,7 @@
 > https://medium.com/outco/how-to-solve-sliding-window-problems-28d67601a66
 
 ### Problems List:
-> * [Sliding Windows Problem List](https://leetcode.com/list/x17aw7vm/) (Already listed below)
+> * [Sliding Window Problem List](https://leetcode.com/list/x17aw7vm/) (Already listed below)
 > * https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3
 > * https://leetcode.com/problems/minimum-size-subarray-sum/ 7k
 > * https://leetcode.com/problems/longest-repeating-character-replacement/ 4k
