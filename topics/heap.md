@@ -7,15 +7,16 @@ A *(binary) heap* a is specialized [tree](../topics/tree.md)-based data structur
 ![Binary Heap](../media/binary-heap.png)
 
 We use array to represent the binary heap, so that
-* `A[1]` is the root, it represents the max or min value.
+* `A[0]` is the root, it represents the max or min value.
 
 And given `i` index of node:
-* `floor(i / 2)` is the parent index. (`floor((i - 1) / 2` for 0-based index)
-* `i * 2` is the left index. (`2 * i + 1`)
-* `i * 2 + 1` is right index. (`2 * i + 2`)
+* `floor((i - 1) / 2` is the parent index. (`floor(i / 2)` for 1-based index)
+* `i * 2 + 1` is the left index. (`2 * i`)
+* `i * 2 + 2` is right index. (`2 * i + 1`)
 * `heapSize` return the actual used size of heap in the array, which `heapSize <= A.size`
 
-> The index implicitly plays the role of the pointers.
+> * We might use 1-based index for convenient.
+> * The index implicitly plays the role of the pointers.
 
 ```kotlin
 // We also can use this as min heap.
@@ -23,34 +24,21 @@ class MaxHeap<T> {
     private var capacity = 10
     private var heapSize = 0
     private var items = Array<T>(capacity).apply {
-        // We don't use 0-th item to better track the indices of the binary tree.
-        this[0] = Int.MAX
+        // We add this if we use 1-based index
+        // this[0] = Int.MAX
     }
 
-    private fun leftIndex(parentIndex: Int) = 2 * parentIndex
-    private fun rightIndex(parentIndex: Int) = 2 * parentIndex + 1
-    private fun parentIndex(childIndex: Int) = floor(childrenIndex / 2)
+    private fun leftIndex(parentIndex: Int) = 2 * parentIndex + 1
+    private fun rightIndex(parentIndex: Int) = 2 * parentIndex + 2
+    private fun parentIndex(childIndex: Int) = (childrenIndex - 1) / 2
 
     private fun hasLeft(index: Int) = leftIndex(index) < heapSize
     private fun hasRight(index: Int) = rightIndex(index) < heapSize
-    private fun hasParent(index: Int) = parentIndex(index) > 0
+    private fun hasParent(index: Int) = parentIndex(index) >= 0
 
     private fun leftChild(index: Int): T? = items[leftIndex(index)]
     private fun rightChild(index: Int): T? = items[rightIndex(index)]
     private fun parent(index: Int): T? = items[parentIndex(index)]
-
-    private fun swap(first: Int, second: Int) {
-        val temp = this[first]
-        this[first] = this[second]
-        this[secon] = temp
-    }
-
-    private fun ensureExtraCapacity() {
-        if (heapSize == capacity) {
-            capacity *= 2
-            items = items.copyOf(capacity)
-        }
-    }
 }
 ```
 
@@ -65,9 +53,9 @@ When we modify the element of the heap, for example, inserting a new value, migh
 
 ```kotlin
 // We "float down" A[i] so that the subtree rooted at index i becomes a max heap.
-fun heapifyDown(A, i: Int): Int {
-    leftIndex = leftIndex(i)
-    rightIndex = rightIndex(i)
+fun heapifyDown(A, i: Int) {
+    val leftIndex = leftIndex(i)
+    val rightIndex = rightIndex(i)
     var largestIndex = i
 
     // Compare A[i] with the left and right child
@@ -88,9 +76,15 @@ fun heapifyDown(A, i: Int): Int {
 // We compare with it parent and shift up
 fun heapifyUp(A, i: Int) { 
     while (hasParent(i) && A[parentIndex(i)] < A[i]) {
-        swipe(parentIndex(i), i)
+        swap(parentIndex(i), i)
         i = parentIndex(i)
     }
+}
+
+private fun swap(first: Int, second: Int) {
+    val temp = this[first]
+    this[first] = this[second]
+    this[secon] = temp
 }
 ```
 
@@ -154,6 +148,13 @@ fun increasePriority(A, i: Int, newPriority: Int) {
     A[i] = newPriority
     heapifyUp(A, i)
 }
+
+private fun ensureExtraCapacity() {
+    if (heapSize == capacity) {
+        capacity *= 2
+        items = items.copyOf(capacity)
+    }
+}
 ```
 
 All operations takes `O(lg n)` except for `peek()`, which takes `O(1)` only.
@@ -188,19 +189,6 @@ fun heapSort(A) {
 ![Heap Sort](../media/heap-sort.png)
 
 * **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
-
-## Problems
-> * https://leetcode.com/problems/kth-largest-element-in-an-array/ 10k m
-> * https://leetcode.com/problems/top-k-frequent-elements/ 9k m
-> * https://leetcode.com/problems/top-k-frequent-words/ 4k m
-> * https://leetcode.com/problems/find-median-from-data-stream/ 7k h
-> * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
-> * https://leetcode.com/problems/k-closest-points-to-origin/ 5k m
-> * https://leetcode.com/problems/ugly-number-ii/ 4k m
-> * https://leetcode.com/problems/reorganize-string/ 4k m
-> * https://leetcode.com/problems/sort-characters-by-frequency/ 4k m
-> * https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ 3k m
-> * https://leetcode.com/problems/last-stone-weight/ 3k e
 
 ## Resources
 - [X] CLRS

@@ -136,6 +136,22 @@
 |[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
 |[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
 
+## Heap
+| Problem          | Difficulty |
+|------------------|------------|
+|[215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md)|Medium|
+
+> * https://leetcode.com/problems/top-k-frequent-elements/ 9k m
+> * https://leetcode.com/problems/top-k-frequent-words/ 4k m
+> * https://leetcode.com/problems/find-median-from-data-stream/ 7k h
+> * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
+> * https://leetcode.com/problems/k-closest-points-to-origin/ 5k m
+> * https://leetcode.com/problems/ugly-number-ii/ 4k m
+> * https://leetcode.com/problems/reorganize-string/ 4k m
+> * https://leetcode.com/problems/sort-characters-by-frequency/ 4k m
+> * https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ 3k m
+> * https://leetcode.com/problems/last-stone-weight/ 3k e
+
 ## Graph
 > Including non-graph DFS, BFS problems
 
