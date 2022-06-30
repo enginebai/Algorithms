@@ -256,6 +256,7 @@ It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to 
     * Disjoint graphs
     * Graph with cycle (might not be able to resolve recursively)
 
+> Some nice templates + sample problems: https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions/
 
 ## Connected Components
 The *connected component* is a set of nodes with paths from any nodes of the component to any other.

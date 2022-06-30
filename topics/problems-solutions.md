@@ -18,14 +18,17 @@
 |[136. Single Number](../leetcode/136.single-number.md)|Easy|
 |[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
 
-> Unfinished Problems:
-> * https://leetcode.com/problems/find-all-duplicates-in-an-array/
-> * https://leetcode.com/problems/merge-intervals/ 14k
-> * https://leetcode.com/problems/container-with-most-water/
-> * https://leetcode.com/problems/sort-colors/ 10k
-> * https://leetcode.com/problems/insert-interval/
-> * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
-> * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+> * https://leetcode.com/problems/spiral-matrix/ 7k m
+> * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
+> * https://leetcode.com/problems/merge-intervals/ 14k m
+> * https://leetcode.com/problems/container-with-most-water/ 17k m
+> * https://leetcode.com/problems/sort-colors/ 10k m
+> * https://leetcode.com/problems/insert-interval/ 5k m
+> * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 3k m
+
+### Two Pointers
+> * https://leetcode.com/problems/backspace-string-compare/
+> * https://leetcode.com/problems/valid-palindrome-ii/
 
 ## Strings
 | Problem          | Difficulty |
@@ -96,65 +99,63 @@
 ## Tree
 | Problem          | Difficulty |
 |------------------|------------|
+|[94. Binary Tree Inorder Traversal](../leetcode/94.binary-tree-inorder-traversal.md)|Easy|
+|[102. Binary Tree Level Order Traversal](../leetcode/102.binary-tree-level-order-traversal.md)|Medium|
+|[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
+|[104. Maximum Depth of Binary Tree](../leetcode/104.maximum-depth-of-binary-tree.md)|Easy|
+|[226. Invert Binary Tree](../leetcode/226.invert-binary-tree.md)|Easy|
+|[101. Symmetric Tree](../leetcode/101.symmetric-tree.md)|Easy|
+|[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
+|[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
+|[236. Lowest Common Ancestor of a Binary Tree](../leetcode/236.lowest-common-ancestor-of-a-binary-tree.md)|Medium|
+|[543. Diameter of Binary Tree](../leetcode/543.diameter-of-binary-tree.md)|Easy|
+|[124. Binary Tree Maximum Path Sum](../leetcode/124.binary-tree-maximum-path-sum.md)|Hard|
+|[114. Flatten Binary Tree to Linked List](../leetcode/114.flatten-binary-tree-to-linked-list.md)|Medium|
+|[116. Populating Next Right Pointers in Each Node](../leetcode/116.populating-next-right-pointers-in-each-node.md)|Medium|
+|[199. Binary Tree Right Side View](../leetcode/199.binary-tree-right-side-view.md)|Medium|
+|[100. Same Tree](../leetcode/100.same-tree.md)|Easy|
+|[863. All Nodes Distance K in Binary Tree](../leetcode/863.all-nodes-distance-k-in-binary-tree.md)|Medium|
+|[110. Balanced Binary Tree](../leetcode/110.balanced-binary-tree.md)|Easy|
+|[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
 
-### Problem List
-> * https://leetcode.com/problems/binary-tree-inorder-traversal/ 8k
-> * https://leetcode.com/problems/binary-tree-level-order-traversal/ 8.5k
-> * https://leetcode.com/problems/maximum-depth-of-binary-tree/ 7k
-> * https://leetcode.com/problems/invert-binary-tree/ 8.6k
-> * https://leetcode.com/problems/symmetric-tree/ 9.7k
-> * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ 8.7k
-> * https://leetcode.com/problems/path-sum/ 6k
-> * https://leetcode.com/problems/binary-tree-maximum-path-sum/ 9.8k hard
-> * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/ 10k
-> * https://leetcode.com/problems/diameter-of-binary-tree/ 8k
-> * https://leetcode.com/problems/flatten-binary-tree-to-linked-list/ 7.3k
-> * https://leetcode.com/problems/populating-next-right-pointers-in-each-node/ 6.7k
-> * https://leetcode.com/problems/binary-tree-right-side-view/ 6.7k
-> * https://leetcode.com/problems/subtree-of-another-tree/ 5k
-> * https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ 6k hard
-> * https://leetcode.com/problems/balanced-binary-tree/ 6k
-> * https://leetcode.com/problems/house-robber-iii/ 6k
-> * https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/ 6k
+> * https://leetcode.com/problems/subtree-of-another-tree/ 5k e
+> * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k m
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5k hard
+> * https://leetcode.com/problems/binary-tree-pruning/ 2k m
+> * https://leetcode.com/problems/binary-tree-paths/ 4k e
+> * **Listing**: https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
 
-> * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k
-> * https://leetcode.com/problems/same-tree/ 6k
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ hard 5k
-
-### BST
-> * https://leetcode.com/problems/delete-node-in-a-bst/ 5.5k
-> * https://leetcode.com/problems/search-in-a-binary-search-tree/
-> * https://leetcode.com/problems/validate-binary-search-tree/ 10k
-> * https://leetcode.com/problems/kth-smallest-element-in-a-bst/
-> * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ 6.5k
-
-### Nice Posts
-> * https://leetcode.com/discuss/general-discussion/937307/iterative-recursive-dfs-bfs-tree-traversal-in-pre-post-levelorder-views
-> * https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
+## Binary Search Tree
+| Problem          | Difficulty |
+|------------------|------------|
+|[700. Search in a Binary Search Tree](../leetcode/700.search-in-a-binary-search-tree.md)|Easy|
+|[108. Convert Sorted Array to Binary Search Tree](../leetcode/108.convert-sorted-array-to-binary-search-tree.md)|Easy|
+|[701. Insert into a Binary Search Tree](../leetcode/701.insert-into-a-binary-search-tree.md)|Medium|
+|[450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md)|Medium|
+|[98. Validate Binary Search Tree](../leetcode/98.validate-binary-search-tree.md)|Medium|
+|[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
+|[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
 
 ## Graph
 > Including non-graph DFS, BFS problems
 
-> * https://leetcode.com/problems/number-of-islands/ 14k
-> * https://leetcode.com/problems/01-matrix/ 5k
-> * https://leetcode.com/problems/network-delay-time/ 5k
-> * https://leetcode.com/problems/flood-fill/ 4k
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k
-> * https://leetcode.com/problems/rotting-oranges/ 7k
-> * https://leetcode.com/problems/minimum-height-trees/ 5k
-> * https://leetcode.com/problems/surrounded-regions/ 5k
-> * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k
-> * https://leetcode.com/problems/is-graph-bipartite/ 5k
-> * https://leetcode.com/problems/evaluate-division/ 5k
-> * https://leetcode.com/problems/word-ladder/ 8k
+> * https://leetcode.com/problems/number-of-islands/ 14k m
+> * https://leetcode.com/problems/01-matrix/ 5k m
+> * https://leetcode.com/problems/network-delay-time/ 5k m
+> * https://leetcode.com/problems/flood-fill/ 4k e
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
+> * https://leetcode.com/problems/rotting-oranges/ 7k m
+> * https://leetcode.com/problems/minimum-height-trees/ 5k m
+> * https://leetcode.com/problems/surrounded-regions/ 5k m
+> * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k m
+> * https://leetcode.com/problems/is-graph-bipartite/ 5k m
+> * https://leetcode.com/problems/evaluate-division/ 5k m
+> * https://leetcode.com/problems/word-ladder/ 8k h
 
 > Topological Sort:
-> * https://leetcode.com/problems/course-schedule/ 9.6k
-> * https://leetcode.com/problems/course-schedule-ii/ 7k
-> * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k
-
-### Nice Posts
-> * https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions/
+> * https://leetcode.com/problems/course-schedule/ 9.6k m
+> * https://leetcode.com/problems/course-schedule-ii/ 7k m
+> * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
 
 ## Dynamic Programming
 ### Reading List
@@ -176,6 +177,7 @@
 > * https://leetcode.com/problems/coin-change-2/ 5k
 > * https://leetcode.com/problems/house-robber/ 12k
 > * https://leetcode.com/problems/house-robber-ii/ 6k
+> * https://leetcode.com/problems/house-robber-iii/ 6k m
 > * https://leetcode.com/problems/longest-increasing-subsequence/ 12k
 > * https://leetcode.com/problems/longest-common-subsequence/ 7k
 > * https://leetcode.com/problems/longest-valid-parentheses/ 
@@ -239,17 +241,16 @@
 > * https://leetcode.com/problems/search-a-2d-matrix/ 8k
 > * https://leetcode.com/problems/task-scheduler/ 6k
 
-## Two Pointers
 ### Reading List:
 > * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
 > * https://labuladong.gitee.io/algo/1/9/ (For Linked List, might skip)
 > * https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers
 
-## Sliding Windows
+## Sliding Window
 ### Reading List: 
 > * https://github.com/labuladong/fucking-algorithm/blob/master/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E7%B3%BB%E5%88%97/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%8A%80%E5%B7%A7.md
 > * https://labuladong.gitee.io/algo/1/11/ [Same](https://leetcode.cn/problems/find-all-anagrams-in-a-string/solution/hua-dong-chuang-kou-tong-yong-si-xiang-jie-jue-zi-/)
->   * https://leetcode.com/problems/longest-substring-without-repeating-characters/ 25k
+>   * https://leetcode.com/problems/longest-substring-without-repeating-characters/ **25k**
 >   * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 7k
 >   * https://leetcode.com/problems/permutation-in-string/ 6k
 >   * https://leetcode.com/problems/minimum-window-substring/ 10k hard
@@ -261,7 +262,7 @@
 > https://medium.com/outco/how-to-solve-sliding-window-problems-28d67601a66
 
 ### Problems List:
-> * [Sliding Windows Problem List](https://leetcode.com/list/x17aw7vm/) (Already listed below)
+> * [Sliding Window Problem List](https://leetcode.com/list/x17aw7vm/) (Already listed below)
 > * https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3
 > * https://leetcode.com/problems/minimum-size-subarray-sum/ 7k
 > * https://leetcode.com/problems/longest-repeating-character-replacement/ 4k

@@ -70,13 +70,16 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 * Think about the case that the array with the duplicate or repeated element.
 * Is the array sorted (partially)? Yes, try *binary search*. No, try to sort first?
 * *Two pointers* or *sliding window* techniques. 
-
-> Understand what the problems are suitable to use `two pointer` and `sliding window` approaches to solve.
-
 * Swap or ignore element (only take the element met the requirement)
 * We can iterate array from left to right, also from *right to left*.
 * `O(n)` time complexity **doesn't** mean you can only iterate the array **once**. Iterate the array several times might help solve the problem, for example, pre-computation (iterate array at least one time first) using hashing might be useful.
 * For in-place operation or `O(1)` space complexity, use array itself as a hash table. For example, the value of array ranges from 1 to `n`, where `n` is the size of array, then we can use the *index* to represent.
+
+## Two Pointers Approach
+* Fast/slow (read/write) pointers: [283. Move Zeroes](../leetcode/283.move-zeros.md)
+* Left/right pointers: [977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)
+
+## Sliding Window Approach
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)

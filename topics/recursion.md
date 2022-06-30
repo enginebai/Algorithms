@@ -69,10 +69,6 @@ We have to allocate stack space to the recursive function calls which depends on
 ### Relation with [Dynamic Programming](../topics/dynamic-programming.md) (DP)
 Recursive algorithm involves a function calling itself with smaller instance, similarly, DP breaks down problems into subproblems to solve a larger problem, DP often implemented recursively.
 
-## Problems & Solutions
-| Problem         | Solution | Difficulty |
-|------------------|----------|------------|
-
 ### Tips for Problem Solving
 * Make sure to define **all** base cases to cover.
 * Recursion is useful for *permutation*, it generates all combinations and tree-based problems.
