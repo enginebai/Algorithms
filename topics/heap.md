@@ -191,6 +191,7 @@ fun heapSort(A) {
 * **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
 
 ### Tips for [Problem Solving](../topics/problems-solutions.md#heap)
+* Good at find the top K of xxx or median.
 
 * Heap in Kotlin:
 ```kotlin
