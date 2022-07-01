@@ -190,6 +190,35 @@ fun heapSort(A) {
 
 * **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
 
+### Tips for [Problem Solving](../topics/problems-solutions.md#heap)
+
+* Heap in Kotlin:
+```kotlin
+val heap = PriorityQueue<Int>(Comparator<Int> { n1, n2 -> n2 - n1 })
+
+// or 
+
+val heap = PriorityQueue<Int>() { n1, n2 ->
+    // Descending
+    when {
+        i > j -> -1
+        i < j -> 1
+        else -> 0
+    }
+})
+```
+
+* Sort map by values:
+
+```kotlin
+hashMap
+    .toList() // To List<Pair<L, R>>
+    .sortedByDescending { (key, value) -> 
+        value 
+    }
+    .toMap() // Convert back to map
+```
+
 ## Resources
 - [X] CLRS
 - [X] [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-8-binary-heaps/)

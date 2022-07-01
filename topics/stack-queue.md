@@ -255,7 +255,7 @@ class DynamicArrayQueue<T>: Queue<T> {
 > Verify if it's still true.
 There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `head` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce [*Circular Queue*](../leetcode/622.design-circular-queue.md).
 
-### Tips for Problem Solving
+### Tips for [Problem Solving](../topics/problems-solutions.md#stack--queue)
 * For stack question, we can push the index/position or value, remember that we still can get the original value from `array[stack.peek()]` when pushing the index.
 * *Monotonic stack*:
 
