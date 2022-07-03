@@ -255,6 +255,7 @@
 > * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ 11k
 > * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 7k
 > * https://leetcode.com/problems/search-a-2d-matrix/ 8k
+> * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
 > * https://leetcode.com/problems/task-scheduler/ 6k
 
 ### Reading List:
