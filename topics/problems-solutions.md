@@ -141,8 +141,8 @@
 |------------------|------------|
 |[215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md)|Medium|
 |[347. Top K Frequent Elements](../leetcode/347.top-k-frequent-elements.md)|Medium|
+|[692. Top K Frequent Words](../leetcode/692.top-k-frequent-words.md)|Medium|
 
-> * https://leetcode.com/problems/top-k-frequent-words/ 4k m
 > * https://leetcode.com/problems/find-median-from-data-stream/ 7k h
 > * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
 > * https://leetcode.com/problems/k-closest-points-to-origin/ 5k m

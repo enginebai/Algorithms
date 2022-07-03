@@ -98,7 +98,7 @@ interface PriorityQueue<T> {
     fun build(A)
     fun peek(A): T
     fun poll(A): T?
-    fun insert(A, item: T)
+    fun add(A, item: T)
     fun increasePriority(A, i: Int, newPriority: Int)
 }
 ```
@@ -135,7 +135,7 @@ fun poll(A): T? {
     return max
 }
 
-fun insert(A, item: T) {
+fun add(A, item: T) {
     ensureExtraCapacity()
     A[heapSize] = item
     heapSize++
@@ -192,33 +192,15 @@ fun heapSort(A) {
 
 ### Tips for [Problem Solving](../topics/problems-solutions.md#heap)
 * Good at find the top K of xxx or median.
-
 * Heap in Kotlin:
 ```kotlin
+// Max Heap
 val heap = PriorityQueue<Int>(Comparator<Int> { n1, n2 -> n2 - n1 })
-
-// or 
-
-val heap = PriorityQueue<Int>() { n1, n2 ->
-    // Descending
-    when {
-        i > j -> -1
-        i < j -> 1
-        else -> 0
-    }
-})
 ```
-
-* Sort map by values:
-
-```kotlin
-hashMap
-    .toList() // To List<Pair<L, R>>
-    .sortedByDescending { (key, value) -> 
-        value 
-    }
-    .toMap() // Convert back to map
-```
+* Sorting on array / collections: See [My Kotlin Note](https://docs.google.com/document/d/1JxZ40YPi_R5unTUeCbk2JErvJVHMWbev50IJfvlE2Ls/edit#heading=h.cgfoyq7qxhnz)
+* For top k problems, you can use:
+    * Build max heap, and pop `k - 1` times, and the peek will be the top K result.
+    * Using min heap, we add item one by one, and pop (the min value) if heap size > `k` as adding item. The remaining heap will be top K results **but in reversed order**, make sure to reverse the result.
 
 ## Resources
 - [X] CLRS
