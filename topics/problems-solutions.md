@@ -144,10 +144,9 @@
 |[692. Top K Frequent Words](../leetcode/692.top-k-frequent-words.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
 |[973. K Closest Points to Origin](../leetcode/973.k-closest-points-to-origin.md)|Medium|
+|[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium|
 
 > * https://leetcode.com/problems/find-median-from-data-stream/ 7k h
-> * https://leetcode.com/problems/ugly-number-ii/ 4k m
-> * https://leetcode.com/problems/reorganize-string/ 4k m
 > * https://leetcode.com/problems/sort-characters-by-frequency/ 4k m
 > * https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ 3k m
 > * https://leetcode.com/problems/last-stone-weight/ 3k e
@@ -208,6 +207,7 @@
 > * https://leetcode.com/problems/perfect-squares/ 7k
 > * https://leetcode.com/problems/maximal-rectangle/ 6k
 > * https://leetcode.com/problems/edit-distance/ 8k
+> * https://leetcode.com/problems/ugly-number-ii/ 4k m
 
 ## Backtracking
 ### Reading List
