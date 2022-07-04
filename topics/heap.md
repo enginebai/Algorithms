@@ -213,3 +213,106 @@ val heap = PriorityQueue<Int>(Comparator<Int> { n1, n2 -> n2 - n1 })
 - [X] [Software Engineer Interview Preparation // Introductory notes
     - [X] [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#heap)
     - [X] [Algorithm](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#heapsort)
+
+## Full Code
+```kotlin
+
+interface MyPriorityQueue {
+    fun buildMaxHeap(array: IntArray)
+    fun peek(): Int?
+    fun poll(): Int?
+    fun insert(item: Int)
+    fun increasePriority(index: Int, priority: Int)
+}
+
+class MyPriorityQueueImpl : MyPriorityQueue {
+    private var capacity = 10
+    private var heapSize = 0
+    private var A = IntArray(capacity) { Int.MIN_VALUE }
+
+    override fun buildMaxHeap(array: IntArray) {
+        heapSize = array.size
+        ensureCapacity(array.size)
+        for (i in 0 until array.size) {
+            A[i] = array[i]
+        }
+        for (i in array.size / 2 downTo 0) {
+            heapifyDown(i)
+        }
+    }
+
+    override fun peek(): Int? = A[0]
+
+    override fun poll(): Int? {
+        val peek = peek()
+        A[0] = A[heapSize - 1]
+        heapSize--
+        heapifyDown(0)
+        return peek
+    }
+
+    override fun insert(item: Int) {
+        ensureCapacity()
+        A[heapSize] = item
+        heapSize++
+        heapifyUp(heapSize - 1)
+    }
+
+    override fun increasePriority(index: Int, priority: Int) {
+        if (A[index] < priority) {
+            A[index] = priority
+            heapifyUp(index)
+        }
+    }
+
+    private fun leftIndex(index: Int) = index * 2 + 1
+    private fun rightIndex(index: Int) = index * 2 + 2
+    private fun parentIndex(index: Int) = (index - 1) / 2
+
+    private fun hasLeft(index: Int) = leftIndex(index) in (0 until heapSize)
+    private fun hasRight(index: Int) = rightIndex(index) in (0 until heapSize)
+    private fun hasParent(index: Int) = parentIndex(index) in (0 until heapSize)
+
+    private fun leftChild(index: Int) = if (hasLeft(index)) A[leftIndex(index)] else null
+    private fun rightChild(index: Int) = if (hasRight(index)) A[rightIndex(index)] else null
+    private fun parent(index: Int) = if (hasParent(index)) A[parentIndex(index)] else null
+
+    private fun heapifyDown(index: Int) {
+        val leftIndex = index * 2 + 1
+        val rightIndex = index * 2 + 2
+        var maxIndex = index
+        if (hasLeft(index) && A[leftIndex] > A[maxIndex]) {
+            maxIndex = leftIndex
+        }
+        if (hasLeft(index) && A[rightIndex] > A[maxIndex]) {
+            maxIndex = rightIndex
+        }
+        if (maxIndex != index) {
+            swap(maxIndex, index)
+            heapifyDown(maxIndex)
+        }
+    }
+
+    private fun heapifyUp(index: Int) {
+        var i = index
+        while (hasParent(i) && A[parentIndex(i)] < A[i]) {
+            swap(parentIndex(i), i)
+            i = parentIndex(i)
+        }
+    }
+
+    private fun swap(i: Int, j: Int) {
+        val temp = A[i]
+        A[i] = A[j]
+        A[j] = temp
+    }
+
+    private fun ensureCapacity(newCapacity: Int? = null) {
+        if (heapSize >= capacity) {
+            if (newCapacity != null) capacity = newCapacity
+            else capacity *= 2
+            A = Arrays.copyOf(A, capacity)
+        }
+    }
+}
+```
