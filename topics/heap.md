@@ -191,7 +191,8 @@ fun heapSort(A) {
 * **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
 
 ### Tips for [Problem Solving](../topics/problems-solutions.md#heap)
-* Good at find the top K of xxx or median. We also can use **Quickselect** to find *k*th smallest item in an unordered list. (See problem [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/))
+* Good at find the top K of xxx or median. We also can use **Quickselect** to find *k*th smallest item in an unordered list. (See problem [215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md))
+* For frequency sorting, we can use *bucket sort*, see problem [347. Top K Frequent Elements](../leetcode/347.top-k-frequent-elements.md)
 * Heap in Kotlin:
 ```kotlin
 // Max Heap

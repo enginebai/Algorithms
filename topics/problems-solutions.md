@@ -146,9 +146,9 @@
 |[973. K Closest Points to Origin](../leetcode/973.k-closest-points-to-origin.md)|Medium|
 |[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium|
 |[451. Sort Characters By Frequency](../leetcode/451.sort-charaters-by-frequency.md)|Medium|
+|[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)|Medium|
 
 > * https://leetcode.com/problems/find-median-from-data-stream/ 7k h
-> * https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ 3k m
 > * https://leetcode.com/problems/last-stone-weight/ 3k e
 
 ## Graph
