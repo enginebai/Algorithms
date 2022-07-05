@@ -60,7 +60,7 @@ private fun merge(A, p, q, r) {
 
 fun mergeSort(A, start, end) {
     if (start < end) {
-        val half = (start + end).div(2).floor()
+        val half = start + (end - start) / 2
         mergeSort(A, start, half)
         mergeSort(A, half + 1, end)
         // merge two sorted array

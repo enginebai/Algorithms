@@ -1,22 +1,22 @@
 # Problems & Solutions
 
-## Arrays
+## [Arrays](../problems/problems-arrays.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
-|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
-|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
+|[283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
 |[15. 3Sum](../leetcode/15.3sum.md)|Medium|
-|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Easy|
+|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
+|[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
+|[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
+|[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
 |[59. Spiral Matrix II](../leetcode/59.spiral-matrix-ii.md)|Medium|
+|[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
+|[136. Single Number](../leetcode/136.single-number.md)|Easy|
+|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Easy|
 |[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
-|[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
-|[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
-|[283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
-|[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
-|[136. Single Number](../leetcode/136.single-number.md)|Easy|
-|[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
+|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
@@ -136,6 +136,21 @@
 |[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
 |[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
 
+## Heap
+| Problem          | Difficulty |
+|------------------|------------|
+|[215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md)|Medium|
+|[347. Top K Frequent Elements](../leetcode/347.top-k-frequent-elements.md)|Medium|
+|[692. Top K Frequent Words](../leetcode/692.top-k-frequent-words.md)|Medium|
+|[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
+|[973. K Closest Points to Origin](../leetcode/973.k-closest-points-to-origin.md)|Medium|
+|[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium|
+|[451. Sort Characters By Frequency](../leetcode/451.sort-charaters-by-frequency.md)|Medium|
+|[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)|Medium|
+|[295. Find Median from Data Stream](../leetcode/295.find-median-from-data-stream.md)|Hard|
+
+> * https://leetcode.com/problems/last-stone-weight/ 3k e
+
 ## Graph
 > Including non-graph DFS, BFS problems
 
@@ -192,6 +207,7 @@
 > * https://leetcode.com/problems/perfect-squares/ 7k
 > * https://leetcode.com/problems/maximal-rectangle/ 6k
 > * https://leetcode.com/problems/edit-distance/ 8k
+> * https://leetcode.com/problems/ugly-number-ii/ 4k m
 
 ## Backtracking
 ### Reading List
@@ -239,6 +255,7 @@
 > * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ 11k
 > * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 7k
 > * https://leetcode.com/problems/search-a-2d-matrix/ 8k
+> * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
 > * https://leetcode.com/problems/task-scheduler/ 6k
 
 ### Reading List:

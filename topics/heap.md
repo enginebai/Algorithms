@@ -7,15 +7,16 @@ A *(binary) heap* a is specialized [tree](../topics/tree.md)-based data structur
 ![Binary Heap](../media/binary-heap.png)
 
 We use array to represent the binary heap, so that
-* `A[1]` is the root, it represents the max or min value.
+* `A[0]` is the root, it represents the max or min value.
 
 And given `i` index of node:
-* `floor(i / 2)` is the parent index. (`floor((i - 1) / 2` for 0-based index)
-* `i * 2` is the left index. (`2 * i + 1`)
-* `i * 2 + 1` is right index. (`2 * i + 2`)
+* `floor((i - 1) / 2` is the parent index. (`floor(i / 2)` for 1-based index)
+* `i * 2 + 1` is the left index. (`2 * i`)
+* `i * 2 + 2` is right index. (`2 * i + 1`)
 * `heapSize` return the actual used size of heap in the array, which `heapSize <= A.size`
 
-> The index implicitly plays the role of the pointers.
+> * We might use 1-based index for convenient.
+> * The index implicitly plays the role of the pointers.
 
 ```kotlin
 // We also can use this as min heap.
@@ -23,34 +24,21 @@ class MaxHeap<T> {
     private var capacity = 10
     private var heapSize = 0
     private var items = Array<T>(capacity).apply {
-        // We don't use 0-th item to better track the indices of the binary tree.
-        this[0] = Int.MAX
+        // We add this if we use 1-based index
+        // this[0] = Int.MAX
     }
 
-    private fun leftIndex(parentIndex: Int) = 2 * parentIndex
-    private fun rightIndex(parentIndex: Int) = 2 * parentIndex + 1
-    private fun parentIndex(childIndex: Int) = floor(childrenIndex / 2)
+    private fun leftIndex(parentIndex: Int) = 2 * parentIndex + 1
+    private fun rightIndex(parentIndex: Int) = 2 * parentIndex + 2
+    private fun parentIndex(childIndex: Int) = (childrenIndex - 1) / 2
 
     private fun hasLeft(index: Int) = leftIndex(index) < heapSize
     private fun hasRight(index: Int) = rightIndex(index) < heapSize
-    private fun hasParent(index: Int) = parentIndex(index) > 0
+    private fun hasParent(index: Int) = parentIndex(index) >= 0
 
     private fun leftChild(index: Int): T? = items[leftIndex(index)]
     private fun rightChild(index: Int): T? = items[rightIndex(index)]
     private fun parent(index: Int): T? = items[parentIndex(index)]
-
-    private fun swap(first: Int, second: Int) {
-        val temp = this[first]
-        this[first] = this[second]
-        this[secon] = temp
-    }
-
-    private fun ensureExtraCapacity() {
-        if (heapSize == capacity) {
-            capacity *= 2
-            items = items.copyOf(capacity)
-        }
-    }
 }
 ```
 
@@ -65,9 +53,9 @@ When we modify the element of the heap, for example, inserting a new value, migh
 
 ```kotlin
 // We "float down" A[i] so that the subtree rooted at index i becomes a max heap.
-fun heapifyDown(A, i: Int): Int {
-    leftIndex = leftIndex(i)
-    rightIndex = rightIndex(i)
+fun heapifyDown(A, i: Int) {
+    val leftIndex = leftIndex(i)
+    val rightIndex = rightIndex(i)
     var largestIndex = i
 
     // Compare A[i] with the left and right child
@@ -88,9 +76,15 @@ fun heapifyDown(A, i: Int): Int {
 // We compare with it parent and shift up
 fun heapifyUp(A, i: Int) { 
     while (hasParent(i) && A[parentIndex(i)] < A[i]) {
-        swipe(parentIndex(i), i)
+        swap(parentIndex(i), i)
         i = parentIndex(i)
     }
+}
+
+private fun swap(first: Int, second: Int) {
+    val temp = this[first]
+    this[first] = this[second]
+    this[secon] = temp
 }
 ```
 
@@ -104,7 +98,7 @@ interface PriorityQueue<T> {
     fun build(A)
     fun peek(A): T
     fun poll(A): T?
-    fun insert(A, item: T)
+    fun add(A, item: T)
     fun increasePriority(A, i: Int, newPriority: Int)
 }
 ```
@@ -141,7 +135,7 @@ fun poll(A): T? {
     return max
 }
 
-fun insert(A, item: T) {
+fun add(A, item: T) {
     ensureExtraCapacity()
     A[heapSize] = item
     heapSize++
@@ -153,6 +147,13 @@ fun increasePriority(A, i: Int, newPriority: Int) {
 
     A[i] = newPriority
     heapifyUp(A, i)
+}
+
+private fun ensureExtraCapacity() {
+    if (heapSize == capacity) {
+        capacity *= 2
+        items = items.copyOf(capacity)
+    }
 }
 ```
 
@@ -189,18 +190,27 @@ fun heapSort(A) {
 
 * **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
 
-## Problems
-> * https://leetcode.com/problems/kth-largest-element-in-an-array/ 10k m
-> * https://leetcode.com/problems/top-k-frequent-elements/ 9k m
-> * https://leetcode.com/problems/top-k-frequent-words/ 4k m
-> * https://leetcode.com/problems/find-median-from-data-stream/ 7k h
-> * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
-> * https://leetcode.com/problems/k-closest-points-to-origin/ 5k m
-> * https://leetcode.com/problems/ugly-number-ii/ 4k m
-> * https://leetcode.com/problems/reorganize-string/ 4k m
-> * https://leetcode.com/problems/sort-characters-by-frequency/ 4k m
-> * https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ 3k m
-> * https://leetcode.com/problems/last-stone-weight/ 3k e
+### Tips for [Problem Solving](../topics/problems-solutions.md#heap)
+* Good at find the top/smallest K of xxx or median. (or using binary search if there is sorted list) We also can use **Quickselect** to find *k*th smallest item in an unordered list. (See problem [215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md))
+* For frequency sorting, we can use *bucket sort*, see problem [347. Top K Frequent Elements](../leetcode/347.top-k-frequent-elements.md)
+* For some problems to find the max/min value dynamically (after some operations, such adding some numbers then find the max number), then it might be able to use heap to solve. ([264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/))
+* Heap in Kotlin:
+```kotlin
+val minHeap = PriorityQueue<Int>() { n1, n2 -> n1 - n1 })
+val maxHeap = PriorityQueue<Int>(Comparator<Int> { n1, n2 -> n2 - n1 })
+// or
+val maxHeap = PriorityQueue<Int>() { n1, n2 -> 
+    when {
+        n1 < n2 -> -1
+        n2 < n1 -> 1
+        else 0
+    }
+}
+```
+* Sorting on array / collections: See [My Kotlin Note](https://docs.google.com/document/d/1JxZ40YPi_R5unTUeCbk2JErvJVHMWbev50IJfvlE2Ls/edit#heading=h.cgfoyq7qxhnz)
+* For top k problems, you can use:
+    * Build max heap from all items, and pop `k - 1` times, and the peek will be the top K result.
+    * Using min heap with `k` items, we add item one by one, and pop (the min value) if heap size > `k` as adding item. The remaining heap will be top K results **but in reversed order**, make sure to reverse the result.
 
 ## Resources
 - [X] CLRS
@@ -212,3 +222,106 @@ fun heapSort(A) {
 - [X] [Software Engineer Interview Preparation // Introductory notes
     - [X] [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#heap)
     - [X] [Algorithm](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#heapsort)
+
+## Full Code
+```kotlin
+
+interface MyPriorityQueue {
+    fun buildMaxHeap(array: IntArray)
+    fun peek(): Int?
+    fun poll(): Int?
+    fun insert(item: Int)
+    fun increasePriority(index: Int, priority: Int)
+}
+
+class MyPriorityQueueImpl : MyPriorityQueue {
+    private var capacity = 10
+    private var heapSize = 0
+    private var A = IntArray(capacity) { Int.MIN_VALUE }
+
+    override fun buildMaxHeap(array: IntArray) {
+        heapSize = array.size
+        ensureCapacity(array.size)
+        for (i in 0 until array.size) {
+            A[i] = array[i]
+        }
+        for (i in array.size / 2 downTo 0) {
+            heapifyDown(i)
+        }
+    }
+
+    override fun peek(): Int? = A[0]
+
+    override fun poll(): Int? {
+        val peek = peek()
+        A[0] = A[heapSize - 1]
+        heapSize--
+        heapifyDown(0)
+        return peek
+    }
+
+    override fun insert(item: Int) {
+        ensureCapacity()
+        A[heapSize] = item
+        heapSize++
+        heapifyUp(heapSize - 1)
+    }
+
+    override fun increasePriority(index: Int, priority: Int) {
+        if (A[index] < priority) {
+            A[index] = priority
+            heapifyUp(index)
+        }
+    }
+
+    private fun leftIndex(index: Int) = index * 2 + 1
+    private fun rightIndex(index: Int) = index * 2 + 2
+    private fun parentIndex(index: Int) = (index - 1) / 2
+
+    private fun hasLeft(index: Int) = leftIndex(index) in (0 until heapSize)
+    private fun hasRight(index: Int) = rightIndex(index) in (0 until heapSize)
+    private fun hasParent(index: Int) = parentIndex(index) in (0 until heapSize)
+
+    private fun leftChild(index: Int) = if (hasLeft(index)) A[leftIndex(index)] else null
+    private fun rightChild(index: Int) = if (hasRight(index)) A[rightIndex(index)] else null
+    private fun parent(index: Int) = if (hasParent(index)) A[parentIndex(index)] else null
+
+    private fun heapifyDown(index: Int) {
+        val leftIndex = index * 2 + 1
+        val rightIndex = index * 2 + 2
+        var maxIndex = index
+        if (hasLeft(index) && A[leftIndex] > A[maxIndex]) {
+            maxIndex = leftIndex
+        }
+        if (hasLeft(index) && A[rightIndex] > A[maxIndex]) {
+            maxIndex = rightIndex
+        }
+        if (maxIndex != index) {
+            swap(maxIndex, index)
+            heapifyDown(maxIndex)
+        }
+    }
+
+    private fun heapifyUp(index: Int) {
+        var i = index
+        while (hasParent(i) && A[parentIndex(i)] < A[i]) {
+            swap(parentIndex(i), i)
+            i = parentIndex(i)
+        }
+    }
+
+    private fun swap(i: Int, j: Int) {
+        val temp = A[i]
+        A[i] = A[j]
+        A[j] = temp
+    }
+
+    private fun ensureCapacity(newCapacity: Int? = null) {
+        if (heapSize >= capacity) {
+            if (newCapacity != null) capacity = newCapacity
+            else capacity *= 2
+            A = Arrays.copyOf(A, capacity)
+        }
+    }
+}
+```
