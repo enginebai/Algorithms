@@ -1,22 +1,22 @@
 # Problems & Solutions
 
-## Arrays
+## [Arrays](../problems/problems-arrays.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
-|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
-|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
+|[283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
 |[15. 3Sum](../leetcode/15.3sum.md)|Medium|
-|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Easy|
+|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
+|[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
+|[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
+|[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
 |[59. Spiral Matrix II](../leetcode/59.spiral-matrix-ii.md)|Medium|
+|[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
+|[136. Single Number](../leetcode/136.single-number.md)|Easy|
+|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Easy|
 |[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
-|[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
-|[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
-|[283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
-|[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
-|[136. Single Number](../leetcode/136.single-number.md)|Easy|
-|[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
+|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m

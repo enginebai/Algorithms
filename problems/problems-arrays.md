@@ -1,15 +1,5 @@
 ## [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 
-### Straightfoward
-
-```kotlin
-fun sortedSquares(nums: IntArray): IntArray {
-    return nums.map { it * it }.sorted().toIntArray()
-}
-```
-
-* **Time Complexity**: `O(n + n log n)` for this solution, there is `O(n)` solution for follow up.
-
 ### Two Pointers
 Let's take an example containing both negative and positive numbers `[-10, -5, 0, 1, 7]`. Since we put squares in the result array, so we can consider that all numbers are positive, i.e. `[10, 5, 0, 1, 7]`, the largest two numbers reside in the most left- and right-hand side respectively, not in the middle. So we can use two pointer approach that pointed to `left` and `right` and compare, insert larger one to the right-hand side (like *merge sort*.
 
@@ -62,56 +52,6 @@ fun moveZeros(nums: IntArray) {
 ```
 
 * **Time Complexity**: `O(n)` for two while loops but iterating the most n element.
-* **Space Complexity**: `O(1)`, no extra space required.
-
-### Swap
-```kotlin
-fun moveZeroes(nums: IntArray): Unit {
-    var zeroLength = 0
-    for (i in 0 until nums.size) {
-        val value = nums[i]
-        if (value == 0) {
-            zeroLength++
-        } else if (zeroLength > 0) { // If we have zero item
-            nums[i - zeroLength] = value
-            nums[i] = 0
-        } 
-    }
-}
-```
-
-### My Solution
-> My first attempt, pretty naive.
-
-```kotlin
-fun moveZeroes(nums: IntArray): Unit {
-    var checkIndex = nums.size - 1
-    while (checkIndex >= 0) {
-        if (nums[checkIndex] == 0) {
-            shiftZero(nums, checkIndex)
-        }
-        checkIndex--
-    }
-}
-
-private fun shiftZero(nums: IntArray, index: Int) {
-    if (index == nums.size - 1) return
-    var i = index
-    while (i < nums.size - 1) {
-        if (nums[i + 1] == 0) return
-        swap(nums, i, i + 1) 
-        i++
-    }
-}
-
-private fun swap(nums: IntArray, n1: Int, n2: Int) {
-    val temp = nums[n1]
-    nums[n1] = nums[n2]
-    nums[n2] = temp
-}
-```
-
-* **Time Complexity**: `O(n^2)` for two for-loops.
 * **Space Complexity**: `O(1)`, no extra space required.
 
 ----
@@ -172,37 +112,6 @@ fun threeSum(nums: IntArray): List<List<Int>> {
 
 * **Time Complexity**: `O(n^2)`.
 * **Space Complexity**: `O(n^2)`.
-
-### First Attempt (WA)
-We fix the `1st` number, then we can find the `2nd`, `3rd` numbers from two sum solution. However, it can't avoid the duplicate tuiplets and that breaks the problem.
-
-```kotlin
-fun threeSum(nums: IntArray): List<List<Int>> {
-    val results = mutableListOf<List<Int>>()
-    for (i in 0 until nums.size) {
-        val current = nums[i]
-        val findTwoSum = twoSum(nums.slice(i + 1 until nums.size), -current)
-        if (findTwoSum.isNotEmpty()) {
-            val result = mutableListOf<Int>().apply { addAll(findTwoSum) }
-            result.add(current)
-            results.add(result)
-        }
-    }
-    return results
-}
-
-private fun twoSum(nums: List<Int>, target: Int): List<Int> {
-    val hashMap = hashMapOf<Int, Int>()
-    for (i in 0 until nums.size) {
-        val remaining = target - nums[i]
-        if (hashMap[remaining] != null && hashMap[remaining] != nums[i]) {
-            return listOf(nums[i], remaining)
-        }
-        hashMap[nums[i]] = nums[i]
-    }
-    return emptyList()
-}
-```
 
 ----
 ## [1. Two Sum](https://leetcode.com/problems/two-sum/)
@@ -312,34 +221,77 @@ fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
 * **Time Complexity**: `O(m lg m + n lg n)`.
 * **Space Complexity**: `O(min(m, n))` for result.
 
-### My Original Hash Table Solution
+----
+## [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
+
+## Matrix Transformation
+We can reverse upside down, and swap the symmetry. (There are some equivalent ways but different sequences of operations)
+
 ```kotlin
-fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
-    val hashTable1 = buildHashTable(nums1)
-    val hashTable2 = buildHashTable(nums2)
-    val interactionSet = hashTable1.keys.intersect(hashTable2.keys)
-    val interactionList = mutableListOf<Int>()
-    interactionSet.forEach {
-        val occurrence1 = hashTable1[it]!!
-        val occurrence2 = hashTable2[it]!!
-        val interactOccurrence = if (occurrence1 > occurrence2) occurrence2 else occurrence1
-
-        for (i in 0 until interactOccurrence) {
-            interactionList.add(it)
+fun rotate(matrix: Array<IntArray>): Unit {
+    for (i in 0 until matrix.size / 2) {
+        for (j in 0 until matrix[i].size) {
+            val reverseIndex = matrix.size - 1 - i
+            val temp = matrix[i][j]
+            matrix[i][j] = matrix[reverseIndex][j]
+            matrix[reverseIndex][j] = temp
         }
     }
-    return interactionList.toIntArray()
-}
-
-private fun buildHashTable(nums: IntArray): HashMap<Int, Int> {
-    val hashMap = hashMapOf<Int, Int>()
-    for (i in 0 until nums.size) {
-        if (hashMap.containsKey(nums[i])) {
-                hashMap[nums[i]] = hashMap[nums[i]]!! + 1
-            } else {
-            hashMap[nums[i]] = 1
+    for (i in 0 until matrix.size) {
+        for (j in i + 1 until matrix.size) {
+            val temp = matrix[i][j]
+            matrix[i][j] = matrix[j][i]
+            matrix[j][i] = temp
         }
     }
-    return hashMap
 }
+```
+
+----
+## [189. Rotate Array](https://leetcode.com/problems/rotate-array/)
+
+### Reserve Without Extra Space
+```js
+k = 3
+        [1 2 3 4 5 6 7]
+// Move (k % size) to the start
+  5 6 7 [1 2 3 4      ]
+  
+// We can reverse the array
+1 2 3 4 5 6 7
+7 6 5 4 3 2 1
+
+// Then reverve the (0 ~ k-1) and (k ~ size) parts
+7 6 5 | 4 3 2 1
+5 6 7 | 1 2 3 4
+```
+
+```kotlin
+fun rotate(nums: IntArray, k: Int): Unit {
+    val kk = k % nums.size
+    if (kk == 0) return
+    reverse(nums, 0, nums.size - 1)
+    reverse(nums, 0, (kk - 1))
+    reverse(nums, kk, nums.size - 1)
+}
+
+private fun reverse(A: IntArray, start: Int, end: Int) {
+    var left = start
+    var right = end 
+    while (left < right) {
+        val temp = A[left]
+        A[left] = A[right]
+        A[right] = temp
+        
+        left++
+        right--
+    }
+}
+```
+
+### Failed Cases
+```kotlin
+[1, 2], k = 3
+
+[-1], k = 2
 ```
