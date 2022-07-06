@@ -13,3 +13,20 @@ fun reverseString(s: CharArray): Unit {
 ```
 
 ----
+## [387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)
+
+```kotlin
+fun firstUniqChar(s: String): Int {
+    val hash = IntArray(26) { _ -> 0 }
+    for (c in s) {
+        val key = c - 'a'
+        hash[key] = hash[key] + 1
+    }
+    for (i in 0 until s.length) {
+        if (hash[s[i] - 'a'] == 1) return i
+    }
+    return -1
+}
+```
+
+We can **use the problem assumption**, it will be lower-case alphabet, that is, we can declare a index array of size 26, then run a for-loop to record the all characters with its index (override it if it's duplicate), finally, run a for-loop to see the index is equal to the record, if it's unique, the index will be equal.

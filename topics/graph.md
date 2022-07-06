@@ -210,7 +210,7 @@ The `dfsAllVertices()` takes `O(|V|)` time for every vertices (not visited yet),
 > Take a look at the sameple at P.542 of CLRS.
 
 ## Topological Sort
-A *topological sort* of a directed acyclic graph (DAG) is a *linear ordering * of all vertices such that `(x, y)` which `x` appears before `y` in the ordering.
+A *topological sort* of a directed acyclic graph (DAG) is a *linear ordering* of all vertices such that `(x, y)` which `x` appears before `y` in the ordering.
 
 It's most commonly used for job scheduling a sequence of jobs which has dependencies on the others. The jobs are represented by vertices and the edge from `x` to `y` if job `y` is dependent on `x` (`x` must be finished before `y`)
 
