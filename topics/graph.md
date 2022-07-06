@@ -1,7 +1,7 @@
 # Graph
 A graph `G = (V, E)`, consists of `V` (set of *vertices*) and `E` (*edges* of vertices). 
 
-* There are *undirected* and *directed* graph, the pair `(x, y)` and `(y, x)` represent the same edge in a undirected graph, whereas, it's two different edge in directed graph, where `(x, y)` represents `x` (head) to `y` (tail). 
+* There are *undirected* and *directed* graph, the pair `(x, y)` and `(y, x)` represent the same edge in a undirected graph, whereas, that are two different edges in directed graph, where `(x, y)` represents `x` (head) to `y` (tail). 
 * For the edge `e = (x, y)`, we will say `e` is an *incoming* edge of `y` and an *outgoing* edge of `x`.
 * The *in-degree* and *out-degree* of a vertex denotes the number of incoming and outgoing edges of the vertex. 
 
@@ -42,7 +42,7 @@ A1 = [
  ```
 
 * The vertices in each adjacency list are typically stored in a arbitrary order.
-* For both undirected and directed graph, the amount of memory is `Θ(|V} + |E|)` space complexity. (`|V| + |E|` for directed, `|V| + 2 * |E|` for undirected)
+* For both undirected and directed graph, the amount of memory is `Θ(|V| + |E|)` space complexity. (`|V| + |E|` for directed, `|V| + 2 * |E|` for undirected)
 * It takes `Ω(|V|)` time to determine if an edge `(x, y)` is in the graph. (Loop for each vertices takes `O(1)` and `O(|V|)` for searching the adjacent vertices of the vertex `x`)
 * We prefer adjacency matrix when the graph are *sparse*.
 * We also can associate *weight* on the edge by storing the weight on the node of the adjacency list. (linked list node can attach extra properties)
@@ -74,14 +74,14 @@ val directedGraph = arrayOf(
 )
 ```
 
-* It requires `Θ(V^2)` space complexity. (The undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix)
+* It requires `Θ(|V|^2)` space complexity. (The undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix)
 * We prefer adjacency matrix when the graph are *dense*.
 * We can update the edge or check the existence of edge in constant time.
 * `A` is equal to the *transpose* of matrix `A` for undirected graph.
 * We also can define `A(i, j) = w` for weighted graph.
 
 ### Hash Tables
-It takes `O(1)` to check edge existence and still takes `Θ(|V} + |E|)` space to store in hash table.
+It takes `O(1)` to check edge existence and still takes `Θ(|V| + |E|)` space to store in hash table.
 
 ```python
 S1 = {
@@ -92,14 +92,14 @@ S1 = {
 ```
 
 ## Breadth-first Search (BFS)
-Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s.` It visits all vertices at level `k` before visiting level `k+1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.
+Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s`. It visits all vertices at level `k` before visiting level `k+1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.
 
 For our algorithm, we store some properties to the vertex:
 * To track the visit, we color each vertex "white" (not visited yet), "gray" (enqueue to visit next) and "black" (visited). (Here we use `VisitState` enum to represent)
 * We also store the distance and it predecessor (parent) in the breadth-first tree.
 
 ```kotlin
-enum VisitState { NOT_VISIT, DISCOVERED, VISITED }
+enum class VisitState { NOT_VISIT, DISCOVERED, VISITED }
 
 data class Node<T>(
     val data: T
@@ -126,6 +126,7 @@ fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
         // Queue all its non-visiting adjacent vertices.
         val adjacentVertices = graph[vertexToVisit]
         adjacentVertices.forEach { v ->
+            // This check makes sure that each vertex is visited at most once.
             if (v.visitState == NOT_VISIT) {
                 v.visitState = DISCOVERED
                 v.distance = vertexToVisit.distance + 1
@@ -145,38 +146,10 @@ fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
 > Take a look at the sample at P.533 of CLRS
 
 ### Time Complexity
-All vertices will be enqueued and dequeued at more once, it takes `O(|V|)` for all vertices. And the size of adjacent list is `O(|E|)`, it takes `O(|E})` to scan all the vertice of adjacent list when dequeuing the vertex, thus the total running time if `O(|V| + |E|)` (linear time).
+All vertices will be enqueued and dequeued at most once, it takes `O(|V|)` for all vertices. The adjacency list of each vertex is scanned only when the vertex is dequeued, it is scanned at most once, it takes `O(|E|)`, thus the total running time if `O(|V| + |E|)` (linear time).
 
 ## Depth-first Search (DFS)
-```kotlin
-fun depthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
-    source.visitState == VISITED
-    val adjacentVertices = graph[source]
-    adjacentVertices.forEach { node ->
-        if (node.visitState != VISITED) {
-            depthFirstSearch(graph, node)
-        }
-    }
-}
-
-fun depthFirstSearchIterative(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>) {
-    // The algorithm is similar to BFS except for using stack here.
-    val stack = Stack.create<Node<T>>()
-    stack.push(source)
-    while (!stack.isEmpty()) {
-        val node = stack.pop()
-        if (node.visitState != VISITED) {
-            node.visitState = VISITED
-            val adjacentVertices = graph[node]
-            adjaccentVertices.forEach { x ->
-                stack.push(x)
-            }
-        }
-    }
-}
-```
-
-We also can discover all vertices (fully depth-first search) and construct depth-first search tree (forest), we use the similar color scheme (to BFS) and provides some timestapms while searching. Each vertices has two timestampes: *discover* (first discovered, and grayed) and *finish* (finishing examining its adjaceny list and blacken)
+For graph, We will discover all vertices (fully depth-first search) and construct depth-first search tree (forest), we use the similar color scheme (to BFS) and provides some timestapms while searching. Each vertices has two timestampes: *discover* (first discovered, and grayed) and *finish* (finishing examining its adjaceny list and blacken)
 
 The color sheme is slightly different with BFS:
 * White: Not visit yet.
@@ -184,16 +157,28 @@ The color sheme is slightly different with BFS:
 * Black: Finished (finish examining it adjaceny list)
 
 ```kotlin
-enum VisitState { NOT_VISIT, VISITED, FINISHED }
+enum class VisitState { NOT_VISIT, VISITED, FINISHED }
 
 // We use the similar data structure of Node from BSF.
+data class Node<T>(
+    val data: T
+) {
+    // As same as BFS
+    var visitState: VisitState = NOT_VISIT
+    var distance: Int = Int.MAX
+    var predecessor: Node<T>? = null
+
+    // For DFS
+    var discoverTime: Int? = null
+    var finishTime: Int? = null
+}
 
 var time = 0
 
 // Used for topological sort
 val topologicalSortLinkedList = LinkedList()
 
-fun depthFirstSearchAllVertices(graph: Map<Node<T>, Set<Node<T>>) {
+fun dfsAllVertices(graph: Map<Node<T>, Set<Node<T>>) {
     graph.key.forEach { vertex ->
         if (vertex.visitState == NOT_VISIT) {
             dfs(graph, vertex)
@@ -220,7 +205,7 @@ private fun dfs(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>) {
 ```
 
 ### Time Complexity
-The `depthFirstSearchAllVertices()` take `O(|V|)` time for every vertices (not visited yet), and for `dfs()` is invoked only on the vertices not visited yet and it take `Θ(|E|)` for summary of all vertices. Therefore the running time of DFS is `Θ(|V} + |E|)`.
+The `dfsAllVertices()` takes `O(|V|)` time for every vertices (not visited yet), and for `dfs()` is invoked only on the vertices not visited yet and it take `Θ(|E|)` for summary of all vertices. Therefore the running time of DFS is `Θ(|V| + |E|)`.
 
 > Take a look at the sameple at P.542 of CLRS.
 
@@ -231,9 +216,9 @@ It's most commonly used for job scheduling a sequence of jobs which has dependen
 
 ```kotlin
 fun topologicalSort(graph: Map) {
-    // Step 1. call DFS(graph) and compute finish time for every vertex
-    // Step 2. When a vertex finished, insert to first of linked list
-    // Step 3. Return this linked list.
+    // 1. call DFS(graph) and compute finish time for every vertex
+    // 2. When a vertex finished, insert to first of linked list
+    // 3. Return this linked list.
 }
 ```
 
@@ -244,11 +229,7 @@ In another way, you can run DFS first and sort the vertices by finish time desce
 ### Time Complexity
 It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to insert first of linked list.
 
-## Problems & Solutions
-| Problem         | Solution | Difficulty |
-|-----------------|----------|------------|
-
-### Tips for Problem Solving
+## Tips for [Problem Solving](../problems/problems-solutions.md#graph)
 * Track the visited nodes correctly, unless it will end up with an infinite loop.
 * Corner cases:
     * Empty graph

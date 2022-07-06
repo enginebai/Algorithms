@@ -190,7 +190,7 @@ fun heapSort(A) {
 
 * **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
 
-### Tips for [Problem Solving](../topics/problems-solutions.md#heap)
+## Tips for [Problem Solving](../problems/problems-solutions.md#heap)
 * Good at find the top/smallest K of xxx or median. (or using binary search if there is sorted list) We also can use **Quickselect** to find *k*th smallest item in an unordered list. (See problem [215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md))
 * For frequency sorting, we can use *bucket sort*, see problem [347. Top K Frequent Elements](../leetcode/347.top-k-frequent-elements.md)
 * For some problems to find the max/min value dynamically (after some operations, such adding some numbers then find the max number), then it might be able to use heap to solve. ([264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/))

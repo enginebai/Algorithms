@@ -543,7 +543,7 @@ Linked list with the last node has reference to the head.
 
 > // TODO
 
-## Tips for [Problem Solving](../topics/problems-solutions.md#linked-list)
+## Tips for [Problem Solving](../problems/problems-solutions.md#linked-list)
 * Corner cases:
     * **Empty linked list** (before operation or **after!**, such as deleting the only node)
     * Linked list with **one / two nodes**
