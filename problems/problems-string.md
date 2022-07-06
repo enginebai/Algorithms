@@ -1,0 +1,15 @@
+## [344. Reverse String](https://leetcode.com/problems/reverse-string/)
+
+### Strightforward
+```kotlin
+fun reverseString(s: CharArray): Unit {
+    for (i in 0 until s.size / 2) {
+        val reverseIndex = s.size - 1 - i
+        val temp = s[i]
+        s[i] = s[reverseIndex]
+        s[reverseIndex] = temp
+    }
+}
+```
+
+----
