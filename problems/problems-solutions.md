@@ -156,9 +156,9 @@
 |------------------|------------|
 |[797. All Paths From Source to Target](../leetcode/797.all-paths-from-source-to-target.md)|Medium|
 |[733. Flood Fill](../leetcode/733.flood-fill.md)|Easy|
+|[200. Number of Islands](../leetcode/200.number-of-islands.md)|Medium|
 
 > * https://leetcode.com/problems/surrounded-regions/ 5k m
-> * https://leetcode.com/problems/number-of-islands/ 14k m
 > * https://leetcode.com/problems/max-area-of-island/ 6k m
 > * https://leetcode.com/problems/number-of-closed-islands/ 2k m
 > * https://leetcode.com/problems/keys-and-rooms/ 3k m
