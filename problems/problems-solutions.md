@@ -1,6 +1,6 @@
 # Problems & Solutions
 
-## [Arrays](../problems/problems-arrays.md)
+## [Array](../problems/problems-array.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
@@ -30,7 +30,7 @@
 > * https://leetcode.com/problems/backspace-string-compare/
 > * https://leetcode.com/problems/valid-palindrome-ii/
 
-## Strings
+## [String](../problems/problems-string.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
@@ -152,26 +152,38 @@
 > * https://leetcode.com/problems/last-stone-weight/ 3k e
 
 ## Graph
+| Problem          | Difficulty |
+|------------------|------------|
 |[797. All Paths From Source to Target](../leetcode/797.all-paths-from-source-to-target.md)|Medium|
 |[733. Flood Fill](../leetcode/733.flood-fill.md)|Easy|
 
+> * https://leetcode.com/problems/surrounded-regions/ 5k m
 > * https://leetcode.com/problems/number-of-islands/ 14k m
+> * https://leetcode.com/problems/max-area-of-island/ 6k m
+> * https://leetcode.com/problems/number-of-closed-islands/ 2k m
+> * https://leetcode.com/problems/keys-and-rooms/ 3k m
 > * https://leetcode.com/problems/01-matrix/ 5k m
-> * https://leetcode.com/problems/network-delay-time/ 5k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
 > * https://leetcode.com/problems/rotting-oranges/ 7k m
 > * https://leetcode.com/problems/minimum-height-trees/ 5k m
-> * https://leetcode.com/problems/surrounded-regions/ 5k m
 > * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k m
 > * https://leetcode.com/problems/is-graph-bipartite/ 5k m
 > * https://leetcode.com/problems/evaluate-division/ 5k m
 > * https://leetcode.com/problems/word-ladder/ 8k h
 > * https://leetcode.com/problems/pacific-atlantic-water-flow/ 4k m
+> * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
+> * https://leetcode.com/problems/number-of-enclaves/ 1k m
+> * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1k m
 
 > Topological Sort:
 > * https://leetcode.com/problems/course-schedule/ 9.6k m
 > * https://leetcode.com/problems/course-schedule-ii/ 7k m
 > * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
+
+> Shortest Path: 
+> * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
+> * https://leetcode.com/problems/network-delay-time/ 5k m
+
 
 ## Dynamic Programming
 ### Reading List
