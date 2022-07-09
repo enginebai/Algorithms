@@ -27,8 +27,10 @@
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 3k m
 
 ### Two Pointers
-> * https://leetcode.com/problems/backspace-string-compare/
-> * https://leetcode.com/problems/valid-palindrome-ii/
+> * https://leetcode.com/problems/backspace-string-compare/ 5k e
+> * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
+> * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 7k m
+> * https://leetcode.com/problems/ remove-duplicates-from-sorted-list-ii/ 6k m
 
 ## [String](../problems/problems-string.md)
 | Problem          | Difficulty |
@@ -157,12 +159,12 @@
 |[797. All Paths From Source to Target](../leetcode/797.all-paths-from-source-to-target.md)|Medium|
 |[733. Flood Fill](../leetcode/733.flood-fill.md)|Easy|
 |[200. Number of Islands](../leetcode/200.number-of-islands.md)|Medium|
+|[130. Surrounded Regions](../leetcode/130.surrounded-regions.md)|Medium|
+|[695. Max Area of Island](../leetcode/695.max-area-of-island.md)|Medium|
+|[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium|
 
-> * https://leetcode.com/problems/surrounded-regions/ 5k m
-> * https://leetcode.com/problems/max-area-of-island/ 6k m
 > * https://leetcode.com/problems/number-of-closed-islands/ 2k m
 > * https://leetcode.com/problems/keys-and-rooms/ 3k m
-> * https://leetcode.com/problems/01-matrix/ 5k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
 > * https://leetcode.com/problems/rotting-oranges/ 7k m
 > * https://leetcode.com/problems/minimum-height-trees/ 5k m
@@ -181,6 +183,7 @@
 > * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
 
 > Shortest Path: 
+> * https://leetcode.com/problems/01-matrix/ Solved before!
 > * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
 > * https://leetcode.com/problems/network-delay-time/ 5k m
 
