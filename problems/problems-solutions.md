@@ -162,11 +162,11 @@
 |[130. Surrounded Regions](../leetcode/130.surrounded-regions.md)|Medium|
 |[695. Max Area of Island](../leetcode/695.max-area-of-island.md)|Medium|
 |[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium|
+|[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
 
 > * https://leetcode.com/problems/number-of-closed-islands/ 2k m
 > * https://leetcode.com/problems/keys-and-rooms/ 3k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
-> * https://leetcode.com/problems/rotting-oranges/ 7k m
 > * https://leetcode.com/problems/minimum-height-trees/ 5k m
 > * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k m
 > * https://leetcode.com/problems/is-graph-bipartite/ 5k m
