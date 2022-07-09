@@ -1,11 +1,9 @@
-Googler - Data Structures & Algorithms (DSA)
+Data Structures & Algorithms (DSA)
 ========
 
-The notes here are to contain all basic/fundamental/popular data strcutures and algorithms needed to pass a Google software engineer  position interview. (actually, not only for Google, it's more like *general* DSA study & practice plan)
+This project are curated resources and notes of basic/fundamental/popular data strcutures and algorithms for software engineer to study, there are also some classic problems/solutions for each topics to practice after studying. You can study and practice by topics, enjoy this learning journey!!
 
-> This is a curated resources and notes for interview preparation, however, it's working in progress and might contains my personal study progress. Feel free to fork (contribution is not available for now), remove them and keep the curated resources and notes as your study resource. Happy studying :) 💪 
-
-![Google UK](./media/google1.jpg)
+> This project is working in progress and might contains my personal study progress. Feel free to fork (contribution is not available for now), remove them and keep the curated resources and notes as your study resource. Happy studying :) 💪 
 
 ## Topics
 - [Introduction](./topics/introduction.md)
@@ -26,19 +24,12 @@ The notes here are to contain all basic/fundamental/popular data strcutures and 
 - (TODO) [Other](./topics/other.md)
 - 👉 [Problems & Solutions](./problems/problems-solutions.md)
 
-## Complexity
+## Complexity Cheat Sheet
 ![Sequence Complexity](./media/complexity-sequence.png)
-
 ![Sets Complexity](./media/complexity-set.png)
-
 ![Linked List Complexity](./media/complexity-linked-list.png)
-
 ![Stack Complexity](./media/complexity-stack.png)
-
 ![Queue Complexity](./media/complexity-queue.png)
-
 ![Heap Complexity](./media/complexity-heap.png)
-
 ![Single-Source Shortest Path Complexity](./media/complexity-sssp.png)
-
 ![Sorting Complexity](./media/complexity-sorting.png)
