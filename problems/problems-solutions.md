@@ -164,11 +164,11 @@
 |[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium|
 |[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
 |[417. Pacific Atlantic Water Flow](../leetcode/417.pacific-atlantic-water-flow.md)|Medium|
+|[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)|Medium|
 
 > * https://leetcode.com/problems/number-of-closed-islands/ 2k m
 > * https://leetcode.com/problems/keys-and-rooms/ 3k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
-> * https://leetcode.com/problems/is-graph-bipartite/ 5k m
 > * https://leetcode.com/problems/word-ladder/ 8k h
 > * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
 > * https://leetcode.com/problems/number-of-enclaves/ 1k m
@@ -178,7 +178,6 @@
 > * |[310. Minimum Height Trees](../leetcode/310.minimum-height-trees.md)|Medium|
 > * https://leetcode.com/problems/course-schedule/ 9.6k m
 > * https://leetcode.com/problems/course-schedule-ii/ 7k m
-> * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
 
 > Shortest Path: 
 > * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k m
