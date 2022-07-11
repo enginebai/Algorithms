@@ -166,8 +166,8 @@
 |[417. Pacific Atlantic Water Flow](../leetcode/417.pacific-atlantic-water-flow.md)|Medium|
 |[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)|Medium|
 |[1254. Number of Closed Islands](../leetcode/1254.number-of-closed-islands.md)|Medium|
+|[841. Keys and Rooms](../leetcode/841.keys-and-rooms.md)|Medium|
 
-> * https://leetcode.com/problems/keys-and-rooms/ 3k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
 > * https://leetcode.com/problems/word-ladder/ 8k h
 > * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
