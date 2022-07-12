@@ -538,6 +538,22 @@ Let compare the time complexity among array, singly linked list and doubly linke
 ## Sentinel Node
 The code would be simpler if we could ignore the boundary conditions at the head and tail (such checking if `head` is null since the statement will not be executed `head?.next = ...`). A *sentinel* is a dummy node that help us to simiplify the boundary conditions so that we can apply the same flow or logic without worring about if `head` is null. For more example, please see [203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md) and [82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md).
 
+Template:
+```kotlin
+fun xxx(head: ListNode?): ListNode? {
+    val sentinel = ListNode(-1)
+    sentinel.next = head
+
+    var previous: ListNode? = sentinel
+    var current: ListNode? = head
+    while (current != null ...) {
+        ...
+    }
+    return sentinel.next
+}
+
+```
+
 ## Circular Linked List
 Linked list with the last node has reference to the head.
 
