@@ -215,3 +215,39 @@ fun middleNode(head: ListNode?): ListNode? {
     return slow
 }
 ```
+
+----
+## [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+
+```kotlin
+fun hasCycle(head: ListNode?): Boolean {
+    val seenNode = hashSetOf<ListNode>()
+    var node = head
+    while (node != null) {
+        if (seenNode.contains(node)) {
+            return true
+        }
+        seenNode.add(node)
+        node = node.next
+    }
+    return false
+}
+```
+
+We can use two pointers approach to solve this with `O(1)` space:
+1. Slow pointer goes 1 step, fast pointer goes 2 step.
+2. Traverse the linked list.
+3. The two pointer will meet at the same node if there is cycle.
+
+```kotlin
+fun hasCycle(head: ListNode?): Boolean {
+    var slow: ListNode? = head
+    var fast: ListNode? = head?.next
+    while (slow != null) {
+        if (fast == slow) return true
+        show = show?.next
+        fast = fast?.next?.next
+    }
+    return false
+}
+```

@@ -590,7 +590,9 @@ fun solveProblem(head?: Node): Node? {
     * Count the node number
     * Find the middle node using two pointers technique
 * Fast/slow pointers to solve cycle or interaction problems.
-
+    * [876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)
+    * [141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)
+    * [142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)
 > [Nice post](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list) to read that need to keep in mind.
 
 ## Resources

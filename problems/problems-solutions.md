@@ -169,7 +169,6 @@
 |[841. Keys and Rooms](../leetcode/841.keys-and-rooms.md)|Medium|
 |[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
 
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
 > * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
 > * https://leetcode.com/problems/number-of-enclaves/ 1k m
 > * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1k m
@@ -272,6 +271,7 @@
 > * https://leetcode.com/problems/search-a-2d-matrix/ 8k
 > * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
 > * https://leetcode.com/problems/task-scheduler/ 6k
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
 
 ### Reading List:
 > * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
