@@ -167,9 +167,9 @@
 |[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)|Medium|
 |[1254. Number of Closed Islands](../leetcode/1254.number-of-closed-islands.md)|Medium|
 |[841. Keys and Rooms](../leetcode/841.keys-and-rooms.md)|Medium|
+|[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
 
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
-> * https://leetcode.com/problems/word-ladder/ 8k h
 > * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
 > * https://leetcode.com/problems/number-of-enclaves/ 1k m
 > * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1k m
