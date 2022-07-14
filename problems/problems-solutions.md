@@ -168,6 +168,7 @@
 |[1254. Number of Closed Islands](../leetcode/1254.number-of-closed-islands.md)|Medium|
 |[841. Keys and Rooms](../leetcode/841.keys-and-rooms.md)|Medium|
 |[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
+|[207. Course Schedule](../leetcode/207.course-schedule.md)|Medium|
 
 > * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
 > * https://leetcode.com/problems/number-of-enclaves/ 1k m
@@ -175,7 +176,6 @@
 
 > Topological Sort:
 > * |[310. Minimum Height Trees](../leetcode/310.minimum-height-trees.md)|Medium|
-> * https://leetcode.com/problems/course-schedule/ 9.6k m
 > * https://leetcode.com/problems/course-schedule-ii/ 7k m
 
 > Shortest Path: 
