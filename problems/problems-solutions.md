@@ -170,6 +170,8 @@
 |[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
 |[207. Course Schedule](../leetcode/207.course-schedule.md)|Medium|
 |[210. Course Schedule II](../leetcode/210.course-schedule-ii.md)|Medium|
+|[787. Cheapest Flights Within K Stops](../leetcode/787.cheapest-flights-within-k-stops.md)|Medium|
+|[743. Network Delay Time](../leetcode/743.network-delay-time.md)|Medium|
 
 > * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
 > * https://leetcode.com/problems/number-of-enclaves/ 1k m
@@ -179,11 +181,10 @@
 > * |[310. Minimum Height Trees](../leetcode/310.minimum-height-trees.md)|Medium|
 
 > Shortest Path: 
-> * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k m
 > * https://leetcode.com/problems/01-matrix/ Solved before!
 > * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
 > * https://leetcode.com/problems/evaluate-division/ 5k m
-> * https://leetcode.com/problems/network-delay-time/ 5k m
+> * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
 
 
 ## Dynamic Programming
