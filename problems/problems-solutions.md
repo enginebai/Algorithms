@@ -173,6 +173,7 @@
 |[787. Cheapest Flights Within K Stops](../leetcode/787.cheapest-flights-within-k-stops.md)|Medium|
 |[743. Network Delay Time](../leetcode/743.network-delay-time.md)|Medium|
 |[399. Evaluate Division](../leetcode/399.evaluate-division.md)|Medium|
+|[1091. Shortest Path in Binary Matrix](../leetcode/1091.shortest-path-in-binary-matrix.md)|Medium|
 
 > * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
 > * https://leetcode.com/problems/number-of-enclaves/ 1k m
@@ -182,8 +183,6 @@
 > * |[310. Minimum Height Trees](../leetcode/310.minimum-height-trees.md)|Medium|
 
 > Shortest Path: 
-> * https://leetcode.com/problems/01-matrix/ Solved before!
-> * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
 > * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
 
 
