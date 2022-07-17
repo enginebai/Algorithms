@@ -538,12 +538,28 @@ Let compare the time complexity among array, singly linked list and doubly linke
 ## Sentinel Node
 The code would be simpler if we could ignore the boundary conditions at the head and tail (such checking if `head` is null since the statement will not be executed `head?.next = ...`). A *sentinel* is a dummy node that help us to simiplify the boundary conditions so that we can apply the same flow or logic without worring about if `head` is null. For more example, please see [203. Remove Linked List Elements](../leetcode/203.remove-linked-list-elements.md) and [82. Remove Duplicates from Sorted List II](../leetcode/82.remove-dpulicates-from-sorted-list-ii.md).
 
+Template:
+```kotlin
+fun xxx(head: ListNode?): ListNode? {
+    val sentinel = ListNode(-1)
+    sentinel.next = head
+
+    var previous: ListNode? = sentinel
+    var current: ListNode? = head
+    while (current != null ...) {
+        ...
+    }
+    return sentinel.next
+}
+
+```
+
 ## Circular Linked List
 Linked list with the last node has reference to the head.
 
 > // TODO
 
-## Tips for [Problem Solving](../topics/problems-solutions.md#linked-list)
+## Tips for [Problem Solving](../problems/problems-solutions.md#linked-list)
 * Corner cases:
     * **Empty linked list** (before operation or **after!**, such as deleting the only node)
     * Linked list with **one / two nodes**
@@ -574,7 +590,9 @@ fun solveProblem(head?: Node): Node? {
     * Count the node number
     * Find the middle node using two pointers technique
 * Fast/slow pointers to solve cycle or interaction problems.
-
+    * [876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)
+    * [141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)
+    * [142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)
 > [Nice post](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list) to read that need to keep in mind.
 
 ## Resources

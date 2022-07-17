@@ -295,3 +295,90 @@ private fun reverse(A: IntArray, start: Int, end: Int) {
 
 [-1], k = 2
 ```
+
+----
+## [59. Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)
+
+![Spiral Matrixx II](../media/59.spiral-matrix-ii.png)
+
+```kotlin
+fun generateMatrix(n: Int): Array<IntArray> {
+
+    // The number to fill from 1 to n^2
+    val num = 1
+
+    // The start index to fill in the number for each round.
+    var startX = 0
+    var startY = 0
+
+    // We control the move length for each round
+    var offset = 0
+
+    var finalNum = n * n
+    if (n % 2 != 0) finalNum -= 1
+
+    while (num <= finalNum) {
+        var i = startY
+        var j = startY
+
+        // Start the round, run through 4 directions.
+        // 1. Move right-hand side
+        while (j < n - offset - 1) {
+            A[i][j] = num++
+        }
+        // 2. Move downward
+        while (i < n - offset - 1) {
+            A[i][j] = num++
+        }
+        // 3. Move left-hand side
+        // j will be at (startY + n - offset + 1), it's turning points in the beginning.
+        while (j > startY) {
+            A[i][j] = nums++
+            j--
+        }
+        // 4. Move upward
+        // i will be at (startX + n - offset + 1).
+        while (i > startX) {
+            A[i][j] = nums++
+            i--
+        }
+
+        // The start index will increase by 1 respectively.
+        // (0, 0) -> (1, 1) -> (2, 2) ...etc.
+        startX++
+        startY++
+
+        // The move length will decrease by 1 for next round
+        offset += 1
+    }
+
+    // If n is odd, we have to fill in the center position as last number (n^2)
+    if (n % 2 == 0) {
+        A[startX][startY] = n * n
+    }
+    return A
+}
+```
+
+### References
+* https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0059.%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II.md
+
+----
+## [136. Single Number](https://leetcode.com/problems/single-number/)
+
+* A xor A = 0 (xor even times will be 0)
+* A xor 0 = A (xor odd times will be itself)
+* A xor B xor A is equals to A xor A xor B = B
+
+```kotlin
+fun singleNumber(nums: IntArray): Int {
+    var result = nums[0]
+    for (i in 1 until nums.size) {
+        result = result xor nums[i]
+    }
+    return result
+}
+```
+
+* **Time Complexity**: `O(n)`.
+* **Space Complexity**: `O(1)`.

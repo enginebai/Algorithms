@@ -1,6 +1,6 @@
 # Problems & Solutions
 
-## [Arrays](../problems/problems-arrays.md)
+## [Array](../problems/problems-array.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
@@ -27,10 +27,12 @@
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 3k m
 
 ### Two Pointers
-> * https://leetcode.com/problems/backspace-string-compare/
-> * https://leetcode.com/problems/valid-palindrome-ii/
+> * https://leetcode.com/problems/backspace-string-compare/ 5k e
+> * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
+> * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 7k m
+> * https://leetcode.com/problems/ remove-duplicates-from-sorted-list-ii/ 6k m
 
-## Strings
+## [String](../problems/problems-string.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
@@ -152,25 +154,35 @@
 > * https://leetcode.com/problems/last-stone-weight/ 3k e
 
 ## Graph
-> Including non-graph DFS, BFS problems
+| Problem          | Difficulty |
+|------------------|------------|
+|[797. All Paths From Source to Target](../leetcode/797.all-paths-from-source-to-target.md)|Medium|
+|[733. Flood Fill](../leetcode/733.flood-fill.md)|Easy|
+|[200. Number of Islands](../leetcode/200.number-of-islands.md)|Medium|
+|[130. Surrounded Regions](../leetcode/130.surrounded-regions.md)|Medium|
+|[695. Max Area of Island](../leetcode/695.max-area-of-island.md)|Medium|
+|[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium|
+|[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
+|[417. Pacific Atlantic Water Flow](../leetcode/417.pacific-atlantic-water-flow.md)|Medium|
+|[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)|Medium|
+|[1254. Number of Closed Islands](../leetcode/1254.number-of-closed-islands.md)|Medium|
+|[841. Keys and Rooms](../leetcode/841.keys-and-rooms.md)|Medium|
+|[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
+|[207. Course Schedule](../leetcode/207.course-schedule.md)|Medium|
+|[210. Course Schedule II](../leetcode/210.course-schedule-ii.md)|Medium|
+|[787. Cheapest Flights Within K Stops](../leetcode/787.cheapest-flights-within-k-stops.md)|Medium|
+|[743. Network Delay Time](../leetcode/743.network-delay-time.md)|Medium|
+|[399. Evaluate Division](../leetcode/399.evaluate-division.md)|Medium|
+|[1091. Shortest Path in Binary Matrix](../leetcode/1091.shortest-path-in-binary-matrix.md)|Medium|
+|[310. Minimum Height Trees](../leetcode/310.minimum-height-trees.md)|Medium|
 
-> * https://leetcode.com/problems/number-of-islands/ 14k m
-> * https://leetcode.com/problems/01-matrix/ 5k m
-> * https://leetcode.com/problems/network-delay-time/ 5k m
-> * https://leetcode.com/problems/flood-fill/ 4k e
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
-> * https://leetcode.com/problems/rotting-oranges/ 7k m
-> * https://leetcode.com/problems/minimum-height-trees/ 5k m
-> * https://leetcode.com/problems/surrounded-regions/ 5k m
-> * https://leetcode.com/problems/cheapest-flights-within-k-stops/ 5k m
-> * https://leetcode.com/problems/is-graph-bipartite/ 5k m
-> * https://leetcode.com/problems/evaluate-division/ 5k m
-> * https://leetcode.com/problems/word-ladder/ 8k h
+> * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
+> * https://leetcode.com/problems/number-of-enclaves/ 1k m
+> * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1k m
 
-> Topological Sort:
-> * https://leetcode.com/problems/course-schedule/ 9.6k m
-> * https://leetcode.com/problems/course-schedule-ii/ 7k m
-> * https://leetcode.com/problems/shortest-path-in-binary-matrix/ 3k m
+> Shortest Path: 
+> * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
+
 
 ## Dynamic Programming
 ### Reading List
@@ -257,6 +269,7 @@
 > * https://leetcode.com/problems/search-a-2d-matrix/ 8k
 > * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
 > * https://leetcode.com/problems/task-scheduler/ 6k
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
 
 ### Reading List:
 > * https://labuladong.gitee.io/algo/2/18/21/ (For Array)

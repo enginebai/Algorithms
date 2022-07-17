@@ -464,7 +464,7 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
 
 > Above is rough pseudocode, for the full implementation that covered every test cases and null-safety (and without `parent` pointer), we can see problem [450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md).
 
-### Tips for [Problem Solving](../topics/problems-solutions.md#tree)
+## Tips for [Problem Solving](../problems/problems-solutions.md#tree)
 * [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
     * *Top-Down* solution: It can be considered as **preorder** traversal order.
         ```kotlin

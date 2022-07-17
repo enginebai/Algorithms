@@ -65,7 +65,7 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 |--------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------|
 | 1. Random access.<br>2. No `next` field, saving space. (vs Linked List) | 1. Bad at insert/delete. (Copy to new array)<br>2. Bad at resize. (Copy to new array) | 1. Fast access.<br>2. Fix size |
 
-## Tips for [Problem Solving](../topics/problems-solutions.md#arrays)
+## Tips for [Problem Solving](../problems/problems-solutions.md#arrays)
 * Mind the bound or size of array. Think about empty array or with few element (1, 2, or less than the problem requirement).
 * Think about the case that the array with the duplicate or repeated element.
 * Is the array sorted (partially)? Yes, try *binary search*. No, try to sort first?
