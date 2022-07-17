@@ -236,6 +236,69 @@ It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to 
     * Graph with one or two nodes
     * Disjoint graphs
     * Graph with cycle (might not be able to resolve recursively)
+* For some problems, we might start searching from the path of **invalid state** or from the entrance of the borders in the graph, rather than the valid state, it might help to reduce the time complexity.
+* DFS Template for matrix:
+```kotlin
+val directions = arrayOf(
+    intArrayOf(-1, 0),  // up
+    intArrayOf(1, 0),   // down
+    intArrayOf(0, -1),  // left
+    intArrayOf(0, 1)    // right
+)
+fun problemSolving(graph: Array<IntArray>) {
+    for (m in 0 until graph.size) {
+        for (n in 0 until graph[m].size) {
+            // Check some conditions
+            if (graph[m][n] = ...) {
+                dfs(graph, m, n)
+            }
+        }
+    }
+}
+
+fun dfs(graph: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>) {
+    // Skip for some conditions
+    if (x < 0 || x > graph.size - 1 ||
+     y < 0 || y > graph[x].size ||
+      visited.contains(x to y) ||
+       ...) return
+
+    // Do something
+
+    visited.add(x to y)
+
+    // Then dfs the adjacency vertices
+    directions.forEach {
+        dfs(graph, x + it[0], y + it[1])
+    }
+}
+```
+
+* BFS Template (level anotation): 
+```kotlin
+fun bfs(graph: Array<IntArray>, source: Int) {
+    val queue = ArrayDeque<Int>()
+    val visited = hashSetOf<Int>()
+    var distances = 0
+    queue.addLast(source)
+    visited.add(source)
+    while (!queue.isEmpty()) {
+        val size = queue.size
+        for (i in 0 until size) {
+            val node = queue.removeFirst()
+            graph[node].forEach { adj -> 
+                if (!visited(adj)) {
+                    // Do something
+
+                    queue.addLast(adj)
+                    visited.add(adj)
+                }
+            }
+        }
+        distances++
+    }
+}
+```
 
 > Some nice templates + sample problems: https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions/
 
