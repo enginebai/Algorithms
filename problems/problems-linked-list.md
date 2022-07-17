@@ -171,6 +171,75 @@ fun reverseList(head: ListNode?): ListNode? {
 ```
 
 ----
+## [92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)
+
+**Idea!** We find the part to reverse and the before / after node of reverse list, reuse modified `reverseLinkedList(node)` with length to reverse, and relink the before / after node pointer to correct.
+
+```js
+1 -> 2 -> 3 -> 4 -> 5
+left = 2, right = 4
+
+// Traverse list to find the before / after pointer
+before = 1
+after = 5
+
+// Reverse from left to right
+reversedHead = reverseLinkedList(2 -> 3 -> 4), return 4
+
+// Relink before and after pointer to reverse list
+before -> reversedHead -> ... -> after
+```
+
+For the example: `1 -> 2 -> 3 -> 4 -> 5`, left = 2, right = 4, we have to find `1 -> 2` and `4 -> 5`, and reverse between `2 -> 3 -> 4` and relink `1` to the new head of reversed list and relink the last node of reversed list to `5`.
+
+```kotlin
+fun reverseBetween(head: ListNode?, left: Int, right: Int): ListNode? {
+    // We introduce sentinel for help
+    val sentinel = ListNode(-1)
+    sentinel.next = head
+    
+    // Looking for 1 -> 2
+    var nodeBeforeLeft: ListNode? = sentinel
+    var leftNode: ListNode? = head
+    var i = 1
+    while (i < left) {
+        nodeBeforeLeft = leftNode
+        leftNode = leftNode?.next
+        i++
+    }
+    // Lookin for 4 -> 5
+    var rightNode: ListNode? = nodeBeforeLeft
+    var nodeAfterRight: ListNode? = rightNode?.next
+    while (i <= right) {
+        rightNode = rightNode?.next
+        nodeAfterRight = rightNode?.next
+        i++
+    }
+    
+    val reverseHead = reverse(leftNode, right - left + 1)
+    // Relink 1 -> reversed list
+    nodeBeforeLeft?.next = reverseHead
+    // Relink reversed list -> 5
+    leftNode?.next = nodeAfterRight
+    return sentinel.next
+}
+
+private fun reverse(start: ListNode?, count: Int): ListNode? {
+    var previous: ListNode? = null
+    var current: ListNode? = start
+    var i = 0
+    while (current != null && i < count) {
+        val next = current?.next
+        current?.next = previous
+        previous = current
+        current = next
+        i++
+    }
+    return previous
+}
+```
+
+----
 ## [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
 
 ```kotlin
@@ -249,5 +318,55 @@ fun hasCycle(head: ListNode?): Boolean {
         fast = fast?.next?.next
     }
     return false
+}
+```
+
+----
+## [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
+
+```kotlin
+fun detectCycle(head: ListNode?): ListNode? {
+    val seenNodeSet = hashSetOf<ListNode>()
+    var node: ListNode? = head
+    while (node != null) {
+        if (seenNodeSet.contains(node)) {
+            return node
+        }
+        seenNodeSet.add(node)
+        node = node.next
+    }
+    return null
+}
+```
+
+We can use two pointers approach to solve this with `O(1)` space. (like [the solution](../leetcode/141.linked-list-cycle.md) with some extra steps)
+
+> Explanation: https://leetcode.cn/problems/linked-list-cycle-ii/solution/142-huan-xing-lian-biao-ii-jian-hua-gong-shi-jia-2/
+>
+> There are some equivalent two pointers implementation, but we have make sure that `slow` and `fast` pointers **start from the same node**!!.
+
+```kotlin
+fun detectCycle(head: ListNode?): ListNode? {
+    var slow: ListNode? = head
+    var fast: ListNode? = head
+
+    boolean containsCycle = false
+    while (slow != null) {
+        slow = show.next
+        fast = fast?.next?.next
+
+        if (slow == fast) {
+            containsCycle = true
+            break
+        }
+    }
+
+    if (!containsCycle) return null
+    slow = head
+    while (slow != fast) {
+        slow = slow?.next
+        fast = fast?.next
+    }
+    return slow
 }
 ```
