@@ -370,3 +370,149 @@ fun detectCycle(head: ListNode?): ListNode? {
     return slow
 }
 ```
+
+---
+## [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+
+* Sentinel node
+* Better way to concanate the remaining list.
+
+```kotlin
+fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
+    val sentinel = ListNode(0)
+    var result: ListNode? = sentinel
+    var node1: ListNode? = list1
+    var node2: ListNode? = list2
+    while (node1 != null && node2 != null) {
+        if (node1.`val` < node2.`val`) {
+            result?.next = node1
+            node1 = node1.next
+        } else {
+            result?.next = node2
+            node2 = node2.next
+        }
+        result = result?.next
+    }
+    // Chain the rest linked list
+    result?.next = if (node1 == null) node2 else node1
+    return sentinel.next
+}
+```
+
+### Recursion
+We can do this recursively:
+* Base case: if `list1` is null, then return another `list2`, vise verse.
+* Recursive case: `list1[i] + f(list1.next, list2)` if `list1[i] < list2[i]` and vice verse.
+
+```kotlin
+fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
+    if (list1 == null) return list2
+    if (list2 == null) return list1
+
+    if (list1.`val` < list2.`val`) {
+        list1?.next = mergeTwoLists(list1?.next, list2)
+        return list1
+    } else {
+        list2?.next = mergeTwoLists(list1, list2?.next)
+        return list2
+    }
+}
+```
+
+----
+## [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
+
+```kotlin
+fun isPalindrome(head: ListNode?): Boolean {
+        val size = getSize(head)
+        val middle = (size + 1) / 2
+        var i = 0
+        var middleNode: ListNode? = head
+        while (i < middle) {
+            middleNode = middleNode?.next
+            i++
+        }
+        val end = reverse(middleNode)
+        
+        var n1: ListNode? = head
+        var n2: ListNode? = end
+        // Here we check n2 only
+        // for size = 5, 1 -> 2 -> 3 -> 2 -> 1
+        //  n1 = 1 -> 2 -> 3 
+        //  n2 = 1 -> 2 (reversed)
+        while (n2 != null) {
+            if (n1?.`val` != n2?.`val`) return false
+            n1 = n1?.next
+            n2 = n2?.next
+        }
+        return true
+    }
+    
+    private fun getSize(head: ListNode?): Int {
+        var size = 0
+        var node: ListNode? = head
+        while (node != null) {
+            size++
+            node = node.next
+        }
+        return size
+    }
+    
+    private fun reverse(head: ListNode?): ListNode? {
+        var previous: ListNode? = null
+        var current: ListNode? = head
+        while (current != null) {
+            val next = current.next
+            current.next = previous
+            previous = current
+            current = next
+        }
+        return previous
+    }
+```
+
+Another way is using two pointers to locate the middle node, then reverse the node after the node, then check if the two parts are palindrome, and reverse back.
+
+```kotlin
+    fun isPalindrome(head: ListNode?): Boolean {
+    val middle = middleOfLinkedList(head)
+    val reverseHead = reverseLinkedList(middle?.next)
+
+    var start: ListNode? = head
+    var end: ListNode? = reverseHead
+    while (start != null && end != null) {
+        if (start?.`val` != end.`val`) {
+            result = false
+        }
+        start = start?.next
+        end = end.next
+    }
+    middle?.next = reverseLinkedList(reverseHead)
+    return result
+}
+
+private fun middleOfLinkedList(head: ListNode?): ListNode? {
+    var slow: ListNode? = head
+    var fast: ListNode? = head
+    // Slight different from the problem: 876. Middle of the Linked List, because we are looking for the node to break the list into two part to test if palindrome, (not the true middle node)
+    // For [1 -> 2 -> 3 -> 3 -> 2 -> 1] we would find the first [3], not the second [3], but in problem 876. it should be the second [3].
+    while (fast?.next != null && fast.next.next != null) {
+        slow = slow?.next
+        fast = fast.next?.next
+    }
+    return slow
+}
+
+private fun reverseLinkedList(node: ListNode?): ListNode? {
+    var previous: ListNode? = null
+    var current: ListNode? = node
+    while (current != null) {
+        val next = current.next
+        current.next = previous
+
+        previous = current
+        current = next
+    }
+    return previous
+}
+```

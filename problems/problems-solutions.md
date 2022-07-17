@@ -174,13 +174,11 @@
 |[743. Network Delay Time](../leetcode/743.network-delay-time.md)|Medium|
 |[399. Evaluate Division](../leetcode/399.evaluate-division.md)|Medium|
 |[1091. Shortest Path in Binary Matrix](../leetcode/1091.shortest-path-in-binary-matrix.md)|Medium|
+|[310. Minimum Height Trees](../leetcode/310.minimum-height-trees.md)|Medium|
 
 > * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
 > * https://leetcode.com/problems/number-of-enclaves/ 1k m
 > * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1k m
-
-> Topological Sort:
-> * |[310. Minimum Height Trees](../leetcode/310.minimum-height-trees.md)|Medium|
 
 > Shortest Path: 
 > * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
