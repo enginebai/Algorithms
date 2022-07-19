@@ -190,11 +190,10 @@
 |[509. Fibonacci Number](../leetcode/509.fibonacci-number.md)|Easy|
 
 ### Reading List
-> * https://www.geekxh.com/1.2.%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/205.html
 > * https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
 > * https://labuladong.gitee.io/algo/3/
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
->   * See above linke and practice **by sub-topics**
+>   * See above link and practice **by sub-topics**
 >   * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
 >   * https://leetcode.com/discuss/general-discussion/592146/dynamic-programming-summary
 >   * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months

@@ -13,21 +13,6 @@ The DP algorithm is applicable when the subproblems are **dependent**, the subpr
 DP is typically applied to *optimization problems*, there will be many possible solutions with a *value* and we wish to find a solution with optimal value which is minimum or maximum.
 
 ## Solve Problems [Recursively](../topics/recursion.md)
-
-```
-Solution representation classification based on shape of graph:
-
-| Methods             | Graph   |
-|---------------------|---------|
-| Brute Force         | Star    |
-| Divide & Conquer    | Tree    |
-| Decrease & Conquer  | Chain   |
-| Dynamic Programming | Graph   |
-| Greedy              | Subgraph|
-
-Recursive function call represents a vertex in a graph, and a directed edge from `A` to `B` if `B` calls `A`. And the graph of recursive calls must be acyclic. (otherwise it never terminates) That is, function call sequence is the topological order on the graph, and the subproblem dependencies **overlap** in the graph.
-```
-
 To solve a problem using DP, we follow the *recursive algorithm design paradigm*: `SRT BOT`
 * **S**ubprobem definition: 
     * Describe **in words** in terms of parameters.
@@ -70,7 +55,7 @@ fun fibonacci(n: Int): Int {
 }
 ```
 
-## DP = Recursion + Memoization
+### DP = Recursion + Memoization
 DP is the recursion with memoization:
 * If we solved before, just reuse the solution.
 * Otherwise, we compute and store it, return that solution.
@@ -95,12 +80,8 @@ fun solveProblem(subproblem) {
 
 We might need to maintain auxiliary information (such as parent pointer to the subproblem) in addition to reconstruct the answer we are optimizing.
 
-### How to Relate Subproblem Solutions
-1. Try to identify the question about a subproblem.
-2. Then locally brute-force the question, try all possible answers, and take the best one. The key for efficiency is that for the questions having a small number of possible answer, we can brute-force it very quickly.
-
 ## Steps of Dynamic Programming
-1. Show the problem can be broken down into optimal subproblems.
+1. Try to break down the problem into optimal subproblems.
 2. Define the solution of original problem recursively in terms of the solution to subproblem.
 3. Compute the value of optimal solution of subproblem in a bottom-up fashion.
 4. Constuct the optimal solution to them original problem from the solutions to subproblems of step 3. (memoization) and *backtracking*.
@@ -114,9 +95,22 @@ For the assembly line scheduling problem (CLRS P.324):
 4. Construct the fast path from the stored *backtrack* of step 3.
 
 ## Elements of Dynamic Programming
-* **Optimal substructure**: The optimal solution to the original problem contains within its optimal solutions to subproblems. That is, we can build the solution from the solutions to subproblem.
-* **Overlapping subproblem**: The problem can be broken down into *overlapping subproblems". We can develop the recursive algorithm that solves the same subproblems over and over (memoization).
+* **Optimal substructure**: The optimal solution to the original problem contains within its optimal solutions to subproblems. That is, we can build the solution to the original problem from the solutions to subproblem.
+* **Overlapping subproblem**: We can break down the problem into *overlapping subproblems". Then we can develop the recursive algorithm that solves the same subproblems over and over (memoization).
 * **Memoization**: We maintain a table with subproblem solutions so that we can re-use to build the solution from bottom-up.
+
+> This might be optional!
+Solution representation classification based on shape of graph:
+
+| Methods             | Graph   |
+|---------------------|---------|
+| Brute Force         | Star    |
+| Divide & Conquer    | Tree    |
+| Decrease & Conquer  | Chain   |
+| Dynamic Programming | Graph   |
+| Greedy              | Subgraph|
+
+Recursive function call represents a vertex in a graph, and a directed edge from `A` to `B` if `B` calls `A`. And the graph of recursive calls must be acyclic. (otherwise it never terminates) That is, function call sequence is the topological order on the graph, and the subproblem dependencies **overlap** in the graph.
 
 ## 0-1 Knapsack Problem
 
@@ -186,7 +180,7 @@ knapsack(10, values.size - 1)
 * **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
 * **Space Complexity**: `O(W * N)` for 2D array for memoization.
 
-## Tips for Problem Solving
+## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
 ### When to use DP? 
 The problem meets the both two characteristics:
 1. Solve the optimal solution (often, but not always), for example:
@@ -194,11 +188,22 @@ The problem meets the both two characteristics:
     * The maximum profit
     * How many ways are there to do...
     * What's the longest/shortest possible...
-2. The solution of original problem comes from eariler calculated solution (of the subproblem). That is, the later step will be affected by the eariler step.
+2. The solution of original problem comes from eariler calculated solution (from the overlapped subproblems). That is, the later step will be affected by the eariler step.
 
 Sometimes, only meets the first but not the second might be the greedy algorithm, not DP.
 
-#### Memoization Recipe
+### Problem Solving Steps
+Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the solution of subproblems:
+1. Define the `dp[i]` and the definition of index.
+2. Define the recursive steps a.k.a state transformation formular, such as `dp[i] = dp[i - 1] + dp[i - 2]`
+3. Define the base case (initialization of `dp[i]`): `d[0] = 0`, `dp[1] = 1`.
+4. Define how to iterate to get the original problem from subproblem.
+
+### How to Relate Subproblem Solutions
+1. Try to identify the question about a subproblem.
+2. Then locally brute-force the question, try all possible answers, and take the best one. The key for efficiency is that for the questions having a small number of possible answer, we can brute-force it very quickly.
+
+### Memoization Recipe
 Overall, try to think about your recursive functions call in terms of a **tree**, try to brute force all solutions, then you can recognize **where can I optimize the brute force solution.
 
 1. Make it work.
