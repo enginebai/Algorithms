@@ -3,7 +3,9 @@ The *dynamic programming* (DP) generalizes *divide and conquer* method, solves p
 
 > The word "programming" refers to the "tabular" method, not coding.
 
-The result of the previous answers helps us in choosing the future ones, and we have to break up a problem into a series of overlapping subproblem (top-down), and build up solutions from bottom subproblems to larger sub problems, and finally to the original problem (bottom-up).
+We have to break down a problem into a series of overlapping subproblems (top-down), and build up solutions from bottom subproblems to larger subproblems, and finally to the original problem (bottom-up). 
+
+> The result of the previous answers helps us in choosing the future answers.
 
 The DP algorithm is applicable when the subproblems are **dependent**, the subproblems share subsubproblems. It solves every subsubproblem once and saves its answer in a table (*programming*), thereby avoiding recompute every time the subsubproblem. (The subproblem dependencies from a directed acyclic graph instead of tree.) DP is a powerful technique that solves problems in `O(n ^ 2)` or `O(n ^ 3)` for which navie or brute-force approach would take exponential time. 
 
@@ -20,7 +22,7 @@ Solution representation classification based on shape of graph:
 | Dynamic Programming | Graph   |
 | Greedy              | Subgraph|
 
-Recursive function call represents a vertex in a graph, and a directed edge from `A` to `B` if `B` calls `A`. And the graph of recursive calls must be acyclic. (otherwise it never terminates) --> Function call sequence is the topological order on the graph. And DP if subproblem dependencies **overlap** in the graph.
+Recursive function call represents a vertex in a graph, and a directed edge from `A` to `B` if `B` calls `A`. And the graph of recursive calls must be acyclic. (otherwise it never terminates) That is, function call sequence is the topological order on the graph, and the subproblem dependencies **overlap** in the graph.
 
 To solve a problem using DP, we follow the *recursive algorithm design paradigm*: `SRT BOT`
 * **S**ubprobem definition: 
@@ -45,6 +47,25 @@ The time complexity is exponential and there are some duplicate calculations, we
 ### Memoization
 **Idea!** Remember and re-use the solution to subproblems, we maintain hash table mapping to subproblem, and the recursive function calls return the stored value or compute + store if not exist. For Fibonacci Numbers, we only have to calculate `F(1)`, `F(2)`...`F(n - 1)`, store and re-use for `F(n)`, that will be `O(n)` calculation.
 
+```kotlin
+// Recursive
+fun fibonacci(n: Int): Int {
+    return if (n == 0 || n == 1) n
+    else fibonacci(n - 1) + fabonacci(n - 2)
+}
+
+// With memoization
+fun fibonacci(n: Int): Int {
+    val dp = IntArray(n) { _ -> 0 }
+    dp[0] = 0
+    dp[1] = 1
+    for (i in 2..n) {
+        dp[i] = dp[i - 1] + dp[i - 2]
+    }
+    return dp[n]
+}
+```
+
 The intuition behind DP is that we **trade space for time**. DP is the recursion with memoization:
 
 ```kotlin
@@ -68,14 +89,14 @@ fun solveProblem(subproblem) {
 We might need to maintain auxiliary information (such as parent pointer to the subproblem) in addition to reconstruct the answer we are optimizing.
 
 ### How to Relate Subproblem Solutions
-1. Try to identify the queation about a subproblem.
+1. Try to identify the question about a subproblem.
 2. Then locally brute-force the question, try all possible answers, and take the best one. The key for efficiency is that for the questions having a small number of possible answer, we can brute-force it very quickly.
 
 ## Steps of Dynamic Programming
 1. Show the problem can be broken down into optimal subproblems.
 2. Define the solution of original problem recursively in terms of the solution to subproblem.
 3. Compute the value of optimal solution of subproblem in a bottom-up fashion.
-4. Constuct the optimal solution of original problem from step 3. (memoization) and *backtrack*.
+4. Constuct the optimal solution of original problem from step 3. (memoization) and *backtracking*.
 
 For the assembly line scheduling problem (CLRS P.324):
 
@@ -158,14 +179,8 @@ knapsack(10, values.size - 1)
 * **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
 * **Space Complexity**: `O(W * N)` for 2D array for memoization.
 
-> TODO: study + coding from [动态规划：关于01背包问题，你该了解这些！](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-1.md)
-
-## Problems & Solutions
-| Problem         | Solution | Difficulty |
-|------------------|----------|------------|
-
-### Tips for Problem Solving
-#### When to use DP? 
+## Tips for Problem Solving
+### When to use DP? 
 The problem meets the both two characteristics:
 1. Solve the optimal solution (often, but not always), for example:
     * The minimum cost
@@ -198,6 +213,6 @@ Overall, try to think about your recursive functions call in terms of a **tree**
 - [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
 - [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/dynamic-programming
 - [ ] https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
-- [/] [LC Learn](https://leetcode.com/explore/learn/card/dynamic-programming/) // Some topics are locked
+- [ ] [LC Learn](https://leetcode.com/explore/learn/card/dynamic-programming/) // Some topics are locked
 - ~~[ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#dynamic-programming)~~
 - [ ] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/dynamic-programming/) // Not too much notes, some references posts only
