@@ -1,17 +1,20 @@
 # Dynamic Programming
 The *dynamic programming* (DP) generalizes *divide and conquer* method, solves problems by combining the solutions to subproblems.
 
-> The word "programming" refers to the "tabular" method, not coding.
+## DP = Subproblem + Re-use!
+The basic idea of dynamic programming is to take the problem, split into subproblems, solve those subproblems and reuse the solutions to the subproblems.
 
 We have to break down a problem into a series of overlapping subproblems (top-down), and build up solutions from bottom subproblems to larger subproblems, and finally to the original problem (bottom-up). 
 
 > The result of the previous answers helps us in choosing the future answers.
 
-The DP algorithm is applicable when the subproblems are **dependent**, the subproblems share subsubproblems. It solves every subsubproblem once and saves its answer in a table (*programming*), thereby avoiding recompute every time the subsubproblem. (The subproblem dependencies from a directed acyclic graph instead of tree.) DP is a powerful technique that solves problems in `O(n ^ 2)` or `O(n ^ 3)` for which navie or brute-force approach would take exponential time. 
+The DP algorithm is applicable when the subproblems are **dependent**, the subproblems share subsubproblems. It solves every subsubproblem once and saves its answer in a table (*programming*), thereby avoiding recompute every time the subsubproblem. DP is a powerful technique that solves problems in polynomial time for which naive or brute-force approach would take exponential time. 
 
 DP is typically applied to *optimization problems*, there will be many possible solutions with a *value* and we wish to find a solution with optimal value which is minimum or maximum.
 
 ## Solve Problems [Recursively](../topics/recursion.md)
+
+```
 Solution representation classification based on shape of graph:
 
 | Methods             | Graph   |
@@ -23,6 +26,7 @@ Solution representation classification based on shape of graph:
 | Greedy              | Subgraph|
 
 Recursive function call represents a vertex in a graph, and a directed edge from `A` to `B` if `B` calls `A`. And the graph of recursive calls must be acyclic. (otherwise it never terminates) That is, function call sequence is the topological order on the graph, and the subproblem dependencies **overlap** in the graph.
+```
 
 To solve a problem using DP, we follow the *recursive algorithm design paradigm*: `SRT BOT`
 * **S**ubprobem definition: 
@@ -45,7 +49,7 @@ Let's take a look at how to solve *Fibonacci Numbers* using `SRT BOT` framework:
 The time complexity is exponential and there are some duplicate calculations, we can use *memoization* to avoid the re-calculation.
 
 ### Memoization
-**Idea!** Remember and re-use the solution to subproblems, we maintain hash table mapping to subproblem, and the recursive function calls return the stored value or compute + store if not exist. For Fibonacci Numbers, we only have to calculate `F(1)`, `F(2)`...`F(n - 1)`, store and re-use for `F(n)`, that will be `O(n)` calculation.
+**Idea!** Remember and re-use the solution to subproblems, we maintain hash table mapping to subproblem, and the recursive function calls return the stored value or compute + store if not exist. For Fibonacci Numbers, we only have to calculate `F(1)`, `F(2)`...`F(n - 1)`, store and re-use for `F(n)`, that will be `O(n)` calculation. The intuition behind DP is that we **trade space for time**. 
 
 ```kotlin
 // Recursive
@@ -66,7 +70,10 @@ fun fibonacci(n: Int): Int {
 }
 ```
 
-The intuition behind DP is that we **trade space for time**. DP is the recursion with memoization:
+## DP = Recursion + Memoization
+DP is the recursion with memoization:
+* If we solved before, just reuse the solution.
+* Otherwise, we compute and store it, return that solution.
 
 ```kotlin
 fun solveProblem(subproblem) {
@@ -96,7 +103,7 @@ We might need to maintain auxiliary information (such as parent pointer to the s
 1. Show the problem can be broken down into optimal subproblems.
 2. Define the solution of original problem recursively in terms of the solution to subproblem.
 3. Compute the value of optimal solution of subproblem in a bottom-up fashion.
-4. Constuct the optimal solution of original problem from step 3. (memoization) and *backtracking*.
+4. Constuct the optimal solution to them original problem from the solutions to subproblems of step 3. (memoization) and *backtracking*.
 
 For the assembly line scheduling problem (CLRS P.324):
 
