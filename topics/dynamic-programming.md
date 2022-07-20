@@ -12,6 +12,30 @@ The DP algorithm is applicable when the subproblems are **dependent**, the subpr
 
 DP is typically applied to *optimization problems*, there will be many possible solutions with a *value* and we wish to find a solution with optimal value which is minimum or maximum.
 
+We might need to maintain auxiliary information (such as parent pointer to the subproblem) in addition to reconstruct the answer we are optimizing.
+
+### DP = Recursion + Memoization
+* If we solved before, just reuse the solution from memoization.
+* Otherwise, we compute and store it, return that solution.
+
+```kotlin
+fun solveProblem(subproblem) {
+    // We check the memo first, return once if record exists
+    if (subproblem in memo) {
+        return memo[subproblem]
+    } else {
+        // We calculate solution to a subproblem
+        val solution = if (subproblem is base case) 
+            base case
+        else {
+            recursion via relation
+        }
+        // And record into a memo
+        memo[subproblem] = solution
+    }
+}
+```
+
 ## Solve Problems [Recursively](../topics/recursion.md)
 To solve a problem using DP, we follow the *recursive algorithm design paradigm*: `SRT BOT`
 * **S**ubprobem definition: 
@@ -45,7 +69,8 @@ fun fibonacci(n: Int): Int {
 
 // With memoization
 fun fibonacci(n: Int): Int {
-    val dp = IntArray(n) { _ -> 0 }
+    if (n <= 1) return n
+    val dp = IntArray(n + 1)
     dp[0] = 0
     dp[1] = 1
     for (i in 2..n) {
@@ -55,34 +80,9 @@ fun fibonacci(n: Int): Int {
 }
 ```
 
-### DP = Recursion + Memoization
-DP is the recursion with memoization:
-* If we solved before, just reuse the solution.
-* Otherwise, we compute and store it, return that solution.
-
-```kotlin
-fun solveProblem(subproblem) {
-    // We check the memo first, return once if record exists
-    if (subproblem in memo) {
-        return memo[subproblem]
-    } else {
-        // We calculate solution to a subproblem
-        val solution = if (subproblem is base case) 
-            base case
-        else {
-            recursion via relation
-        }
-        // And record into a memo
-        memo[subproblem] = solution
-    }
-}
-```
-
-We might need to maintain auxiliary information (such as parent pointer to the subproblem) in addition to reconstruct the answer we are optimizing.
-
 ## Steps of Dynamic Programming
 1. Try to break down the problem into optimal subproblems.
-2. Define the solution of original problem recursively in terms of the solution to subproblem.
+2. Define the solution to the original problem recursively in terms of the solution to subproblems.
 3. Compute the value of optimal solution to the subproblems in a bottom-up fashion.
 4. Constuct the optimal solution to the original problem from the solutions to subproblems of step 3. (memoization) and *backtracking*.
 
@@ -183,12 +183,12 @@ knapsack(10, values.size - 1)
 ## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
 ### When to use DP? 
 The problem meets the both two characteristics:
-1. Solve the optimal solution (often, but not always), for example:
+1. Solve the optimal problem (often, but not always), for example:
     * The minimum cost
     * The maximum profit
     * How many ways are there to do...
     * What's the longest/shortest possible...
-2. The solution of original problem comes from eariler calculated solution (from the overlapped subproblems). That is, the later step will be affected by the eariler step.
+2. The solution of original problem comes from eariler calculated solution (from the overlapping subproblems), that is, the later step will be affected by the eariler step.
 
 Sometimes, only meets the first but not the second might be the greedy algorithm, not DP.
 
@@ -204,7 +204,7 @@ Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the
 2. Then locally brute-force the question, try all possible answers, and take the best one. The key for efficiency is that for the questions having a small number of possible answer, we can brute-force it very quickly.
 
 ### Memoization Recipe
-Overall, try to think about your recursive functions call in terms of a **tree**, try to brute force all solutions, then you can recognize **where can I optimize the brute force solution.
+Overall, try to think about your recursive functions call in terms of a **tree**, try to brute force all solutions, then you can recognize **where** can I optimize the brute force solution.
 
 1. Make it work.
     * Visualize the problem as a *tree*.
@@ -214,7 +214,7 @@ Overall, try to think about your recursive functions call in terms of a **tree**
 2. Make it efficient.
     * Design the *memo* data structure.
     * Check the memo first and return it.
-    * Store into memo if it doesn't exist and calculate the solution.
+    * Otherwise, calculate the solution and store into memo if it doesn't exist.
 
 ## Resources
 - [X] CLRS
