@@ -189,6 +189,7 @@
 |------------------|------------|
 |[509. Fibonacci Number](../leetcode/509.fibonacci-number.md)|Easy|
 |[70. Climbing Stairs](../leetcode/70.climbing-stairs.md)|Easy|
+|[746. Min Cost Climbing Stairs](../leetcode/746.min-cost-climbing-stairs.md)|Easy|
 
 ### Reading List
 > * https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
