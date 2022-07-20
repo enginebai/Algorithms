@@ -2,9 +2,9 @@
 The *dynamic programming* (DP) generalizes *divide and conquer* method, solves problems by combining the solutions to subproblems.
 
 ## DP = Subproblem + Re-use!
-The basic idea of dynamic programming is to take the problem, split into subproblems, solve those subproblems and reuse the solutions to the subproblems.
+The basic idea of dynamic programming is to split the problem into subproblems, solve those subproblems and reuse the solutions to the subproblems.
 
-We have to break down a problem into a series of overlapping subproblems (top-down), and build up solutions from bottom subproblems to larger subproblems, and finally to the original problem (bottom-up). 
+We are going to break down a problem into a series of overlapping subproblems (top-down), and build up solutions from bottom subproblems to larger subproblems, and finally to the original problem (bottom-up). 
 
 > The result of the previous answers helps us in choosing the future answers.
 
@@ -83,8 +83,8 @@ We might need to maintain auxiliary information (such as parent pointer to the s
 ## Steps of Dynamic Programming
 1. Try to break down the problem into optimal subproblems.
 2. Define the solution of original problem recursively in terms of the solution to subproblem.
-3. Compute the value of optimal solution of subproblem in a bottom-up fashion.
-4. Constuct the optimal solution to them original problem from the solutions to subproblems of step 3. (memoization) and *backtracking*.
+3. Compute the value of optimal solution to the subproblems in a bottom-up fashion.
+4. Constuct the optimal solution to the original problem from the solutions to subproblems of step 3. (memoization) and *backtracking*.
 
 For the assembly line scheduling problem (CLRS P.324):
 

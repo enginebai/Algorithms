@@ -71,40 +71,40 @@ class LinkedListStack<T>: Stack<T> {
 ```kotlin
 class StaticArrayStack<T>(private val capacity: Int): Stack<T> {
     private val array = arrayOfNulls<T>(capacity)
-    private var top = 0
+    private var top = -1
 
     override fun push(item: T) {
-        if (top == capacity) throw StackOverflowException("Stack is full")
-        array[top++] = item
+        if (top + 1 == capacity) throw StackOverflowException("Stack is full")
+        array[++top] = item
     }
 
     override fun pop(): T? {
         if (isEmpty()) throw StackUnderflowException("Stack is empty")
         // Top will be ahead by one when calling push(), so we have to decrement first
-        return array.getOrNull(--top)
+        return array.getOrNull(top--)
     }
 
     override fun peek(): T? {
         if (isEmpty()) throw StackUnderflowException("Stack is empty")
-        return array.getOrNull(top - 1)
+        return array.getOrNull(top)
     }
 
-    override fun isEmpty(): Boolean = top == 0
+    override fun isEmpty(): Boolean = top == -1
 }
 
 class DynamicArrayStack<T>: Stack<T> {
     // We skip the amorization and ensureCapacity() + grow() functions.
     private val dynamicArray = arrayListOf<T>()
-    private var top = 0
+    private var top = -1
 
     override fun push(item: T) {
         dynamicArray.add(item)
         top++
     }
 
-    override fun pop(): T? = dynamicArray.getOrNull(--top)
-    override fun peek(): T? = dynamicArray.getOrNull(top - 1)
-    override fun isEmpty(): Boolean = top == 0
+    override fun pop(): T? = dynamicArray.getOrNull(top--)
+    override fun peek(): T? = dynamicArray.getOrNull(top)
+    override fun isEmpty(): Boolean = top == -1
 }
 ```
 
