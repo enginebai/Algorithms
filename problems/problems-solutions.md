@@ -188,6 +188,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[509. Fibonacci Number](../leetcode/509.fibonacci-number.md)|Easy|
+|[70. Climbing Stairs](../leetcode/70.climbing-stairs.md)|Easy|
 
 ### Reading List
 > * https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
@@ -202,7 +203,6 @@
 > * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ 16k
 > * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ 7k
 > * Some stock problems variants
-> * https://leetcode.com/problems/climbing-stairs/ 12k
 > * https://leetcode.com/problems/coin-change/ 12k
 > * https://leetcode.com/problems/coin-change-2/ 5k
 > * https://leetcode.com/problems/house-robber/ 12k
