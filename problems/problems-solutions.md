@@ -52,7 +52,7 @@
 > * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
 > * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
 
-## Linked List
+## [Linked List](../problems/problems-linked-list.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
@@ -77,7 +77,7 @@
 > * https://leetcode.com/problems/sort-list/
 > * https://leetcode.com/problems/partition-list/
 
-## Stack & Queue
+## [Stack & Queue](../problems/problems-stack-queue.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[155. Min Stack](../leetcode/155.min-stack.md)|Easy|
