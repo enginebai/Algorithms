@@ -86,6 +86,10 @@ fun fibonacci(n: Int): Int {
 3. Compute the value of optimal solution to the subproblems in a bottom-up fashion.
 4. Constuct the optimal solution to the original problem from the solutions to subproblems of step 3. (memoization) and *backtracking*.
 
+> Update note from this ref: https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning
+> 
+> Merge the [Problem Solving Steps](#problem-solving-steps)
+
 For the assembly line scheduling problem (CLRS P.324):
 
 ![Assembly Line Scheduling](../media/assembly-line-scheduling.png)
@@ -197,7 +201,7 @@ Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the
 1. Define the `dp[i]` and the definition of index.
 2. Define the recursive steps a.k.a state transformation formular, such as `dp[i] = dp[i - 1] + dp[i - 2]`
 3. Define the base case (initialization of `dp[i]`): `d[0] = 0`, `dp[1] = 1`.
-4. Define how to iterate to get the original problem from subproblem.
+4. Define how to iterate to get the original problem from building up the solution to subproblems.
 
 ### How to Relate Subproblem Solutions
 1. Try to identify the question about a subproblem.
