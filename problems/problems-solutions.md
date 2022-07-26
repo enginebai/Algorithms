@@ -14,8 +14,6 @@
 |[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
 |[136. Single Number](../leetcode/136.single-number.md)|Easy|
 |[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Easy|
-|[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
-|[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
@@ -193,6 +191,8 @@
 |[62. Unique Paths](../leetcode/62.unique-paths.md)|Medium|
 |[63. Unique Paths II](../leetcode/63.unique-paths.ii.md)|Medium|
 |[96. Unique Binary Search Trees](../leetcode/96.unique-binary-search-trees.md)|Medium|
+|[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
+|[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 
 ### Reading List
 > * https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
@@ -204,9 +204,6 @@
 >   * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
 
 ### Problems List
-> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ 16k
-> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ 7k
-> * Some stock problems variants
 > * https://leetcode.com/problems/coin-change/ 12k
 > * https://leetcode.com/problems/coin-change-2/ 5k
 > * https://leetcode.com/problems/house-robber/ 12k

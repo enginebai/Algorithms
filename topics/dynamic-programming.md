@@ -203,6 +203,8 @@ Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the
 3. Define the base case (initialization of `dp[i]`): `d[0] = 0`, `dp[1] = 1`.
 4. Define how to iterate to get the original problem from building up the solution to subproblems.
 
+> TODO: Must practice!! [Top-Down + Bottom-up Optimization](https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning)
+
 ### How to Relate Subproblem Solutions
 1. Try to identify the question about a subproblem.
 2. Then locally brute-force the question, try all possible answers, and take the best one. The key for efficiency is that for the questions having a small number of possible answer, we can brute-force it very quickly.
