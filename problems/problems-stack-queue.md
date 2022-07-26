@@ -385,3 +385,55 @@ fun minRemoveToMakeValid(s: String): String {
 * **Space Complexity**: `O(n)` for hash table and stack.
 
 > Another solution, we can iterate the string from left to right, to remove invalid right parentheses, then iterate from right to left to remove the invalid left parentheses.
+
+----
+## [394. Decode String](https://leetcode.com/problems/decode-string/)
+
+Let's use `30[a20[bc]d]efg` as example:
+* We iterate all character and determine what the character is.
+    * For number digit, we will iterate until we meet `[`. and push the number, for example `123[`, we will parse to be `123` and push `123`.
+    * For `[` or letter, just push into stack.
+    * For `]`, we will pop out until we meet the number in stack, (it might be `123 / [ / abc` in stack when meeting `]` at that moment) and we will copy that string times (it will be "adb" x 100 times and push back the result into stack.
+* Once we finish all strings copy times, we pop out from stack to form the result string.
+
+```kotlin
+fun decodeString(s: String): String {
+    // x100[a99[bc]y]z
+    val stack = Stack<String>()
+    var number = 0
+    for (i in 0 until s.length) {
+        if (s[i].isDigit()) {
+            // We can't call `toInt()` which returns the Ascii code number.
+            number = (number * 10) + (s[i] - '0')
+        } else if (s[i] == '[') {
+            stack.push(number.toString())
+            // Remember to reset the number
+            number = 0
+            stack.push(s[i].toString())
+        } else if (s[i] == ']') {
+            val strList = mutableListOf<String>()
+            while (stack.isNotEmpty() && stack.peek() != "[") {
+                strList.add(0, stack.pop())
+            }
+            // Pop out "["
+            stack.pop()
+            // Pop out the number
+            val copyTimes = stack.pop().toInt()
+            val str = strList.joinToString("")
+            val copyStr = StringBuilder()
+            for (j in 0 until copyTimes) {
+                copyStr.append(str)
+            }
+            stack.push(copyStr.toString())
+        } else {
+            stack.push(s[i].toString())
+        }
+    }
+
+    val result = mutableListOf<String>()
+    while (stack.isNotEmpty()) {
+        result.add(0, stack.pop())
+    }
+    return result.joinToString("")
+}
+```
