@@ -193,10 +193,9 @@
 |[96. Unique Binary Search Trees](../leetcode/96.unique-binary-search-trees.md)|Medium|
 |[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
+|[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
 
 ### Reading List
-> * https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
-> * https://labuladong.gitee.io/algo/3/
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
 >   * See above link and practice **by sub-topics**
 >   * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
@@ -223,6 +222,7 @@
 > * https://leetcode.com/problems/maximal-rectangle/ 6k
 > * https://leetcode.com/problems/edit-distance/ 8k
 > * https://leetcode.com/problems/ugly-number-ii/ 4k m
+> * https://leetcode.com/problems/longest-increasing-path-in-a-matrix/ 6k h
 
 ## Backtracking
 ### Reading List

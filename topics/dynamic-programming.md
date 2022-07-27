@@ -100,10 +100,42 @@ For the assembly line scheduling problem (CLRS P.324):
 
 ## Elements of Dynamic Programming
 * **Optimal substructure**: The optimal solution to the original problem contains within its optimal solutions to subproblems. That is, we can build the solution to the original problem from the solutions to subproblem.
-* **Overlapping subproblem**: We can break down the problem into *overlapping subproblems". Then we can develop the recursive algorithm that solves the same subproblems over and over (memoization).
+* **Overlapping subproblems**: We can break down the problem into *overlapping subproblems". Then we can develop the recursive algorithm that solves the same subproblems over and over (memoization).
 * **Memoization**: We maintain a table with subproblem solutions so that we can re-use to build the solution from bottom-up.
 
+動態規劃問題一般來說就是求極值，要求極值就要窮舉所有可行的答案，然後從中找最佳解，這時候就需要正確的 **「狀態轉移方程式」** 才能窮舉所有可行答案，另外問題也要具有 **「最佳的子結構」(Optimal Substructure)** ，要可以透過子問題的答案推導出原問題的答案，還有 **「重疊的子問題」(Overlapping Subproblems)**，透過表格紀錄子問題答案來優化窮舉的過程，減少不必要的計算。
+
+一般思考的框架會是：
+```python
+# Top-Down Dynamic Programming
+def findOptimal(狀態1, 狀態2, ...): 
+    for 選擇/動作 in 所有可能的選擇/動作:
+        # 可能會是前幾個狀態去求最佳解
+        result = 求最佳解(result, findOptimal(狀態1, 狀態2, ...))
+    return result
+
+# Or
+# Bottom-Up Dynamic Programming
+def findOptimal(狀態1, 狀態2, ...):
+    ## Define base cases
+    dp[0][0][...] = xxx
+
+    ## Build up the solution to subproblems in bottom-up fasion
+    for 狀態1 in 狀態 1 所有可能的值:
+        for 狀態2 in 狀態 2 所有可能的值:
+            for ...:
+                dp[狀態1][狀態2][...] = 求最佳解(選擇/動作1, 選擇/動作2, ...)
+    
+    ## Return what the problem is asked
+    return dp[x][y][...]
+```
+所以 **動態規劃基本上來說就是窮舉「狀態」然後在「選擇」中找出最佳解**。
+
+> Source: https://labuladong.github.io/algo/
+
+
 > This might be optional!
+
 Solution representation classification based on shape of graph:
 
 | Methods             | Graph   |
@@ -184,6 +216,93 @@ knapsack(10, values.size - 1)
 * **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
 * **Space Complexity**: `O(W * N)` for 2D array for memoization.
 
+## Best Time to Buy and Sell Stock Problems
+| Problem          | Difficulty |
+|------------------|------------|
+|[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
+|[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
+|[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
+
+### State Transitions
+For this series of stock problems, we can apply the framework we mentioned above:
+```py
+## Iterate all states
+for state1 in all possible values of state1:
+    for state2 in all possible values of state2:
+        for ...:
+            dp[state1][state2][...] = selectOptimal(selection1, selection2, ...)
+```
+
+In order to solve by this framework, we have to define the states and selections. 
+
+#### States
+* For `state1`, it's the state of the `i-th` day, it's very straightforward.
+* For `state2`, we might own the cash or the stock on specific day, so there are two states: `Cash` (you don't buy stock or sell back to cash out) or `Stock` (you bought it or cash in).
+* For `state3`, there might be `k` times transactions limit.
+
+#### Selections
+And you have three selections (actions): `Do Nothing`, `Buy` and `Sell`.  Therefore, there are two actions for cash/stock state on `i-th` day state: you either can do nothing or buy/sell the stock (depend on whether you bought before or not), so the state machine for stock transaction on `i-th` day is
+![](../media/121.best-time-to-buy-and-sell-stock.png)
+
+> For simplify, we use `state1` and `state2` only as example.
+
+* If you stay in `Cash` state on `i - 1` day, then you can do nothing (`Cash`) or buy stock on `i` day (`Stock`).
+* So on for `Stock` state.
+
+The max profit is the `Cash` state on `n-th` day, and we have calculate the two states with different available selections (actions) from the first day to `n-th` day. 
+
+In the framework, it would be:
+```py
+maxK = K
+# State1: On i-th day
+for i in prices:
+    # State2: Cash (0) or Stock (1)
+    for j in 0 or 1:
+        ## (Optional): k times transactions limit
+        for k in 1 to maxK:
+            dp[i][j][k] = max(Do Nothing, Buy, Sell)
+```
+
+The `dp[i][j][k]` can interpreted as "the profit on `i-th` day, with (`j` = 1)/without stock (`j` = 0), with `k` times transactions limit.
+
+![](../media/121.best-time-to-buy-and-sell-stock2.png)
+
+So we can use DP to transit the state machine to find the max profit:
+* We define our `dp[i][0]` and `dp[i][1]` as the max profit for `Cash` and `Stock` states on `i-th` day.
+* For `Cash` state, we either can do nothing or sell.
+```kotlin
+dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
+         = max( Do Nothing , Sell Stock )
+```
+* For `Stock` state, we either can do nothing or buy stock (we have to pay the cash for the price)
+```kotlin
+dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i])
+         = max( Do Nothing , Buy Stock )
+```
+* The base cases for the two states would be `0` (We don't own stock, the profit is 0) and `-prices[0]` (We own the stock, but the profit is `-prices[0]`, we can't cash out)
+
+```kotlin
+fun maxProfit(prices: IntArray): Int {
+    val n = prices.size
+    val dp = Array(prices.size) { _ -> IntArray(2) }
+    // The max profit for Cash state is 0
+    dp[0][0] = 0
+    // The max profit for Stock state is the amount we pay for the stock
+    dp[0][1] = -prices[0]
+    for (i in 1 until prices.size) {
+        // Update the optimal solution of subproblems from selections
+        dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
+        dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i])
+    }
+    return dp[n - 1][0]
+}
+```
+
+For problem 121, the `k` is one, and problem 122, the `k` is unlimited, the problem 123, the `k` is two.
+
+> Nice explanation and general template: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
+> In chinese: [一个方法团灭 LEETCODE 股票买卖问题](https://labuladong.github.io/algo/1/13/)
+
 ## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
 ### When to use DP? 
 The problem meets the both two characteristics:
@@ -234,3 +353,4 @@ Overall, try to think about your recursive functions call in terms of a **tree**
 - [ ] [LC Learn](https://leetcode.com/explore/learn/card/dynamic-programming/) // Some topics are locked
 - ~~[ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#dynamic-programming)~~
 - [ ] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/dynamic-programming/) // Not too much notes, some references posts only
+- [动态规划详解](https://mp.weixin.qq.com/s/1V3aHVonWBEXlNUvK3S28w)
