@@ -173,44 +173,81 @@ For our example will be:
 O(k, j) = max{1 * x1 + 10 * x2 + 7 * x3 + 13 * x4} for some j and is subject to 2 * x1 + 5 * x2 + 3 * x3 + 8 * x4 <= k
 ```
 
-### Recursive Solution
 We can determine if we're going to take the item or skip, or just skip it if it's overweighted.
 
-```
+```js
 O(k, j) =
-    max{v(j) + O(k - w(j), j - 1),  O(k, j - 1)} if we take or skip itmm 
+    max{v(j) + O(k - w(j), j - 1),  O(k, j - 1)} if we take or skip item 
     O(k, j - 1) if item j is overweighted, w(j) > k, then we skip it
 ```
 
-And the base case is `O(k, 0) = 0` we don't take anything.
-
+### Recursive Solution
 ```kotlin
-val values: IntArray = (...)
-val weights: IntArray = (...)
+val values = intArrayOf(60, 100, 120)
+val weights = intArrayOf(10, 20, 30)
+val capacity = 50
 
-// Here we use 1 as first index
-val memo = [values.size][values.size]
-
-fun knapsack(capacity: Int, j: Int): Int {
-    // Empty or no knapsack
-    if (j < 0 || capacity <= 0) return 0
-
-    // Memoization
-    if (memo[capacity][j] != null) return memo[capacity][j]
-
-    // Overweight
-    if (weights[j] > capacity) return knapsack(capacity, j - 1)
-    else {
-        // Take or skip j-th item
-        val value = max(
-            values[j] + knapsack(capacity - weights[j], j - 1),
-            knapsack(capacity, j - 1)
-        )
-        memo[capacity][j] = value
-    }
+// We're going to determine to take `i-th` item under current remaining capacity `w`
+private fun knapsack(i: Int, w: Int): Int {
+    // Base cases
+    if (i < 0 || w == 0) return 0
+    // Overweight when taking current item, then not take it
+    return if (weights[i] > w) knapsack(i - 1, w)
+    else max(
+        // Take it
+        knapsack(i - 1, w - weights[i]) + values[i],
+        // Not take it
+        knapsack(i - 1, w)
+    )
 }
 
-knapsack(10, values.size - 1)
+knapsack(values.size - 1, capacity)
+```
+
+### Top-Down DP
+```kotlin
+fun knapsack(i: Int, w: Int): Int {
+    if (i < 0 || w == 0) return 0
+    if (dp[i][w] != -1) return dp[i][w]
+    if (weights[i] > w) {
+        dp[i][w] = knapsack(i - 1, w)
+    } else {
+        dp[i][w] = max(
+            knapsack(i - 1, w - weights[i]) + values[i],
+            knapsack(i - 1, w)
+        )
+    }
+    return dp[i][w]
+}
+
+knapsack(values.size - 1, capacity)
+```
+
+### Bottom-Up DP
+```kotlin
+fun knapsack(): Int {
+    // Base cases:
+    // For weight = 0, it can't take any item
+    for (i in 0 until values.size) {
+        dp[i][0] = 0
+    }
+    // For the first item, we can take if the capacity > weight[0]
+    for (w in 0..capacity) {
+        dp[0][w] = if (w < weights[0]) 0 else values[0]
+    }
+    
+    // Build up the solution in bottom-up fashion
+    for (i in 1 until values.size) {
+        for (w in 1.. capacity) {
+            if (weights[i] > w) dp[i][w] = dp[i - 1][w]
+            else dp[i][w] = max(
+                dp[i - 1][w - weights[i]] + values[i],
+                dp[i - 1][w]
+            )
+        }
+    }
+    return dp[values.size - 1][capacity]
+}
 ```
 
 * **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
