@@ -194,6 +194,7 @@
 |[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
+|[416. Partition Equal Subset Sum](../leetcode/416.partition-equal-subset-sum.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -213,7 +214,6 @@
 > * https://leetcode.com/problems/longest-valid-parentheses/ 
 > * Some longest xxx variants
 > * https://leetcode.com/problems/word-break/ 10k
-> * https://leetcode.com/problems/partition-equal-subset-sum/ 7k
 > * https://leetcode.com/problems/jump-game/ 11k
 > * https://leetcode.com/problems/minimum-path-sum/ 7k
 > * https://leetcode.com/problems/maximum-subarray/ **21k**
