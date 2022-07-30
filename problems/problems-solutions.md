@@ -195,6 +195,7 @@
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
 |[416. Partition Equal Subset Sum](../leetcode/416.partition-equal-subset-sum.md)|Medium|
+|[494. Target Sum](../leetcode/494.target-sum.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 

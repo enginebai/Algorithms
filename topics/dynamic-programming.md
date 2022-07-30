@@ -344,6 +344,8 @@ For problem 121, the `k` is one, and problem 122, the `k` is unlimited, the prob
 > In chinese: [一个方法团灭 LEETCODE 股票买卖问题](https://labuladong.github.io/algo/1/13/)
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
+* Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know.
+
 ### When to use DP? 
 The problem meets the both two characteristics:
 1. Solve the optimal problem (often, but not always), for example:
@@ -362,7 +364,8 @@ Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the
 3. Define the base case (initialization of `dp[i]`): `d[0] = 0`, `dp[1] = 1`.
 4. Define how to iterate to get the original problem from building up the solution to subproblems.
 
-> TODO: Must practice!! [Top-Down + Bottom-up Optimization](https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning)
+> * TODO: Must practice!! [Top-Down + Bottom-up Optimization](https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning)
+> * https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions.
 
 ### How to Relate Subproblem Solutions
 1. Try to identify the question about a subproblem.
