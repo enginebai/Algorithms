@@ -166,22 +166,26 @@ We have weight `w(i)`, value `v(i)` for each item, capacity = `k` for knapsack, 
 * Constraint: `SUM(i = 1 to N) {w(i) * x(i)} <= k`
 * Objective: `SUM(i = 1 to N) {v(i) * x(i)}` is maximum and subject to the above problem constraint.
 
-Optimal structure is `O(k, j)` is capacity `k` of selected items `{1...j}`, which maximize `SUM(i = 1 to N) {v(i) * x(i)}` and is subject to `SUM(i = 1 to N) {w(i) * x(i)} <= k`
+Optimal structure is `knapsack(i, w)` is capacity `w` of selected items `{1...i}`, which maximize `SUM(i = 1 to N) {v(i) * x(i)}` and is subject to `SUM(i = 1 to N) {w(i) * x(i)} <= k`
 
 For our example will be:
 ```
-O(k, j) = max{1 * x1 + 10 * x2 + 7 * x3 + 13 * x4} for some j and is subject to 2 * x1 + 5 * x2 + 3 * x3 + 8 * x4 <= k
+knapsack(i, w) = max{1 * x1 + 10 * x2 + 7 * x3 + 13 * x4} for some j and is subject to 2 * x1 + 5 * x2 + 3 * x3 + 8 * x4 <= k
 ```
 
 We can determine if we're going to take the item or skip, or just skip it if it's overweighted.
 
 ```js
-O(k, j) =
-    max{v(j) + O(k - w(j), j - 1),  O(k, j - 1)} if we take or skip item 
-    O(k, j - 1) if item j is overweighted, w(j) > k, then we skip it
+knapsack(i, w) =
+    // w[i] <= w 
+    knapsack(i - 1, w - w(i))   // We take item i
+    knapsack(i - 1, w)          // We don't take item i
+
+    // Or w[i] > w
+    knapsack(i - 1, w)          // We can't take item i
 ```
 
-### Recursive Solution
+### Top-Down Recursion
 ```kotlin
 val values = intArrayOf(60, 100, 120)
 val weights = intArrayOf(10, 20, 30)
@@ -206,6 +210,8 @@ knapsack(values.size - 1, capacity)
 
 ### Top-Down DP
 ```kotlin
+private val dp = Array(values.size) { _ -> IntArray(capacity + 1) { _ -> -1 } }
+
 fun knapsack(i: Int, w: Int): Int {
     if (i < 0 || w == 0) return 0
     if (dp[i][w] != -1) return dp[i][w]
@@ -253,8 +259,38 @@ fun knapsack(): Int {
 * **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
 * **Space Complexity**: `O(W * N)` for 2D array for memoization.
 
-### Bottom-Up DP (Space Optimization) 
+### Bottom-Up DP (Space Optimization, 1D DP) 
 > TODO: [Space Optimization](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-2.md) for Knapsack problem
+
+## Unbounded Knapsack Problems
+The difference between [0/1 Knapsack Problem](#0-1-knapsack-problem) is that we can put the unlimited amount of items into knapsack (with capacity limit).
+
+```kotlin
+private fun knapsack(i: Int, w: Int): Int {
+    if (i < 0 || w == 0) return 0
+    if (weights[i] > w) return knapsack(i - 1, w)
+    else return max(
+        // Here we pass `i`, not i - 1, because we have unlimit items, we keep taking i-th item if available.
+        knapsack(i, w - weights[i]) + values[i], // Take it
+        knapsack(i, w) // Skip it
+    )
+}
+
+// For space optimization (1D DP)
+fun knapsack(): Int {
+    val dp = IntArray(capacity + 1)
+    dp[0] = 0
+    for (i in 0 until values.size) {
+        // Mind the iterate order (different from 0/1 knapsack 1D DP
+        for (w in weights[i]..capacity) {
+            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+        }
+    }
+    return dp[capacity]
+}
+```
+
+> It's most the same for Top-Down and Bottom-Up DP, except for the case we take i-th item, it remains i-th item even we take it.
 
 ## Best Time to Buy and Sell Stock Problems
 | Problem          | Difficulty |
