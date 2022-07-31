@@ -196,6 +196,7 @@
 |[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
 |[416. Partition Equal Subset Sum](../leetcode/416.partition-equal-subset-sum.md)|Medium|
 |[494. Target Sum](../leetcode/494.target-sum.md)|Medium|
+|[322. Coin Change](../leetcode/322.coin-change.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -205,7 +206,6 @@
 >   * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
 
 ### Problems List
-> * https://leetcode.com/problems/coin-change/ 12k
 > * https://leetcode.com/problems/coin-change-2/ 5k
 > * https://leetcode.com/problems/house-robber/ 12k
 > * https://leetcode.com/problems/house-robber-ii/ 6k
