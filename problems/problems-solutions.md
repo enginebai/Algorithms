@@ -207,6 +207,20 @@
 >   * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
 
 ### Problems List
+```
+Bounded 0/1 Knapsack problems
+LC 416. Partition Equal Subset Sum
+LC 494. Target Sum
+LC 474. Ones and Zeroes
+LC 343. Integer Break
+
+Unbounded 0/1 Knapsack problems
+LC 322. Coin Change
+LC 518. Coin Change 2
+LC 377. Combination Sum IV
+LC 983. Minimum Cost For Tickets
+```
+
 > * https://leetcode.com/problems/house-robber/ 12k
 > * https://leetcode.com/problems/house-robber-ii/ 6k
 > * https://leetcode.com/problems/house-robber-iii/ 6k m

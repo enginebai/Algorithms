@@ -148,6 +148,12 @@ Solution representation classification based on shape of graph:
 
 Recursive function call represents a vertex in a graph, and a directed edge from `A` to `B` if `B` calls `A`. And the graph of recursive calls must be acyclic. (otherwise it never terminates) That is, function call sequence is the topological order on the graph, and the subproblem dependencies **overlap** in the graph.
 
+> TODO: For Knapsack problem (0/1 or unbounded), double check if the implementations are correct.
+> * DP[`item + 1`][weight + 1] v.s. DP[`item`][weight + 1], **I saw lots of resources using `dp[item + 1][weight + 1]`**, try to figure out the meaning of `dp[i][j]`!!
+> * The base cases
+> * For loop order
+> * For loop initialization
+> * The return dp[item.size][weight] v.s. dp[item.size - 1][weight]
 ## 0-1 Knapsack Problem
 
 ```
@@ -253,6 +259,7 @@ fun knapsack(): Int {
 ```
 
 > **Note**: For bottom-up DP of 0/1 knapsack problem, we **CAN** exchange the order of two for-loop, however, space optimization and unbounded knapsack solution, **the for-loop order matters!!**
+> * Some explanation: https://leetcode.com/discuss/study-guide/1200320/Thief-with-a-knapsack-a-series-of-crimes.
 
 * **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
 * **Space Complexity**: `O(W * N)` for 2D array for memoization.
@@ -287,8 +294,6 @@ fun knapsack(): Int {
     return dp[capacity]
 }
 ```
-
-> It's most the same for Top-Down and Bottom-Up DP, except for the case we take i-th item, it remains i-th item even we take it.
 
 ## Best Time to Buy and Sell Stock Problems
 | Problem          | Difficulty |
