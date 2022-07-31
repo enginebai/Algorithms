@@ -237,10 +237,6 @@ fun knapsack(): Int {
     for (i in 0 until values.size) {
         dp[i][0] = 0
     }
-    // For the first item, we can take if the capacity > weight[0]
-    for (w in 0..capacity) {
-        dp[0][w] = if (w < weights[0]) 0 else values[0]
-    }
     
     // Build up the solution in bottom-up fashion
     for (i in 1 until values.size) {
@@ -255,6 +251,8 @@ fun knapsack(): Int {
     return dp[values.size - 1][capacity]
 }
 ```
+
+> **Note**: For bottom-up DP of 0/1 knapsack problem, we **CAN** exchange the order of two for-loop, however, space optimization and unbounded knapsack solution, **the for-loop order matters!!**
 
 * **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
 * **Space Complexity**: `O(W * N)` for 2D array for memoization.
