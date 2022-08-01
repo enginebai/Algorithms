@@ -200,6 +200,7 @@
 |[518. Coin Change 2](../leetcode/518.coin-change-2.md)|Medium|
 |[198. House Robber](../leetcode/198.house-robber.md)|Medium|
 |[213. House Robber II](../leetcode/213.house-robber-ii.md)|Medium|
+|[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -223,7 +224,6 @@ LC 377. Combination Sum IV
 LC 983. Minimum Cost For Tickets
 ```
 
-> * https://leetcode.com/problems/house-robber-iii/ 6k m
 > * https://leetcode.com/problems/longest-increasing-subsequence/ 12k
 > * https://leetcode.com/problems/longest-common-subsequence/ 7k
 > * https://leetcode.com/problems/longest-valid-parentheses/ 
