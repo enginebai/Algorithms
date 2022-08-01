@@ -165,25 +165,25 @@ The *successor* (*predecessor* is symmetric) is the next (previous) node after n
 ![Binary Tree Traversal Successor](../media/binary-tree-traversal-successor.png)
 
 ```kotlin
-fun successor(node: Node<T>): Node? {
-    if (node.right != null) return subtreeFirst(node.right)
+fun successor(root: Node<T>?): Node? {
+    if (root?.right != null) return subtreeFirst(root.right)
     else {
-        var parentNode = node
-        while (parentNode != null && parentNode == parentNode.parent?.right) {
-            parentNode = parentNode?.parent
+        var node: Node<T>? = root
+        while (node != null && node == node.parent?.right) {
+            node = node.parent
         }
-        return parentNode.parent
+        return node.parent
     }
 }
 
-fun predecessor(node: Node<T>): Node? {
-    if (node.left != null) return substreeLast(node.left)
+fun predecessor(root: Node<T>?): Node? {
+    if (root.left != null) return substreeLast(node.left)
     else {
-        var parentNode = node
-        while (parentNode != null && parentNode == parentNode?.parent?.left) {
-            parentNode = parentNode.parent
+        var node: Node<T>? = root
+        while (node != null && node = node.parent?.left) {
+            node = node.parent
         }
-        return parentNode.parent
+        return node?.parent
     }
 }
 ```
@@ -235,7 +235,7 @@ fun postorderTraversal(root: Node<T>?): Node<T>? {
     stack.push(root)
     while (!stack.isEmpty()) {
         val node = stack.pop()
-        println(node.`val`)
+        results.add(node.data)
         if (node.left != null) stack.push(node.left!!)
         if (node.right != null) stack.push(node.right!!)
     }
@@ -514,6 +514,7 @@ fun bfs(root: TreeNode?) {
     if (root == null) return
     val queue = ArrayDeque<TreeNode>()
     queue.addLast(root)
+    var level = 0
     while (!queue.isEmpty()) {
         // Do something in the same level
         val size = queue.size()
@@ -525,6 +526,8 @@ fun bfs(root: TreeNode?) {
             if (node.right != null) queue.addLast(node.right!!)
         }
 
+        if (size > 0) level++
+        
         // Do something extra
     }
 }
