@@ -201,6 +201,8 @@
 |[198. House Robber](../leetcode/198.house-robber.md)|Medium|
 |[213. House Robber II](../leetcode/213.house-robber-ii.md)|Medium|
 |[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
+|[1143. Longest Common Subsequence](../topics/dynamic-programming.md#longest-common-subsequence-problem)|Medium|
+|[300. Longest Increasing Subsequence](../leetcode/300.longest-increasing-subsequence.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -224,8 +226,6 @@ LC 377. Combination Sum IV
 LC 983. Minimum Cost For Tickets
 ```
 
-> * https://leetcode.com/problems/longest-increasing-subsequence/ 12k
-> * https://leetcode.com/problems/longest-common-subsequence/ 7k
 > * https://leetcode.com/problems/longest-valid-parentheses/ 
 > * Some longest xxx variants
 > * https://leetcode.com/problems/word-break/ 10k

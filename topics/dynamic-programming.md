@@ -467,10 +467,10 @@ fun longestCommonSubsequence(A: String, B: String): Int {
     val parent = Array(m + 1) { _ -> IntArray(n + 1) }
 
     // Base cases:
-    for (i in 0 until m) {
+    for (i in 0..m) {
         dp[i][0] = 0
     }
-    for (j in 0 until n) {
+    for (j in 0..n) {
         dp[0][j] = 0
     }
 
@@ -507,7 +507,7 @@ fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
         0 -> {
             printLCS(parent, x - 1, y - 1)
             // The subsequences are in reversed order!! We have to print after the recursive calls.
-            println(A[x])
+            println(A[x - 1])
         }
         // Go up
         1 -> {
@@ -521,6 +521,8 @@ fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
     }
 }
 ```
+
+> We can print iteratively or contruct without parent table, just use [dp table](https://www.programiz.com/dsa/longest-common-subsequence).
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
 * Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know.
