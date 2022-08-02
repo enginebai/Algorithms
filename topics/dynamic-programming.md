@@ -296,6 +296,8 @@ fun knapsack(): Int {
 ```
 
 ## Best Time to Buy and Sell Stock Problems
+The following problems are categorized as *state machine* problems. 
+
 | Problem          | Difficulty |
 |------------------|------------|
 |[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
@@ -381,6 +383,144 @@ For problem 121, the `k` is one, and problem 122, the `k` is unlimited, the prob
 
 > Nice explanation and general template: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
 > In chinese: [一个方法团灭 LEETCODE 股票买卖问题](https://labuladong.github.io/algo/1/13/)
+
+## Longest Common Subsequence Problem
+Given two strings `A` and `B`, find the longest common subsequences (not necessarily continuous) of `A` and `B`.
+
+### Characterization
+For two strings `A` and `B`, we can start comparing either the first or the last character, and we assume the length of `A` and `B` is `m` and `n` respectively. And we're going to calculate `LCS(A[1 ~ m], B[1 ~ n])`, now we compare the last character:
+
+* `A` = `A[1 ~ m - 1]` + `A[m]`
+* `B` = `B[1 ~ n - 1]` + `B[n]`
+
+> We're also able to compare the first character as well.
+
+There are two cases of the last charater, either equal or different:
+* If `A[m] == B[n]`, then the result will be `1 + LCS(A[1 ~ m - 1], B[1 ~ n - 1])`
+* If they are different, then we compare the results of
+
+```js
+// The LCS of 
+A[1 ~ m - 1] + A[m]
+B[1 ~ n - 1]
+
+// Or the LCS of
+A[1 ~ m - 1]
+B[1 ~ n - 1] + B[n]
+```
+
+That is, `max(LCS(A[1 ~ m - 1], B[1 ~ n]), LCS(A[1 ~ m], B[1 - n - 1]))`.
+
+Then we can define the `SRT BOT` paradiam:
+* **S**ubproblem: `L(i, j)` is the LCS of `A(1 ~ i)` and `B(1 ~ j)` for `i` in 1 to `m` and `j` in 1 to `n`.
+* **R**elation: We compare the last character, so either they match or not.
+
+```js
+L(i, j) = LCS(i - 1, j - 1) + 1 if A[i] == B[j]
+        = max(LCS(i - 1, j), LCS(i, j - 1)) if A[i] != B[j]
+```
+* **T**opological order: Subproblem `L(i, j)` depends on smaller `i` and/or `j` , we increase `i` and `j` to build the solution.
+* **B**ase case: `A` or `B` is empty string, then `L(i, j)` will be 0.
+* **O**riginal problem: `L(m, n)` and we have to store the parent pointer to construct the LCS.
+* **T**ime: `O(m * n)`
+
+### Top-Down Recursion
+```kotlin
+fun longestCommonSubsequence(A: String, B: String, lengthA: Int, lengthB: Int): Int {
+    if (lengthA == 0 || lengthB == 0) return 0
+    if (A[lengthA - 1] == B[lengthB - 1]) return 1 + longestCommonSubsequence(A, B, lengthA - 1, lengthB - 1)
+    else return max(
+        longestCommonSubsequence(A, B, lengthA - 1, lengthB),
+        longestCommonSubsequence(A, B, lengthA, lengthB - 1)
+    )
+}
+
+longestCommonSubsequence(A, B, A.length, B.length)
+```
+
+### Top-Down DP
+```kotlin
+fun longestCommonSubsequence(A: String, B: String, m: Int, n: Int, dp: Array<IntArray>): Int {
+    if (m < 0 || n < 0) return 0
+    if (dp[m][n] != -1) return dp[m][n]
+    dp[m][n] = if (A[m] == B[n]) 1 + longestCommonSubsequence(A, B, m - 1, n - 1, dp)
+    else max(
+        longestCommonSubsequence(A, B, m - 1, n, dp),
+        longestCommonSubsequence(A, B, m, n - 1, dp)
+    )
+    return dp[m][n]
+}
+
+// +1 for the case of length == 0
+val dp = Array(A.length + 1) { _ -> IntArray(B.length + 1) { _ -> -1 } }
+longestCommonSubsequence(A, B, A.length, B.length, dp)
+```
+
+### Bottom-Up DP
+```kotlin
+fun longestCommonSubsequence(A: String, B: String): Int {
+    val m = A.length
+    val n = B.length
+    // +1 for the case of length == 0
+    val dp = Array(m + 1) { _ -> IntArray(n + 1) }
+    // We maintain the parent table for constructing the LCS.
+    val parent = Array(m + 1) { _ -> IntArray(n + 1) }
+
+    // Base cases:
+    for (i in 0 until m) {
+        dp[i][0] = 0
+    }
+    for (j in 0 until n) {
+        dp[0][j] = 0
+    }
+
+    // Build up the solutions
+    for (i in 1..m) {
+        for (j in 1..n) {
+            if (A[i - 1] == B[j - 1]) {
+                dp[i][j] = 1 + dp[i - 1][j - 1]
+                // Go up and left
+                parent[i][j] = 0 
+            } else {
+                if (dp[i - 1][j] > dp[i][j - 1]) {
+                    dp[i][j] = dp[i - 1][j]
+                    // Go up
+                    parent[i][j] = 1
+                } else {
+                    dp[i][j] = dp[i][j - 1]
+                    // Go left
+                    parent[i][j] = 2
+                }
+            }
+        }
+    }
+    return dp[m][n]
+}
+```
+
+### Construct LCS
+```kotlin
+fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
+    if (x == 0 || y == 0) return
+    when (parent[x][y]) {
+        // Go up and left
+        0 -> {
+            printLCS(parent, x - 1, y - 1)
+            // The subsequences are in reversed order!! We have to print after the recursive calls.
+            println(A[x])
+        }
+        // Go up
+        1 -> {
+            printLCS(parent, x - 1, y)
+        }
+        // Go left
+        2 -> {
+            printLCS(parent, x, y - 1)
+        }
+        else -> return
+    }
+}
+```
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
 * Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know.
