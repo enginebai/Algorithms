@@ -524,6 +524,9 @@ fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
 
 > We can print iteratively or contruct without parent table, just use [dp table](https://www.programiz.com/dsa/longest-common-subsequence).
 
+* **Time Complexity**: `O(m * n)`, for `m`, `n` is the length of `A` and `B`.
+* **Space Complexity**: `O(m * n)` for dp 2D table.
+
 ## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
 * Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know.
 
