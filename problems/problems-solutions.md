@@ -228,7 +228,6 @@ LC 983. Minimum Cost For Tickets
 ```
 
 > * https://leetcode.com/problems/longest-valid-parentheses/ 
-> * Some longest xxx variants
 > * https://leetcode.com/problems/word-break/ 10k
 > * https://leetcode.com/problems/jump-game/ 11k
 > * https://leetcode.com/problems/minimum-path-sum/ 7k
