@@ -204,6 +204,7 @@
 |[1143. Longest Common Subsequence](../topics/dynamic-programming.md#longest-common-subsequence-problem)|Medium|
 |[300. Longest Increasing Subsequence](../leetcode/300.longest-increasing-subsequence.md)|Medium|
 |[516. Longest Palindromic Subsequence](../leetcode/516.longest-palindromic-subsequence.md)|Medium|
+|[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
