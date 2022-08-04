@@ -205,6 +205,7 @@
 |[300. Longest Increasing Subsequence](../leetcode/300.longest-increasing-subsequence.md)|Medium|
 |[516. Longest Palindromic Subsequence](../leetcode/516.longest-palindromic-subsequence.md)|Medium|
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
+|[718. Maximum Length of Repeated Subarray](../leetcode/718.maximum-length-of-repeated-subarray.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -319,6 +320,8 @@ LC 983. Minimum Cost For Tickets
 > * https://leetcode.com/problems/max-consecutive-ones-iii/ 4k
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 3k hard
 > * https://leetcode.com/problems/sliding-window-maximum/ 10k hard
+> * https://leetcode.com/problems/longest-continuous-increasing-subsequence/ (Solved in DP)
+> * https://leetcode.com/problems/maximum-length-of-repeated-subarray/ (Solved in DP)
 
 ## Listing By Topics
 * https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns
