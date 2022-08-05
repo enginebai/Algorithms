@@ -13,7 +13,6 @@
 |[59. Spiral Matrix II](../leetcode/59.spiral-matrix-ii.md)|Medium|
 |[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
 |[136. Single Number](../leetcode/136.single-number.md)|Easy|
-|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Easy|
 |[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
@@ -37,7 +36,6 @@
 |[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
 |[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
 |[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
-|[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
 |[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
@@ -88,7 +86,6 @@
 |[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)|Easy|
 |[503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)|Medium|
 |[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium|
-|[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[394. Decode String](../leetcode/394.decode-string.md)|Medium|
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
 |[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy|
@@ -204,8 +201,13 @@
 |[1143. Longest Common Subsequence](../topics/dynamic-programming.md#longest-common-subsequence-problem)|Medium|
 |[300. Longest Increasing Subsequence](../leetcode/300.longest-increasing-subsequence.md)|Medium|
 |[516. Longest Palindromic Subsequence](../leetcode/516.longest-palindromic-subsequence.md)|Medium|
+|[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
 |[718. Maximum Length of Repeated Subarray](../leetcode/718.maximum-length-of-repeated-subarray.md)|Medium|
+|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Medium|
+|[152. Maximum Product Subarray](../leetcode/153.maximum-product-subarray.md)|Medium|
+|[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
+|[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -229,12 +231,9 @@ LC 377. Combination Sum IV
 LC 983. Minimum Cost For Tickets
 ```
 
-> * https://leetcode.com/problems/longest-valid-parentheses/ 
 > * https://leetcode.com/problems/word-break/ 10k
 > * https://leetcode.com/problems/jump-game/ 11k
 > * https://leetcode.com/problems/minimum-path-sum/ 7k
-> * https://leetcode.com/problems/maximum-subarray/ **21k**
-> * https://leetcode.com/problems/maximum-product-subarray/ 11k
 > * https://leetcode.com/problems/perfect-squares/ 7k
 > * https://leetcode.com/problems/maximal-rectangle/ 6k
 > * https://leetcode.com/problems/edit-distance/ 8k
