@@ -210,6 +210,7 @@
 |[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
 |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
+|[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -219,6 +220,7 @@
 >   * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
 
 ### Problems List
+#### Knapsack
 ```
 Bounded 0/1 Knapsack problems
 LC 416. Partition Equal Subset Sum
@@ -232,6 +234,25 @@ LC 518. Coin Change 2
 LC 377. Combination Sum IV
 LC 983. Minimum Cost For Tickets
 ```
+#### Coin Change
+> * |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
+> * https://leetcode.com/problems/combination-sum-iv/ 5k m
+> * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
+
+#### LIC
+> * https://leetcode.com/problems/delete-and-earn/ 5k m
+> * https://leetcode.com/problems/longest-string-chain/ 5k m
+> * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
+> * https://leetcode.com/problems/number-of-longest-increasing-subsequence/ 4k m
+> * https://leetcode.com/problems/longest-string-chain/ 3k m
+> * https://leetcode.com/problems/maximum-length-of-pair-chain/ 2k m
+
+#### LCS
+> * https://leetcode.com/problems/distinct-subsequences/ 4k h
+
+#### Palindrome
+> * https://leetcode.com/problems/palindromic-substrings/ 9k m
+
 
 > * https://leetcode.com/problems/perfect-squares/ 7k
 > * https://leetcode.com/problems/maximal-rectangle/ 6k
