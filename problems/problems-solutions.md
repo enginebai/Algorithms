@@ -209,6 +209,7 @@
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
 |[139. Word Break](../leetcode/139.word-break.md)|Medium|
+|[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -232,7 +233,6 @@ LC 377. Combination Sum IV
 LC 983. Minimum Cost For Tickets
 ```
 
-> * https://leetcode.com/problems/minimum-path-sum/ 7k
 > * https://leetcode.com/problems/perfect-squares/ 7k
 > * https://leetcode.com/problems/maximal-rectangle/ 6k
 > * https://leetcode.com/problems/edit-distance/ 8k
