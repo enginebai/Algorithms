@@ -208,6 +208,7 @@
 |[152. Maximum Product Subarray](../leetcode/153.maximum-product-subarray.md)|Medium|
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
+|[139. Word Break](../leetcode/139.word-break.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -231,8 +232,6 @@ LC 377. Combination Sum IV
 LC 983. Minimum Cost For Tickets
 ```
 
-> * https://leetcode.com/problems/word-break/ 10k
-> * https://leetcode.com/problems/jump-game/ 11k
 > * https://leetcode.com/problems/minimum-path-sum/ 7k
 > * https://leetcode.com/problems/perfect-squares/ 7k
 > * https://leetcode.com/problems/maximal-rectangle/ 6k
@@ -247,6 +246,7 @@ LC 983. Minimum Cost For Tickets
 > * https://labuladong.gitee.io/algo/4/29/103/
 
 ### Problems List
+> * |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 > * https://leetcode.com/problems/combinations/ 4k
 > * https://leetcode.com/problems/combination-sum/ 11k
 > * https://leetcode.com/problems/combination-sum-ii/ 5k
