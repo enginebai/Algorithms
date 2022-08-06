@@ -202,6 +202,7 @@
 |[300. Longest Increasing Subsequence](../leetcode/300.longest-increasing-subsequence.md)|Medium|
 |[516. Longest Palindromic Subsequence](../leetcode/516.longest-palindromic-subsequence.md)|Medium|
 |[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
+|[647. Palindromic Substrings](../leetcode/647.palindromic-substrings.md)|Medium|
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
 |[718. Maximum Length of Repeated Subarray](../leetcode/718.maximum-length-of-repeated-subarray.md)|Medium|
 |[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Medium|
@@ -234,10 +235,12 @@ LC 518. Coin Change 2
 LC 377. Combination Sum IV
 LC 983. Minimum Cost For Tickets
 ```
+
 #### Coin Change
 > * |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 > * https://leetcode.com/problems/combination-sum-iv/ 5k m
 > * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
+> * https://leetcode.com/problems/last-stone-weight-ii/ 2k m
 
 #### LIC
 > * https://leetcode.com/problems/delete-and-earn/ 5k m
@@ -250,16 +253,15 @@ LC 983. Minimum Cost For Tickets
 #### LCS
 > * https://leetcode.com/problems/distinct-subsequences/ 4k h
 
-#### Palindrome
-> * https://leetcode.com/problems/palindromic-substrings/ 9k m
-
-
-> * https://leetcode.com/problems/perfect-squares/ 7k
-> * https://leetcode.com/problems/maximal-rectangle/ 6k
-> * https://leetcode.com/problems/edit-distance/ 8k
+> * https://leetcode.com/problems/pascals-triangle/ 9k e
+> * 
+> * https://leetcode.com/problems/triangle/ 6k m
+> * https://leetcode.com/problems/maximal-rectangle/ 6k h
+> * https://leetcode.com/problems/edit-distance/ 8k h
 > * https://leetcode.com/problems/ugly-number-ii/ 4k m
 > * https://leetcode.com/problems/longest-increasing-path-in-a-matrix/ 6k h
 > * https://leetcode.com/problems/ones-and-zeroes/ 4k m
+> * https://leetcode.com/problems/minimum-falling-path-sum/ 3k m
 
 ## Backtracking
 ### Reading List
