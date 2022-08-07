@@ -304,6 +304,10 @@ The following problems are categorized as *state machine* problems.
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
 
+> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
+> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
+> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
+
 ### State Transitions
 For this series of stock problems, we can apply the framework we mentioned above:
 ```py

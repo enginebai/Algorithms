@@ -4,12 +4,12 @@ A *greedy algorithm* always makes the choice that looks best at the moment, it m
 We shall consider a [dynamic programming](../topics/dynamic-programming.md) solution (including steps) and show that we can always make greedy choices to arrival the optimal solution.
 
 ## Steps of Greedy
-1. Cast the optimization problem as one in which we make a choice and are left with one subproblem to solve. (Top-down fassion: making a greedy choice, reduce the probelm to a smaller subproblem)
+1. Cast the optimization problem as one in which we make a choice and are left with one subproblem to solve. (Top-down fashion: making a greedy choice, reduce the problems to a smaller subproblems)
 2. Prove that making the greedy choice is always safe.
-3. We conbine an optimal solution to the subproblem with the greedy choice, we can arrive at the optimal solution to the original problem.
+3. We conbime an optimal solutions to the subproblems with the greedy choice, we can arrive at the optimal solution to the original problem.
 
 ## Elements of Greedy
-* **Greedy choice property**: A globally optimal solution can be arrived at by making a locally optimal choice. We make the choic e at each step that looks the best for now, not from the results from subproblems (DP),  and then keep solving the subproblems arising after the choice is made.
+* **Greedy choice property**: A globally optimal solution can be arrived at by making a local optimal choice. We make the choice at each step that looks the best for now, not from the results from subproblems (DP), and then keep solving the subproblems arising after the choice is made.
 
 > We often say that greedy algorithm never reconsiders its choices. However, DP will, it makes decisions based on all the decisions made in the previous subproblem.
 

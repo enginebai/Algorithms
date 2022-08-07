@@ -220,28 +220,16 @@
 >   * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
 >   * https://leetcode.com/discuss/general-discussion/592146/dynamic-programming-summary
 >   * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
+>   * https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns
 
 ### Problems List
 #### Knapsack
-```
-Bounded 0/1 Knapsack problems
-LC 416. Partition Equal Subset Sum
-LC 494. Target Sum
-LC 474. Ones and Zeroes
-LC 343. Integer Break
-
-Unbounded 0/1 Knapsack problems
-LC 322. Coin Change
-LC 518. Coin Change 2
-LC 377. Combination Sum IV
-LC 983. Minimum Cost For Tickets
-```
-
-#### Coin Change
 > * |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 > * https://leetcode.com/problems/combination-sum-iv/ 5k m
 > * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
 > * https://leetcode.com/problems/last-stone-weight-ii/ 2k m
+> * https://leetcode.com/problems/ones-and-zeroes/ 4k m
+> * https://leetcode.com/problems/integer-break/ 3k m
 
 #### LIC
 > * https://leetcode.com/problems/delete-and-earn/ 5k m
@@ -254,14 +242,13 @@ LC 983. Minimum Cost For Tickets
 #### LCS
 > * https://leetcode.com/problems/distinct-subsequences/ 4k h
 
+#### Other
 > * https://leetcode.com/problems/pascals-triangle/ 9k e
 > * https://leetcode.com/problems/triangle/ 6k m
 > * https://leetcode.com/problems/maximal-rectangle/ 6k h
 > * https://leetcode.com/problems/edit-distance/ 8k h
 > * https://leetcode.com/problems/longest-increasing-path-in-a-matrix/ 6k h
-> * https://leetcode.com/problems/ones-and-zeroes/ 4k m
 > * https://leetcode.com/problems/minimum-falling-path-sum/ 3k m
-> * https://leetcode.com/problems/integer-break/ 3k m
 > * https://leetcode.com/problems/dungeon-game/ 4k h
 
 ## Backtracking
@@ -294,6 +281,9 @@ LC 983. Minimum Cost For Tickets
 ## Greedy
 > * https://leetcode.com/discuss/general-discussion/1061059/ABCs-of-Greedy
 > * https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions
+
+> * https://leetcode.com/problems/non-overlapping-intervals/
+> * https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 
 ## Hash & Searching & Sorting
 > * https://labuladong.gitee.io/algo/2/18/26/
