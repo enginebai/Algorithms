@@ -212,6 +212,7 @@
 |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
+|[264. Ugly Number II](../leetcode/264.ugly-number-ii.md)|Medium|
 
 ### Reading List
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
@@ -254,14 +255,14 @@ LC 983. Minimum Cost For Tickets
 > * https://leetcode.com/problems/distinct-subsequences/ 4k h
 
 > * https://leetcode.com/problems/pascals-triangle/ 9k e
-> * 
 > * https://leetcode.com/problems/triangle/ 6k m
 > * https://leetcode.com/problems/maximal-rectangle/ 6k h
 > * https://leetcode.com/problems/edit-distance/ 8k h
-> * https://leetcode.com/problems/ugly-number-ii/ 4k m
 > * https://leetcode.com/problems/longest-increasing-path-in-a-matrix/ 6k h
 > * https://leetcode.com/problems/ones-and-zeroes/ 4k m
 > * https://leetcode.com/problems/minimum-falling-path-sum/ 3k m
+> * https://leetcode.com/problems/integer-break/ 3k m
+> * https://leetcode.com/problems/dungeon-game/ 4k h
 
 ## Backtracking
 ### Reading List
@@ -281,7 +282,7 @@ LC 983. Minimum Cost For Tickets
 > * https://leetcode.com/problems/subsets-ii/ 5k
 > * https://leetcode.com/problems/permutations/ 11k
 > * https://leetcode.com/problems/permutations-ii/ 6k
-> * https://leetcode.com/problems/path-sum-ii/ 
+> * https://leetcode.com/problems/path-sum-ii/  5k m
 > * https://leetcode.com/problems/remove-invalid-parentheses/ 4k
 > * https://leetcode.com/problems/regular-expression-matching/ 8k
 
@@ -291,7 +292,8 @@ LC 983. Minimum Cost For Tickets
 > * https://leetcode.com/discuss/general-discussion/680269/a-general-approach-to-backtracking-problems-in-cexhaustive-searching
 
 ## Greedy
-> TODO
+> * https://leetcode.com/discuss/general-discussion/1061059/ABCs-of-Greedy
+> * https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions
 
 ## Hash & Searching & Sorting
 > * https://labuladong.gitee.io/algo/2/18/26/
