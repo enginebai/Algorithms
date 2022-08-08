@@ -13,9 +13,6 @@
 |[59. Spiral Matrix II](../leetcode/59.spiral-matrix-ii.md)|Medium|
 |[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
 |[136. Single Number](../leetcode/136.single-number.md)|Easy|
-|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Easy|
-|[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
-|[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
@@ -39,7 +36,6 @@
 |[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
 |[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
 |[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
-|[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
 |[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
@@ -52,7 +48,7 @@
 > * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
 > * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
 
-## Linked List
+## [Linked List](../problems/problems-linked-list.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
@@ -77,7 +73,7 @@
 > * https://leetcode.com/problems/sort-list/
 > * https://leetcode.com/problems/partition-list/
 
-## Stack & Queue
+## [Stack & Queue](../problems/problems-stack-queue.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[155. Min Stack](../leetcode/155.min-stack.md)|Easy|
@@ -90,7 +86,6 @@
 |[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)|Easy|
 |[503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)|Medium|
 |[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium|
-|[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[394. Decode String](../leetcode/394.decode-string.md)|Medium|
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
 |[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy|
@@ -185,41 +180,76 @@
 
 
 ## Dynamic Programming
+| Problem          | Difficulty |
+|------------------|------------|
+|[509. Fibonacci Number](../leetcode/509.fibonacci-number.md)|Easy|
+|[70. Climbing Stairs](../leetcode/70.climbing-stairs.md)|Easy|
+|[746. Min Cost Climbing Stairs](../leetcode/746.min-cost-climbing-stairs.md)|Easy|
+|[62. Unique Paths](../leetcode/62.unique-paths.md)|Medium|
+|[63. Unique Paths II](../leetcode/63.unique-paths.ii.md)|Medium|
+|[96. Unique Binary Search Trees](../leetcode/96.unique-binary-search-trees.md)|Medium|
+|[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
+|[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
+|[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
+|[416. Partition Equal Subset Sum](../leetcode/416.partition-equal-subset-sum.md)|Medium|
+|[494. Target Sum](../leetcode/494.target-sum.md)|Medium|
+|[322. Coin Change](../leetcode/322.coin-change.md)|Medium|
+|[518. Coin Change 2](../leetcode/518.coin-change-2.md)|Medium|
+|[198. House Robber](../leetcode/198.house-robber.md)|Medium|
+|[213. House Robber II](../leetcode/213.house-robber-ii.md)|Medium|
+|[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
+|[1143. Longest Common Subsequence](../topics/dynamic-programming.md#longest-common-subsequence-problem)|Medium|
+|[300. Longest Increasing Subsequence](../leetcode/300.longest-increasing-subsequence.md)|Medium|
+|[516. Longest Palindromic Subsequence](../leetcode/516.longest-palindromic-subsequence.md)|Medium|
+|[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
+|[647. Palindromic Substrings](../leetcode/647.palindromic-substrings.md)|Medium|
+|[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
+|[718. Maximum Length of Repeated Subarray](../leetcode/718.maximum-length-of-repeated-subarray.md)|Medium|
+|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Medium|
+|[152. Maximum Product Subarray](../leetcode/153.maximum-product-subarray.md)|Medium|
+|[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
+|[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
+|[139. Word Break](../leetcode/139.word-break.md)|Medium|
+|[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
+|[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
+|[264. Ugly Number II](../leetcode/264.ugly-number-ii.md)|Medium|
+
 ### Reading List
-> * https://www.geekxh.com/1.2.%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/205.html
-> * https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
-> * https://labuladong.gitee.io/algo/3/
 > * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
->   * See above linke and practice **by sub-topics**
+>   * See above link and practice **by sub-topics**
 >   * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
 >   * https://leetcode.com/discuss/general-discussion/592146/dynamic-programming-summary
 >   * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
+>   * https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns
 
 ### Problems List
-> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ 16k
-> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ 7k
-> * Some stock problems variants
-> * https://leetcode.com/problems/climbing-stairs/ 12k
-> * https://leetcode.com/problems/coin-change/ 12k
-> * https://leetcode.com/problems/coin-change-2/ 5k
-> * https://leetcode.com/problems/house-robber/ 12k
-> * https://leetcode.com/problems/house-robber-ii/ 6k
-> * https://leetcode.com/problems/house-robber-iii/ 6k m
-> * https://leetcode.com/problems/longest-increasing-subsequence/ 12k
-> * https://leetcode.com/problems/longest-common-subsequence/ 7k
-> * https://leetcode.com/problems/longest-valid-parentheses/ 
-> * Some longest xxx variants
-> * https://leetcode.com/problems/word-break/ 10k
-> * https://leetcode.com/problems/partition-equal-subset-sum/ 7k
-> * https://leetcode.com/problems/unique-paths/ 9k
-> * https://leetcode.com/problems/jump-game/ 11k
-> * https://leetcode.com/problems/minimum-path-sum/ 7k
-> * https://leetcode.com/problems/maximum-subarray/ **21k**
-> * https://leetcode.com/problems/maximum-product-subarray/ 11k
-> * https://leetcode.com/problems/perfect-squares/ 7k
-> * https://leetcode.com/problems/maximal-rectangle/ 6k
-> * https://leetcode.com/problems/edit-distance/ 8k
-> * https://leetcode.com/problems/ugly-number-ii/ 4k m
+#### Knapsack
+> * |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
+> * https://leetcode.com/problems/combination-sum-iv/ 5k m
+> * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
+> * https://leetcode.com/problems/last-stone-weight-ii/ 2k m
+> * https://leetcode.com/problems/ones-and-zeroes/ 4k m
+> * https://leetcode.com/problems/integer-break/ 3k m
+
+#### LIC
+> * https://leetcode.com/problems/delete-and-earn/ 5k m
+> * https://leetcode.com/problems/longest-string-chain/ 5k m
+> * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
+> * https://leetcode.com/problems/number-of-longest-increasing-subsequence/ 4k m
+> * https://leetcode.com/problems/longest-string-chain/ 3k m
+> * https://leetcode.com/problems/maximum-length-of-pair-chain/ 2k m
+
+#### LCS
+> * https://leetcode.com/problems/distinct-subsequences/ 4k h
+
+#### Other
+> * https://leetcode.com/problems/pascals-triangle/ 9k e
+> * https://leetcode.com/problems/triangle/ 6k m
+> * https://leetcode.com/problems/maximal-rectangle/ 6k h
+> * https://leetcode.com/problems/edit-distance/ 8k h
+> * https://leetcode.com/problems/longest-increasing-path-in-a-matrix/ 6k h
+> * https://leetcode.com/problems/minimum-falling-path-sum/ 3k m
+> * https://leetcode.com/problems/dungeon-game/ 4k h
 
 ## Backtracking
 ### Reading List
@@ -227,6 +257,7 @@
 > * https://labuladong.gitee.io/algo/4/29/103/
 
 ### Problems List
+> * |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 > * https://leetcode.com/problems/combinations/ 4k
 > * https://leetcode.com/problems/combination-sum/ 11k
 > * https://leetcode.com/problems/combination-sum-ii/ 5k
@@ -238,7 +269,7 @@
 > * https://leetcode.com/problems/subsets-ii/ 5k
 > * https://leetcode.com/problems/permutations/ 11k
 > * https://leetcode.com/problems/permutations-ii/ 6k
-> * https://leetcode.com/problems/path-sum-ii/ 
+> * https://leetcode.com/problems/path-sum-ii/  5k m
 > * https://leetcode.com/problems/remove-invalid-parentheses/ 4k
 > * https://leetcode.com/problems/regular-expression-matching/ 8k
 
@@ -248,7 +279,11 @@
 > * https://leetcode.com/discuss/general-discussion/680269/a-general-approach-to-backtracking-problems-in-cexhaustive-searching
 
 ## Greedy
-> TODO
+> * https://leetcode.com/discuss/general-discussion/1061059/ABCs-of-Greedy
+> * https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions
+
+> * https://leetcode.com/problems/non-overlapping-intervals/
+> * https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 
 ## Hash & Searching & Sorting
 > * https://labuladong.gitee.io/algo/2/18/26/
@@ -299,6 +334,8 @@
 > * https://leetcode.com/problems/max-consecutive-ones-iii/ 4k
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 3k hard
 > * https://leetcode.com/problems/sliding-window-maximum/ 10k hard
+> * https://leetcode.com/problems/longest-continuous-increasing-subsequence/ (Solved in DP)
+> * https://leetcode.com/problems/maximum-length-of-repeated-subarray/ (Solved in DP)
 
 ## Listing By Topics
 * https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns

@@ -71,40 +71,40 @@ class LinkedListStack<T>: Stack<T> {
 ```kotlin
 class StaticArrayStack<T>(private val capacity: Int): Stack<T> {
     private val array = arrayOfNulls<T>(capacity)
-    private var top = 0
+    private var top = -1
 
     override fun push(item: T) {
-        if (top == capacity) throw StackOverflowException("Stack is full")
-        array[top++] = item
+        if (top + 1 == capacity) throw StackOverflowException("Stack is full")
+        array[++top] = item
     }
 
     override fun pop(): T? {
         if (isEmpty()) throw StackUnderflowException("Stack is empty")
         // Top will be ahead by one when calling push(), so we have to decrement first
-        return array.getOrNull(--top)
+        return array.getOrNull(top--)
     }
 
     override fun peek(): T? {
         if (isEmpty()) throw StackUnderflowException("Stack is empty")
-        return array.getOrNull(top - 1)
+        return array.getOrNull(top)
     }
 
-    override fun isEmpty(): Boolean = top == 0
+    override fun isEmpty(): Boolean = top == -1
 }
 
 class DynamicArrayStack<T>: Stack<T> {
     // We skip the amorization and ensureCapacity() + grow() functions.
     private val dynamicArray = arrayListOf<T>()
-    private var top = 0
+    private var top = -1
 
     override fun push(item: T) {
         dynamicArray.add(item)
         top++
     }
 
-    override fun pop(): T? = dynamicArray.getOrNull(--top)
-    override fun peek(): T? = dynamicArray.getOrNull(top - 1)
-    override fun isEmpty(): Boolean = top == 0
+    override fun pop(): T? = dynamicArray.getOrNull(top--)
+    override fun peek(): T? = dynamicArray.getOrNull(top)
+    override fun isEmpty(): Boolean = top == -1
 }
 ```
 
@@ -257,37 +257,37 @@ There is a drawback from the above implementation, our size is limited even if w
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#stack--queue)
 * For stack question, we can push the index/position or value, remember that we still can get the original value from `array[stack.peek()]` when pushing the index.
-* *Monotonic stack*:
-
-    * Code template:
-        ```kotlin
-        fun problem(nums: IntArray) {
-            ...
-            val stack = Stack<Int>()
-            for (i in 0 until nums.size) {
-                // We might change the condition of value comparison.
-                // And consider if the condition is strict (<) or not (<=)
-                while (!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
-                    // We might not pop at once, just peek first
-                    val value = stack.pop()
-                    
-                    // Something we have to check if stack is empty now, and then pop item or peek.
-
-                    // calculate something and update the result
-                }
-                stack.push(i)
-            }
-        }
-        ```
-    * Usually, we will push index to stack rather than array value. And something, we need to push `0` or `-1` at the beginning and the end of array so that we can calculate the first / last item of array. (See [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md))
-    * Classic problems:
-        * [496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)
-        * [503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)
-        * [739. Daily Temperatures](../leetcode/739.daily-temperatures.md)
-        * [42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)
-        * [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)
-
 * Stack for recursive call or DFS, queue for BFS.
+
+### Monotonic stack
+* Code template:
+    ```kotlin
+    fun problem(nums: IntArray) {
+        ...
+        val stack = Stack<Int>()
+        for (i in 0 until nums.size) {
+            // We might change the condition of value comparison.
+            // And consider if the condition is strict (<) or not (<=)
+            while (!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
+                // We might not pop at once, just peek first
+                val value = stack.pop()
+                
+                // Something we have to check if stack is empty now, and then pop item or peek.
+
+                // calculate something and update the result
+            }
+            stack.push(i)
+        }
+    }
+    ```
+* Usually, we will push index to stack rather than array value. And something, we need to push `0` or `-1` at the beginning and the end of array so that we can calculate the first / last item of array. (See [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md))
+* Classic problems:
+    * [496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)
+    * [503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)
+    * [739. Daily Temperatures](../leetcode/739.daily-temperatures.md)
+    * [42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)
+    * [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)
+
 
 ## Resources
 - [X] Fundamental of Data Structure
