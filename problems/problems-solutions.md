@@ -256,9 +256,11 @@
 > * https://github.com/youngyangyang04/leetcode-master#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95
 > * https://labuladong.gitee.io/algo/4/29/103/
 
+| Problem          | Difficulty |
+|------------------|------------|
+|[77. Combinations](../leetcode/77.combinations.md)|Medium|
+
 ### Problems List
-> * |[139. Word Break](../leetcode/139.word-break.md)|Medium|
-> * https://leetcode.com/problems/combinations/ 4k
 > * https://leetcode.com/problems/combination-sum/ 11k
 > * https://leetcode.com/problems/combination-sum-ii/ 5k
 > * https://leetcode.com/problems/generate-parentheses/ 13k
