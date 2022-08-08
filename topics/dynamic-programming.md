@@ -175,7 +175,7 @@ We have weight `w(i)`, value `v(i)` for each item, capacity = `k` for knapsack, 
 Optimal structure is `knapsack(i, w)` is capacity `w` of selected items `{1...i}`, which maximize `SUM(i = 1 to N) {v(i) * x(i)}` and is subject to `SUM(i = 1 to N) {w(i) * x(i)} <= k`
 
 For our example will be:
-```
+```js
 knapsack(i, w) = max{1 * x1 + 10 * x2 + 7 * x3 + 13 * x4} for some j and is subject to 2 * x1 + 5 * x2 + 3 * x3 + 8 * x4 <= k
 ```
 
@@ -192,80 +192,163 @@ knapsack(i, w) =
 ```
 
 ### Top-Down Recursion
+We calculate the maximum value from all `n` items and the whole `capacity`:
+* We take the `n` item: the maximum value of `n` is the maximum value of `n - 1` item + value of `n`.
+* Or we don't take the `n` item.
+
 ```kotlin
 val values = intArrayOf(60, 100, 120)
 val weights = intArrayOf(10, 20, 30)
 val capacity = 50
 
 // We're going to determine to take `i-th` item under current remaining capacity `w`
+// NOTE: Here we use 1-based index!! Or some call it the item count.
 private fun knapsack(i: Int, w: Int): Int {
-    // Base cases
-    if (i < 0 || w == 0) return 0
+    // Base cases: no item or no capacity
+    if (i == 0 || w == 0) return 0
     // Overweight when taking current item, then not take it
-    return if (weights[i] > w) knapsack(i - 1, w)
+    return if (weights[i - 1] > w) knapsack(i - 1, w)
     else max(
         // Take it
-        knapsack(i - 1, w - weights[i]) + values[i],
+        knapsack(i - 1, w - weights[i - 1]) + values[i - 1],
         // Not take it
         knapsack(i - 1, w)
     )
 }
 
-knapsack(values.size - 1, capacity)
+// We have n items with capacity, and start taking the last item until no item.
+knapsack(values.size, capacity)
 ```
 
+* **Time Complexity**: `O(2^n)`, we either can take or skip for each items, it's 2 choices and we have `n` items.
+* **Space Complexity**: `O(n)` for recursive function call stack.
+
 ### Top-Down DP
+Let `dp[i][j]` represent the maximum value of capacity `j` from considering the items of size `i` (from `0` to `i - 1` items, i.e. `values[0:i-1]`)
+
+> **Note**: We have to keep in mind what the `dp[i][w]` stands for.
+
 ```kotlin
-private val dp = Array(values.size) { _ -> IntArray(capacity + 1) { _ -> -1 } }
+private val dp = Array(values.size + 1) { _ -> IntArray(capacity + 1) { _ -> -1 } }
 
 fun knapsack(i: Int, w: Int): Int {
-    if (i < 0 || w == 0) return 0
+    if (i == 0 || w == 0) return 0
     if (dp[i][w] != -1) return dp[i][w]
-    if (weights[i] > w) {
+    if (weights[i - 1] > w) {
         dp[i][w] = knapsack(i - 1, w)
     } else {
         dp[i][w] = max(
-            knapsack(i - 1, w - weights[i]) + values[i],
+            knapsack(i - 1, w - weights[i - 1]) + values[i - 1],
             knapsack(i - 1, w)
         )
     }
     return dp[i][w]
 }
 
-knapsack(values.size - 1, capacity)
+knapsack(values.size, capacity)
 ```
+
+* **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 0 ~ `W` of the capacity.
+* **Space Complexity**: `O(W * N)` for 2D array for memoization.
 
 ### Bottom-Up DP
 ```kotlin
 fun knapsack(): Int {
-    // Base cases:
-    // For weight = 0, it can't take any item
-    for (i in 0 until values.size) {
-        dp[i][0] = 0
-    }
-    
+    val dp = Array(values.size + 1) { _ -> IntArray(capacity + 1) }
+
     // Build up the solution in bottom-up fashion
-    for (i in 1 until values.size) {
-        for (w in 1.. capacity) {
-            if (weights[i] > w) dp[i][w] = dp[i - 1][w]
-            else dp[i][w] = max(
-                dp[i - 1][w - weights[i]] + values[i],
-                dp[i - 1][w]
-            )
+    for (i in 0..values.size) {
+        for (w in 0..capacity) {
+            dp[i][w] = 
+                // Base cases: either item size or capacity is 0
+                if (i == 0 || w == 0) 0
+                // Overweight, skip it
+                else if (weights[i - 1] > w) dp[i - 1][w]
+                else max(
+                    // Take it
+                    dp[i - 1][w - weights[i - 1]] + values[i - 1],
+                    // Skip it
+                    dp[i - 1][w]
+                )
         }
     }
-    return dp[values.size - 1][capacity]
+    return dp[values.size][capacity]
 }
 ```
 
-> **Note**: For bottom-up DP of 0/1 knapsack problem, we **CAN** exchange the order of two for-loop, however, space optimization and unbounded knapsack solution, **the for-loop order matters!!**
-> * Some explanation: https://leetcode.com/discuss/study-guide/1200320/Thief-with-a-knapsack-a-series-of-crimes.
-
-* **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 1 ~ `W` of the capacity.
+* **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 0 ~ `W` of the capacity.
 * **Space Complexity**: `O(W * N)` for 2D array for memoization.
 
+> **Note**: Mind the iteration variable, for `values` and `weights`, make sure to minus one, but does have to for `dp[i][w]`!!
+
 ### Bottom-Up DP (Space Optimization, 1D DP) 
-> TODO: [Space Optimization](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-2.md) for Knapsack problem
+For `dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i]] + values[i])`, what we use is the previous row only, the idea to reduce the space is to copy `dp[i - 1]` to `dp[i]`. (2D to 1D)
+
+So `dp[w]` is equivalient to `dp[i - 1][w]`, so the new state transition will be:
+
+```js
+dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+```
+
+```kotlin
+val values = intArrayOf(15, 20)
+val weights = intArrayOf(1, 2)
+val capacity = 3
+
+fun knapsack(): Int {
+    val dp = IntArray(capacity + 1)
+    for (i in 0..values.size) {
+        // We iterate from capacity to 0 (decreasingly)
+        for (w in capacity downTo 0) {
+            if (i == 0 || w == 0) dp[w] = 0
+            else if (weights[i - 1] <= w) {
+                dp[w] = max(
+                    // Take it
+                    dp[w - weights[i - 1]] + values[i - 1]
+                    // Skip it
+                    dp[w]
+                )
+            }
+            // If overweight, dp[w] = dp[w], it's trivial.
+        }
+    }
+    return dp[capacity]
+}
+```
+
+```js
+// Iterate from capacity downTo 0
+w   0	1	2	3	
+i=0	0	0	0	0	
+i=1	0	15	15	15	
+i=2	0	15	20	35	
+maxValue = 35
+
+// Iterate from 0 to capacity
+w   0	1	2	3	
+i=0	0	0	0	0	
+i=1	0	15	30	45	
+i=2	0	15	30	45	
+maxValue = 45
+```
+
+When we count `dp[2]` for `i=1`:
+* 2D: `dp[1][2] = max(dp[0][2], dp[0][1] + 15)`, where `dp[0][2]` and `dp[0][2]` are zero.
+* 1D `dp[2] = max(dp[2], dp[1] + 15)`:
+    * Iterate from 0 to `capacity`, `dp[1]` will be updated when calculate `i=1`, whereas it should be zero (`i=0`). It was overridden!!.
+    * Iterate from `capacity` to 0, we won't override `dp[1]` and it keeps the value for `i=0` when calcluate `dp[2]` of `i=1`.
+
+![](../media/01-knapsack.png)
+
+More important perspective, *double-counting*:
+
+Suppose we update `dp[8]` from `dp[3]` for item `i` (which weight is 5), and we've calculated `dp[3]` for item `i` before (iterative capacity incremently), it means that you had already put item `i` on state `dp[3]`, so in essence, you're taking item `i` again when calculating `dp[8]` (double-counting) which is not allowed (there is one item item, not unlimited!!)
+
+> Nice explanation: 
+> * https://leetcode.com/discuss/study-guide/1200320/Thief-with-a-knapsack-a-series-of-crimes.
+> * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-2.md
+>
+> **Note**: For bottom-up DP of 0/1 knapsack problem, we **CAN** exchange the order of two for-loop, however, space optimization and unbounded knapsack solution, **the for-loop order matters!!**
 
 ## Unbounded Knapsack Problems
 The difference between [0/1 Knapsack Problem](#0-1-knapsack-problem) is that we can put the unlimited amount of items into knapsack (with capacity limit).
