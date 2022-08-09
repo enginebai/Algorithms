@@ -261,9 +261,9 @@
 |[77. Combinations](../leetcode/77.combinations.md)|Medium|
 |[39. Combination Sum](../leetcode/39.combination-sum.md)|Medium|
 |[40. Combination Sum II](../leetcode/40.combination-sum-ii.md)|Medium|
+|[216. Combination Sum III](../leetcode/216.combination-sum-iii.md)|Medium|
 
 ### Problems List
-> * https://leetcode.com/problems/combination-sum-ii/ 5k
 > * https://leetcode.com/problems/generate-parentheses/ 13k
 > * https://leetcode.com/problems/letter-combinations-of-a-phone-number/ 11k
 > * https://leetcode.com/problems/palindrome-partitioning/ 7k
