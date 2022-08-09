@@ -358,11 +358,11 @@ The difference between [0/1 Knapsack Problem](#0-1-knapsack-problem) is that we 
 
 ```kotlin
 private fun knapsack(i: Int, w: Int): Int {
-    if (i < 0 || w == 0) return 0
-    if (weights[i] > w) return knapsack(i - 1, w)
+    if (i == 0 || w == 0) return 0
+    if (weights[i - 1] > w) return knapsack(i - 1, w)
     else return max(
         // Here we pass `i`, not i - 1, because we have unlimit items, we keep taking i-th item if available.
-        knapsack(i, w - weights[i]) + values[i], // Take it
+        knapsack(i, w - weights[i - 1]) + values[i - 1], // Take it
         knapsack(i, w) // Skip it
     )
 }
