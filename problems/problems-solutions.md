@@ -191,10 +191,6 @@
 |[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
-|[416. Partition Equal Subset Sum](../leetcode/416.partition-equal-subset-sum.md)|Medium|
-|[494. Target Sum](../leetcode/494.target-sum.md)|Medium|
-|[322. Coin Change](../leetcode/322.coin-change.md)|Medium|
-|[518. Coin Change 2](../leetcode/518.coin-change-2.md)|Medium|
 |[198. House Robber](../leetcode/198.house-robber.md)|Medium|
 |[213. House Robber II](../leetcode/213.house-robber-ii.md)|Medium|
 |[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
@@ -214,22 +210,30 @@
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 |[264. Ugly Number II](../leetcode/264.ugly-number-ii.md)|Medium|
 
-### Reading List
-> * See DP section: https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode 
->   * See above link and practice **by sub-topics**
->   * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
->   * https://leetcode.com/discuss/general-discussion/592146/dynamic-programming-summary
->   * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
->   * https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns
-
 ### Problems List
+> * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
+> * https://leetcode.com/discuss/general-discussion/592146/dynamic-programming-summary
+> * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
+> * https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns
+> * https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode
+
 #### Knapsack
-> * |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
+| Problem          | Difficulty |
+|------------------|------------|
+|[494. Target Sum](../leetcode/494.target-sum.md)|Medium|
+|[416. Partition Equal Subset Sum](../leetcode/416.partition-equal-subset-sum.md)|Medium|
+|[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
+|[322. Coin Change](../leetcode/322.coin-change.md)|Medium|
+|[518. Coin Change 2](../leetcode/518.coin-change-2.md)|Medium|
+
 > * https://leetcode.com/problems/combination-sum-iv/ 5k m
 > * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
 > * https://leetcode.com/problems/last-stone-weight-ii/ 2k m
 > * https://leetcode.com/problems/ones-and-zeroes/ 4k m
 > * https://leetcode.com/problems/integer-break/ 3k m
+> * https://leetcode.com/problems/triangle/ 6k m
+> * https://leetcode.com/problems/maximal-square/ 7k m
+> * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
 
 #### LIC
 > * https://leetcode.com/problems/delete-and-earn/ 5k m
@@ -244,12 +248,12 @@
 
 #### Other
 > * https://leetcode.com/problems/pascals-triangle/ 9k e
-> * https://leetcode.com/problems/triangle/ 6k m
 > * https://leetcode.com/problems/maximal-rectangle/ 6k h
 > * https://leetcode.com/problems/edit-distance/ 8k h
 > * https://leetcode.com/problems/longest-increasing-path-in-a-matrix/ 6k h
 > * https://leetcode.com/problems/minimum-falling-path-sum/ 3k m
 > * https://leetcode.com/problems/dungeon-game/ 4k h
+> * https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ 
 
 ## Backtracking
 ### Reading List
@@ -272,9 +276,12 @@
 > * https://leetcode.com/problems/subsets-ii/ 5k
 > * https://leetcode.com/problems/permutations/ 11k
 > * https://leetcode.com/problems/permutations-ii/ 6k
+> * https://leetcode.com/problems/permutation-sequence/ 4k h
 > * https://leetcode.com/problems/path-sum-ii/  5k m
 > * https://leetcode.com/problems/remove-invalid-parentheses/ 4k
 > * https://leetcode.com/problems/regular-expression-matching/ 8k
+> * https://leetcode.com/problems/palindrome-partitioning/ 7k m
+> * https://leetcode.com/problems/beautiful-arrangement/ 2k m
 
 ### Summary 
 > * https://leetcode.com/problems/permutations/discuss/18239/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partioning
