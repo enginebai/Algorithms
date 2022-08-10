@@ -80,7 +80,6 @@
 |[232. Implement Queue using Stacks](../leetcode/232.implement-queue-using-stacks.md)|Easy|
 |[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
 |[20. Valid Parentheses](../leetcode/20.valid-parentheses.md)|Easy|
-|[22. Generate Parentheses](../leetcode/22.generate-parentheses.md)|Medium|
 |[739. Daily Temperatures](../leetcode/739.daily-temperatures.md)|Medium|
 |[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)|Hard|
 |[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)|Easy|
@@ -266,10 +265,10 @@
 |[39. Combination Sum](../leetcode/39.combination-sum.md)|Medium|
 |[40. Combination Sum II](../leetcode/40.combination-sum-ii.md)|Medium|
 |[216. Combination Sum III](../leetcode/216.combination-sum-iii.md)|Medium|
+|[22. Generate Parentheses](../leetcode/22.generate-parentheses.md)|Medium|
+|[17. Letter Combinations of a Phone Number](../leetcode/17.letter-combinations-of-a-phone-number.md)|Medium|
 
 ### Problems List
-> * https://leetcode.com/problems/generate-parentheses/ 13k
-> * https://leetcode.com/problems/letter-combinations-of-a-phone-number/ 11k
 > * https://leetcode.com/problems/palindrome-partitioning/ 7k
 > * https://leetcode.com/problems/word-search/ 9k
 > * https://leetcode.com/problems/subsets/ 10k
