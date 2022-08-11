@@ -268,10 +268,9 @@
 |[22. Generate Parentheses](../leetcode/22.generate-parentheses.md)|Medium|
 |[17. Letter Combinations of a Phone Number](../leetcode/17.letter-combinations-of-a-phone-number.md)|Medium|
 |[79. Word Search](../leetcode/79.word-search.md)|Medium|
+|[78. Subsets](../leetcode/78.subsets.md)|Medium|
 
 ### Problems List
-> * https://leetcode.com/problems/word-search/ 9k
-> * https://leetcode.com/problems/subsets/ 10k
 > * https://leetcode.com/problems/subsets-ii/ 5k
 > * https://leetcode.com/problems/permutations/ 11k
 > * https://leetcode.com/problems/permutations-ii/ 6k
