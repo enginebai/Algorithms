@@ -267,9 +267,9 @@
 |[216. Combination Sum III](../leetcode/216.combination-sum-iii.md)|Medium|
 |[22. Generate Parentheses](../leetcode/22.generate-parentheses.md)|Medium|
 |[17. Letter Combinations of a Phone Number](../leetcode/17.letter-combinations-of-a-phone-number.md)|Medium|
+|[79. Word Search](../leetcode/79.word-search.md)|Medium|
 
 ### Problems List
-> * https://leetcode.com/problems/palindrome-partitioning/ 7k
 > * https://leetcode.com/problems/word-search/ 9k
 > * https://leetcode.com/problems/subsets/ 10k
 > * https://leetcode.com/problems/subsets-ii/ 5k
