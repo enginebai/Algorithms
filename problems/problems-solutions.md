@@ -270,9 +270,9 @@
 |[79. Word Search](../leetcode/79.word-search.md)|Medium|
 |[78. Subsets](../leetcode/78.subsets.md)|Medium|
 |[90. Subsets II](../leetcode/90.subsets-ii.md)|Medium|
+|[46. Permutations](../leetcode/46.permutations.md)|Medium|
 
 ### Problems List
-> * https://leetcode.com/problems/permutations/ 11k
 > * https://leetcode.com/problems/permutations-ii/ 6k
 > * https://leetcode.com/problems/permutation-sequence/ 4k h
 > * https://leetcode.com/problems/path-sum-ii/  5k m
