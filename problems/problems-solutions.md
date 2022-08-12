@@ -219,8 +219,8 @@
 #### Knapsack
 | Problem          | Difficulty |
 |------------------|------------|
-|[494. Target Sum](../leetcode/494.target-sum.md)|Medium|
 |[416. Partition Equal Subset Sum](../leetcode/416.partition-equal-subset-sum.md)|Medium|
+|[494. Target Sum](../leetcode/494.target-sum.md)|Medium|
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 |[322. Coin Change](../leetcode/322.coin-change.md)|Medium|
 |[518. Coin Change 2](../leetcode/518.coin-change-2.md)|Medium|
