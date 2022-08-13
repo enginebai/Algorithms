@@ -332,8 +332,8 @@ fun delete(node: Node<T>) {
 
 ## Binary Search Tree
 A *binary search tree* is an extension of binary tree that its keys are always stored in such a way to satisfy the property:
-* `L` is the node in left subtree of node `X`, then `L.data` <= `X.data`.
-* `R` is the node in right subtree of node `X`, then `R.data` >= `X.data`.
+* `L` is the node in left subtree of node `X`, then `L.data` < `X.data`.
+* `R` is the node in right subtree of node `X`, then `R.data` > `X.data`.
 
 ![Binary Search Tree](../media/binary-search-tree.png)
 
@@ -374,7 +374,7 @@ searchIteratively(tree.root, k)
 * The inorder traversal of BST will be in ascending order, the order of every nodes in binary search tree is as same as "inorder" traversal order.
 
 ### Insertion & Deletion
-The insertion and deletion cause the binary search tree to change to hold the binary-search-tree property continues to hold. It also take `O(h)` time.
+The insertion and deletion cause the binary search tree to change to hold the *binary-search-tree* property continues to hold. It also take `O(h)` time.
 
 ```kotlin
 fun BinarySearchTree.insert(k: <T>) {
@@ -382,11 +382,11 @@ fun BinarySearchTree.insert(k: <T>) {
     
     // Locate the correct place to insert:
     //  `node` traces the path, and
-    //  `nodeParent` traces the `node`'s parent.
+    //  `parent` traces the `node`'s parent.
     var node = this.root
-    var nodeParent: Node<T>? = null
+    var parent: Node<T>? = null
     while (node != null) {
-        nodeParent = node
+        parent = node
         if (k < node.data) {
             node = node.left
         } else {
@@ -395,17 +395,17 @@ fun BinarySearchTree.insert(k: <T>) {
     }
 
     // Find the parent node to insert
-    newNode.parent = nodeParent
+    newNode.parent = parent
 
     // The tree is empty
-    if (nodeParent == null) {
+    if (parent == null) {
         this.root = newNode
     } else {
         // Determine to insert left or right child
-        if (k < nodeParent.data) {
-            nodeParent.left = newNode
+        if (k < parent.data) {
+            parent.left = newNode
         } else {
-            nodeParent.right = newNode
+            parent.right = newNode
         }
     }
 }
@@ -537,28 +537,21 @@ fun bfs(root: TreeNode?) {
 
 * [Inorder traversal (**iterative**)](#inorder-traversal) template might be helpful when solving BST problem.
 
-## Sub-Toptics
-* [BFS/DFS](../topics/graph.md#breadth-first-search-bfs)
-* [Heap](../topics/heap.md)
-* [Priority Queue](../topics/heap.md#priority-queue)
-> TODO: see if we have to study those topis.
-* [Trie](../topics/other.md)
-
 ## Resources
-- [X] Fundamental of Data Structure
-- [ ] CTCI
-- [X] [MIT 6.006 Introduction to Algorithm - Lecture 6: Binary Trees, Part 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-6-binary-trees-part-1/)
-- [X] [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/treeshu-introjian-jie.html) // Nice introductory note
-- [X] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/tree // Traversal + BFS/DFS
-- [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-3)
-- [X] [LC Learn](https://leetcode.com/explore/learn/card/data-structure-tree/) 
-- [X] [LC Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/) // Coding problems With easy/medium/hard levels
-- [X] https://github.com/youngyangyang04/leetcode-master#%E4%BA%8C%E5%8F%89%E6%A0%91 // Nice problem illustrations
-- [X] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Tree) 
-- [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/tree) // Simple note + relative coding problems
-- [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#binary-search-trees) // Binary search tree, cheat sheet
-- [X] [Tech-Interview-Cheat-Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#binary-tree) // Simple note
-- [X] [Stadford Foundations of Computer Science - The Tree Data Model](http://infolab.stanford.edu/~ullman/focs/ch05.pdf) // Very general and broad concepts covered for tree: general tree, binary tree, binary search tree, trie.
-- [X] CLRS // Binary search tree
-- [X] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#trees)~~ // Old resources.
+- Fundamental of Data Structure
+- CTCI
+- [MIT 6.006 Introduction to Algorithm - Lecture 6: Binary Trees, Part 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-6-binary-trees-part-1/)
+- [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/treeshu-introjian-jie.html) // Nice introductory note
+- https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/tree // Traversal + BFS/DFS
+- [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-3)
+- [LC Learn](https://leetcode.com/explore/learn/card/data-structure-tree/) 
+- [LC Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/) // Coding problems With easy/medium/hard levels
+- https://github.com/youngyangyang04/leetcode-master#%E4%BA%8C%E5%8F%89%E6%A0%91 // Nice problem illustrations
+- [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Tree) 
+- [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/tree) // Simple note + relative coding problems
+- [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#binary-search-trees) // Binary search tree, cheat sheet
+- [Tech-Interview-Cheat-Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#binary-tree) // Simple note
+- [Stadford Foundations of Computer Science - The Tree Data Model](http://infolab.stanford.edu/~ullman/focs/ch05.pdf) // Very general and broad concepts covered for tree: general tree, binary tree, binary search tree, trie.
+- CLRS // Binary search tree
+- ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#trees)~~ // Old resources.
 
