@@ -209,14 +209,13 @@
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 |[264. Ugly Number II](../leetcode/264.ugly-number-ii.md)|Medium|
 
-### Problems List
+### Problem Lists
 > * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
 > * https://leetcode.com/discuss/general-discussion/592146/dynamic-programming-summary
 > * https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
 > * https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns
-> * https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode
 
-#### Knapsack
+### Knapsack
 | Problem          | Difficulty |
 |------------------|------------|
 |[416. Partition Equal Subset Sum](../leetcode/416.partition-equal-subset-sum.md)|Medium|
@@ -234,7 +233,10 @@
 > * https://leetcode.com/problems/maximal-square/ 7k m
 > * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
 
-#### LIC
+### LCS
+> * https://leetcode.com/problems/distinct-subsequences/ 4k h
+
+### LIC
 > * https://leetcode.com/problems/delete-and-earn/ 5k m
 > * https://leetcode.com/problems/longest-string-chain/ 5k m
 > * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
@@ -242,10 +244,7 @@
 > * https://leetcode.com/problems/longest-string-chain/ 3k m
 > * https://leetcode.com/problems/maximum-length-of-pair-chain/ 2k m
 
-#### LCS
-> * https://leetcode.com/problems/distinct-subsequences/ 4k h
-
-#### Other
+### Other
 > * https://leetcode.com/problems/pascals-triangle/ 9k e
 > * https://leetcode.com/problems/maximal-rectangle/ 6k h
 > * https://leetcode.com/problems/edit-distance/ 8k h
@@ -254,11 +253,13 @@
 > * https://leetcode.com/problems/dungeon-game/ 4k h
 > * https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ 
 
-## Backtracking
-### Reading List
-> * https://github.com/youngyangyang04/leetcode-master#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95
-> * https://labuladong.gitee.io/algo/4/29/103/
+## Greedy
+> * https://leetcode.com/discuss/general-discussion/1061059/ABCs-of-Greedy
+> * https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions
+> * https://leetcode.com/problems/non-overlapping-intervals/
+> * https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 
+## Backtracking
 | Problem          | Difficulty |
 |------------------|------------|
 |[77. Combinations](../leetcode/77.combinations.md)|Medium|
@@ -276,8 +277,6 @@
 |[113. Path Sum II](../leetcode/113.path-sum-ii.md)|Medium|
 
 > * TODO: Practice this problem when reviewing LCS in DP. https://leetcode.com/problems/palindrome-partitioning/ 7k m
-
-### Problems List
 > * https://leetcode.com/problems/permutation-sequence/ 4k h
 > * https://leetcode.com/problems/remove-invalid-parentheses/ 4k h
 > * https://leetcode.com/problems/regular-expression-matching/ 8k h
@@ -285,18 +284,6 @@
 > * https://leetcode.cn/problems/reconstruct-itinerary/  4k h
 > * https://leetcode.com/problems/n-queens/ 8k h
 > * https://leetcode.com/problems/sudoku-solver/ 6k h
-
-### Summary 
-> * https://leetcode.com/problems/permutations/discuss/18239/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partioning
-> * https://leetcode.com/problems/permutations/discuss/18284/Backtrack-Summary:-General-Solution-for-10-Questionsh
-> * https://leetcode.com/discuss/general-discussion/680269/a-general-approach-to-backtracking-problems-in-cexhaustive-searching
-
-## Greedy
-> * https://leetcode.com/discuss/general-discussion/1061059/ABCs-of-Greedy
-> * https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions
-
-> * https://leetcode.com/problems/non-overlapping-intervals/
-> * https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 
 ## Hash & Searching & Sorting
 > * https://labuladong.gitee.io/algo/2/18/26/
