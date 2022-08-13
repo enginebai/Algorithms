@@ -277,7 +277,7 @@
 
 ### Problems List
 > * https://leetcode.com/problems/permutation-sequence/ 4k h
-> * https://leetcode.com/problems/remove-invalid-parentheses/ 4k
+> * https://leetcode.com/problems/remove-invalid-parentheses/ 4k h
 > * https://leetcode.com/problems/regular-expression-matching/ 8k h
 > * https://leetcode.com/problems/palindrome-partitioning/ 7k m
 > * https://leetcode.com/problems/beautiful-arrangement/ 2k m
