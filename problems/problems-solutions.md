@@ -272,15 +272,18 @@
 |[90. Subsets II](../leetcode/90.subsets-ii.md)|Medium|
 |[46. Permutations](../leetcode/46.permutations.md)|Medium|
 |[47. Permutations II](../leetcode/47.permutations-ii.md)|Medium|
+|[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
+|[113. Path Sum II](../leetcode/113.path-sum-ii.md)|Medium|
 
 ### Problems List
-> * https://leetcode.com/problems/permutations-ii/ 6k
 > * https://leetcode.com/problems/permutation-sequence/ 4k h
-> * https://leetcode.com/problems/path-sum-ii/  5k m
 > * https://leetcode.com/problems/remove-invalid-parentheses/ 4k
-> * https://leetcode.com/problems/regular-expression-matching/ 8k
+> * https://leetcode.com/problems/regular-expression-matching/ 8k h
 > * https://leetcode.com/problems/palindrome-partitioning/ 7k m
 > * https://leetcode.com/problems/beautiful-arrangement/ 2k m
+> * https://leetcode.cn/problems/reconstruct-itinerary/  4k h
+> * https://leetcode.com/problems/n-queens/ 8k h
+> * https://leetcode.com/problems/sudoku-solver/ 6k h
 
 ### Summary 
 > * https://leetcode.com/problems/permutations/discuss/18239/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partioning
