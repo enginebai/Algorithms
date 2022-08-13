@@ -1,6 +1,6 @@
 # Problems & Solutions
 
-## [Array](../problems/problems-array.md)
+## [Array](../topics/array.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
@@ -29,7 +29,7 @@
 > * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 7k m
 > * https://leetcode.com/problems/ remove-duplicates-from-sorted-list-ii/ 6k m
 
-## [String](../problems/problems-string.md)
+## [String](../topics/array.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
@@ -48,7 +48,7 @@
 > * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
 > * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
 
-## [Linked List](../problems/problems-linked-list.md)
+## [Linked List](../topics/linked-list.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
@@ -73,7 +73,7 @@
 > * https://leetcode.com/problems/sort-list/
 > * https://leetcode.com/problems/partition-list/
 
-## [Stack & Queue](../problems/problems-stack-queue.md)
+## [Stack & Queue](../topics/stack-queue.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[155. Min Stack](../leetcode/155.min-stack.md)|Easy|
@@ -92,7 +92,7 @@
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
 
-## Tree
+## [Tree](../topics/tree.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[94. Binary Tree Inorder Traversal](../leetcode/94.binary-tree-inorder-traversal.md)|Easy|
@@ -121,7 +121,7 @@
 > * https://leetcode.com/problems/binary-tree-paths/ 4k e
 > * **Listing**: https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
 
-## Binary Search Tree
+## [Binary Search Tree](../topics/tree.md#binary-search-tree)
 | Problem          | Difficulty |
 |------------------|------------|
 |[700. Search in a Binary Search Tree](../leetcode/700.search-in-a-binary-search-tree.md)|Easy|
@@ -275,11 +275,12 @@
 |[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
 |[113. Path Sum II](../leetcode/113.path-sum-ii.md)|Medium|
 
+> * TODO: Practice this problem when reviewing LCS in DP. https://leetcode.com/problems/palindrome-partitioning/ 7k m
+
 ### Problems List
 > * https://leetcode.com/problems/permutation-sequence/ 4k h
 > * https://leetcode.com/problems/remove-invalid-parentheses/ 4k h
 > * https://leetcode.com/problems/regular-expression-matching/ 8k h
-> * https://leetcode.com/problems/palindrome-partitioning/ 7k m
 > * https://leetcode.com/problems/beautiful-arrangement/ 2k m
 > * https://leetcode.cn/problems/reconstruct-itinerary/  4k h
 > * https://leetcode.com/problems/n-queens/ 8k h
