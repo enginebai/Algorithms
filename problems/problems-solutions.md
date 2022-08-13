@@ -271,6 +271,7 @@
 |[78. Subsets](../leetcode/78.subsets.md)|Medium|
 |[90. Subsets II](../leetcode/90.subsets-ii.md)|Medium|
 |[46. Permutations](../leetcode/46.permutations.md)|Medium|
+|[47. Permutations II](../leetcode/47.permutations-ii.md)|Medium|
 
 ### Problems List
 > * https://leetcode.com/problems/permutations-ii/ 6k
