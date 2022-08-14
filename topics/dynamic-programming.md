@@ -299,11 +299,11 @@ val capacity = 3
 
 fun knapsack(): Int {
     val dp = IntArray(capacity + 1)
-    for (i in 0..values.size) {
+    dp[0] = 0
+    for (i in 1..values.size) {
         // We iterate from capacity to w[i - 1] (decreasingly) and avoid overweight.
         // For overweight case, dp[w] = dp[w], it's trivial, we don't iterate.
         for (w in capacity downTo w[i - 1]) {
-            if (i == 0 || w == 0) dp[w] = 0
             else {
                 dp[w] = max(
                     // Take it
@@ -356,7 +356,9 @@ Suppose we update `dp[8]` from `dp[3]` for item `i` (which weight is 5), and we'
 ## Unbounded Knapsack Problems
 The difference between [0/1 Knapsack Problem](#0-1-knapsack-problem) is that we can put the unlimited amount of items into knapsack (with capacity limit).
 
+### Top-Down Recursion
 ```kotlin
+// Top-Down Recursion
 private fun knapsack(i: Int, w: Int): Int {
     if (i == 0 || w == 0) return 0
     if (weights[i - 1] > w) return knapsack(i - 1, w)
@@ -366,15 +368,21 @@ private fun knapsack(i: Int, w: Int): Int {
         knapsack(i, w) // Skip it
     )
 }
+```
 
-// For space optimization (1D DP)
+### Bottom-Up DP (Space Optimization)
+Since we can take the same item in unlimited time, so we will iterate capacity from the lowest weight we can take to maximum capacity. (The only difference to 0/1 knapsack). 
+
+> More detailed explanation see above or the double-counting from [link](https://leetcode.com/discuss/study-guide/1200320/Thief-with-a-knapsack-a-series-of-crimes).
+
+```kotlin
 fun knapsack(): Int {
     val dp = IntArray(capacity + 1)
     dp[0] = 0
-    for (i in 0 until values.size) {
+    for (i in 1..values.size) {
         // Mind the iterate order (different from 0/1 knapsack 1D DP
-        for (w in weights[i]..capacity) {
-            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+        for (w in capacity downTo weights[i - 1]) {
+            dp[w] = max(dp[w], dp[w - weights[i - 1]] + values[i - 1])
         }
     }
     return dp[capacity]
