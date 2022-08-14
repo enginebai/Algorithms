@@ -38,7 +38,6 @@
 |[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
 |[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
-|[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 
 ### Nice Posts
 > * https://www.geekxh.com/1.3.%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B3%BB%E5%88%97/301.html
@@ -293,8 +292,8 @@
 |------------------|------------|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
 |[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
+|[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 
-> * https://leetcode.com/problems/group-anagrams/ 10k
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
 > * https://leetcode.com/problems/first-missing-positive/ 10k
 > * https://leetcode.com/problems/lru-cache/ 13k
