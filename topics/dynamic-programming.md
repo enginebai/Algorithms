@@ -358,11 +358,11 @@ The difference between [0/1 Knapsack Problem](#0-1-knapsack-problem) is that we 
 
 ```kotlin
 private fun knapsack(i: Int, w: Int): Int {
-    if (i < 0 || w == 0) return 0
-    if (weights[i] > w) return knapsack(i - 1, w)
+    if (i == 0 || w == 0) return 0
+    if (weights[i - 1] > w) return knapsack(i - 1, w)
     else return max(
         // Here we pass `i`, not i - 1, because we have unlimit items, we keep taking i-th item if available.
-        knapsack(i, w - weights[i]) + values[i], // Take it
+        knapsack(i, w - weights[i - 1]) + values[i - 1], // Take it
         knapsack(i, w) // Skip it
     )
 }
@@ -471,8 +471,9 @@ fun maxProfit(prices: IntArray): Int {
 
 For problem 121, the `k` is one, and problem 122, the `k` is unlimited, the problem 123, the `k` is two.
 
-> Nice explanation and general template: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
-> In chinese: [一个方法团灭 LEETCODE 股票买卖问题](https://labuladong.github.io/algo/1/13/)
+> * Nice explanation and general template: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
+> * In chinese: [一个方法团灭 LEETCODE 股票买卖问题](https://labuladong.github.io/algo/1/13/)
+> * Nice illustration: https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
 
 ## Longest Common Subsequence Problem
 Given two strings `A` and `B`, find the longest common subsequences (not necessarily continuous) of `A` and `B`.
@@ -618,7 +619,7 @@ fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
 * **Space Complexity**: `O(m * n)` for dp 2D table.
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
-* Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know.
+* Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know. ([Source](https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions))
 * For some problems, we have to return the max amoung DP table, not just `dp[0]` or `dp[n]` .
 
 ### When to use DP? 
@@ -641,6 +642,7 @@ Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the
 
 > * TODO: Must practice!! [Top-Down + Bottom-up Optimization](https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning)
 > * https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions.
+> * https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems
 
 ### How to Relate Subproblem Solutions
 1. Try to identify the question about a subproblem.
@@ -660,15 +662,16 @@ Overall, try to think about your recursive functions call in terms of a **tree**
     * Otherwise, calculate the solution and store into memo if it doesn't exist.
 
 ## Resources
-- [X] CLRS
-- [X] [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-15-dynamic-programming-part-1-srtbot-fib-dags-bowling/) // There are four videos
-- [ ] CTCI
-- [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-9)
+- CLRS
+- [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-15-dynamic-programming-part-1-srtbot-fib-dags-bowling/) // There are four videos
+- CTCI
+- [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-9)
     * There a nice articles: [Introduction to Dynamic Programming](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/)
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
-- [ ] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/dynamic-programming
-- [ ] https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
-- [ ] [LC Learn](https://leetcode.com/explore/learn/card/dynamic-programming/) // Some topics are locked
+- [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
+- [力扣加加](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/dynamic-programming)
+- [代碼隨想錄](https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
+- [LC Learn](https://leetcode.com/explore/learn/card/dynamic-programming/) // Some topics are locked
 - ~~[ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#dynamic-programming)~~
-- [ ] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/dynamic-programming/) // Not too much notes, some references posts only
+- [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/dynamic-programming/) // Not too much notes, some references posts only
 - [动态规划详解](https://mp.weixin.qq.com/s/1V3aHVonWBEXlNUvK3S28w)
+- [LeetCode Curated Posts](https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode)

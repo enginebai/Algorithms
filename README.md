@@ -21,6 +21,7 @@ This project are curated resources and notes of basic/fundamental/popular data s
 - [Sorting](./topics/sorting.md)
 - [Hash Table](./topics/hash-table.md)
 - [Searching](./topics/searching.md)
+- [Backtracking](./topics/backtracking.md)
 - (TODO) [Other](./topics/other.md)
 - 👉 [Problems & Solutions](./problems/problems-solutions.md)
 

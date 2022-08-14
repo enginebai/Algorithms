@@ -7,5 +7,5 @@ Description
 // TODO: Insert your code
 ```
 
-* **Time Complexity**: `O(n)` for only one for-loop.
-* **Space Complexity**: `O(1)` for two counters.
+* **Time Complexity**: 
+* **Space Complexity**: 
