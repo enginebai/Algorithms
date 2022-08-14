@@ -90,6 +90,8 @@ fun merge(A: IntArray, start: Int, half: Int, end: Int) {
 
 fun mergeSort(A, start, end) {
     if (start < end) {
+        // We don't write middle = (start + end) / 2
+        // Source: https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
         val half = start + (end - start) / 2
         mergeSort(A, start, half)
         mergeSort(A, half + 1, end)

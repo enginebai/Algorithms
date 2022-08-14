@@ -465,25 +465,7 @@ private fun swapData(node1: Node<T>, node2: Node<T>) {
 > Above is rough pseudocode, for the full implementation that covered every test cases and null-safety (and without `parent` pointer), we can see problem [450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md).
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#tree)
-* [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
-    * *Top-Down* solution: It can be considered as **preorder** traversal order.
-        ```kotlin
-        fun topDown(node) {
-            1. Update the answer from current node (like `print(node.data)`
-            2. Left answer = topDown(node.left)
-            3. Right answer = topDown(node.right)
-            4. Return answer
-        }
-        ```
-    * *Bottom-Up* solution: We call function for all the children recursively, it regards as *postorder* traversal order.
-        ```kotlin
-        fun buttomUp(node) {
-            1. Left answer = buttomUp(node.left)
-            2. Right answer = buttomUp(node.right)
-            3. Update the answer from current node
-            4. Return answer
-        }
-        ```
+* [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree)
 * Corner cases:
     * Empty tree (`node == null`)
     * Single node (`node!!.left == null || node!!.right == null`)
@@ -525,8 +507,7 @@ fun bfs(root: TreeNode?) {
             if (node.left != null) queue.addLast(node.left!!)
             if (node.right != null) queue.addLast(node.right!!)
         }
-
-        if (size > 0) level++
+        level++
         
         // Do something extra
     }

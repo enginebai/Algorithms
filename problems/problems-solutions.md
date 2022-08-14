@@ -132,6 +132,9 @@
 |[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
 |[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
 
+> * https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/ 4k m
+> * https://leetcode.com/problems/serialize-and-deserialize-bst/ 2k m
+
 ## Heap
 | Problem          | Difficulty |
 |------------------|------------|
