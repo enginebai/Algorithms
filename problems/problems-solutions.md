@@ -292,7 +292,8 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
-> * https://leetcode.com/problems/merge-sorted-array/ 8k
+|[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
+
 > * https://leetcode.com/problems/group-anagrams/ 10k
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
 > * https://leetcode.com/problems/first-missing-positive/ 10k
