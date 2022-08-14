@@ -289,8 +289,9 @@
 > * https://leetcode.com/problems/sudoku-solver/ 6k h
 
 ## Hash & Searching & Sorting
-> * https://labuladong.gitee.io/algo/2/18/26/
-> * https://leetcode.com/problems/two-sum/ 35k
+| Problem          | Difficulty |
+|------------------|------------|
+|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
 > * https://leetcode.com/problems/merge-sorted-array/ 8k
 > * https://leetcode.com/problems/group-anagrams/ 10k
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
