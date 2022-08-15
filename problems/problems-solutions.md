@@ -293,13 +293,13 @@
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
 |[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
+|[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
+|[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
-> * https://leetcode.com/problems/first-missing-positive/ 10k
 > * https://leetcode.com/problems/lru-cache/ 13k
 > * https://leetcode.com/problems/binary-search/ 5k
 > * https://leetcode.com/problems/search-in-rotated-sorted-array/ 15k
-> * https://leetcode.com/problems/subarray-sum-equals-k/ 13k
 > * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 7k
 > * https://leetcode.com/problems/copy-list-with-random-pointer/ 8k
 > * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
