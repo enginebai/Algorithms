@@ -296,19 +296,23 @@
 |[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
 |[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 
-> * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
+> Hash:
 > * https://leetcode.com/problems/lru-cache/ 13k
+> * https://leetcode.com/problems/copy-list-with-random-pointer/ 10k
+> * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 8k
+> * https://leetcode.com/problems/task-scheduler/ 6k
+> * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
+
+> Search + Sorting:
 > * https://leetcode.com/problems/binary-search/ 5k
 > * https://leetcode.com/problems/search-in-rotated-sorted-array/ 15k
-> * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 7k
-> * https://leetcode.com/problems/copy-list-with-random-pointer/ 8k
-> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
 > * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ 11k
 > * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 7k
 > * https://leetcode.com/problems/search-a-2d-matrix/ 8k
 > * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
-> * https://leetcode.com/problems/task-scheduler/ 6k
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
+> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
+
 
 ### Reading List:
 > * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
