@@ -67,8 +67,8 @@
 |[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
 |[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
 |[328. Odd Even Linked List](../leetcode/328.odd-even-linked-list.md)|Medium|
+|[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 
-> * https://leetcode.com/problems/copy-list-with-random-pointer/
 > * https://leetcode.com/problems/sort-list/
 > * https://leetcode.com/problems/partition-list/
 
@@ -295,10 +295,10 @@
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 |[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
 |[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
+|[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
+|[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 
 > Hash:
-> * https://leetcode.com/problems/lru-cache/ 13k
-> * https://leetcode.com/problems/copy-list-with-random-pointer/ 10k
 > * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 8k
 > * https://leetcode.com/problems/task-scheduler/ 6k
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
