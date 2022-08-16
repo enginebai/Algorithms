@@ -291,18 +291,18 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
-|[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 |[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
 |[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 |[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
+|[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 
 > Hash:
-> * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 8k
 > * https://leetcode.com/problems/task-scheduler/ 6k
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
 
+|[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
 > Search + Sorting:
 > * https://leetcode.com/problems/binary-search/ 5k
 > * https://leetcode.com/problems/search-in-rotated-sorted-array/ 15k
