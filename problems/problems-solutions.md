@@ -299,17 +299,17 @@
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
 |[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
+|[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
 
 > Hash:
 > * https://leetcode.com/problems/task-scheduler/ 6k
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
 
 > Search + Sorting:
-> * https://leetcode.com/problems/search-in-rotated-sorted-array/ 15k
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
-> * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ 11k
-> * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 7k
-> * https://leetcode.com/problems/search-a-2d-matrix/ 8k
+> * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ 13k
+> * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 8k
+> * https://leetcode.com/problems/search-a-2d-matrix/ 9k
 > * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
 > * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
 
