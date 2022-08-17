@@ -297,14 +297,14 @@
 |[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
+|[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
+|[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
 
 > Hash:
 > * https://leetcode.com/problems/task-scheduler/ 6k
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
 
-|[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
 > Search + Sorting:
-> * https://leetcode.com/problems/binary-search/ 5k
 > * https://leetcode.com/problems/search-in-rotated-sorted-array/ 15k
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
 > * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ 11k
