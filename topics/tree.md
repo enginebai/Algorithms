@@ -377,41 +377,36 @@ searchIteratively(tree.root, k)
 The insertion and deletion cause the binary search tree to change to hold the *binary-search-tree* property continues to hold. It also take `O(h)` time.
 
 ```kotlin
-fun BinarySearchTree.insert(k: <T>) {
-    val newNode = Node(data = k)
-    
-    // Locate the correct place to insert:
-    //  `node` traces the path, and
-    //  `parent` traces the `node`'s parent.
-    var node = this.root
-    var parent: Node<T>? = null
+// Iterative
+fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
+    val newNode = TreeNode(`val`)
+    if (root == null) return newNode
+
+    // Locate the correct place to insert.
+    var parent: TreeNode? = null
+    var node: TreeNode? = root
     while (node != null) {
         parent = node
-        if (k < node.data) {
-            node = node.left
-        } else {
-            node = node.right
-        }
+        if (`val` > node.`val`) node = node.right
+        else node = node.left
     }
 
-    // Find the parent node to insert
-    newNode.parent = parent
-
-    // The tree is empty
-    if (parent == null) {
-        this.root = newNode
-    } else {
-        // Determine to insert left or right child
-        if (k < parent.data) {
-            parent.left = newNode
-        } else {
-            parent.right = newNode
-        }
+    // Determine to insert left or right child.
+    if (parent != null) {
+        if (`val` > parent.`val`) parent.right = newNode
+        else parent.left = newNode
     }
+    return root
+}
+
+// Recursive
+fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
+    if (root == null) return TreeNode(`val`)
+    if (root.`val` > `val`) root.left = insertIntoBST(root.left, `val`)
+    else root.right = insertIntoBST(root.right, `val`)
+    return root
 }
 ```
-
-> For full implementation, take a look at [701. Insert into a Binary Search Tree](../leetcode/701.insert-into-a-binary-search-tree.md).
 
 The deletion operations considers the tree cases:
 1. Leaves (node has no child): It's easy to delete, just detach. (Like binary tree deletion)
@@ -420,70 +415,105 @@ The deletion operations considers the tree cases:
 3. Node have two children: We perform the same operation as [binary tree deletion](#deletion), we keep moving down the `X` by swapping with `X` and its successor (its successor will never be the parent of `X`, it never goes up), until `X` reaches the leaf, then detach.
 ![Binary Search Tree Delete Node With Two Children](../media/binary-search-tree-delete-two-children.png)
 
-```kotlin
-fun BinarySearchTree.delete(node: Node<T>) {
-    if (node.left == null && node.right == null) {
-        val parent = node.parent
-        if (paret.left == node) parent.left = null else parent.right = null
-        return
-    }
+And there are some key points for the implementation, given the root of BST and the `key`, we have to delete the node with that `key` and return the updated root node:
 
-    // Determine the left or right child of the node to delete for splicing out
-    if (node.left == null || node.right == null) {
-        val child = if (node.left != null) node.left else node.right
-        var parent = node.parent
-        if (parent?.left == node) parent?.left = child else parent?.right = child
-        child.parent = parent
-        return 
+* We don't have `parent` pointer in real implementation or problem, so we have to update parent node as we search or swap with the node.
+* The node to delete is root or not will affect the result + how many child does the node to delete have will affect the implementation, all the combinations will be:
+    1. The node is root, is leaf. (root updated, it becomes empty tree)
+    1. The node is root, has only one child. (The only child will become the new root)
+    1. The node is root, has two children. 
+    1. The node is NOT root, is leaf.
+    1. The node is NOT root, has only one child.
+    1. The node is NOT root, has two children.
+* The `successor(node)` is a little bit different from orignal binary tree's we don't look for the lowest ancestor (don't look up upward).
+
+```kotlin
+private var parent: TreeNode? = null
+
+fun deleteNode(root: TreeNode?, key: Int): TreeNode? {
+    val nodeToRemove = searchNodeToRemove(root, key)
+    // Not found
+    if (nodeToRemove == null) return root
+    
+    // To remove root
+    if (parent == null) {
+        // Case 1.
+        // [5]
+        //  5
+        if (nodeToRemove.left == null && nodeToRemove.right == null) return null
+        // Case 2.
+        // [1,2] or [1,nul,2]
+        //  1        
+        if (nodeToRemove.left == null || nodeToRemove.right == null) {
+            return if (nodeToRemove.left != null) nodeToRemove.left else nodeToRemove.right
+        }
     }
+    // We leave the case that to delete root that has two children here
+    deleteNode(nodeToRemove)
+    return root
+}
+
+private fun searchNodeToRemove(root: TreeNode?, key: Int): TreeNode? {
+    var current: TreeNode? = root
+    while (current != null && current.`val` != key) {
+        parent = current
+        if (current.`val` > key) {
+            current = current.left
+        } else {
+            current = current.right
+        }
+    }
+    return current
+}
+
+private fun deleteNode(nodeToDelete: TreeNode?) {
+    if (nodeToDelete == null) return
+
+    // We use let {...} scope function to eliminate all null check of parent node
+    parent?.let { parent ->
+        // Leaf to delete, just detach.
+        if (nodeToDelete.left == null && nodeToDelete.right == null) {
+            if (nodeToDelete.`val` == parent!!.left?.`val`) {
+                parent.left = null
+            } else if (nodeToDelete.`val` == parent.right.`val`) {
+                parent.right = null
+            }
+            return
+        }
+        // Node to delete has one child only
+        if (nodeToDelete.left == null || nodeToDelete.right == null) {
+            // Determine the left or right child of the node to delete for splicing out
+            val child = if (nodeToDelete.left != null) nodeToDelete.left!! else nodeToDelete.right!!
+            if (nodeToDelete.`val` == parent.left?.`val`) {
+                parent.left = child
+            } else if (nodeToDelete.`val` == parent.right.`val`) {
+                parent.right = child
+            }
+            return
+        }
+
+    }
+    // Node to delete has two children, find the successor and swipe
+    parent = nodeToDelete
+    var successor = nodeToDelete.right!!
+    while (successor?.left != null) {
+        parent = successor
+        successor = successor.left!!
+    }
+    
+    val temp = nodeToDelete.`val`
+    nodeToDelete.`val` = successor.`val`
+    successor.`val` = temp
 
     // Keep moving down the node by swapping with its successor
-    var successorNode = successor(node)
-    while (successorNode != null) {
-        swapData(node, successNode)
-        // Move successor
-        node = successorNode
-        successorNode = successor(node)
-    }
-    // Detach leaf node
-    delete(node)
-}
-
-private fun successor(node: Node<T>): Node<T>? {
-    return if (node.right != null) substreeFirst(node.right!!)
-    // Different from binary free, we don't find the lowest ancestor.
-    else null
-}
-
-private fun swapData(node1: Node<T>, node2: Node<T>) {
-    val temp = node1.data
-    node1.data = node2.data
-    node1.data = temp
+    deleteNode(successor)
 }
 ```
 
-> Above is rough pseudocode, for the full implementation that covered every test cases and null-safety (and without `parent` pointer), we can see problem [450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md).
+> To problem [450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md).
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#tree)
-* [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two approaches for solving tree problem recursively:
-    * *Top-Down* solution: It can be considered as **preorder** traversal order.
-        ```kotlin
-        fun topDown(node) {
-            1. Update the answer from current node (like `print(node.data)`
-            2. Left answer = topDown(node.left)
-            3. Right answer = topDown(node.right)
-            4. Return answer
-        }
-        ```
-    * *Bottom-Up* solution: We call function for all the children recursively, it regards as *postorder* traversal order.
-        ```kotlin
-        fun buttomUp(node) {
-            1. Left answer = buttomUp(node.left)
-            2. Right answer = buttomUp(node.right)
-            3. Update the answer from current node
-            4. Return answer
-        }
-        ```
+* [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree)
 * Corner cases:
     * Empty tree (`node == null`)
     * Single node (`node!!.left == null || node!!.right == null`)
@@ -525,8 +555,7 @@ fun bfs(root: TreeNode?) {
             if (node.left != null) queue.addLast(node.left!!)
             if (node.right != null) queue.addLast(node.right!!)
         }
-
-        if (size > 0) level++
+        level++
         
         // Do something extra
     }

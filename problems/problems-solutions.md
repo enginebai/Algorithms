@@ -24,10 +24,15 @@
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 3k m
 
 ### Two Pointers
+### Reading List:
+> * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
+> * https://labuladong.gitee.io/algo/1/9/ (For Linked List, might skip)
+> * https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers
+
 > * https://leetcode.com/problems/backspace-string-compare/ 5k e
 > * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
 > * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 7k m
-> * https://leetcode.com/problems/ remove-duplicates-from-sorted-list-ii/ 6k m
+> * https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/ 6k m
 
 ## [String](../topics/array.md)
 | Problem          | Difficulty |
@@ -38,7 +43,6 @@
 |[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
 |[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
-|[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 
 ### Nice Posts
 > * https://www.geekxh.com/1.3.%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B3%BB%E5%88%97/301.html
@@ -68,8 +72,8 @@
 |[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
 |[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
 |[328. Odd Even Linked List](../leetcode/328.odd-even-linked-list.md)|Medium|
+|[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 
-> * https://leetcode.com/problems/copy-list-with-random-pointer/
 > * https://leetcode.com/problems/sort-list/
 > * https://leetcode.com/problems/partition-list/
 
@@ -131,6 +135,9 @@
 |[98. Validate Binary Search Tree](../leetcode/98.validate-binary-search-tree.md)|Medium|
 |[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
 |[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
+
+> * https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/ 4k m
+> * https://leetcode.com/problems/serialize-and-deserialize-bst/ 2k m
 
 ## Heap
 | Problem          | Difficulty |
@@ -286,30 +293,31 @@
 > * https://leetcode.com/problems/sudoku-solver/ 6k h
 
 ## Hash & Searching & Sorting
-> * https://labuladong.gitee.io/algo/2/18/26/
-> * https://leetcode.com/problems/two-sum/ 35k
-> * https://leetcode.com/problems/merge-sorted-array/ 8k
-> * https://leetcode.com/problems/group-anagrams/ 10k
-> * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
-> * https://leetcode.com/problems/first-missing-positive/ 10k
-> * https://leetcode.com/problems/lru-cache/ 13k
-> * https://leetcode.com/problems/binary-search/ 5k
-> * https://leetcode.com/problems/search-in-rotated-sorted-array/ 15k
-> * https://leetcode.com/problems/subarray-sum-equals-k/ 13k
-> * https://leetcode.com/problems/find-all-anagrams-in-a-string/ 7k
-> * https://leetcode.com/problems/copy-list-with-random-pointer/ 8k
-> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
-> * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ 11k
-> * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 7k
-> * https://leetcode.com/problems/search-a-2d-matrix/ 8k
-> * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
-> * https://leetcode.com/problems/task-scheduler/ 6k
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
+| Problem          | Difficulty |
+|------------------|------------|
+|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
+|[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
+|[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
+|[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
+|[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
+|[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
+|[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
+|[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
+|[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
+|[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
+|[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
+|[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
+|[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
+|[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
 
-### Reading List:
-> * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
-> * https://labuladong.gitee.io/algo/1/9/ (For Linked List, might skip)
-> * https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers
+> Hash:
+> * https://leetcode.com/problems/task-scheduler/ 6k
+> * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
+
+> Search + Sorting:
+> * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
+> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
 
 ## Sliding Window
 ### Reading List: 
