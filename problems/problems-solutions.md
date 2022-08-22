@@ -24,10 +24,15 @@
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 3k m
 
 ### Two Pointers
+### Reading List:
+> * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
+> * https://labuladong.gitee.io/algo/1/9/ (For Linked List, might skip)
+> * https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers
+
 > * https://leetcode.com/problems/backspace-string-compare/ 5k e
 > * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
 > * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 7k m
-> * https://leetcode.com/problems/ remove-duplicates-from-sorted-list-ii/ 6k m
+> * https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/ 6k m
 
 ## [String](../topics/array.md)
 | Problem          | Difficulty |
@@ -303,21 +308,16 @@
 |[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
 |[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
 |[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
+|[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
 
 > Hash:
 > * https://leetcode.com/problems/task-scheduler/ 6k
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
 
 > Search + Sorting:
+> * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
-> * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ 6k m
 > * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
-
-
-### Reading List:
-> * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
-> * https://labuladong.gitee.io/algo/1/9/ (For Linked List, might skip)
-> * https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers
 
 ## Sliding Window
 ### Reading List: 
