@@ -1,6 +1,6 @@
 # Problems & Solutions
 
-## [Array](../topics/array.md)
+## [Array & String](../topics/array.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
@@ -14,6 +14,12 @@
 |[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
 |[136. Single Number](../leetcode/136.single-number.md)|Easy|
 |[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
+|[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
+|[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
+|[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
+|[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
+|[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
+|[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
@@ -24,30 +30,21 @@
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 3k m
 
 ### Two Pointers
-### Reading List:
-> * https://labuladong.gitee.io/algo/2/18/21/ (For Array)
-> * https://labuladong.gitee.io/algo/1/9/ (For Linked List, might skip)
-> * https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers
-
 > * https://leetcode.com/problems/backspace-string-compare/ 5k e
 > * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
 > * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 7k m
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/ 6k m
 
-### Sliding Window
-
+### Sliding Windows
 #### Reading List: 
 > * https://labuladong.gitee.io/algo/1/11/
->   * https://leetcode.com/problems/permutation-in-string/ 6k
->   * https://leetcode.com/problems/minimum-window-substring/ 10k hard
 > * https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/slide-window
 > * https://www.geekxh.com/1.5.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%B3%BB%E5%88%97/501.html#_01%E3%80%81%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90
 > * From LeetCode Recommendation: 
 >   * https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem (Templates + Some problems)
 
 ### Problems List:
-
-> * https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3
+> * https://leetcode.com/problems/permutation-in-string/ 6k
 > * https://leetcode.com/problems/minimum-size-subarray-sum/ 7k
 > * https://leetcode.com/problems/longest-repeating-character-replacement/ 4k
 > * https://leetcode.com/problems/max-consecutive-ones-iii/ 4k
@@ -58,23 +55,14 @@
 > * https://leetcode.com/problems/maximum-length-of-repeated-subarray/ (Solved in DP)
 > * https://leetcode.com/problems/binary-subarrays-with-sum/
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
+> * https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3
 
-## [String](../topics/array.md)
-| Problem          | Difficulty |
-|------------------|------------|
-|[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
-|[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
-|[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
-|[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
-|[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
-|[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
-
-
-### Nice Posts
+### String
+#### Reading List
 > * https://www.geekxh.com/1.3.%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B3%BB%E5%88%97/301.html
 > * https://github.com/youngyangyang04/leetcode-master#%E5%AD%97%E7%AC%A6%E4%B8%B2
 
-### Problem List
+#### Problem List
 > * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
 > * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
 
