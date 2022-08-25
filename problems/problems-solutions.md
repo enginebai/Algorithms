@@ -20,6 +20,7 @@
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
 |[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
+|[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
@@ -44,7 +45,6 @@
 >   * https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem (Templates + Some problems)
 
 ### Problems List:
-> * https://leetcode.com/problems/permutation-in-string/ 6k
 > * https://leetcode.com/problems/minimum-size-subarray-sum/ 7k
 > * https://leetcode.com/problems/longest-repeating-character-replacement/ 4k
 > * https://leetcode.com/problems/max-consecutive-ones-iii/ 4k
