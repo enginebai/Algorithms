@@ -19,8 +19,10 @@
 |[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
+|[1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md)|Medium|
 |[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 |[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
+|[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
@@ -40,21 +42,19 @@
 #### Reading List: 
 > * https://labuladong.gitee.io/algo/1/11/
 > * https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/slide-window
-> * https://www.geekxh.com/1.5.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%B3%BB%E5%88%97/501.html#_01%E3%80%81%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90
 > * From LeetCode Recommendation: 
 >   * https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem (Templates + Some problems)
 
 ### Problems List:
-> * https://leetcode.com/problems/minimum-size-subarray-sum/ 7k
-> * https://leetcode.com/problems/longest-repeating-character-replacement/ 4k
-> * https://leetcode.com/problems/max-consecutive-ones-iii/ 4k
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 3k hard
 > * https://leetcode.com/problems/sliding-window-maximum/ 10k hard
 > * https://leetcode.com/problems/minimum-window-substring/ 11k hard
-> * https://leetcode.com/problems/longest-continuous-increasing-subsequence/ (Solved in DP)
 > * https://leetcode.com/problems/maximum-length-of-repeated-subarray/ (Solved in DP)
 > * https://leetcode.com/problems/binary-subarrays-with-sum/
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
+> * https://leetcode.com/problems/count-number-of-nice-subarrays/ 2k m
+> * https://leetcode.com/problems/binary-subarrays-with-sum/ 2k m
+> * https://leetcode.com/problems/fruit-into-baskets/ 2k m
 > * https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3
 
 ### String
@@ -219,7 +219,6 @@
 |[516. Longest Palindromic Subsequence](../leetcode/516.longest-palindromic-subsequence.md)|Medium|
 |[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
 |[647. Palindromic Substrings](../leetcode/647.palindromic-substrings.md)|Medium|
-|[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
 |[718. Maximum Length of Repeated Subarray](../leetcode/718.maximum-length-of-repeated-subarray.md)|Medium|
 |[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Medium|
 |[152. Maximum Product Subarray](../leetcode/153.maximum-product-subarray.md)|Medium|
