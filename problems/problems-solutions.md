@@ -23,6 +23,7 @@
 |[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 |[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
+|[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
@@ -48,7 +49,6 @@
 ### Problems List:
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 3k hard
 > * https://leetcode.com/problems/sliding-window-maximum/ 10k hard
-> * https://leetcode.com/problems/minimum-window-substring/ 11k hard
 > * https://leetcode.com/problems/maximum-length-of-repeated-subarray/ (Solved in DP)
 > * https://leetcode.com/problems/binary-subarrays-with-sum/
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
