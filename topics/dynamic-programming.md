@@ -304,14 +304,12 @@ fun knapsack(): Int {
         // We iterate from capacity to w[i - 1] (decreasingly) and avoid overweight.
         // For overweight case, dp[w] = dp[w], it's trivial, we don't iterate.
         for (w in capacity downTo w[i - 1]) {
-            else {
-                dp[w] = max(
-                    // Take it
-                    dp[w - weights[i - 1]] + values[i - 1]
-                    // Skip it
-                    dp[w]
-                )
-            }
+            dp[w] = max(
+                // Take it
+                dp[w - weights[i - 1]] + values[i - 1]
+                // Skip it
+                dp[w]
+            )
         }
     }
     return dp[capacity]
@@ -381,7 +379,7 @@ fun knapsack(): Int {
     dp[0] = 0
     for (i in 1..values.size) {
         // Mind the iterate order (different from 0/1 knapsack 1D DP
-        for (w in capacity downTo weights[i - 1]) {
+        for (w in weights[i - 1]..capacity) {
             dp[w] = max(dp[w], dp[w - weights[i - 1]] + values[i - 1])
         }
     }

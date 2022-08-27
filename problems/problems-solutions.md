@@ -13,12 +13,12 @@
 |[59. Spiral Matrix II](../leetcode/59.spiral-matrix-ii.md)|Medium|
 |[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
 |[136. Single Number](../leetcode/136.single-number.md)|Easy|
-|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 |[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
 |[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
 |[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
+|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
 |[1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md)|Medium|
 |[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 |[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
@@ -41,7 +41,6 @@
 
 ### Sliding Windows
 #### Reading List: 
-> * https://labuladong.gitee.io/algo/1/11/
 > * https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/slide-window
 > * From LeetCode Recommendation: 
 >   * https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem (Templates + Some problems)
@@ -55,6 +54,7 @@
 > * https://leetcode.com/problems/count-number-of-nice-subarrays/ 2k m
 > * https://leetcode.com/problems/binary-subarrays-with-sum/ 2k m
 > * https://leetcode.com/problems/fruit-into-baskets/ 2k m
+> https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ 4k m
 > * https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3
 
 ### String
