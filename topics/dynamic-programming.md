@@ -348,7 +348,9 @@ Suppose we update `dp[8]` from `dp[3]` for item `i` (which weight is 5), and we'
 > Nice explanation: 
 > * https://leetcode.com/discuss/study-guide/1200320/Thief-with-a-knapsack-a-series-of-crimes.
 > * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-2.md
->
+> * https://leetcode.com/problems/coin-change-2/discuss/176706/Beginner-Mistake%3A-Why-an-inner-loop-for-coins-doensn't-work-Java-Soln
+> * https://leetcode.com/problems/coin-change-2/discuss/141076/Unbounded-Knapsack/180294
+
 > **Note**: For bottom-up DP of 0/1 knapsack problem, we **CAN** exchange the order of two for-loop, however, space optimization and unbounded knapsack solution, **the for-loop order matters!!**
 
 ## Unbounded Knapsack Problems

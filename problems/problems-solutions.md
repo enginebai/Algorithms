@@ -244,7 +244,6 @@
 > * https://leetcode.com/problems/integer-break/ 3k m
 > * https://leetcode.com/problems/triangle/ 6k m
 > * https://leetcode.com/problems/maximal-square/ 7k m
-> * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
 
 ### LCS
 > * https://leetcode.com/problems/distinct-subsequences/ 4k h
