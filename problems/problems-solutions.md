@@ -24,6 +24,7 @@
 |[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
 |[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
+|[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
 
 > * https://leetcode.com/problems/spiral-matrix/ 7k m
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
@@ -40,22 +41,14 @@
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/ 6k m
 
 ### Sliding Windows
-#### Reading List: 
-> * https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/slide-window
-> * From LeetCode Recommendation: 
->   * https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem (Templates + Some problems)
-
-### Problems List:
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 3k hard
-> * https://leetcode.com/problems/sliding-window-maximum/ 10k hard
 > * https://leetcode.com/problems/maximum-length-of-repeated-subarray/ (Solved in DP)
-> * https://leetcode.com/problems/binary-subarrays-with-sum/
+> * https://leetcode.com/problems/binary-subarrays-with-sum/ 1.5k m
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
 > * https://leetcode.com/problems/count-number-of-nice-subarrays/ 2k m
 > * https://leetcode.com/problems/binary-subarrays-with-sum/ 2k m
 > * https://leetcode.com/problems/fruit-into-baskets/ 2k m
 > https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ 4k m
-> * https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3
 
 ### String
 #### Reading List
