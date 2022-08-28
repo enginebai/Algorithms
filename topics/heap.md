@@ -196,7 +196,7 @@ fun heapSort(A) {
     * Build max heap from all items, and pop `k - 1` times, and the peek will be the top K result.
     * Using min heap with `k` items, we add item one by one, and pop (the min value) if heap size > `k` as adding item. The remaining heap will be top K results **but in reversed order**, make sure to reverse the result.
 * For frequency sorting, we can use *bucket sort*, see problem [347. Top K Frequent Elements](../leetcode/347.top-k-frequent-elements.md)
-* For some problems to find the max/min value dynamically (after some operations, such adding some numbers then find the max number), then it might be able to use heap to solve. ([264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/))
+* For some problems to find the max/min value **dynamically** (after some operations, such adding some numbers then find the max number), then it might be able to use heap to solve. ([264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/))
 * Heap in Kotlin:
 ```kotlin
 val minHeap = PriorityQueue<Int>() { n1, n2 -> n1 - n1 })
@@ -213,19 +213,21 @@ val maxHeap = PriorityQueue<Int>() { n1, n2 ->
 maxHeap.add(1)
 maxHeap.poll()
 maxHeap.peek()
+maxHeap.size
+maxHeap.isNotEmpty()
 ```
 * Sorting on array / collections: See [My Kotlin Note](https://docs.google.com/document/d/1JxZ40YPi_R5unTUeCbk2JErvJVHMWbev50IJfvlE2Ls/edit#heading=h.cgfoyq7qxhnz)
 
 ## Resources
-- [X] CLRS
-- [X] [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-8-binary-heaps/)
-- [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-5)
-- [X] [LC Learn](https://leetcode.com/explore/learn/card/heap/) // Some sections are locked.
-- [X] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Heap)
-- [X] https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/heap
-- [X] [Software Engineer Interview Preparation // Introductory notes
-    - [X] [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#heap)
-    - [X] [Algorithm](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#heapsort)
+- CLRS
+- [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-8-binary-heaps/)
+- [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-5)
+- [LC Learn](https://leetcode.com/explore/learn/card/heap/) // Some sections are locked.
+- [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Heap)
+- https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/heap
+- Software Engineer Interview Preparation // Introductory notes
+    - [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#heap)
+    - [Algorithm](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#heapsort)
 
 ## Full Code
 ```kotlin
