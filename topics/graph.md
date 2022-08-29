@@ -50,7 +50,7 @@ A1 = [
 > |V| means the size of V.
 
 ### Adjacency Matrix
-We define a |V| x |V| matrix `A`such that `A(i, j) = 1` if there is an edge, `0` otherwise.
+We define a `|V| x |V|` matrix `A`such that `A(i, j) = 1` if there is an edge, `0` otherwise.
 
 ```
 Undirected          Directed
@@ -74,7 +74,7 @@ val directedGraph = arrayOf(
 )
 ```
 
-* It requires `Θ(|V|^2)` space complexity. (The undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix)
+* It requires `Θ(|V| ^ 2)` space complexity. (The undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix)
 * We prefer adjacency matrix when the graph are *dense*.
 * We can update the edge or check the existence of edge in constant time.
 * `A` is equal to the *transpose* of matrix `A` for undirected graph.
@@ -92,7 +92,7 @@ S1 = {
 ```
 
 ## Breadth-first Search (BFS)
-Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s`. It visits all vertices at level `k` before visiting level `k+1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.
+Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s`. It visits all vertices at level `k` before visiting level `k + 1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.
 
 For our algorithm, we store some properties to the vertex:
 * To track the visit, we color each vertex "white" (not visited yet), "gray" (enqueue to visit next) and "black" (visited). (Here we use `VisitState` enum to represent)

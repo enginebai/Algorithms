@@ -365,6 +365,9 @@
 * One node or two nodes
 
 ### Graph
+* What's the range of `m` and `n`?
+* What's the range of vertex value?
+
 * Directed or undirected?
 * Weighted or unweighted?
 * Cycle or acyclic?
