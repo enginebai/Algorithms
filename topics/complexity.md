@@ -308,6 +308,16 @@ fun sumPair(a: Int, b: Int) = a + b
 ```
 The function `sumPairSequence()` has runtime `O(n)` but only need `O(1)` space.
 
+## Complexity Cheat Sheet
+![Sequence Complexity](../media/complexity-sequence.png)
+![Sets Complexity](../media/complexity-set.png)
+![Linked List Complexity](../media/complexity-linked-list.png)
+![Stack Complexity](../media/complexity-stack.png)
+![Queue Complexity](../media/complexity-queue.png)
+![Heap Complexity](../media/complexity-heap.png)
+![Single-Source Shortest Path Complexity](../media/complexity-sssp.png)
+![Sorting Complexity](../media/complexity-sorting.png)
+
 ## Resources
 - [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
 - CLRS

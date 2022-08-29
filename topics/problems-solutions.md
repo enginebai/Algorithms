@@ -146,7 +146,7 @@
 > * https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/ 4k m
 > * https://leetcode.com/problems/serialize-and-deserialize-bst/ 2k m
 
-## Heap
+## [Heap](../topics/heap.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md)|Medium|
@@ -161,7 +161,7 @@
 
 > * https://leetcode.com/problems/last-stone-weight/ 3k e
 
-## Graph
+## [Graph](../topics/graph.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[797. All Paths From Source to Target](../leetcode/797.all-paths-from-source-to-target.md)|Medium|
@@ -192,7 +192,7 @@
 > * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
 
 
-## Dynamic Programming
+## [Dynamic Programming](../topics/dynamic-programming.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[509. Fibonacci Number](../leetcode/509.fibonacci-number.md)|Easy|
@@ -265,7 +265,7 @@
 > * https://leetcode.com/problems/dungeon-game/ 4k h
 > * https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ 
 
-## Greedy
+## [Greedy](../topics/greedy.md)
 > * https://leetcode.com/discuss/general-discussion/1061059/ABCs-of-Greedy
 > * https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions
 > * https://leetcode.com/problems/non-overlapping-intervals/
@@ -297,7 +297,7 @@
 > * https://leetcode.com/problems/n-queens/ 8k h
 > * https://leetcode.com/problems/sudoku-solver/ 6k h
 
-## Hash & Searching & Sorting
+## [Hash](../topics/hash-table.md) & [Searching](../topics/searching.md) & [Sorting](../topics/sorting.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
@@ -327,3 +327,47 @@
 ## Listing By Topics
 * https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns
 * https://leetcode.com/discuss/career/448024/Topic-wise-problems-for-Beginners
+
+## Clarification Questions
+### General
+* How big is the input size?
+* What's the range of values? (Negative?)
+* What's the input type? (Integer, Floating, Strings...) and format?
+* Is input sorted? Will the input array be sorted?
+* Is there any duplicate?
+* What if there are multiple answers?
+* What if there is no answer at all?
+* Can we modify the input? (Such update the references of node pointer in the linked list? Update the value of vertices in the graph?)
+* Does the element present in the input? (`k` in the input range or present?)
+* How is the input stored?
+
+### Numbers
+* Null
+* 0
+* Negative number
+* Min / Max
+
+### Array
+* Is the array sorted?
+* Are there duplicates in the array?
+
+### String
+* Null
+* Empty
+* Blank
+* Cases: Upper / Lower
+* What characters are possible?
+* Duplicate characters
+
+### Linked List
+* Are there cycles in linked list or graph?
+* Empty
+* One node or two nodes
+
+### Graph
+* Directed or undirected?
+* Weighted or unweighted?
+* Cycle or acyclic?
+* Could vertices have negative values?
+* Could edge weights be negative?
+* Do all vertices have distince values?

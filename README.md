@@ -1,4 +1,4 @@
-Data Structures & Algorithms (DSA)
+Data Structures & Algorithms
 ========
 
 This project are curated resources and notes of basic/fundamental/popular data strcutures and algorithms for software engineer to study, there are also some classic problems/solutions for each topics to practice after studying. You can study and practice by topics, enjoy this learning journey!!
@@ -23,14 +23,33 @@ This project are curated resources and notes of basic/fundamental/popular data s
 - [Searching](./topics/searching.md)
 - [Sorting](./topics/sorting.md)
 - (TODO) [Other](./topics/other.md)
-- 👉 [Problems & Solutions](./problems/problems-solutions.md)
+- 👉 [Problems & Solutions](./topics/problems-solutions.md)
 
-## Complexity Cheat Sheet
-![Sequence Complexity](./media/complexity-sequence.png)
-![Sets Complexity](./media/complexity-set.png)
-![Linked List Complexity](./media/complexity-linked-list.png)
-![Stack Complexity](./media/complexity-stack.png)
-![Queue Complexity](./media/complexity-queue.png)
-![Heap Complexity](./media/complexity-heap.png)
-![Single-Source Shortest Path Complexity](./media/complexity-sssp.png)
-![Sorting Complexity](./media/complexity-sorting.png)
+## Roadmap
+This is the recommended study path that you can follow from beginner level to intermediate level that the topics we cover in this project. Some topics are required to master prior to other topic, for example, we must master "graph" before studying "shortest path".
+
+![Roadmap](./media/roadmap.png)
+
+## LICENSE
+
+```
+Copyright (c) 2022 Engine Bai
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
