@@ -257,7 +257,8 @@ fun problemSolving(graph: Array<IntArray>) {
 }
 
 fun dfs(graph: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>) {
-    // Skip for some conditions
+    // Skip the positions that are out of boundary or 
+    // have visited before or does not meet requirement.
     if (x < 0 || x > graph.size - 1 ||
      y < 0 || y > graph[x].size ||
       visited.contains(x to y) ||
@@ -286,13 +287,15 @@ fun bfs(graph: Array<IntArray>, source: Int) {
         val size = queue.size
         for (i in 0 until size) {
             val node = queue.removeFirst()
-            graph[node].forEach { adj -> 
-                if (!visited(adj)) {
-                    // Do something
+            
+            // Skip the positions that are out of boundary or 
+            // have visited before or does not meet requirement.
 
-                    queue.addLast(adj)
-                    visited.add(adj)
-                }
+            // Do something
+
+            visited.add(adj)
+            graph[node].forEach { adj -> 
+                queue.addLast(adj)
             }
         }
         distances++
@@ -314,25 +317,25 @@ The *connected component* is a set of nodes with paths from any nodes of the com
 See topic: [Shortest Path](../topics/shortest-path.md)
 
 ## Resources
-- [X] Fundamental of Data Structure
-- [X] CLRS
-- [X] [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs)
-- [X] MIT
-    - [X] [DFS](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-10-depth-first-search/)
-    - [X] [BFS](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-9-breadth-first-search/)
-- [X] http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html // Nice introductory note
-- [X] [Stanford](http://infolab.stanford.edu/~ullman/focs/ch09.pdf) // Nice course
-- [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-6)
-- [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/graph/) // Simple note
-- [X] Software Engineering Interview Preparation // Simple note
-    - [X] [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#graphs)
-    - [X] [DFS/BFS](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#graph-algorithms)
-- [ ] ~~[LC Learn](https://leetcode.com/explore/learn/card/graph/)~~ // Some topics are locked!! We could try to do all the problem to lock.
+- Fundamental of Data Structure
+- CLRS
+- [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs)
+- MIT
+    - [DFS](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-10-depth-first-search/)
+    - [BFS](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-9-breadth-first-search/)
+- http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html // Nice introductory note
+- [Stanford](http://infolab.stanford.edu/~ullman/focs/ch09.pdf) // Nice course
+- [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-6)
+- [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/graph/) // Simple note
+- Software Engineering Interview Preparation // Simple note
+    - [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#graphs)
+    - [DFS/BFS](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#graph-algorithms)
+- ~~[LC Learn](https://leetcode.com/explore/learn/card/graph/)~~ // Some topics are locked!! We could try to do all the problem to lock.
     * Disjoint Set
     * DFS
     * BFS
     * Minimum Spanning Tree
     * Single Source Shortest Path
     * Topological Sort
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Graph_Breadth-FS)
-- [ ] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#graphs)~~
+- [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Graph_Breadth-FS)
+- ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#graphs)~~

@@ -331,13 +331,14 @@
 ## Clarification Questions
 ### General
 * How big is the input size?
-* What's the range of values? (Negative?)
-* What's the input type? (Integer, Floating, Strings...) and format?
-* Is input sorted? Will the input array be sorted?
+* What's the range of values? (negative? positive?)
+* What's the input type? (integer, floating, strings...) and format?
+* Is input sorted (ordered)? Will the input array be sorted?
 * Is there any duplicate?
+* How about repeating elements?
 * What if there are multiple answers?
 * What if there is no answer at all?
-* Can we modify the input? (Such update the references of node pointer in the linked list? Update the value of vertices in the graph?)
+* Can we modify the input? (such as updating the references of node pointer in the linked list? or update the value of vertices in the graph?)
 * Does the element present in the input? (`k` in the input range or present?)
 * How is the input stored?
 
@@ -367,7 +368,6 @@
 ### Graph
 * What's the range of `m` and `n`?
 * What's the range of vertex value?
-
 * Directed or undirected?
 * Weighted or unweighted?
 * Cycle or acyclic?
