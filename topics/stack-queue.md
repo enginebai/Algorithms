@@ -189,8 +189,8 @@ class LinkedListQueue<T>: Queue<T> {
         if (isEmpty()) return null
         val value = head?.data
         head = head?.next
-        if (isEmpty()) rear = null
         size--
+        if (isEmpty()) rear = null
         return value
     }
 
@@ -252,7 +252,8 @@ class DynamicArrayQueue<T>: Queue<T> {
 }
 ```
 
-> Verify if it's still true.
+> TODO: Verify if it's still true.
+
 There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `head` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce [*Circular Queue*](../leetcode/622.design-circular-queue.md).
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#stack--queue)

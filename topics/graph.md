@@ -9,15 +9,6 @@ A graph `G = (V, E)`, consists of `V` (set of *vertices*) and `E` (*edges* of ve
 
 ![Graph](../media/graph.png)
 
-* G1: Undirected 
-    * V(G1) = {1, 2, 3, 4, 5, 6}
-    * E(G1) = {(1, 2), (1, 4), (1, 5), (1, 6), (2, 4), (3, 4), (3, 5), (3, 6)}
-* G2: Directed
-    * V(G2) = {1, 2, 3, 4, 5, 6}
-    * E(G2) = {(1, 2), (3, 4), (4, 5), (6, 1), (6, 3)}
-
-> V and E are set, the item in the set is unordered.
-
 ## Representation
 We can represent a graph `G = (V, E)` in adjacency list or matrix.
 
@@ -44,7 +35,7 @@ A1 = [
 * The vertices in each adjacency list are typically stored in a arbitrary order.
 * For both undirected and directed graph, the amount of memory is `Θ(|V| + |E|)` space complexity. (`|V| + |E|` for directed, `|V| + 2 * |E|` for undirected)
 * It takes `Ω(|V|)` time to determine if an edge `(x, y)` is in the graph. (Loop for each vertices takes `O(1)` and `O(|V|)` for searching the adjacent vertices of the vertex `x`)
-* We prefer adjacency matrix when the graph are *sparse*.
+* We prefer adjacency list when the graph are *sparse*.
 * We also can associate *weight* on the edge by storing the weight on the node of the adjacency list. (linked list node can attach extra properties)
 
 > |V| means the size of V.
@@ -90,6 +81,8 @@ S1 = {
     ...
 }
 ```
+
+> [Representation comparision](https://www.geeksforgeeks.org/comparison-between-adjacency-list-and-adjacency-matrix-representation-of-graph/)
 
 ## Breadth-first Search (BFS)
 Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s`. It visits all vertices at level `k` before visiting level `k + 1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.

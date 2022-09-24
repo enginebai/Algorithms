@@ -76,7 +76,7 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 * For in-place operation or `O(1)` space complexity, use array itself as a hash table. For example, the value of array ranges from 1 to `n`, where `n` is the size of array, then we can use the *index* to represent.
 
 ## Two Pointers Approach
-* Fast/slow (read/write) pointers: [283. Move Zeroes](../leetcode/283.move-zeros.md) (
+* Fast/slow (read/write) pointers: [283. Move Zeroes](../leetcode/283.move-zeros.md)
 * Left/right pointers: [977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)
 
 ## Sliding Window Approach
