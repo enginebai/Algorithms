@@ -10,6 +10,7 @@
 |[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
 |[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
 |[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
+|[54. Spiral Matrix](../leetcode/54.spiral-matrix.md)|Medium|
 |[59. Spiral Matrix II](../leetcode/59.spiral-matrix-ii.md)|Medium|
 |[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
 |[136. Single Number](../leetcode/136.single-number.md)|Easy|
@@ -26,7 +27,6 @@
 |[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
 |[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
 
-> * https://leetcode.com/problems/spiral-matrix/ 7k m
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
 > * https://leetcode.com/problems/merge-intervals/ 14k m
 > * https://leetcode.com/problems/container-with-most-water/ 17k m
