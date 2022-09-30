@@ -124,8 +124,8 @@
 |[863. All Nodes Distance K in Binary Tree](../leetcode/863.all-nodes-distance-k-in-binary-tree.md)|Medium|
 |[110. Balanced Binary Tree](../leetcode/110.balanced-binary-tree.md)|Easy|
 |[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
+|[572. Subtree of Another Tree](../leetcode/572.subtree-of-another-tree.md)|Easy|
 
-> * https://leetcode.com/problems/subtree-of-another-tree/ 5k e
 > * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5k hard
 > * https://leetcode.com/problems/binary-tree-pruning/ 2k m
@@ -236,6 +236,7 @@
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 |[322. Coin Change](../leetcode/322.coin-change.md)|Medium|
 |[518. Coin Change 2](../leetcode/518.coin-change-2.md)|Medium|
+|[1155. Number of Dice Rolls With Target Sum](../leetcode/1155.number-of-dice-rolls-with-target-sum.md)|Medium|
 
 > * https://leetcode.com/problems/combination-sum-iv/ 5k m
 > * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
@@ -311,6 +312,7 @@
 |[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
 |[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
 |[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
+|[35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy}
 |[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
 |[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|

@@ -539,10 +539,11 @@ longestCommonSubsequence(A, B, A.length, B.length)
 
 ### Top-Down DP
 ```kotlin
+// m, n represent the length of substring.
 fun longestCommonSubsequence(A: String, B: String, m: Int, n: Int, dp: Array<IntArray>): Int {
-    if (m < 0 || n < 0) return 0
+    if (m == 0 || n == 0) return 0
     if (dp[m][n] != -1) return dp[m][n]
-    dp[m][n] = if (A[m] == B[n]) 1 + longestCommonSubsequence(A, B, m - 1, n - 1, dp)
+    dp[m][n] = if (A[m - 1] == B[n - 1]) 1 + longestCommonSubsequence(A, B, m - 1, n - 1, dp)
     else max(
         longestCommonSubsequence(A, B, m - 1, n, dp),
         longestCommonSubsequence(A, B, m, n - 1, dp)
