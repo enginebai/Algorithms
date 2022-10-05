@@ -60,6 +60,7 @@ if (100% sure logic) {
     left = middle
 }
 ```
+
 * Always use `while (left < right)`, so when while loop breaks, we will have `left == right`, and then check if the target exists or not. (might need further check, such as `if (A[left] == target)`).
 
 ## Resources
