@@ -6,6 +6,7 @@
 |[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
 |[283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
 |[15. 3Sum](../leetcode/15.3sum.md)|Medium|
+|[16. 3Sum Closest](../leetcode/16.3sum-closest.md)|Medium|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
 |[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
 |[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
@@ -26,6 +27,7 @@
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
 |[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
 |[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
+|[221. Maximal Square](../leetcode/221.maximal-square.md)|Medium|
 
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
 > * https://leetcode.com/problems/merge-intervals/ 14k m
@@ -142,6 +144,7 @@
 |[98. Validate Binary Search Tree](../leetcode/98.validate-binary-search-tree.md)|Medium|
 |[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
 |[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
+|[653. Two Sum IV - Input is a BST](../leetcode/653.two-sum-iv-input-is-a-bst.md)|Easy|
 
 > * https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/ 4k m
 > * https://leetcode.com/problems/serialize-and-deserialize-bst/ 2k m
@@ -217,6 +220,7 @@
 |[152. Maximum Product Subarray](../leetcode/153.maximum-product-subarray.md)|Medium|
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
+|[45. Jump Game II](../leetcode/45.jump-game-ii.md)|Medium|
 |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
@@ -244,7 +248,6 @@
 > * https://leetcode.com/problems/ones-and-zeroes/ 4k m
 > * https://leetcode.com/problems/integer-break/ 3k m
 > * https://leetcode.com/problems/triangle/ 6k m
-> * https://leetcode.com/problems/maximal-square/ 7k m
 
 ### LCS
 > * https://leetcode.com/problems/distinct-subsequences/ 4k h
