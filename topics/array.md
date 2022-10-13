@@ -73,7 +73,7 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 * Swap or ignore element (only take the element met the requirement)
 * We can iterate array from left to right, also from *right to left*.
 * `O(n)` time complexity **doesn't** mean you can only iterate the array **once**. Iterate the array several times might help solve the problem, for example, pre-computation (iterate array at least one time first) using hashing might be useful.
-* For in-place operation or `O(1)` space complexity, use array itself as a hash table. For example, the value of array ranges from 1 to `n`, where `n` is the size of array, then we can use the *index* to represent.
+* For in-place operation or `O(1)` space complexity, use array (index) itself as a hash table. For example, the value of array ranges from 1 to `n`, where `n` is the size of array, then we can use the *index* to represent.
 
 ## Two Pointers Approach
 * Fast/slow (read/write) pointers: [283. Move Zeroes](../leetcode/283.move-zeros.md)

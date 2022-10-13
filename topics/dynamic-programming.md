@@ -684,3 +684,4 @@ Overall, try to think about your recursive functions call in terms of a **tree**
 - [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/dynamic-programming/) // Not too much notes, some references posts only
 - [动态规划详解](https://mp.weixin.qq.com/s/1V3aHVonWBEXlNUvK3S28w)
 - [LeetCode Curated Posts](https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode)
+- https://leetcode.com/discuss/general-discussion/712010/The-ART-of-Dynamic-Programming-An-Intuitive-Approach%3A-from-Apprentice-to-Master

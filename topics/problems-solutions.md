@@ -28,11 +28,13 @@
 |[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
 |[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
 |[221. Maximal Square](../leetcode/221.maximal-square.md)|Medium|
+|[11. Container With Most Water](../leetcode/11.container-with-most-water.md)|Medium|
+|[31. Next Permutation](../leetcode/31.next-permutation.md)|Medium|
+|[56. Merge Intervals](../leetcode/56.merge-intervals.md)|Medium|
+|[73. Set Matrix Zeroes](../leetcode/73.set-matrix-zeros.md)|Medium|
+|[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
 
 > * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 6k m
-> * https://leetcode.com/problems/merge-intervals/ 14k m
-> * https://leetcode.com/problems/container-with-most-water/ 17k m
-> * https://leetcode.com/problems/sort-colors/ 10k m
 > * https://leetcode.com/problems/insert-interval/ 5k m
 > * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 3k m
 
@@ -82,8 +84,10 @@
 |[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
 |[328. Odd Even Linked List](../leetcode/328.odd-even-linked-list.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
+|[237. Delete Node in a Linked List](../leetcode/237.delete-node-in-a-linked-list.md)|Medium|
+|[2095. Delete the Middle Node of a Linked List](../leetcode/2095.delete-the-middle-node-of-a-linked-list.md)|Medium|
+|[148. Sort List](../leetcode/148.sort-list.md)|Medium|
 
-> * https://leetcode.com/problems/sort-list/
 > * https://leetcode.com/problems/partition-list/
 
 ## [Stack & Queue](../topics/stack-queue.md)
@@ -219,8 +223,6 @@
 |[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Medium|
 |[152. Maximum Product Subarray](../leetcode/153.maximum-product-subarray.md)|Medium|
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
-|[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
-|[45. Jump Game II](../leetcode/45.jump-game-ii.md)|Medium|
 |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
@@ -270,6 +272,11 @@
 > * https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ 
 
 ## [Greedy](../topics/greedy.md)
+| Problem          | Difficulty |
+|------------------|------------|
+|[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
+|[45. Jump Game II](../leetcode/45.jump-game-ii.md)|Medium|
+|[334. Increasing Triplet Subsequence](../leetcode/334.increasing-triplet-subsequence.md)|Medium|
 > * https://leetcode.com/discuss/general-discussion/1061059/ABCs-of-Greedy
 > * https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions
 > * https://leetcode.com/problems/non-overlapping-intervals/
@@ -291,8 +298,8 @@
 |[47. Permutations II](../leetcode/47.permutations-ii.md)|Medium|
 |[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
 |[113. Path Sum II](../leetcode/113.path-sum-ii.md)|Medium|
+|[131. Palindrome Partitioning](../leetcode/131.palindrome-partitioning.md)|Medium|
 
-> * TODO: Practice this problem when reviewing LCS in DP. https://leetcode.com/problems/palindrome-partitioning/ 7k m
 > * https://leetcode.com/problems/permutation-sequence/ 4k h
 > * https://leetcode.com/problems/remove-invalid-parentheses/ 4k h
 > * https://leetcode.com/problems/regular-expression-matching/ 8k h
@@ -312,6 +319,7 @@
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
+|[75. Sort Colors](../leetcode/75.sort-colors.md)|Medium|
 |[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
 |[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
 |[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
@@ -379,3 +387,153 @@
 * Could vertices have negative values?
 * Could edge weights be negative?
 * Do all vertices have distince values?
+
+## Unfinished Problems
+> * https://leetcode.com/problems/valid-sudoku/ 6k m
+> * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 8k m
+> * https://leetcode.com/problems/evaluate-reverse-polish-notation/ 5k m
+> * https://leetcode.com/problems/car-fleet/ 2k m
+> * https://leetcode.com/problems/time-based-key-value-store/ 4k m
+> * https://leetcode.com/problems/reverse-nodes-in-k-group/ 10k h
+> * https://leetcode.com/problems/count-good-nodes-in-binary-tree/ 4k m
+> * https://leetcode.com/problems/task-scheduler/ 7k m
+> * https://leetcode.com/problems/redundant-connection/ 4k m
+> * https://leetcode.com/problems/interleaving-string/ 6k m
+> * https://leetcode.com/problems/edit-distance/ 10k h
+> * https://leetcode.com/problems/gas-station/ 7k m
+> * https://leetcode.com/problems/partition-labels/ 9k m
+> * https://leetcode.com/problems/non-overlapping-intervals/ 5k m
+> * https://leetcode.com/problems/score-of-parentheses/ 5k m
+> * https://leetcode.com/problems/maximum-profit-in-job-scheduling/ 4k h
+> * https://leetcode.com/problems/accounts-merge/ 5k m
+> * https://leetcode.com/problems/evaluate-reverse-polish-notation/ 4k m
+> * https://leetcode.com/problems/number-of-1-bits/ 5k e
+> * https://leetcode.com/problems/reverse-bits/ 4k e
+> * https://leetcode.com/problems/missing-number/ 7k e
+> * https://leetcode.com/problems/counting-bits/ 8k e
+> * https://leetcode.com/problems/implement-trie-prefix-tree/ 8k m
+> * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 5k m
+> * https://leetcode.com/problems/word-search-ii/ 7k h
+
+### [Alpha150](https://alphabet150.com/)
+> * 1275. Find Winner on a Tic Tac Toe Game
+> * 1331. Rank Transform of an Array
+> * 1207. Unique Number of Occurrences
+> * 1146. Snapshot Array
+> * 2007. Find Original Array From Doubled Array
+> * 2115. Find All Possible Recipes from Given Supplies
+> * 2013. Detect Squares
+> * 1477. Find Two Non-overlapping Sub-arrays Each With Target Sum
+> * 2135. Count Words Obtained After Adding a Letter
+> * 844. Backspace String Compare
+> * 1048. Longest String Chain
+> * 777. Swap Adjacent in LR String
+> * 809. Expressive Words
+> * 1793. Maximum Score of a Good Subarray
+> * 219. Contains Duplicate II
+> * 1423. Maximum Points You Can Obtain from Cards
+> * 837. New 21 Game
+> * 1477. Find Two Non-overlapping Sub-arrays Each With Target Sum
+> * 1610. Maximum Number of Visible Points
+> * 727. Minimum Window Subsequence
+> * 844. Backspace String Compare
+> * 1021. Remove Outermost Parentheses
+> * 735. Asteroid Collision
+> * 853. Car Fleet
+> * 636. Exclusive Time of Functions
+> * 946. Validate Stack Sequences
+> * 1776. Car Fleet II
+> * 1539. Kth Missing Positive Number
+> * 1631. Path With Minimum Effort
+> * 1477. Find Two Non-overlapping Sub-arrays Each With Target Sum
+> * 1966. Binary able Numbers in an Unsorted Array
+> * 1618. Maximum Font to Fit a Sentence in a Screen
+> * 1237. Find Positive Integer  for a Given Equation
+> * 1793. Maximum Score of a Good Subarray
+> * 706. Design HashMap
+> * 21. Merge Two Sorted Lists
+> * 234. Palindrome Linked List
+> * 379. Design Phone Directory
+> * 146. LRU Cache
+> * 708. Insert into a Sorted Circular Linked List
+> * 2. Add Two Numbers
+> * 817. Linked List Components
+> * 426. Convert Binary  Tree to Sorted Doubly Linked List
+> * 460. LFU Cache
+> * 23. Merge k Sorted Lists
+> * 965. Univalued Binary Tree
+> * 938. Range Sum of BST
+> * 2096. Step-By-Step Directions From a Binary Tree Node to Another
+> * 1110. Delete Nodes And Return Forest
+> * 1376. Time Needed to Inform All Employees
+> * 951. Flip Equivalent Binary Trees
+> * 1377. Frog Position After T Seconds
+> * 703. Kth Largest Element in a Stream
+> * 1046. Last Stone Weight
+> * 2034. Stock Price Fluctuation
+> * 1834. Single-Threaded CPU
+> * 1631. Path With Minimum Effort
+> * 1882. Process Tasks Using Servers
+> * 1776. Car Fleet II
+> * 1066. Campus Bikes II
+> * 1087. Brace Expansion
+> * 1219. Path with Maximum Gold
+> * 1820. Maximum Number of Accepted Invitations
+> * 351. Android Unlock Patterns
+> * 267. Palindrome Permutation II
+> * 306. Additive Number
+> * 638. Shopping Offers
+> * 1088. Confusing Number II
+> * 2115. Find All Possible Recipes from Given Supplies
+> * 1778. Shortest Path in a Hidden Grid
+> * 947. Most Stones Removed with Same Row or Column
+> * 990. Satisfiability of Equality Equations
+> * 1514. Path with Maximum Probability
+> * 1136. Parallel Courses
+> * 886. Possible Bipartition
+> * 1042. Flower Planting With No Adjacent
+> * 2101. Detonate the Maximum Bombs
+> * 1129. Shortest Path with Alternating Colors
+> * 1135. Connecting Cities With Minimum Cost
+> * 959. Regions Cut By Slashes
+> * 1548. The Most Similar Path in a Graph
+> * 1632. Rank Transform of a Matrix
+> * 2092. Find All People With Secret
+> * 847. Shortest Path Visiting All Nodes
+> * 1368. Minimum Cost to Make at Least One Valid Path in a Grid
+> * 1697. Checking Existence of Edge Length Limited Paths
+> * 2242. Maximum Score of a Node Sequence
+> * 1377. Frog Position After T Seconds
+> * 834. Sum of Distances in Tree
+> * 1728. Cat and Mouse II
+> * 1937. Maximum Number of Points with Cost
+> * 1525. Number of Good Ways to Split a String
+> * 2184. Number of Ways to Build Sturdy Brick Wall
+> * 1706. Where Will the Ball Fall
+> * 1770. Maximum Score from Performing Multiplication Operations
+> * 2311. Longest Binary Subsequence Less Than or Equal to K
+> * 1986. Minimum Number of Work Sessions to Finish the Tasks
+> * 1888. Minimum Number of Flips to Make the Binary String Alternating
+> * 1524. Number of Sub-arrays With Odd Sum
+> * 1641. Count Sorted Vowel Strings
+> * 1884. Egg Drop With 2 Eggs and N Floors
+> * 1654. Minimum Jumps to Reach Home
+> * 2304. Minimum Path Cost in a Grid
+> * 1548. The Most Similar Path in a Graph
+> * 1526. Minimum Number of Increments on Subarrays to Form a Target Array
+> * 2188. Minimum Time to Finish the Race
+> * 2224. Minimum Number of Operations to Convert Time
+> * 1509. Minimum Difference Between Largest and Smallest Value in Three Moves
+> * 2007. Find Original Array From Doubled Array
+> * 2178. Maximum Split of Positive Even Integers
+> * 1996. The Number of Weak Characters in the Game
+> * 1877. Minimize Maximum Pair Sum in Array
+> * 1642. Furthest Building You Can Reach
+> * 2271. Maximum White Tiles Covered by a Carpet
+> * 2235. Add Two Integers
+> * 2178. Maximum Split of Positive Even Integers
+> * 56. Merge Intervals
+> * 1272. Remove Interval
+> * 1387. Sort Integers by The Power Value
+> * 1153. String Transforms Into Another String
+
