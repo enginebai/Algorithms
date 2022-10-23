@@ -108,6 +108,7 @@
 |[622. Design Circular Queue](../leetcode/622.design-circular-queue.md)|Medium|
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
+|[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium|
 
 ## [Tree](../topics/tree.md)
 | Problem          | Difficulty |
@@ -131,8 +132,9 @@
 |[110. Balanced Binary Tree](../leetcode/110.balanced-binary-tree.md)|Easy|
 |[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
 |[572. Subtree of Another Tree](../leetcode/572.subtree-of-another-tree.md)|Easy|
+|[103. Binary Tree Zigzag Level Order Traversal](../leetcode/103.binary-tree-zigzag-level-order-traversal.md)|Medium|
+|[617. Merge Two Binary Trees](../leetcode/617.merge-two-binary-trees.md)|Easy|
 
-> * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 6.1k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5k hard
 > * https://leetcode.com/problems/binary-tree-pruning/ 2k m
 > * https://leetcode.com/problems/binary-tree-paths/ 4k e
@@ -149,7 +151,10 @@
 |[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
 |[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
 |[653. Two Sum IV - Input is a BST](../leetcode/653.two-sum-iv-input-is-a-bst.md)|Easy|
+|[669. Trim a Binary Search Tree](../leetcode/669.trim-a-binary-search-tree.md)|Medium|
 
+> * https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/ 5k m
+> * https://leetcode.com/problems/range-sum-of-bst/ 5k e
 > * https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/ 4k m
 > * https://leetcode.com/problems/serialize-and-deserialize-bst/ 2k m
 
@@ -165,8 +170,9 @@
 |[451. Sort Characters By Frequency](../leetcode/451.sort-charaters-by-frequency.md)|Medium|
 |[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)|Medium|
 |[295. Find Median from Data Stream](../leetcode/295.find-median-from-data-stream.md)|Hard|
+|[1642. Furthest Building You Can Reach](../leetcode/1642.furthest-building-you-can-reach.md)|Medium|
+|[1046. Last Stone Weight](../leetcode/1046.last-stone-weight.md)|Easy|
 
-> * https://leetcode.com/problems/last-stone-weight/ 3k e
 
 ## [Graph](../topics/graph.md)
 | Problem          | Difficulty |
@@ -185,15 +191,17 @@
 |[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
 |[207. Course Schedule](../leetcode/207.course-schedule.md)|Medium|
 |[210. Course Schedule II](../leetcode/210.course-schedule-ii.md)|Medium|
+|[2115. Find All Possible Recipes from Given Supplies](../leetcode/2115.find-all-possible-recipes-from-given-supplies.md)|Medium|
 |[787. Cheapest Flights Within K Stops](../leetcode/787.cheapest-flights-within-k-stops.md)|Medium|
 |[743. Network Delay Time](../leetcode/743.network-delay-time.md)|Medium|
 |[399. Evaluate Division](../leetcode/399.evaluate-division.md)|Medium|
 |[1091. Shortest Path in Binary Matrix](../leetcode/1091.shortest-path-in-binary-matrix.md)|Medium|
 |[310. Minimum Height Trees](../leetcode/310.minimum-height-trees.md)|Medium|
+|[684. Redundant Connection](../leetcode/684.redundant-connection.md)|Medium|
 
 > * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
 > * https://leetcode.com/problems/number-of-enclaves/ 1k m
-> * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1k m
+> * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 2.4k m
 
 > Shortest Path: 
 > * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
@@ -227,6 +235,7 @@
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 |[264. Ugly Number II](../leetcode/264.ugly-number-ii.md)|Medium|
+|[983. Minimum Cost For Tickets](../leetcode/983.minimum-cost-for-tickets.md)|Medium|
 
 ### Problem Lists
 > * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
@@ -245,7 +254,6 @@
 |[1155. Number of Dice Rolls With Target Sum](../leetcode/1155.number-of-dice-rolls-with-target-sum.md)|Medium|
 
 > * https://leetcode.com/problems/combination-sum-iv/ 5k m
-> * https://leetcode.com/problems/minimum-cost-for-tickets/ 5k m
 > * https://leetcode.com/problems/last-stone-weight-ii/ 2k m
 > * https://leetcode.com/problems/ones-and-zeroes/ 4k m
 > * https://leetcode.com/problems/integer-break/ 3k m
@@ -318,12 +326,15 @@
 |[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
+|[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
 |[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
 |[75. Sort Colors](../leetcode/75.sort-colors.md)|Medium|
 |[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
 |[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
 |[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
-|[35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy}
+|[35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy|
+|[278. First Bad Version](../leetcode/278.first-bad-version.md)|Easy|
+|[287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)|Medium|
 |[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
 |[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
@@ -371,9 +382,12 @@
 * Blank
 * Cases: Upper / Lower
 * What characters are possible?
+* What do the characters consist of?
 * Duplicate characters
 
 ### Linked List
+* How big is the number of nodes in the linked list?
+* What's the range of node values?
 * Are there cycles in linked list or graph?
 * Empty
 * One node or two nodes
@@ -403,7 +417,6 @@
 > * https://leetcode.com/problems/gas-station/ 7k m
 > * https://leetcode.com/problems/partition-labels/ 9k m
 > * https://leetcode.com/problems/non-overlapping-intervals/ 5k m
-> * https://leetcode.com/problems/score-of-parentheses/ 5k m
 > * https://leetcode.com/problems/maximum-profit-in-job-scheduling/ 4k h
 > * https://leetcode.com/problems/accounts-merge/ 5k m
 > * https://leetcode.com/problems/evaluate-reverse-polish-notation/ 4k m
@@ -414,126 +427,4 @@
 > * https://leetcode.com/problems/implement-trie-prefix-tree/ 8k m
 > * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 5k m
 > * https://leetcode.com/problems/word-search-ii/ 7k h
-
-### [Alpha150](https://alphabet150.com/)
-> * 1275. Find Winner on a Tic Tac Toe Game
-> * 1331. Rank Transform of an Array
-> * 1207. Unique Number of Occurrences
-> * 1146. Snapshot Array
-> * 2007. Find Original Array From Doubled Array
-> * 2115. Find All Possible Recipes from Given Supplies
-> * 2013. Detect Squares
-> * 1477. Find Two Non-overlapping Sub-arrays Each With Target Sum
-> * 2135. Count Words Obtained After Adding a Letter
-> * 844. Backspace String Compare
-> * 1048. Longest String Chain
-> * 777. Swap Adjacent in LR String
-> * 809. Expressive Words
-> * 1793. Maximum Score of a Good Subarray
-> * 219. Contains Duplicate II
-> * 1423. Maximum Points You Can Obtain from Cards
-> * 837. New 21 Game
-> * 1477. Find Two Non-overlapping Sub-arrays Each With Target Sum
-> * 1610. Maximum Number of Visible Points
-> * 727. Minimum Window Subsequence
-> * 844. Backspace String Compare
-> * 1021. Remove Outermost Parentheses
-> * 735. Asteroid Collision
-> * 853. Car Fleet
-> * 636. Exclusive Time of Functions
-> * 946. Validate Stack Sequences
-> * 1776. Car Fleet II
-> * 1539. Kth Missing Positive Number
-> * 1631. Path With Minimum Effort
-> * 1477. Find Two Non-overlapping Sub-arrays Each With Target Sum
-> * 1966. Binary able Numbers in an Unsorted Array
-> * 1618. Maximum Font to Fit a Sentence in a Screen
-> * 1237. Find Positive Integer  for a Given Equation
-> * 1793. Maximum Score of a Good Subarray
-> * 706. Design HashMap
-> * 21. Merge Two Sorted Lists
-> * 234. Palindrome Linked List
-> * 379. Design Phone Directory
-> * 146. LRU Cache
-> * 708. Insert into a Sorted Circular Linked List
-> * 2. Add Two Numbers
-> * 817. Linked List Components
-> * 426. Convert Binary  Tree to Sorted Doubly Linked List
-> * 460. LFU Cache
-> * 23. Merge k Sorted Lists
-> * 965. Univalued Binary Tree
-> * 938. Range Sum of BST
-> * 2096. Step-By-Step Directions From a Binary Tree Node to Another
-> * 1110. Delete Nodes And Return Forest
-> * 1376. Time Needed to Inform All Employees
-> * 951. Flip Equivalent Binary Trees
-> * 1377. Frog Position After T Seconds
-> * 703. Kth Largest Element in a Stream
-> * 1046. Last Stone Weight
-> * 2034. Stock Price Fluctuation
-> * 1834. Single-Threaded CPU
-> * 1631. Path With Minimum Effort
-> * 1882. Process Tasks Using Servers
-> * 1776. Car Fleet II
-> * 1066. Campus Bikes II
-> * 1087. Brace Expansion
-> * 1219. Path with Maximum Gold
-> * 1820. Maximum Number of Accepted Invitations
-> * 351. Android Unlock Patterns
-> * 267. Palindrome Permutation II
-> * 306. Additive Number
-> * 638. Shopping Offers
-> * 1088. Confusing Number II
-> * 2115. Find All Possible Recipes from Given Supplies
-> * 1778. Shortest Path in a Hidden Grid
-> * 947. Most Stones Removed with Same Row or Column
-> * 990. Satisfiability of Equality Equations
-> * 1514. Path with Maximum Probability
-> * 1136. Parallel Courses
-> * 886. Possible Bipartition
-> * 1042. Flower Planting With No Adjacent
-> * 2101. Detonate the Maximum Bombs
-> * 1129. Shortest Path with Alternating Colors
-> * 1135. Connecting Cities With Minimum Cost
-> * 959. Regions Cut By Slashes
-> * 1548. The Most Similar Path in a Graph
-> * 1632. Rank Transform of a Matrix
-> * 2092. Find All People With Secret
-> * 847. Shortest Path Visiting All Nodes
-> * 1368. Minimum Cost to Make at Least One Valid Path in a Grid
-> * 1697. Checking Existence of Edge Length Limited Paths
-> * 2242. Maximum Score of a Node Sequence
-> * 1377. Frog Position After T Seconds
-> * 834. Sum of Distances in Tree
-> * 1728. Cat and Mouse II
-> * 1937. Maximum Number of Points with Cost
-> * 1525. Number of Good Ways to Split a String
-> * 2184. Number of Ways to Build Sturdy Brick Wall
-> * 1706. Where Will the Ball Fall
-> * 1770. Maximum Score from Performing Multiplication Operations
-> * 2311. Longest Binary Subsequence Less Than or Equal to K
-> * 1986. Minimum Number of Work Sessions to Finish the Tasks
-> * 1888. Minimum Number of Flips to Make the Binary String Alternating
-> * 1524. Number of Sub-arrays With Odd Sum
-> * 1641. Count Sorted Vowel Strings
-> * 1884. Egg Drop With 2 Eggs and N Floors
-> * 1654. Minimum Jumps to Reach Home
-> * 2304. Minimum Path Cost in a Grid
-> * 1548. The Most Similar Path in a Graph
-> * 1526. Minimum Number of Increments on Subarrays to Form a Target Array
-> * 2188. Minimum Time to Finish the Race
-> * 2224. Minimum Number of Operations to Convert Time
-> * 1509. Minimum Difference Between Largest and Smallest Value in Three Moves
-> * 2007. Find Original Array From Doubled Array
-> * 2178. Maximum Split of Positive Even Integers
-> * 1996. The Number of Weak Characters in the Game
-> * 1877. Minimize Maximum Pair Sum in Array
-> * 1642. Furthest Building You Can Reach
-> * 2271. Maximum White Tiles Covered by a Carpet
-> * 2235. Add Two Integers
-> * 2178. Maximum Split of Positive Even Integers
-> * 56. Merge Intervals
-> * 1272. Remove Interval
-> * 1387. Sort Integers by The Power Value
-> * 1153. String Transforms Into Another String
 
