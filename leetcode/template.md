@@ -7,8 +7,8 @@ Description
 // TODO: Insert your code
 ```
 
-* **Time Complexity**: 
-* **Space Complexity**: 
+* **Time Complexity**: `O(n)`.
+* **Space Complexity**: `O(n)`.
 
 ### Two Sum in Sorted Array
 Two pointers approach to check if two elements that can sum up to `k`.

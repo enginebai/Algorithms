@@ -293,13 +293,13 @@ There is a drawback from the above implementation, our size is limited even if w
 ```kotlin
 val stack = Stack<Int>()
 stack.push(1)
-stack.pop()
+val item = stack.pop()
 stack.peek()
 stack.size
 stack.isNotEmpty()
 
 val queue = ArrayDeque<Int>()
-val queue.removeFirst()
+val item = queue.removeFirst()
 queue.addLast(1)
 queue.peek()
 queue.size

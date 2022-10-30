@@ -629,7 +629,7 @@ fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
 * Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know. ([Source](https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions))
-* For some problems, we have to return the max amoung DP table, not just `dp[0]` or `dp[n]` .
+* For some problems, we have to return the max among DP table, not just `dp[0]` or `dp[n]` .
 
 ### When to use DP? 
 The problem meets the both two characteristics:

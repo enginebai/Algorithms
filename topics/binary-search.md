@@ -1,7 +1,7 @@
-# Searching
+# Binary Search
 There are some different ways to search: binary search, [binary search tree](../topics/tree.md#binary-search-tree), and [hash table](../topics/hash-table.md). In this topic, we will talk about *binary search*.
 
-## Binary Search
+## Normal
 The binary search is applicable when the collection is **sorted**, so try to sort the collection if it's not sorted yet.
 
 ```kotlin
@@ -12,10 +12,10 @@ fun binarySearch(A: IntArray, target: Int): Int {
     while (left <= right) {
         val mid = left + (right - left) / 2
         if (A[mid] == target) return mid
-        else if (A[mid] > target) {
-            right = mid - 1
+        if (A[middle] < target) {
+            left = middle + 1
         } else {
-            left = mid + 1
+            right = middle
         }
     }
     return -1

@@ -20,7 +20,7 @@ This project are curated resources and notes of basic/fundamental/popular data s
 - [Greedy](./topics/greedy.md)
 - [Backtracking](./topics/backtracking.md)
 - [Hash Table](./topics/hash-table.md)
-- [Searching](./topics/searching.md)
+- [Binary Search](./topics/binary-search.md)
 - [Sorting](./topics/sorting.md)
 - (TODO) [Other](./topics/other.md)
 - 👉 [Problems & Solutions](./topics/problems-solutions.md)

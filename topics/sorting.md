@@ -176,7 +176,7 @@ Based on [recursion tree method](../topics/recursion.md#time-complexity-recurren
 The partition generates a balanced two subarrays, that is `n/2` size, the recurrence will be `T(n) = T(n/2) + Θ(n)`, which is `O(n log n)`.
 
 #### Average Case
-It takes `O(n log n)` on average if we can add randomization to pick the pivot in order to obtain good average case performance over all inputs. (See the comment of above code)
+It takes `O(n log n)` on average if we can add randomization to pick the pivot in order to obtain good average case performance over all inputs. (See the comment of above code). For space complexity, it takes `O(lg n)` on average for recursive function call stack.
 
 ## Heap Sort
 See [Heap](../topics/heap.md) topic.
