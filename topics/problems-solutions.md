@@ -1,82 +1,6 @@
 # Problems & Solutions
 
-## [Array & String](../topics/array.md)
-
-> * https://leetcode.com/problems/shortest-unsorted-continuous-subarray/ 7k m
-> * https://leetcode.com/problems/find-all-duplicates-in-an-array/ 8k m
-> * https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/ 8k e
-> * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ 4k m
-> * https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/ 6k m
-> * https://leetcode.com/problems/missing-number/ 8k e
-> * https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/ 4k m
-> * https://leetcode.com/problems/sum-of-subarray-minimums/ 5k m
-> * https://leetcode.com/problems/subarray-product-less-than-k/ 5k m
-> * https://leetcode.com/problems/number-of-matching-subsequences/ 5k m
-> * https://leetcode.com/problems/range-module 2k h
-> * https://leetcode.com/problems/backspace-string-compare/ 5k e
-> * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
-> * https://leetcode.com/problems/longest-mountain-in-array/ 3k m
-
-### Two Pointers
-| Problem          | Difficulty |
-|------------------|------------|
-|[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
-|[283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
-|[15. 3Sum](../leetcode/15.3sum.md)|Medium|
-|[16. 3Sum Closest](../leetcode/16.3sum-closest.md)|Medium|
-|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
-|[167. Two Sum II - Input Array Is Sorted](../leetcode/167.two-sum-ii-input-array-is-sorted.md)|Medium|
-|[11. Container With Most Water](../leetcode/11.container-with-most-water.md)|Medium|
-
-### Sliding Windows
-| Problem          | Difficulty |
-|------------------|------------|
-|[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
-|[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
-|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
-|[1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md)|Medium|
-|[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
-|[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
-|[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
-|[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
-|[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
-
-> * https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/ 5k m
-> * https://leetcode.com/problems/subarrays-with-k-different-integers/ 3k hard
-> * https://leetcode.com/problems/maximum-length-of-repeated-subarray/ (Solved in DP)
-> * https://leetcode.com/problems/binary-subarrays-with-sum/ 1.5k m
-> * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
-> * https://leetcode.com/problems/count-number-of-nice-subarrays/ 2k m
-> * https://leetcode.com/problems/binary-subarrays-with-sum/ 2k m
-> * https://leetcode.com/problems/fruit-into-baskets/ 2k m
-> * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ 4k m
-> * https://leetcode.com/problems/word-subsets 3k m
-
-### Intervals
-| Problem          | Difficulty |
-|------------------|------------|
-|[56. Merge Intervals](../leetcode/56.merge-intervals.md)|Medium|
-|[57. Insert Interval](../leetcode/57.insert-interval.md)|Medium|
-
-> * https://leetcode.com/problems/task-scheduler/ 8k m
-> * https://leetcode.com/problems/interval-list-intersections/ 5k m
-
-### String
-| Problem          | Difficulty |
-|------------------|------------|
-|[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
-|[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
-|[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
-
-#### Problem Listing
-> * https://leetcode.com/problems/partition-labels/ 9k m
-> * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
-> * https://leetcode.com/problems/accounts-merge/ 5k m
-
-> * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
-> * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
-
-### Others
+## [Array](../topics/array.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
@@ -91,7 +15,92 @@
 |[31. Next Permutation](../leetcode/31.next-permutation.md)|Medium|
 |[73. Set Matrix Zeroes](../leetcode/73.set-matrix-zeros.md)|Medium|
 |[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
+|[621. Task Scheduler](../leetcode/621.task-scheduler.md)|Medium|
+|[1588. Sum of All Odd Length Subarrays](../leetcode/1588.sum-of-all-odd-length-subarrays.md)|Easy|
+|[1823. Find the Winner of the Circular Game](../leetcode/1823.find-the-winner-of-the-circular-game.md)|Medium|
+|[581. Shortest Unsorted Continuous Subarray](../leetcode/581.shortest-unsorted-continuous-subarray.md)|Medium|
 
+> * https://leetcode.com/problems/missing-number/ 8k e
+> * https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/ 4k m
+> * https://leetcode.com/problems/sum-of-subarray-minimums/ 5k m
+> * https://leetcode.com/problems/subarray-product-less-than-k/ 5k m
+> * https://leetcode.com/problems/number-of-matching-subsequences/ 5k m
+> * https://leetcode.com/problems/backspace-string-compare/ 5k e
+> * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
+> * https://leetcode.com/problems/longest-mountain-in-array/ 3k m
+> * https://leetcode.com/problems/burst-balloons/ 7k h
+> * https://leetcode.com/problems/reverse-pairs/ 4k h
+> * https://leetcode.com/problems/couples-holding-hands/ 2k h
+> * https://leetcode.com/problems/swim-in-rising-water/ 3k h 
+> * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
+> * https://leetcode.com/problems/contains-duplicate-iii/ 8k h
+> * https://leetcode.com/problems/maximum-performance-of-a-team/ 3k h
+> * https://leetcode.com/problems/minimize-deviation-in-array/ 2k h
+
+### Two Pointers
+| Problem          | Difficulty |
+|------------------|------------|
+|[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
+|[283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
+|[15. 3Sum](../leetcode/15.3sum.md)|Medium|
+|[16. 3Sum Closest](../leetcode/16.3sum-closest.md)|Medium|
+|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
+|[167. Two Sum II - Input Array Is Sorted](../leetcode/167.two-sum-ii-input-array-is-sorted.md)|Medium|
+|[11. Container With Most Water](../leetcode/11.container-with-most-water.md)|Medium|
+|[26. Remove Duplicates from Sorted Array](../leetcode/26.remove-duplicates-from-sorted-array.md)|Easy|
+|[80. Remove Duplicates from Sorted Array II](../leetcode/80.remove-duplicates-from-sorted-array-ii.md)|Medium|
+
+### Sliding Windows
+| Problem          | Difficulty |
+|------------------|------------|
+|[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
+|[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
+|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
+|[1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md)|Medium|
+|[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
+|[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
+|[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
+|[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
+|[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
+|[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium|
+
+> * https://leetcode.com/problems/subarrays-with-k-different-integers/ 4k hard
+> * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
+> * https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/ 5k m
+> * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ 4k m
+
+> * https://leetcode.com/problems/word-subsets 3k m
+> * https://leetcode.com/problems/count-number-of-nice-subarrays/ 2k m
+> * https://leetcode.com/problems/binary-subarrays-with-sum/ 2k m
+> * https://leetcode.com/problems/fruit-into-baskets/ 2k m
+> * https://leetcode.com/problems/binary-subarrays-with-sum/ 1.5k m
+
+### Intervals
+| Problem          | Difficulty |
+|------------------|------------|
+|[56. Merge Intervals](../leetcode/56.merge-intervals.md)|Medium|
+|[57. Insert Interval](../leetcode/57.insert-interval.md)|Medium|
+|[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)|Medium|
+
+> * https://leetcode.com/problems/the-skyline-problem/ 5k h
+> * https://leetcode.com/problems/course-schedule-iii/ 3k h
+
+### String
+| Problem          | Difficulty |
+|------------------|------------|
+|[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
+|[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
+|[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
+|[1544. Make The String Great](../leetcode/1544.make-the-string-great.md)|Easy|
+
+#### Problem Listing
+> * https://leetcode.com/problems/partition-labels/ 9k m
+> * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
+> * https://leetcode.com/problems/accounts-merge/ 5k m
+> * https://leetcode.com/problems/distinct-subsequences-ii/ 2k h
+
+> * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
+> * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
 
 ## [Hash](../topics/hash-table.md)
 | Problem          | Difficulty |
@@ -101,9 +110,10 @@
 |[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
+|[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
+|[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
 
 > Hash:
-> * https://leetcode.com/problems/task-scheduler/ 6k
 > * https://leetcode.com/problems/valid-sudoku/ 6k m
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
 > * https://leetcode.com/problems/n-repeated-element-in-size-2n-array/ 1k e
@@ -138,8 +148,8 @@
 |[237. Delete Node in a Linked List](../leetcode/237.delete-node-in-a-linked-list.md)|Medium|
 |[2095. Delete the Middle Node of a Linked List](../leetcode/2095.delete-the-middle-node-of-a-linked-list.md)|Medium|
 |[148. Sort List](../leetcode/148.sort-list.md)|Medium|
-|[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
+|[1669. Merge In Between Linked Lists](../leetcode/1669.merge-in-between-linked-lists.md)|Medium|
 
 > * https://leetcode.com/problems/partition-list/ 5k m
 > * https://leetcode.com/problems/reverse-nodes-in-k-group/ 10k h
@@ -163,6 +173,7 @@
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
 |[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium|
+|[901. Online Stock Span](../leetcode/901.online-stock-span.md)|Medium|
 
 > * https://leetcode.com/problems/validate-stack-sequences/ 4k m
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
@@ -197,6 +208,7 @@
 |[662. Maximum Width of Binary Tree](../leetcode/662.maximum-width-of-binary-tree.md)|Medium|
 |[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium|
 |[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium|
+|[1315. Sum of Nodes with Even-Valued Grandparent](../leetcode/1315.sum-of-nodes-with-even-valued-grandparent.md)|Medium|
 
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 5k m
 > * https://leetcode.com/problems/binary-tree-pruning 4k m
@@ -215,7 +227,6 @@
 > * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/ 4k m
 > * https://leetcode.com/problems/deepest-leaves-sum/ 4k m
 > * https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/ 3k m
-> * https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/ 2k m
 > * https://leetcode.com/problems/add-one-row-to-tree/ 3k m
 > * https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
 > * https://leetcode.com/problems/n-ary-tree-level-order-traversal/ 3k m
@@ -224,6 +235,7 @@
 > * https://leetcode.com/problems/increasing-order-search-tree/ 4k e
 > * https://leetcode.com/problems/maximum-depth-of-n-ary-tree/ 3k e
 > * https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/ 1k m
+> * https://leetcode.com/problems/binary-tree-cameras/ 5k h
 
 ## [Binary Search Tree](../topics/tree.md#binary-search-tree)
 | Problem          | Difficulty |
@@ -266,11 +278,12 @@
 |[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium|
 |[451. Sort Characters By Frequency](../leetcode/451.sort-charaters-by-frequency.md)|Medium|
 |[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)|Medium|
-|[295. Find Median from Data Stream](../leetcode/295.find-median-from-data-stream.md)|Hard|
 |[1642. Furthest Building You Can Reach](../leetcode/1642.furthest-building-you-can-reach.md)|Medium|
 |[1046. Last Stone Weight](../leetcode/1046.last-stone-weight.md)|Easy|
+|[2462. Total Cost to Hire K Workers](../leetcode/2462.total-cost-to-hire-k-workers.md)|Medium|
 
 > * https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/ 3k h
+> * https://leetcode.com/problems/minimum-number-of-refueling-stops/ 4k h
 
 
 ## [Graph](../topics/graph.md)
@@ -302,12 +315,15 @@
 
 > * https://leetcode.com/problems/word-ladder-ii/ 5k h
 > * https://leetcode.com/problems/clone-graph/ 7k m
-> * https://leetcode.com/problems/find-eventual-safe-states/ 2k m
+> * https://leetcode.com/problems/find-eventual-safe-states/ 3k m
 > * https://leetcode.com/problems/number-of-enclaves/ 1k m
 > * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 2.4k m
+> * https://leetcode.com/problems/as-far-from-land-as-possible/ 3k m
+> * https://leetcode.com/problems/dungeon-game/ 5k h
 
 > Shortest Path: 
 > * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
+> * https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/ 4k h
 
 
 ## [Dynamic Programming](../topics/dynamic-programming.md)
@@ -383,7 +399,10 @@
 > * https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ 
 > * https://leetcode.com/problems/counting-bits/ 8k e
 > * https://leetcode.com/problems/interleaving-string/ 6k m
-> https://leetcode.com/problems/maximum-profit-in-job-scheduling/ 4k h
+> * https://leetcode.com/problems/maximum-profit-in-job-scheduling/ 4k h
+> * https://leetcode.com/problems/cherry-pickup/ 3k h
+> * https://leetcode.com/problems/super-egg-drop/ 3k h
+> * https://leetcode.com/problems/minimum-cost-to-cut-a-stick/ 3k h
 
 ## [Greedy](../topics/greedy.md)
 | Problem          | Difficulty |
@@ -460,10 +479,24 @@
 > * https://leetcode.com/problems/find-peak-element/ 8k m (4k dislike)
 > * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 4k (2k dislike)
 > * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 5.6k h
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 8k h
 > * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
 > * https://leetcode.com/problems/count-of-range-sum/ 2k h
+> * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
 
+## Design
+| Problem          | Difficulty |
+|------------------|------------|
+|[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
+|[295. Find Median from Data Stream](../leetcode/295.find-median-from-data-stream.md)|Hard|
+
+> * https://leetcode.com/problems/lfu-cache/ 4k h
+> * https://leetcode.com/problems/range-module/ 1k h
+> * https://leetcode.com/problems/random-pick-with-blacklist/ 1k h
+> * https://leetcode.com/problems/maximum-frequency-stack/ 4k h
+> * https://leetcode.com/problems/my-calendar-iii/ 2k h
+
+> * https://leetcode.com/tag/design/ Listing
 
 ## Clarification Questions
 ### General
