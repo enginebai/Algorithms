@@ -112,3 +112,4 @@ Another example, when target is `6`, we should move `left` to `middle + 1`, whic
     - [二分搜尋法（Binary Search）完整教學](https://medium.com/appworks-school/binary-search-%E9%82%A3%E4%BA%9B%E8%97%8F%E5%9C%A8%E7%B4%B0%E7%AF%80%E8%A3%A1%E7%9A%84%E9%AD%94%E9%AC%BC-%E4%B8%80-%E5%9F%BA%E7%A4%8E%E4%BB%8B%E7%B4%B9-dd2cd804aee1)
     - [Binary Search 101](https://leetcode.com/problems/binary-search/solutions/423162/Binary-Search-101-The-Ultimate-Binary-Search-Handbook/) + [Part 2](https://leetcode.com/problems/search-insert-position/solutions/423166/binary-search-101/)
     - [Powerful Ultimate Binary Search Template. Solved many problems](https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems)
+- [Nice Visualization](https://vladisov.github.io/binary-search-visualisation/)

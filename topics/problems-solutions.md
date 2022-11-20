@@ -20,10 +20,6 @@
 |[1823. Find the Winner of the Circular Game](../leetcode/1823.find-the-winner-of-the-circular-game.md)|Medium|
 |[581. Shortest Unsorted Continuous Subarray](../leetcode/581.shortest-unsorted-continuous-subarray.md)|Medium|
 
-> * https://leetcode.com/problems/missing-number/ 8k e
-> * https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/ 4k m
-> * https://leetcode.com/problems/sum-of-subarray-minimums/ 5k m
-> * https://leetcode.com/problems/subarray-product-less-than-k/ 5k m
 > * https://leetcode.com/problems/number-of-matching-subsequences/ 5k m
 > * https://leetcode.com/problems/backspace-string-compare/ 5k e
 > * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
@@ -63,6 +59,7 @@
 |[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
 |[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
 |[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium|
+|[713. Subarray Product Less Than K](../leetcode/713.subarray-product-less-than-k.md)|Medium|
 
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 4k hard
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
@@ -81,6 +78,7 @@
 |[56. Merge Intervals](../leetcode/56.merge-intervals.md)|Medium|
 |[57. Insert Interval](../leetcode/57.insert-interval.md)|Medium|
 |[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)|Medium|
+|[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)|Medium|
 
 > * https://leetcode.com/problems/the-skyline-problem/ 5k h
 > * https://leetcode.com/problems/course-schedule-iii/ 3k h
@@ -92,6 +90,9 @@
 |[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
 |[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
 |[1544. Make The String Great](../leetcode/1544.make-the-string-great.md)|Easy|
+|[392. Is Subsequence](../leetcode/392.is-subsequence.md)|Easy|
+|[792. Number of Matching Subsequences](../leetcode/792.number-of-matching-subsequences.md)|Medium|
+|[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy|
 
 #### Problem Listing
 > * https://leetcode.com/problems/partition-labels/ 9k m
@@ -110,6 +111,7 @@
 |[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
+|[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
 |[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
 
@@ -174,6 +176,7 @@
 |[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
 |[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium|
 |[901. Online Stock Span](../leetcode/901.online-stock-span.md)|Medium|
+|[907. Sum of Subarray Minimums](../leetcode/907.sum-of-subarray-minimums.md)|Medium|
 
 > * https://leetcode.com/problems/validate-stack-sequences/ 4k m
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
@@ -209,6 +212,9 @@
 |[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium|
 |[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium|
 |[1315. Sum of Nodes with Even-Valued Grandparent](../leetcode/1315.sum-of-nodes-with-even-valued-grandparent.md)|Medium|
+|[988. Smallest String Starting From Leaf](../leetcode/988.smallest-string-starting-from-leaf.md)|Medium|
+
+> https://leetcode.com/problems/count-complete-tree-nodes
 
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 5k m
 > * https://leetcode.com/problems/binary-tree-pruning 4k m
@@ -236,6 +242,8 @@
 > * https://leetcode.com/problems/maximum-depth-of-n-ary-tree/ 3k e
 > * https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/ 1k m
 > * https://leetcode.com/problems/binary-tree-cameras/ 5k h
+> * https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers 3k e
+> * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 5k m
 
 ## [Binary Search Tree](../topics/tree.md#binary-search-tree)
 | Problem          | Difficulty |
@@ -281,6 +289,7 @@
 |[1642. Furthest Building You Can Reach](../leetcode/1642.furthest-building-you-can-reach.md)|Medium|
 |[1046. Last Stone Weight](../leetcode/1046.last-stone-weight.md)|Easy|
 |[2462. Total Cost to Hire K Workers](../leetcode/2462.total-cost-to-hire-k-workers.md)|Medium|
+|[1337. The K Weakest Rows in a Matrix](../leetcode/1337.the-k-weakest-rows-in-a-matrix.md)|Easy|
 
 > * https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/ 3k h
 > * https://leetcode.com/problems/minimum-number-of-refueling-stops/ 4k h
@@ -312,6 +321,8 @@
 |[684. Redundant Connection](../leetcode/684.redundant-connection.md)|Medium|
 |[463. Island Perimeter](../leetcode/463.island-perimeter.md)|Easy|
 |[433. Minimum Genetic Mutation](../leetcode/433.minimum-genetic-mutation.md)|Medium|
+
+> https://leetcode.com/problems/most-stones-removed-with-same-row-or-column
 
 > * https://leetcode.com/problems/word-ladder-ii/ 5k h
 > * https://leetcode.com/problems/clone-graph/ 7k m
@@ -353,6 +364,7 @@
 |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
+|[263. Ugly Number](../leetcode/263.ugly-number.md)|Easy|
 |[264. Ugly Number II](../leetcode/264.ugly-number-ii.md)|Medium|
 |[983. Minimum Cost For Tickets](../leetcode/983.minimum-cost-for-tickets.md)|Medium|
 
@@ -447,6 +459,7 @@
 |[437. Path Sum III](../leetcode/437.path-sum-iii.md)|Medium|
 |[131. Palindrome Partitioning](../leetcode/131.palindrome-partitioning.md)|Medium|
 |[212. Word Search II](../leetcode/212.word-search-ii.md)|Hard|
+|[967. Numbers With Same Consecutive Differences](../leetcode/967.numbers-with-same-consecutive-differences.md)|Medium|
 
 > * https://leetcode.com/problems/permutation-sequence/ 4k h
 > * https://leetcode.com/problems/remove-invalid-parentheses/ 4k h
