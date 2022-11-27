@@ -19,11 +19,13 @@
 |[1588. Sum of All Odd Length Subarrays](../leetcode/1588.sum-of-all-odd-length-subarrays.md)|Easy|
 |[1823. Find the Winner of the Circular Game](../leetcode/1823.find-the-winner-of-the-circular-game.md)|Medium|
 |[581. Shortest Unsorted Continuous Subarray](../leetcode/581.shortest-unsorted-continuous-subarray.md)|Medium|
+|[941. Valid Mountain Array](../leetcode/941.valid-mountain-array.md)|Easy|
+|[845. Longest Mountain in Array](../leetcode/845.longest-mountain-in-array.md)|Medium|
+|[989. Add to Array-Form of Integer](../leetcode/989.add-to-array-form-of-integer.md)|Easy|
 
 > * https://leetcode.com/problems/number-of-matching-subsequences/ 5k m
 > * https://leetcode.com/problems/backspace-string-compare/ 5k e
 > * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
-> * https://leetcode.com/problems/longest-mountain-in-array/ 3k m
 > * https://leetcode.com/problems/burst-balloons/ 7k h
 > * https://leetcode.com/problems/reverse-pairs/ 4k h
 > * https://leetcode.com/problems/couples-holding-hands/ 2k h
@@ -79,6 +81,7 @@
 |[57. Insert Interval](../leetcode/57.insert-interval.md)|Medium|
 |[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)|Medium|
 |[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)|Medium|
+|[1094. Car Pooling](../leetcode/1094.car-pooling.md)|Medium|
 
 > * https://leetcode.com/problems/the-skyline-problem/ 5k h
 > * https://leetcode.com/problems/course-schedule-iii/ 3k h
@@ -95,7 +98,6 @@
 |[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy|
 
 #### Problem Listing
-> * https://leetcode.com/problems/partition-labels/ 9k m
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
 > * https://leetcode.com/problems/accounts-merge/ 5k m
 > * https://leetcode.com/problems/distinct-subsequences-ii/ 2k h
@@ -114,6 +116,8 @@
 |[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
 |[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
+|[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
+|[763. Partition Labels](../leetcode/763.partition-labels.md)|Medium|
 
 > Hash:
 > * https://leetcode.com/problems/valid-sudoku/ 6k m
@@ -321,6 +325,7 @@
 |[684. Redundant Connection](../leetcode/684.redundant-connection.md)|Medium|
 |[463. Island Perimeter](../leetcode/463.island-perimeter.md)|Easy|
 |[433. Minimum Genetic Mutation](../leetcode/433.minimum-genetic-mutation.md)|Medium|
+|[1926. Nearest Exit from Entrance in Maze](../leetcode/1926.nearest-exit-from-entrance-in-maze.md)|Medium|
 
 > https://leetcode.com/problems/most-stones-removed-with-same-row-or-column
 
@@ -367,6 +372,7 @@
 |[263. Ugly Number](../leetcode/263.ugly-number.md)|Easy|
 |[264. Ugly Number II](../leetcode/264.ugly-number-ii.md)|Medium|
 |[983. Minimum Cost For Tickets](../leetcode/983.minimum-cost-for-tickets.md)|Medium|
+|[1235. Maximum Profit in Job Scheduling](../leetcode/1235.maximum-profit-in-job-scheduling.md)|Hard|
 
 ### Problem Lists
 > * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
@@ -411,10 +417,11 @@
 > * https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ 
 > * https://leetcode.com/problems/counting-bits/ 8k e
 > * https://leetcode.com/problems/interleaving-string/ 6k m
-> * https://leetcode.com/problems/maximum-profit-in-job-scheduling/ 4k h
 > * https://leetcode.com/problems/cherry-pickup/ 3k h
 > * https://leetcode.com/problems/super-egg-drop/ 3k h
 > * https://leetcode.com/problems/minimum-cost-to-cut-a-stick/ 3k h
+> * https://leetcode.com/problems/arithmetic-slices/ 4k m
+> * https://leetcode.com/problems/arithmetic-slices-ii-subsequence/ 2k h
 
 ## [Greedy](../topics/greedy.md)
 | Problem          | Difficulty |
@@ -433,7 +440,6 @@
 > * https://leetcode.com/problems/wiggle-subsequence/ 5k m
 > * https://leetcode.com/problems/assign-cookies/ 2k 
 > * https://leetcode.com/problems/queue-reconstruction-by-height/ 7k m
-> * https://leetcode.com/problems/car-pooling/ 4k m
 > * https://leetcode.com/problems/reduce-array-size-to-the-half/ 3k m
 > * https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/ 3k m
 > * https://leetcode.com/problems/max-consecutive-ones/ 4k e
