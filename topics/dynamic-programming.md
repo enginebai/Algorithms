@@ -397,9 +397,9 @@ The following problems are categorized as *state machine* problems.
 |[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
+|[309. Best Time to Buy and Sell Stock with Cooldown](../leetcode/309.best-time-to-buy-and-sell-stock-with-cooldown.md)|Medium|
 
 > * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
-> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
 > * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
 
 ### State Transitions

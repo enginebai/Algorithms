@@ -159,6 +159,7 @@
 
 > * https://leetcode.com/problems/partition-list/ 5k m
 > * https://leetcode.com/problems/reverse-nodes-in-k-group/ 10k h
+> * https://leetcode.com/problems/split-linked-list-in-parts/description/ 2k m
 
 ## [Stack & Queue](../topics/stack-queue.md)
 | Problem          | Difficulty |
@@ -248,6 +249,7 @@
 > * https://leetcode.com/problems/binary-tree-cameras/ 5k h
 > * https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers 3k e
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 5k m
+> * https://leetcode.com/problems/maximum-difference-between-node-and-ancestor 4k m
 
 ## [Binary Search Tree](../topics/tree.md#binary-search-tree)
 | Problem          | Difficulty |
@@ -326,6 +328,8 @@
 |[463. Island Perimeter](../leetcode/463.island-perimeter.md)|Easy|
 |[433. Minimum Genetic Mutation](../leetcode/433.minimum-genetic-mutation.md)|Medium|
 |[1926. Nearest Exit from Entrance in Maze](../leetcode/1926.nearest-exit-from-entrance-in-maze.md)|Medium|
+|[1971. Find if Path Exists in Graph](../leetcode/1971.find-if-path-exists-in-graph.md)|Easy|
+|[886. Possible Bipartition](../leetcode/886.possible-bipartition.md)|Medium|
 
 > https://leetcode.com/problems/most-stones-removed-with-same-row-or-column
 
@@ -354,6 +358,7 @@
 |[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
+|[309. Best Time to Buy and Sell Stock with Cooldown](../leetcode/309.best-time-to-buy-and-sell-stock-with-cooldown.md)|Medium|
 |[198. House Robber](../leetcode/198.house-robber.md)|Medium|
 |[213. House Robber II](../leetcode/213.house-robber-ii.md)|Medium|
 |[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
@@ -408,11 +413,11 @@
 > * https://leetcode.com/problems/maximum-length-of-pair-chain/ 2k m
 
 ### Other
+> * https://leetcode.com/problems/minimum-falling-path-sum/ 5k m
 > * https://leetcode.com/problems/pascals-triangle/ 9k e
 > * https://leetcode.com/problems/maximal-rectangle/ 6k h
 > * https://leetcode.com/problems/edit-distance/ 8k h
 > * https://leetcode.com/problems/longest-increasing-path-in-a-matrix/ 6k h
-> * https://leetcode.com/problems/minimum-falling-path-sum/ 3k m
 > * https://leetcode.com/problems/dungeon-game/ 4k h
 > * https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ 
 > * https://leetcode.com/problems/counting-bits/ 8k e
@@ -514,6 +519,7 @@
 > * https://leetcode.com/problems/random-pick-with-blacklist/ 1k h
 > * https://leetcode.com/problems/maximum-frequency-stack/ 4k h
 > * https://leetcode.com/problems/my-calendar-iii/ 2k h
+> * https://leetcode.com/problems/insert-delete-getrandom-o1/ 7k m
 
 > * https://leetcode.com/tag/design/ Listing
 
