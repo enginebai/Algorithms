@@ -62,6 +62,7 @@
 |[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
 |[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium|
 |[713. Subarray Product Less Than K](../leetcode/713.subarray-product-less-than-k.md)|Medium|
+|[1876. Substrings of Size Three with Distinct Characters](../leetcode/1876.substrings-of-size-three-with-distinct-characters.md)|Easy|
 
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 4k hard
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
@@ -95,12 +96,14 @@
 |[1544. Make The String Great](../leetcode/1544.make-the-string-great.md)|Easy|
 |[392. Is Subsequence](../leetcode/392.is-subsequence.md)|Easy|
 |[792. Number of Matching Subsequences](../leetcode/792.number-of-matching-subsequences.md)|Medium|
+|[925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy|
 |[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy|
 
 #### Problem Listing
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
 > * https://leetcode.com/problems/accounts-merge/ 5k m
 > * https://leetcode.com/problems/distinct-subsequences-ii/ 2k h
+> * https://leetcode.com/problems/repeated-string-match/ 2k m
 
 > * [String Problem List](https://leetcode.com/list/ehkbkaxt/)
 > * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
@@ -118,6 +121,7 @@
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
 |[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
 |[763. Partition Labels](../leetcode/763.partition-labels.md)|Medium|
+|[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
 
 > Hash:
 > * https://leetcode.com/problems/valid-sudoku/ 6k m
@@ -182,8 +186,9 @@
 |[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium|
 |[901. Online Stock Span](../leetcode/901.online-stock-span.md)|Medium|
 |[907. Sum of Subarray Minimums](../leetcode/907.sum-of-subarray-minimums.md)|Medium|
+|[921. Minimum Add to Make Parentheses Valid](../leetcode/921.minimum-add-to-make-parentheses-valid.md)|Medium|
+|[946. Validate Stack Sequences](../leetcode/946.validate-stack-sequences.md)|Medium|
 
-> * https://leetcode.com/problems/validate-stack-sequences/ 4k m
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
 > * https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/ 2k m
 > * https://leetcode.com/problems/evaluate-reverse-polish-notation/ 4k m
@@ -218,6 +223,10 @@
 |[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium|
 |[1315. Sum of Nodes with Even-Valued Grandparent](../leetcode/1315.sum-of-nodes-with-even-valued-grandparent.md)|Medium|
 |[988. Smallest String Starting From Leaf](../leetcode/988.smallest-string-starting-from-leaf.md)|Medium|
+|[1026. Maximum Difference Between Node and Ancestor](../leetcode/1026.maximum-difference-betwwen-node-and-ancestor.md)|Medium|
+|[1161. Maximum Level Sum of a Binary Tree](../leetcode/1161.maximum-level-sum-of-a-binary-tree.md)|Medium|
+|[1022. Sum of Root To Leaf Binary Numbers](../leetcode/1022.sum-of-root-to-leaf-binary-numbers.md)|Easy|
+|[2265. Count Nodes Equal to Average of Subtree](../leetcode/2265.count-nodes-equal-to-average-of-subtree.md)|Medium|
 
 > https://leetcode.com/problems/count-complete-tree-nodes
 
@@ -232,7 +241,6 @@
 > * https://leetcode.com/problems/delete-nodes-and-return-forest/ 3k m
 > * https://leetcode.com/problems/n-ary-tree-preorder-traversal/ 2k e
 > * https://leetcode.com/problems/cousins-in-binary-tree/ 3k e
-> * https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/ 3k e
 > * https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/ 1k m
 > * https://leetcode.com/problems/minimum-depth-of-binary-tree/ 5k e
 > * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/ 4k m
@@ -249,7 +257,6 @@
 > * https://leetcode.com/problems/binary-tree-cameras/ 5k h
 > * https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers 3k e
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 5k m
-> * https://leetcode.com/problems/maximum-difference-between-node-and-ancestor 4k m
 
 ## [Binary Search Tree](../topics/tree.md#binary-search-tree)
 | Problem          | Difficulty |
@@ -263,6 +270,7 @@
 |[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
 |[653. Two Sum IV - Input is a BST](../leetcode/653.two-sum-iv-input-is-a-bst.md)|Easy|
 |[669. Trim a Binary Search Tree](../leetcode/669.trim-a-binary-search-tree.md)|Medium|
+|[897. Increasing Order Search Tree](../leetcode/897.increasing-order-search-tree.md)|Easy|
 
 > * https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/ 5k m
 > * https://leetcode.com/problems/range-sum-of-bst/ 5k e
@@ -330,6 +338,7 @@
 |[1926. Nearest Exit from Entrance in Maze](../leetcode/1926.nearest-exit-from-entrance-in-maze.md)|Medium|
 |[1971. Find if Path Exists in Graph](../leetcode/1971.find-if-path-exists-in-graph.md)|Easy|
 |[886. Possible Bipartition](../leetcode/886.possible-bipartition.md)|Medium|
+|[980. Unique Paths III](../leetcode/980.unique-paths-iii.md)|Hard|
 
 > https://leetcode.com/problems/most-stones-removed-with-same-row-or-column
 
@@ -479,6 +488,7 @@
 > * https://leetcode.cn/problems/reconstruct-itinerary/  4k h
 > * https://leetcode.com/problems/n-queens/ 8k h
 > * https://leetcode.com/problems/sudoku-solver/ 6k h
+> * https://leetcode.com/problems/restore-ip-addresses/description/ 5k m
 
 ## [Binary Search](../topics/binary-search.md)
 | Problem          | Difficulty |
@@ -513,6 +523,7 @@
 |------------------|------------|
 |[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
 |[295. Find Median from Data Stream](../leetcode/295.find-median-from-data-stream.md)|Hard|
+|[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium|
 
 > * https://leetcode.com/problems/lfu-cache/ 4k h
 > * https://leetcode.com/problems/range-module/ 1k h
