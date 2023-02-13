@@ -127,6 +127,11 @@
 > * https://leetcode.com/problems/valid-sudoku/ 6k m
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 5k
 > * https://leetcode.com/problems/n-repeated-element-in-size-2n-array/ 1k e
+> * https://leetcode.com/problems/naming-a-company h
+
+### Prefix Sum
+|[1685. Sum of Absolute Differences in a Sorted Array](../leetcode/1685.sum-of-absolute-differences-in-a-sorted-array.md)|Medium|
+|[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
 
 ## [Sorting](../topics/sorting.md)
 | Problem          | Difficulty |
@@ -193,6 +198,7 @@
 > * https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/ 2k m
 > * https://leetcode.com/problems/evaluate-reverse-polish-notation/ 4k m
 > * https://leetcode.com/problems/car-fleet/ 2k m
+> * TODO: try to understand the monotonic stack solution for this https://leetcode.com/problems/sum-of-subarray-ranges/ 2k m
 
 ## [Tree](../topics/tree.md)
 | Problem          | Difficulty |
@@ -318,6 +324,7 @@
 |[130. Surrounded Regions](../leetcode/130.surrounded-regions.md)|Medium|
 |[695. Max Area of Island](../leetcode/695.max-area-of-island.md)|Medium|
 |[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium|
+|[1162. As Far from Land as Possible](../leetcode/1162.as-far-from-land-as-possible.md)|Medium|
 |[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
 |[417. Pacific Atlantic Water Flow](../leetcode/417.pacific-atlantic-water-flow.md)|Medium|
 |[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)|Medium|
@@ -504,8 +511,10 @@
 |[540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium|
 |[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
+|[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
 
 > Search + Sorting:
+> * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 3k e
 > * https://leetcode.com/problems/find-k-closest-elements/ 6k m
 > * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 5k m
 > * https://leetcode.com/problems/koko-eating-bananas/ 5k

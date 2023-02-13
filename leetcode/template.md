@@ -41,3 +41,21 @@ fun reverseArray(nums: IntArray, start: Int, end: Int) {
     }
 }
 ```
+
+### Find the largest Two Numbers
+```kotlin
+fun findLargestTwoNumbers(nums: IntArray) {
+    var first = Int.MIN_VALUE
+    var second = Int.MIN_VALUE
+    for (num in nums) {
+        if (num > first) {
+            second = first
+            first = num
+        } else if (num > second) {
+            second = num
+        }
+    }
+}
+
+
+```
