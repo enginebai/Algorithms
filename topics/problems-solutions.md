@@ -263,6 +263,7 @@
 > * https://leetcode.com/problems/binary-tree-cameras/ 5k h
 > * https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers 3k e
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 5k m
+> * https://leetcode.com/problems/find-duplicate-subtrees 6k m
 
 ## [Binary Search Tree](../topics/tree.md#binary-search-tree)
 | Problem          | Difficulty |
@@ -277,6 +278,7 @@
 |[653. Two Sum IV - Input is a BST](../leetcode/653.two-sum-iv-input-is-a-bst.md)|Easy|
 |[669. Trim a Binary Search Tree](../leetcode/669.trim-a-binary-search-tree.md)|Medium|
 |[897. Increasing Order Search Tree](../leetcode/897.increasing-order-search-tree.md)|Easy|
+|[530. Minimum Absolute Difference in BST](../leetcode/530.minimum-absolute-difference-in-bst.md)|Easy|
 
 > * https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/ 5k m
 > * https://leetcode.com/problems/range-sum-of-bst/ 5k e
@@ -286,7 +288,6 @@
 > * https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/ 3k m
 > * https://leetcode.com/problems/unique-binary-search-trees-ii/ 5k m
 > * https://leetcode.com/problems/all-elements-in-two-binary-search-trees/ 3k m
-> * https://leetcode.com/problems/minimum-absolute-difference-in-bst/ 3k e
 
 ## Trie
 | Problem          | Difficulty |
@@ -313,6 +314,7 @@
 
 > * https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/ 3k h
 > * https://leetcode.com/problems/minimum-number-of-refueling-stops/ 4k h
+> * https://leetcode.com/problems/ipo/ 2k h
 
 
 ## [Graph](../topics/graph.md)
@@ -526,6 +528,8 @@
 > * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
 > * https://leetcode.com/problems/count-of-range-sum/ 2k h
 > * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
+> * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 7k m
+> * https://leetcode.com/problems/sort-an-array/ 4k m
 
 ## Design
 | Problem          | Difficulty |
