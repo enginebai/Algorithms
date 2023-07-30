@@ -11,7 +11,7 @@
 | - What operations are | - Algorithms to support operations |
 
 ## Abstract Data Structure (ADT)
-1. The first step to design data structure: to know the **specification** (i.e. its behavior) ot how to implement from the user perspective, that is, to comprehend in **abstract** way (or mathematical). 
+1. The first step to design data structure: to know the **specification** (i.e. its behavior) or how to implement from the user perspective, that is, to comprehend in **abstract** way (or mathematical). 
 2. For ADT, we define the logical behavior by a set of values (`Domain`) and operations (`Functions` + `Axiom`), we just define **what** to store/operate the data, not **how** to implement the way to store/operate the data.
 
 > // TODO: translate into English and organize.

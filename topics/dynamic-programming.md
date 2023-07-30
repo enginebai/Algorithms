@@ -1,7 +1,7 @@
 # Dynamic Programming
 The *dynamic programming* (DP) generalizes *divide and conquer* method, solves problems by combining the solutions to subproblems.
 
-## DP = Subproblem + Re-use!
+## Overview
 The basic idea of dynamic programming is to split the problem into subproblems, solve those subproblems and reuse the solutions to the subproblems.
 
 We are going to break down a problem into a series of overlapping subproblems (top-down), and build up solutions from bottom subproblems to larger subproblems, and finally to the original problem (bottom-up). 
@@ -12,9 +12,7 @@ The DP algorithm is applicable when the subproblems are **dependent**, the subpr
 
 DP is typically applied to *optimization problems*, there will be many possible solutions with a *value* and we wish to find a solution with optimal value which is minimum or maximum.
 
-We might need to maintain auxiliary information (such as parent pointer to the subproblem) in addition to reconstruct the answer we are optimizing.
-
-### DP = Recursion + Memoization
+### DP = Subproblem + Memoization = Recursion + Reuse
 * If we solved before, just reuse the solution from memoization.
 * Otherwise, we compute and store it, return that solution.
 
@@ -80,24 +78,6 @@ fun fibonacci(n: Int): Int {
 }
 ```
 
-## Steps of Dynamic Programming
-1. Try to break down the problem into optimal subproblems.
-2. Define the solution to the original problem recursively in terms of the solution to subproblems.
-3. Compute the value of optimal solution to the subproblems in a bottom-up fashion.
-4. Constuct the optimal solution to the original problem from the solutions to subproblems of step 3. (memoization) and *backtracking*.
-
-> Update note from this ref: https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning
-> 
-> Merge the [Problem Solving Steps](#problem-solving-steps)
-
-For the assembly line scheduling problem (CLRS P.324):
-
-![Assembly Line Scheduling](../media/assembly-line-scheduling.png)
-1. The fastest way is either through the previous station in the same line or a transfer from another line.
-2. `f1(n) = min{f1(n - 1) + a(n), f2(n - 1) + t(n -1) + a(n)}`
-3. Calculate `f1(n)` and `f2(n)` for each station, and store the *backtrack* solution.
-4. Construct the fast path from the stored *backtrack* of step 3.
-
 ## Elements of Dynamic Programming
 * **Optimal substructure**: The optimal solution to the original problem contains within its optimal solutions to subproblems. That is, we can build the solution to the original problem from the solutions to subproblem.
 * **Overlapping subproblems**: We can break down the problem into *overlapping subproblems". Then we can develop the recursive algorithm that solves the same subproblems over and over (memoization).
@@ -154,6 +134,7 @@ Recursive function call represents a vertex in a graph, and a directed edge from
 > * For loop order
 > * For loop initialization
 > * The return dp[item.size][weight] v.s. dp[item.size - 1][weight]
+
 ## 0-1 Knapsack Problem
 
 ```
@@ -392,15 +373,14 @@ fun knapsack(): Int {
 ## Best Time to Buy and Sell Stock Problems
 The following problems are categorized as *state machine* problems. 
 
-| Problem          | Difficulty |
-|------------------|------------|
-|[121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)|Easy|
-|[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
-|[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
-|[309. Best Time to Buy and Sell Stock with Cooldown](../leetcode/309.best-time-to-buy-and-sell-stock-with-cooldown.md)|Medium|
-
-> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
-> * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
+| Problem                                                                                                                | Transactions                 |
+|------------------------------------------------------------------------------------------------------------------------|------------------------------|
+| [121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)                             | Only once                    |
+| [122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)                       | Multiple times               |
+| [123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)                     | At most 2 times              |
+| [309. Best Time to Buy and Sell Stock with Cooldown](../leetcode/309.best-time-to-buy-and-sell-stock-with-cooldown.md) | Multiple times with cooldown |
+| https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/                                                      | At most `k` times            |
+| https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/                                    | Charge fee when selling      |
 
 ### State Transitions
 For this series of stock problems, we can apply the framework we mentioned above:
@@ -628,8 +608,6 @@ fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
 * **Space Complexity**: `O(m * n)` for dp 2D table.
 
 ## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
-* Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know. ([Source](https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions))
-* For some problems, we have to return the max among DP table, not just `dp[0]` or `dp[n]` .
 
 ### When to use DP? 
 The problem meets the both two characteristics:
@@ -640,18 +618,96 @@ The problem meets the both two characteristics:
     * What's the longest/shortest possible...
 2. The solution of original problem comes from eariler calculated solution (from the overlapping subproblems), that is, the later step will be affected by the eariler step.
 
-Sometimes, only meets the first but not the second might be the greedy algorithm, not DP.
+Sometimes, only meets the first but not the second might be the greedy algorithm, not DP. For some problems, we have to return the optimal value among DP table, not just `dp[0]` or `dp[n]` itself.
 
 ### Problem Solving Steps
-Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the solution of subproblems:
-1. Define the `dp[i]` and the definition of index.
-2. Define the recursive steps a.k.a state transformation formular, such as `dp[i] = dp[i - 1] + dp[i - 2]`
-3. Define the base case (initialization of `dp[i]`): `d[0] = 0`, `dp[1] = 1`.
-4. Define how to iterate to get the original problem from building up the solution to subproblems.
 
-> * TODO: Must practice!! [Top-Down + Bottom-up Optimization](https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning)
-> * https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions.
-> * https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems
+#### 5 Steps of Dynamic Programming
+1. **Category**: Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know. ([Source](https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions))
+    * 0/1 Knapsack
+    * Unbounded Knapsack
+    * Shortest Path (eg: Unique Paths I/II)
+    * Fibonacci Sequence (eg: House Thief, Jump Game)
+    * Longest Common Substring/Subsequece
+    * Palindromic Substring/Subsequence
+    * Matrix DP
+    * Others
+2. **State**: A set of necessary variables that are required to calculate the optimal result in the subproblems. For Knapsack, it's the current index and the current capacity. The same combination of index and capacity has the same result so that we can use memoization to avoid repeated calculation.
+3. **Decision**: For each state, we can make the decision to calculate the optimal result. For Knapsack, it's whether to pick the number or not. For other problems, it might be which direction to go, which character to pick, etc.
+4. **Recursion**: The relationship between the current state and the next state. For Knapsack, it's the maximum value between picking and not picking the number. For other problems, it might be the sum of the two child nodes, the minimum of the two child nodes, etc.
+5. **Base Case**: The base case usually represents the minimum or maximum value of the state. For Knapsack, it's when the index is out of bound or the capacity is negative. For other problems, it might be when the index is out of bound or the string is empty.
+6. **Optimize**: We can apply memoization to recursion to avoid repeated calculation. We can also apply bottom-up DP (tabulation) to eliminate the overhead and stack overflow in recursion approach. It's important that the time complexity of the recursion approach and the bottom-up DP approach are the same. However, the bottom-up DP approach usually requires less memory space (eliminating the stack used in recursive function calls).
+
+### Steps by Steps
+1. Find recusive relation.
+2. Recursive (top-down)
+3. Recursive + memo (top-down)
+4. Iterative + memo (bottom-up)
+5. Iterative + N variables (bottom-up)
+
+Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the solution of subproblems:
+
+1. **Find recusive relation**: Define the `dp[i]` and the definition of index. Define the recursive steps a.k.a *state transition*, such as `dp[i] = dp[i - 1] + dp[i - 2]`, and the base case (initialization of `dp[i]`): `d[0] = 0`, `dp[1] = 1`.
+
+```js
+// Recursive relation
+dp[i] = dp[i - 1] + dp[i - 2]
+
+// Base case
+dp[0] = 0
+dp[1] = 1
+```
+
+2. **Recursive (top-down)**: Convert recurrence into recursive calls.
+
+```kotlin
+fun fib(n: Int): Int {
+    if (n == 0) return 0
+    if (n == 1) return 1
+    return fib(n - 1) + fib(n - 2)
+}
+```
+
+3. **Recursive + memo (top-down)**: Add memoization to recursion - Time complexity from exponential to linear time.
+```kotlin
+fun fib(n: Int, memo: Map): Int {
+    if (n == 0) return 0
+    if (n == 1) return 1
+    if (memo[n] != null) return memo[n]
+    else {
+        memo = fib(n - 1, memo) + fib(n - 2, memo)
+        return memo
+    }
+}
+```
+
+4. **Iterative + tabulation (bottom-up)**: Convert resursive to iterative - Get rid of recursive call stack.
+```kotlin
+fun fib(n: Int): Int {
+    val dp = Array(n + 1)
+    dp[0] = 0
+    dp[1] = 1
+    for (i in 2..n) {
+        dp[i] = dp[i - 1] + dp[i - 2]
+    }
+    return dp[n]
+}
+```
+5. **Iterative + N variables (bottom-up)**: Optimize the space complexity - Use only two variables instead of array.
+```kotlin
+fun fib(n: Int): Int { 
+    var n0 = 0
+    var n1 = 1
+    for (i in 2..n) {
+        val result = n1 + n0
+        n0 = n1
+        n1 = result
+    }
+    return result
+}
+```
+
+> [Source1](https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning) / [Source2](https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems)
 
 ### How to Relate Subproblem Solutions
 1. Try to identify the question about a subproblem.
@@ -680,7 +736,7 @@ Overall, try to think about your recursive functions call in terms of a **tree**
 - [力扣加加](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/dynamic-programming)
 - [代碼隨想錄](https://github.com/youngyangyang04/leetcode-master#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
 - [LC Learn](https://leetcode.com/explore/learn/card/dynamic-programming/) // Some topics are locked
-- ~~[ ] [Coding Interview University](https://github.com/jwasham/coding-interview-university#dynamic-programming)~~
+- ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#dynamic-programming)~~
 - [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/dynamic-programming/) // Not too much notes, some references posts only
 - [动态规划详解](https://mp.weixin.qq.com/s/1V3aHVonWBEXlNUvK3S28w)
 - [LeetCode Curated Posts](https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode)

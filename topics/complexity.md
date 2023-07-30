@@ -78,14 +78,14 @@ fun insertSort(A) {                     // ---- Times ----
 This worst running time can expressed as `a*n^2 + b*n + c`, it's a **quadratic function** of `n`.
 
 We shall usually conccentrate on the worst-case running time, because of the three reasons:
-1. It's the upper bound of running time for any input, it gives us a guarantee that the algorithm will never tak any longer.
+1. It's the upper bound of running time for any input, it gives us a guarantee that the algorithm will never take any longer.
 2. For some algorithm, the worst case occurs fairly often.
 3. The "average case" is often roughly as bad as the worst case.
 
 We expect that the same algorithm running on a fast machine will run faster than the same algorithm on a slow one, however, we'd like to be able to compare without worrying about how fast the machine is, so we compare the running time based on *asymptotic performance* (the abstraction way) relative to the input size.
 
 ## Asymptotic Notation
-When look at input sizes large engough to make only the order of growth of the running time relevant, we use *asymptotic notation* to express the **rate of growth** of an algorithm's running time in terms of the input size `n`.
+When we look at input sizes large engough to make only the order of growth of the running time relevant, we use *asymptotic notation* to express the **rate of growth** of an algorithm's running time in terms of the input size `n`.
 
 For the worst-case running time of *insert sort* is `a*n^2 + b*n + c`, what we care about is the **order of growth**, we therefore consider:
 

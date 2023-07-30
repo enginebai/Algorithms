@@ -236,7 +236,6 @@
 
 > https://leetcode.com/problems/count-complete-tree-nodes
 
-> * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 5k m
 > * https://leetcode.com/problems/binary-tree-pruning 4k m
 > * https://leetcode.com/problems/binary-tree-paths/ 4k e
 > * https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/ 4k m
@@ -264,6 +263,7 @@
 > * https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers 3k e
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 5k m
 > * https://leetcode.com/problems/find-duplicate-subtrees 6k m
+> * https://leetcode.com/problems/check-completeness-of-a-binary-tree/ 3k
 
 ## [Binary Search Tree](../topics/tree.md#binary-search-tree)
 | Problem          | Difficulty |
@@ -522,7 +522,7 @@
 > * https://leetcode.com/problems/koko-eating-bananas/ 5k
 > * https://leetcode.com/problems/time-based-key-value-store/ 4k m
 > * https://leetcode.com/problems/find-peak-element/ 8k m (4k dislike)
-> * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 4k (2k dislike)
+> * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 6k
 > * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
 > * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 8k h
 > * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
