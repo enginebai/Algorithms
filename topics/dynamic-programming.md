@@ -182,8 +182,12 @@ val values = intArrayOf(60, 100, 120)
 val weights = intArrayOf(10, 20, 30)
 val capacity = 50
 
-// We're going to determine to take `i-th` item under current remaining capacity `w`
-// NOTE: Here we use 1-based index!! Or some call it the item count.
+/**
+ * We're going to determine to take item from size of `i` under current remaining capacity `w`.
+
+ * @param i the size of items
+ * @param w the remaining capacity
+ */
 private fun knapsack(i: Int, w: Int): Int {
     // Base cases: no item or no capacity
     if (i == 0 || w == 0) return 0
