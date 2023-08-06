@@ -382,6 +382,7 @@
 |[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
 |[1143. Longest Common Subsequence](../topics/dynamic-programming.md#longest-common-subsequence-problem)|Medium|
 |[300. Longest Increasing Subsequence](../leetcode/300.longest-increasing-subsequence.md)|Medium|
+|[673. Number of Longest Increasing Subsequence](../leetcode/673.number-of-longest-increasing-subsequence.md``)|Medium|
 |[516. Longest Palindromic Subsequence](../leetcode/516.longest-palindromic-subsequence.md)|Medium|
 |[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
 |[647. Palindromic Substrings](../leetcode/647.palindromic-substrings.md)|Medium|
@@ -423,14 +424,13 @@
 > * https://leetcode.com/problems/distinct-subsequences/ 4k h
 
 ### LIC
-> * https://leetcode.com/problems/delete-and-earn/ 5k m
 > * https://leetcode.com/problems/longest-string-chain/ 5k m
 > * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
-> * https://leetcode.com/problems/number-of-longest-increasing-subsequence/ 4k m
 > * https://leetcode.com/problems/longest-string-chain/ 3k m
 > * https://leetcode.com/problems/maximum-length-of-pair-chain/ 2k m
 
 ### Other
+> * https://leetcode.com/problems/delete-and-earn/ 5k m
 > * https://leetcode.com/problems/minimum-falling-path-sum/ 5k m
 > * https://leetcode.com/problems/pascals-triangle/ 9k e
 > * https://leetcode.com/problems/maximal-rectangle/ 6k h
