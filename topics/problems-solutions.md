@@ -530,6 +530,7 @@
 > * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
 > * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 7k m
 > * https://leetcode.com/problems/sort-an-array/ 4k m
+> * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs m
 
 ## Design
 | Problem          | Difficulty |
