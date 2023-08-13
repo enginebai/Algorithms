@@ -169,6 +169,7 @@
 > * https://leetcode.com/problems/partition-list/ 5k m
 > * https://leetcode.com/problems/reverse-nodes-in-k-group/ 10k h
 > * https://leetcode.com/problems/split-linked-list-in-parts/description/ 2k m
+> * https://leetcode.com/problems/rotate-list/ 9k m
 
 ## [Stack & Queue](../topics/stack-queue.md)
 | Problem          | Difficulty |
@@ -388,7 +389,7 @@
 |[647. Palindromic Substrings](../leetcode/647.palindromic-substrings.md)|Medium|
 |[718. Maximum Length of Repeated Subarray](../leetcode/718.maximum-length-of-repeated-subarray.md)|Medium|
 |[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Medium|
-|[152. Maximum Product Subarray](../leetcode/153.maximum-product-subarray.md)|Medium|
+|[152. Maximum Product Subarray](../leetcode/152.maximum-product-subarray.md)|Medium|
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
 |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
@@ -599,3 +600,39 @@
 * Could vertices have negative values?
 * Could edge weights be negative?
 * Do all vertices have distince values?
+
+----
+Inspect	
+	Did I explicilty state what the input was?
+	Did I clarify what the desired output was?
+	Did I construct a simple example that could be solved by hand?
+	Did I write out all Axioms?
+	Did I write out and derive all intelligent assumptions?
+Strategy	
+	Did I brainstorm a simple solution?
+	Did I analyze the runtime?
+	Did I analyze the space requirement?
+	Did I ask if the input problem set would be small enough for this to suffice?
+	Was I able to come up with a better more sophisticated solution?
+	Did I analyze the time complexity of this solution?
+	Did I analyze the space complexity of this solution?
+	Did I compare it directly to my initial simple solution?
+	Was I confident when I started coding?
+	Did I think through all approaches that come to mind?
+	Did I explicitly write out my desired strategy?
+	Did I explicitly consider base cases?
+	How well did I handle getting stuck?
+Code	
+	How cleanly was my code written?
+	Did I explicitly check for any off-by-one errors?
+	Was I able to predict what functions I would end up implementing ?
+	Did my brainstormed strategy solve the problem?
+	How smooth was the coding process?
+	Was I able to talk through my code?
+	Did I leverage any interesting functions in my code?
+Review	
+	Did I prove my runtime complexity?
+	Did I prove my spacetime complexity?
+	Did I write up different test cases and process them?
+	Did I go line by line, no matter how trivial?
+	Did I have to make any changes when reviewing my code?
