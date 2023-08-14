@@ -130,6 +130,8 @@
 > * https://leetcode.com/problems/naming-a-company h
 
 ### Prefix Sum
+| Problem          | Difficulty |
+|------------------|------------|
 |[1685. Sum of Absolute Differences in a Sorted Array](../leetcode/1685.sum-of-absolute-differences-in-a-sorted-array.md)|Medium|
 |[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
 
@@ -170,6 +172,7 @@
 > * https://leetcode.com/problems/reverse-nodes-in-k-group/ 10k h
 > * https://leetcode.com/problems/split-linked-list-in-parts/description/ 2k m
 > * https://leetcode.com/problems/rotate-list/ 9k m
+> * https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/
 
 ## [Stack & Queue](../topics/stack-queue.md)
 | Problem          | Difficulty |
