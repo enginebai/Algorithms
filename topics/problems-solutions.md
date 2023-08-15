@@ -167,8 +167,8 @@
 |[148. Sort List](../leetcode/148.sort-list.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[1669. Merge In Between Linked Lists](../leetcode/1669.merge-in-between-linked-lists.md)|Medium|
+|[86. Partition List](../leetcode/86.partition-list.md)|Medium|
 
-> * https://leetcode.com/problems/partition-list/ 5k m
 > * https://leetcode.com/problems/reverse-nodes-in-k-group/ 10k h
 > * https://leetcode.com/problems/split-linked-list-in-parts/description/ 2k m
 > * https://leetcode.com/problems/rotate-list/ 9k m
