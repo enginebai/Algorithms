@@ -3,8 +3,6 @@
 ## [Array](../topics/array.md)
 | Problem          | Difficulty |
 |------------------|------------|
-|[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
-|[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
 |[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
 |[54. Spiral Matrix](../leetcode/54.spiral-matrix.md)|Medium|
 |[59. Spiral Matrix II](../leetcode/59.spiral-matrix-ii.md)|Medium|
@@ -14,7 +12,6 @@
 |[221. Maximal Square](../leetcode/221.maximal-square.md)|Medium|
 |[31. Next Permutation](../leetcode/31.next-permutation.md)|Medium|
 |[73. Set Matrix Zeroes](../leetcode/73.set-matrix-zeros.md)|Medium|
-|[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
 |[621. Task Scheduler](../leetcode/621.task-scheduler.md)|Medium|
 |[1588. Sum of All Odd Length Subarrays](../leetcode/1588.sum-of-all-odd-length-subarrays.md)|Easy|
 |[1823. Find the Winner of the Circular Game](../leetcode/1823.find-the-winner-of-the-circular-game.md)|Medium|
@@ -112,9 +109,12 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
-|[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
-|[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
+|[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
+|[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
+|[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
+|[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
+|[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
 |[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
 |[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
