@@ -386,7 +386,7 @@
 |[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
 |[1143. Longest Common Subsequence](../topics/dynamic-programming.md#longest-common-subsequence-problem)|Medium|
 |[300. Longest Increasing Subsequence](../leetcode/300.longest-increasing-subsequence.md)|Medium|
-|[673. Number of Longest Increasing Subsequence](../leetcode/673.number-of-longest-increasing-subsequence.md``)|Medium|
+|[673. Number of Longest Increasing Subsequence](../leetcode/673.number-of-longest-increasing-subsequence.md)|Medium|
 |[516. Longest Palindromic Subsequence](../leetcode/516.longest-palindromic-subsequence.md)|Medium|
 |[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
 |[647. Palindromic Substrings](../leetcode/647.palindromic-substrings.md)|Medium|
@@ -603,39 +603,3 @@
 * Could vertices have negative values?
 * Could edge weights be negative?
 * Do all vertices have distince values?
-
-----
-Inspect	
-	Did I explicilty state what the input was?
-	Did I clarify what the desired output was?
-	Did I construct a simple example that could be solved by hand?
-	Did I write out all Axioms?
-	Did I write out and derive all intelligent assumptions?
-Strategy	
-	Did I brainstorm a simple solution?
-	Did I analyze the runtime?
-	Did I analyze the space requirement?
-	Did I ask if the input problem set would be small enough for this to suffice?
-	Was I able to come up with a better more sophisticated solution?
-	Did I analyze the time complexity of this solution?
-	Did I analyze the space complexity of this solution?
-	Did I compare it directly to my initial simple solution?
-	Was I confident when I started coding?
-	Did I think through all approaches that come to mind?
-	Did I explicitly write out my desired strategy?
-	Did I explicitly consider base cases?
-	How well did I handle getting stuck?
-Code	
-	How cleanly was my code written?
-	Did I explicitly check for any off-by-one errors?
-	Was I able to predict what functions I would end up implementing ?
-	Did my brainstormed strategy solve the problem?
-	How smooth was the coding process?
-	Was I able to talk through my code?
-	Did I leverage any interesting functions in my code?
-Review	
-	Did I prove my runtime complexity?
-	Did I prove my spacetime complexity?
-	Did I write up different test cases and process them?
-	Did I go line by line, no matter how trivial?
-	Did I have to make any changes when reviewing my code?
