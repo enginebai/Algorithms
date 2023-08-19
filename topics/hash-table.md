@@ -121,6 +121,33 @@ class OpenAddress<T> {
 2. **Quadratic Probling**: `h(key, probe) = (h1(key) + c1 * probe + c2 * probe^2) mod m`.
 3. **Double Hashing**: `h(key, probe) = (h1(key) + probe * h2(key)) mod m`.
 
+## Tips for [Problem Solving](./problems-solutions.md#hash)
+* We can use constant-size integer array as hash table which takes only `O(1)` space complexity. For example, we can define `IntArray(26)` for the problem which input is only lowercase letters.
+* We can use array itself as hash table and index as key, then mark the value to negative to indicate the key exists.
+
+* `HashSet` in Kotlin:
+```kotlin
+val set = HashSet<Int>()
+set.size
+set.add(123)
+set.contains(123)
+set.isEmpty()
+```
+
+* `HashMap` in Kotlin
+```kotlin
+val map = HashMap<Int, Int>()
+map.size
+map.keys
+map.values
+map.isEmpty()
+map.containsKey(123)
+map[123] = 999
+map.remove(123)
+for ((key, value) in l.entries) { ... }
+map.forEach { key, value -> ... }
+```
+
 ## References
 - CLRS
 - [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-4-hashing/)
