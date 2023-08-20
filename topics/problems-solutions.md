@@ -120,7 +120,6 @@
 |[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
 |[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
-|[763. Partition Labels](../leetcode/763.partition-labels.md)|Medium|
 |[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
 
 > Hash:
@@ -456,6 +455,7 @@
 |[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
 |[45. Jump Game II](../leetcode/45.jump-game-ii.md)|Medium|
 |[334. Increasing Triplet Subsequence](../leetcode/334.increasing-triplet-subsequence.md)|Medium|
+|[763. Partition Labels](../leetcode/763.partition-labels.md)|Medium|
 
 > https://leetcode.com/problems/boats-to-save-people/ 3k m
 
