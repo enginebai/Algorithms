@@ -55,7 +55,8 @@ For example, `A = [5, 2, 4, 7, 1, 3, 2, 6]`:
 
 ```kotlin
 fun merge(A: IntArray, start: Int, half: Int, end: Int) {
-    // We set the last element to be sentinel value
+    // 0,1,2,3,4 => half is 2 => 0,1,2 | 3,4
+    // 0,1,2,3   => half is 1 => 0,1   | 2,3
     val leftSize = half - start + 1
     val rightSize = end - half
 
@@ -148,8 +149,9 @@ private fun IntArray.swap(i: Int, j: Int) {
 fun quickSort(A: IntArray, start: Int, end: Int) {
     if (start < end) {
         // Randomly pick pivot to achieve average-case O(n lg n)
-        // val randomPivotIndex = (Math.random() * (end - start + 1)).toInt()
-        // A.swap(start, start + randomPivotIndex)
+        // end - start + 1 is the size of subarray
+        val randomPivotIndex = (Math.random() * (end - start + 1)).toInt()
+        A.swap(start, start + randomPivotIndex)
 
         val pivotIndex = partition(A, start, end)
         quickSort(A, start, pivotIndex - 1)

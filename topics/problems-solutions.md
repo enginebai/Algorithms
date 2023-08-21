@@ -176,6 +176,7 @@
 > * https://leetcode.com/problems/split-linked-list-in-parts/description/ 2k m
 > * https://leetcode.com/problems/rotate-list/ 9k m
 > * https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/
+> * https://leetcode.com/problems/insertion-sort-list/ 3k m
 
 ## [Stack & Queue](../topics/stack-queue.md)
 | Problem          | Difficulty |
