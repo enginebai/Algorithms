@@ -112,7 +112,6 @@
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 |[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
 |[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
-|[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 |[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
 |[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
@@ -131,8 +130,13 @@
 ### Prefix Sum
 | Problem          | Difficulty |
 |------------------|------------|
+|[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 |[1685. Sum of Absolute Differences in a Sorted Array](../leetcode/1685.sum-of-absolute-differences-in-a-sorted-array.md)|Medium|
 |[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
+
+> * https://leetcode.com/problems/continuous-subarray-sum/ 5k m
+> * https://leetcode.com/problems/subarray-sums-divisible-by-k/ 6k m
+
 
 ## [Sorting](../topics/sorting.md)
 | Problem          | Difficulty |
