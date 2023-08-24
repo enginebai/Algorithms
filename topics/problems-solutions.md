@@ -131,7 +131,6 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
-|[1685. Sum of Absolute Differences in a Sorted Array](../leetcode/1685.sum-of-absolute-differences-in-a-sorted-array.md)|Medium|
 |[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
 
 > * https://leetcode.com/problems/continuous-subarray-sum/ 5k m
@@ -142,7 +141,10 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
+|[912. Sort an Array](../topics/sorting.md)|Medium|
 |[75. Sort Colors](../leetcode/75.sort-colors.md)|Medium|
+|[148. Sort List](../leetcode/148.sort-list.md)|Medium|
+
 
 ## [Linked List](../topics/linked-list.md)
 | Problem          | Difficulty |
@@ -167,7 +169,6 @@
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[237. Delete Node in a Linked List](../leetcode/237.delete-node-in-a-linked-list.md)|Medium|
 |[2095. Delete the Middle Node of a Linked List](../leetcode/2095.delete-the-middle-node-of-a-linked-list.md)|Medium|
-|[148. Sort List](../leetcode/148.sort-list.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[1669. Merge In Between Linked Lists](../leetcode/1669.merge-in-between-linked-lists.md)|Medium|
 |[86. Partition List](../leetcode/86.partition-list.md)|Medium|

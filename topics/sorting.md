@@ -54,56 +54,36 @@ For example, `A = [5, 2, 4, 7, 1, 3, 2, 6]`:
 ```
 
 ```kotlin
-fun merge(A: IntArray, start: Int, half: Int, end: Int) {
-    // 0,1,2,3,4 => half is 2 => 0,1,2 | 3,4
-    // 0,1,2,3   => half is 1 => 0,1   | 2,3
-    val leftSize = half - start + 1
-    val rightSize = end - half
-
-    // We set the last element to be sentinel value
-    val leftArray = IntArray(leftSize + 1)
-    val rightArray = IntArray(rightSize + 1)
-
-    for (i in 0 until leftSize) {
-        leftArray[i] = A[start + i]
+fun mergeSort(nums: IntArray): IntArray {
+    if (nums.size > 1) {
+        val middle = nums.size / 2
+        // Not 0..middle / middel + 1 until nums.size, this will cause stack overflow.
+        // Take a look at size 4.
+        val leftArray = mergeSort(nums.sliceArray(0..middle - 1))
+        val rightArray = mergeSort(nums.sliceArray(middle until nums.size))
+        return merge(leftArray, rightArray)
+    } else {
+        return nums
     }
-    for (j in 0 until rightSize) {
-        rightArray[j] = A[half + 1 + j]
-    }
+}
 
-    // We set the last element to be sentinel value
-    leftArray[leftSize] = Int.MAX_VALUE
-    rightArray[rightSize] = Int.MAX_VALUE
-
-    // Start to merge
+private fun merge(leftArray: IntArray, rightArray: IntArray): IntArray {
     var left = 0
     var right = 0
-    for (k in start..end) {
-        if (leftArray[left] < rightArray[right]) {
-            A[k] = leftArray[left]
+    val result = IntArray(leftArray.size + rightArray.size)
+    for (k in 0 until result.size) {
+        if (leftArray[left] <= rightArray[right]) {
+            result[k] = leftArray[left]
             left++
         } else {
-            A[k] = rightArray[right]
+            result[k] = rightArray[right]
             right++
         }
     }
+    return result
 }
 
-fun mergeSort(A, start, end) {
-    if (start < end) {
-        // We don't write middle = (start + end) / 2
-        // Source: https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
-        val half = start + (end - start) / 2
-        mergeSort(A, start, half)
-        mergeSort(A, half + 1, end)
-        // merge two sorted array
-        merge(A, start, half, end)
-    }
-    // start == end, one element, it's already sorted, this is the base case.
-    // start > end, invalid case.
-}
-
-mergeSort(A, 0, A.size - 1)
+mergeSort(nums)
 ```
 
 > See the sameple at P.30 of CLRS.
