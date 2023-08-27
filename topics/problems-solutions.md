@@ -81,8 +81,6 @@
 |[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)|Medium|
 |[1094. Car Pooling](../leetcode/1094.car-pooling.md)|Medium|
 
-> * https://leetcode.com/problems/the-skyline-problem/ 5k h
-> * https://leetcode.com/problems/course-schedule-iii/ 3k h
 
 ### String
 | Problem          | Difficulty |
@@ -324,6 +322,8 @@
 > * https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/ 3k h
 > * https://leetcode.com/problems/minimum-number-of-refueling-stops/ 4k h
 > * https://leetcode.com/problems/ipo/ 2k h
+> * https://leetcode.com/problems/the-skyline-problem/ 5k h
+> * https://leetcode.com/problems/course-schedule-iii/ 3k h
 
 
 ## [Graph](../topics/graph.md)
@@ -436,7 +436,7 @@
 > * https://leetcode.com/problems/longest-string-chain/ 5k m
 > * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
 > * https://leetcode.com/problems/longest-string-chain/ 3k m
-> * https://leetcode.com/problems/maximum-length-of-pair-chain/ 2k m
+> * https://leetcode.com/problems/maximum-length-of-pair-chain/ 4k m
 
 ### Other
 > * https://leetcode.com/problems/delete-and-earn/ 5k m
