@@ -18,7 +18,6 @@ There are some common usages or applications of stack:
 ### ADT
 ```kotlin
 interface Stack<T> {
-    fun create(): Stack<T>
     // Push an item into the top of this stack.
     fun push(item: T)
     // Remove the item at the top and return that item.
@@ -42,8 +41,6 @@ data class Node<T>(
 class LinkedListStack<T>: Stack<T> {
 
     private var head: Node<T>? = null
-
-    override fun create(): Stack<T> = LinkedListStack()
 
     override fun push(item: T) {
         val newNode = Node(data = item, next = head)
@@ -93,18 +90,17 @@ class StaticArrayStack<T>(private val capacity: Int): Stack<T> {
 }
 
 class DynamicArrayStack<T>: Stack<T> {
-    // We skip the amorization and ensureCapacity() + grow() functions.
-    private val dynamicArray = arrayListOf<T>()
-    private var top = -1
+    private val dynamicArray = mutableListOf<T>()
 
     override fun push(item: T) {
         dynamicArray.add(item)
-        top++
     }
 
-    override fun pop(): T? = dynamicArray.getOrNull(top--)
-    override fun peek(): T? = dynamicArray.getOrNull(top)
-    override fun isEmpty(): Boolean = top == -1
+    override fun pop(): T? {
+        dynamicArray.removeAt(dynamicArray.size - 1)
+    }
+    override fun peek(): T? = dynamicArray.lastOrNull()
+    override fun isEmpty(): Boolean = dynamicArray.isEmpty()
 }
 ```
 
@@ -180,7 +176,7 @@ class LinkedListQueue<T>: Queue<T> {
             rear = newNode
         } else {
             rear?.next = newNode
-            rear = rear?.next
+            rear = newNode
         }
         size++
     }
@@ -229,30 +225,22 @@ class StaticArrayQueue<T>(private val capacity: Int) : Queue<T> {
 }
 
 class DynamicArrayQueue<T>: Queue<T> {
-    private val dynamicArray = arrayListOf<T>()
-    private var head = 0
-    private var rear = -1
-    private var size = 0
+    private val dynamicArray = mutableListOf<T>()
 
     override fun enqueue(item: T) {
         dynamicArray.add(item)
-        rear++
-        size++
     }
 
     override fun dequeue(): T? {
-        val value = dynamicArray.getOrNull(head++)
-        size--
-        return value
+        if (dynamicArray.isEmpty()) return null
+        return dynamicArray.removeAt(0)
     }
 
-    override fun peek(): T? = dynamicArray.getOrNull(head)
-    override fun rear(): T? = dynamicArray.getOrNull(rear)
-    override fun isEmpty(): Boolean = size == 0
+    override fun peek(): T? = dynamicArray.firstOrNull()
+    override fun rear(): T? = dynamicArray.lastOrNull()
+    override fun isEmpty(): Boolean = dynamicArray.isEmpty()
 }
 ```
-
-> TODO: Verify if it's still true.
 
 There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `head` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce [*Circular Queue*](../leetcode/622.design-circular-queue.md).
 
@@ -291,6 +279,7 @@ There is a drawback from the above implementation, our size is limited even if w
 
 * Stack and queue in Kotlin:
 ```kotlin
+// Stack
 val stack = Stack<Int>()
 stack.push(1)
 val item = stack.pop()
@@ -298,10 +287,18 @@ stack.peek()
 stack.size
 stack.isNotEmpty()
 
+// Queue
 val queue = ArrayDeque<Int>()
-val item = queue.removeFirst()
+queue.addFirst(1)
 queue.addLast(1)
+
+val firstValue = queue.removeFirst()
+val lastValue = queue.removeLast()
+
 queue.peek()
+queue.peekFirst()
+queue.peekLast()
+
 queue.size
 queue.isNotEmpty()
 ```
