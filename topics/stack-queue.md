@@ -269,6 +269,7 @@ There is a drawback from the above implementation, our size is limited even if w
         }
     }
     ```
+* The time complexity is `O(n)`, since every item will enter/exit the stack once. Even if there is a `while` loop inside the `for` loop, the time complexity is stil `O(n)` because at most you touch each each index a maximum of 2 times, not `n` times.
 * Usually, we will push index to stack rather than array value. And something, we need to push `0` or `-1` at the beginning and the end of array so that we can calculate the first / last item of array. (See [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md))
 * Classic problems:
     * [496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)

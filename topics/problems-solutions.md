@@ -109,13 +109,16 @@
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 |[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
+|[128. Longest Consecutive Sequence](../leetcode/128.longest-consecutive-sequence.md)|Medium|
 |[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
 |[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
+|[219. Contains Duplicate II](../leetcode/219.continas-duplicate-ii.md)|Easy|
 |[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
 |[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
 |[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
+|[1002. Find Common Characters](../leetcode/1002.find-common-characters.md)|Easy|
 |[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
 |[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
 
@@ -133,6 +136,7 @@
 
 > * https://leetcode.com/problems/continuous-subarray-sum/ 5k m
 > * https://leetcode.com/problems/subarray-sums-divisible-by-k/ 6k m
+> * https://leetcode.com/problems/minimum-penalty-for-a-shop m
 
 
 ## [Sorting](../topics/sorting.md)
@@ -206,6 +210,8 @@
 > * https://leetcode.com/problems/evaluate-reverse-polish-notation/ 4k m
 > * https://leetcode.com/problems/car-fleet/ 2k m
 > * TODO: try to understand the monotonic stack solution for this https://leetcode.com/problems/sum-of-subarray-ranges/ 2k m
+> * https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced m
+> * https://leetcode.com/problems/removing-stars-from-a-string/ m
 
 ## [Tree](../topics/tree.md)
 | Problem          | Difficulty |
@@ -555,6 +561,7 @@
 > * https://leetcode.com/problems/maximum-frequency-stack/ 4k h
 > * https://leetcode.com/problems/my-calendar-iii/ 2k h
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 7k m
+> * https://leetcode.com/problems/binary-search-tree-iterator 8k m
 
 > * https://leetcode.com/tag/design/ Listing
 
