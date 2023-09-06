@@ -70,15 +70,22 @@ fun mergeSort(nums: IntArray): IntArray {
 private fun merge(leftArray: IntArray, rightArray: IntArray): IntArray {
     var left = 0
     var right = 0
+    var k = 0
     val result = IntArray(leftArray.size + rightArray.size)
-    for (k in 0 until result.size) {
+    while (left < leftArray.size && right < rightArray.size) {
         if (leftArray[left] <= rightArray[right]) {
-            result[k] = leftArray[left]
+            result[k++] = leftArray[left]
             left++
         } else {
-            result[k] = rightArray[right]
+            result[k++] = rightArray[right]
             right++
         }
+    }
+    while (left < leftArray.size) {
+        result[k++] = leftArray[left++]
+    }
+    while (right < rightArray.size) {
+        result[k++] = rightArray[right++]
     }
     return result
 }
@@ -159,6 +166,40 @@ The partition generates a balanced two subarrays, that is `n/2` size, the recurr
 
 #### Average Case
 It takes `O(n log n)` on average if we can add randomization to pick the pivot in order to obtain good average case performance over all inputs. (See the comment of above code). For space complexity, it takes `O(lg n)` on average for recursive function call stack.
+
+## Tips for [problem solving](../topics/problems-solutions.md#sorting)
+* Sorting APIs of `IntArray` in Kotlin:
+```kotlin
+val nums = intArrayOf(1, 3, 2, 4, -1, 10)
+
+// Sort array in-placee
+nums.sort()
+// Sort array and return sorted list
+val sortedList: List<Int> = nums.sorted()
+val sortedListDescending: List<Int> = nums.sortedDescending()
+
+// Sort array and return int array
+val sortedArray: IntArray = nums.sortedArray()
+val sortedArrayDescending: IntArray = nums.sortedArrayDescending()
+
+// Sort array by something and return sorted list
+val sortedByList: List<Int> = nums.sortedBy { it }
+
+// Sort decreasingly
+Arrays.sort(nums) { it1, it2 -> it2 - it1 }
+```
+
+* Sortin APIs of `List` in Kotlin:
+```kotlin
+val list = mutableListOf(1, 3, 5, 2, 4, 6, 0, -1, -3, 10)
+// Sort list in-place
+list.sort()
+// Sort list by something in-place
+list.sortBy { it }
+val sortedList: List<Int> = list.sortedBy { it }
+// Sort mutablle list in-place
+Collections.sort(list)
+```
 
 ## Heap Sort
 See [Heap](../topics/heap.md) topic.

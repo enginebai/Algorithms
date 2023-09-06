@@ -77,7 +77,7 @@ fun heapifyDown(A, i: Int) {
 fun heapifyUp(A, i: Int) { 
     while (hasParent(i) && A[parentIndex(i)] < A[i]) {
         swap(parentIndex(i), i)
-        i = parentIndex(i)
+        heapifyUp(A, parentIndex(i))
     }
 }
 
@@ -96,7 +96,7 @@ The *priority queue* ADT keeps track of the order of items so that it's capable 
 ```kotlin
 interface PriorityQueue<T> {
     fun build(A)
-    fun peek(A): T
+    fun peek(A): T?
     fun poll(A): T?
     fun add(A, item: T)
     fun increasePriority(A, i: Int, newPriority: Int)
@@ -121,17 +121,17 @@ It takes `O(n)` for building a heap from an array. (this is tight analysis, `O(n
 
 ```kotlin
 // Just return the max, it takes O(1)
-fun peek(A): T? = A.getOrNull(1)
+fun peek(A): T? = A.getOrNull(0)
 
 // Return the max and delete from heap
 // Similar to delete(i) function
 fun poll(A): T? {
-    if (heapSize <= 1) return null
-    val max = A[1]
+    if (heapSize == 0) return null
+    val max = A[0]
     // We move the last item to the first
-    A[1] = A[heapSize - 1]
+    A[0] = A[heapSize - 1]
     heapSize--
-    heapifyDown(A, 1)
+    heapifyDown(A, 0)
     return max
 }
 
@@ -169,19 +169,19 @@ Different time complexity of different implementation of priority queue:
 ## Heap Sort
 Max heap property shows that the value of first item is the maximum, and other part is unordered, so if we would to sort in ascending order, there are our steps:
 
-1. Run `buildMaxHeap(A)` so that `A[1]` will be the largest item. (`[Largest item | Unordered items]`)
-2. Then swap `A[1]` with the last item of array. (`[Unordered items | Largest item]`)
+1. Run `buildMaxHeap(A)` so that `A[0]` will be the largest item. (`[Largest item | Unordered items]`)
+2. Then swap `A[0]` with the last item of array. (`[Unordered items | Largest item]`)
 3. "Discard" the largest item (now it moved to the last item), since it's sorted. (`[Unordered items]`)
 4. Keep heapify down from the first item of the array that just discards the largest item until all items are discarded.
 
 ```kotlin
 fun heapSort(A) {
     buildMaxHeap(A)
-    for (i in A.size downTo 2) {
-        swap(1, i)
+    for (i in A.size - 1 downTo 1) {
+        swap(0, i)
         // Discard the last item (the largest one)
         heapSize--
-        heapifyDown(A, 1)
+        heapifyDown(A, 0)
     }
 }
 ```
@@ -199,8 +199,8 @@ fun heapSort(A) {
 * For some problems to find the max/min value **dynamically** (after some operations, such adding some numbers then find the max number), then it might be able to use heap to solve. ([264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/))
 * Heap in Kotlin:
 ```kotlin
-val minHeap = PriorityQueue<Int>() { n1, n2 -> n1 - n1 })
-val maxHeap = PriorityQueue<Int>(Comparator<Int> { n1, n2 -> n2 - n1 })
+val minHeap = PriorityQueue<Int>() { n1, n2 -> n1 - n1 }
+val maxHeap = PriorityQueue<Int>() { n1, n2 -> n2 - n1 }
 // or
 val maxHeap = PriorityQueue<Int>() { n1, n2 -> 
     when {
@@ -216,7 +216,6 @@ maxHeap.peek()
 maxHeap.size
 maxHeap.isNotEmpty()
 ```
-* Sorting on array / collections: See [My Kotlin Note](https://docs.google.com/document/d/1JxZ40YPi_R5unTUeCbk2JErvJVHMWbev50IJfvlE2Ls/edit#heading=h.cgfoyq7qxhnz)
 
 ## Resources
 - CLRS

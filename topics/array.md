@@ -74,6 +74,12 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 * We can iterate array from left to right, also from *right to left*.
 * `O(n)` time complexity **doesn't** mean you can only iterate the array **once**. Iterate the array several times might help solve the problem, for example, pre-computation (iterate array at least one time first) using hashing might be useful.
 * For in-place operation or `O(1)` space complexity, use array (index) itself as a hash table. For example, the value of array ranges from 1 to `n`, where `n` is the size of array, then we can use the *index* to represent.
+* Array in Kotlin:
+```kotlin
+val array = IntArray(3) { 5 } // [5, 5, 5]
+array.sliceArray(1..5)   // subarray of A[1:5]
+array.sliceArray(3 until array.size) // subarray of A[3:]
+```
 
 ## Two Pointers Approach
 * Fast/slow (read/write) pointers: [283. Move Zeroes](../leetcode/283.move-zeros.md)
@@ -105,8 +111,6 @@ fun problemSolving(str: String) {
 
 The every character will enter and exit the window at most once, so the time complexity is `O(n)`.
 
-## Prefix Sum
-> TODO:
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
