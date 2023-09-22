@@ -192,6 +192,8 @@
 |[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)|Hard|
 |[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)|Easy|
 |[503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)|Medium|
+|[402. Remove K Digits](../leetcode/402.remove-k-digits.md)|Medium|
+|[316. Remove Duplicate Letters](../leetcode/316.remove-duplicate-letters.md)|Medium|
 |[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium|
 |[394. Decode String](../leetcode/394.decode-string.md)|Medium|
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
@@ -375,6 +377,7 @@
 > * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 2.4k m
 > * https://leetcode.com/problems/as-far-from-land-as-possible/ 3k m
 > * https://leetcode.com/problems/dungeon-game/ 5k h
+> * https://leetcode.com/problems/path-with-minimum-effort 5k m
 
 > Shortest Path: 
 > * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
@@ -443,7 +446,6 @@
 ### LIC
 > * https://leetcode.com/problems/longest-string-chain/ 5k m
 > * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
-> * https://leetcode.com/problems/longest-string-chain/ 3k m
 > * https://leetcode.com/problems/maximum-length-of-pair-chain/ 4k m
 
 ### Other
@@ -470,21 +472,18 @@
 |[45. Jump Game II](../leetcode/45.jump-game-ii.md)|Medium|
 |[334. Increasing Triplet Subsequence](../leetcode/334.increasing-triplet-subsequence.md)|Medium|
 |[763. Partition Labels](../leetcode/763.partition-labels.md)|Medium|
-
-> https://leetcode.com/problems/boats-to-save-people/ 3k m
+|[881. Boats to Save People](../leetcode/881.boats-to-save-people.md)|Medium|
+|[134. Gas Station](../leetcode/134.gas-station.md)|Medium|
+|[135. Candy](../leetcode/135.candy.md)|Hard|
+|[455. Assign Cookies](../leetcode/455.assign-cookies.md)|Easy|
 
 > * https://leetcode.com/problems/wildcard-matching/ 6k h
-> * https://leetcode.com/problems/gas-station/ 7k m
-> * https://leetcode.com/problems/candy/ 5k h
 > * https://leetcode.com/problems/remove-k-digits/ 7k m
 > * https://leetcode.com/problems/remove-duplicate-letters/ 6k m
 > * https://leetcode.com/problems/wiggle-subsequence/ 5k m
-> * https://leetcode.com/problems/assign-cookies/ 2k 
 > * https://leetcode.com/problems/queue-reconstruction-by-height/ 7k m
 > * https://leetcode.com/problems/reduce-array-size-to-the-half/ 3k m
-> * https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/ 3k m
 > * https://leetcode.com/problems/max-consecutive-ones/ 4k e
-> * https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/ 4k m
 > https://leetcode.com/problems/two-city-scheduling/ 4k m
 
 ## [Backtracking](../topics/backtracking.md)
@@ -557,6 +556,7 @@
 |[295. Find Median from Data Stream](../leetcode/295.find-median-from-data-stream.md)|Hard|
 |[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium|
 
+> * https://leetcode.com/problems/range-module/description/ 
 > * https://leetcode.com/problems/lfu-cache/ 4k h
 > * https://leetcode.com/problems/range-module/ 1k h
 > * https://leetcode.com/problems/random-pick-with-blacklist/ 1k h
@@ -583,22 +583,7 @@
 * Does the element present in the input? (`k` in the input range or present?)
 * How is the input stored?
 
-### Numbers
-* Null
-* 0
-* Negative number
-* Min / Max
-
-### Array
-* Is the array sorted?
-* Are there duplicates in the array?
-
 ### String
-* Null
-* Empty
-* Blank
-* Cases: Upper / Lower
-* What characters are possible?
 * What characters do `s` consist of? (What does `s` consist of?)
 * Duplicate characters
 
