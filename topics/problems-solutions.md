@@ -148,6 +148,39 @@
 |[75. Sort Colors](../leetcode/75.sort-colors.md)|Medium|
 |[148. Sort List](../leetcode/148.sort-list.md)|Medium|
 
+## [Binary Search](../topics/binary-search.md)
+| Problem          | Difficulty |
+|------------------|------------|
+|[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
+|[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
+|[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
+|[35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy|
+|[278. First Bad Version](../leetcode/278.first-bad-version.md)|Easy|
+|[287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)|Medium|
+|[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
+|[69. Sqrt(x)](../leetcode/69.sqrt(x).md)|Easy|
+|[540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium|
+|[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
+|[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
+|[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
+
+> Search + Sorting:
+> * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 3k e
+> * https://leetcode.com/problems/find-k-closest-elements/ 6k m
+> * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 5k m
+> * https://leetcode.com/problems/koko-eating-bananas/ 5k
+> * https://leetcode.com/problems/time-based-key-value-store/ 4k m
+> * https://leetcode.com/problems/find-peak-element/ 8k m (4k dislike)
+> * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 6k
+> * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 8k h
+> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
+> * https://leetcode.com/problems/count-of-range-sum/ 2k h
+> * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
+> * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 7k m
+> * https://leetcode.com/problems/sort-an-array/ 4k m
+> * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs m
+
 
 ## [Linked List](../topics/linked-list.md)
 | Problem          | Difficulty |
@@ -263,7 +296,6 @@
 > * https://leetcode.com/problems/add-one-row-to-tree/ 3k m
 > * https://leetcode.com/problems/n-ary-tree-level-order-traversal/ 3k m
 > * https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/ 1k h
-
 > * https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/ 5k m
 > * https://leetcode.com/problems/distribute-coins-in-binary-tree/ 5k m
 > * https://leetcode.com/problems/maximum-binary-tree/ 5k m
@@ -516,38 +548,6 @@
 > * https://leetcode.com/problems/sudoku-solver/ 6k h
 > * https://leetcode.com/problems/restore-ip-addresses/description/ 5k m
 
-## [Binary Search](../topics/binary-search.md)
-| Problem          | Difficulty |
-|------------------|------------|
-|[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
-|[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
-|[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
-|[35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy|
-|[278. First Bad Version](../leetcode/278.first-bad-version.md)|Easy|
-|[287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)|Medium|
-|[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
-|[69. Sqrt(x)](../leetcode/69.sqrt(x).md)|Easy|
-|[540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium|
-|[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
-|[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
-|[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
-
-> Search + Sorting:
-> * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 3k e
-> * https://leetcode.com/problems/find-k-closest-elements/ 6k m
-> * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 5k m
-> * https://leetcode.com/problems/koko-eating-bananas/ 5k
-> * https://leetcode.com/problems/time-based-key-value-store/ 4k m
-> * https://leetcode.com/problems/find-peak-element/ 8k m (4k dislike)
-> * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 6k
-> * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 8k h
-> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
-> * https://leetcode.com/problems/count-of-range-sum/ 2k h
-> * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
-> * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 7k m
-> * https://leetcode.com/problems/sort-an-array/ 4k m
-> * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs m
 
 ## Design
 | Problem          | Difficulty |
@@ -556,16 +556,29 @@
 |[295. Find Median from Data Stream](../leetcode/295.find-median-from-data-stream.md)|Hard|
 |[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium|
 
-> * https://leetcode.com/problems/range-module/description/ 
-> * https://leetcode.com/problems/lfu-cache/ 4k h
 > * https://leetcode.com/problems/range-module/ 1k h
+> * https://leetcode.com/problems/binary-search-tree-iterator 8k m
+> * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 7k m
+> * https://leetcode.com/problems/lfu-cache/ 4k h
+> * https://leetcode.com/problems/insert-delete-getrandom-o1/ 7k m
+> * https://leetcode.com/problems/my-calendar-i/description/ 4k m
+> * https://leetcode.com/problems/design-hashmap/description/ 4k m
+> * https://leetcode.com/problems/design-hashset/description/ 3k e
+> * https://leetcode.com/problems/maximum-frequency-stack/description/ 4k h
+> * https://leetcode.com/problems/time-based-key-value-store/description/ 4k m
+> * https://leetcode.com/problems/range-sum-query-mutable/description/ 4k m
+> * https://leetcode.com/problems/range-sum-query-2d-immutable/description/ 4k m
+> * https://leetcode.com/problems/design-twitter/description/ 3k m
 > * https://leetcode.com/problems/random-pick-with-blacklist/ 1k h
 > * https://leetcode.com/problems/maximum-frequency-stack/ 4k h
+> * https://leetcode.com/problems/snapshot-array/description/ 3k m
 > * https://leetcode.com/problems/my-calendar-iii/ 2k h
-> * https://leetcode.com/problems/insert-delete-getrandom-o1/ 7k m
-> * https://leetcode.com/problems/binary-search-tree-iterator 8k m
+> * https://leetcode.com/problems/peeking-iterator/description/ 2k m
+> * https://leetcode.com/problems/serialize-and-deserialize-bst/description/ 3k m
+> * https://leetcode.com/problems/my-calendar-ii/description/ 1k m
+> * https://leetcode.com/problems/design-parking-system/description/ 2k e
+> * https://leetcode.com/problems/smallest-number-in-infinite-set/description/ 1.5k m
 
-> * https://leetcode.com/tag/design/ Listing
 
 ## Clarification Questions
 ### General
