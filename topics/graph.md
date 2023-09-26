@@ -10,38 +10,53 @@ A graph `G = (V, E)`, consists of `V` (set of *vertices*) and `E` (*edges* of ve
 ![Graph](../media/graph.png)
 
 ## Representation
-We can represent a graph `G = (V, E)` in adjacency list or matrix.
-
 There are three criteria to determine the graph representation:
 1. Space complexity to store a graph.
-2. How long to determine whether a given edge exists in the graph.
-3. How long to find all the adjacent vertices (neighbors) of a given vertex.
+2. Time complexity to determine whether a given edge exists in the graph.
+3. Time complexity to find the adjacent vertices (neighbors) of a given vertex.
+
+We can represent a graph `G = (V, E)` in the following ways:
 
 ### Adjacency List
-We define a list that contains all the vertices such that there is an edge between the vertices.
-
-|      | Undirected                                                                                                 | Directed                                                                 |
-|------|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| List | 1 -> 2 -> 4 -> 5 -> 6<br>2 -> 1 -> 4<br>3 -> 4 -> 5 -> 6<br>4 -> 1 -> 2 -> 3<br>5 -> 1 -> 3<br>6 -> 1 -> 3 | 1 -> 2<br>2 -> null<br>3 -> 4<br>4 -> 2 -> 5<br>5 -> null<br>6 -> 1 -> 3 |
+In adjacency list, we use an array of linked lists (or array or list) to represent the graph, where each vertex is associated a list of its adjacent vertices by linked list.
 
 ```kotlin
-A1 = [
-    [2, 4, 5 ,6],
-    [1, 4],
-    ...
-]
- ```
+// 1 -> 2 -> 4 -> 5 -> 6
+val v1 = ListNode(1)
+...
+// 2 -> 1 -> 4
+val v2 = ListNode(2)
+...
+// Using array of linked list
+val adjacencyList = arrayOf(
+    v1,
+    v2,
+    v3
+)
 
-* The vertices in each adjacency list are typically stored in a arbitrary order.
-* For both undirected and directed graph, the amount of memory is `Θ(|V| + |E|)` space complexity. (`|V| + |E|` for directed, `|V| + 2 * |E|` for undirected)
-* It takes `Ω(|V|)` time to determine if an edge `(x, y)` is in the graph. (Loop for each vertices takes `O(1)` and `O(|V|)` for searching the adjacent vertices of the vertex `x`)
+// or using array of list
+// 0 - 1 or 0 -> 1
+val vertices = 10
+val graph = Array(vertices) { mutableListOf<Int>() }
+graph[0].add(1)
+graph[1].add(0) // for undirected graph
+
+graph[1].contains(2) // O(|V|)
+```
+
+* The adjacent vertices of each vertex in adjacency list are typically stored in an arbitrary order.
 * We prefer adjacency list when the graph are *sparse*.
 * We also can associate *weight* on the edge by storing the weight on the node of the adjacency list. (linked list node can attach extra properties)
+
+#### Complexity
+1. Space complexity to store a graph: `Θ(|V| + |E|)`. (`|V| + |E|` for directed, `|V| + 2 * |E|` for undirected)
+2. Time complexity to determine whether a given edge exists in the graph: `Ω(|V|)` time to determine if an edge `(x, y)` is in the graph. (Loop for each vertices takes `O(1)` and `O(|V|)` for searching the adjacent vertices of the vertex `x`)
+3. Time complexity to find the adjacent vertices (neighbors) of a given vertex: `O(1)`
 
 > |V| means the size of V.
 
 ### Adjacency Matrix
-We define a `|V| x |V|` matrix `A`such that `A(i, j) = 1` if there is an edge, `0` otherwise.
+We define a `|V| x |V|` matrix `A` such that `A[i][j] = 1` if there is an edge, `0` otherwise. (Or we can use boolean)
 
 ```
 Undirected          Directed
@@ -58,31 +73,51 @@ Undirected          Directed
 ```kotlin
 val directedGraph = arrayOf(
     intArrayOf(0, 1, 0, 1, 1),
-    intArrayOf(1, 0, 0, 1, 0),
+    intArrayOf(1, 0, 1, 1, 0),
     intArrayOf(0, 1, 1, 1, 0),
     intArrayOf(0, 0, 1, 0, 0),
     intArrayOf(1, 0, 0, 0, 1)
 )
+
+// Or we can use boolean array
+val undirectedGraph = arrayOf(
+    booleanArrayOf(false, true, false, true, true),
+    booleanArrayOf(true, false, false, true, false),
+    ...
+)
+
+// Or weighted graph
+val directedGraph = arrayOf(
+    intArrayOf(0, 8, 0, 0, 5),
+    intArrayOf(8, 0, 3, 1, 0),
+    intArrayOf(0, 3, 2, 7, 0),
+    intArrayOf(0, 0, 7, 0, 0),
+    intArrayOf(5, 0, 0, 0, 1)
+)
 ```
 
-* It requires `Θ(|V| ^ 2)` space complexity. (The undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix)
 * We prefer adjacency matrix when the graph are *dense*.
 * We can update the edge or check the existence of edge in constant time.
 * `A` is equal to the *transpose* of matrix `A` for undirected graph.
-* We also can define `A(i, j) = w` for weighted graph.
+* We also can define `A[i][j] = w` for weighted graph.
+
+#### Complexity
+1. Space complexity to store a graph: `Θ(|V| ^ 2)`, the undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix.
+2. Time complexity to determine whether a given edge exists in the graph: `O(1)`
+3. Time complexity to find the adjacent vertices (neighbors) of a given vertex: `O(1)`
 
 ### Hash Tables
-It takes `O(1)` to check edge existence and still takes `Θ(|V| + |E|)` space to store in hash table.
-
-```python
-S1 = {
-    1: {2, 4, 5, 6},
-    2: {1, 4}
-    ...
-}
+```kotlin
+val graph: HashMap<Int, HashSet<Int>() = hashMapOf(
+    1: setOf(2, 4, 5, 6),
+    2: setOf(1, 4),
+)
 ```
 
-> [Representation comparision](https://www.geeksforgeeks.org/comparison-between-adjacency-list-and-adjacency-matrix-representation-of-graph/)
+#### Complexity
+1. Space complexity to store a graph: `Θ(|V| + |E|)`
+2. Time complexity to determine whether a given edge exists in the graph: `O(1)`
+3. Time complexity to find the adjacent vertices (neighbors) of a given vertex: `O(1)`
 
 ## Breadth-first Search (BFS)
 Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s`. It visits all vertices at level `k` before visiting level `k + 1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.
@@ -116,7 +151,12 @@ fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
     while (!queue.isEmpty()) {
         val vertexToVisit = queue.dequeue()
 
-        // Queue all its non-visiting adjacent vertices.
+        // Visit the current vertex
+        vertexToVisit.visitState = VISITED
+
+        // TODO: Do something with the vertex
+
+        // Enque all its non-visiting adjacent vertices.
         val adjacentVertices = graph[vertexToVisit]
         adjacentVertices.forEach { v ->
             // This check makes sure that each vertex is visited at most once.
@@ -127,19 +167,12 @@ fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
                 queue.enqueue(v)
             }
         }
-
-        // Visit the current vertex
-        vertexToVisit.visitState = VISITED
     }
 }
 ```
 
-> The breadth-first tree may vary, depending upon the order of adjacent list visiting, but the distances of each visited vertex will not.
->
-> Take a look at the sample at P.533 of CLRS
-
 ### Time Complexity
-All vertices will be enqueued and dequeued at most once, it takes `O(|V|)` for all vertices. The adjacency list of each vertex is scanned only when the vertex is dequeued, it is scanned at most once, it takes `O(|E|)`, thus the total running time if `O(|V| + |E|)` (linear time).
+All vertices will be enqueued and dequeued at most once, it takes `O(|V|)` for all vertices. The adjacency list of each vertex is scanned only when the vertex is dequeued, it is scanned at most once, it takes `O(|E|)`, thus the total running time if `O(|V| + |E|)` (linear time, all vertices and edges are visited at most once).
 
 ## Depth-first Search (DFS)
 For graph, We will discover all vertices (fully depth-first search) and construct depth-first search tree (forest), we use the similar color scheme (to BFS) and provides some timestapms while searching. Each vertices has two timestampes: *discover* (first discovered, and grayed) and *finish* (finishing examining its adjaceny list and blacken)
@@ -182,6 +215,9 @@ fun dfsAllVertices(graph: Map<Node<T>, Set<Node<T>>) {
 private fun dfs(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>) {
     source.visitState = VISITED
     source.discoverTime = ++time
+
+    // TODO: Do something with the vertex
+
     val adjacentVertices = graph[source]
     adjacentVertices.forEach { node ->
         if (node.visitState == NOT_VISIT) {
@@ -198,9 +234,7 @@ private fun dfs(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>) {
 ```
 
 ### Time Complexity
-The `dfsAllVertices()` takes `O(|V|)` time for every vertices (not visited yet), and for `dfs()` is invoked only on the vertices not visited yet and it take `Θ(|E|)` for summary of all vertices. Therefore the running time of DFS is `Θ(|V| + |E|)`.
-
-> Take a look at the sameple at P.542 of CLRS.
+We visit each vertex once, which takes `O(|V|)`, and for each vertex, we visit all adjacent vertices once, which takes `O(|E|)`. We visit all vertices and edges once, therefore the running time of DFS is `Θ(|V| + |E|)`.
 
 ## Topological Sort
 A *topological sort* of a directed acyclic graph (DAG) is a *linear ordering* of all vertices such that `(x, y)` which `x` appears before `y` in the ordering.
@@ -230,20 +264,41 @@ It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to 
     * Disjoint graphs
     * Graph with cycle (might not be able to resolve recursively)
 * For some problems, we might start searching from the path of **invalid state** or from the entrance of the borders in the graph, rather than the valid state, it might help to reduce the time complexity.
+* Build the graph from edges array:
+```kotlin
+fun buildGraph(edges: Array<IntArray>): HashMap<Int, HashSet<Int>> {
+    val graph = hashMapOf<Int, HashSet<Int>>()
+    for (edge in edges) {
+        val (x, y) = edge
+        if (!graph.containsKey(x)) {
+            graph[x] = hashSetOf()
+        }
+        if (!graph.containsKey(y)) {
+            graph[y] = hashSetOf()
+        }
+        graph[x]!!.add(y)
+        graph[y]!!.add(x)
+    }
+    return graph
+}
+```
 * DFS Template for matrix:
 ```kotlin
+// 4 directions
 val directions = arrayOf(
     intArrayOf(-1, 0),  // up
     intArrayOf(1, 0),   // down
     intArrayOf(0, -1),  // left
     intArrayOf(0, 1)    // right
 )
+
 fun problemSolving(graph: Array<IntArray>) {
+    val visited = hashSetOf<Pair<Int, Int>>()
     for (m in 0 until graph.size) {
         for (n in 0 until graph[m].size) {
-            // Check some conditions
+            // Check some conditions or have not visited before 
             if (graph[m][n] = ...) {
-                dfs(graph, m, n)
+                dfs(graph, m, n, visited)
             }
         }
     }
@@ -251,14 +306,16 @@ fun problemSolving(graph: Array<IntArray>) {
 
 fun dfs(graph: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>) {
     // Skip the positions that are out of boundary or 
-    // have visited before or does not meet requirement.
+    // current (x, y) is not what we want or
+    // have visited before.
     if (x < 0 || x > graph.size - 1 ||
      y < 0 || y > graph[x].size ||
+     graph[x][y] = ... ||
       visited.contains(x to y) ||
        ...) return
 
-    // Do something
-
+    // TODO: Do something with the current position
+    
     visited.add(x to y)
 
     // Then dfs the adjacency vertices
@@ -283,10 +340,14 @@ fun bfs(graph: Array<IntArray>, source: Int) {
             
             // Skip the positions that are out of boundary or 
             // have visited before or does not meet requirement.
+            if (x < 0 || x > graph.size - 1 ||
+             y < 0 || y > graph[x].size ||
+              visited.contains(x to y) ||
+               ...) continue
 
             // Do something
 
-            visited.add(adj)
+            visited.add(node)
             graph[node].forEach { adj -> 
                 queue.addLast(adj)
             }

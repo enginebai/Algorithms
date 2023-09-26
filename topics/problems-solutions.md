@@ -44,6 +44,7 @@
 |[11. Container With Most Water](../leetcode/11.container-with-most-water.md)|Medium|
 |[26. Remove Duplicates from Sorted Array](../leetcode/26.remove-duplicates-from-sorted-array.md)|Easy|
 |[80. Remove Duplicates from Sorted Array II](../leetcode/80.remove-duplicates-from-sorted-array-ii.md)|Medium|
+|[905. Sort Array By Parity](../leetcode/905.sort-array-by-parity.md)|Easy|
 
 ### Sliding Windows
 | Problem          | Difficulty |
@@ -240,6 +241,7 @@
 |[921. Minimum Add to Make Parentheses Valid](../leetcode/921.minimum-add-to-make-parentheses-valid.md)|Medium|
 |[946. Validate Stack Sequences](../leetcode/946.validate-stack-sequences.md)|Medium|
 
+> * https://leetcode.com/problems/132-pattern/ 7k m
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
 > * https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/ 2k m
 > * https://leetcode.com/problems/evaluate-reverse-polish-notation/ 4k m
@@ -410,6 +412,11 @@
 > * https://leetcode.com/problems/as-far-from-land-as-possible/ 3k m
 > * https://leetcode.com/problems/dungeon-game/ 5k h
 > * https://leetcode.com/problems/path-with-minimum-effort 5k m
+> * https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/ 3k m
+> * https://leetcode.com/problems/number-of-increasing-paths-in-a-grid/ 2k h
+> * https://leetcode.com/problems/count-sub-islands 2k m
+> * https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/ 2k m
+> * https://leetcode.com/problems/detonate-the-maximum-bombs/description/ 3k m
 
 > Shortest Path: 
 > * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
@@ -595,6 +602,9 @@
 * Can we modify the input? (such as updating the references of node pointer in the linked list? or update the value of vertices in the graph?)
 * Does the element present in the input? (`k` in the input range or present?)
 * How is the input stored?
+* What's the time complexity requirement?
+* What's the space complexity requirement?
+
 
 ### String
 * What characters do `s` consist of? (What does `s` consist of?)
@@ -607,12 +617,16 @@
 * Empty
 * One node or two nodes
 
+
 ### Graph
-* What's the range of `m` and `n`?
-* What's the range of vertex value?
 * Directed or undirected?
 * Weighted or unweighted?
 * Cycle or acyclic?
-* Could vertices have negative values?
-* Could edge weights be negative?
+* What's the range of `m` and `n`?
+* What's the range of vertex value?
+    * Could vertices have negative values?
 * Do all vertices have distince values?
+* Could edge weights be negative?
+* Could there be multiple edges between two vertices?
+* Could there be self loops?
+* Could there be isolated vertices?
