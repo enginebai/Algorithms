@@ -166,21 +166,21 @@
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
 
 > Search + Sorting:
-> * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 3k e
-> * https://leetcode.com/problems/find-k-closest-elements/ 6k m
-> * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 5k m
-> * https://leetcode.com/problems/koko-eating-bananas/ 5k
-> * https://leetcode.com/problems/time-based-key-value-store/ 4k m
 > * https://leetcode.com/problems/find-peak-element/ 8k m (4k dislike)
-> * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 6k
+> * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
 > * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 8k h
-> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 17k
+> * https://leetcode.com/problems/find-k-closest-elements/ 8k m
+> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 26k
+
+> * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 3k e
+> * https://leetcode.com/problems/koko-eating-bananas/ 9k m
+> * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 6k
+> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 9k h
+> * https://leetcode.com/problems/russian-doll-envelopes/ 6k h
+> * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 9k m
+> * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs m 2k
+
 > * https://leetcode.com/problems/count-of-range-sum/ 2k h
-> * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
-> * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 7k m
-> * https://leetcode.com/problems/sort-an-array/ 4k m
-> * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs m
 
 
 ## [Linked List](../topics/linked-list.md)
@@ -579,6 +579,7 @@
 > * https://leetcode.com/problems/random-pick-with-blacklist/ 1k h
 > * https://leetcode.com/problems/maximum-frequency-stack/ 4k h
 > * https://leetcode.com/problems/snapshot-array/description/ 3k m
+> * https://leetcode.com/problems/design-underground-system/description/ 3k m
 > * https://leetcode.com/problems/my-calendar-iii/ 2k h
 > * https://leetcode.com/problems/peeking-iterator/description/ 2k m
 > * https://leetcode.com/problems/serialize-and-deserialize-bst/description/ 3k m
