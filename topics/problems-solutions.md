@@ -562,6 +562,7 @@
 |[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
 |[295. Find Median from Data Stream](../leetcode/295.find-median-from-data-stream.md)|Hard|
 |[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium|
+|[706. Design HashMap](../leetcode/706.design-hashmap.md)|Easy|
 
 > * https://leetcode.com/problems/range-module/ 1k h
 > * https://leetcode.com/problems/binary-search-tree-iterator 8k m
@@ -569,7 +570,6 @@
 > * https://leetcode.com/problems/lfu-cache/ 4k h
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 7k m
 > * https://leetcode.com/problems/my-calendar-i/description/ 4k m
-> * https://leetcode.com/problems/design-hashmap/description/ 4k m
 > * https://leetcode.com/problems/design-hashset/description/ 3k e
 > * https://leetcode.com/problems/maximum-frequency-stack/description/ 4k h
 > * https://leetcode.com/problems/time-based-key-value-store/description/ 4k m

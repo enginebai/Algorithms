@@ -1,4 +1,4 @@
-# Binary Search
+V# Binary Search
 There are some different ways to search: binary search, [binary search tree](../topics/tree.md#binary-search-tree), and [hash table](../topics/hash-table.md). In this topic, we will talk about *binary search*.
 
 ## Normal
