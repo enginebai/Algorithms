@@ -164,13 +164,12 @@
 |[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
+|[162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
 
 > Search + Sorting:
-> * https://leetcode.com/problems/find-peak-element/ 8k m (4k dislike)
 > * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
 > * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
 > * https://leetcode.com/problems/find-k-closest-elements/ 8k m
-> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 26k
 
 > * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 3k e
 > * https://leetcode.com/problems/koko-eating-bananas/ 9k m
@@ -180,6 +179,7 @@
 > * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 9k m
 > * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs m 2k
 
+> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 26k
 > * https://leetcode.com/problems/count-of-range-sum/ 2k h
 
 
