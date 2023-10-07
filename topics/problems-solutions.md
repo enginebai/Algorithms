@@ -45,6 +45,7 @@
 |[26. Remove Duplicates from Sorted Array](../leetcode/26.remove-duplicates-from-sorted-array.md)|Easy|
 |[80. Remove Duplicates from Sorted Array II](../leetcode/80.remove-duplicates-from-sorted-array-ii.md)|Medium|
 |[905. Sort Array By Parity](../leetcode/905.sort-array-by-parity.md)|Easy|
+|[658. Find K Closest Elements](../leetcode/658.find-k-closest-elements.md)|Medium|
 
 ### Sliding Windows
 | Problem          | Difficulty |
@@ -162,6 +163,7 @@
 |[69. Sqrt(x)](../leetcode/69.sqrt(x).md)|Easy|
 |[540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium|
 |[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
+|[240. Search a 2D Matrix II](../leetcode/240.search-a-2d-matrix-ii.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
 |[162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
@@ -169,7 +171,6 @@
 > Search + Sorting:
 > * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
 > * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
-> * https://leetcode.com/problems/find-k-closest-elements/ 8k m
 
 > * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 3k e
 > * https://leetcode.com/problems/koko-eating-bananas/ 9k m
