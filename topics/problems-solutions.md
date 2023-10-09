@@ -62,6 +62,7 @@
 |[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium|
 |[713. Subarray Product Less Than K](../leetcode/713.subarray-product-less-than-k.md)|Medium|
 |[1876. Substrings of Size Three with Distinct Characters](../leetcode/1876.substrings-of-size-three-with-distinct-characters.md)|Easy|
+|[2875. Minimum Size Subarray in Infinite Array](../leetcode/2875.minimum-size-subarray-in-infinite-array.md)|Medium|
 
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 4k hard
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
@@ -170,7 +171,6 @@
 
 > Search + Sorting:
 > * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
-> * https://leetcode.com/problems/search-a-2d-matrix-ii/ 9k m
 
 > * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 3k e
 > * https://leetcode.com/problems/koko-eating-bananas/ 9k m
@@ -482,6 +482,7 @@
 
 ### LCS
 > * https://leetcode.com/problems/distinct-subsequences/ 4k h
+> * https://leetcode.com/problems/max-dot-product-of-two-subsequences/ h
 
 ### LIC
 > * https://leetcode.com/problems/longest-string-chain/ 5k m
