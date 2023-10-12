@@ -84,6 +84,9 @@
 |[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)|Medium|
 |[1094. Car Pooling](../leetcode/1094.car-pooling.md)|Medium|
 
+> * https://leetcode.com/problems/number-of-flowers-in-full-bloom 
+> Problem listing: https://leetcode.com/discuss/study-guide/2166045/
+
 
 ### String
 | Problem          | Difficulty |
@@ -566,9 +569,9 @@
 |[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium|
 |[706. Design HashMap](../leetcode/706.design-hashmap.md)|Easy|
 |[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
+|[173. Binary Search Tree Iterator](../leetcode/173.binary-search-tree-iterator.md)|Medium|
 
 > * https://leetcode.com/problems/range-module/ 1k h
-> * https://leetcode.com/problems/binary-search-tree-iterator 8k m
 > * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 7k m
 > * https://leetcode.com/problems/lfu-cache/ 4k h
 > * https://leetcode.com/problems/insert-delete-getrandom-o1/ 7k m
@@ -592,44 +595,41 @@
 
 ## Clarification Questions
 ### General
-* **What's the possible range of XXX?** (the number of tree nodes, the array size, the array values) How big is the input size?
-* What's the range of values? (negative? positive?)
+#### Input
 * What's the input type? (integer, floating, strings...) and format?
+* What's the input size? (the array size, the number of tree nodes, etc.)
+* **What's the range of input value?** (negative or positive, the array value)
+* Can I assume that all the input are valid?
 * Is input sorted (ordered)? Will the input array be sorted?
 * Is there any duplicate?
-* How about repeating elements?
-* What if there are multiple answers?
-* What if there is no answer at all?
-* Does the order of the output result matters? Or how should I sort them?
-* Can I assume that all the input are valid?
-* Can we modify the input? (such as updating the references of node pointer in the linked list? or update the value of vertices in the graph?)
-* Does the element present in the input? (`k` in the input range or present?)
-* How is the input stored?
-* What's the time complexity requirement?
-* What's the space complexity requirement?
+* Can I modify the input?
+* Does the element present (`target` or `k`) in the input? If not, what should I return?
 
+#### Output
+* What is the expected format and type of output?
+* What if there is no answer at all?
+* What if there are multiple answers?
+* Does the order of the output result matters? Or how should I sort them?
+* What if the output is too large to return?
+
+#### Overall
+* Are there any time or space complexity requirements or constraints?
 
 ### String
-* What characters do `s` consist of? (What does `s` consist of?)
-* Duplicate characters
+* What does `s` consist of? (Lowercase, uppercase, digits, spaces, special characters, etc.)
+* Is there any duplicate character?
 
 ### Linked List
-* How big is the number of nodes in the linked list?
-* What's the range of node values?
-* Are there cycles in linked list or graph?
-* Empty
-* One node or two nodes
-
+* Is it a singly or doubly linked list?
+* Is there any cycle in the linked list?
 
 ### Graph
-* Directed or undirected?
-* Weighted or unweighted?
+* How is the graph represented? Adjacency matrix or adjacency list?
+* Is the graph weighted or unweighted?
+* Is the graph directed or undirected?
 * Cycle or acyclic?
-* What's the range of `m` and `n`?
-* What's the range of vertex value?
-    * Could vertices have negative values?
-* Do all vertices have distince values?
-* Could edge weights be negative?
+* Is the graph a directed acyclic graph (DAG)?
+* Is there any self loops?
 * Could there be multiple edges between two vertices?
-* Could there be self loops?
-* Could there be isolated vertices?
+* Could edge weights be negative?
+* Could the graph be disconnected?
