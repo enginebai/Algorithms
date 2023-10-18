@@ -125,6 +125,9 @@ class OpenAddress<T> {
 * We can use constant-size integer array as hash table which takes only `O(1)` space complexity. For example, we can define `IntArray(26)` for the problem which input is only lowercase letters.
 * We can use array itself as hash table and index as key, then mark the value to negative to indicate the key exists.
 
+> TODO: Sum of subarray --> Prefix sum
+> TODO: Use array itself as hash table, and index as key.
+
 * `HashSet` in Kotlin:
 ```kotlin
 val set = HashSet<Int>()

@@ -68,6 +68,7 @@
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
 > * https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/ 5k m
 > * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ 4k m
+> * https://leetcode.com/problems/longest-nice-subarray/description/
 
 > * https://leetcode.com/problems/word-subsets 3k m
 > * https://leetcode.com/problems/count-number-of-nice-subarrays/ 2k m
@@ -171,6 +172,7 @@
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
 |[162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
+|[1095. Find in Mountain Array](../leetcode/1095.find-in-mountain-array.md)|Hard|
 
 > Search + Sorting:
 > * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
@@ -237,6 +239,7 @@
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
 |[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy|
 |[622. Design Circular Queue](../leetcode/622.design-circular-queue.md)|Medium|
+|[2866. Beautiful Towers II](../leetcode/2866.beautiful-towers-ii.md)|Medium|
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
 |[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium|
@@ -245,6 +248,7 @@
 |[921. Minimum Add to Make Parentheses Valid](../leetcode/921.minimum-add-to-make-parentheses-valid.md)|Medium|
 |[946. Validate Stack Sequences](../leetcode/946.validate-stack-sequences.md)|Medium|
 
+> * Revisit https://leetcode.com/problems/beautiful-towers-ii/
 > * https://leetcode.com/problems/132-pattern/ 7k m
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
 > * https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/ 2k m
