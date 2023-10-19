@@ -411,6 +411,8 @@
 |[980. Unique Paths III](../leetcode/980.unique-paths-iii.md)|Hard|
 
 > https://leetcode.com/problems/most-stones-removed-with-same-row-or-column
+> 
+> * Topological sort: https://leetcode.com/problems/parallel-courses-iii/
 
 > * https://leetcode.com/problems/word-ladder-ii/ 5k h
 > * https://leetcode.com/problems/clone-graph/ 7k m
@@ -574,11 +576,11 @@
 |[706. Design HashMap](../leetcode/706.design-hashmap.md)|Easy|
 |[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
 |[173. Binary Search Tree Iterator](../leetcode/173.binary-search-tree-iterator.md)|Medium|
+|[380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)|Medium|
 
 > * https://leetcode.com/problems/range-module/ 1k h
 > * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 7k m
 > * https://leetcode.com/problems/lfu-cache/ 4k h
-> * https://leetcode.com/problems/insert-delete-getrandom-o1/ 7k m
 > * https://leetcode.com/problems/my-calendar-i/description/ 4k m
 > * https://leetcode.com/problems/maximum-frequency-stack/description/ 4k h
 > * https://leetcode.com/problems/time-based-key-value-store/description/ 4k m
