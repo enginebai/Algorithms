@@ -63,7 +63,7 @@ fun dfs(candidates: IntArray, startIndex: Int, target: Int, combination: Mutable
 ### Time Complexity
 一般取決於上圖的橫軸 (橫向的迭代、樹的寬度、選擇的數量) 和縱軸 (垂直的遞迴、樹的高度) 相乘決定。
 
-## Tips for [Problem Solving](../problems/problems-solutions.md#backtracking)
+## Tips for [Problem Solving](../topics/leetcode-solutions.md#backtracking)
 不論是排列 (Combination)、組合 (Permutation)、子集合 (Subset) 問題，大多是給定一個整數陣列 `nums` 然後取若干的元素組成路徑，主要有幾種變形：
 
 1. `nums` 元素都唯一，每個元素只能被使用一次。

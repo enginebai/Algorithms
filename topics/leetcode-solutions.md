@@ -577,6 +577,9 @@
 |[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
 |[173. Binary Search Tree Iterator](../leetcode/173.binary-search-tree-iterator.md)|Medium|
 |[380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)|Medium|
+|[341. Flatten Nested List Iterator]()|Medium|
+
+> * https://leetcode.com/problems/flatten-nested-list-iterator/
 
 > * https://leetcode.com/problems/range-module/ 1k h
 > * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 7k m
@@ -605,9 +608,9 @@
 * What's the input type? (integer, floating, strings...) and format?
 * What's the input size? (the array size, the number of tree nodes, etc.)
 * **What's the range of input value?** (negative or positive, the array value)
-* Can I assume that all the input are valid?
 * Is input sorted (ordered)? Will the input array be sorted?
 * Is there any duplicate?
+* Can I assume that all the input are valid?
 * Can I modify the input?
 * Does the element present (`target` or `k`) in the input? If not, what should I return?
 

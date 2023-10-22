@@ -256,7 +256,7 @@ In another way, you can run DFS first and sort the vertices by finish time desce
 ### Time Complexity
 It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to insert first of linked list.
 
-## Tips for [Problem Solving](../problems/problems-solutions.md#graph)
+## Tips for [Problem Solving](../topics/leetcode-solutions.md#graph)
 * Track the visited nodes correctly, unless it will end up with an infinite loop.
 * Corner cases:
     * Empty graph

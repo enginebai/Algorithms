@@ -611,7 +611,7 @@ fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
 * **Time Complexity**: `O(m * n)`, for `m`, `n` is the length of `A` and `B`.
 * **Space Complexity**: `O(m * n)` for dp 2D table.
 
-## Tips for [Problem Solving](../problems/problems-solutions.md#dynamic-programming)
+## Tips for [Problem Solving](../topics/leetcode-solutions.md#dynamic-programming)
 
 ### When to use DP? 
 The problem meets the both two characteristics:

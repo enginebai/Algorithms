@@ -1,14 +1,15 @@
 Data Structures & Algorithms
 ========
 
-This project are curated resources and notes of basic/fundamental/popular data strcutures and algorithms for software engineer to study, there are also some classic problems/solutions for each topics to practice after studying. You can study and practice by topics, enjoy this learning journey!!
+This project offers a curated collection of notes and resources covering fundamental and widely used data structures and algorithms. It is designed to help software engineers to prepare for coding interviews and learn more about computer science. For each topic, we provide a set of LeetCode problems and their solutions to practice after studying. You can follow the study path from beginner to intermediate level from the roadmap below, making your learning journey both structured and enjoyable. Happy coding!!
 
-> This project is working in progress and might contains my personal study progress. Feel free to fork (contribution is not available for now), remove them and keep the curated resources and notes as your study resource. Happy studying :) 💪 
-
-## Topics
+## Study Topics
 - [Introduction](./topics/introduction.md)
 - [Complexity](./topics/complexity.md)
 - [Array & String](./topics/array.md)
+- [Hash Table](./topics/hash-table.md)
+- [Sorting](./topics/sorting.md)
+- [Binary Search](./topics/binary-search.md)
 - [Linked List](./topics/linked-list.md)
 - [Stack & Queue](./topics/stack-queue.md)
 - [Tree](./topics/tree.md)
@@ -19,14 +20,13 @@ This project are curated resources and notes of basic/fundamental/popular data s
 - [Dynamic Programming](./topics/dynamic-programming.md)
 - [Greedy](./topics/greedy.md)
 - [Backtracking](./topics/backtracking.md)
-- [Hash Table](./topics/hash-table.md)
-- [Binary Search](./topics/binary-search.md)
-- [Sorting](./topics/sorting.md)
-- (TODO) [Other](./topics/other.md)
-- 👉 [Problems & Solutions](./topics/problems-solutions.md)
+
+## Problems & Solutions
+- [LeetCode Solutions](./topics/leetcode-solutions.md)
+- [Problem Solving Techniques](./topics/problem-solving.md)
 
 ## Roadmap
-This is the recommended study path that you can follow from beginner level to intermediate level that the topics we cover in this project. Some topics are required to master prior to other topic, for example, we must master "graph" before studying "shortest path".
+This study path designed to guide you from a beginner to an intermediate level, covering the essential topics in this project. It's important to note that certain topics are prerequisites for others. For example, you should master "graph" before studying "shortest path".
 
 ![Roadmap](./media/roadmap.png)
 

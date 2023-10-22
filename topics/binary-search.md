@@ -103,7 +103,7 @@ Another example, when target is `6`, we should move `left` to `middle + 1`, whic
 
 **Idea!!** When you got stuck, think about the case of only 2 elements left, will your implementation be correct? (Shrink the boundary, exit the while loop)
 
-## Tips for [Problem Solving](../topics/problems-solutions.md#binary-search)
+## Tips for [Problem Solving](../topics/leetcode-solutions.md#binary-search)
 * There are some key characteristics that indicates binary search might be a suitable approach:
     1. Target value: Search for a specific value, peak or extremum.
     1. Monotonicity: The elements have some order or trend.

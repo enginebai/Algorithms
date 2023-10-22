@@ -190,7 +190,7 @@ fun heapSort(A) {
 
 * **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
 
-## Tips for [Problem Solving](../problems/problems-solutions.md#heap)
+## Tips for [Problem Solving](../topics/leetcode-solutions.md#heap)
 * Heap is good at find the top/smallest K of xxx or median. (or using binary search if there is sorted list) We also can use **Quickselect** to find *k*th smallest item in an unordered list. (See problem [215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md))
 * For top k problems, you can use:
     * Build max heap from all items, and pop `k - 1` times, and the peek will be the top K result.

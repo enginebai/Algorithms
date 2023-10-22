@@ -410,7 +410,7 @@ fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
 
 The deletion of BST, we can take a look at problem [450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md).
 
-## Tips for [Problem Solving](../topics/problems-solutions.md#tree)
+## Tips for [Problem Solving](../topics/leetcode-solutions.md#tree)
 * [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree)
 * Corner cases:
     * Empty tree (`node == null`)
