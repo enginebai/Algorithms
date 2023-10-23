@@ -577,7 +577,7 @@
 |[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
 |[173. Binary Search Tree Iterator](../leetcode/173.binary-search-tree-iterator.md)|Medium|
 |[380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)|Medium|
-|[341. Flatten Nested List Iterator]()|Medium|
+|[341. Flatten Nested List Iterator](../leetcode/341.flatten-nested-list-iterator.md)|Medium|
 
 > * https://leetcode.com/problems/flatten-nested-list-iterator/
 
