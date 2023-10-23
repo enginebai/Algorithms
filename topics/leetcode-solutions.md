@@ -265,6 +265,7 @@
 |[102. Binary Tree Level Order Traversal](../leetcode/102.binary-tree-level-order-traversal.md)|Medium|
 |[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
 |[104. Maximum Depth of Binary Tree](../leetcode/104.maximum-depth-of-binary-tree.md)|Easy|
+|[111. Minimum Depth of Binary Tree](../leetcode/111.minimum-depth-of-binary-tree.md)|Easy|
 |[226. Invert Binary Tree](../leetcode/226.invert-binary-tree.md)|Easy|
 |[101. Symmetric Tree](../leetcode/101.symmetric-tree.md)|Easy|
 |[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
@@ -294,35 +295,34 @@
 
 > https://leetcode.com/problems/count-complete-tree-nodes
 
-> * https://leetcode.com/problems/binary-tree-pruning 4k m
-> * https://leetcode.com/problems/delete-nodes-and-return-forest/ 3k m
-> * https://leetcode.com/problems/n-ary-tree-preorder-traversal/ 3k e
-> * https://leetcode.com/problems/cousins-in-binary-tree/ 4k e
-> * https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/ 1k m
-> * https://leetcode.com/problems/deepest-leaves-sum/ 4k m
-> * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/ 4k m
-> * https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/ 3k m
-> * https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
-> * https://leetcode.com/problems/add-one-row-to-tree/ 3k m
-> * https://leetcode.com/problems/n-ary-tree-level-order-traversal/ 3k m
-> * https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/ 1k h
+> * https://leetcode.com/problems/minimum-depth-of-binary-tree/ 7k e
+> * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 7k m
+> * https://leetcode.com/problems/find-duplicate-subtrees 6k m
 > * https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/ 5k m
 > * https://leetcode.com/problems/distribute-coins-in-binary-tree/ 5k m
 > * https://leetcode.com/problems/maximum-binary-tree/ 5k m
 > * https://leetcode.com/problems/average-of-levels-in-binary-tree/ 5k e
 > * https://leetcode.com/problems/all-possible-full-binary-trees/ 5k m
-> * https://leetcode.com/problems/minimum-depth-of-binary-tree/ 7k e
-> * https://leetcode.com/problems/sum-of-distances-in-tree/ 5k h
-> * https://leetcode.com/problems/increasing-order-search-tree/ 4k e
-> * https://leetcode.com/problems/maximum-depth-of-n-ary-tree/ 3k e
-> * https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/ 1k m
-> * https://leetcode.com/problems/binary-tree-cameras/ 5k h
-> * https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers 3k e
-> * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 7k m
-> * https://leetcode.com/problems/find-duplicate-subtrees 6k m
-> * https://leetcode.com/problems/check-completeness-of-a-binary-tree/ 4k
-> * https://leetcode.com/problems/reverse-odd-levels-of-binary-tree m
+> * https://leetcode.com/problems/binary-tree-pruning 4k m
+> * https://leetcode.com/problems/cousins-in-binary-tree/ 4k e
+> * https://leetcode.com/problems/deepest-leaves-sum/ 4k m
+> * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/ 4k m
+> * https://leetcode.com/problems/check-completeness-of-a-binary-tree/ 4k m
+> * https://leetcode.com/problems/delete-nodes-and-return-forest/ 3k m
 > * https://leetcode.com/problems/longest-univalue-path m 4k
+> * https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers 3k e
+> * https://leetcode.com/problems/n-ary-tree-preorder-traversal/ 3k e
+> * https://leetcode.com/problems/n-ary-tree-level-order-traversal/ 3k m
+> * https://leetcode.com/problems/add-one-row-to-tree/ 3k m
+> * https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
+> * https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/ 3k m
+> * https://leetcode.com/problems/sum-of-distances-in-tree/ 5k h
+> * https://leetcode.com/problems/binary-tree-cameras/ 5k h
+> * https://leetcode.com/problems/maximum-depth-of-n-ary-tree/ 3k e
+> * https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/ 1k m
+> * https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/ 1k h
+> * https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/ 1k m
+> * https://leetcode.com/problems/reverse-odd-levels-of-binary-tree m
 
 ## [Binary Search Tree](../topics/tree.md#binary-search-tree)
 | Problem          | Difficulty |
