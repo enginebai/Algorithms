@@ -314,7 +314,7 @@
 > * https://leetcode.com/problems/n-ary-tree-preorder-traversal/ 3k e
 > * https://leetcode.com/problems/n-ary-tree-level-order-traversal/ 3k m
 > * https://leetcode.com/problems/add-one-row-to-tree/ 3k m
-> * https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
+> * [O] https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
 > * https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/ 3k m
 > * https://leetcode.com/problems/sum-of-distances-in-tree/ 5k h
 > * https://leetcode.com/problems/binary-tree-cameras/ 5k h
@@ -527,7 +527,6 @@
 |[135. Candy](../leetcode/135.candy.md)|Hard|
 |[455. Assign Cookies](../leetcode/455.assign-cookies.md)|Easy|
 
-> * https://leetcode.com/problems/wildcard-matching/ 6k h
 > * https://leetcode.com/problems/remove-k-digits/ 7k m
 > * https://leetcode.com/problems/remove-duplicate-letters/ 6k m
 > * https://leetcode.com/problems/wiggle-subsequence/ 5k m
@@ -535,6 +534,7 @@
 > * https://leetcode.com/problems/reduce-array-size-to-the-half/ 3k m
 > * https://leetcode.com/problems/max-consecutive-ones/ 4k e
 > https://leetcode.com/problems/two-city-scheduling/ 4k m
+> * https://leetcode.com/problems/wildcard-matching/ 6k h
 
 ## [Backtracking](../topics/backtracking.md)
 | Problem          | Difficulty |
@@ -578,35 +578,31 @@
 |[173. Binary Search Tree Iterator](../leetcode/173.binary-search-tree-iterator.md)|Medium|
 |[380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)|Medium|
 |[341. Flatten Nested List Iterator](../leetcode/341.flatten-nested-list-iterator.md)|Medium|
+|[729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium|
 
-> * https://leetcode.com/problems/flatten-nested-list-iterator/
-
-> * https://leetcode.com/problems/range-module/ 1k h
-> * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 7k m
-> * https://leetcode.com/problems/lfu-cache/ 4k h
-> * https://leetcode.com/problems/my-calendar-i/description/ 4k m
-> * https://leetcode.com/problems/maximum-frequency-stack/description/ 4k h
 > * https://leetcode.com/problems/time-based-key-value-store/description/ 4k m
 > * https://leetcode.com/problems/range-sum-query-mutable/description/ 4k m
 > * https://leetcode.com/problems/range-sum-query-2d-immutable/description/ 4k m
 > * https://leetcode.com/problems/design-twitter/description/ 3k m
-> * https://leetcode.com/problems/random-pick-with-blacklist/ 1k h
-> * https://leetcode.com/problems/maximum-frequency-stack/ 4k h
 > * https://leetcode.com/problems/snapshot-array/description/ 3k m
-> * https://leetcode.com/problems/design-underground-system/description/ 3k m
-> * https://leetcode.com/problems/my-calendar-iii/ 2k h
-> * https://leetcode.com/problems/peeking-iterator/description/ 2k m
 > * https://leetcode.com/problems/serialize-and-deserialize-bst/description/ 3k m
-> * https://leetcode.com/problems/my-calendar-ii/description/ 1k m
+> * https://leetcode.com/problems/design-underground-system/description/ 3k m
+> * https://leetcode.com/problems/peeking-iterator/description/ 2k m
 > * https://leetcode.com/problems/design-parking-system/description/ 2k e
 > * https://leetcode.com/problems/smallest-number-in-infinite-set/description/ 1.5k m
+
+> * https://leetcode.com/problems/lfu-cache/ 4k h
+> * https://leetcode.com/problems/maximum-frequency-stack/ 4k h
+> * https://leetcode.com/problems/random-pick-with-blacklist/ 1k h
+> * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 7k m
+> * https://leetcode.com/problems/range-module/ 1k h
 
 
 ## Clarification Questions
 ### General
 #### Input
 * What's the input type? (integer, floating, strings...) and format?
-* What's the input size? (the array size, the number of tree nodes, etc.)
+* What's the range of input size? (the array size, the number of tree nodes, etc.)
 * **What's the range of input value?** (negative or positive, the array value)
 * Is input sorted (ordered)? Will the input array be sorted?
 * Is there any duplicate?

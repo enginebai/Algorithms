@@ -24,7 +24,13 @@
         * [Two Pointers]()
         * [Greedy]()
 * Can we use two pointers to solve the problem?
-
+* Subarray / substring?
+    * [Sliding Windows]()
+    * [Dynamic Programming]()
+    * [Prefix Sum]()
+* Palindromic substring / subsequence?
+    * [Dynamic Programming]()
+    * [Expand Around Center]()
 
 ### Two Pointers Technique
 * Left / right pointers
@@ -32,6 +38,7 @@
 * Fast / slow pointers
 
 ### Sliding Windows Technique
+* Subarray / substring
 * Window: valid value range
 
 
@@ -42,4 +49,14 @@
 
 ## Linked List
 ## Tree
+* Insertion
+* Deletion
+* Traversal
+    * Pre-order
+    * In-order
+    * Post-order
+    * Level-order
 ## Graph
+* DFS
+* BFS
+* Topological Sort
