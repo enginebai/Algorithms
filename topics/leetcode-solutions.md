@@ -21,14 +21,13 @@
 |[989. Add to Array-Form of Integer](../leetcode/989.add-to-array-form-of-integer.md)|Easy|
 
 > * https://leetcode.com/problems/number-of-matching-subsequences/ 5k m
-> * https://leetcode.com/problems/backspace-string-compare/ 5k e
-> * https://leetcode.com/problems/valid-palindrome-ii/ 6k e
+> * https://leetcode.com/problems/valid-palindrome-ii/ 8k e
+>
 > * https://leetcode.com/problems/burst-balloons/ 7k h
-> * https://leetcode.com/problems/reverse-pairs/ 4k h
+> * https://leetcode.com/problems/reverse-pairs/ 6k h
 > * https://leetcode.com/problems/couples-holding-hands/ 2k h
 > * https://leetcode.com/problems/swim-in-rising-water/ 3k h 
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
-> * https://leetcode.com/problems/contains-duplicate-iii/ 8k h
 > * https://leetcode.com/problems/maximum-performance-of-a-team/ 3k h
 > * https://leetcode.com/problems/minimize-deviation-in-array/ 2k h
 
@@ -64,17 +63,17 @@
 |[1876. Substrings of Size Three with Distinct Characters](../leetcode/1876.substrings-of-size-three-with-distinct-characters.md)|Easy|
 |[2875. Minimum Size Subarray in Infinite Array](../leetcode/2875.minimum-size-subarray-in-infinite-array.md)|Medium|
 
-> * https://leetcode.com/problems/subarrays-with-k-different-integers/ 4k hard
-> * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 3k h
-> * https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/ 5k m
-> * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ 4k m
-> * https://leetcode.com/problems/longest-nice-subarray/description/
-
+> * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ 5k m
+> * https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/ 6k m
+> * https://leetcode.com/problems/fruit-into-baskets/ 4k m
+> * https://leetcode.com/problems/count-number-of-nice-subarrays/ 4k m
+> * https://leetcode.com/problems/binary-subarrays-with-sum/ 3k m
+> * https://leetcode.com/problems/longest-nice-subarray/description/ 1k m
 > * https://leetcode.com/problems/word-subsets 3k m
-> * https://leetcode.com/problems/count-number-of-nice-subarrays/ 2k m
-> * https://leetcode.com/problems/binary-subarrays-with-sum/ 2k m
-> * https://leetcode.com/problems/fruit-into-baskets/ 2k m
-> * https://leetcode.com/problems/binary-subarrays-with-sum/ 1.5k m
+
+> * https://leetcode.com/problems/subarrays-with-k-different-integers/ 4k h
+> * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 4k h
+
 
 ### Intervals
 | Problem          | Difficulty |
@@ -85,8 +84,14 @@
 |[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)|Medium|
 |[1094. Car Pooling](../leetcode/1094.car-pooling.md)|Medium|
 
-> * https://leetcode.com/problems/number-of-flowers-in-full-bloom 
 > Problem listing: https://leetcode.com/discuss/study-guide/2166045/
+> * https://leetcode.com/problems/number-of-flowers-in-full-bloom 
+> * https://leetcode.com/problems/non-overlapping-intervals/description/ 8k m
+> * https://leetcode.com/problems/maximum-length-of-pair-chain/description/ 5k m
+> * https://leetcode.com/problems/maximum-population-year/description/ 1k e
+> * https://leetcode.com/problems/points-that-intersect-with-cars/description/
+> * https://leetcode.com/problems/my-calendar-ii/description/ 2k m
+> * https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/description/ e
 
 
 ### String
@@ -596,45 +601,3 @@
 > * https://leetcode.com/problems/random-pick-with-blacklist/ 1k h
 > * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 7k m
 > * https://leetcode.com/problems/range-module/ 1k h
-
-
-## Clarification Questions
-### General
-#### Input
-* What's the input type? (integer, floating, strings...) and format?
-* What's the range of input size? (the array size, the number of tree nodes, etc.)
-* **What's the range of input value?** (negative or positive, the array value)
-* Is input sorted (ordered)? Will the input array be sorted?
-* Is there any duplicate?
-* Can I assume that all the input are valid?
-* Can I modify the input?
-* Does the element present (`target` or `k`) in the input? If not, what should I return?
-
-#### Output
-* What is the expected format and type of output?
-* What if there is no answer at all?
-* What if there are multiple answers?
-* Does the order of the output result matters? Or how should I sort them?
-* What if the output is too large to return?
-
-#### Overall
-* Are there any time or space complexity requirements or constraints?
-
-### String
-* What does `s` consist of? (Lowercase, uppercase, digits, spaces, special characters, etc.)
-* Is there any duplicate character?
-
-### Linked List
-* Is it a singly or doubly linked list?
-* Is there any cycle in the linked list?
-
-### Graph
-* How is the graph represented? Adjacency matrix or adjacency list?
-* Is the graph weighted or unweighted?
-* Is the graph directed or undirected?
-* Cycle or acyclic?
-* Is the graph a directed acyclic graph (DAG)?
-* Is there any self loops?
-* Could there be multiple edges between two vertices?
-* Could edge weights be negative?
-* Could the graph be disconnected?
