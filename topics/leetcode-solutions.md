@@ -175,9 +175,9 @@
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
 |[162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
 |[1095. Find in Mountain Array](../leetcode/1095.find-in-mountain-array.md)|Hard|
+|[875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)|Medium|
 
 > * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
-> * https://leetcode.com/problems/koko-eating-bananas/ 9k m
 > * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 9k m
 > * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 6k
 > * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 5k e
