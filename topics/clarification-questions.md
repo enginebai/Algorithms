@@ -11,10 +11,10 @@
 * Does the element present (`target` or `k`) in the input? If not, what should I return?
 
 ### Output
-* What is the expected format and type of output?
-* What if there is no answer at all?
+* What is the return type?
 * What if there are multiple answers?
 * Does the order of the output result matters? Or how should I sort them?
+* What if there is no answer at all?
 * What if the output is too large to return?
 
 ### Overall

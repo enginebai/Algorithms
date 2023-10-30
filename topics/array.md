@@ -82,8 +82,8 @@ array.sliceArray(3 until array.size) // subarray of A[3:]
 ```
 
 ## Two Pointers Approach
-* Fast/slow (read/write) pointers: [283. Move Zeroes](../leetcode/283.move-zeros.md)
-* Left/right pointers: [977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)
+* Fast/slow (read/write) pointers: 
+* Left/right pointers: 
 
 ## Sliding Window Approach
 
