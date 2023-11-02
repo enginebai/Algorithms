@@ -575,8 +575,8 @@
 |[380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)|Medium|
 |[341. Flatten Nested List Iterator](../leetcode/341.flatten-nested-list-iterator.md)|Medium|
 |[729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium|
+|[981. Time Based Key-Value Store](../leetcode/981.time-based-key-value-store.md)|Medium|
 
-> * https://leetcode.com/problems/time-based-key-value-store/description/ 4k m
 > * https://leetcode.com/problems/range-sum-query-mutable/description/ 4k m
 > * https://leetcode.com/problems/range-sum-query-2d-immutable/description/ 4k m
 > * https://leetcode.com/problems/design-twitter/description/ 3k m
