@@ -34,13 +34,13 @@
     * [Dynamic Programming]()
     * [Expand Around Center]()
 
-### Two Pointers
-#### Characteristics
+## Two Pointers
+### Characteristics
 * (Sorted) Sequential data, window or subarray
 * Partitioning: `[even | odd]`, `[negative | positive]`...etc.
 * Intersection or merge
 
-#### Approaches
+### Approaches
 * Left / right pointers
 ```js
 [X, X, X, X, X, X]  
@@ -50,18 +50,27 @@
 * Read / write pointers: Read every element and write when condition is met. (only take the element met the requirement)
 * Fast / slow pointers: Cycle detection
 
-### Sliding Windows
-#### Characteristics
+## Sliding Windows
+### Characteristics
 * Subarray / substring
 * Window: valid value range
 
-#### Patterns
+### Approaches
 
 
 ## Sorting
 ## Binary Search
+### Characteristics
+* Monotonicity: The elements have some order or trend, such as sorted or `[X, X, X, O, O, O, O, O]` or choose larger the result become smaller and vice versa. 
+* Decision-making or comparison or whether meet some condition, then search space reduction.
+* Bounded search space.
+* Target or Feasibility: Search for a specific value, peak or extremum.
+
+> The answer is unique, and there's always another variable that changes monotonically according to the change of the answer, and we can depend on this variable to decide on which side of the search we go next step. Without the monotonicity and uniqueness, binary search is not applicable.
+
+#### Approaches
 * Search on index
-* Search on value
+* Search on value: define the search space.
 
 ## Hash Table
 ## Interval
