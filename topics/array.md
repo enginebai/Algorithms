@@ -80,29 +80,6 @@ array.sliceArray(3 until array.size) // subarray of A[3:]
 ```
 
 ## Sliding Window Approach
-
-```kotlin
-fun problemSolving(str: String) {
-    var start = 0
-    var end = 0
-    while (end < str.length) {
-        val character = str[end]
-        // Expand the window
-        end++
-
-        // Update some information of windows
-
-        while (window needs shrink) {
-            val d = s[start]
-            // Shrink window
-            start++
-
-            // Update some information of windows
-        }
-    }
-}
-```
-
 The every character will enter and exit the window at most once, so the time complexity is `O(n)`.
 
 

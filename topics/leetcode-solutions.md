@@ -22,6 +22,7 @@
 
 > * https://leetcode.com/problems/number-of-matching-subsequences/ 5k m
 > * https://leetcode.com/problems/valid-palindrome-ii/ 8k e
+> * https://leetcode.com/problems/diagonal-traverse-ii/ 
 > ----
 > * https://leetcode.com/problems/burst-balloons/ 7k h
 > * https://leetcode.com/problems/reverse-pairs/ 6k h
@@ -69,6 +70,7 @@
 > * https://leetcode.com/problems/binary-subarrays-with-sum/ 3k m
 > * https://leetcode.com/problems/longest-nice-subarray/description/ 1k m
 > * https://leetcode.com/problems/word-subsets 3k m
+> * https://leetcode.com/problems/frequency-of-the-most-frequent-element 
 > ----
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 4k h
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 4k h
@@ -123,7 +125,7 @@
 |[128. Longest Consecutive Sequence](../leetcode/128.longest-consecutive-sequence.md)|Medium|
 |[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
 |[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
-|[219. Contains Duplicate II](../leetcode/219.continas-duplicate-ii.md)|Easy|
+|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
 |[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
 |[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
@@ -143,7 +145,7 @@
 |------------------|------------|
 |[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 |[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
-
+> * https://leetcode.com/problems/sum-of-absolute-differences-in-a-sorted-array/ 2k m
 > * https://leetcode.com/problems/continuous-subarray-sum/ 5k m
 > * https://leetcode.com/problems/subarray-sums-divisible-by-k/ 6k m
 > * https://leetcode.com/problems/minimum-penalty-for-a-shop m
@@ -430,6 +432,7 @@
 > * https://leetcode.com/problems/word-ladder-ii/ 5k h
 > ----
 > * https://leetcode.com/problems/path-with-minimum-effort 5k m
+> * https://leetcode.com/problems/bus-routes 4k h
 > * https://leetcode.com/problems/dungeon-game/ 5k h
 > * https://leetcode.com/problems/number-of-increasing-paths-in-a-grid/ 2k h
 > * https://leetcode.com/problems/detonate-the-maximum-bombs/description/ 3k m
