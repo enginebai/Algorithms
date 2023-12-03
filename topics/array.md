@@ -65,23 +65,12 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 |--------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------|
 | 1. Random access.<br>2. No `next` field, saving space. (vs Linked List) | 1. Bad at insert/delete. (Copy to new array)<br>2. Bad at resize. (Copy to new array) | 1. Fast access.<br>2. Fix size |
 
-## Tips for [Problem Solving](./leetcode-solutions.md#array)
-* Mind the bound or size of array. Think about empty array or with few element (1, 2, or less than the problem requirement).
-* Is the array sorted (partially)? Yes, try *binary search*. No, try to sort first?
-* Swap or ignore element (only take the element met the requirement)
-* We can iterate array from left to right, also from *right to left*.
-* `O(n)` time complexity **doesn't** mean you can only iterate the array **once**. Iterate the array several times might help solve the problem, for example, pre-computation (iterate array at least one time first) using hashing might be useful.
-* For in-place operation or `O(1)` space complexity, use array (index) itself as a hash table. For example, the value of array ranges from 1 to `n`, where `n` is the size of array, then we can use the *index* to represent.
-* Array in Kotlin:
+## Array in Kotlin
 ```kotlin
 val array = IntArray(3) { 5 } // [5, 5, 5]
 array.sliceArray(1..5)   // subarray of A[1:5]
 array.sliceArray(3 until array.size) // subarray of A[3:]
 ```
-
-## Sliding Window Approach
-The every character will enter and exit the window at most once, so the time complexity is `O(n)`.
-
 
 ## Resources
 - [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)

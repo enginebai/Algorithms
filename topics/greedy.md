@@ -4,7 +4,7 @@ A *greedy algorithm* always makes the choice that looks best at the moment, it m
 We shall consider a [dynamic programming](../topics/dynamic-programming.md) solution (including steps) and show that we can always make greedy choices to arrival the optimal solution.
 
 ## Steps of Greedy
-1. Cast the optimization problem as one in which we make a choice and are left with one subproblem to solve. (Top-down fashion: making a greedy choice, reduce the problems to a smaller subproblems)
+1. Making a greedy choice, reduce the problems to a smaller subproblems.
 2. Prove that making the greedy choice is always safe.
 3. We conbime an optimal solutions to the subproblems with the greedy choice, we can arrive at the optimal solution to the original problem.
 
@@ -50,8 +50,3 @@ fun knapsackFractional(): Float {
     return totalValues
 }
 ```
-
-## Resources
-- [X] CLRS
-- [ ] https://github.com/youngyangyang04/leetcode-master#%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95
-- [X] [Tech Interview Cheat Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#greedy-algorithms)

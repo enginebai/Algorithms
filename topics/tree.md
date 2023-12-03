@@ -410,59 +410,6 @@ fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
 
 The deletion of BST, we can take a look at problem [450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md).
 
-## Tips for [Problem Solving](../topics/leetcode-solutions.md#tree)
-* [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree)
-* Corner cases:
-    * Empty tree (`node == null`)
-    * Single node (`node!!.left == null || node!!.right == null`)
-    * Two nodes 
-    * Skewed tree (like a linked list), height will be `n`, not `lg n`.
-* The node in problems doesn't have the parent pointer, we can run DFS/BFS once and use hash table to store its parent.
-* DFS template (recursive):
-
-```kotlin
-fun dfs(root: TreeNode?) {
-    // Some termaination condition or end of search path (base case)
-    if (root == null || ...) {
-        // Do somthing and return
-    }
-    
-    // We push right child first (stack FILO)
-    if (root?.right != null) dfs(root.right!!)
-    if (root?.left != null) dfs(root.left!!)
-
-    // Might do somthin extra
-}
-```
-
-* BFS template with level annotation (remove the inner for loop for non-level annotation):
-
-```kotlin
-fun bfs(root: TreeNode?) {
-    if (root == null) return
-    val queue = ArrayDeque<TreeNode>()
-    queue.addLast(root)
-    var level = 0
-    while (!queue.isEmpty()) {
-        // Do something in the same level
-        val size = queue.size()
-        for (i in 0 until size) {
-            val node = queue.removeFirst()
-            // do something or update result
-            
-            if (node.left != null) queue.addLast(node.left!!)
-            if (node.right != null) queue.addLast(node.right!!)
-        }
-        level++
-        
-        // Do something extra
-    }
-}
-```
-
-> Some nice templates: https://leetcode.com/discuss/general-discussion/937307/iterative-recursive-dfs-bfs-tree-traversal-in-pre-post-levelorder-views
-
-* [Inorder traversal (**iterative**)](#inorder-traversal) template might be helpful when solving BST problem.
 
 ## Resources
 - Fundamental of Data Structure

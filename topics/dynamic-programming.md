@@ -611,19 +611,6 @@ fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
 * **Time Complexity**: `O(m * n)`, for `m`, `n` is the length of `A` and `B`.
 * **Space Complexity**: `O(m * n)` for dp 2D table.
 
-## Tips for [Problem Solving](../topics/leetcode-solutions.md#dynamic-programming)
-
-### When to use DP? 
-The problem meets the both two characteristics:
-1. Solve the optimal problem (often, but not always), for example:
-    * The minimum cost
-    * The maximum profit
-    * How many ways are there to do...
-    * What's the longest/shortest possible...
-2. The solution of original problem comes from eariler calculated solution (from the overlapping subproblems), that is, the later step will be affected by the eariler step.
-
-Sometimes, only meets the first but not the second might be the greedy algorithm, not DP. For some problems, we have to return the optimal value among DP table, not just `dp[0]` or `dp[n]` itself.
-
 ### Problem Solving Steps
 
 #### 5 Steps of Dynamic Programming

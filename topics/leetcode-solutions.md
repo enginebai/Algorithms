@@ -109,6 +109,7 @@
 #### Problem Listing
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
 > * https://leetcode.com/problems/accounts-merge/ 5k m
+> * Solved: https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/description/ 3k e
 > ----
 > * https://leetcode.com/problems/repeated-string-match/ 2k m
 > * https://leetcode.com/problems/distinct-subsequences-ii/ 2k h
@@ -308,6 +309,7 @@
 |[2265. Count Nodes Equal to Average of Subtree](../leetcode/2265.count-nodes-equal-to-average-of-subtree.md)|Medium|
 
 > * Solved: https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
+> * Solved: https://leetcode.com/problems/construct-string-from-binary-tree/ 3k e
 > * https://leetcode.com/problems/count-complete-tree-nodes 8k e
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 7k m
 > * https://leetcode.com/problems/find-duplicate-subtrees 6k m

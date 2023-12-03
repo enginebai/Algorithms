@@ -51,7 +51,7 @@ while (left <= right) {
 return result
 ```
 
-## Find the first (last) element that satifies the condition
+## Find the first/left-most (last/right-most) element that satifies the condition
 ```js
 X X X O O O O O
       ^ // The first element that satifies the condition

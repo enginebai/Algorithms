@@ -561,42 +561,7 @@ Linked list with the last node has reference to the head.
 
 > // TODO
 
-## Tips for [Problem Solving](./leetcode-solutions.md#linked-list)
-* Corner cases:
-    * **Empty linked list** (before operation or **after!**, such as deleting the only node)
-    * Linked list with **one / two nodes**
-    * Linked list has cycles. Clarify before solving problem! And pay attention to the result after performing the functions.
-
-```js
-1. head -> null
-2. head -> A -> null
-3. head -> A -> B -> null
-```
-For some cases we have to insert when head is null or deleting head and after that the head will be null, then we can introduct *sentinel node* to help.
-
-```kotlin
-fun solveProblem(head?: Node): Node? {
-    val sentinel = Node(-1)
-    var node: Node? = sentinel
-    /// do something to modify the `node`
-
-    return sentinel.next
-}
-```
-
-* Pay attention to operate on the specific node before or after, especially on head and last node or the pointer nodoe after while loop.
-* **Drawing** could be really help!!
-* Get familiar with the following operations:
-    * Reverse in-place or update the node references (be careful of cycle references)
-    * Merge (connect/chain) two linked lists
-    * Count the node number
-    * Find the middle node using two pointers technique
-* Fast/slow pointers to solve cycle or interaction problems.
-    * [876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)
-    * [141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)
-    * [142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)
-
-* `LinkedList` in Kotlin:
+## LinkedList in Kotlin:
 ```kotlin
 val linkedList = LinkedList<Int>()
 linkedList.addFirst(1)
@@ -608,7 +573,6 @@ linkedList.removeLast()
 linkedList.first()
 linkedList.last()
 ```
-> [Nice post](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/linked-list) to read that need to keep in mind.
 
 ## Resources
 - Fundamental of Data Structure
