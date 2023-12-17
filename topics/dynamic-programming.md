@@ -6,7 +6,9 @@ The basic idea of dynamic programming is to split the problem into subproblems, 
 
 We are going to break down a problem into a series of overlapping subproblems (top-down), and build up solutions from bottom subproblems to larger subproblems, and finally to the original problem (bottom-up). 
 
-> The result of the previous answers helps us in choosing the future answers.
+![](../media/dp.png)
+
+> **Key Idea**: The result of the previous answers helps us in choosing the future answers.
 
 The DP algorithm is applicable when the subproblems are **dependent**, the subproblems share subsubproblems. It solves every subsubproblem once and saves its answer in a table (*programming*), thereby avoiding recompute every time the subsubproblem. DP is a powerful technique that solves problems in polynomial time for which naive or brute-force approach would take exponential time. 
 
@@ -83,9 +85,74 @@ fun fibonacci(n: Int): Int {
 * **Overlapping subproblems**: We can break down the problem into *overlapping subproblems". Then we can develop the recursive algorithm that solves the same subproblems over and over (memoization).
 * **Memoization**: We maintain a table with subproblem solutions so that we can re-use to build the solution from bottom-up.
 
-動態規劃問題一般來說就是求極值，要求極值就要窮舉所有可行的答案，然後從中找最佳解，這時候就需要正確的 **「狀態轉移方程式」** 才能窮舉所有可行答案，另外問題也要具有 **「最佳的子結構」(Optimal Substructure)** ，要可以透過子問題的答案推導出原問題的答案，還有 **「重疊的子問題」(Overlapping Subproblems)**，透過表格紀錄子問題答案來優化窮舉的過程，減少不必要的計算。
+## Problem Solving Techniuqes
+### When to use DP? 
+The problem meets the following characteristics:
+1. Solve the optimal problem (often, but not always), for example:
+    * The minimum cost
+    * The maximum profit
+    * How many ways are there to do...
+    * What's the longest/shortest possible...
+2. The solution of original problem comes from eariler calculated solution (from the overlapping subproblems), that is, the later step will be affected by the eariler step.
+
+> Sometimes, only meets the first but not the second might be the greedy algorithm, not DP. 
+
+3. Recursion + duplicate calculation (the subproblems are overlapping), it might be solved by DP.
+
+For some problems, we have to return the optimal value among DP table, not just `dp[0]` or `dp[n]` itself.
+
+#### Steps of Dynamic Programming
+1. **Identify Category**: Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know. ([Source](https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions))
+
+| Category                                     | Example Problem                                                                                                                                                      |
+|----------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0/1 Knapsack                                 | [Equal Subset Sum Partition](../leetcode/416.partition-equal-subset-sum.md) / [Target Sum](../leetcode/494.target-sum.md)                                            |
+| Unbounded Knapsack                           | [Coin Change](../leetcode/322.coin-change.md)                                                                                                                        |
+| Fibonacci Sequence                           | [House Thief](../leetcode/198.house-robber.md), [Jump Game](../leetcode/55.jump-game.md)                                                                             |
+| Counting / Distinct Ways                     | [Climbing Stairs](../leetcode/70.climbing-stairs.md), [Unique Paths I/II](../leetcode/62.unique-paths.md)                                                            |
+| String / Substring / Subsequece / Palindrome | [Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md), [Longest Increasing Subsequence](../leetcode/300.longest-increasing-subsequence.md) |
+| Matrix / Grid 2D DP                          | [Unique Paths I/II](../leetcode/63.unique-paths.ii.md), [Minimum Path Sum](../leetcode/64.minimum-path-sum.md)                                                       |
+| Shortest Path                                | Unique Paths I/II                                                                                                                                                    |
+| Tree DP                                      | [House Robber III](../leetcode/337.house-robber-iii.md)                                                                                                              |
+| Other                                        |                                                                                                                                                                      |
+
+2. **Define States**: A set of necessary variables that are required to calculate the optimal result in the subproblems. 
+
+```md
+> Examples:
+1. Knapsack: item index, capacity
+2. Substring: `dp[i]` represents `s[0:i]`.
+3. Subsequence: `dp[i][j]` represents `s1[0:i]` and `s2[0:j]`.
+```
+
+3. **Make Decision**: For each state, we can make the decision to calculate the optimal result. For Knapsack, it's whether to pick the number or not. For other problems, it might be which direction to go, which character to pick, etc.
+4. Write **Recursion** + **State Transition**: The relationship between the current state and the next state. For Knapsack, it's the maximum value between picking and not picking the number. For other problems, it might be the minimum of the among all sub-problems, etc.
+
+> **Tips**: We can try to do more problems and summarize all the possible state transition by examples. 套路性比較強烈，可多做題目總結可能的套路。([Source](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/dynamic-programming#xiao-jie-1))
+
+5. Define **Base Case**: The base case usually represents the minimum or maximum value of the state. For Knapsack, it's when the index is out of bound or the capacity is negative. For other problems, it might be when the index is out of bound or the string is empty.
+6. **Optimize**: We can apply memoization to recursion to avoid repeated calculation. We can also apply bottom-up DP (tabulation) to eliminate the overhead and stack overflow in recursion approach. It's important that the time complexity of the recursion approach and the bottom-up DP approach are the same. However, the bottom-up DP approach usually requires less memory space (eliminating the stack used in recursive function calls).
+7. **Complexity**: We can analyze the time and space complexity based on **State** and **Memoization** / **Tabulation**.:
+    * **Time Complexity**: `O(#State)`.
+    * **Space Complexity**: `O(Size of memo / table)`.
+
+動態規劃問題一般來說就是求極值，動態規劃的核心在於 **窮舉** 所有可行的答案，然後從中找最佳解。動態規劃遵循一個固定的流程：「遞迴的暴力解」->「帶有 Memo 的遞迴解」->「迭代的建立表格解」，這三個步驟都是為了窮舉所有可行解，然後找出最佳解。
+
+需要正確的 **「狀態轉移方程式」** 才能窮舉所有可行答案，問題要具有 **「最佳的子結構」(Optimal Substructure)** ，可以透過子問題的答案推導出原問題的答案，還有 **「重疊的子問題」(Overlapping Subproblems)**，透過表格紀錄子問題答案來優化窮舉的過程，減少不必要的計算。
+
+> 狀態轉移方程式:
+> f(n) = 1                   if n is 1 or 2
+>      = f(n - 1) + f(n - 2) if n > 1
+
+「帶有 Memo 的遞回解」是問題結果的回推，把問題拆解變小直到變成 base case，而「迭代的建立表格解」則是從 base cases 逐步建立子問題的答案，直到建立出原本問題的答案。
 
 一般思考的框架會是：
+* 定義「Base Cases」 
+    * -> 定義「狀態」
+        * -> 定義「選擇」
+            * -> 定義 DP 變數 / 函數的「定義」
+
+按照上面的框架走的話，程式架構大概會長這樣：
 ```python
 # Top-Down Dynamic Programming
 def findOptimal(狀態1, 狀態2, ...): 
@@ -111,22 +178,116 @@ def findOptimal(狀態1, 狀態2, ...):
 ```
 所以 **動態規劃基本上來說就是窮舉「狀態」然後在「選擇」中找出最佳解**。
 
-> Source: https://labuladong.github.io/algo/
+### Steps by Steps
+1. Find recusive relation.
+2. Recursive (top-down)
+3. Recursive + memo (top-down)
+4. Iterative + memo (bottom-up)
+5. Iterative + N variables (bottom-up)
+
+Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the solution of subproblems:
+
+1. **Find recusive relation**: Define the `dp[i]` and the definition of index. Define the recursive steps a.k.a *state transition*, such as `dp[i] = dp[i - 1] + dp[i - 2]`, and the base case (initialization of `dp[i]`): `d[0] = 0`, `dp[1] = 1`.
+
+> How to determine the size of `dp[i][j]`? Is `dp[m][n]` or `dp[m + 1][n + 1]`? It depends on **how we define the base case**.
+
+```js
+// Recursive relation
+dp[i] = dp[i - 1] + dp[i - 2]
+
+// Base case
+dp[0] = 0
+dp[1] = 1
+```
+
+2. **Recursive (top-down)**: Convert recurrence into recursive calls.
+```kotlin
+fun fib(n: Int): Int {
+    if (n == 0) return 0
+    if (n == 1) return 1
+    return fib(n - 1) + fib(n - 2)
+}
+```
+
+3. **Recursive + memo (top-down)**: Write recurrence, and add memoization to recursion - Time complexity from exponential to linear time.
+
+```kotlin
+fun fib(n: Int, memo: Map): Int {
+    if (n == 0) return 0
+    if (n == 1) return 1
+    if (memo[n] != null) return memo[n]
+    else {
+        memo = fib(n - 1, memo) + fib(n - 2, memo)
+        return memo
+    }
+}
+```
+
+> **Tips**: Try to write the recurrence relation in math formular to clearly define the relation. For example:
+```latex
+f(i, j) = f(i - 1, j - 1) if s[i] == t[j]
+        = false           if s[i] != t[j]
+```
+
+4. **Iterative + tabulation (bottom-up)**: Convert resursive to iterative - Get rid of recursive call stack.
+
+The biggest challenge here is how to iterate all possible states without any missing or duplication:
+* For 1D dp, iterate either from left to right or right to left?
+* For 2D dp, iterate either from top to bottom + left to right or bottom to top + right to left?
+* For multiple states, which state to iterate first? Is it OK to alternate the order of iteration?
+
+Without space optimization, the order of iterate dependes on *state transition*. **We have to ensure that previous states are already calculated before calculating the current state.** For example, if we want to calculate `dp[i]`, we have to calculate `dp[i - 1]` first, so we have to iterate from left to right. If we want to calculate `dp[i][j]`, we have to calculate `dp[i - 1][j]` and `dp[i][j - 1]` first, so we have to iterate from top to bottom and left to right.
 
 
-> This might be optional!
+```kotlin
+fun fib(n: Int): Int {
+    val dp = Array(n + 1)
+    dp[0] = 0
+    dp[1] = 1
+    for (i in 2..n) {
+        dp[i] = dp[i - 1] + dp[i - 2]
+    }
+    return dp[n]
+}
+```
 
-Solution representation classification based on shape of graph:
+5. **Iterative + N variables (bottom-up)**: Optimize the space complexity - Use only two variables instead of array, or use 1D array for 2D dp.
 
-| Methods             | Graph   |
-|---------------------|---------|
-| Brute Force         | Star    |
-| Divide & Conquer    | Tree    |
-| Decrease & Conquer  | Chain   |
-| Dynamic Programming | Graph   |
-| Greedy              | Subgraph|
+With space optimization, the order of iteration depends on *the relation before and after space optimization*. We have to know how we optimize the space.
+```kotlin
+fun fib(n: Int): Int { 
+    var n0 = 0
+    var n1 = 1
+    for (i in 2..n) {
+        val result = n1 + n0
+        n0 = n1
+        n1 = result
+    }
+    return result
+}
+```
 
-Recursive function call represents a vertex in a graph, and a directed edge from `A` to `B` if `B` calls `A`. And the graph of recursive calls must be acyclic. (otherwise it never terminates) That is, function call sequence is the topological order on the graph, and the subproblem dependencies **overlap** in the graph.
+> [Source1](https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning) / [Source2](https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems)
+
+### How to Relate Subproblem Solutions
+1. Try to identify the question about a subproblem.
+2. Then locally brute-force the question, try all possible answers, and take the best one. The key for efficiency is that for the questions having a small number of possible answer, we can brute-force it very quickly.
+
+### Memoization Recipe
+Overall, try to think about your recursive functions call in terms of a **tree**, try to brute force all solutions, then you can recognize **where** can optimize the brute force solution.
+
+1. Make it work.
+    * Visualize the problem as a *tree*.
+    * Implement the tree using *recursion*.
+2. Make it efficient.
+    * Identify any duplicate computations.
+    * Design the *memo* data structure.
+    * Check the memo first and return it.
+    * Otherwise, calculate the solution and store into memo if it doesn't exist.
+
+> **Tips**: 凡是遇到需要遞迴的問題，都先畫出遞迴樹，這可以幫助你分析時間複雜度，並且找到可能重複計算的地方。
+
+## 0-1 Knapsack Problem
 
 > TODO: For Knapsack problem (0/1 or unbounded), double check if the implementations are correct.
 > * DP[`item + 1`][weight + 1] v.s. DP[`item`][weight + 1], **I saw lots of resources using `dp[item + 1][weight + 1]`**, try to figure out the meaning of `dp[i][j]`!!
@@ -134,8 +295,6 @@ Recursive function call represents a vertex in a graph, and a directed edge from
 > * For loop order
 > * For loop initialization
 > * The return dp[item.size][weight] v.s. dp[item.size - 1][weight]
-
-## 0-1 Knapsack Problem
 
 ```
 Items: (value / weight)
@@ -374,99 +533,6 @@ fun knapsack(): Int {
 }
 ```
 
-## Best Time to Buy and Sell Stock Problems
-The following problems are categorized as *state machine* problems. 
-
-| Problem                                                                                                                | Transactions                 |
-|------------------------------------------------------------------------------------------------------------------------|------------------------------|
-| [121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)                             | Only once                    |
-| [122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)                       | Multiple times               |
-| [123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)                     | At most 2 times              |
-| [309. Best Time to Buy and Sell Stock with Cooldown](../leetcode/309.best-time-to-buy-and-sell-stock-with-cooldown.md) | Multiple times with cooldown |
-| https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/                                                      | At most `k` times            |
-| https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/                                    | Charge fee when selling      |
-
-### State Transitions
-For this series of stock problems, we can apply the framework we mentioned above:
-```py
-## Iterate all states
-for state1 in all possible values of state1:
-    for state2 in all possible values of state2:
-        for ...:
-            dp[state1][state2][...] = selectOptimal(selection1, selection2, ...)
-```
-
-In order to solve by this framework, we have to define the states and selections. 
-
-#### States
-* For `state1`, it's the state of the `i-th` day, it's very straightforward.
-* For `state2`, we might own the cash or the stock on specific day, so there are two states: `Cash` (you don't buy stock or sell back to cash out) or `Stock` (you bought it or cash in).
-* For `state3`, there might be `k` times transactions limit.
-
-#### Selections
-And you have three selections (actions): `Do Nothing`, `Buy` and `Sell`.  Therefore, there are two actions for cash/stock state on `i-th` day state: you either can do nothing or buy/sell the stock (depend on whether you bought before or not), so the state machine for stock transaction on `i-th` day is
-![](../media/121.best-time-to-buy-and-sell-stock.png)
-
-> For simplify, we use `state1` and `state2` only as example.
-
-* If you stay in `Cash` state on `i - 1` day, then you can do nothing (`Cash`) or buy stock on `i` day (`Stock`).
-* So on for `Stock` state.
-
-The max profit is the `Cash` state on `n-th` day, and we have calculate the two states with different available selections (actions) from the first day to `n-th` day. 
-
-In the framework, it would be:
-```py
-maxK = K
-# State1: On i-th day
-for i in prices:
-    # State2: Cash (0) or Stock (1)
-    for j in 0 or 1:
-        ## (Optional): k times transactions limit
-        for k in 1 to maxK:
-            dp[i][j][k] = max(Do Nothing, Buy, Sell)
-```
-
-The `dp[i][j][k]` can interpreted as "the profit on `i-th` day, with (`j` = 1)/without stock (`j` = 0), with `k` times transactions limit.
-
-![](../media/121.best-time-to-buy-and-sell-stock2.png)
-
-So we can use DP to transit the state machine to find the max profit:
-* We define our `dp[i][0]` and `dp[i][1]` as the max profit for `Cash` and `Stock` states on `i-th` day.
-* For `Cash` state, we either can do nothing or sell.
-```kotlin
-dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
-         = max( Do Nothing , Sell Stock )
-```
-* For `Stock` state, we either can do nothing or buy stock (we have to pay the cash for the price)
-```kotlin
-dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i])
-         = max( Do Nothing , Buy Stock )
-```
-* The base cases for the two states would be `0` (We don't own stock, the profit is 0) and `-prices[0]` (We own the stock, but the profit is `-prices[0]`, we can't cash out)
-
-```kotlin
-fun maxProfit(prices: IntArray): Int {
-    val n = prices.size
-    val dp = Array(prices.size) { _ -> IntArray(2) }
-    // The max profit for Cash state is 0
-    dp[0][0] = 0
-    // The max profit for Stock state is the amount we pay for the stock
-    dp[0][1] = -prices[0]
-    for (i in 1 until prices.size) {
-        // Update the optimal solution of subproblems from selections
-        dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
-        dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i])
-    }
-    return dp[n - 1][0]
-}
-```
-
-For problem 121, the `k` is one, and problem 122, the `k` is unlimited, the problem 123, the `k` is two.
-
-> * Nice explanation and general template: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
-> * In chinese: [一个方法团灭 LEETCODE 股票买卖问题](https://labuladong.github.io/algo/1/13/)
-> * Nice illustration: https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
-
 ## Longest Common Subsequence Problem
 Given two strings `A` and `B`, find the longest common subsequences (not necessarily continuous) of `A` and `B`.
 
@@ -611,111 +677,99 @@ fun printLCS(parent: Array<IntArray>, x: Int, y: Int) {
 * **Time Complexity**: `O(m * n)`, for `m`, `n` is the length of `A` and `B`.
 * **Space Complexity**: `O(m * n)` for dp 2D table.
 
-### Problem Solving Steps
 
-#### 5 Steps of Dynamic Programming
-1. **Category**: Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know. ([Source](https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions))
-    * 0/1 Knapsack
-    * Unbounded Knapsack
-    * Shortest Path (eg: Unique Paths I/II)
-    * Fibonacci Sequence (eg: House Thief, Jump Game)
-    * Longest Common Substring/Subsequece
-    * Palindromic Substring/Subsequence
-    * Matrix DP
-    * Others
-2. **State**: A set of necessary variables that are required to calculate the optimal result in the subproblems. For Knapsack, it's the current index and the current capacity. The same combination of index and capacity has the same result so that we can use memoization to avoid repeated calculation.
-3. **Decision**: For each state, we can make the decision to calculate the optimal result. For Knapsack, it's whether to pick the number or not. For other problems, it might be which direction to go, which character to pick, etc.
-4. **Recursion**: The relationship between the current state and the next state. For Knapsack, it's the maximum value between picking and not picking the number. For other problems, it might be the sum of the two child nodes, the minimum of the two child nodes, etc.
-5. **Base Case**: The base case usually represents the minimum or maximum value of the state. For Knapsack, it's when the index is out of bound or the capacity is negative. For other problems, it might be when the index is out of bound or the string is empty.
-6. **Optimize**: We can apply memoization to recursion to avoid repeated calculation. We can also apply bottom-up DP (tabulation) to eliminate the overhead and stack overflow in recursion approach. It's important that the time complexity of the recursion approach and the bottom-up DP approach are the same. However, the bottom-up DP approach usually requires less memory space (eliminating the stack used in recursive function calls).
+## Best Time to Buy and Sell Stock Problems
+The following problems are categorized as *state machine* problems. 
 
-### Steps by Steps
-1. Find recusive relation.
-2. Recursive (top-down)
-3. Recursive + memo (top-down)
-4. Iterative + memo (bottom-up)
-5. Iterative + N variables (bottom-up)
+| Problem                                                                                                                | Transactions                 |
+|------------------------------------------------------------------------------------------------------------------------|------------------------------|
+| [121. Best Time to Buy and Sell Stock](../leetcode/121.best-time-to-buy-and-sell-stock.md)                             | Only once                    |
+| [122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)                       | Multiple times               |
+| [123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)                     | At most 2 times              |
+| [309. Best Time to Buy and Sell Stock with Cooldown](../leetcode/309.best-time-to-buy-and-sell-stock-with-cooldown.md) | Multiple times with cooldown |
+| https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/                                                      | At most `k` times            |
+| https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/                                    | Charge fee when selling      |
 
-Assume we solve 1-dimension DP problem, and we use 1D array `dp[i]` to store the solution of subproblems:
-
-1. **Find recusive relation**: Define the `dp[i]` and the definition of index. Define the recursive steps a.k.a *state transition*, such as `dp[i] = dp[i - 1] + dp[i - 2]`, and the base case (initialization of `dp[i]`): `d[0] = 0`, `dp[1] = 1`.
-
-```js
-// Recursive relation
-dp[i] = dp[i - 1] + dp[i - 2]
-
-// Base case
-dp[0] = 0
-dp[1] = 1
+### State Transitions
+For this series of stock problems, we can apply the framework we mentioned above:
+```py
+## Iterate all states
+for state1 in all possible values of state1:
+    for state2 in all possible values of state2:
+        for ...:
+            dp[state1][state2][...] = selectOptimal(selection1, selection2, ...)
 ```
 
-2. **Recursive (top-down)**: Convert recurrence into recursive calls.
+In order to solve by this framework, we have to define the states and selections. 
 
-```kotlin
-fun fib(n: Int): Int {
-    if (n == 0) return 0
-    if (n == 1) return 1
-    return fib(n - 1) + fib(n - 2)
-}
+#### States
+* For `state1`, it's the state of the `i-th` day, it's very straightforward.
+* For `state2`, we might own the cash or the stock on specific day, so there are two states: `Cash` (you don't buy stock or sell back to cash out) or `Stock` (you bought it or cash in).
+* For `state3`, there might be `k` times transactions limit.
+
+#### Selections
+And you have three selections (actions): `Do Nothing`, `Buy` and `Sell`.  Therefore, there are two actions for cash/stock state on `i-th` day state: you either can do nothing or buy/sell the stock (depend on whether you bought before or not), so the state machine for stock transaction on `i-th` day is
+![](../media/121.best-time-to-buy-and-sell-stock.png)
+
+> For simplify, we use `state1` and `state2` only as example.
+
+* If you stay in `Cash` state on `i - 1` day, then you can do nothing (`Cash`) or buy stock on `i` day (`Stock`).
+* So on for `Stock` state.
+
+The max profit is the `Cash` state on `n-th` day, and we have calculate the two states with different available selections (actions) from the first day to `n-th` day. 
+
+In the framework, it would be:
+```py
+maxK = K
+# State1: On i-th day
+for i in prices:
+    # State2: Cash (0) or Stock (1)
+    for j in 0 or 1:
+        ## (Optional): k times transactions limit
+        for k in 1 to maxK:
+            dp[i][j][k] = max(Do Nothing, Buy, Sell)
 ```
 
-3. **Recursive + memo (top-down)**: Add memoization to recursion - Time complexity from exponential to linear time.
+The `dp[i][j][k]` can interpreted as "the profit on `i-th` day, with (`j` = 1)/without stock (`j` = 0), with `k` times transactions limit.
+
+![](../media/121.best-time-to-buy-and-sell-stock2.png)
+
+So we can use DP to transit the state machine to find the max profit:
+* We define our `dp[i][0]` and `dp[i][1]` as the max profit for `Cash` and `Stock` states on `i-th` day.
+* For `Cash` state, we either can do nothing or sell.
 ```kotlin
-fun fib(n: Int, memo: Map): Int {
-    if (n == 0) return 0
-    if (n == 1) return 1
-    if (memo[n] != null) return memo[n]
-    else {
-        memo = fib(n - 1, memo) + fib(n - 2, memo)
-        return memo
+dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
+         = max( Do Nothing , Sell Stock )
+```
+* For `Stock` state, we either can do nothing or buy stock (we have to pay the cash for the price)
+```kotlin
+dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i])
+         = max( Do Nothing , Buy Stock )
+```
+* The base cases for the two states would be `0` (We don't own stock, the profit is 0) and `-prices[0]` (We own the stock, but the profit is `-prices[0]`, we can't cash out)
+
+```kotlin
+fun maxProfit(prices: IntArray): Int {
+    val n = prices.size
+    val dp = Array(prices.size) { _ -> IntArray(2) }
+    // The max profit for Cash state is 0
+    dp[0][0] = 0
+    // The max profit for Stock state is the amount we pay for the stock
+    dp[0][1] = -prices[0]
+    for (i in 1 until prices.size) {
+        // Update the optimal solution of subproblems from selections
+        dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
+        dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i])
     }
+    return dp[n - 1][0]
 }
 ```
 
-4. **Iterative + tabulation (bottom-up)**: Convert resursive to iterative - Get rid of recursive call stack.
-```kotlin
-fun fib(n: Int): Int {
-    val dp = Array(n + 1)
-    dp[0] = 0
-    dp[1] = 1
-    for (i in 2..n) {
-        dp[i] = dp[i - 1] + dp[i - 2]
-    }
-    return dp[n]
-}
-```
-5. **Iterative + N variables (bottom-up)**: Optimize the space complexity - Use only two variables instead of array.
-```kotlin
-fun fib(n: Int): Int { 
-    var n0 = 0
-    var n1 = 1
-    for (i in 2..n) {
-        val result = n1 + n0
-        n0 = n1
-        n1 = result
-    }
-    return result
-}
-```
+For problem 121, the `k` is one, and problem 122, the `k` is unlimited, the problem 123, the `k` is two.
 
-> [Source1](https://leetcode.com/problems/min-cost-climbing-stairs/discuss/476388/4-ways-or-Step-by-step-from-Recursion-greater-top-down-DP-greater-bottom-up-DP-greater-fine-tuning) / [Source2](https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems)
-
-### How to Relate Subproblem Solutions
-1. Try to identify the question about a subproblem.
-2. Then locally brute-force the question, try all possible answers, and take the best one. The key for efficiency is that for the questions having a small number of possible answer, we can brute-force it very quickly.
-
-### Memoization Recipe
-Overall, try to think about your recursive functions call in terms of a **tree**, try to brute force all solutions, then you can recognize **where** can I optimize the brute force solution.
-
-1. Make it work.
-    * Visualize the problem as a *tree*.
-    * Implement the tree using *recursion*.
-    * Verify your solution works.
-
-2. Make it efficient.
-    * Design the *memo* data structure.
-    * Check the memo first and return it.
-    * Otherwise, calculate the solution and store into memo if it doesn't exist.
+> * Nice explanation and general template: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
+> * In chinese: [一个方法团灭 LEETCODE 股票买卖问题](https://labuladong.github.io/algo/1/13/)
+> * Nice illustration: https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
 
 ## Resources
 - CLRS

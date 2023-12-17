@@ -243,26 +243,8 @@ heap = [X, Y, Z]
 * [事後諸葛](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/heap-2#ji-qiao-san-shi-hou-xiao-zhu-ge) 
 > See problem [1642. Furthest Building You Can Reach](../leetcode/1642.furthest-building-you-can-reach.md)
 
-
 ## [Dynamic Programming](../topics/dynamic-programming.md)
-### Characteristics
-The problem meets the both two characteristics:
-1. Solve the optimal problem (often, but not always), for example:
-    * The minimum cost
-    * The maximum profit
-    * How many ways are there to do...
-    * What's the longest/shortest possible...
-2. Break down the problem into smaller problem, and the solution of original problem comes from eariler calculated solution (from the overlapping subproblems), that is, the later step will be affected by the eariler step.
-> Sometimes, only meets the first but not the second might be the greedy algorithm, not DP.
-
-More characteristics, see [Elements of Dynamic Programming](../topics/dynamic-programming.md#elements-of-dynamic-programming).
-
-### Approaches
-* State transition
-* Top-down (Memoization): Recursion + memo table
-* Bottom-up (Tabulation): Iteration + table
-
-> For some problems, we have to return the optimal value among DP table, not just `dp[0]` or `dp[n]` itself.
+This is a comprehensive topic, see [Dynamic Programming](../topics/dynamic-programming.md#problem-solving-techniuqes) for more details.
 
 ## [Greedy](../topics/greedy.md)
 ### Characteristics
