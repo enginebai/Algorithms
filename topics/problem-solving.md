@@ -301,12 +301,36 @@ fun solveProblem(head?: Node): Node? {
 * Lowest Common Ancestor
 
 ### Approaches
-* [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree)
-* Cases to consider:
-    * Empty tree (`node == null`)
-    * Single root.
-    * One child, or two children. 
-    * Skewed tree (like a linked list), height will be `n`, not `lg n`.
+* [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) To implement recursion correctly:
+    1. Define the **input and return** type.
+    1. Identify the **base case** (termination condition).
+    1. Define the **main logic**.
+
+```kotlin
+fun dfs(root: TreeNode?): T {
+    // Empty tree
+    if (root == null) {
+        ...
+    }
+
+    // Leaf node
+    if (root.left == null && root.right == null) {
+        ...
+    }
+
+    // One child
+    if (root.left == null || root.right == null) {
+        ...
+    }
+
+    // Two children
+    dfs(root.left)
+    dfs(root.right)
+
+    // Return result for current node if needed
+}
+```
+
 #### DFS general template (recursive)
 The major difference between these three traversal is the order of the **main logic**.
 
@@ -386,16 +410,83 @@ fun bfs(root: TreeNode?) {
     }
 }
 ```
+* Cases to consider:
+    * Empty tree (`node == null`)
+    * Single root.
+    * One child, or two children. 
+    * Skewed tree (like a linked list), height will be `n`, not `lg n`.
 * The node in problems doesn't have the parent pointer, we can run DFS/BFS once and use hash table to store its parent.
 
-Binary Search Tree
+## [Binary Search Tree](../topics/tree.md#binary-search-tree)
 * [Inorder traversal (**iterative**)](#inorder-traversal) template might be helpful when solving BST problem.
 
 ## [Graph](../topics/graph.md)
-* DFS
+* DFS 
 * BFS
 * Topological Sort
 * Shortest Path
+
+### Characteristics
+* We can convert the problem into the *states as nodes*, and *operations as edges* to build the graph, then use DFS /BFS to iterate all possible states / operations like traversing the graph to solve the problem. (such as [Word Ladder](../leetcode/127.word-ladder.md))
+* To find the order / prerequisite / dependency, we can use **topological sort**.
+
+### Approaches
+1. Figure out the **states** and **operations**, then build the graph.
+1. Start to traversal all possible nodes without duplicates in DFS / BFS, we have to record the visited nodes. 
+
+> Binary tree is a special case of graph, so we can use the same approach to solve the problem, however, tree is directed graph without cycle, so we don't need to record the visited nodes.
+> 
+> For more detail on recursion techniques, see [tree](#tree).
+
+* DFS
+```kotlin
+fun dfs(input, visited) {
+    if (visited.contains(input) || meet some conditions) return
+    // Record visited nodes
+    visited.add(input)
+    // Iterate all possible next states
+    for (next in input.nexts) {
+        // Skip visited nodes
+        if (visited.contains(next)) continue
+        dfs(next, visited)
+    }
+}
+```
+
+* BFS: We enqueue initial state first, then iterate the current state popped from the queue and enqueue **next state** generated from current state.
+
+```kotlin
+fun bfs(input, visited) {
+    val queue = ArrayDeque<XXX>()
+    // Add initial state
+    queue.addLast(input)
+    while (queue.isNotEmpty()) {
+        val size = queue.size
+        for (i in 0 until size) {
+            val node = queue.removeFirst()
+            if (visited.contains(node)) continue
+            // Record visited nodes
+            visited.add(node)
+            // Do something
+
+            // Enqueue next level elements
+            for (next in node.nexts) {
+                if (visited.contains(next)) continue
+                queue.addLast(next)
+            }
+        }
+    }
+}
+```
+
+> **Note**: Sometime we will use *shortest distance* as visited, we only enqueue the next node with shortest distance from the current node.
+
+```kotlin
+if (distance[next] >= distance[current] + 1) {
+    distance[next] = distance[current] + 1
+    queue.addLast(next)
+}
+```
 
 ## Resources
 * https://docs.google.com/document/d/1RmVqlv0wPySoVrP3f5QIm_PVHmygsHd6hVO39FfaARM/edit#heading=h.vnjo3erxh3qi
