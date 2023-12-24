@@ -55,11 +55,11 @@ Allocating addition space can gurantee that `n` insertions only takes `O(n)`, so
 |                | `create(X)` | `get_at(i)` `set_at(i, x)` | `insert_at(i, x)` `delete_at(i, x)` | `insert_first(x)` `delete_first()` | `insert_last(x)` `delete_last()` |
 | Dynamic Array  | `O(n)`      | **`O(1)`**                     | `O(n)`                              | `O(n)`                             | **`O(1)`**                       |
 
-## Amortization
+#### Amortization
 * Operation has **amortized cost** `T(n)` if `k` operations cost at most `k * T(n)`, that is *on average* over may operations.
 * Inserting into a dynamic array take `O(1)` amortized time. (It might still take `O(n)` for some worst case)
 
-## Pros. & Cons.
+### Pros. & Cons.
 Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 | Pros.                                                  | Cons.                                                                                 | Usages                         |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------|
@@ -79,12 +79,8 @@ array.sliceArray(3 until array.size) // subarray of A[3:]
     - [ ] [Collections](https://kotlinlang.org/docs/collections-overview.html)
 - [X] [LC Learn - Array 101](https://leetcode.com/explore/learn/card/fun-with-arrays/) // Note + coding questions
 - [ ] [LC Learn - Array and String](https://leetcode.com/explore/learn/card/array-and-string/) // Note + coding questions
-- [ ] [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Array)
-- [ ] [LC Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/) // Coding questions collection with easy/medium/hard levels
 - [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/array) // Note + coding questions
-- [ ] CTCI // Simple notes + some problems
 - [ ] [leetcode-master](https://github.com/youngyangyang04/leetcode-master#%E6%95%B0%E7%BB%84) // Note + problems with nice illustration.
 - [X] [Tech Interview Cheat Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#array) // Simple note summary
 - [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#arrays) // Simple note summary
-- [X] ~~Fundamental of Data Structure - Arrays~~  // Polynomial + Sparse matrices.
 - [X] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#arrays)~~ // Old videos + Vector

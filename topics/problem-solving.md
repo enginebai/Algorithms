@@ -269,7 +269,10 @@ More characteristics, see [Elements of Greedy](../topics/greedy.md#elements-of-g
 
 ### Approaches
 * **Drawing** could be really help!!
-* *Sentinel node*: To insert when head is null or deleting head and it becomes null, we can use *sentinel node* to help:
+* *Sentinel node*: 
+    * To create a new linked list.
+    * To insert when head is null.
+    * To deleting head and it becomes null.
 ```kotlin
 fun solveProblem(head?: Node): Node? {
     val sentinel = Node(-1)
@@ -301,38 +304,17 @@ fun solveProblem(head?: Node): Node? {
 * Lowest Common Ancestor
 
 ### Approaches
-* [Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) To implement recursion correctly:
-    1. Define the **input and return** type.
-    1. Identify the **base case** (termination condition).
-    1. Define the **main logic**.
+[Recursion](../topics/recursion.md) is one of the most powerful and frequently used techniques to solve tree problems. (also natural features of a tree) There are two techniques to solve tree problems with *recursion*:
+1. **Traversal**: Can the answer by obtained by traversing the tree once? If yes, define a `traverse(root)` recursive function + global variable to implement it.
+2. **Divide and Conquer**: Can we split the problem into sub-problems (sub-trees), and obtain the answer of original problem by combining the results of sub-problems? If yes, define a function `solve(root): T` that returns the answer of sub-problems, and use it to solve the original problem.
 
-```kotlin
-fun dfs(root: TreeNode?): T {
-    // Empty tree
-    if (root == null) {
-        ...
-    }
+For the two techniques, we have to consider the following:
+* What to do for current node? (Just think about what each node should do individually)
+* When to do it? (pre-order, in-order, post-order)
 
-    // Leaf node
-    if (root.left == null && root.right == null) {
-        ...
-    }
+> **NOTE**: To implement recursion correctly, just **think about what to do for current node, and don't care about the sub-problems. (leave it to recursion)**
 
-    // One child
-    if (root.left == null || root.right == null) {
-        ...
-    }
-
-    // Two children
-    dfs(root.left)
-    dfs(root.right)
-
-    // Return result for current node if needed
-}
-```
-
-#### DFS general template (recursive)
-The major difference between these three traversal is the order of the **main logic**.
+The following are DFS general templates of recursive function, the major difference between these three traversals is the order of the **main logic**.
 
 * Pre-order: `DLR`
 ```kotlin
@@ -353,6 +335,17 @@ fun dfs(root: TreeNode?): T {
 * In-order: `LDR`
 
 ```kotlin
+fun dfs(root: TreeNode?): T {
+    if (Some termaination condition or end of search path (base case)) {
+        return result
+    }
+    dfs(root.left)
+
+    // Main logic
+
+    dfs(root.right)
+    // Return result for current node
+}
 ```
 
 * Post-order: `LRD`
@@ -362,16 +355,41 @@ fun dfs(root: TreeNode?): T {
         return result
     }
     // Traverse sub-tree first
-    dfs(root.left)
-    dfs(root.right)
+    val leftValue = dfs(root.left)
+    val rightValue = dfs(root.right)
 
-    // Main logic
+    // Main logic: deal with current root, and combine the result of sub-trees
 
     // Return result for current node
 }
 ```
 
-* BFS template with level annotation:
+The key difference of pre-order and post-order: 
+|       | Pre-order        | Post-order                      |
+|-------|------------------|---------------------------------|
+| Order | Top-down         | Bottom-up                       |
+| Data  | Parent node only | Parent + children node together |
+
+> *Dynamic programming*, *Graph (DFS)*, *divide-and-conquer* and *backtracking* are all the extension of binary tree, we can use the similar techniques to solve the problem.
+
+#### Breadth First Search (BFS)
+* Level traversal:
+```kotlin
+fun bfs(root: TreeNode?) {
+    if (root == null) return
+    val queue = ArrayDeque<TreeNode>()
+    queue.addLast(root)
+    while (!queue.isEmpty()) {
+        val node = queue.removeFirst()
+        // do something or return early
+            
+        if (node.left != null) queue.addLast(node.left!!)
+        if (node.right != null) queue.addLast(node.right!!)
+    }
+}
+```
+
+* With level annotation:
 ```kotlin
 fun bfs(root: TreeNode?) {
     if (root == null) return
@@ -395,21 +413,7 @@ fun bfs(root: TreeNode?) {
 }
 ```
 
-* BFS template for level traversal:
-```kotlin
-fun bfs(root: TreeNode?) {
-    if (root == null) return
-    val queue = ArrayDeque<TreeNode>()
-    queue.addLast(root)
-    while (!queue.isEmpty()) {
-        val node = queue.removeFirst()
-        // do something or return early
-            
-        if (node.left != null) queue.addLast(node.left!!)
-        if (node.right != null) queue.addLast(node.right!!)
-    }
-}
-```
+#### General
 * Cases to consider:
     * Empty tree (`node == null`)
     * Single root.
@@ -418,7 +422,7 @@ fun bfs(root: TreeNode?) {
 * The node in problems doesn't have the parent pointer, we can run DFS/BFS once and use hash table to store its parent.
 
 ## [Binary Search Tree](../topics/tree.md#binary-search-tree)
-* [Inorder traversal (**iterative**)](#inorder-traversal) template might be helpful when solving BST problem.
+* In-order traversal of BST is an **ascending** sorted array, this property can be helpful to solve the BST problem.
 
 ## [Graph](../topics/graph.md)
 * DFS 
@@ -489,9 +493,6 @@ if (distance[next] >= distance[current] + 1) {
 ```
 
 ## Resources
-* https://docs.google.com/document/d/1RmVqlv0wPySoVrP3f5QIm_PVHmygsHd6hVO39FfaARM/edit#heading=h.vnjo3erxh3qi
-* https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/
-* https://leetcodethehardway.com/
 * https://labuladong.github.io/algo/home/
-* https://programmercarl.com/
+* https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/
 
