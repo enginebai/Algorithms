@@ -244,41 +244,8 @@ class DynamicArrayQueue<T>: Queue<T> {
 
 There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `head` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce [*Circular Queue*](../leetcode/622.design-circular-queue.md).
 
-## Tips for [Problem Solving](./leetcode-solutions.md#stack--queue)
-* For stack question, we can push the index/position or value, remember that we still can get the original value from `array[stack.peek()]` when pushing the index.
-* Stack for recursive call or DFS, queue for BFS.
-
-### Monotonic stack
-* Code template:
-    ```kotlin
-    fun problem(nums: IntArray) {
-        ...
-        val stack = Stack<Int>()
-        for (i in 0 until nums.size) {
-            // We might change the condition of value comparison.
-            // And consider if the condition is strict (<) or not (<=)
-            while (!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
-                // We might not pop at once, just peek first
-                val value = stack.pop()
-                
-                // Something we have to check if stack is empty now, and then pop item or peek.
-
-                // calculate something and update the result
-            }
-            stack.push(i)
-        }
-    }
-    ```
-* The time complexity is `O(n)`, since every item will enter/exit the stack once. Even if there is a `while` loop inside the `for` loop, the time complexity is stil `O(n)` because at most you touch each each index a maximum of 2 times, not `n` times.
-* Usually, we will push index to stack rather than array value. And something, we need to push `0` or `-1` at the beginning and the end of array so that we can calculate the first / last item of array. (See [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md))
-* Classic problems:
-    * [496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)
-    * [503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)
-    * [739. Daily Temperatures](../leetcode/739.daily-temperatures.md)
-    * [42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)
-    * [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)
-
-* Stack and queue in Kotlin:
+## Kotlin APIs
+### Stack
 ```kotlin
 // Stack
 val stack = Stack<Int>()
@@ -287,8 +254,10 @@ val item = stack.pop()
 stack.peek()
 stack.size
 stack.isNotEmpty()
+```
 
-// Queue
+### Queue
+```kotlin
 val queue = ArrayDeque<Int>()
 queue.addFirst(1)
 queue.addLast(1)

@@ -123,6 +123,7 @@ class OpenAddress<T> {
 
 ## Kotlin APIs
 ### `HashSet`
+
 ```kotlin
 val set = HashSet<Int>()
 set.size

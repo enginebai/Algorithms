@@ -561,7 +561,7 @@ Linked list with the last node has reference to the head.
 
 > // TODO
 
-## LinkedList in Kotlin:
+## Kotlin APIs
 ```kotlin
 val linkedList = LinkedList<Int>()
 linkedList.addFirst(1)

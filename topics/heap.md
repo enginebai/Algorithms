@@ -190,14 +190,7 @@ fun heapSort(A) {
 
 * **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
 
-## Tips for [Problem Solving](../topics/leetcode-solutions.md#heap)
-* Heap is good at find the top/smallest K of xxx or median. (or using binary search if there is sorted list) We also can use **Quickselect** to find *k*th smallest item in an unordered list. 
-* For top k problems, you can use:
-    * Build max heap from all items, and pop `k - 1` times, and the peek will be the top K result.
-    * Using min heap with `k` items, we add item one by one, and pop (the min value) if heap size > `k` as adding item. The remaining heap will be top K results **but in reversed order**, make sure to reverse the result.
-* For frequency sorting, we can use *bucket sort*, see problem 
-* For some problems to find the max/min value **dynamically** (after some operations, such adding some numbers then find the max number), then it might be able to use heap to solve. ([264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/))
-* Heap in Kotlin:
+## Kotlin APIs
 ```kotlin
 val minHeap = PriorityQueue<Int>() { n1, n2 -> n1 - n1 }
 val maxHeap = PriorityQueue<Int>() { n1, n2 -> n2 - n1 }

@@ -310,6 +310,7 @@
 
 > * Solved: https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
 > * Solved: https://leetcode.com/problems/construct-string-from-binary-tree/ 3k e
+> * Solved: https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/ To understand the initial value of `minutes`, and `infected` variable.
 > * https://leetcode.com/problems/count-complete-tree-nodes 8k e
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 7k m
 > * https://leetcode.com/problems/find-duplicate-subtrees 6k m
@@ -513,6 +514,7 @@
 
 ### Other
 > * Solved: https://leetcode.com/problems/pascals-triangle/ 9k e
+> * https://leetcode.com/problems/out-of-boundary-paths/description 4k m
 > * https://leetcode.com/problems/delete-and-earn/ 5k m
 > * https://leetcode.com/problems/minimum-falling-path-sum/ 5k m
 > * https://leetcode.com/problems/maximal-rectangle/ 6k h
@@ -527,6 +529,7 @@
 > * https://leetcode.com/problems/super-egg-drop/ 3k h
 > * https://leetcode.com/problems/minimum-cost-to-cut-a-stick/ 3k h
 > * https://leetcode.com/problems/arithmetic-slices-ii-subsequence/ 2k h
+> * https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 
 ## [Greedy](../topics/greedy.md)
 | Problem          | Difficulty |

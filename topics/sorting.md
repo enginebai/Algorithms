@@ -167,8 +167,14 @@ The partition generates a balanced two subarrays, that is `n/2` size, the recurr
 #### Average Case
 It takes `O(n log n)` on average if we can add randomization to pick the pivot in order to obtain good average case performance over all inputs. (See the comment of above code). For space complexity, it takes `O(lg n)` on average for recursive function call stack.
 
-## Tips for [problem solving](../topics/leetcode-solutions.md#sorting)
-* Sorting APIs of `IntArray` in Kotlin:
+## Heap Sort
+See [Heap](../topics/heap.md) topic.
+
+## Counting Sort
+> TODO
+
+## Kotlin APIs
+### `IntArray`
 ```kotlin
 val nums = intArrayOf(1, 3, 2, 4, -1, 10)
 
@@ -189,7 +195,7 @@ val sortedByList: List<Int> = nums.sortedBy { it }
 Arrays.sort(nums) { it1, it2 -> it2 - it1 }
 ```
 
-* Sortin APIs of `List` in Kotlin:
+### `List`
 ```kotlin
 val list = mutableListOf(1, 3, 5, 2, 4, 6, 0, -1, -3, 10)
 // Sort list in-place
@@ -200,12 +206,6 @@ val sortedList: List<Int> = list.sortedBy { it }
 // Sort mutablle list in-place
 Collections.sort(list)
 ```
-
-## Heap Sort
-See [Heap](../topics/heap.md) topic.
-
-## Cycle Sort
-
 
 ## Resources
 - CLRS

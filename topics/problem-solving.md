@@ -165,7 +165,8 @@ fun slidingWindowsProblem(str: String) {
 * Find next greater / smaller element: *Monotonic stack*
 
 ### Approaches
-* Nested structure
+* For stack question, we can push the index or value, we still can get the original value from `array[stack.peek()]` when pushing the index.
+* Nested structure:
 ```kotlin
 fun stackProblem(input: XXX) {
     var result = ...
@@ -184,20 +185,30 @@ fun stackProblem(input: XXX) {
     }
 }
 ```
-* Monotonic stack template:
+
+#### Monotonic Stack Template
 ```kotlin
-// Monotonic decreasing stack to find next greater element
-fun stackProblem(input: XXX) {
+fun problem(nums: XXXArray) {
+    ...
     val stack = Stack<XXX>()
-    // Iterate all elements in input
-    for (i in 0 until input.size) {
-        while (!stack.isEmpty() && stack.peek() < input[i]) {
-            // Do something
+    for (i in 0 until nums.size) {
+        // We might change the condition of value comparison.
+        // And consider if the condition is strict (<) or not (<=)
+        while (!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
+            // We might not pop at once, just peek first
+            val value = nums[stack.pop()]
+            
+            // Something we have to check if stack is empty now, and then pop item or peek.
+
+            // calculate something and update the result
         }
-        stack.push(input[i])
+        stack.push(i)
     }
 }
 ```
+
+* The time complexity is `O(n)`, since every item will enter/exit the stack once. Even if there is a `while` loop inside the `for` loop, the time complexity is stil `O(n)` because at most you touch each each index a maximum of 2 times, not `n` times.
+* Usually, we will push index to stack rather than array value. And something, we need to push `0` or `-1` at the beginning and the end of array so that we can calculate the first / last item of array. (See [84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md))
 
 ## [Queue](../topics/stack-queue.md)
 ### Characteristics
@@ -225,13 +236,14 @@ while (queue.isNotEmpty()) {
 ## [Heap](../topics/heap.md)
 ### Characteristics
 * Find the optimal element or extremum **dynamically**.
+* Find the top / smallest K or Kth element.
 
 ### Approaches
 * Top K elements: 
     * Maintain a max heap, and push all elements, then pop `k` times. --> `O(n lg n)` TC and `O(n)` SC.
     * Maintain a min heap with size `k`. --> `O(n lg k)` TC and `O(k)` SC.
-    * Bucket sort: `O(n)` TC and `O(n)` SC.
-    * Quick select: `O(n)` TC and `O(1)` SC.
+    * *Bucket sort*: `O(n)` TC and `O(n)` SC.
+    * *Quick select*: `O(n)` TC and `O(1)` SC.
 > See problem [215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md) or [347. Top K Frequent Elements](../leetcode/347.top-k-frequent-elements.md)
 * Merge K ways: Maintain `k` pointers and push to heap, then pop the optimal element and push the next element from the same list.
 ```js
@@ -435,14 +447,36 @@ fun bfs(root: TreeNode?) {
 * To find the order / prerequisite / dependency, we can use **topological sort**.
 
 ### Approaches
-1. Figure out the **states** and **operations**, then build the graph.
-1. Start to traversal all possible nodes without duplicates in DFS / BFS, we have to record the visited nodes. 
+* Figure out the **states** and **operations**, then build the graph.
+* Start to traversal all possible nodes without duplicates in DFS / BFS, we have to record the visited nodes. 
 
 > Binary tree is a special case of graph, so we can use the same approach to solve the problem, however, tree is directed graph without cycle, so we don't need to record the visited nodes.
 > 
 > For more detail on recursion techniques, see [tree](#tree).
 
-* DFS
+* For some problems, we might start searching from the path of **invalid state** or from the entrance of the borders in the graph, rather than the valid state, it might help to reduce the time complexity.
+
+* Build the graph from edges array:
+```kotlin
+fun buildGraph(edges: Array<IntArray>): HashMap<Int, HashSet<Int>> {
+    val graph = hashMapOf<Int, HashSet<Int>>()
+    for (edge in edges) {
+        val (x, y) = edge
+        if (!graph.containsKey(x)) {
+            graph[x] = hashSetOf()
+        }
+        if (!graph.containsKey(y)) {
+            graph[y] = hashSetOf()
+        }
+        graph[x]!!.add(y)
+        graph[y]!!.add(x)
+    }
+    return graph
+}
+```
+
+#### DFS
+* General template:
 ```kotlin
 fun dfs(input, visited) {
     if (visited.contains(input) || meet some conditions) return
@@ -453,6 +487,50 @@ fun dfs(input, visited) {
         // Skip visited nodes
         if (visited.contains(next)) continue
         dfs(next, visited)
+    }
+}
+```
+
+* Template for matrix / 2D array:
+```kotlin
+// 4 directions
+val directions = arrayOf(
+    intArrayOf(-1, 0),  // up
+    intArrayOf(1, 0),   // down
+    intArrayOf(0, -1),  // left
+    intArrayOf(0, 1)    // right
+)
+
+fun problemSolving(graph: Array<IntArray>) {
+    val visited = hashSetOf<Pair<Int, Int>>()
+    for (m in 0 until graph.size) {
+        for (n in 0 until graph[m].size) {
+            // Check some conditions or have not visited before 
+            if (graph[m][n] = ...) {
+                dfs(graph, m, n, visited)
+            }
+        }
+    }
+}
+
+fun dfs(graph: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>) {
+    // Skip the positions that are out of boundary or 
+    // current (x, y) is not what we want or
+    // have visited before.
+    if (x < 0 || x > graph.size - 1 ||
+        y < 0 || y > graph[x].size ||
+        graph[x][y] = ... ||
+        visited.contains(x to y) ||
+        ...) return
+
+    // TODO: Do something with the current position
+    
+    visited.add(x to y)
+
+    // Then dfs the adjacency vertices
+    directions.forEach {
+        // Or we can check the boundary here
+        dfs(graph, x + it[0], y + it[1])
     }
 }
 ```
@@ -468,7 +546,14 @@ fun bfs(input, visited) {
         val size = queue.size
         for (i in 0 until size) {
             val node = queue.removeFirst()
-            if (visited.contains(node)) continue
+
+            // Skip the positions that are out of boundary or 
+            // have visited before or does not meet requirement.
+            if (x < 0 || x > graph.size - 1 ||
+             y < 0 || y > graph[x].size ||
+              visited.contains(x to y) ||
+               ...) continue
+               
             // Record visited nodes
             visited.add(node)
             // Do something
@@ -491,6 +576,12 @@ if (distance[next] >= distance[current] + 1) {
     queue.addLast(next)
 }
 ```
+
+* Corner cases:
+    * Empty graph
+    * Graph with few nodes (1 or 2)
+    * Disjoint graphs
+    * Graph with cycle (might not be able to resolve recursively)
 
 ## Resources
 * https://labuladong.github.io/algo/home/

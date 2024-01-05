@@ -65,7 +65,7 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 |--------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------|
 | 1. Random access.<br>2. No `next` field, saving space. (vs Linked List) | 1. Bad at insert/delete. (Copy to new array)<br>2. Bad at resize. (Copy to new array) | 1. Fast access.<br>2. Fix size |
 
-## Array in Kotlin
+## Kotlin APIs
 ```kotlin
 val array = IntArray(3) { 5 } // [5, 5, 5]
 array.sliceArray(1..5)   // subarray of A[1:5]
