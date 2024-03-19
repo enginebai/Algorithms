@@ -5,6 +5,8 @@
 |------------------|------------|
 |[989. Add to Array-Form of Integer](../leetcode/989.add-to-array-form-of-integer.md)|Easy|
 |[238. Product of Array Except Self](../leetcode/238.product-of-array-except-self.md)|Medium|
+|[2909. Minimum Sum of Mountain Triplets II](../leetcode/2909.minimum-sum-of-mountain-triplets-ii.md)|Medium|
+|[2874. Maximum Value of an Ordered Triplet II](../leetcode/2874.maximum-value-of-an-ordered-triplet-ii.md)|Medium|
 |[581. Shortest Unsorted Continuous Subarray](../leetcode/581.shortest-unsorted-continuous-subarray.md)|Medium|
 |[941. Valid Mountain Array](../leetcode/941.valid-mountain-array.md)|Easy|
 |[845. Longest Mountain in Array](../leetcode/845.longest-mountain-in-array.md)|Medium|
@@ -315,6 +317,7 @@
 > * Solved: https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
 > * Solved: https://leetcode.com/problems/construct-string-from-binary-tree/ 3k e
 > * Solved: https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/ To understand the initial value of `minutes`, and `infected` variable.
+> * Solved: https://leetcode.com/problems/even-odd-tree/description/
 > * https://leetcode.com/problems/count-complete-tree-nodes 8k e
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 7k m
 > * https://leetcode.com/problems/find-duplicate-subtrees 6k m
@@ -530,6 +533,7 @@
 > * https://leetcode.com/problems/interleaving-string/ 6k m
 > * https://leetcode.com/problems/arithmetic-slices/ 4k m
 > * https://leetcode.com/problems/cherry-pickup/ 3k h
+> * https://leetcode.com/problems/cherry-pickup-ii/ 
 > * https://leetcode.com/problems/super-egg-drop/ 3k h
 > * https://leetcode.com/problems/minimum-cost-to-cut-a-stick/ 3k h
 > * https://leetcode.com/problems/arithmetic-slices-ii-subsequence/ 2k h
