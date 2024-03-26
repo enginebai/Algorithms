@@ -126,12 +126,14 @@
 |[128. Longest Consecutive Sequence](../leetcode/128.longest-consecutive-sequence.md)|Medium|
 |[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
 |[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
-|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
+
 |[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
-|[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
-|[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
 |[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
+|[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
+|[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
+
+|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
 |[1002. Find Common Characters](../leetcode/1002.find-common-characters.md)|Easy|
 |[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|

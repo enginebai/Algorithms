@@ -66,17 +66,6 @@ Comparison to Linked List, see [Linked List](../topics/linked-list.md) topic.
 | 1. Random access.<br>2. No `next` field, saving space. (vs Linked List) | 1. Bad at insert/delete. (Copy to new array)<br>2. Bad at resize. (Copy to new array) | 1. Fast access.<br>2. Fix size |
 
 ## Array & String API
-### Kotlin
-```kotlin
-val array = IntArray(3) { 5 } // [5, 5, 5]
-array.sliceArray(1..5)   // subarray of A[1:5]
-array.sliceArray(3 until array.size) // subarray of A[3:]
-
-val string = "Hello, World!"
-string[1] // 'e'
-string.substring(1, 5) // "ello"
-```
-
 ### Python
 ```python
 # Subarray or substring
@@ -101,6 +90,17 @@ re.sub(r'\.', '[.]', ip)
 # Count
 s = 'abac'
 count = collections.Counter(s)
+```
+
+### Kotlin
+```kotlin
+val array = IntArray(3) { 5 } // [5, 5, 5]
+array.sliceArray(1..5)   // subarray of A[1:5]
+array.sliceArray(3 until array.size) // subarray of A[3:]
+
+val string = "Hello, World!"
+string[1] // 'e'
+string.substring(1, 5) // "ello"
 ```
 
 ## Resources
