@@ -121,8 +121,12 @@ class OpenAddress<T> {
 2. **Quadratic Probling**: `h(key, probe) = (h1(key) + c1 * probe + c2 * probe^2) mod m`.
 3. **Double Hashing**: `h(key, probe) = (h1(key) + probe * h2(key)) mod m`.
 
-## Kotlin APIs
-### `HashSet`
+## Hash Table API
+### Python
+
+
+### Kotlin
+#### `HashSet`
 
 ```kotlin
 val set = HashSet<Int>()
@@ -132,7 +136,7 @@ set.contains(123)
 set.isEmpty()
 ```
 
-### `HashMap`
+#### `HashMap`
 ```kotlin
 val map = HashMap<Int, Int>()
 map.size
