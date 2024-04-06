@@ -50,17 +50,17 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
-|[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
-|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
-|[1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md)|Medium|
-|[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
 |[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
+|[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
+|[1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md)|Medium|
+|[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
+|[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
+|[713. Subarray Product Less Than K](../leetcode/713.subarray-product-less-than-k.md)|Medium|
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
 |[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
 |[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
-|[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium|
-|[713. Subarray Product Less Than K](../leetcode/713.subarray-product-less-than-k.md)|Medium|
 |[1876. Substrings of Size Three with Distinct Characters](../leetcode/1876.substrings-of-size-three-with-distinct-characters.md)|Easy|
+|[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium|
 |[2875. Minimum Size Subarray in Infinite Array](../leetcode/2875.minimum-size-subarray-in-infinite-array.md)|Medium|
 
 > * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ 5k m
@@ -126,18 +126,15 @@
 |[128. Longest Consecutive Sequence](../leetcode/128.longest-consecutive-sequence.md)|Medium|
 |[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
 |[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
-
 |[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
 |[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
 |[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
-
 |[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
 |[1002. Find Common Characters](../leetcode/1002.find-common-characters.md)|Easy|
-|[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
-|[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
+|[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
 
 > ----
 > * https://leetcode.com/problems/naming-a-company h
@@ -233,6 +230,7 @@
 |[2095. Delete the Middle Node of a Linked List](../leetcode/2095.delete-the-middle-node-of-a-linked-list.md)|Medium|
 |[1669. Merge In Between Linked Lists](../leetcode/1669.merge-in-between-linked-lists.md)|Medium|
 |[86. Partition List](../leetcode/86.partition-list.md)|Medium|
+|[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 
 > * https://leetcode.com/problems/split-linked-list-in-parts/description/ 4k m
 > * https://leetcode.com/problems/reverse-nodes-in-k-group/ 10k h

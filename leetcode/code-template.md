@@ -1,17 +1,6 @@
-## Solution Note Template
-```markdown
-## [Problem]()
+# Code Templates
 
-### Solution Names
-Description
-
-* **Time Complexity**: `O(n)`.
-* **Space Complexity**: `O(n)`.
-```
-
-## Code Templates
-
-### CodeForces
+## CodeForces
 ```kotlin
 import java.io.PrintWriter
 import java.util.StringTokenizer
@@ -53,7 +42,7 @@ fun main() {
 }
 ```
 
-### Two Sum in Sorted Array
+## Two Sum in Sorted Array
 Two pointers approach to check if two elements that can sum up to `k`.
 
 ```kotlin
@@ -70,7 +59,7 @@ fun twoSum(A: IntArray, k: Int): Boolean {
 }
 ```
 
-### Reverse Array in Specific Range
+## Reverse Array in Specific Range
 Avoid iterating `i` from `start` to `end`, it's error-prone.
 
 ```kotlin
@@ -85,7 +74,7 @@ fun reverseArray(nums: IntArray, start: Int, end: Int) {
 }
 ```
 
-### Find the largest Two Numbers
+## Find the Largest Two Numbers
 ```kotlin
 fun findLargestTwoNumbers(nums: IntArray) {
     var first = Int.MIN_VALUE

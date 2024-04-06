@@ -62,6 +62,12 @@
 * Subarray / Substring
 
 ### Approaches
+1. The two pointers start from the beginning of the array.
+2. Try to expand the window by moving the right pointer until the window is valid.
+3. Start to shrink the window by moving the left pointer when the window is invalid or to minimize the window size.
+4. Update the result or some information of the window.
+5. Repeat the process until the right pointer reaches the end of the array.
+
 ```kotlin
 fun slidingWindowsProblem(str: String) {
     var left = 0
@@ -70,7 +76,7 @@ fun slidingWindowsProblem(str: String) {
         // Update the window
         val character = str[right]
 
-        // Check if we need to shrink the window
+        // Window contains invalid value, shrink the window
         while (window needs shrink) {
             // Update the window
             val d = s[start]
