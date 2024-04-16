@@ -31,12 +31,13 @@ var result = -1
 
 while (left <= right) {
     val middle = ...
+    // 100% sure that middle is the target
     if (A[middle] == target) result = middle
 
     ...
 }
 
-// Or
+// Or we update the result when we found the target, and shrink the searching range
 while (left <= right) {
     val middle = ...
 

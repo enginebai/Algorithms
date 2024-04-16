@@ -72,15 +72,54 @@ data class BinaryTree<T> (
 
 > The `h` is `lg n` for average case (balanced), but `n` for skewed tree, it doesn't guarantee to be `lg n`.
 
-### Complete/Full Binary Tree
+### Complete/Full/Perfect Binary Tree
 ![Complete or Full binary tree](../media/binary-tree-complete-full.png)
-
-A *full*  binary tree of level `k` is a binary tree that has `2^k - 1` nodes.
-
+A *perfect* binary tree of level `k` is a binary tree that has `2^k - 1` nodes:
 * Each nodes have two children.
 * Each leafs are at the same depth (or height).
+```
+      1
+    /   \
+   2     3
+  / \   / \
+ 4   5 6   7
+```
+
+A *full* binary tree has:
+* Every node has either 0 or 2 children.
+```
+      1
+    /   \
+   2     3
+  / \  
+ 4   5 
+```
 
 A binary tree with `n` nodes of level `k` is *complete* iff its nodes are numbered 1 to `n` in the full binary tree of level `k`.
+
+```
+// Complete
+      1
+    /   \
+   2     3
+  / \   /
+ 4   5 6
+
+// Not complete
+      1
+    /   \
+   2     3
+  / \     \
+ 4   5     7
+```
+
+> 口訣: 
+> 
+> * perfect binary tree ：各層節點全滿。同時也是 full binary tree 和 complete binary tree 。
+> 
+> * full binary tree ：除了樹葉以外，每個節點都有兩個小孩。
+>
+> * complete binary tree ：各層節點全滿，除了最後一層，最後一層節點全部靠左。
 
 ## Traversal
 Traversal of a binary tree means to **visit each node in the tree exactly once** (get a linear order of node data). Let `L`, `D`, `R` stand for moving left, print the data, moving right, repectively, and we adopt the convention that we traverse left before right, then we have three traversals: `DLR`, `LDR`, `LRD`, that are *preorder*, *inorder* and *postorder* (depends on `D`) (also known as *depth-first search*, *DFS*).

@@ -94,7 +94,7 @@
 > ----
 > * https://leetcode.com/problems/maximum-population-year/description/ 1k e
 
-### String
+## String
 | Problem          | Difficulty |
 |------------------|------------|
 |[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
@@ -117,7 +117,7 @@
 > * TODO: [String Problem List](https://leetcode.com/list/ehkbkaxt/)
 > * https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
 
-## [Hash](../topics/hash-table.md)
+## [Hash Table](../topics/hash-table.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
@@ -126,19 +126,22 @@
 |[128. Longest Consecutive Sequence](../leetcode/128.longest-consecutive-sequence.md)|Medium|
 |[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
 |[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
+|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
+|[1002. Find Common Characters](../leetcode/1002.find-common-characters.md)|Easy|
+|[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
+|[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
+> ----
+> * https://leetcode.com/problems/naming-a-company h
+> * https://leetcode.com/problems/n-repeated-element-in-size-2n-array/ 1k e
+
+### Cyclic Sort
+| Problem          | Difficulty |
+|------------------|------------|
 |[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
 |[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
 |[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
-|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
-|[1002. Find Common Characters](../leetcode/1002.find-common-characters.md)|Easy|
-|[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
-|[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
-
-> ----
-> * https://leetcode.com/problems/naming-a-company h
-> * https://leetcode.com/problems/n-repeated-element-in-size-2n-array/ 1k e
 
 ### Prefix Sum
 | Problem          | Difficulty |
@@ -170,18 +173,29 @@
 |[35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy|
 |[278. First Bad Version](../leetcode/278.first-bad-version.md)|Easy|
 |[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
+|[162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
+|[1095. Find in Mountain Array](../leetcode/1095.find-in-mountain-array.md)|Hard|
+|[658. Find K Closest Elements](../leetcode/658.find-k-closest-elements.md)|Medium|
+
+### Search in Rotated Array
+| Problem          | Difficulty |
+|------------------|------------|
 |[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
 |[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
 |[287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)|Medium|
 |[540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium|
+### Search in Matrix
+| Problem          | Difficulty |
+|------------------|------------|
 |[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
 |[240. Search a 2D Matrix II](../leetcode/240.search-a-2d-matrix-ii.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
-|[162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
-|[1095. Find in Mountain Array](../leetcode/1095.find-in-mountain-array.md)|Hard|
+
+### Search on Value
+| Problem          | Difficulty |
+|------------------|------------|
 |[875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)|Medium|
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
-|[658. Find K Closest Elements](../leetcode/658.find-k-closest-elements.md)|Medium|
 
 > * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
 > * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 9k m
@@ -278,46 +292,61 @@
 > * https://leetcode.com/problems/removing-stars-from-a-string/ 3k m
 > * TODO: try to understand the monotonic stack solution for this https://leetcode.com/problems/sum-of-subarray-ranges/ 2k m
 > * https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced 1.5k m
+> * https://leetcode.com/problems/valid-parenthesis-string/ 6k m
 
 ## [Tree](../topics/tree.md)
+### Traversal
 | Problem          | Difficulty |
 |------------------|------------|
 |[94. Binary Tree Inorder Traversal](../leetcode/94.binary-tree-inorder-traversal.md)|Easy|
 |[102. Binary Tree Level Order Traversal](../leetcode/102.binary-tree-level-order-traversal.md)|Medium|
-|[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
-|[104. Maximum Depth of Binary Tree](../leetcode/104.maximum-depth-of-binary-tree.md)|Easy|
-|[111. Minimum Depth of Binary Tree](../leetcode/111.minimum-depth-of-binary-tree.md)|Easy|
-|[226. Invert Binary Tree](../leetcode/226.invert-binary-tree.md)|Easy|
-|[101. Symmetric Tree](../leetcode/101.symmetric-tree.md)|Easy|
-|[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
-|[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
-|[236. Lowest Common Ancestor of a Binary Tree](../leetcode/236.lowest-common-ancestor-of-a-binary-tree.md)|Medium|
-|[543. Diameter of Binary Tree](../leetcode/543.diameter-of-binary-tree.md)|Easy|
-|[124. Binary Tree Maximum Path Sum](../leetcode/124.binary-tree-maximum-path-sum.md)|Hard|
-|[114. Flatten Binary Tree to Linked List](../leetcode/114.flatten-binary-tree-to-linked-list.md)|Medium|
-|[116. Populating Next Right Pointers in Each Node](../leetcode/116.populating-next-right-pointers-in-each-node.md)|Medium|
 |[199. Binary Tree Right Side View](../leetcode/199.binary-tree-right-side-view.md)|Medium|
-|[100. Same Tree](../leetcode/100.same-tree.md)|Easy|
-|[863. All Nodes Distance K in Binary Tree](../leetcode/863.all-nodes-distance-k-in-binary-tree.md)|Medium|
-|[110. Balanced Binary Tree](../leetcode/110.balanced-binary-tree.md)|Easy|
-|[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
-|[572. Subtree of Another Tree](../leetcode/572.subtree-of-another-tree.md)|Easy|
+|[116. Populating Next Right Pointers in Each Node](../leetcode/116.populating-next-right-pointers-in-each-node.md)|Medium|
 |[103. Binary Tree Zigzag Level Order Traversal](../leetcode/103.binary-tree-zigzag-level-order-traversal.md)|Medium|
-|[617. Merge Two Binary Trees](../leetcode/617.merge-two-binary-trees.md)|Easy|
-|[662. Maximum Width of Binary Tree](../leetcode/662.maximum-width-of-binary-tree.md)|Medium|
-|[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium|
-|[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium|
+|[236. Lowest Common Ancestor of a Binary Tree](../leetcode/236.lowest-common-ancestor-of-a-binary-tree.md)|Medium|
+|[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
+|[1026. Maximum Difference Between Node and Ancestor](../leetcode/1026.maximum-difference-betwwen-node-and-ancestor.md)|Medium|
+|[2265. Count Nodes Equal to Average of Subtree](../leetcode/2265.count-nodes-equal-to-average-of-subtree.md)|Medium|
 |[1315. Sum of Nodes with Even-Valued Grandparent](../leetcode/1315.sum-of-nodes-with-even-valued-grandparent.md)|Medium|
 |[988. Smallest String Starting From Leaf](../leetcode/988.smallest-string-starting-from-leaf.md)|Medium|
-|[1026. Maximum Difference Between Node and Ancestor](../leetcode/1026.maximum-difference-betwwen-node-and-ancestor.md)|Medium|
 |[1161. Maximum Level Sum of a Binary Tree](../leetcode/1161.maximum-level-sum-of-a-binary-tree.md)|Medium|
+
+### Distance
+| Problem          | Difficulty |
+|------------------|------------|
+|[662. Maximum Width of Binary Tree](../leetcode/662.maximum-width-of-binary-tree.md)|Medium|
+|[104. Maximum Depth of Binary Tree](../leetcode/104.maximum-depth-of-binary-tree.md)|Easy|
+|[111. Minimum Depth of Binary Tree](../leetcode/111.minimum-depth-of-binary-tree.md)|Easy|
+|[543. Diameter of Binary Tree](../leetcode/543.diameter-of-binary-tree.md)|Easy|
+|[863. All Nodes Distance K in Binary Tree](../leetcode/863.all-nodes-distance-k-in-binary-tree.md)|Medium|
+
+### Structure
+| Problem          | Difficulty |
+|------------------|------------|
+|[100. Same Tree](../leetcode/100.same-tree.md)|Easy|
+|[101. Symmetric Tree](../leetcode/101.symmetric-tree.md)|Easy|
+|[110. Balanced Binary Tree](../leetcode/110.balanced-binary-tree.md)|Easy|
+|[226. Invert Binary Tree](../leetcode/226.invert-binary-tree.md)|Easy|
+|[617. Merge Two Binary Trees](../leetcode/617.merge-two-binary-trees.md)|Easy|
+|[114. Flatten Binary Tree to Linked List](../leetcode/114.flatten-binary-tree-to-linked-list.md)|Medium|
+|[572. Subtree of Another Tree](../leetcode/572.subtree-of-another-tree.md)|Easy|
+|[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium|
+|[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
+
+### Path
+| Problem          | Difficulty |
+|------------------|------------|
+|[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
+|[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
+|[124. Binary Tree Maximum Path Sum](../leetcode/124.binary-tree-maximum-path-sum.md)|Hard|
 |[1022. Sum of Root To Leaf Binary Numbers](../leetcode/1022.sum-of-root-to-leaf-binary-numbers.md)|Easy|
-|[2265. Count Nodes Equal to Average of Subtree](../leetcode/2265.count-nodes-equal-to-average-of-subtree.md)|Medium|
+|[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium|
 
 > * Solved: https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
 > * Solved: https://leetcode.com/problems/construct-string-from-binary-tree/ 3k e
 > * Solved: https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/ To understand the initial value of `minutes`, and `infected` variable.
 > * Solved: https://leetcode.com/problems/even-odd-tree/description/
+> * https://leetcode.com/problems/sum-of-left-leaves/ 5k e
 > * https://leetcode.com/problems/count-complete-tree-nodes 8k e
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 7k m
 > * https://leetcode.com/problems/find-duplicate-subtrees 6k m
@@ -343,18 +372,18 @@
 > * https://leetcode.com/problems/sum-of-distances-in-tree/ 5k h
 > * https://leetcode.com/problems/binary-tree-cameras/ 5k h
 
-## [Binary Search Tree](../topics/tree.md#binary-search-tree)
+### [Binary Search Tree](../topics/tree.md#binary-search-tree)
 | Problem          | Difficulty |
 |------------------|------------|
 |[700. Search in a Binary Search Tree](../leetcode/700.search-in-a-binary-search-tree.md)|Easy|
 |[108. Convert Sorted Array to Binary Search Tree](../leetcode/108.convert-sorted-array-to-binary-search-tree.md)|Easy|
+|[98. Validate Binary Search Tree](../leetcode/98.validate-binary-search-tree.md)|Medium|
 |[701. Insert into a Binary Search Tree](../leetcode/701.insert-into-a-binary-search-tree.md)|Medium|
 |[450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md)|Medium|
-|[98. Validate Binary Search Tree](../leetcode/98.validate-binary-search-tree.md)|Medium|
-|[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
-|[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
-|[653. Two Sum IV - Input is a BST](../leetcode/653.two-sum-iv-input-is-a-bst.md)|Easy|
 |[669. Trim a Binary Search Tree](../leetcode/669.trim-a-binary-search-tree.md)|Medium|
+|[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
+|[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
+|[653. Two Sum IV - Input is a BST](../leetcode/653.two-sum-iv-input-is-a-bst.md)|Easy|
 |[897. Increasing Order Search Tree](../leetcode/897.increasing-order-search-tree.md)|Easy|
 |[530. Minimum Absolute Difference in BST](../leetcode/530.minimum-absolute-difference-in-bst.md)|Easy|
 
@@ -367,7 +396,7 @@
 > * https://leetcode.com/problems/all-elements-in-two-binary-search-trees/ 3k m
 > * https://leetcode.com/problems/serialize-and-deserialize-bst/ 2k m
 
-## Trie
+### Trie
 | Problem          | Difficulty |
 |------------------|------------|
 |[208. Implement Trie (Prefix Tree)](../leetcode/208.implement-trie.md)|Medium|
