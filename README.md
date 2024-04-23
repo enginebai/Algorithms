@@ -22,7 +22,7 @@ This project offers a curated collection of notes and resources covering fundame
 - [Backtracking](./topics/backtracking.md)
 
 ## Problems & Solutions
-- [LeetCode Solutions](./topics/leetcode-solutions.md)
+- [LeetCode Problem Listing](./leetcode/README.md)
 - [Problem Solving Techniques](./topics/problem-solving.md)
 
 ## Roadmap
