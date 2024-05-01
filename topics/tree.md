@@ -403,10 +403,9 @@ fun searchIteratively(node: Node<T>?, k: T): Node? {
     }
     return searchNode
 }
-
-search(tree.root, k)
-searchIteratively(tree.root, k)
 ```
+
+> Sample problem: [700. Search in a Binary Search Tree](../leetcode/700.search-in-a-binary-search-tree.md)
 
 * To find the *minimum / maximum* is very straightforward, just find the left / right most node. (Simply use `subtreeFirst()` and `subtreeLast()` in binary tree)
 * To find the *successor / predecessor*, we also simply use `successor()` and `predecessor()` in binary tree)
@@ -446,9 +445,9 @@ fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
     return root
 }
 ```
+> Sample problem: [701. Insert into a Binary Search Tree](../leetcode/701.insert-into-a-binary-search-tree.md)
 
 The deletion of BST, we can take a look at problem [450. Delete Node in a BST](../leetcode/450.delete-node-in-a-bst.md).
-
 
 ## Resources
 - Fundamental of Data Structure

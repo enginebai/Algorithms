@@ -137,7 +137,7 @@
 ### Cyclic Sort
 | Problem          | Difficulty |
 |------------------|------------|
-|[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
+|**[41. First Missing Positive](../leetcode/41.first-missing-positive.md)**|Hard|
 |[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
@@ -147,7 +147,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[1588. Sum of All Odd Length Subarrays](../leetcode/1588.sum-of-all-odd-length-subarrays.md)|Easy|
-|[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
+|**[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)**|Medium|
 |[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
 > * https://leetcode.com/problems/contiguous-array/description/ 7k m
 > * https://leetcode.com/problems/binary-subarrays-with-sum/description/ 3k m
