@@ -1,7 +1,10 @@
 # Graph
 A graph `G = (V, E)`, consists of `V` (set of *vertices*) and `E` (*edges* of vertices). 
 
-* There are *undirected* and *directed* graph, the pair `(x, y)` and `(y, x)` represent the same edge in a undirected graph, whereas, that are two different edges in directed graph, where `(x, y)` represents `x` (head) to `y` (tail). 
+* There are *undirected* and *directed* graph, the pair `(x, y)` and `(y, x)` represent the same edge in a undirected graph, whereas, that are two different edges in directed graph, where `(x, y)` represents `x` (head) to `y` (tail).
+* The graph can be *weighted* or *unweighted*, the edge has a *weight* in weighted graph, and the value can be *positive* or *negative*.
+* The graph can be *cyclic* or *acyclic*, the graph has a cycle if there is a path from a vertex to itself.
+* The graph can be *connected* or *disconnected*, the graph is connected if there is a path from every vertex to every other vertex. 
 * For the edge `e = (x, y)`, we will say `e` is an *incoming* edge of `y` and an *outgoing* edge of `x`.
 * The *in-degree* and *out-degree* of a vertex denotes the number of incoming and outgoing edges of the vertex. 
 
@@ -23,21 +26,25 @@ In adjacency list, we use an array of linked lists (or array or list) to represe
 ```kotlin
 // 1 -> 2 -> 4 -> 5 -> 6
 val v1 = ListNode(1)
+v1.next = ListNode(2)
+v1.next?.next = ListNode(4)
 ...
+
 // 2 -> 1 -> 4
 val v2 = ListNode(2)
+v2.next = ListNode(1)
 ...
+
 // Using array of linked list
 val adjacencyList = arrayOf(
     v1,
     v2,
-    v3
+    ...
 )
 
 // or using array of list
-// 0 - 1 or 0 -> 1
-val vertices = 10
-val graph = Array(vertices) { mutableListOf<Int>() }
+val verticesCount = 10
+val graph = Array(verticesCount) { mutableListOf<Int>() }
 graph[0].add(1)
 graph[1].add(0) // for undirected graph
 
@@ -90,9 +97,9 @@ val undirectedGraph = arrayOf(
 val directedGraph = arrayOf(
     intArrayOf(0, 8, 0, 0, 5),
     intArrayOf(8, 0, 3, 1, 0),
-    intArrayOf(0, 3, 2, 7, 0),
+    intArrayOf(0, 3, 2,-7, 0),
     intArrayOf(0, 0, 7, 0, 0),
-    intArrayOf(5, 0, 0, 0, 1)
+    intArrayOf(5, 0, 0, 0,-1)
 )
 ```
 
@@ -134,9 +141,9 @@ data class Node<T>(
 ) {
     // Initialize all vertices with color, inifinite distance and null predecessor.
     var visitState: VisitState = NOT_VISIT
-    // Store the distance from source to this node
+    // Store the distance from source to this node (optional property)
     var distance: Int = Int.MAX
-    // Store to construct the shortest path
+    // Store to construct the shortest path (optional property)
     var predecessor: Node<T>? = null
 }
 
@@ -154,7 +161,7 @@ fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
         // Visit the current vertex
         vertexToVisit.visitState = VISITED
 
-        // TODO: Do something with the vertex
+        // Do something with the vertex
 
         // Enque all its non-visiting adjacent vertices.
         val adjacentVertices = graph[vertexToVisit]
@@ -194,7 +201,7 @@ data class Node<T>(
     var distance: Int = Int.MAX
     var predecessor: Node<T>? = null
 
-    // For DFS
+    // For DFS, they are also optional properties
     var discoverTime: Int? = null
     var finishTime: Int? = null
 }
@@ -249,9 +256,9 @@ fun topologicalSort(graph: Map) {
 }
 ```
 
-In another way, you can run DFS first and sort the vertices by finish time descending order, it will be topological sort as well.
+In another way, you can run DFS first and sort the vertices by finish time descending order, it will be topological sort as well. The topological sort of the same graph has more than one results. (DFS generates more than one orders)
 
-> The correct topological sort has more than one results. (DFS generates more than one orders)
+> Sample problem: [207. Course Schedule](../leetcode/207.course-schedule.md)
 
 ### Time Complexity
 It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to insert first of linked list.

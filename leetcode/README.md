@@ -6,3 +6,4 @@
 * [Tree](./tree-problems.md)
 * [Binary Search Tree](./bst-problems.md)
 * [Heap](./heap-problems.md)
+* [Graph](./graph-problems.md)

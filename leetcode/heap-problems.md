@@ -1,4 +1,4 @@
-## [Heap](../topics/heap.md)
+## [Heap Problems](../topics/heap.md)
 | Problem          | Difficulty |
 |------------------|------------|
 |**[215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md)**|Medium|
