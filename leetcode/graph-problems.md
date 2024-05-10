@@ -7,11 +7,15 @@
 |[733. Flood Fill](../leetcode/733.flood-fill.md)|Easy|
 |[200. Number of Islands](../leetcode/200.number-of-islands.md)|Medium|
 |[1254. Number of Closed Islands](../leetcode/1254.number-of-closed-islands.md)|Medium|
-|[130. Surrounded Regions](../leetcode/130.surrounded-regions.md)|Medium|
 |[695. Max Area of Island](../leetcode/695.max-area-of-island.md)|Medium|
+|[130. Surrounded Regions](../leetcode/130.surrounded-regions.md)|Medium|
 |[417. Pacific Atlantic Water Flow](../leetcode/417.pacific-atlantic-water-flow.md)|Medium|
 |[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
 |[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium|
+
+### Traversal Applications
+| Problem          | Difficulty |
+|------------------|------------|
 |[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
 |[399. Evaluate Division](../leetcode/399.evaluate-division.md)|Medium|
 |[433. Minimum Genetic Mutation](../leetcode/433.minimum-genetic-mutation.md)|Medium|
