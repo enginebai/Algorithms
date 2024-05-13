@@ -46,6 +46,12 @@
 |[1022. Sum of Root To Leaf Binary Numbers](../leetcode/1022.sum-of-root-to-leaf-binary-numbers.md)|Easy|
 |[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium|
 
+### Trie
+| Problem          | Difficulty |
+|------------------|------------|
+|[208. Implement Trie (Prefix Tree)](../leetcode/208.implement-trie.md)|Medium|
+
+
 > * Solved: https://leetcode.com/problems/find-largest-value-in-each-tree-row/ 3k m
 > * Solved: https://leetcode.com/problems/construct-string-from-binary-tree/ 3k e
 > * Solved: https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/ To understand the initial value of `minutes`, and `infected` variable.
@@ -75,3 +81,4 @@
 > * https://leetcode.com/problems/maximum-depth-of-n-ary-tree/ 3k e
 > * https://leetcode.com/problems/sum-of-distances-in-tree/ 5k h
 > * https://leetcode.com/problems/binary-tree-cameras/ 5k h
+> * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 6k m
