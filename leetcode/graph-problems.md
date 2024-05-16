@@ -66,6 +66,7 @@
 > * https://leetcode.com/problems/count-sub-islands 2k m
 > * https://leetcode.com/problems/as-far-from-land-as-possible/ 3k m
 > * https://leetcode.com/problems/word-ladder-ii/ 5k h
+> * https://leetcode.com/problems/find-the-safest-path-in-a-grid/description/
 > ----
 > * https://leetcode.com/problems/path-with-minimum-effort 5k m
 > * https://leetcode.com/problems/bus-routes 4k h
