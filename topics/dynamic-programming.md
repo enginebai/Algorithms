@@ -375,7 +375,7 @@ Let `dp[i][j]` represent the maximum value of capacity `j` from considering the 
 > We might skip this approach, we just start from bottom-up DP solution for knapsack problem.
 
 ```kotlin
-private val dp = Array(values.size + 1) { _ -> IntArray(capacity + 1) { _ -> -1 } }
+private val dp = Array(values.size + 1) { IntArray(capacity + 1) { -1 } }
 
 fun knapsack(i: Int, w: Int): Int {
     if (i == 0 || w == 0) return 0
@@ -400,7 +400,7 @@ knapsack(values.size, capacity)
 ### Bottom-Up DP
 ```kotlin
 fun knapsack(): Int {
-    val dp = Array(values.size + 1) { _ -> IntArray(capacity + 1) }
+    val dp = Array(values.size + 1) { IntArray(capacity + 1) }
 
     // Build up the solution in bottom-up fashion
     for (i in 0..values.size) {
@@ -445,7 +445,7 @@ fun knapsack(): Int {
     val dp = IntArray(capacity + 1)
     dp[0] = 0
     for (i in 1..values.size) {
-        // We iterate from capacity to w[i - 1] (decreasingly) and avoid overweight.
+        // We iterate from capacity to w[i - 1] (no need to 0) decreasingly to avoid duplicate counting (see below) and avoid overweight.
         // For overweight case, dp[w] = dp[w], it's trivial, we don't iterate.
         for (w in capacity downTo w[i - 1]) {
             dp[w] = max(
@@ -460,28 +460,43 @@ fun knapsack(): Int {
 }
 ```
 
+### Iteration Order for Space Optimization
+For space optimization, we have to iterate decreasingly from `capacity` to `0` to avoid double-counting. 
+![](../media/01-knapsack-1.png)
+
+For 2D DP `dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i]] + values[i])`, `dp[i - 1][w - weightsp[i]]` is coming from the previous row (previous iteration), but if we iterate increasingly, we might overwrite the value of `dp[i - 1][w - weights[i]]` before we calculate `dp[i][w]` for the current item `i`.
+
+We risk overwriting the values in the DP array that we still need for future calculations within the same iteration. This can lead to incorrect results as the DP array no longer correctly represents the state before the current item was considered. 
+
+![](../media/01-knapsack-2.png)
+
+1. Decreasing: Ensures that each update to the DP array is based on the state before the current item is considered, thus maintaining correctness.
+2. Increasing: Leads to potential reuse of the same item within the same iteration, which violates the constraints of the 01 Knapsack problem.
+
+Let's take a look at the following example:
 ```js
-// Iterate from capacity downTo 0
+// Iterate decreasingly from `capacity` to 0 (correct iteration order)
 w    0    1    2    3	
+-----------------------
 i=0  0    0    0    0	
 i=1  0   15   15   15
 i=2  0   15   20   35	
-maxValue = 35
+maxValue = 35 // Correct answer
 
-// Iterate from 0 to capacity
+// Iterate increasingly from 0 to `capacity`
 w    0    1    2    3	
+-----------------------
 i=0  0    0    0    0	
 i=1  0   15   30   45	
 i=2  0   15   30   45
-maxValue = 45
+maxValue = 45 // Wrong answer
 ```
 
-When we count `dp[2]` for `i=1`:
+Explanation: when we count `dp[2]` for `i=1`:
 * 2D: `dp[1][2] = max(dp[0][2], dp[0][1] + 15)`, where `dp[0][1]` and `dp[0][2]` are zero.
 * 1D `dp[2] = max(dp[2], dp[1] + 15)`:
-    * Iterate from 0 to `capacity`, `dp[1]` will be updated when calculate `i=1`, whereas it should be zero (`i=0`). It was overridden!!.
-    * Iterate from `capacity` to `w[i - 1]`, we won't override `dp[1]` and it keeps the value for `i=0` when calcluate `dp[2]` of `i=1`.
-    * Here we don't iterate to 0, because from `w[i - 1]` down to 0 are all cases that is overweight, it will skip taking item, and that will be `dp[w] = dp[w]`, which is trivial.
+    * Iterate **increasingly**: `dp[1]` will be updated when calculate `i=1`, whereas it should be zero (`i=0`). It was overridden!!.
+    * Iterate **decreasingly**: we won't override `dp[1]` and it keeps the value for `i=0` when calcluate `dp[2]` of `i=1`.
 
 ![](../media/01-knapsack.png)
 

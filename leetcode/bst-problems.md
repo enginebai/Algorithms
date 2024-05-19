@@ -9,7 +9,6 @@
 |[669. Trim a Binary Search Tree](../leetcode/669.trim-a-binary-search-tree.md)|Medium|
 |[235. Lowest Common Ancestor of a Binary Search Tree](../leetcode/235.lowest-common-acestor-of-a-binary-search-tree.md)|Easy|
 |[230. Kth Smallest Element in a BST](../leetcode/230.kth-smallest-element-in-a-bst.md)|Medium|
-
 |[653. Two Sum IV - Input is a BST](../leetcode/653.two-sum-iv-input-is-a-bst.md)|Easy|
 |[897. Increasing Order Search Tree](../leetcode/897.increasing-order-search-tree.md)|Easy|
 |[530. Minimum Absolute Difference in BST](../leetcode/530.minimum-absolute-difference-in-bst.md)|Easy|

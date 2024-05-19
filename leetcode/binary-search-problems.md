@@ -22,6 +22,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium|
+|[1351. Count Negative Numbers in a Sorted Matrix](../leetcode/1351.count-negative-numbers-in-a-sorted-matrix.md)|Easy|
 |[240. Search a 2D Matrix II](../leetcode/240.search-a-2d-matrix-ii.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
 
@@ -36,7 +37,7 @@
 > * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 6k
 > * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 5k e
 > * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs m 2k
-> * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 5k e
+> * https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/
 > * Search on value: 
     > * https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/
     > * https://leetcode.com/problems/minimum-time-to-complete-trips/description/
