@@ -3,7 +3,7 @@
 ## Overview
 * [Array](#array)
 * [Two Pointers](#two-pointers)
-* [Sliding Windows](#sliding-windows)
+* [Sliding Window](#sliding-windows)
 * [Sorting](#sorting)
 * [Binary Search](#binary-search)
 * [Hash Table / Prefix Sum](#hash-table)
@@ -26,7 +26,7 @@
         * [Greedy](#greedy)
     * No, sort first? or use [hash table](#hash-table)?
 * Subarray / substring?
-    * [Sliding Windows](#sliding-windows)
+    * [Sliding Window](#sliding-windows)
     * [Dynamic Programming](#dynamic-programming)
     * [Prefix Sum](#hash-table)
 * Palindromic substring / subsequence?
@@ -38,22 +38,23 @@
 
 ## Two Pointers
 ### Characteristics
-* A problem can be solved by two pointers when it reduces the total cases we need to consider. ([Source](https://leetcode.com/problems/subarray-sum-equals-k/solutions/301242/general-summary-of-what-kind-of-problem-can-cannot-solved-by-two-pointers/)), and also see [Sliding Windows](#sliding-windows).
 * (Sorted) Sequential data, window or subarray
 * Partitioning: `[even | odd]`, `[negative | positive]`...etc.
+* A problem can be solved by two pointers when it reduces the total cases we need to consider. ([Source](https://leetcode.com/problems/subarray-sum-equals-k/solutions/301242/general-summary-of-what-kind-of-problem-can-cannot-solved-by-two-pointers/)), and also see [Sliding Window](#sliding-windows).
 * Intersection or merge
 
 ### Approaches
 * Left / right pointers
 ```js
 [X, X, X, X, X, X]  
- L ->        <- R   // L at the beginning, R at the end
+ L ->        <- R   // L at the beginning, R at the end, and move in opposite directions
+ L/R ->             // L and R start from the beginning, and move in the same direction
  L --- R            // Range: [L, R]
 ```
 * Read / write pointers: Read every element and write when condition is met. (only take the element met the requirement)
 * Fast / slow pointers: Cycle detection
 
-## Sliding Windows
+## Sliding Window
 ### Characteristics
 * *Window*: valid value range, sliding window is applicable when meeting the following conditions:
     * If wider window is valid, then narrow window is also valid.

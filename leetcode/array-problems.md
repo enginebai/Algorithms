@@ -3,13 +3,14 @@
 |------------------|------------|
 |[989. Add to Array-Form of Integer](../leetcode/989.add-to-array-form-of-integer.md)|Easy|
 |[238. Product of Array Except Self](../leetcode/238.product-of-array-except-self.md)|Medium|
+|[334. Increasing Triplet Subsequence](../leetcode/334.increasing-triplet-subsequence.md)|Medium|
 |[2909. Minimum Sum of Mountain Triplets II](../leetcode/2909.minimum-sum-of-mountain-triplets-ii.md)|Medium|
 |[2874. Maximum Value of an Ordered Triplet II](../leetcode/2874.maximum-value-of-an-ordered-triplet-ii.md)|Medium|
 |[581. Shortest Unsorted Continuous Subarray](../leetcode/581.shortest-unsorted-continuous-subarray.md)|Medium|
 |[941. Valid Mountain Array](../leetcode/941.valid-mountain-array.md)|Easy|
 |[845. Longest Mountain in Array](../leetcode/845.longest-mountain-in-array.md)|Medium|
 |[73. Set Matrix Zeroes](../leetcode/73.set-matrix-zeros.md)|Medium|
-|[766. Toeplitz Matrix](../leetcode/76.minimum-window-substring.md)|Easy|
+|[766. Toeplitz Matrix](../leetcode/766.toeplitz-matrix.md)|Easy|
 |[48. Rotate Image](../leetcode/48.rotate-image.md)|Medium|
 |[54. Spiral Matrix](../leetcode/54.spiral-matrix.md)|Medium|
 |[59. Spiral Matrix II](../leetcode/59.spiral-matrix-ii.md)|Medium|
@@ -44,7 +45,7 @@
 |[80. Remove Duplicates from Sorted Array II](../leetcode/80.remove-duplicates-from-sorted-array-ii.md)|Medium|
 |[905. Sort Array By Parity](../leetcode/905.sort-array-by-parity.md)|Easy|
 
-### Sliding Windows
+### Sliding Window
 | Problem          | Difficulty |
 |------------------|------------|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
