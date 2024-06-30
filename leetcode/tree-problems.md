@@ -8,12 +8,13 @@
 |[116. Populating Next Right Pointers in Each Node](../leetcode/116.populating-next-right-pointers-in-each-node.md)|Medium|
 |[103. Binary Tree Zigzag Level Order Traversal](../leetcode/103.binary-tree-zigzag-level-order-traversal.md)|Medium|
 |[236. Lowest Common Ancestor of a Binary Tree](../leetcode/236.lowest-common-ancestor-of-a-binary-tree.md)|Medium|
-|[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
 |[1026. Maximum Difference Between Node and Ancestor](../leetcode/1026.maximum-difference-betwwen-node-and-ancestor.md)|Medium|
 |[2265. Count Nodes Equal to Average of Subtree](../leetcode/2265.count-nodes-equal-to-average-of-subtree.md)|Medium|
 |[1315. Sum of Nodes with Even-Valued Grandparent](../leetcode/1315.sum-of-nodes-with-even-valued-grandparent.md)|Medium|
 |[988. Smallest String Starting From Leaf](../leetcode/988.smallest-string-starting-from-leaf.md)|Medium|
 |[1161. Maximum Level Sum of a Binary Tree](../leetcode/1161.maximum-level-sum-of-a-binary-tree.md)|Medium|
+|[2331. Evaluate Boolean Binary Tree](../leetcode/2331.evaluate-boolean-binary-tree.md)|Easy|
+|[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
 
 ### Distance
 | Problem          | Difficulty |
@@ -35,6 +36,7 @@
 |[114. Flatten Binary Tree to Linked List](../leetcode/114.flatten-binary-tree-to-linked-list.md)|Medium|
 |[572. Subtree of Another Tree](../leetcode/572.subtree-of-another-tree.md)|Easy|
 |[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium|
+|[1110. Delete Nodes And Return Forest](../leetcode/1110.delete-nodes-and-return-forest.md)|Medium|
 |[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
 
 ### Path
@@ -56,6 +58,7 @@
 > * Solved: https://leetcode.com/problems/construct-string-from-binary-tree/ 3k e
 > * Solved: https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/ To understand the initial value of `minutes`, and `infected` variable.
 > * Solved: https://leetcode.com/problems/even-odd-tree/description/
+> * Attempted in Daily: https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/
 > * https://leetcode.com/problems/sum-of-left-leaves/ 5k e
 > * https://leetcode.com/problems/count-complete-tree-nodes 8k e
 > * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 7k m
@@ -70,6 +73,7 @@
 > * https://leetcode.com/problems/check-completeness-of-a-binary-tree/ 4k m
 > * https://leetcode.com/problems/delete-nodes-and-return-forest/ 3k m
 > * https://leetcode.com/problems/longest-univalue-path m 4k
+> * https://leetcode.com/problems/count-good-nodes-in-binary-tree/ 6k m
 > ----
 > * https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/ 5k m
 > * https://leetcode.com/problems/average-of-levels-in-binary-tree/ 5k e
@@ -82,3 +86,4 @@
 > * https://leetcode.com/problems/sum-of-distances-in-tree/ 5k h
 > * https://leetcode.com/problems/binary-tree-cameras/ 5k h
 > * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 6k m
+

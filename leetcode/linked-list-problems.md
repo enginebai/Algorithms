@@ -18,12 +18,12 @@
 |[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
 |[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
 |[328. Odd Even Linked List](../leetcode/328.odd-even-linked-list.md)|Medium|
-|[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[237. Delete Node in a Linked List](../leetcode/237.delete-node-in-a-linked-list.md)|Medium|
 |[2095. Delete the Middle Node of a Linked List](../leetcode/2095.delete-the-middle-node-of-a-linked-list.md)|Medium|
 |[1669. Merge In Between Linked Lists](../leetcode/1669.merge-in-between-linked-lists.md)|Medium|
 |[86. Partition List](../leetcode/86.partition-list.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
+|[2181. Merge Nodes in Between Zeros](../leetcode/2181.merge-nodes-in-between-zeros.md)|Medium|
 
 > * https://leetcode.com/problems/split-linked-list-in-parts/description/ 4k m
 > * https://leetcode.com/problems/reverse-nodes-in-k-group/ 10k h
@@ -32,5 +32,6 @@
 > * https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/
 > * https://leetcode.com/problems/remove-nodes-from-linked-list/description/
 > * https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/
+> * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 > ----
 > * https://leetcode.com/problems/insertion-sort-list/ 3k m

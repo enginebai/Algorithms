@@ -2,14 +2,15 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[622. Design Circular Queue](../leetcode/622.design-circular-queue.md)|Medium|
+|[1823. Find the Winner of the Circular Game](../leetcode/1823.find-the-winner-of-the-circular-game.md)|Medium|
 |[155. Min Stack](../leetcode/155.min-stack.md)|Easy|
 |[232. Implement Queue using Stacks](../leetcode/232.implement-queue-using-stacks.md)|Easy|
 |[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
 |[946. Validate Stack Sequences](../leetcode/946.validate-stack-sequences.md)|Medium|
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
+|[150. Evaluate Reverse Polish Notation](../leetcode/150.evaluate-reverse-polish-notation.md)|Medium|
 |[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
 |[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium|
-|[1823. Find the Winner of the Circular Game](../leetcode/1823.find-the-winner-of-the-circular-game.md)|Medium|
 
 ### Pattern Matching
 | Problem          | Difficulty |
@@ -30,18 +31,17 @@
 |[402. Remove K Digits](../leetcode/402.remove-k-digits.md)|Medium|
 |[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)|Hard|
 |[907. Sum of Subarray Minimums](../leetcode/907.sum-of-subarray-minimums.md)|Medium|
+|[2104. Sum of Subarray Ranges](../leetcode/2104.sum-of-subarray-ranges.md)|Medium|
 |[316. Remove Duplicate Letters](../leetcode/316.remove-duplicate-letters.md)|Medium|
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[2866. Beautiful Towers II](../leetcode/2866.beautiful-towers-ii.md)|Medium|
 
 > * Revisit https://leetcode.com/problems/beautiful-towers-ii/
 > * https://leetcode.com/problems/132-pattern/ 7k m
-> * https://leetcode.com/problems/evaluate-reverse-polish-notation/ 7k m
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
 > ----
 > * https://leetcode.com/problems/car-fleet/ 2k m
 > * https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/ 2k m
 > * https://leetcode.com/problems/removing-stars-from-a-string/ 3k m
-> * TODO: try to understand the monotonic stack solution for this https://leetcode.com/problems/sum-of-subarray-ranges/ 2k m
 > * https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced 1.5k m
 > * https://leetcode.com/problems/valid-parenthesis-string/ 6k m

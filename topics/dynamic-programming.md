@@ -510,7 +510,7 @@ Suppose we update `dp[8]` from `dp[3]` for item `i` (which weight is 5), and we'
 > * https://leetcode.com/problems/coin-change-2/discuss/176706/Beginner-Mistake%3A-Why-an-inner-loop-for-coins-doensn't-work-Java-Soln
 > * https://leetcode.com/problems/coin-change-2/discuss/141076/Unbounded-Knapsack/180294
 
-> **Note**: For bottom-up DP of 0/1 knapsack problem, we **CAN** exchange the order of two for-loop, however, space optimization and unbounded knapsack solution, **the for-loop order matters!!**
+> **Note**: For bottom-up 2D DP of 0/1 knapsack problem, we **CAN** exchange the order of two for-loop, however, space optimization and unbounded knapsack solution, **the for-loop order matters!!**
 
 ## Unbounded Knapsack Problems
 The difference between [0/1 Knapsack Problem](#0-1-knapsack-problem) is that we can put the unlimited amount of items into knapsack (with capacity limit).
@@ -539,7 +539,8 @@ fun knapsack(): Int {
     val dp = IntArray(capacity + 1)
     dp[0] = 0
     for (i in 1..values.size) {
-        // Mind the iterate order (different from 0/1 knapsack 1D DP
+        // It's OK to iterate weight increasingly (different from 0/1 knapsack 1D DP
+        // We allow to take the same item multiple times. (allow double-counting)
         for (w in weights[i - 1]..capacity) {
             dp[w] = max(dp[w], dp[w - weights[i - 1]] + values[i - 1])
         }

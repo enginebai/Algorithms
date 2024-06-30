@@ -3,11 +3,13 @@
 |------------------|------------|
 |[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
 |[69. Sqrt(x)](../leetcode/69.sqrt(x).md)|Easy|
-|[35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy|
-|[278. First Bad Version](../leetcode/278.first-bad-version.md)|Easy|
-|[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
 |[162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
 |[1095. Find in Mountain Array](../leetcode/1095.find-in-mountain-array.md)|Hard|
+|[278. First Bad Version](../leetcode/278.first-bad-version.md)|Easy|
+|[35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy|
+|[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
+|[287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)|Medium|
+|[540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium|
 |[658. Find K Closest Elements](../leetcode/658.find-k-closest-elements.md)|Medium|
 
 ### Search in Rotated Array
@@ -15,8 +17,7 @@
 |------------------|------------|
 |[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
 |[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
-|[287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)|Medium|
-|[540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium|
+
 
 ### Search in Matrix
 | Problem          | Difficulty |

@@ -61,15 +61,17 @@
 |[1876. Substrings of Size Three with Distinct Characters](../leetcode/1876.substrings-of-size-three-with-distinct-characters.md)|Easy|
 |[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium|
 |[2875. Minimum Size Subarray in Infinite Array](../leetcode/2875.minimum-size-subarray-in-infinite-array.md)|Medium|
+|[904. Fruit Into Baskets](../leetcode/904.fruit-into-baskets.md)|Medium|
 
 > * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ 5k m
+> * https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/ 4k m
 > * https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/ 6k m
-> * https://leetcode.com/problems/fruit-into-baskets/ 4k m
 > * https://leetcode.com/problems/count-number-of-nice-subarrays/ 4k m
 > * https://leetcode.com/problems/binary-subarrays-with-sum/ 3k m
 > * https://leetcode.com/problems/longest-nice-subarray/description/ 1k m
 > * https://leetcode.com/problems/word-subsets 3k m
 > * https://leetcode.com/problems/frequency-of-the-most-frequent-element 
+
 > ----
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 4k h
 > * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 4k h
@@ -81,6 +83,9 @@
 |[912. Sort an Array](../topics/sorting.md)|Medium|
 |[75. Sort Colors](../leetcode/75.sort-colors.md)|Medium|
 |[148. Sort List](../leetcode/148.sort-list.md)|Medium|
+
+> Solved: https://leetcode.com/problems/height-checker/description/
+> https://leetcode.com/problems/height-checker/ 
 
 ### Intervals
 | Problem          | Difficulty |
