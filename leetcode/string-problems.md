@@ -10,6 +10,11 @@
 |[925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy|
 |[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy|
 
+### Super Easy
+| Problem          | Difficulty |
+|------------------|------------|
+|[1790. Check if One String Swap Can Make Strings Equal](../leetcode/1790.check-if-one-string-swap-can-make-strings-equal.md)|Easy|
+
 #### Problem Listing
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
 > * https://leetcode.com/problems/accounts-merge/ 5k m

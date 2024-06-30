@@ -12,12 +12,13 @@
 |[653. Two Sum IV - Input is a BST](../leetcode/653.two-sum-iv-input-is-a-bst.md)|Easy|
 |[897. Increasing Order Search Tree](../leetcode/897.increasing-order-search-tree.md)|Easy|
 |[530. Minimum Absolute Difference in BST](../leetcode/530.minimum-absolute-difference-in-bst.md)|Easy|
+|[1382. Balance a Binary Search Tree](../leetcode/1382.balance-a-binary-search-tree.md)|Medium|
 
 > * https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/ 7k m
+> * Solved: https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/ 4k m
 > * https://leetcode.com/problems/unique-binary-search-trees-ii/ 7k m
 > * https://leetcode.com/problems/range-sum-of-bst/ 5k e
 > * https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/ 4k m
 > * https://leetcode.com/problems/convert-bst-to-greater-tree/ 5k m
-> * https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/ 3k m
 > * https://leetcode.com/problems/all-elements-in-two-binary-search-trees/ 3k m
 > * https://leetcode.com/problems/serialize-and-deserialize-bst/ 2k m

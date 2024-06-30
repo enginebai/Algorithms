@@ -30,7 +30,7 @@
     * [Dynamic Programming](#dynamic-programming)
     * [Prefix Sum](#hash-table)
 * Palindromic substring / subsequence?
-    * [Dynamic Programming]()
+    * [Dynamic Programming](#dynamic-programming)
 
 ### Approaches
 * We can iterate array from left to right, also from *right to left*.
@@ -55,38 +55,41 @@
 * Fast / slow pointers: Cycle detection
 
 ## Sliding Window
+`[—— Window ——]` is a valid value range, it’s applicable when meeting the following conditions:
+* If wider window is valid, then narrow window is also valid.
+* If narrow window is invalid, then wider window is also invalid.
+
+**Time Complexity**: The every character will enter and exit the window at most once, so the time complexity is `O(n)`.
+
 ### Characteristics
-* *Window*: valid value range, sliding window is applicable when meeting the following conditions:
-    * If wider window is valid, then narrow window is also valid.
-    * If narrow window is invalid, then wider window is also invalid.
-* Consecutive problem: fixed or variable size window, to find the maximum/minimum window that meets the condition.
-* Subarray / Substring
+* Consecutive problem: A fixed- or vary- size window, to find the max/min window that meets the condition.
+* Subarray / substring
 
 ### Approaches
-1. The two pointers start from the beginning of the array.
-2. Try to expand the window by moving the right pointer until the window is valid.
-3. Start to shrink the window by moving the left pointer when the window is invalid or to minimize the window size.
-4. Update the result or some information of the window.
-5. Repeat the process until the right pointer reaches the end of the array.
+1. Start the two pointer `left` / `right` at the beginning of the sequence.
+2. Expand the window by moving `right` until it becomes valid. Update the corresponding information regarding the window during the movement.
+3. Shrink the window by moving `left` before it becomes invalid. Update the corresponding information regarding the window during the movement.
+4. Update the result / answer (if the condition meets).
+5. Repeat the above steps until `right` reaches the end of the sequence.
 
 ```kotlin
-fun slidingWindowsProblem(str: String) {
+fun slidingWindowsProblem(sequence: Sequence<T>) {
     var left = 0
     var right = 0
-    while (right < str.length) {
+    while (right < sequence.length) {
         // Update the window
-        val character = str[right]
+        val value = sequence[right]
 
         // Window contains invalid value, shrink the window
-        while (window needs shrink) {
+        while (condition breaks) {
             // Update the window
-            val d = s[start]
+            ...
             // Shrink window
             start++
         }
 
         // Update some information of windows or result here
-        if (window meets condition) {
+        if (condition meets) {
             // Update result
         }
 
@@ -99,7 +102,7 @@ fun slidingWindowsProblem(str: String) {
 
 ## [Binary Search](../topics/binary-search.md)
 ### Characteristics
-* **Monotonicity**: The elements have some order or trend, such as sorted or `[X, X, X, O, O, O, O, O]` or choose larger the result become smaller and vice versa. 
+* **Monotonicity**: Monotonicity: The elements have some order or trend, such as sorted or `[X, X, X, O, O, O, O, O]` in 1D or Z-shape in 2D (see below) or choosing larger then result will become smaller and vice versa. ![](../media/240.search-a-2d-matrix-ii.png)
 * **Decision-making** or comparison or whether meet some condition in the **bounded search space**, then we can keep **reducing search space**.
 * **Target or Feasibility**: Search for a specific value, peak or extremum.
 
@@ -107,9 +110,12 @@ fun slidingWindowsProblem(str: String) {
 
 ### Approaches
 1. Define the search space: `left` and `right`.
-    * Search on *index*
-    * Search on *value*
-2. Reduce the search space: What condition to determine which part to eliminate?
+    * Search on *index* or *value*.
+    * Search on 1D array or 2D matrix.
+2. Reduce the search space: What condition to determine which part to eliminate and search in next round?
+    * **Feasibility**: Check if the current value is feasible or not.
+    * **Counting**: Count the number of elements that meet the condition.
+    * **Target**: Check if the current value is the target or not.
 3. Common variants:
     * Feasibility:
     ```kotlin

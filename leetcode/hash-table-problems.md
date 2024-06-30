@@ -36,3 +36,4 @@
 > * https://leetcode.com/problems/continuous-subarray-sum/ 5k m
 > * https://leetcode.com/problems/subarray-sums-divisible-by-k/ 6k m
 > * https://leetcode.com/problems/minimum-penalty-for-a-shop m
+> * https://leetcode.com/problems/count-number-of-nice-subarrays/description/
