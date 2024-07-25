@@ -44,7 +44,7 @@ data class GeneralTree<T>(
 | General Tree                                                  | Binary Tree                                                                         | Binary Search Tree                                                                                                | AVL Tree                                                                                      | Red-Black Tree                                                                                             | N-ary Tree                                                                                                                         |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | A tree with no constraints imposed on the hierarchy or nodes. | A tree in which each parents can have at most 2 children.                           | An extension of binary tree, where the value of left child <= parent <= right child. It can be used in searching. | A self-balancing binary search tree, the heights of two children subtrees differ by at most one. | A self-balancing binary search tree, each node will be painted in "red" or "black" based on the balancing. | A tree of that the max number of children is limited to N. Binary tree is 2-ary tree. `Trie` is used implementation of N-ary tree. |
-| <img src='../media/general-tree.png'/>                        | <img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Binary_tree_v2.svg'/> | <img src='https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg'/>                           | <img src='https://upload.wikimedia.org/wikipedia/commons/a/ad/AVL-tree-wBalance_K.svg'/>      | <img src='https://upload.wikimedia.org/wikipedia/commons/4/41/Red-black_tree_example_with_NIL.svg'/>       | <img src='https://upload.wikimedia.org/wikipedia/en/b/b8/Karytree.png'/>                                                           |
+| <img src='../media/general-tree.png'/>                        | <img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Binary_tree_v2.svg'/> | <img src='https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg'/>                           | <img src='https://upload.wikimedia.org/wikipedia/commons/a/ad/AVL-tree-wBalance_K.svg'/>      | <img src='https://upload.wikimedia.org/wikipedia/commons/4/41/Red-black_tree_example_with_NIL.svg'/>       | <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Karytree.png/330px-Karytree.png'/>                                                           |
 
 > Source: [Wikipedia](https://en.wikipedia.org/wiki/Binary_tree)
 
@@ -416,6 +416,8 @@ The insertion and deletion cause the binary search tree to change to hold the *b
 
 ```kotlin
 // Iterative
+// Time Complexity: O(h)
+// Space Complexity: O(1)
 fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
     val newNode = TreeNode(`val`)
     if (root == null) return newNode
@@ -438,6 +440,8 @@ fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
 }
 
 // Recursive
+// Time Complexity: O(h)
+// Space Complexity: O(h)
 fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
     if (root == null) return TreeNode(`val`)
     if (root.`val` > `val`) root.left = insertIntoBST(root.left, `val`)

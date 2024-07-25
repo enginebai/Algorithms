@@ -19,6 +19,6 @@
 > * https://leetcode.com/problems/unique-binary-search-trees-ii/ 7k m
 > * https://leetcode.com/problems/range-sum-of-bst/ 5k e
 > * https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/ 4k m
-> * https://leetcode.com/problems/convert-bst-to-greater-tree/ 5k m
+> * https://leetcode.com/problems/convert-bst-to-greater-tree/ 5k m -> https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
 > * https://leetcode.com/problems/all-elements-in-two-binary-search-trees/ 3k m
 > * https://leetcode.com/problems/serialize-and-deserialize-bst/ 2k m
