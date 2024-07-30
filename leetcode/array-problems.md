@@ -84,8 +84,7 @@
 |[75. Sort Colors](../leetcode/75.sort-colors.md)|Medium|
 |[148. Sort List](../leetcode/148.sort-list.md)|Medium|
 
-> Solved: https://leetcode.com/problems/height-checker/description/
-> https://leetcode.com/problems/height-checker/ 
+> Solved: https://leetcode.com/problems/height-checker/
 
 ### Intervals
 | Problem          | Difficulty |

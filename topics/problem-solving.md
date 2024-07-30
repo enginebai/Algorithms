@@ -231,6 +231,7 @@ fun stackProblem(input: XXX) {
 ```
 
 #### Monotonic Stack Template
+![](../media/monotonic-decreasing-stack.png)
 ```kotlin
 fun problem(nums: XXXArray) {
     ...

@@ -552,6 +552,8 @@ fun knapsack(): Int {
 ## Longest Common Subsequence Problem
 Given two strings `A` and `B`, find the longest common subsequences (not necessarily continuous) of `A` and `B`.
 
+> Sample problem: https://leetcode.com/problems/longest-common-subsequence
+
 ### Characterization
 For two strings `A` and `B`, we can start comparing either the first or the last character, and we assume the length of `A` and `B` is `m` and `n` respectively. And we're going to calculate `LCS(A[1 ~ m], B[1 ~ n])`, now we compare the last character:
 
@@ -618,7 +620,7 @@ fun longestCommonSubsequence(A: String, B: String, m: Int, n: Int, dp: Array<Int
 }
 
 // +1 for the case of length == 0
-val dp = Array(A.length + 1) { _ -> IntArray(B.length + 1) { _ -> -1 } }
+val dp = Array(A.length + 1) { IntArray(B.length + 1) { -1 } }
 longestCommonSubsequence(A, B, A.length, B.length, dp)
 ```
 
@@ -628,11 +630,11 @@ fun longestCommonSubsequence(A: String, B: String): Int {
     val m = A.length
     val n = B.length
     // +1 for the case of length == 0
-    val dp = Array(m + 1) { _ -> IntArray(n + 1) }
+    val dp = Array(m + 1) { IntArray(n + 1) }
     // We maintain the parent table for constructing the LCS.
-    val parent = Array(m + 1) { _ -> IntArray(n + 1) }
+    val parent = Array(m + 1) { IntArray(n + 1) }
 
-    // Base cases:
+    // Base cases: empty string
     for (i in 0..m) {
         dp[i][0] = 0
     }
