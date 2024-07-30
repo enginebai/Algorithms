@@ -265,9 +265,8 @@ queue.addLast(1)
 val firstValue = queue.removeFirst()
 val lastValue = queue.removeLast()
 
-queue.peek()
-queue.peekFirst()
-queue.peekLast()
+queue.first()
+queue.last()
 
 queue.size
 queue.isNotEmpty()

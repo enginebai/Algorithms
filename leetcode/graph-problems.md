@@ -77,6 +77,7 @@
 > * https://leetcode.com/problems/number-of-increasing-paths-in-a-grid/ 2k h
 > * https://leetcode.com/problems/detonate-the-maximum-bombs/description/ 3k m
 > * https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/ 2k m
+> * https://leetcode.com/problems/regions-cut-by-slashes 4k m
 
 > Shortest Path: 
 > * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h

@@ -15,6 +15,7 @@
 |[1337. The K Weakest Rows in a Matrix](../leetcode/1337.the-k-weakest-rows-in-a-matrix.md)|Easy|
 
 > * Solved: https://leetcode.com/problems/ipo/ 4k h
+> https://leetcode.com/problems/kth-largest-element-in-a-stream/
 
 > * https://leetcode.com/problems/the-skyline-problem/ 5k h
 > * https://leetcode.com/problems/course-schedule-iii/ 3k h
