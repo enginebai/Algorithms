@@ -1,7 +1,7 @@
 # Binary Search
 
 ## Normal
-The binary search is applicable when the collection is **sorted**, so try to sort the collection if it's not sorted yet.
+The binary search is applicable when the collection is **sorted** or the search range satisfies **monotonicity** characteristic. In this implementation, we're using inclusive range `[left, right]` to represent the searching range, and we break out the while loop when `left > right`. (The searching range is empty)
 
 ```kotlin
 fun binarySearch(A: IntArray, target: Int): Int {
@@ -61,26 +61,30 @@ O O O O O O X X X
           ^ // The last element that satifies the condition
 ```
 
-For example, to find the smallest (largest) number which is greater (smaller) or equal to the target: For the two problems (might contain duplicates), we can use the same conditions when `target != middle` (`<`, `>`) as normal binary search, the different part is when `target == middle`:
+For example, to find the smallest (largest) number which is greater (smaller) or equal to the target: For the two problems (might contain duplicates), we can use the same conditions when `target < middle` and `middle < target` as normal binary search, the different part is when `target == middle`:
 
-* To find the smallest number >= `target`, we should keep searching the left half part, and return `left` pointer when while loop breaks.
+* To find the smallest number >= `target` (`target <= num`), we should keep searching the left half part, and return `left` pointer when while loop breaks.
 ```js
-          (X, _, _, _, ...)
-target <=    
-           L          R        
+// When breaking the while loop, the position of pointers:
+[X, X, X, O, O, O, O]
+          L
+          M
+       R
 ```
 
-* To find the largest number <= `target`, we should search the right half part, and return `right` pointer when while loop breaks.
+* To find the largest number <= `target`, we should keep searching the right half part, and return `right` pointer when while loop breaks.
 ```js
-(..., _, _, X)          
-               <= target
- L          R 
+// When breaking the while loop, the position of pointers:
+[O, O, O, O, X, X, X]
+             L
+          M
+          R
 ```
 
 > Sample problem: [35. Search Insert Position](../leetcode/35.search-insert-position.md)
 
 ## Find the First/Last Position of Element in Sorted Array
-Given sorted array (might contain duplicates), we can use the same approach mentioned above to find the first/last position of element in sorted array. We apply the same conditions when `target != middle` (`<`, `>`) as normal binary search, the different part is when `target == middle`:
+Given sorted array (might contain duplicates), we can use the same approach mentioned above to find the first/last position of element in sorted array. We apply the same conditions when `target < middle` and `middle < target` as normal binary search, the different part is when `target == middle`:
 
 * To find the first position, we should keep searching the left part because we don't know if current `middle` is the first element, and return `left` pointer when while loop breaks.
 ```js

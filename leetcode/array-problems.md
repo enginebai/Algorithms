@@ -32,6 +32,7 @@
 > * https://leetcode.com/problems/maximum-performance-of-a-team/ 3k h
 > * https://leetcode.com/problems/minimize-deviation-in-array/ 2k h
 
+
 ### Two Pointers
 | Problem          | Difficulty |
 |------------------|------------|
@@ -98,6 +99,7 @@
 
 > Study guidelines: https://leetcode.com/discuss/study-guide/2166045/ (Have reviwed the problem listing)
 > Listing: https://leetcode.com/problem-list/52dlem1s/
+> Video: https://www.bilibili.com/video/BV1qY411n7Qs/?vd_source=2f62e0e1762a6703c96771d3baa35968
 > * https://leetcode.cn/problems/my-calendar-i/solutions/1646264/by-jiang-hui-4-pyfn/
 > * https://leetcode.com/problems/non-overlapping-intervals/description/ 8k m
 > * https://leetcode.com/problems/number-of-flowers-in-full-bloom  1k h
