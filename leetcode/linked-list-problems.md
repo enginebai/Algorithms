@@ -24,14 +24,3 @@
 |[86. Partition List](../leetcode/86.partition-list.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[2181. Merge Nodes in Between Zeros](../leetcode/2181.merge-nodes-in-between-zeros.md)|Medium|
-
-> * https://leetcode.com/problems/split-linked-list-in-parts/description/ 4k m
-> * https://leetcode.com/problems/reverse-nodes-in-k-group/ 10k h
-> * https://leetcode.com/problems/rotate-list/ 9k m
-> * https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/ 3k m
-> * https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/
-> * https://leetcode.com/problems/remove-nodes-from-linked-list/description/
-> * https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/
-> * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
-> ----
-> * https://leetcode.com/problems/insertion-sort-list/ 3k m

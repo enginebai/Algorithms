@@ -11,9 +11,6 @@
 |[1002. Find Common Characters](../leetcode/1002.find-common-characters.md)|Easy|
 |[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
 |[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
-> ----
-> * https://leetcode.com/problems/naming-a-company h
-> * https://leetcode.com/problems/n-repeated-element-in-size-2n-array/ 1k e
 
 ### Cyclic Sort
 | Problem          | Difficulty |
@@ -30,10 +27,3 @@
 |[1588. Sum of All Odd Length Subarrays](../leetcode/1588.sum-of-all-odd-length-subarrays.md)|Easy|
 |**[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)**|Medium|
 |[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
-> * https://leetcode.com/problems/contiguous-array/description/ 7k m
-> * https://leetcode.com/problems/binary-subarrays-with-sum/description/ 3k m
-> * https://leetcode.com/problems/sum-of-absolute-differences-in-a-sorted-array/ 2k m
-> * https://leetcode.com/problems/continuous-subarray-sum/ 5k m
-> * https://leetcode.com/problems/subarray-sums-divisible-by-k/ 6k m
-> * https://leetcode.com/problems/minimum-penalty-for-a-shop m
-> * https://leetcode.com/problems/count-number-of-nice-subarrays/description/

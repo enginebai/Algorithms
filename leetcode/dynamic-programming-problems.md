@@ -35,12 +35,6 @@
 |[518. Coin Change 2](../leetcode/518.coin-change-2.md)|Medium|
 |[1155. Number of Dice Rolls With Target Sum](../leetcode/1155.number-of-dice-rolls-with-target-sum.md)|Medium|
 
-> * https://leetcode.com/problems/triangle/ 9k m
-> * https://leetcode.com/problems/combination-sum-iv/ 5k m
-> * https://leetcode.com/problems/last-stone-weight-ii/ 2k m
-> * https://leetcode.com/problems/ones-and-zeroes/ 5k m
-> * https://leetcode.com/problems/integer-break/ 5k m
-
 ### LCS + LIS + Palindrome
 | Problem          | Difficulty |
 |------------------|------------|
@@ -52,12 +46,6 @@
 |[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
 |[647. Palindromic Substrings](../leetcode/647.palindromic-substrings.md)|Medium|
 
-> * https://leetcode.com/problems/distinct-subsequences/ 4k h
-> * https://leetcode.com/problems/max-dot-product-of-two-subsequences/ h
-> * https://leetcode.com/problems/longest-string-chain/ 7k m
-> * https://leetcode.com/problems/russian-doll-envelopes/ 4k h
-> * https://leetcode.com/problems/maximum-length-of-pair-chain/ 4k m
-
 ### Buy and Sell Stock
 | Problem          | Difficulty |
 |------------------|------------|
@@ -65,26 +53,6 @@
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
 |[309. Best Time to Buy and Sell Stock with Cooldown](../leetcode/309.best-time-to-buy-and-sell-stock-with-cooldown.md)|Medium|
-
-### Other
-> * Solved: https://leetcode.com/problems/pascals-triangle/ 9k e
-> * https://leetcode.com/problems/out-of-boundary-paths/description 4k m
-> * https://leetcode.com/problems/delete-and-earn/ 5k m
-> * https://leetcode.com/problems/minimum-falling-path-sum/ 5k m
-> * https://leetcode.com/problems/maximal-rectangle/ 6k h
-> * https://leetcode.com/problems/edit-distance/ 8k h
-> * https://leetcode.com/problems/longest-increasing-path-in-a-matrix/ 6k h
-> * https://leetcode.com/problems/dungeon-game/ 4k h
-> * https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ 
-> * https://leetcode.com/problems/counting-bits/ 8k e
-> * https://leetcode.com/problems/interleaving-string/ 6k m
-> * https://leetcode.com/problems/arithmetic-slices/ 4k m
-> * https://leetcode.com/problems/cherry-pickup/ 3k h
-> * https://leetcode.com/problems/cherry-pickup-ii/ 
-> * https://leetcode.com/problems/super-egg-drop/ 3k h
-> * https://leetcode.com/problems/minimum-cost-to-cut-a-stick/ 3k h
-> * https://leetcode.com/problems/arithmetic-slices-ii-subsequence/ 2k h
-> * https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 
 ### Problem Lists
 > * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions

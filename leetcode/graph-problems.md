@@ -60,26 +60,3 @@
 
 > * Solved, topological sort: https://leetcode.com/problems/parallel-courses-iii/
 > * Solved: https://leetcode.com/problems/restore-the-array-from-adjacent-pairs/description/
-> * https://leetcode.com/problems/most-stones-removed-with-same-row-or-column 5k m
-> * https://leetcode.com/problems/clone-graph/ 7k m
-> * https://leetcode.com/problems/find-eventual-safe-states/ 5k m
-> * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 4k m
-> * https://leetcode.com/problems/number-of-enclaves/ 3k m
-> * https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/ 3k m
-> * https://leetcode.com/problems/count-sub-islands 2k m
-> * https://leetcode.com/problems/as-far-from-land-as-possible/ 3k m
-> * https://leetcode.com/problems/word-ladder-ii/ 5k h
-> * https://leetcode.com/problems/find-the-safest-path-in-a-grid/description/
-> ----
-> * https://leetcode.com/problems/path-with-minimum-effort 5k m
-> * https://leetcode.com/problems/bus-routes 4k h
-> * https://leetcode.com/problems/dungeon-game/ 5k h
-> * https://leetcode.com/problems/number-of-increasing-paths-in-a-grid/ 2k h
-> * https://leetcode.com/problems/detonate-the-maximum-bombs/description/ 3k m
-> * https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/ 2k m
-> * https://leetcode.com/problems/regions-cut-by-slashes 4k m
-
-> Shortest Path: 
-> * https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/ h
-> * https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/ 4k h
-> * https://leetcode.com/problems/design-graph-with-shortest-path-calculator/ h

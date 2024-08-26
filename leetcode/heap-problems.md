@@ -16,8 +16,3 @@
 
 > * Solved: https://leetcode.com/problems/ipo/ 4k h
 > https://leetcode.com/problems/kth-largest-element-in-a-stream/
-
-> * https://leetcode.com/problems/the-skyline-problem/ 5k h
-> * https://leetcode.com/problems/course-schedule-iii/ 3k h
-> * https://leetcode.com/problems/minimum-number-of-refueling-stops/ 4k h
-> * https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/ 3k h

@@ -59,31 +59,4 @@
 > * Solved: https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/ To understand the initial value of `minutes`, and `infected` variable.
 > * Solved: https://leetcode.com/problems/even-odd-tree/description/
 > * Attempted in Daily: https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/
-> * https://leetcode.com/problems/sum-of-left-leaves/ 5k e
-> * https://leetcode.com/problems/count-complete-tree-nodes 8k e
-> * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 7k m
-> * https://leetcode.com/problems/find-duplicate-subtrees 6k m
-> * https://leetcode.com/problems/distribute-coins-in-binary-tree/ 5k m
-> * https://leetcode.com/problems/maximum-binary-tree/ 5k m
-> * https://leetcode.com/problems/all-possible-full-binary-trees/ 5k m
-> * https://leetcode.com/problems/binary-tree-pruning 4k m
-> * https://leetcode.com/problems/deepest-leaves-sum/ 4k m
-> * https://leetcode.com/problems/cousins-in-binary-tree/ 4k e
-> * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/ 4k m
-> * https://leetcode.com/problems/check-completeness-of-a-binary-tree/ 4k m
-> * https://leetcode.com/problems/delete-nodes-and-return-forest/ 3k m
-> * https://leetcode.com/problems/longest-univalue-path m 4k
-> * https://leetcode.com/problems/count-good-nodes-in-binary-tree/ 6k m
-> ----
-> * https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/ 5k m
-> * https://leetcode.com/problems/average-of-levels-in-binary-tree/ 5k e
-> * https://leetcode.com/problems/add-one-row-to-tree/ 3k m
-> * https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/ 3k m
-> * https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers 3k e
-> * https://leetcode.com/problems/n-ary-tree-preorder-traversal/ 3k e
-> * https://leetcode.com/problems/n-ary-tree-level-order-traversal/ 3k m
-> * https://leetcode.com/problems/maximum-depth-of-n-ary-tree/ 3k e
-> * https://leetcode.com/problems/sum-of-distances-in-tree/ 5k h
-> * https://leetcode.com/problems/binary-tree-cameras/ 5k h
-> * https://leetcode.com/problems/design-add-and-search-words-data-structure/ 6k m
 

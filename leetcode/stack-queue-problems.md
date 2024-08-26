@@ -36,12 +36,4 @@
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[2866. Beautiful Towers II](../leetcode/2866.beautiful-towers-ii.md)|Medium|
 
-> * Revisit https://leetcode.com/problems/beautiful-towers-ii/
 > * https://leetcode.com/problems/132-pattern/ 7k m
-> * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
-> ----
-> * https://leetcode.com/problems/car-fleet/ 2k m
-> * https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/ 2k m
-> * https://leetcode.com/problems/removing-stars-from-a-string/ 3k m
-> * https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced 1.5k m
-> * https://leetcode.com/problems/valid-parenthesis-string/ 6k m

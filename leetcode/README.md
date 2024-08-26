@@ -4,6 +4,9 @@
 > TODO
 * [Array](./array-problems.md)
 * [String](./string-problems.md)
+* [Two Pointers](./two-pointers-problems.md)
+* [Sliding Window](./sliding-window-problems.md)
+* [Interval](./interval-problems.md)
 * [Hash Table](./hash-table-problems.md)
 * [Binary Search](./binary-search-problems.md)
 * [Linked List](./linked-list-problems.md)

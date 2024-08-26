@@ -1,4 +1,5 @@
 ## [Binary Search](../topics/binary-search.md)
+### Basic
 | Problem          | Difficulty |
 |------------------|------------|
 |[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
@@ -18,6 +19,7 @@
 |[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium|
 |[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
 
+> * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
 
 ### Search in Matrix
 | Problem          | Difficulty |
@@ -31,26 +33,18 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)|Medium|
+|[1870. Minimum Speed to Arrive on Time](../leetcode/1870.minimum-speed-to-arrive-on-time.md)|Medium|
+|[2187. Minimum Time to Complete Trips](../leetcode/2187.minimum-time-to-complete-trips.md)|Medium|
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
 
-> * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
-> * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 9k m
-> * https://leetcode.com/problems/peak-index-in-a-mountain-array/ 6k
-> * https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/ 5k e
-> * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs m 2k
-> * https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/
-> * Search on value: 
-    > * https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/
-    > * https://leetcode.com/problems/minimum-time-to-complete-trips/description/
-    > * https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/description/
-    > 
-    > Maximize the minimum value / Minimize the maximum value: 最小化最大值
-    > * https://leetcode.com/problems/split-array-largest-sum/description/ 10k h
-    > * https://leetcode.com/problems/path-with-minimum-effort/description/ 5k m
-    > * https://leetcode.com/problems/magnetic-force-between-two-balls/
-    > * https://leetcode.cn/problems/house-robber-iv/
-> ----
-> * https://leetcode.com/problems/count-of-smaller-numbers-after-self/ 9k h
-> * https://leetcode.com/problems/russian-doll-envelopes/ 6k h
-> * https://leetcode.com/problems/median-of-two-sorted-arrays/ 26k
-> * https://leetcode.com/problems/count-of-range-sum/ 2k h
+> * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 1725
+> * https://leetcode.com/problems/maximum-candies-allocated-to-k-children/description/ 1646
+
+### Minimize the Maximum Value
+> * https://leetcode.com/problems/split-array-largest-sum/description/
+> * https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/description/
+> * https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/description/ 1940
+> * https://leetcode.com/problems/path-with-minimum-effort/description/ 1948
+
+### Maximize the Minimum Value
+> * https://leetcode.com/problems/magnetic-force-between-two-balls/description/
