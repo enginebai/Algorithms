@@ -15,6 +15,7 @@
 |[133. Clone Graph](../leetcode/133.clone-graph.md)|Medium|
 
 > * https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
+> * https://leetcode.com/problems/count-sub-islands
 
 ### Traversal Applications
 | Problem          | Difficulty |
@@ -60,3 +61,4 @@
 
 > * Solved, topological sort: https://leetcode.com/problems/parallel-courses-iii/
 > * Solved: https://leetcode.com/problems/restore-the-array-from-adjacent-pairs/description/
+> * Solved: https://leetcode.com/problems/path-with-maximum-probability/description/

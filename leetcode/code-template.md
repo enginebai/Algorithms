@@ -42,6 +42,24 @@ fun main() {
 }
 ```
 
+## Common
+```kotlin
+private fun IntArray.swap(i: Int, j: Int) {
+    val temp = this[i]
+    this[i] = this[j]
+    this[j] = temp
+}
+
+val directions = arrayOf(
+    intArrayOf(0, 1),   // Right
+    intArrayOf(1, 0),   // Down
+    intArrayOf(0, -1),  // Left
+    intArrayOf(-1, 0)   // UP
+)
+```
+
+
+
 ## Two Sum in Sorted Array
 Two pointers approach to check if two elements that can sum up to `k`.
 

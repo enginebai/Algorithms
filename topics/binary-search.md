@@ -13,7 +13,7 @@ fun binarySearch(A: IntArray, target: Int): Int {
         if (A[middle] < target) {
             left = middle + 1
         } else {
-            right = middle
+            right = middle - 1
         }
     }
     return -1

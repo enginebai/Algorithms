@@ -7,7 +7,7 @@
 |-----------|----------------|------------------------------------------------------|
 | Container | `create(X)`    | Given an iterable `X`, create set from items in `X`. |
 |           | `size()`       | The number of items.                                 |
-| Static    | `find(k)`      | Return items with key `k`.                           |
+| Static    | `get(k)`       | Return items with key `k`.                           |
 |           | `set_at(i, x)` | Replace the i-th item with `x`.                      |
 | Dynamic   | `insert(x)`    | Add item `x` (Replace if `x.key` exists).            |
 |           | `delete(k)`    | Remove and return the i-th item.                     |
@@ -15,8 +15,8 @@
 |           | `find_min()`   | Return item with smallest key.                       |
 |           | `find_max()`   | Return item with largest key.              
 
-A dynamic set that supports the *dictionary* operations: `insert()`, `delete()` and `search()`, and there are some to fulfill this:
-* **Direct access address**: it's effificent to `search()`, however, it takes lots of space.
+A dynamic set that supports the *dictionary* operations: `insert(x)`, `delete(k)` and `get(k)`, and there are some to fulfill this:
+* **Direct access address**: it's effificent to `get(k)`, however, it takes lots of space.
 * **Hashing**: We compute the array index from key.
 * **Chaining**: It's a way to handle *collisions* for hashing.
 
@@ -37,7 +37,7 @@ It works well when the universe `U` of key is small, we use array, key as index,
 class DirectAccessAddressHashTable<T> {
     private val table = ArrayOf<T>(UNIVERSE_SIZE)
 
-    fun search(key: Int): T? = table[key]
+    fun get(key: Int): T? = table[key]
     fun insert(value: T): table[key(value)] = value
     fun delete(value: T) { table[key(value)] = null }
 }
@@ -64,7 +64,7 @@ In *chaining*, we store all values that have the same hash value in a [linked li
 ![Hash Chaining](../media/hashing-chaining.png)
 
 * `insert(value: T)`: Insert to the head of list `T[h(key(value))]`.
-* `search(key: Int)`: search key  in list `T[h(key)]`.
+* `get(key: Int)`: search key  in list `T[h(key)]`.
 * `delete(value: T)`: Delete from list `T[h(key(value))]`.
 
 The running time of insertion is `O(1)` and deletion is also `O(1)` if the list is doubly linked list. How about searching? It needs analysis based on some factor.
@@ -72,7 +72,9 @@ The running time of insertion is `O(1)` and deletion is also `O(1)` if the list 
 > We assume that hash function calculation takes `O(1)` time.
 
 #### Analysis of Searching
-Given a hash table `T` with `m` slots that stores `n` elements, *load factor* `n / m` defines the average number of elements stored in the chain of one slot.
+> It might be OK to skip this part.
+
+Given a hash table `T` with `m` slots that stores `n` elements, *load factor* `n / m` (i.e. `items size / table size`) defines the average number of elements stored in the chain of one slot.
 
 The worst case running time is `Θ(n)` when all elements storing to the same slot. 
 
@@ -102,7 +104,7 @@ class OpenAddress<T> {
         throw OverflowException()
     }
 
-    fun search(key: Int): Int? {
+    fun get(key: Int): Int? {
         var probe = 0
         do {
             var hash = h(key, probe)
@@ -121,9 +123,14 @@ class OpenAddress<T> {
 2. **Quadratic Probling**: `h(key, probe) = (h1(key) + c1 * probe + c2 * probe^2) mod m`.
 3. **Double Hashing**: `h(key, probe) = (h1(key) + probe * h2(key)) mod m`.
 
+> Sample problems
+>
+> * [705. Design HashSet](../leetcode/705.design-hashset.md)
+> * [706. Design HashMap](../leetcode/706.design-hashmap.md)
+
 ## Hash Table API
 ### Python
-
+> TODO
 
 ### Kotlin
 #### `HashSet`

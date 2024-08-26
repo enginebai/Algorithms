@@ -59,7 +59,7 @@ fun mergeSort(nums: IntArray): IntArray {
         val middle = nums.size / 2
         // Not 0..middle / middel + 1 until nums.size, this will cause stack overflow.
         // Take a look at size 2.
-        val leftArray = mergeSort(nums.sliceArray(0..middle - 1))
+        val leftArray = mergeSort(nums.sliceArray(0 until middle))
         val rightArray = mergeSort(nums.sliceArray(middle until nums.size))
         return merge(leftArray, rightArray)
     } else {

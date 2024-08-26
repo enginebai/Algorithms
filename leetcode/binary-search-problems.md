@@ -35,14 +35,16 @@
 |[875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)|Medium|
 |[1870. Minimum Speed to Arrive on Time](../leetcode/1870.minimum-speed-to-arrive-on-time.md)|Medium|
 |[2187. Minimum Time to Complete Trips](../leetcode/2187.minimum-time-to-complete-trips.md)|Medium|
+|[1011. Capacity To Ship Packages Within D Days](../leetcode/1011.capacity-to-ship-packages-within-d-days.md)|Medium|
+|[2226. Maximum Candies Allocated to K Children](../leetcode/2226.maximum-candies-allocated-to-k-children.md)|Medium|
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
 
-> * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days 1725
-> * https://leetcode.com/problems/maximum-candies-allocated-to-k-children/description/ 1646
-
 ### Minimize the Maximum Value
+| Problem          | Difficulty |
+|------------------|------------|
+|[2064. Minimize Maximum Pair Sum in Array](../leetcode/2064.minimize-maximum-pair-sum-in-array.md)|Medium|
+
 > * https://leetcode.com/problems/split-array-largest-sum/description/
-> * https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/description/
 > * https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/description/ 1940
 > * https://leetcode.com/problems/path-with-minimum-effort/description/ 1948
 
