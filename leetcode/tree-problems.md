@@ -14,7 +14,7 @@
 |[988. Smallest String Starting From Leaf](../leetcode/988.smallest-string-starting-from-leaf.md)|Medium|
 |[1161. Maximum Level Sum of a Binary Tree](../leetcode/1161.maximum-level-sum-of-a-binary-tree.md)|Medium|
 |[2331. Evaluate Boolean Binary Tree](../leetcode/2331.evaluate-boolean-binary-tree.md)|Easy|
-|[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
+
 
 ### Distance
 | Problem          | Difficulty |
@@ -24,6 +24,8 @@
 |[111. Minimum Depth of Binary Tree](../leetcode/111.minimum-depth-of-binary-tree.md)|Easy|
 |[543. Diameter of Binary Tree](../leetcode/543.diameter-of-binary-tree.md)|Easy|
 |[863. All Nodes Distance K in Binary Tree](../leetcode/863.all-nodes-distance-k-in-binary-tree.md)|Medium|
+
+> Solved: https://leetcode.com/problems/count-complete-tree-nodes/description/, special case of binary tree traversal, more references: https://labuladong.online/algo/data-structure/count-complete-tree-nodes/
 
 ### Structure
 | Problem          | Difficulty |
@@ -38,15 +40,22 @@
 |[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium|
 |[1110. Delete Nodes And Return Forest](../leetcode/1110.delete-nodes-and-return-forest.md)|Medium|
 |[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
+|[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
+
+> Solved: https://leetcode.com/problems/maximum-binary-tree/
+> Solved: https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/
 
 ### Path
 | Problem          | Difficulty |
 |------------------|------------|
 |[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
 |[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
+|[563. Binary Tree Tilt](../leetcode/563.binary-tree-tilt.md)|Easy|
+|[437. Path Sum III](../leetcode/437.path-sum-iii.md)|Medium|
 |[124. Binary Tree Maximum Path Sum](../leetcode/124.binary-tree-maximum-path-sum.md)|Hard|
 |[1022. Sum of Root To Leaf Binary Numbers](../leetcode/1022.sum-of-root-to-leaf-binary-numbers.md)|Easy|
 |[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium|
+|[1372. Longest ZigZag Path in a Binary Tree](../leetcode/1372.longest-zigzag-path-in-a-binary-tree.md)|Medium|
 
 ### Trie
 | Problem          | Difficulty |
