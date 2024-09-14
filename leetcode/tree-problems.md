@@ -15,7 +15,6 @@
 |[1161. Maximum Level Sum of a Binary Tree](../leetcode/1161.maximum-level-sum-of-a-binary-tree.md)|Medium|
 |[2331. Evaluate Boolean Binary Tree](../leetcode/2331.evaluate-boolean-binary-tree.md)|Easy|
 
-
 ### Distance
 | Problem          | Difficulty |
 |------------------|------------|
@@ -25,25 +24,31 @@
 |[543. Diameter of Binary Tree](../leetcode/543.diameter-of-binary-tree.md)|Easy|
 |[863. All Nodes Distance K in Binary Tree](../leetcode/863.all-nodes-distance-k-in-binary-tree.md)|Medium|
 
-> Solved: https://leetcode.com/problems/count-complete-tree-nodes/description/, special case of binary tree traversal, more references: https://labuladong.online/algo/data-structure/count-complete-tree-nodes/
+> Solved: https://leetcode.com/problems/count-complete-tree-nodes/description/, special case of binary tree traversal, more references: https://labuladong.online/algo/data-structure/count-complete-tree-nodes/ + https://programmercarl.com/0222.%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0.html#%E6%80%9D%E8%B7%AF
 
 ### Structure
 | Problem          | Difficulty |
 |------------------|------------|
 |[100. Same Tree](../leetcode/100.same-tree.md)|Easy|
+|[572. Subtree of Another Tree](../leetcode/572.subtree-of-another-tree.md)|Easy|
+|[1367. Linked List in Binary Tree](../leetcode/1367.linked-list-in-binary-tree.md)|Medium|
 |[101. Symmetric Tree](../leetcode/101.symmetric-tree.md)|Easy|
 |[110. Balanced Binary Tree](../leetcode/110.balanced-binary-tree.md)|Easy|
 |[226. Invert Binary Tree](../leetcode/226.invert-binary-tree.md)|Easy|
 |[617. Merge Two Binary Trees](../leetcode/617.merge-two-binary-trees.md)|Easy|
 |[114. Flatten Binary Tree to Linked List](../leetcode/114.flatten-binary-tree-to-linked-list.md)|Medium|
-|[572. Subtree of Another Tree](../leetcode/572.subtree-of-another-tree.md)|Easy|
-|[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium|
-|[1110. Delete Nodes And Return Forest](../leetcode/1110.delete-nodes-and-return-forest.md)|Medium|
 |[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)|Hard|
 |[105. Construct Binary Tree from Preorder and Inorder Traversal](../leetcode/105.construct-binary-tree-from-preorder-and-inorder-traversal.md)|Medium|
 
 > Solved: https://leetcode.com/problems/maximum-binary-tree/
 > Solved: https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/
+
+### Insertion & Deletion
+| Problem          | Difficulty |
+|------------------|------------|
+|[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium|
+|[814. Binary Tree Pruning](../leetcode/814.binary-tree-pruning.md)|Medium|
+|[1110. Delete Nodes And Return Forest](../leetcode/1110.delete-nodes-and-return-forest.md)|Medium|
 
 ### Path
 | Problem          | Difficulty |

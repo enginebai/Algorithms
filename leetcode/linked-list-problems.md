@@ -24,3 +24,4 @@
 |[86. Partition List](../leetcode/86.partition-list.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[2181. Merge Nodes in Between Zeros](../leetcode/2181.merge-nodes-in-between-zeros.md)|Medium|
+|[725. Split Linked List in Parts](../leetcode/725.split-linked-list-in-parts.md)|Medium|

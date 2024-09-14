@@ -3,16 +3,28 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[841. Keys and Rooms](../leetcode/841.keys-and-rooms.md)|Medium|
-|[463. Island Perimeter](../leetcode/463.island-perimeter.md)|Easy|
 |[733. Flood Fill](../leetcode/733.flood-fill.md)|Easy|
 |[200. Number of Islands](../leetcode/200.number-of-islands.md)|Medium|
-|[1254. Number of Closed Islands](../leetcode/1254.number-of-closed-islands.md)|Medium|
-|[695. Max Area of Island](../leetcode/695.max-area-of-island.md)|Medium|
-|[130. Surrounded Regions](../leetcode/130.surrounded-regions.md)|Medium|
 |[417. Pacific Atlantic Water Flow](../leetcode/417.pacific-atlantic-water-flow.md)|Medium|
-|[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
-|[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium|
 |[133. Clone Graph](../leetcode/133.clone-graph.md)|Medium|
+
+### Connected Components (Closed Islands)
+| Problem          | Difficulty |
+|------------------|------------|
+|[463. Island Perimeter](../leetcode/463.island-perimeter.md)|Easy|
+|[695. Max Area of Island](../leetcode/695.max-area-of-island.md)|Medium|
+|[1254. Number of Closed Islands](../leetcode/1254.number-of-closed-islands.md)|Medium|
+|[130. Surrounded Regions](../leetcode/130.surrounded-regions.md)|Medium|
+|[827. Making A Large Island](../leetcode/827.making-a-large-island.md)|Hard|
+
+### BFS
+| Problem          | Difficulty |
+|------------------|------------|
+|[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
+|[433. Minimum Genetic Mutation](../leetcode/433.minimum-genetic-mutation.md)|Medium|
+|[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
+|[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium|
+|[1514. Path with Maximum Probability](../leetcode/1514.path-with-maximum-probability.md)|Medium|
 
 > * https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
 > * https://leetcode.com/problems/count-sub-islands
@@ -20,9 +32,7 @@
 ### Traversal Applications
 | Problem          | Difficulty |
 |------------------|------------|
-|[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
 |[399. Evaluate Division](../leetcode/399.evaluate-division.md)|Medium|
-|[433. Minimum Genetic Mutation](../leetcode/433.minimum-genetic-mutation.md)|Medium|
 
 ### Path
 | Problem          | Difficulty |
@@ -61,4 +71,3 @@
 
 > * Solved, topological sort: https://leetcode.com/problems/parallel-courses-iii/
 > * Solved: https://leetcode.com/problems/restore-the-array-from-adjacent-pairs/description/
-> * Solved: https://leetcode.com/problems/path-with-maximum-probability/description/

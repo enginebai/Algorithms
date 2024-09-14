@@ -44,11 +44,13 @@ val adjacencyList = arrayOf(
 
 // or using array of list
 val verticesCount = 10
-val graph = Array(verticesCount) { mutableListOf<Int>() }
+val graph = Array<List<Int>>(verticesCount) { mutableListOf<Int>() }
 graph[0].add(1)
 graph[1].add(0) // for undirected graph
-
 graph[1].contains(2) // O(|V|)
+
+// or using 2D array
+val graph2 = Array<IntArray>() // [[1,2,3],[0,2],[0,1,3],[0,2]]
 ```
 
 * The adjacent vertices of each vertex in adjacency list are typically stored in an arbitrary order.
@@ -245,6 +247,10 @@ We visit each vertex once, which takes `O(|V|)`, and for each vertex, we visit a
 
 ## Topological Sort
 A *topological sort* of a directed acyclic graph (DAG) is a *linear ordering* of all vertices such that `(x, y)` which `x` appears before `y` in the ordering.
+
+> 概括来说，给出一个 有向图，把这个有向图转成线性的排序 就叫拓扑排序。当然拓扑排序也要检测这个有向图 是否有环，即存在循环依赖的情况，因为这种情况是不能做线性排序的。所以拓扑排序也是图论中判断有向无环图的常用方法。
+>
+> 所以当我们做拓扑排序的时候，应该优先找 入度为 0 的节点，只有入度为0，它才是出发节点。
 
 It's most commonly used for job scheduling a sequence of jobs which has dependencies on the others. The jobs are represented by vertices and the edge from `x` to `y` if job `y` is dependent on `x` (`x` must be finished before `y`)
 
