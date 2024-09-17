@@ -58,9 +58,7 @@ val graph2 = Array<IntArray>() // [[1,2,3],[0,2],[0,1,3],[0,2]]
 * We also can associate *weight* on the edge by storing the weight on the node of the adjacency list. (linked list node can attach extra properties)
 
 #### Complexity
-1. Space complexity to store a graph: `Θ(|V| + |E|)`. (`|V| + |E|` for directed, `|V| + 2 * |E|` for undirected)
-2. Time complexity to determine whether a given edge exists in the graph: `Ω(|V|)` time to determine if an edge `(x, y)` is in the graph. (Loop for each vertices takes `O(1)` and `O(|V|)` for searching the adjacent vertices of the vertex `x`)
-3. Time complexity to find the adjacent vertices (neighbors) of a given vertex: `O(1)`
+1. o
 
 > |V| means the size of V.
 

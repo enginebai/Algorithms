@@ -9,8 +9,7 @@
 |[1094. Car Pooling](../leetcode/1094.car-pooling.md)|Medium|
 
 ### Resources
-* Study guidelines: https://leetcode.com/discuss/study-guide/2166045/ (Have reviwed the problem listing)
-* Listing: https://leetcode.com/problem-list/52dlem1s/
+* Study guidelines: https://leetcode.com/discuss/study-guide/2166045/ (Problem listing: https://leetcode.com/problem-list/mzw3cyy6/)
 * Video: https://www.bilibili.com/video/BV1qY411n7Qs/?vd_source=2f62e0e1762a6703c96771d3baa35968
 
 > * https://leetcode.cn/problems/my-calendar-i/solutions/1646264/by-jiang-hui-4-pyfn/

@@ -16,7 +16,7 @@ Input:
 Output: 
 ```
 
-# Approach
+## Approach
 ```python
 
 ```

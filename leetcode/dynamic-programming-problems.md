@@ -1,4 +1,9 @@
 ## [Dynamic Programming](../topics/dynamic-programming.md)
+
+> Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
+>
+> Problem listing: https://huxulm.github.io/lc-rating/list/dp 
+
 | Problem          | Difficulty |
 |------------------|------------|
 |[509. Fibonacci Number](../leetcode/509.fibonacci-number.md)|Easy|

@@ -1,4 +1,7 @@
 ## [Array](../topics/array.md)
+
+> * Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
+
 | Problem          | Difficulty |
 |------------------|------------|
 |[989. Add to Array-Form of Integer](../leetcode/989.add-to-array-form-of-integer.md)|Easy|

@@ -10,3 +10,6 @@
 |[26. Remove Duplicates from Sorted Array](../leetcode/26.remove-duplicates-from-sorted-array.md)|Easy|
 |[80. Remove Duplicates from Sorted Array II](../leetcode/80.remove-duplicates-from-sorted-array-ii.md)|Medium|
 |[905. Sort Array By Parity](../leetcode/905.sort-array-by-parity.md)|Easy|
+|[658. Find K Closest Elements](../leetcode/658.find-k-closest-elements.md)|Medium|
+
+> * https://leetcode.com/problems/array-partition/description/ e

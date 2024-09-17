@@ -1,4 +1,9 @@
 ## [Hash Table](../topics/hash-table.md)
+
+> Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
+> 
+> https://leetcode.cn/circle/discuss/6dPZmy/
+
 | Problem          | Difficulty |
 |------------------|------------|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|

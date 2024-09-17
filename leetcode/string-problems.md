@@ -8,7 +8,7 @@
 |[392. Is Subsequence](../leetcode/392.is-subsequence.md)|Easy|
 |[792. Number of Matching Subsequences](../leetcode/792.number-of-matching-subsequences.md)|Medium|
 |[925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy|
-|[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy|
+|[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy (1227)|
 
 ### Super Easy
 | Problem          | Difficulty |
