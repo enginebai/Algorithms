@@ -14,6 +14,7 @@
 > * https://leetcode.com/problems/number-of-provinces/description/
 > * https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/ 1604
 > * https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/ 1633
+> * https://leetcode.com/problems/count-sub-islands 1678
 > * https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/description/ 1679
 > * https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/description/ 1787
 > * https://leetcode.com/problems/detect-cycles-in-2d-grid/description/ 1837
@@ -85,6 +86,8 @@
 |[787. Cheapest Flights Within K Stops](../leetcode/787.cheapest-flights-within-k-stops.md)|Medium|
 |[743. Network Delay Time](../leetcode/743.network-delay-time.md)|Medium|
 |[1091. Shortest Path in Binary Matrix](../leetcode/1091.shortest-path-in-binary-matrix.md)|Medium|
+|[1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)|Medium (1947)|
+
 
 > TODO: Problems listing from https://huxulm.github.io/lc-rating/list/graph
 
@@ -95,7 +98,5 @@
 |[1926. Nearest Exit from Entrance in Maze](../leetcode/1926.nearest-exit-from-entrance-in-maze.md)|Medium|
 |[980. Unique Paths III](../leetcode/980.unique-paths-iii.md)|Hard|
 
-> * Solved, topological sort: https://leetcode.com/problems/parallel-courses-iii/
 > * Solved: https://leetcode.com/problems/restore-the-array-from-adjacent-pairs/description/
-> * https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
-> * https://leetcode.com/problems/count-sub-islands
+
