@@ -20,3 +20,4 @@
 > * https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 > * https://leetcode.com/problems/number-of-flowers-in-full-bloom/
 > * https://leetcode.com/problems/maximum-population-year/description/ 1k e
+> * https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups 1713

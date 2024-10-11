@@ -21,6 +21,17 @@
 > * https://leetcode.com/problems/detonate-the-maximum-bombs/description/ 1880
 > * https://leetcode.com/problems/find-eventual-safe-states/description/ 1962
 
+### Tree-like
+| Problem          | Difficulty |
+|------------------|------------|
+|[1443. Minimum Time to Collect All Apples in a Tree](../leetcode/1443.minimum-time-to-collect-all-apples-in-a-tree.md)|Medium (1682)|
+|[1530. Number of Good Leaf Nodes Pairs](../leetcode/1530.number-of-good-leaf-nodes-pairs.md)|Medium (1745)|
+
+> https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/description/ 1809
+> * https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/ 2011
+> * https://leetcode.com/problems/longest-path-with-different-adjacent-characters/description/ 2126
+
+
 ### Path
 | Problem          | Difficulty |
 |------------------|------------|

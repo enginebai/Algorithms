@@ -156,7 +156,8 @@ map.remove(123)
 
 for (key in map.keys) { ... }
 for (value in map.values) { ... }
-for ((key, value) in map.entries) { ... }
+for ((key, value) in map) { ... }
+for (entry in map.entries) { ... }
 map.forEach { key, value -> ... }
 ```
 
