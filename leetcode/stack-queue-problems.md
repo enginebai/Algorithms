@@ -8,6 +8,8 @@
 |[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
 |[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium (1453)|
 |[946. Validate Stack Sequences](../leetcode/946.validate-stack-sequences.md)|Medium (1461)|
+|[71. Simplify Path](../leetcode/71.simplify-path.md)|Medium|
+|[636. Exclusive Time of Functions](../leetcode/636.exclusive-time-of-functions.md)|Medium|
 
 > * https://leetcode.com/problems/build-an-array-with-stack-operations/description/ 1180
 > * https://leetcode.com/problems/design-a-stack-with-increment-operation/description/ 1285
@@ -37,6 +39,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
+|[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy (1286)|
 
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/ 1286
 > * https://leetcode.com/problems/make-the-string-great/description/ 1344
