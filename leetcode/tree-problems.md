@@ -3,24 +3,27 @@
 ### Top-Down
 | Problem          | Difficulty |
 |------------------|------------|
+|[965. Univalued Binary Tree](../leetcode/965.univalued-binary-tree.md)|Easy|
 |[872. Leaf-Similar Trees](../leetcode/872.leaf-similar-trees.md)|Easy (1287)|
+|[1448. Count Good Nodes in Binary Tree](../leetcode/1448.count-good-nodes-in-binary-tree.md)|Medium (1360)|
 |[404. Sum of Left Leaves](../leetcode/404.sum-of-left-leaves.md)|Easy|
-|[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
-|[124. Binary Tree Maximum Path Sum](../leetcode/124.binary-tree-maximum-path-sum.md)|Hard|
-|[1022. Sum of Root To Leaf Binary Numbers](../leetcode/1022.sum-of-root-to-leaf-binary-numbers.md)|Easy (1462)|
+|[671. Second Minimum Node In a Binary Tree](../leetcode/671.second-minimum-node-in-a-binary-tree.md)|Easy|
 |[1026. Maximum Difference Between Node and Ancestor](../leetcode/1026.maximum-difference-betwwen-node-and-ancestor.md)|Medium (1446)|
 |[1315. Sum of Nodes with Even-Valued Grandparent](../leetcode/1315.sum-of-nodes-with-even-valued-grandparent.md)|Medium (1426)|
-|[988. Smallest String Starting From Leaf](../leetcode/988.smallest-string-starting-from-leaf.md)|Medium (1429)|
-|[1443. Minimum Time to Collect All Apples in a Tree](../leetcode/1443.minimum-time-to-collect-all-apples-in-a-tree.md)|Medium (1682)|
 |[1372. Longest ZigZag Path in a Binary Tree](../leetcode/1372.longest-zigzag-path-in-a-binary-tree.md)|Medium (1713)|
 
 > Some problems are in other categories.
-> * https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/description/ e
-> * https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/ 1360
-> * https://leetcode.com/problems/sum-root-to-leaf-numbers/ m
->
-> N-ary tree:
 > * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1561
+
+### Path
+| Problem          | Difficulty |
+|------------------|------------|
+|[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
+|[124. Binary Tree Maximum Path Sum](../leetcode/124.binary-tree-maximum-path-sum.md)|Hard|
+|[129. Sum Root to Leaf Numbers](../leetcode/129.sum-root-to-leaf-numbers.md)|Medium|
+|[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium (1405)|
+|[1022. Sum of Root To Leaf Binary Numbers](../leetcode/1022.sum-of-root-to-leaf-binary-numbers.md)|Easy (1462)|
+|[988. Smallest String Starting From Leaf](../leetcode/988.smallest-string-starting-from-leaf.md)|Medium (1429)|
 
 ### Bottom-Up
 | Problem          | Difficulty |
@@ -30,16 +33,14 @@
 |[2265. Count Nodes Equal to Average of Subtree](../leetcode/2265.count-nodes-equal-to-average-of-subtree.md)|Medium (1472)|
 
 > Some problems are in other categories.
-> * https://leetcode.com/problems/univalued-binary-tree/description/ 1178
 > * https://leetcode.com/problems/flip-equivalent-binary-trees/description/ 1477
 > * https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/description/ e
 > * https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/description/ 1534
 > * https://leetcode.com/problems/most-frequent-subtree-sum/description/ m
 > * https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/description/ 1674
-> * https://leetcode.com/problems/binary-tree-coloring-game/description/ 1741
+> * Skip: https://leetcode.com/problems/binary-tree-coloring-game/description/ 1741
 > * Attempted in Daily: https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/ 1745
-> https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/description/ 1809
-> * https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/ 2011
+
 
 ### Distance
 | Problem          | Difficulty |
@@ -116,7 +117,6 @@
 |------------------|------------|
 |[94. Binary Tree Inorder Traversal](../leetcode/94.binary-tree-inorder-traversal.md)|Easy|
 |[606. Construct String from Binary Tree](../leetcode/606.construct-string-from-binary-tree.md)|Medium|
-|[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium (1405)|
 |[236. Lowest Common Ancestor of a Binary Tree](../leetcode/236.lowest-common-ancestor-of-a-binary-tree.md)|Medium|
 |[1161. Maximum Level Sum of a Binary Tree](../leetcode/1161.maximum-level-sum-of-a-binary-tree.md)|Medium|
 
