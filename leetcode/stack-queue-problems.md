@@ -11,50 +11,52 @@
 |[71. Simplify Path](../leetcode/71.simplify-path.md)|Medium|
 |[636. Exclusive Time of Functions](../leetcode/636.exclusive-time-of-functions.md)|Medium|
 
-> * https://leetcode.com/problems/build-an-array-with-stack-operations/description/ 1180
-> * https://leetcode.com/problems/design-a-stack-with-increment-operation/description/ 1285
-> * https://leetcode.com/problems/baseball-game/description/
-> * https://leetcode.com/problems/removing-stars-from-a-string/description/ 1347
-> * https://leetcode.com/problems/simplify-path/description/
-> * https://leetcode.com/problems/exclusive-time-of-functions/description/ m
 > * https://leetcode.com/problems/maximum-frequency-stack/description/ h 2027
+>
+> * Solved: https://leetcode.com/problems/build-an-array-with-stack-operations/description/ 1180 
+> * Solved: https://leetcode.com/problems/design-a-stack-with-increment-operation/description/ 1285 // Using array + top pointer to simulate stack, should have very clear definition of the top pointer. 2024/10/21
+> * Solved: https://leetcode.com/problems/baseball-game/description/ // To get previous elements, use stack. 2024/10/21
+> * Solved: https://leetcode.com/problems/removing-stars-from-a-string/description/ 1347 // Very easy problem, mind the edge case. 2024/10/21
+
+### Nested Structure
+| Problem          | Difficulty |
+|------------------|------------|
+|[150. Evaluate Reverse Polish Notation](../leetcode/150.evaluate-reverse-polish-notation.md)|Medium|
+|[1190. Reverse Substrings Between Each Pair of Parentheses](../leetcode/1190.reverse-substrings-between-each-pair-of-parentheses.md)|Medium (1485)|
+|[394. Decode String](../leetcode/394.decode-string.md)|Medium|
+|[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium (1562)|
+|[1106. Parsing A Boolean Expression](../leetcode/1106.parsing-a-boolean-expression.md)|Hard (1880)|
+|[227. Basic Calculator II](../leetcode/227.basic-calculator-ii.md)|Medium|
+|[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
+
+> * https://leetcode.com/problems/number-of-atoms/description/ h
 
 ### Parentheses
 | Problem          | Difficulty |
 |------------------|------------|
 |[20. Valid Parentheses](../leetcode/20.valid-parentheses.md)|Easy|
+|[1614. Maximum Nesting Depth of the Parentheses](../leetcode/1614.maximum-nesting-depth-of-the-parentheses.md)|Easy (1322)|
+|[1021. Remove Outermost Parentheses](../leetcode/1021.remove-outermost-parentheses.md)|Easy (1311)|
 |[921. Minimum Add to Make Parentheses Valid](../leetcode/921.minimum-add-to-make-parentheses-valid.md)|Medium (1242)|
-|[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy (1286)|
+|[678. Valid Parenthesis String](../leetcode/678.valid-parenthesis-string.md)|Medium (1700)|
+|[1541. Minimum Insertions to Balance a Parentheses String](../leetcode/1541.minimum-insertions-to-balance-a-parentheses-string.md)|Medium (1759)|
 |[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium (1657)|
-|[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium (1562)|
-|[394. Decode String](../leetcode/394.decode-string.md)|Medium|
+|[1963. Minimum Number of Swaps to Make the String Balanced](../leetcode/1963.minimum-number-of-swaps-to-make-the-string-balanced.md)|Medium (1688)|
 
-> * https://leetcode.com/problems/remove-outermost-parentheses/description/ 1311
-> * https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/description/ 1322
-> * https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/description/ 1485
-> * https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/description/ 1688
-> * https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/description/ 1759
+> * https://leetcode.com/problems/remove-invalid-parentheses/description/ h
 
-### Remove Adjacent Duplicates
+### Remove Adjacent Items
 | Problem          | Difficulty |
 |------------------|------------|
 |[735. Asteroid Collision](../leetcode/735.asteroid-collision.md)|Medium|
 |[1047. Remove All Adjacent Duplicates In String](../leetcode/1047.remove-all-adjacent-duplicates-in-string.md)|Easy (1286)|
 
-> * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/ 1286
 > * https://leetcode.com/problems/make-the-string-great/description/ 1344
 > * https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/description/ 1426
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/description/ 1541
+> * https://leetcode.com/problems/maximum-score-from-removing-substrings/description/ 1868
+> * Solved: https://leetcode.com/problems/minimum-string-length-after-removing-substrings 1282 // Easy to solve by stack and learned two pointers approach, 2024/10/30
 
-### Expression Parsing
-| Problem          | Difficulty |
-|------------------|------------|
-|[150. Evaluate Reverse Polish Notation](../leetcode/150.evaluate-reverse-polish-notation.md)|Medium|
-|[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
-
-> * https://leetcode.com/problems/basic-calculator-ii/description/ m
-> * https://leetcode.com/problems/number-of-atoms/description/ h
-> * https://leetcode.com/problems/parsing-a-boolean-expression/description/ 1880
 
 ### Monotonic Stack
 | Problem          | Difficulty |

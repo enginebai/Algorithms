@@ -51,6 +51,8 @@
 |[5. Longest Palindromic Substring](../leetcode/5.longest-palindromic-substring.md)|Medium|
 |[647. Palindromic Substrings](../leetcode/647.palindromic-substrings.md)|Medium|
 
+> * https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/description/ 1912
+
 ### Buy and Sell Stock
 | Problem          | Difficulty |
 |------------------|------------|

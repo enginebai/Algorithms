@@ -87,6 +87,8 @@
 |[513. Find Bottom Left Tree Value](../leetcode/513.find-bottom-left-tree-value.md)|Medium|
 |[199. Binary Tree Right Side View](../leetcode/199.binary-tree-right-side-view.md)|Medium|
 |[116. Populating Next Right Pointers in Each Node](../leetcode/116.populating-next-right-pointers-in-each-node.md)|Medium|
+|[993. Cousins in Binary Tree](../leetcode/993.cousins-in-binary-tree.md)|Easy (1287)|
+|[2641. Cousins in Binary Tree II](../leetcode/2641.cousins-in-binary-tree-ii.md)|Medium (1676)|
 |[623. Add One Row to Tree](../leetcode/623.add-one-row-to-tree.md)|Medium|
 |[919. Complete Binary Tree Inserter](../leetcode/919.complete-binary-tree-inserter.md)|Medium (1691)|
 |[958. Check Completeness of a Binary Tree](../leetcode/958.check-completeness-of-a-binary-tree.md)|Medium (1703)|
@@ -94,7 +96,6 @@
 > * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/ m
 > * https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/ m
 > * https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/ m
-> * https://leetcode.com/problems/cousins-in-binary-tree/description/ 1288
 > * https://leetcode.com/problems/deepest-leaves-sum/description/ 1387
 > * https://leetcode.com/problems/reverse-odd-levels-of-binary-tree/description/ 1431
 > * https://leetcode.com/problems/even-odd-tree/description/ 1438

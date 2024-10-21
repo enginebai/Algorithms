@@ -8,12 +8,8 @@
 |[2462. Total Cost to Hire K Workers](../leetcode/2462.total-cost-to-hire-k-workers.md)|Medium (1763)|
 |[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
 
-> * https://leetcode.com/problems/take-gifts-from-the-richest-pile/description/ 1276
 > * https://leetcode.com/problems/smallest-number-in-infinite-set/description/ 1375
-> * https://leetcode.com/problems/maximal-score-after-applying-k-operations/description/ 1386
-> * https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/ 1418
 > * https://leetcode.com/problems/seat-reservation-manager/description/ 1428
-> * https://leetcode.com/problems/super-ugly-number/description/ m
 > * https://leetcode.com/problems/single-threaded-cpu/description/ 1797
 > * https://leetcode.com/problems/design-twitter/description/ m
 > * https://leetcode.com/problems/ipo/description/ h
@@ -25,6 +21,9 @@
 > * https://leetcode.com/problems/maximum-subsequence-score/description/ 2056
 > * https://leetcode.com/problems/maximum-performance-of-a-team/description/ 2091
 > * https://leetcode.com/problems/minimum-cost-to-hire-k-workers/description/ 2259
+> * Solved: https://leetcode.com/problems/take-gifts-from-the-richest-pile/description/ 1276 // A very basic heap problem. `PriorityQueue(reverseOrder<Int>())` is used to create a max heap. 2024/10/28
+> * Solved: https://leetcode.com/problems/maximal-score-after-applying-k-operations/description/ 1386 // A very basic heap problem. 2024/10/29
+> * Solved: https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/ 1418 // A very basic heap problem. 2024/10/30
 
 ### Top K
 | Problem          | Difficulty |
@@ -51,6 +50,7 @@
 |[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
 
+> * https://leetcode.com/problems/super-ugly-number/description/ m
 > * https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/description/ 2133
 > * https://leetcode.com/problems/find-k-th-smallest-pair-distance/description/ h
 > * https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/description/ h
