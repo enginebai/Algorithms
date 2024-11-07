@@ -5,15 +5,12 @@
 |------------------|------------|
 |[1046. Last Stone Weight](../leetcode/1046.last-stone-weight.md)|Easy (1172)|
 |[1337. The K Weakest Rows in a Matrix](../leetcode/1337.the-k-weakest-rows-in-a-matrix.md)|Easy|
+|[2336. Smallest Number in Infinite Set](../leetcode/2336.smallest-number-in-infinite-set.md)|Easy|
+|[1845. Seat Reservation Manager](../leetcode/1845.seat-reservation-manager.md)|Medium|
 |[2462. Total Cost to Hire K Workers](../leetcode/2462.total-cost-to-hire-k-workers.md)|Medium (1763)|
-|[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
+|[1834. Single-Threaded CPU](../leetcode/1834.single-threaded-cpu.md)|Medium (1797)|
+|[502. IPO](../leetcode/502.ipo.md)|Hard|
 
-> * https://leetcode.com/problems/smallest-number-in-infinite-set/description/ 1375
-> * https://leetcode.com/problems/seat-reservation-manager/description/ 1428
-> * https://leetcode.com/problems/single-threaded-cpu/description/ 1797
-> * https://leetcode.com/problems/design-twitter/description/ m
-> * https://leetcode.com/problems/ipo/description/ h
-> * https://leetcode.com/problems/the-skyline-problem/description/ h
 > * https://leetcode.com/problems/trapping-rain-water-ii/description/ h
 > * https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/ 2014
 > * https://leetcode.com/problems/construct-target-array-with-multiple-sums/description/ 2014 h
@@ -21,9 +18,11 @@
 > * https://leetcode.com/problems/maximum-subsequence-score/description/ 2056
 > * https://leetcode.com/problems/maximum-performance-of-a-team/description/ 2091
 > * https://leetcode.com/problems/minimum-cost-to-hire-k-workers/description/ 2259
+>
 > * Solved: https://leetcode.com/problems/take-gifts-from-the-richest-pile/description/ 1276 // A very basic heap problem. `PriorityQueue(reverseOrder<Int>())` is used to create a max heap. 2024/10/28
 > * Solved: https://leetcode.com/problems/maximal-score-after-applying-k-operations/description/ 1386 // A very basic heap problem. 2024/10/29
 > * Solved: https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/ 1418 // A very basic heap problem. 2024/10/30
+> * Solved: https://leetcode.com/problems/seat-reservation-manager/description/ 1428 // Very straightforward problem. 2024/11/02
 
 ### Top K
 | Problem          | Difficulty |
@@ -33,19 +32,23 @@
 |[692. Top K Frequent Words](../leetcode/692.top-k-frequent-words.md)|Medium|
 |[451. Sort Characters By Frequency](../leetcode/451.sort-charaters-by-frequency.md)|Medium|
 |[973. K Closest Points to Origin](../leetcode/973.k-closest-points-to-origin.md)|Medium|
+|[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
 
-### Reoranization
+### Reorganization
 | Problem          | Difficulty |
 |------------------|------------|
 |[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium (1681)|
+|[984. String Without AAA or BBB](../leetcode/984.string-without-aaa-or-bbb.md)|Medium (1474)|
+|[1405. Longest Happy String](../leetcode/1405.longest-happy-string.md)|Medium (1820)|
+|[621. Task Scheduler](../leetcode/621.task-scheduler.md)|Medium|
 
 > * https://leetcode.com/problems/distant-barcodes/description/ 1701
-> * https://leetcode.com/problems/longest-happy-string/description/ 1820
 > * https://leetcode.com/problems/task-scheduler/description/ m
 
 ### Merge K Sorted
 | Problem          | Difficulty |
 |------------------|------------|
+|[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
 |[264. Ugly Number II](../leetcode/264.ugly-number-ii.md)|Medium|
 |[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)|Medium|
 |[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium|
@@ -63,7 +66,6 @@
 
 > * https://leetcode.com/problems/course-schedule-iii/description/ h
 > * https://leetcode.com/problems/minimum-number-of-refueling-stops/description/ 2074
-
 
 ### Two Heaps
 | Problem          | Difficulty |

@@ -14,3 +14,11 @@
 |[134. Gas Station](../leetcode/134.gas-station.md)|Medium|
 |[135. Candy](../leetcode/135.candy.md)|Hard|
 |[455. Assign Cookies](../leetcode/455.assign-cookies.md)|Easy|
+
+### To Categories
+| Problem          | Difficulty |
+|------------------|------------|
+|[1541. Minimum Insertions to Balance a Parentheses String](../leetcode/1541.minimum-insertions-to-balance-a-parentheses-string.md)|Medium (1759)|
+|[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium (1657)|
+|[1963. Minimum Number of Swaps to Make the String Balanced](../leetcode/1963.minimum-number-of-swaps-to-make-the-string-balanced.md)|Medium (1688)|
+|[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium (1681)|
