@@ -10,6 +10,7 @@
 |[475. Heaters](../leetcode/475.heaters.md)|Medium|
 |[2300. Successful Pairs of Spells and Potions](../leetcode/2300.successful-pairs-of-spells-and-potions.md)|Medium (1476)|
 |[1146. Snapshot Array](../leetcode/1146.snapshot-array.md)|Medium (1770)|
+|[826. Most Profit Assigning Work](https://leetcode.com/problems/most-profit-assigning-work/description/)|Medium (1708)|
 
 > * https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/ 1387
 
