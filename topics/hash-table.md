@@ -159,6 +159,9 @@ for (value in map.values) { ... }
 for ((key, value) in map) { ... }
 for (entry in map.entries) { ... }
 map.forEach { key, value -> ... }
+
+// Sort the map by value
+val sortedMap = map.toList().sortedBy { (_, value) -> value }.toMap()
 ```
 
 ## References
