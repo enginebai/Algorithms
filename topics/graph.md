@@ -246,7 +246,7 @@ We visit each vertex once, which takes `O(|V|)`, and for each vertex, we visit a
 ## Topological Sort
 A *topological sort* of a directed acyclic graph (DAG) is a *linear ordering* of all vertices such that `(x, y)` which `x` appears before `y` in the ordering.
 
-> 概括来说，给出一个 有向图，把这个有向图转成线性的排序 就叫拓扑排序。当然拓扑排序也要检测这个有向图 是否有环，即存在循环依赖的情况，因为这种情况是不能做线性排序的。所以拓扑排序也是图论中判断有向无环图的常用方法。
+> 概括来说，给出一个有向图，把这个有向图转成线性的排序就叫拓扑排序。当然拓扑排序也要检测这个有向图是否有环，即存在循环依赖的情况，因为这种情况是不能做线性排序的。所以拓扑排序也是图论中判断有向无环图的常用方法。
 >
 > 所以当我们做拓扑排序的时候，应该优先找 入度为 0 的节点，只有入度为0，它才是出发节点。
 
@@ -269,20 +269,3 @@ It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to 
 
 ## Union Find
 >> TODO:
-
-## Resources
-- Fundamental of Data Structure
-- CLRS
-- [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs)
-- MIT
-    - [DFS](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-10-depth-first-search/)
-    - [BFS](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-9-breadth-first-search/)
-- http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html // Nice introductory note
-- [Stanford](http://infolab.stanford.edu/~ullman/focs/ch09.pdf) // Nice course
-- [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-6)
-- [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/graph/) // Simple note
-- Software Engineering Interview Preparation // Simple note
-    - [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#graphs)
-    - [DFS/BFS](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#graph-algorithms)
-- [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Graph_Breadth-FS)
-- ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#graphs)~~
