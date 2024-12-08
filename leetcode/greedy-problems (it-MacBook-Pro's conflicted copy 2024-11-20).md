@@ -21,20 +21,14 @@
 |------------------|------------|
 |[1877. Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/)|Medium (1301)|
 |[976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/description/)|Easy (1340)|
-|[561. Array Partition](https://leetcode.com/problems/array-partition-i/description/)|Easy|
-|[2592. Maximize Greatness of an Array](../leetcode/2592.maximize-greatness-of-an-array.md)|Medium (1569)|
-|[826. Most Profit Assigning Work](../leetcode/826.most-profit-assigning-work.md)|Medium (1708)|
+|[455. Assign Cookies](../leetcode/455.assign-cookies.md)|Easy|
+|[561. Array Partition](https://leetcode.com/problems/array-partition/description/)|Easy|
+|[826. Most Profit Assigning Work](https://leetcode.com/problems/most-profit-assigning-work/description/)|Medium (1708)|
 
 > https://leetcode.com/problems/largest-perimeter-triangle/description // Not fully understand
 > https://leetcode.com/problems/maximize-greatness-of-an-array/ WA
 
 ### 1.4 From Left or Right
-| Problem          | Difficulty |
-|------------------|------------|
-|[1221. Split a String in Balanced Strings](https://leetcode.com/problems/split-a-string-in-balanced-strings/description/)|Easy (1219)|
-|[605. Can Place Flowers](../leetcode/605.can-place-flowers.md)|Easy|
-|[1529. Minimum Suffix Flips](../leetcode/1529.minimum-suffix-flips.md)|Medium (1392)|
-|[861. Score After Flipping Matrix](../leetcode/861.score-after-flipping-matrix.md)|Medium (1818)|
 
 ### 1.8 Adjacent
 | Problem          | Difficulty |
@@ -55,7 +49,6 @@
 |[881. Boats to Save People](../leetcode/881.boats-to-save-people.md)|Medium|
 |[134. Gas Station](../leetcode/134.gas-station.md)|Medium|
 |[135. Candy](../leetcode/135.candy.md)|Hard|
-|[455. Assign Cookies](../leetcode/455.assign-cookies.md)|Easy|
 |[1541. Minimum Insertions to Balance a Parentheses String](../leetcode/1541.minimum-insertions-to-balance-a-parentheses-string.md)|Medium (1759)|
 |[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium (1657)|
 |[1963. Minimum Number of Swaps to Make the String Balanced](../leetcode/1963.minimum-number-of-swaps-to-make-the-string-balanced.md)|Medium (1688)|

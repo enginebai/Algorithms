@@ -10,6 +10,7 @@
 
 ### Resources
 * Study guidelines: https://leetcode.com/discuss/study-guide/2166045/ (Problem listing: https://leetcode.com/problem-list/mzw3cyy6/)
+* [Greedy problem listing - 二、区间贪心](https://huxulm.github.io/lc-rating/list/greedy)
 * Video: https://www.bilibili.com/video/BV1qY411n7Qs/?vd_source=2f62e0e1762a6703c96771d3baa35968
 
 > * https://leetcode.cn/problems/my-calendar-i/solutions/1646264/by-jiang-hui-4-pyfn/
