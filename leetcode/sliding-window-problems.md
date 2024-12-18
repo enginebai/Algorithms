@@ -39,4 +39,4 @@
 > * https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/ 1808
 > * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/ 1817
 > * https://leetcode.com/problems/frequency-of-the-most-frequent-element/description/ 1876
-> * https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/ 
+> * https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/ 1931

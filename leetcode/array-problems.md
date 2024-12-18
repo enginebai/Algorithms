@@ -1,33 +1,31 @@
 ## [Array](../topics/array.md)
 
-> * Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
+> > * Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
 
-### Change or Move
+### Movement
+| Problem          | Difficulty |
+|------------------|------------|
 |[283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
-* https://leetcode.com/problems/minimum-moves-to-equal-array-elements/description/ m
-* https://leetcode.com/problems/non-decreasing-array/description/ m
+|[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
+|[665. Non-decreasing Array](../leetcode/665.non-decreasing-array.md)|Medium|
 
-### Rotation
-[189. Rotate Array](../leetcode/189.rotate-array.md)
-* https://leetcode.com/problems/rotate-function/description/ m
+> * https://leetcode.com/problems/non-decreasing-array/description/ m
 
-### Counting
-* https://leetcode.com/problems/degree-of-an-array/description/ e
 
 ### Iteration
 [485. Max Consecutive Ones](../leetcode/485.max-consecutive-ones.md)
-* https://leetcode.com/problems/teemo-attacking/description/ e
-* https://leetcode.com/problems/third-maximum-number/description/ e
-* https://leetcode.com/problems/maximum-product-of-three-numbers/description/ e
+> * https://leetcode.com/problems/teemo-attacking/description/ e
+> * https://leetcode.com/problems/third-maximum-number/description/ e
+> * https://leetcode.com/problems/maximum-product-of-three-numbers/description/ e
 
 ### 2D Array
-* https://leetcode.com/problems/pascals-triangle/description/ e
-* https://leetcode.com/problems/pascals-triangle-ii/ e
-* https://leetcode.com/problems/reshape-the-matrix/description/ e
-* https://leetcode.com/problems/image-smoother/description/ e
-* https://leetcode.com/problems/battleships-in-a-board/description/ m
-* https://leetcode.com/problems/game-of-life/description/ m
-* https://leetcode.com/problems/diagonal-traverse/description/
+> * https://leetcode.com/problems/pascals-triangle/description/ e
+> * https://leetcode.com/problems/pascals-triangle-ii/ e
+> * https://leetcode.com/problems/reshape-the-matrix/description/ e
+> * https://leetcode.com/problems/image-smoother/description/ e
+> * https://leetcode.com/problems/battleships-in-a-board/description/ m
+> * https://leetcode.com/problems/game-of-life/description/ m
+> * https://leetcode.com/problems/diagonal-traverse/description/
 
 | Problem          | Difficulty |
 |------------------|------------|
