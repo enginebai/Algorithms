@@ -46,6 +46,7 @@
 
 ### To Categories
 > The following problems can be categorized into the other topics, such as heap, stack...etc.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
@@ -59,3 +60,4 @@
 |[1541. Minimum Insertions to Balance a Parentheses String](../leetcode/1541.minimum-insertions-to-balance-a-parentheses-string.md)|Medium (1759)|
 |[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium (1657)|
 |[1963. Minimum Number of Swaps to Make the String Balanced](../leetcode/1963.minimum-number-of-swaps-to-make-the-string-balanced.md)|Medium (1688)|
+|[3397. Maximum Number of Distinct Elements After Operations](../leetcode/3397.maximum-number-of-distinct-elements-after-operations.md)|Medium (TODO)|

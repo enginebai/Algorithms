@@ -70,6 +70,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[69. Sqrt(x)](../leetcode/69.sqrt(x).md)|Easy|
+|[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium|
 |[162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
 |[1095. Find in Mountain Array](../leetcode/1095.find-in-mountain-array.md)|Hard (1827)|
 |[287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)|Medium|

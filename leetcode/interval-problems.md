@@ -7,6 +7,7 @@
 |[729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium|
 |[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)|Medium|
 |[1094. Car Pooling](../leetcode/1094.car-pooling.md)|Medium|
+|[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)|
 
 ### Resources
 * Study guidelines: https://leetcode.com/discuss/study-guide/2166045/ (Problem listing: https://leetcode.com/problem-list/mzw3cyy6/)

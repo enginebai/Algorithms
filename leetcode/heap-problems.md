@@ -34,7 +34,6 @@
 |[973. K Closest Points to Origin](../leetcode/973.k-closest-points-to-origin.md)|Medium|
 |[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
 
-### Reorganization
 | Problem          | Difficulty |
 |------------------|------------|
 |[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium (1681)|
