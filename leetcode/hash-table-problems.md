@@ -4,9 +4,12 @@
 > 
 > https://leetcode.cn/circle/discuss/6dPZmy/
 
+|[923. 3Sum With Multiplicity](../leetcode/923.3sum-with-multiplicity.md)|Medium (1710)|
+
 | Problem          | Difficulty |
 |------------------|------------|
 |[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
+|[923. 3Sum With Multiplicity](../leetcode/923.3sum-with-multiplicity.md)|Medium (1710)|
 |[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 |[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
 |[128. Longest Consecutive Sequence](../leetcode/128.longest-consecutive-sequence.md)|Medium|

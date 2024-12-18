@@ -1,8 +1,17 @@
 ## Sliding Window
+
+### Fixed Size Window
 | Problem          | Difficulty |
 |------------------|------------|
+|[1456. Maximum Number of Vowels in a Substring of Given Length](../leetcode/1456.maximum-number-of-vowels-in-a-substring-of-given-length.md)|Medium (1263)|
+|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
+|[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium (1552)|
+|[1234. Replace the Substring for Balanced String](../leetcode/1234.replace-the-substring-for-balanced-string.md)|Medium (1877)|
+
+| Problem          | Difficulty |
+|------------------|------------|
 |[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
 |[1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md)|Medium (1656)|
 |[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)|Medium|
@@ -12,7 +21,6 @@
 |[76. Minimum Window Substring](../leetcode/76.minimum-window-substring.md)|Hard|
 |[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
 |[1876. Substrings of Size Three with Distinct Characters](../leetcode/1876.substrings-of-size-three-with-distinct-characters.md)|Easy|
-|[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium|
 |[2875. Minimum Size Subarray in Infinite Array](../leetcode/2875.minimum-size-subarray-in-infinite-array.md)|Medium|
 |[904. Fruit Into Baskets](../leetcode/904.fruit-into-baskets.md)|Medium (1516)|
 
@@ -39,4 +47,4 @@
 > * https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/ 1808
 > * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/ 1817
 > * https://leetcode.com/problems/frequency-of-the-most-frequent-element/description/ 1876
-> * https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/ 
+> * https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/ 1931
