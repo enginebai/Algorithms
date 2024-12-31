@@ -6,6 +6,7 @@
 |[1456. Maximum Number of Vowels in a Substring of Given Length](../leetcode/1456.maximum-number-of-vowels-in-a-substring-of-given-length.md)|Medium (1263)|
 |[1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](../leetcode/1343.number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.md)|Medium (1317)|
 |[2090. K Radius Subarray Averages](../leetcode/2090.k-radius-subarray-averages.md)|Medium (1358)|
+|[1876. Substrings of Size Three with Distinct Characters](../leetcode/1876.substrings-of-size-three-with-distinct-characters.md)|Easy|
 |[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
@@ -33,10 +34,11 @@
 |[904. Fruit Into Baskets](../leetcode/904.fruit-into-baskets.md)|Medium (1516)|
 |[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)|
 
-> * Solved: https://leetcode.com/problems/get-equal-substrings-within-budget/description/ 1496
-> * Solved: https://leetcode.com/problems/maximize-the-confusion-of-an-exam/description/ 1643, similar to [1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md) and [424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)
 > * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/ 1817
 > * https://leetcode.com/problems/frequency-of-the-most-frequent-element/description/ 1876
+
+> * Solved: https://leetcode.com/problems/get-equal-substrings-within-budget/description/ 1496
+> * Solved: https://leetcode.com/problems/maximize-the-confusion-of-an-exam/description/ 1643, similar to [1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md) and [424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)
 
 > ------------
 > TODO: Add the definition of `* Window: ...` for each problem below.
@@ -71,7 +73,6 @@
 |------------------|------------|
 |[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)|Hard|
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
-|[1876. Substrings of Size Three with Distinct Characters](../leetcode/1876.substrings-of-size-three-with-distinct-characters.md)|Easy|
 
 > * https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/description/ 1535
 > * https://leetcode.com/problems/binary-subarrays-with-sum/description/ 1591

@@ -1,4 +1,4 @@
-# Problem Solving
+# ~~Problem Solving~~ (Deprecated)
 
 ## Overview
 * [Array](#array)
