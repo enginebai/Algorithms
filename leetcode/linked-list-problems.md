@@ -28,21 +28,21 @@
 | Problem          | Difficulty |
 |------------------|------------|
 > * https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/description/ 1279
-> * https://leetcode.com/problems/insertion-sort-list/description/
+> * https://leetcode.com/problems/insertion-sort-list/description/ m
 
 ### Reverse
 | Problem          | Difficulty |
 |------------------|------------|
 |[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
 |[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)|Medium|
-> * https://leetcode.com/problems/swap-nodes-in-pairs/
-> * https://leetcode.com/problems/reverse-nodes-in-k-group/description/
+> * https://leetcode.com/problems/swap-nodes-in-pairs/ m
+> * https://leetcode.com/problems/reverse-nodes-in-k-group/description/ h
 
 ### Two Pointers
 | Problem          | Difficulty |
 |------------------|------------|
 |[19. Remove Nth Node From End of List](../leetcode/19.remove-nth-node-from-end-of-list.md)|Medium|
-> * https://leetcode.com/problems/rotate-list/description/
+> * https://leetcode.com/problems/rotate-list/description/ m
 > * https://leetcode.com/problems/swapping-nodes-in-a-linked-list/description/ 1386
 |[143. Reorder List](../leetcode/143.reorder-list.md)|Medium|
 |[141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)|Easy|
@@ -64,7 +64,7 @@
 |------------------|------------|
 |[21. Merge Two Sorted Lists](../leetcode/21.merge-two-sorted-lists.md)|Easy|
 |[2. Add Two Numbers](../leetcode/2.add-two-numbers.md)|Medium|
-> * https://leetcode.com/problems/add-two-numbers-ii/description/
+> * https://leetcode.com/problems/add-two-numbers-ii/description/ m
 > * https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/description/ 1393
 |[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)|Hard|
 |[1669. Merge In Between Linked Lists](../leetcode/1669.merge-in-between-linked-lists.md)|Medium|
@@ -75,8 +75,8 @@
 |------------------|------------|
 |[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
-> * https://leetcode.com/problems/linked-list-random-node/description/
-> * https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/
+> * https://leetcode.com/problems/linked-list-random-node/description/ m
+> * https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/ m
 > * https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/ 1782
 |[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
 > * https://leetcode.com/problems/lfu-cache/description/ hard

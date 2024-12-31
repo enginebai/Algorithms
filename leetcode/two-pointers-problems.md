@@ -31,6 +31,7 @@
 |[1089. Duplicate Zeros](../leetcode/1089.duplicate-zeros.md)|Easy (1262)|
 |[905. Sort Array By Parity](../leetcode/905.sort-array-by-parity.md)|Easy|
 |[922. Sort Array By Parity II](../leetcode/922.sort-array-by-parity-ii.md)|Easy (1173)|
+|[202. Happy Number](../leetcode/202.happy-number.md)|Easy|
 
 ### Same Direction
 | Problem          | Difficulty |

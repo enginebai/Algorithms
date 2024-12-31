@@ -10,6 +10,7 @@
 |[925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy|
 |[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy (1227)|
 |[1461. Check If a String Contains All Binary Codes of Size K](../leetcode/1461.check-if-a-string-contains-all-binary-codes-of-size-k.md)|Medium (1504)|
+|[859. Buddy Strings](../leetcode/859.buddy-strings.md)|Easy (1341)|
 
 ### Super Easy
 | Problem          | Difficulty |

@@ -174,9 +174,11 @@ See [Heap](../topics/heap.md) topic.
 > TODO
 
 ## Kotlin APIs
+> All the following sorting APIs can append `Descreasing` to sort in descending order.
+
 ### `IntArray`
 ```kotlin
-val nums = intArrayOf(1, 3, 2, 4, -1, 10)
+val nums = intArrayOf(...)
 
 // Sort array in-placee
 nums.sort()
@@ -188,23 +190,69 @@ val sortedListDescending: List<Int> = nums.sortedDescending()
 val sortedArray: IntArray = nums.sortedArray()
 val sortedArrayDescending: IntArray = nums.sortedArrayDescending()
 
-// Sort array by something and return sorted list
-val sortedByList: List<Int> = nums.sortedBy { it }
+// Count the frequency of each element
+val countMap = HashMap<Int, Int>()
 
-// Sort decreasingly
-Arrays.sort(nums) { it1, it2 -> it2 - it1 }
+// Sort array by something else (frequency) and return sorted list
+val sortedByList: List<Int> = nums.sortedBy { countMap[it] }
+
+// Sort array by frequency increasingly, if the frequency is the same, sort by the value itself in descending order
+// [1, 5, 5, 2, 2]
+val sortedByList: List<Int> = nums.sortedWith(compareBy<Int> { countMap[it] }.thenByDescending { it })
+// Or equivalently
+val sortedByList: List<Int> = nums.sortedWith(compareBy<Int>({ countMap[it] }, { -it }))
+
+// For 2D array
+val intervals = arrayOf(
+    intArrayOf(1, 3),
+    intArrayOf(2, 6),
+    intArrayOf(8, 10),
+    intArrayOf(15, 18)
+)
+
+// Sort the intervals by the start time
+intervals.sortBy { it[0] }
+```
+
+> Sample usage: [1636. Sort Array by Increasing Frequency](../leetcode/1636.sort-array-by-increasing-frequency.md)
+
+### `Comparable`
+```kotlin
+data class Person(val name: String, val age: Int) : Comparable<Person> {
+    override fun compareTo(other: Person): Int {
+        return this.age - other.age
+    }
+}
+
+val people = listOf(
+    Person("Alice", 30),
+    Person("Bob", 25),
+    Person("Charlie", 35)
+)
+
+// Sort the list of people by age
+val sortedPeople = people.sorted()
+
+// Sort the list of people by name
+val sortedByName = people.sortedWith(compareBy { it.name })
 ```
 
 ### `List`
 ```kotlin
 val list = mutableListOf(1, 3, 5, 2, 4, 6, 0, -1, -3, 10)
+
 // Sort list in-place
 list.sort()
 // Sort list by something in-place
 list.sortBy { it }
+
+// Sort list and return sorted list
 val sortedList: List<Int> = list.sortedBy { it }
-// Sort mutablle list in-place
-Collections.sort(list)
+
+// Sort by Collections API decreasingly
+Collections.sort(list) { n1, n2 -> n2 - n1 }
+// Or equivalently
+list.sortWith { n1, n2 -> n2 - n1 }
 ```
 
 ## Resources

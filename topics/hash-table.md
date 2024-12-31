@@ -139,8 +139,9 @@ class OpenAddress<T> {
 val set = HashSet<Int>()
 set.size
 set.add(123)
-set.contains(123)
+123 in set // Equivalent to set.contains(123)
 set.isEmpty()
+set.remove(123)
 ```
 
 #### `HashMap`
@@ -150,31 +151,23 @@ map.size
 map.keys
 map.values
 map.isEmpty()
-map.containsKey(123)
+123 in map // Equivalent to map.containsKey(123)
 map[123] = 999
 map.remove(123)
 
+// Iterate keys, values or entries
 for (key in map.keys) { ... }
 for (value in map.values) { ... }
 for ((key, value) in map) { ... }
 for (entry in map.entries) { ... }
 map.forEach { key, value -> ... }
 
-// Sort the map by value
-val sortedMap = map.toList().sortedBy { (_, value) -> value }.toMap()
-```
+// Get the maximum entry sorted by value
+val maxEntry: T? = map.maxByOrNull { it.value }
 
-## References
-- CLRS
-- [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-4-hashing/)
-- [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html)
-- [LC Learn](https://leetcode.com/explore/learn/card/hash-table/)
-- ~~Fundamental of Data Structure~~ // Much as same as CLRS
-- CTCI
-- [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/hash-table/)
-- [Google Tech Dev Guide - Map/Dictionary](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#linear)
-- [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#HashSet_HashTable)
-- [Code Interview University](https://github.com/jwasham/coding-interview-university#hash-table)
-- [leetcode-master](https://github.com/youngyangyang04/leetcode-master#%E5%93%88%E5%B8%8C%E8%A1%A8)
-- [soft-eng-interview-prep](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#hash-tables)
-- [Tech-Interview-Cheat-Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#hash)
+// Sort the map by key
+val sortedMap = map.toSortedMap()
+
+// Sort the map by value
+val sortedMap = map.toList().sortedBy(Descending) { (_, value) -> value }.toMap()
+```
