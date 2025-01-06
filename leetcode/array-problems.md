@@ -46,10 +46,9 @@
 |[54. Spiral Matrix](../leetcode/54.spiral-matrix.md)|Medium|
 |[59. Spiral Matrix II](../leetcode/59.spiral-matrix-ii.md)|Medium|
 |[221. Maximal Square](../leetcode/221.maximal-square.md)|Medium|
-|[621. Task Scheduler](../leetcode/621.task-scheduler.md)|Medium|
 |[189. Rotate Array](../leetcode/189.rotate-array.md)|Medium|
-|[136. Single Number](../leetcode/136.single-number.md)|Easy|
-|[31. Next Permutation](../leetcode/31.next-permutation.md)|Medium|
+|~~[136. Single Number](../leetcode/136.single-number.md)~~|Easy|
+|~~[31. Next Permutation](../leetcode/31.next-permutation.md)~~|Medium|
 
 ### [Sorting](../topics/sorting.md)
 | Problem          | Difficulty |

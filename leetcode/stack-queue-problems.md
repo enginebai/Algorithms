@@ -57,7 +57,6 @@
 > * https://leetcode.com/problems/maximum-score-from-removing-substrings/description/ 1868
 > * Solved: https://leetcode.com/problems/minimum-string-length-after-removing-substrings 1282 // Easy to solve by stack and learned two pointers approach, 2024/10/30
 
-
 ### Monotonic Stack
 | Problem          | Difficulty |
 |------------------|------------|

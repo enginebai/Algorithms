@@ -42,7 +42,6 @@
 |[621. Task Scheduler](../leetcode/621.task-scheduler.md)|Medium|
 
 > * https://leetcode.com/problems/distant-barcodes/description/ 1701
-> * https://leetcode.com/problems/task-scheduler/description/ m
 
 ### Merge K Sorted
 | Problem          | Difficulty |
