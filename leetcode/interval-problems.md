@@ -3,7 +3,7 @@
 |------------------|------------|
 |[56. Merge Intervals](../leetcode/56.merge-intervals.md)|Medium|
 |[57. Insert Interval](../leetcode/57.insert-interval.md)|Medium|
-|[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)|Medium|
+|**[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)**|Medium|
 |[729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium|
 |[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)|Medium|
 |[1094. Car Pooling](../leetcode/1094.car-pooling.md)|Medium|

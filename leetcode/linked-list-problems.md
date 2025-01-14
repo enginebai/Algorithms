@@ -41,7 +41,7 @@
 |[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)|Medium|
 |[24. Swap Nodes in Pairs](../leetcode/24.swap-nodes-in-pairs.md)|Medium|
 
-> * https://leetcode.com/problems/reverse-nodes-in-k-group/description/ h
+> * Solved, to note: https://leetcode.com/problems/reverse-nodes-in-k-group/description/ h
 
 ### Two Pointers
 | Problem          | Difficulty |

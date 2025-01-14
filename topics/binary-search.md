@@ -81,9 +81,11 @@ For example, to find the smallest (largest) number which is greater (smaller) or
           R
 ```
 
+> Sample problems: [278. First Bad Version](../leetcode/278.first-bad-version.md)
+>
 > Sample problem: [35. Search Insert Position](../leetcode/35.search-insert-position.md)
 
-## Find the First/Last Position of Element in Sorted Array
+## Find the First/Last Position of Target in Sorted Array
 Given sorted array (might contain duplicates), we can use the same approach mentioned above to find the first/last position of element in sorted array. We apply the same conditions when `target < middle` and `middle < target` as normal binary search, the different part is when `target == middle`:
 
 * To find the first position, we should keep searching the left part because we don't know if current `middle` is the first element, and return `left` pointer when while loop breaks.
