@@ -22,8 +22,8 @@ This project offers a curated collection of notes and resources covering fundame
 - [Backtracking](./topics/backtracking.md)
 
 ## Problems & Solutions
-- [LeetCode Problem Listing](./leetcode/README.md)
-- [Mistakes Notebooks](./leetcode/mistakes.md)
+- [LeetCode Problem Listing](./problems/README.md)
+- [Mistakes Notebooks](./problems/mistakes.md)
 - [Problem Solving Techniques](./topics/problem-solving.md)
 
 ## Roadmap

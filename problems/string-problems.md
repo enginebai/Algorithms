@@ -10,12 +10,12 @@
 |[925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy|
 |**[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)**|Easy (1227)|
 |[1461. Check If a String Contains All Binary Codes of Size K](../leetcode/1461.check-if-a-string-contains-all-binary-codes-of-size-k.md)|Medium (1504)|
-|[859. Buddy Strings](../leetcode/859.buddy-strings.md)|Easy (1341)|
 
-### Super Easy
+### Equal Strings
 | Problem          | Difficulty |
 |------------------|------------|
 |[1790. Check if One String Swap Can Make Strings Equal](../leetcode/1790.check-if-one-string-swap-can-make-strings-equal.md)|Easy|
+|[859. Buddy Strings](../leetcode/859.buddy-strings.md)|Easy (1341)|
 
 #### Problem Listing
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m

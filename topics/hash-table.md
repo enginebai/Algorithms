@@ -128,6 +128,16 @@ class OpenAddress<T> {
 > * [705. Design HashSet](../leetcode/705.design-hashset.md)
 > * [706. Design HashMap](../leetcode/706.design-hashmap.md)
 
+## Hash Functions
+A good hash function should distribute keys **uniformly** across the buckt while **minimizing collisions**, and it should be easy and fast to compute. 
+
+There are some key properties of a good hash function:
+1. **Deterministic**: The same key should always produce the same hash value.
+2. **Uniformity**: The hash function should distribute keys uniformly across the buckets.
+3. **Efficiency**: The hash function should be fast to compute.
+4. **Minimize Collisions**: The hash function should minimize the number of collisions.
+
+
 ## Hash Table API
 ### Python
 > TODO

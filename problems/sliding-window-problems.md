@@ -16,11 +16,11 @@
 
 > * https://leetcode.com/problems/find-the-k-beauty-of-a-number/ 1279
 > * https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/description/ 1306
-> * **https://leetcode.com/problems/maximum-average-subarray-i/description/ e
+> * **https://leetcode.com/problems/maximum-average-subarray-i/description/ e**
 >
 > -------- Too easy above --------       
 >
-> * **https://leetcode.com/problems/grumpy-bookstore-owner/description/ 1418
+> * **https://leetcode.com/problems/grumpy-bookstore-owner/description/ 1418**
 > * https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/description/ 1748
 
 ### Longest Window
@@ -78,8 +78,8 @@
 
 > * https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/description/ 1535
 > * https://leetcode.com/problems/binary-subarrays-with-sum/description/ 1591
-> * **https://leetcode.com/problems/count-number-of-nice-subarrays/description/ 1623
-> * **https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/ 1672
+> * **https://leetcode.com/problems/count-number-of-nice-subarrays/description/ 1623**
+> * **https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/ 1672**
 > * https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/description/ 1700
 > * https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/description/ 1748
 > * https://leetcode.com/problems/longest-nice-subarray/ 1749
