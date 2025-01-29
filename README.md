@@ -19,6 +19,7 @@ This project offers a curated collection of notes and resources covering fundame
 - [Dynamic Programming](./topics/dynamic-programming.md)
 - [Greedy](./topics/greedy.md)
 - [Shortest Path](./topics/shortest-path.md)
+- [Interval](./topics/interval.md)
 - [Backtracking](./topics/backtracking.md)
 
 ## Problems & Solutions

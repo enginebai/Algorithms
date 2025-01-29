@@ -214,6 +214,17 @@ val intervals = arrayOf(
 intervals.sortBy { it[0] }
 ```
 
+### `Array`
+```kotlin
+val nums: Array<IntArray> = ...
+
+// Sort array in-place
+nums.sort()
+nums.sortDescending()
+nums.sortBy { it[0] }
+nums.sortByDescending { it[0] }
+``` 
+
 > Sample usage: [1636. Sort Array by Increasing Frequency](../leetcode/1636.sort-array-by-increasing-frequency.md)
 
 ### `Comparable`
