@@ -19,7 +19,6 @@
 
 #### Problem Listing
 > * https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/ 5k m
-> * https://leetcode.com/problems/accounts-merge/ 5k m
 > * Solved: https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/description/ 3k e
 > ----
 > * https://leetcode.com/problems/repeated-string-match/ 2k m
