@@ -1,12 +1,11 @@
 ## Intervals
-### Basic
+### Line Sweep
 | Problem          | Difficulty |
 |------------------|------------|
 |**[56. Merge Intervals](../leetcode/56.merge-intervals.md)**|Medium|
 |**[57. Insert Interval](../leetcode/57.insert-interval.md)**|Medium|
 |**[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)**|Medium|
 |**[729. My Calendar I](../leetcode/729.my-calendar-i.md)**|Medium|
-|[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
 |**[1094. Car Pooling](../leetcode/1094.car-pooling.md)**|Medium|
 |[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)|
 
@@ -42,6 +41,7 @@
 ### 2.4 区间覆盖
 | Problem          | Difficulty |
 |------------------|------------|
+|[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
 |[45. Jump Game II](../leetcode/45.jump-game-ii.md)|Medium|
 
 > * https://leetcode.com/problems/video-stitching/description/ 1746

@@ -32,7 +32,7 @@
 |[692. Top K Frequent Words](../leetcode/692.top-k-frequent-words.md)|Medium|
 |[451. Sort Characters By Frequency](../leetcode/451.sort-charaters-by-frequency.md)|Medium|
 |[973. K Closest Points to Origin](../leetcode/973.k-closest-points-to-origin.md)|Medium|
-|[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
+|@@[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
 
 | Problem          | Difficulty |
 |------------------|------------|

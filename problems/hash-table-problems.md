@@ -8,7 +8,7 @@
 |[535. Encode and Decode TinyURL](../leetcode/535.encode-and-decode-tinyurl.md)|Medium|
 |**[380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)**|Medium|
 |@@[381. Insert Delete GetRandom O(1) - Duplicates allowed](../leetcode/381.insert-delete-getrandom-o1-duplicates-allowed.md)|Hard|
-|[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
+|@@[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
 |[1396. Design Underground System](../leetcode/1396.design-underground-system.md)|Medium|
 |**[146. LRU Cache](../leetcode/146.lru-cache.md)**|Medium|
 
