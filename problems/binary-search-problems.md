@@ -94,3 +94,24 @@
 > * https://leetcode.com/problems/peak-index-in-a-mountain-array/description/ m
 > * https://leetcode.com/problems/kth-missing-positive-number/description/ e
 > * **https://leetcode.com/problems/median-of-two-sorted-arrays/description/**
+
+## Explanation
+* [34. Find First and Last Position of Element in Sorted Array](https://www.youtube.com/watch?v=sX5IbSSNKXI)
+* [475. Heaters](https://www.youtube.com/watch?v=25LSSsAGLDw)
+* [875. Koko Eating Bananas](https://www.youtube.com/watch?v=yfWVWbi9pts)
+* [1011. Capacity To Ship Packages Within D Days](https://www.youtube.com/watch?v=-F2ysRiSTvk)
+* [1482. Minimum Number of Days to Make m Bouquets](https://www.youtube.com/watch?v=D_Pq9SqEwsc)
+* [1631. Path With Minimum Effort](https://www.youtube.com/watch?v=vIJ8ue4pQtw)
+* [2560. House Robber IV](https://www.youtube.com/watch?v=_-nBUCSeU98)
+* [2226. Maximum Candies Allocated to K Children](https://www.youtube.com/watch?v=TBTvnyMLgng)
+* [410. Split Array Largest Sum](https://www.youtube.com/watch?v=PBvgA3sV5Zs)
+* [2064. Minimized Maximum of Products Distributed to Any Store](https://www.youtube.com/watch?v=0Lyu_B_Ao7k)
+* [1552. Magnetic Force Between Two Balls](https://www.youtube.com/watch?v=6oSU44kkV-U)
+* [240. Search a 2D Matrix II](https://www.youtube.com/watch?v=-IzCjqVsjZw)
+* [378. Kth Smallest Element in a Sorted Matrix](https://www.youtube.com/watch?v=JJUv4DDLSB4)
+* [729. My Calendar I](https://www.youtube.com/watch?v=g30lRE3ASiA)
+* [1146. Snapshot Array](https://github.com/wisdompeak/LeetCode/tree/master/Design/1146.Snapshot-Array)
+* [162. Find Peak Element](https://www.youtube.com/watch?v=esY2RWhmZ74)
+* [287. Find the Duplicate Number](https://www.youtube.com/watch?v=86co28GuZ5U)
+* [33. Search in Rotated Sorted Array](https://github.com/wisdompeak/LeetCode/tree/master/Binary_Search/033.Search-in-Rotated-Sorted-Array)
+* [153. Find Minimum in Rotated Sorted Array](https://github.com/wisdompeak/LeetCode/tree/master/Binary_Search/153.Find-Minimum-in-Rotated-Sorted-Array)

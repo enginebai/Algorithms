@@ -109,3 +109,14 @@
 |[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
 
 > TODO: |[2090. K Radius Subarray Averages](../leetcode/2090.k-radius-subarray-averages.md)|Medium (1358)|
+
+## Explanation
+* [380. Insert Delete GetRandom O(1)](https://www.youtube.com/watch?v=jE6VIeQxzLU)
+* [381. Insert Delete GetRandom O(1) - Duplicates allowed](https://www.youtube.com/watch?v=IqUJz-enhGA)
+* [146. LRU Cache](https://www.youtube.com/watch?v=jX_k2FIhRI0)
+* [460. LFU Cache](https://www.youtube.com/watch?v=EpLALCho36w)
+* [532. K-diff Pairs in an Array](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/532.K-diff-Pairs-in-an-Array)
+* [128. Longest Consecutive Sequence](https://www.youtube.com/watch?v=QnBcLxgeeGs)
+* [923. 3Sum With Multiplicity](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/923.3Sum-With-Multiplicity)
+* [49. Group Anagrams](https://github.com/wisdompeak/LeetCode/tree/master/Hash/049.Group-Anagrams)
+* [41. First Missing Positive](https://www.youtube.com/watch?v=SRsT9iHb4OE)

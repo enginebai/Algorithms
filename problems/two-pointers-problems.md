@@ -39,3 +39,16 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[1574. Shortest Subarray to be Removed to Make Array Sorted](../leetcode/1574.shortest-subarray-to-be-removed-to-make-array-sorted.md)|Medium (1931)|
+
+## Explanation
+* [11. Container With Most Water](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/011.Container-With-Most-Water)
+* [658. Find K Closest Elements](https://www.youtube.com/watch?v=gfwLpRYbCx0)
+* [611. Valid Triangle Number](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/611.Valid-Triangle-Number)
+* [475. Heaters](https://www.youtube.com/watch?v=25LSSsAGLDw)
+* [1775. Equal Sum Arrays With Minimum Number of Operations](https://www.youtube.com/watch?v=HK7o2pQRvMQ)
+* [15. 3Sum](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/015.3Sum)
+* [16. 3Sum Closest](https://www.youtube.com/watch?v=9nG3tEJ6-8k)
+* [923. 3Sum With Multiplicity](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/923.3Sum-With-Multiplicity)
+* [26. Remove Duplicates from Sorted Array](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/026.Remove-Duplicates-from-Sorted-Array)
+* [80. Remove Duplicates from Sorted Array II](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/080.Remove-Duplicates-from-Sorted-Array-II)
+* [1574. Shortest Subarray to be Removed to Make Array Sorted](https://www.youtube.com/watch?v=pNNvmjNJcu8)

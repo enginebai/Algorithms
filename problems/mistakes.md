@@ -13,6 +13,9 @@
 |[1482. Minimum Number of Days to Make m Bouquets](../leetcode/1482.minimum-number-of-days-to-make-m-bouquets.md)|Medium (1945)|
 |[1146. Snapshot Array](../leetcode/1146.snapshot-array.md)|Medium (1770)|
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
+|[671. Second Minimum Node In a Binary Tree](../leetcode/671.second-minimum-node-in-a-binary-tree.md)|Easy|
+|[1339. Maximum Product of Splitted Binary Tree](../leetcode/1339.maximum-product-of-splitted-binary-tree.md)|Medium (1674)|
+
 
 ## P1
 > Somewhat familiar with the problems, need to practice some times.
@@ -26,6 +29,7 @@
 |[826. Most Profit Assigning Work](../leetcode/826.most-profit-assigning-work.md)|Medium (1708)|
 |[2187. Minimum Time to Complete Trips](../leetcode/2187.minimum-time-to-complete-trips.md)|Medium (1640)|
 |[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
+|[563. Binary Tree Tilt](../leetcode/563.binary-tree-tilt.md)|Easy|
 
 ## P2
 > Famililar with the problems, just need to check if I can solve them quickly.
@@ -40,7 +44,6 @@
 |[2226. Maximum Candies Allocated to K Children](../leetcode/2226.maximum-candies-allocated-to-k-children.md)|Medium (1646)|
 |[1346. Check If N and Its Double Exist](../leetcode/1346.check-if-n-and-its-double-exist.md)|Easy (1225)|
 |[916. Word Subsets](../leetcode/916.word-subsets.md)|Medium (1624)|
-|[554. Brick Wall](../leetcode/554.brick-wall.md)|Medium|
 |[381. Insert Delete GetRandom O(1) - Duplicates allowed](../leetcode/381.insert-delete-getrandom-o1-duplicates-allowed.md)|Hard|
 |[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
 
@@ -48,4 +51,5 @@
 ## Solved
 > Not familiar with the problems or made mistakes before, but it's solved now.
 |[1011. Capacity To Ship Packages Within D Days](../leetcode/1011.capacity-to-ship-packages-within-d-days.md)|Medium (1725)|
-
+|[554. Brick Wall](../leetcode/554.brick-wall.md)|Medium|
+|[112. Path Sum](../leetcode/112.path-sum.md)|Easy|

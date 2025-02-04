@@ -84,3 +84,16 @@
 > * https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/description/ 1748
 > * https://leetcode.com/problems/longest-nice-subarray/ 1749
 > * https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/ 1808
+
+## Explanation
+* [438. Find All Anagrams in a String](https://www.youtube.com/watch?v=I9xCo3UVomE)
+* [2461. Maximum Sum of Distinct Subarrays With Length K](https://www.youtube.com/watch?v=kl9iE2tQh_A)
+* [3. Longest Substring Without Repeating Characters](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/003.Longest%20Substring%20Without%20Repeating%20Characters)
+* [1004. Max Consecutive Ones III](https://www.youtube.com/watch?v=Ti9_4NVDzdg)
+* [424. Longest Repeating Character Replacement](https://www.youtube.com/watch?v=wXicFFUVdd0)
+* [209. Minimum Size Subarray Sum](https://www.youtube.com/watch?v=Ucepzsd2A4w)
+* [76. Minimum Window Substring](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/076.Minimum-Window-Substring)
+* [1234. Replace the Substring for Balanced String](https://www.youtube.com/watch?v=XSGa1lP9vD8)
+* [713. Subarray Product Less Than K](https://www.youtube.com/watch?v=WOSWdl4Fl00)
+* [2875. Minimum Size Subarray in Infinite Array](https://www.youtube.com/watch?v=S1EOGabarNM)
+* [239. Sliding Window Maximum](https://www.youtube.com/watch?v=b1rqOQ5p6EA)
