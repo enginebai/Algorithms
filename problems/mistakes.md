@@ -15,7 +15,11 @@
 |[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
 |[671. Second Minimum Node In a Binary Tree](../leetcode/671.second-minimum-node-in-a-binary-tree.md)|Easy|
 |[1339. Maximum Product of Splitted Binary Tree](../leetcode/1339.maximum-product-of-splitted-binary-tree.md)|Medium (1674)|
-
+|[1443. Minimum Time to Collect All Apples in a Tree](../leetcode/1443.minimum-time-to-collect-all-apples-in-a-tree.md)|Medium (1682)|
+|[1530. Number of Good Leaf Nodes Pairs](../leetcode/1530.number-of-good-leaf-nodes-pairs.md)|Medium (1745)|
+|[687. Longest Univalue Path](../leetcode/687.longest-univalue-path.md)|Medium|
+|[652. Find Duplicate Subtrees](../leetcode/652.find-duplicate-subtrees.md)|Medium|
+|[114. Flatten Binary Tree to Linked List](../leetcode/114.flatten-binary-tree-to-linked-list.md)|Medium|
 
 ## P1
 > Somewhat familiar with the problems, need to practice some times.
@@ -30,6 +34,9 @@
 |[2187. Minimum Time to Complete Trips](../leetcode/2187.minimum-time-to-complete-trips.md)|Medium (1640)|
 |[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
 |[563. Binary Tree Tilt](../leetcode/563.binary-tree-tilt.md)|Easy|
+|[2246. Longest Path With Different Adjacent Characters](../leetcode/2246.longest-path-with-different-adjacent-characters.md)|Hard (2126)|
+|[2385. Amount of Time for Binary Tree to Be Infected](../leetcode/2385.amount-of-time-for-binary-tree-to-be-infected.md)|Medium (1711)|
+
 
 ## P2
 > Famililar with the problems, just need to check if I can solve them quickly.
@@ -46,6 +53,10 @@
 |[916. Word Subsets](../leetcode/916.word-subsets.md)|Medium (1624)|
 |[381. Insert Delete GetRandom O(1) - Duplicates allowed](../leetcode/381.insert-delete-getrandom-o1-duplicates-allowed.md)|Hard|
 |[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
+|[543. Diameter of Binary Tree](../leetcode/543.diameter-of-binary-tree.md)|Easy|
+|[129. Sum Root to Leaf Numbers](../leetcode/129.sum-root-to-leaf-numbers.md)|Medium|
+|[1367. Linked List in Binary Tree](../leetcode/1367.linked-list-in-binary-tree.md)|Medium|
+|[1110. Delete Nodes And Return Forest](../leetcode/1110.delete-nodes-and-return-forest.md)|Medium (1511)|
 
 
 ## Solved
@@ -53,3 +64,4 @@
 |[1011. Capacity To Ship Packages Within D Days](../leetcode/1011.capacity-to-ship-packages-within-d-days.md)|Medium (1725)|
 |[554. Brick Wall](../leetcode/554.brick-wall.md)|Medium|
 |[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
+|[958. Check Completeness of a Binary Tree](../leetcode/958.check-completeness-of-a-binary-tree.md)|Medium (1703)|

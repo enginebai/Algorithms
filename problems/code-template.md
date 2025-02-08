@@ -2,18 +2,41 @@
 
 ## Common Code Snippets
 ```kotlin
-private fun IntArray.swap(i: Int, j: Int) {
-    val temp = this[i]
-    this[i] = this[j]
-    this[j] = temp
-}
-
 private val directions = arrayOf(
     intArrayOf(-1, 0),  // Up
     intArrayOf(1, 0),   // Down
     intArrayOf(0, -1),  // Left
     intArrayOf(0, 1)    // Right
 )
+```
+
+## Binary Search
+```kotlin
+fun binarySearch(nums: IntArray, target: Int): Int {
+    var left = TODO()
+    var right = TODO()
+    while (left <= right) {
+        val mid = left + (right - left) / 2
+        // TODO: Implement the binary search logic here
+    }
+    return -1
+}
+```
+
+## BFS
+```kotlin
+fun bfs(root: TreeNode?) {
+    if (root == null) return
+    val queue: ArrayDeque<TreeNode> = ArrayDeque()
+    queue.offer(root)
+    while (queue.isNotEmpty()) {
+        val size = queue.size
+        repeat(size) {
+            val node = queue.poll()
+            // TODO: Implement the BFS logic here
+        }
+    }
+}
 ```
 
 ## Return the Answer Modulo 1e9 + 7
@@ -29,14 +52,16 @@ return answer.toInt()
 
 ## Find the Largest Two Numbers
 ```kotlin
+// Allow duplicates
 fun findLargestTwoNumbers(nums: IntArray) {
     var first = Int.MIN_VALUE
     var second = Int.MIN_VALUE
     for (num in nums) {
-        if (num > first) {
+        // We use >= to allow duplicates, if we want to skip duplicates, we can use >
+        if (num >= first) {
             second = first
             first = num
-        } else if (num > second) {
+        } else if (num >= second) {
             second = num
         }
     }

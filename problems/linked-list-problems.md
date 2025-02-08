@@ -38,8 +38,8 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |**[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)**|Easy|
-|@@**[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)**|Medium|
-|@@**[24. Swap Nodes in Pairs](../leetcode/24.swap-nodes-in-pairs.md**)|Medium|
+|**[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)**|Medium|
+|@@**[24. Swap Nodes in Pairs](../leetcode/24.swap-nodes-in-pairs.md)**|Medium|
 
 > * Solved, to note: **https://leetcode.com/problems/reverse-nodes-in-k-group/description/** h
 

@@ -6,11 +6,11 @@
 |[965. Univalued Binary Tree](../leetcode/965.univalued-binary-tree.md)|Easy|
 |[872. Leaf-Similar Trees](../leetcode/872.leaf-similar-trees.md)|Easy (1287)|
 |**[1448. Count Good Nodes in Binary Tree](../leetcode/1448.count-good-nodes-in-binary-tree.md)**|Medium (1360)|
+|**[662. Maximum Width of Binary Tree](../leetcode/662.maximum-width-of-binary-tree.md)**|Medium|
 |**[404. Sum of Left Leaves](../leetcode/404.sum-of-left-leaves.md)**|Easy|
 |@@[671. Second Minimum Node In a Binary Tree](../leetcode/671.second-minimum-node-in-a-binary-tree.md)|Easy|
 |[1026. Maximum Difference Between Node and Ancestor](../leetcode/1026.maximum-difference-betwwen-node-and-ancestor.md)|Medium (1446)|
 |[1315. Sum of Nodes with Even-Valued Grandparent](../leetcode/1315.sum-of-nodes-with-even-valued-grandparent.md)|Medium (1426)|
-|**[1372. Longest ZigZag Path in a Binary Tree](../leetcode/1372.longest-zigzag-path-in-a-binary-tree.md)**|Medium (1713)|
 
 ### Bottom-Up
 | Problem          | Difficulty |
@@ -27,6 +27,18 @@
 > * https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/description/ e
 > * https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/description/ 1534
 
+### Distance
+| Problem          | Difficulty |
+|------------------|------------|
+|[104. Maximum Depth of Binary Tree](../leetcode/104.maximum-depth-of-binary-tree.md)|Easy|
+|[111. Minimum Depth of Binary Tree](../leetcode/111.minimum-depth-of-binary-tree.md)|Easy|
+|@@**[543. Diameter of Binary Tree](../leetcode/543.diameter-of-binary-tree.md)**|Easy|
+|@@**[687. Longest Univalue Path](../leetcode/687.longest-univalue-path.md)**|Medium|
+|@@[2246. Longest Path With Different Adjacent Characters](../leetcode/2246.longest-path-with-different-adjacent-characters.md)|Hard (2126)|
+|**[863. All Nodes Distance K in Binary Tree](../leetcode/863.all-nodes-distance-k-in-binary-tree.md)**|Medium (1663)|
+|@@[2385. Amount of Time for Binary Tree to Be Infected](../leetcode/2385.amount-of-time-for-binary-tree-to-be-infected.md)|Medium (1711)|
+|@@**[1372. Longest ZigZag Path in a Binary Tree](../leetcode/1372.longest-zigzag-path-in-a-binary-tree.md)**|Medium (1713)|
+
 ### Path
 | Problem          | Difficulty |
 |------------------|------------|
@@ -36,18 +48,6 @@
 |[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium (1405)|
 |[1022. Sum of Root To Leaf Binary Numbers](../leetcode/1022.sum-of-root-to-leaf-binary-numbers.md)|Easy (1462)|
 |[988. Smallest String Starting From Leaf](../leetcode/988.smallest-string-starting-from-leaf.md)|Medium (1429)|
-
-### Distance
-| Problem          | Difficulty |
-|------------------|------------|
-|**[662. Maximum Width of Binary Tree](../leetcode/662.maximum-width-of-binary-tree.md)**|Medium|
-|[104. Maximum Depth of Binary Tree](../leetcode/104.maximum-depth-of-binary-tree.md)|Easy|
-|[111. Minimum Depth of Binary Tree](../leetcode/111.minimum-depth-of-binary-tree.md)|Easy|
-|@@**[543. Diameter of Binary Tree](../leetcode/543.diameter-of-binary-tree.md)**|Easy|
-|@@**[687. Longest Univalue Path](../leetcode/687.longest-univalue-path.md)**|Medium|
-|@@[2246. Longest Path With Different Adjacent Characters](../leetcode/2246.longest-path-with-different-adjacent-characters.md)|Hard (2126)|
-|**[863. All Nodes Distance K in Binary Tree](../leetcode/863.all-nodes-distance-k-in-binary-tree.md)**|Medium (1663)|
-|@@[2385. Amount of Time for Binary Tree to Be Infected](../leetcode/2385.amount-of-time-for-binary-tree-to-be-infected.md)|Medium (1711)|
 
 ### Structure
 | Problem          | Difficulty |
@@ -67,7 +67,7 @@
 |------------------|------------|
 |[814. Binary Tree Pruning](../leetcode/814.binary-tree-pruning.md)|Medium (1380)|
 |[1325. Delete Leaves With a Given Value](../leetcode/1325.delete-leaves-with-a-given-value.md)|Medium (1407)|
-|[1110. Delete Nodes And Return Forest](../leetcode/1110.delete-nodes-and-return-forest.md)|Medium (1511)|
+|@@[1110. Delete Nodes And Return Forest](../leetcode/1110.delete-nodes-and-return-forest.md)|Medium (1511)|
 
 ### Construction
 | Problem          | Difficulty |
@@ -123,7 +123,7 @@
 |------------------|------------|
 |[572. Subtree of Another Tree](../leetcode/572.subtree-of-another-tree.md)|Easy|
 |[652. Find Duplicate Subtrees](../leetcode/652.find-duplicate-subtrees.md)|Medium|
-|**[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)**|Hard|
+|@@**[297. Serialize and Deserialize Binary Tree](../leetcode/297.serialize-and-deserialize-binary-tree.md)**|Hard|
 > * https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/description/ m
 
 ### Other
@@ -137,3 +137,18 @@
 |[257. Binary Tree Paths](../leetcode/257.binary-tree-paths.md)|Easy|
 |**[437. Path Sum III](../leetcode/437.path-sum-iii.md)**|Medium|
 
+## Explanation
+* [662. Maximum Width of Binary Tree](https://www.youtube.com/watch?v=h8ON63MU4nQ)
+* [543. Diameter of Binary Tree](https://www.youtube.com/watch?v=UfPMw8zD8EY)
+* [687. Longest Univalue Path](https://www.youtube.com/watch?v=ZLu_Cj4zYEY)
+* [2246. Longest Path With Different Adjacent Characters](https://www.youtube.com/watch?v=KzZ_Ya-2ODk)
+* [863. All Nodes Distance K in Binary Tree](https://www.youtube.com/watch?v=53yZy6BWVzc)
+* [124. Binary Tree Maximum Path Sum](https://www.youtube.com/watch?v=cuneDTWejTw)
+* [1022. Sum of Root To Leaf Binary Numbers](https://www.youtube.com/watch?v=ge3Q2-eElLI)
+* [572. Subtree of Another Tree](https://www.youtube.com/watch?v=BHzTSN6gAaM)
+* [652. Find Duplicate Subtrees](https://www.youtube.com/watch?v=YupKiFqtnsA)
+* [110. Balanced Binary Tree](https://github.com/wisdompeak/LeetCode/tree/master/Tree/110.Balanced-Binary-Tree)
+* [226. Invert Binary Tree](https://github.com/wisdompeak/LeetCode/tree/master/Tree/226.Invert-Binary-Tree)
+* [114. Flatten Binary Tree to Linked List](https://github.com/wisdompeak/LeetCode/tree/master/Tree/114.Flatten-Binary-Tree-to-Linked-List)
+* [297. Serialize and Deserialize Binary Tree](https://www.youtube.com/watch?v=6tUBiOYbYgY)
+* [236. Lowest Common Ancestor of a Binary Tree](https://github.com/wisdompeak/LeetCode/tree/master/Tree/236.Lowest-Common-Ancestor-of-a-Binary-Tree)
