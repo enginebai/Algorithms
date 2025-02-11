@@ -23,7 +23,40 @@ fun binarySearch(nums: IntArray, target: Int): Int {
 }
 ```
 
-## BFS
+## Grid DFS
+```kotlin
+private fun dfs(grid: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>>) {
+    val m = grid.size
+    val n = grid[0].size
+    if (x !in 0 until m || y !in 0 until n || grid[x][y] != 1 || visited.contains(x to y)) return 
+    visited.add(x to y)
+    for (dir in directions) {
+        val newX = x + dir[0]
+        val newY = y + dir[1]
+        dfs(grid, newX, newY)
+    }
+}
+```     
+
+## Grid Area
+Calculate the area of `1's` in the grid.
+```kotlin
+fun dfs(grid: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>>): Int {
+    val m = grid.size
+    val n = grid[0].size
+    if (x !in 0 until m || y !in 0 until n || grid[x][y] != 1 || visited.contains(x to y) return 0
+    visited.add(x to y)
+    var area = 1
+    directions.forEach { d -> 
+        val newX = x + d[0]
+        val newY = y + d[1]
+        area += dfs(grid, newX, newY, mark)
+    }
+    return area
+}
+``` 
+
+## Tree BFS
 ```kotlin
 fun bfs(root: TreeNode?) {
     if (root == null) return
@@ -34,6 +67,37 @@ fun bfs(root: TreeNode?) {
         repeat(size) {
             val node = queue.poll()
             // TODO: Implement the BFS logic here
+        }
+    }
+}
+```
+
+## Grid BFS
+```kotlin
+val m = grid.size
+val n = grid[0].size
+val queue = ArrayDeque<Pair<Int, Int>>()
+val visited = HashSet<Pair<Int, Int>>()
+
+for (i in 0 until m) {
+    for (j in 0 until n) {
+        if (grid[i][j] == TODO) {
+            queue.add(i to j)
+            visited.add(i to j)
+        }
+    }
+}
+while (queue.isNotEmpty()) {
+    val size = queue.size
+    repeat(size) {
+        val (x, y) = queue.poll()
+        for (dir in directions) {
+            val newX = x + dir[0]
+            val newY = y + dir[1]
+            if (newX in 0 until m && newY in 0 until n && (newX to newY) !in visited) {
+                queue.add(newX to newY)
+                visited.add(newX to newY)
+            }
         }
     }
 }

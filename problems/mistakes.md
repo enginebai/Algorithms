@@ -20,6 +20,8 @@
 |[687. Longest Univalue Path](../leetcode/687.longest-univalue-path.md)|Medium|
 |[652. Find Duplicate Subtrees](../leetcode/652.find-duplicate-subtrees.md)|Medium|
 |[114. Flatten Binary Tree to Linked List](../leetcode/114.flatten-binary-tree-to-linked-list.md)|Medium|
+|[133. Clone Graph](../leetcode/133.clone-graph.md)|Medium|
+|[2192. All Ancestors of a Node in a Directed Acyclic Graph](../leetcode/2192.all-ancestors-of-a-node-in-a-directed-acyclic-graph.md)|Medium (1787)|
 
 ## P1
 > Somewhat familiar with the problems, need to practice some times.
@@ -36,7 +38,8 @@
 |[563. Binary Tree Tilt](../leetcode/563.binary-tree-tilt.md)|Easy|
 |[2246. Longest Path With Different Adjacent Characters](../leetcode/2246.longest-path-with-different-adjacent-characters.md)|Hard (2126)|
 |[2385. Amount of Time for Binary Tree to Be Infected](../leetcode/2385.amount-of-time-for-binary-tree-to-be-infected.md)|Medium (1711)|
-
+|[207. Course Schedule](../leetcode/207.course-schedule.md)|Medium|
+|[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
 
 ## P2
 > Famililar with the problems, just need to check if I can solve them quickly.
@@ -57,6 +60,7 @@
 |[129. Sum Root to Leaf Numbers](../leetcode/129.sum-root-to-leaf-numbers.md)|Medium|
 |[1367. Linked List in Binary Tree](../leetcode/1367.linked-list-in-binary-tree.md)|Medium|
 |[1110. Delete Nodes And Return Forest](../leetcode/1110.delete-nodes-and-return-forest.md)|Medium (1511)|
+|[1905. Count Sub Islands](../leetcode/1905.count-sub-islands.md)|Medium|
 
 
 ## Solved
@@ -65,3 +69,4 @@
 |[554. Brick Wall](../leetcode/554.brick-wall.md)|Medium|
 |[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
 |[958. Check Completeness of a Binary Tree](../leetcode/958.check-completeness-of-a-binary-tree.md)|Medium (1703)|
+|[827. Making A Large Island](../leetcode/827.making-a-large-island.md)|Hard (1934)|

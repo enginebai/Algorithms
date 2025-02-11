@@ -71,6 +71,7 @@
 |@@**[207. Course Schedule](../leetcode/207.course-schedule.md)**|Medium|
 |[210. Course Schedule II](../leetcode/210.course-schedule-ii.md)|Medium|
 |@@[2115. Find All Possible Recipes from Given Supplies](../leetcode/2115.find-all-possible-recipes-from-given-supplies.md)|Medium (1679)|
+|@@[2192. All Ancestors of a Node in a Directed Acyclic Graph](../leetcode/2192.all-ancestors-of-a-node-in-a-directed-acyclic-graph.md)|Medium (1787)|
 |**[310. Minimum Height Trees](../leetcode/310.minimum-height-trees.md)**|Medium|
 
 > * https://leetcode.com/problems/course-schedule-iv/description/ 1692

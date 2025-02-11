@@ -44,7 +44,9 @@ val adjacencyList = arrayOf(
 
 // or using array of list
 val verticesCount = 10
-val graph = Array<List<Int>>(verticesCount) { mutableListOf<Int>() }
+val graph = Array(verticesCount) { mutableListOf<Int>() }
+// or using hash set
+val graph = Array(verticesCount) { hashSetOf<Int>() }
 graph[0].add(1)
 graph[1].add(0) // for undirected graph
 graph[1].contains(2) // O(|V|)
