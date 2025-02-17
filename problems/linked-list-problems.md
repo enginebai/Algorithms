@@ -88,3 +88,12 @@
 > * **https://leetcode.com/problems/lfu-cache/description/** hard
 > * https://leetcode.com/problems/all-oone-data-structure/description/ hard
 > * https://leetcode.com/problems/design-skiplist/description/ hard
+
+## Explanation
+* [725. Split Linked List in Parts](https://www.youtube.com/watch?v=j0LEfr8s3gk)
+* [206. Reverse Linked List](https://www.youtube.com/watch?v=heh7Aua4uoQ)
+* [92. Reverse Linked List II](https://www.youtube.com/watch?v=Ta71JgXl_EI)
+* [143. Reorder List](https://www.youtube.com/watch?v=0W1PcBMLU-E)
+* [142. Linked List Cycle II](https://www.youtube.com/watch?v=kZP8Cij1fxk)
+* [146. LRU Cache](https://www.youtube.com/watch?v=jX_k2FIhRI0)
+* [86. Partition List](https://www.youtube.com/watch?v=fM450F2vsCY)

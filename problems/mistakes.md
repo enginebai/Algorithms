@@ -22,6 +22,10 @@
 |[114. Flatten Binary Tree to Linked List](../leetcode/114.flatten-binary-tree-to-linked-list.md)|Medium|
 |[133. Clone Graph](../leetcode/133.clone-graph.md)|Medium|
 |[2192. All Ancestors of a Node in a Directed Acyclic Graph](../leetcode/2192.all-ancestors-of-a-node-in-a-directed-acyclic-graph.md)|Medium (1787)|
+|[227. Basic Calculator II](../leetcode/227.basic-calculator-ii.md)|Medium|
+|[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
+|[984. String Without AAA or BBB](../leetcode/984.string-without-aaa-or-bbb.md)|Medium (1474)|
+|[621. Task Scheduler](../leetcode/621.task-scheduler.md)|Medium|
 
 ## P1
 > Somewhat familiar with the problems, need to practice some times.
@@ -40,6 +44,12 @@
 |[2385. Amount of Time for Binary Tree to Be Infected](../leetcode/2385.amount-of-time-for-binary-tree-to-be-infected.md)|Medium (1711)|
 |[207. Course Schedule](../leetcode/207.course-schedule.md)|Medium|
 |[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
+|[636. Exclusive Time of Functions](../leetcode/636.exclusive-time-of-functions.md)|Medium|
+|[921. Minimum Add to Make Parentheses Valid](../leetcode/921.minimum-add-to-make-parentheses-valid.md)|Medium (1242)|
+|[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium (1657)|
+|[1541. Minimum Insertions to Balance a Parentheses String](../leetcode/1541.minimum-insertions-to-balance-a-parentheses-string.md)|Medium (1759)|
+|[678. Valid Parenthesis String](../leetcode/678.valid-parenthesis-string.md)|Medium (1700)|
+|[1963. Minimum Number of Swaps to Make the String Balanced](../leetcode/1963.minimum-number-of-swaps-to-make-the-string-balanced.md)|Medium (1688)|
 
 ## P2
 > Famililar with the problems, just need to check if I can solve them quickly.
@@ -61,7 +71,13 @@
 |[1367. Linked List in Binary Tree](../leetcode/1367.linked-list-in-binary-tree.md)|Medium|
 |[1110. Delete Nodes And Return Forest](../leetcode/1110.delete-nodes-and-return-forest.md)|Medium (1511)|
 |[1905. Count Sub Islands](../leetcode/1905.count-sub-islands.md)|Medium|
-
+|[1190. Reverse Substrings Between Each Pair of Parentheses](../leetcode/1190.reverse-substrings-between-each-pair-of-parentheses.md)|Medium (1485)|
+|[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium (1562)|
+|[1021. Remove Outermost Parentheses](../leetcode/1021.remove-outermost-parentheses.md)|Easy (1311)|
+|[1834. Single-Threaded CPU](../leetcode/1834.single-threaded-cpu.md)|Medium (1797)|
+|[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium (1681)|
+|[945. Minimum Increment to Make Array Unique](../leetcode/945.minimum-increment-to-make-array-unique.md)|Medium (1448)|
+|[605. Can Place Flowers](../leetcode/605.can-place-flowers.md)|Easy|
 
 ## Solved
 > Not familiar with the problems or made mistakes before, but it's solved now.
@@ -70,3 +86,6 @@
 |[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
 |[958. Check Completeness of a Binary Tree](../leetcode/958.check-completeness-of-a-binary-tree.md)|Medium (1703)|
 |[827. Making A Large Island](../leetcode/827.making-a-large-island.md)|Hard (1934)|
+|[2336. Smallest Number in Infinite Set](../leetcode/2336.smallest-number-in-infinite-set.md)|Easy|
+|[945. Minimum Increment to Make Array Unique](../leetcode/945.minimum-increment-to-make-array-unique.md)|Medium (1448)|
+|[1509. Minimum Difference Between Largest and Smallest Value in Three Moves](../leetcode/1509.minimum-difference-between-largest-and-smallest-value-in-three-moves.md)|Medium (1653)|

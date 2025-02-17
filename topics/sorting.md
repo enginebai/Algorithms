@@ -266,6 +266,24 @@ Collections.sort(list) { n1, n2 -> n2 - n1 }
 list.sortWith { n1, n2 -> n2 - n1 }
 ```
 
+### `TreeSet`
+```kotlin
+val set = TreeSet<Int>()
+val customSet = TreeSet<Int>(compareByDescending { it })
+val people = TreeSet<Person>(compareBy { it.age })
+
+// Normal set operation
+set.add(1)      
+set.remove(1)
+1 in set        // Check if the element is in the set
+
+// Get the elements in ordered set
+set.first()     // Get the smallest element
+set.pollFirst() // Remove and get the smallest element
+set.last()      // Get the largest element
+set.pollLast()  // Remove and get the largest element
+```
+
 ## Resources
 - CLRS
 - [MIT](https://ocw.mit.edu/courses/6-046j-introduction-to-algorithms-sma-5503-fall-2005/video_galleries/video-lectures)

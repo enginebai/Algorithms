@@ -38,9 +38,9 @@
 |[1614. Maximum Nesting Depth of the Parentheses](../leetcode/1614.maximum-nesting-depth-of-the-parentheses.md)|Easy (1322)|
 |@@[1021. Remove Outermost Parentheses](../leetcode/1021.remove-outermost-parentheses.md)|Easy (1311)|
 |@@**[921. Minimum Add to Make Parentheses Valid](../leetcode/921.minimum-add-to-make-parentheses-valid.md)**|Medium (1242)|
-|@@**[678. Valid Parenthesis String](../leetcode/678.valid-parenthesis-string.md)**|Medium (1700)|
-|@@[1541. Minimum Insertions to Balance a Parentheses String](../leetcode/1541.minimum-insertions-to-balance-a-parentheses-string.md)|Medium (1759)|
 |**[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)**|Medium (1657)|
+|@@[1541. Minimum Insertions to Balance a Parentheses String](../leetcode/1541.minimum-insertions-to-balance-a-parentheses-string.md)|Medium (1759)|
+|@@**[678. Valid Parenthesis String](../leetcode/678.valid-parenthesis-string.md)**|Medium (1700)|
 |@@[1963. Minimum Number of Swaps to Make the String Balanced](../leetcode/1963.minimum-number-of-swaps-to-make-the-string-balanced.md)|Medium (1688)|
 
 > * **https://leetcode.com/problems/remove-invalid-parentheses/description/** h
@@ -100,3 +100,23 @@
 |**[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)**|Hard|
 
 > * https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/ 1672
+
+## Explanation
+* [155. Min Stack](https://www.youtube.com/watch?v=e3s8LZc6Cdo)
+* [946. Validate Stack Sequences](https://www.youtube.com/watch?v=zeCItXGLw0w)
+* [636. Exclusive Time of Functions](https://www.youtube.com/watch?v=Ka4cDRolnBE)
+* [150. Evaluate Reverse Polish Notation](https://www.youtube.com/watch?v=3LZL85FAb8w)
+* [394. Decode String](https://www.youtube.com/watch?v=-M-EoXtufLY)
+* [856. Score of Parentheses](https://www.youtube.com/watch?v=fAsV6SIJ-GI)
+* [1106. Parsing A Boolean Expression](https://www.youtube.com/watch?v=vhH2LiWk2qE)
+* [227. Basic Calculator II](https://www.youtube.com/watch?v=iBKFBBde8Vw)
+* [224. Basic Calculator](https://www.youtube.com/watch?v=t8wIrdWSDsE)
+* [921. Minimum Add to Make Parentheses Valid](https://www.youtube.com/watch?v=Sv5Xb-kfDok)
+* [1249. Minimum Remove to Make Valid Parentheses](https://www.youtube.com/watch?v=U1nwBAIQ-oc)
+* [1541. Minimum Insertions to Balance a Parentheses String](https://www.youtube.com/watch?v=MipkQzEkhBM)
+* [678. Valid Parenthesis String](https://www.youtube.com/watch?v=ReR0bp9cAtc)
+* [1963. Minimum Number of Swaps to Make the String Balanced](https://www.youtube.com/watch?v=L7T-7NPgPW0)
+* [735. Asteroid Collision](https://www.youtube.com/watch?v=k1voGPKB-Is)
+* [239. Sliding Window Maximum](https://www.youtube.com/watch?v=b1rqOQ5p6EA)
+
+> TODO: Add more explanation videos for monotonous stack.

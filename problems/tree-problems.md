@@ -45,8 +45,8 @@
 |@@[112. Path Sum](../leetcode/112.path-sum.md)|Easy|
 |**[124. Binary Tree Maximum Path Sum](../leetcode/124.binary-tree-maximum-path-sum.md)**|Hard|
 |@@[129. Sum Root to Leaf Numbers](../leetcode/129.sum-root-to-leaf-numbers.md)|Medium|
-|[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium (1405)|
 |[1022. Sum of Root To Leaf Binary Numbers](../leetcode/1022.sum-of-root-to-leaf-binary-numbers.md)|Easy (1462)|
+|[1457. Pseudo-Palindromic Paths in a Binary Tree](../leetcode/1457.pseudo-palindromic-paths-in-a-binary-tree.md)|Medium (1405)|
 |[988. Smallest String Starting From Leaf](../leetcode/988.smallest-string-starting-from-leaf.md)|Medium (1429)|
 
 ### Structure

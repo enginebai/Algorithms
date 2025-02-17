@@ -192,38 +192,35 @@ fun heapSort(A) {
 
 ## Kotlin APIs
 ```kotlin
+val minHeap = PriorityQueue<Int>() // By default, it's min heap
 val minHeap = PriorityQueue<Int>() { n1, n2 -> n1 - n1 }
-val maxHeap = PriorityQueue<Int>() { n1, n2 -> n2 - n1 }
-// or
-val maxHeap = PriorityQueue<Int>() { n1, n2 -> 
-    when {
-        n1 < n2 -> -1
-        n2 < n1 -> 1
-        else 0
-    }
-}
 
-maxHeap.add(1)
-maxHeap.poll()
-maxHeap.peek()
-maxHeap.size
+val maxHeap = PriorityQueue<Int>() { n1, n2 -> n2 - n1 }
+val maxHeap = PriorityQueue(reverseOrder<Int>())
+val maxHeap = PriorityQueue(compareByDescending<Int> { it })
+
+// Create a max heap based on the values in count
+val count = IntArray(26)
+// We store the index in the heap
+val maxHeap = PriorityQueue(compareByDescending<Int> { count[it] })
+
+// Compare the count first, if the count is the same, compare the value
+val maxHeap = PriorityQueue(compareByDescending<Int> { count[it] }.thenBy{ it })
+
+data class Person(val name: String, val age: Int)
+val peopleQueue = PriorityQueue(compareByDescending<Person> { it.age })
+
+maxHeap.add(1) / offer(1)   // Adds an element to the queue `O(log n)`.
+maxHeap.remove() / poll()   // Removes and returns the element with the highest priority `O(log n)`.
+maxHeap.peek()              // Returns the element with the highest priority without removing it `O(1)`.
+
+// General Collection APIs
+maxHeap.size()
 maxHeap.isNotEmpty()
 ```
 
-## Resources
-- CLRS
-- [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-8-binary-heaps/)
-- [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-5)
-- [LC Learn](https://leetcode.com/explore/learn/card/heap/) // Some sections are locked.
-- [Google Recuriter Recommended Problems List](https://turingplanet.org/2020/09/18/leetcode_planning_list/#Heap)
-- https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/heap
-- Software Engineer Interview Preparation // Introductory notes
-    - [Data Structure](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#heap)
-    - [Algorithm](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/algorithms.md#heapsort)
-
 ## Full Code
 ```kotlin
-
 interface MyPriorityQueue {
     fun buildMaxHeap(array: IntArray)
     fun peek(): Int?
