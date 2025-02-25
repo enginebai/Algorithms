@@ -102,16 +102,3 @@ val string = "Hello, World!"
 string[1] // 'e'
 string.substring(1, 5) // "ello"
 ```
-
-## Resources
-- [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)
-- [ ] Kotlin document
-    - [X] [Array](https://kotlinlang.org/docs/basic-types.html#arrays)
-    - [ ] [Collections](https://kotlinlang.org/docs/collections-overview.html)
-- [X] [LC Learn - Array 101](https://leetcode.com/explore/learn/card/fun-with-arrays/) // Note + coding questions
-- [ ] [LC Learn - Array and String](https://leetcode.com/explore/learn/card/array-and-string/) // Note + coding questions
-- [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/array) // Note + coding questions
-- [ ] [leetcode-master](https://github.com/youngyangyang04/leetcode-master#%E6%95%B0%E7%BB%84) // Note + problems with nice illustration.
-- [X] [Tech Interview Cheat Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#array) // Simple note summary
-- [X] [Software Engineering Interview Preparation](https://github.com/orrsella/soft-eng-interview-prep/blob/master/topics/data-structures.md#arrays) // Simple note summary
-- [X] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#arrays)~~ // Old videos + Vector

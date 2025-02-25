@@ -1,6 +1,25 @@
 ## [Array](../topics/array.md)
 
-> > * Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
+> ✅ Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
+>
+> TODO: Practice https://blog.faangshui.com/p/before-leetcode
+> 
+> TODO: Understand how to iterate in diagonal, see [Code Template](../problems/code-template.md#diagonal-traversal)
+>
+> https://huxulm.github.io/lc-rating/list/data_structure 常用枚举技巧、*前缀和
+
+### Enumeration
+| Problem          | Difficulty |
+|------------------|------------|
+|[2909. Minimum Sum of Mountain Triplets II](../leetcode/2909.minimum-sum-of-mountain-triplets-ii.md)|Medium (1478)|
+|[2874. Maximum Value of an Ordered Triplet II](../leetcode/2874.maximum-value-of-an-ordered-triplet-ii.md)|Medium (1583)|
+
+> Only get the problems rating from 1500 ~ 2000
+> * https://leetcode.com/problems/unique-length-3-palindromic-subsequences/description/ 1533
+> * https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/description/ 1680
+> * https://leetcode.com/problems/best-sightseeing-pair/description/ 1730
+> * https://leetcode.com/problems/count-nice-pairs-in-an-array/description/ 1737
+> * https://leetcode.com/problems/find-indices-with-index-and-value-difference-ii/description/ 1763
 
 ### Movement
 | Problem          | Difficulty |
@@ -21,6 +40,9 @@
 > * https://leetcode.com/problems/maximum-product-of-three-numbers/description/ e
 
 ### 2D Array
+| Problem          | Difficulty |
+|------------------|------------|
+
 > * https://leetcode.com/problems/pascals-triangle/description/ e
 > * https://leetcode.com/problems/pascals-triangle-ii/ e
 > * https://leetcode.com/problems/reshape-the-matrix/description/ e
@@ -35,8 +57,6 @@
 |[989. Add to Array-Form of Integer](../leetcode/989.add-to-array-form-of-integer.md)|Easy|
 |[238. Product of Array Except Self](../leetcode/238.product-of-array-except-self.md)|Medium|
 |[334. Increasing Triplet Subsequence](../leetcode/334.increasing-triplet-subsequence.md)|Medium|
-|[2909. Minimum Sum of Mountain Triplets II](../leetcode/2909.minimum-sum-of-mountain-triplets-ii.md)|Medium|
-|[2874. Maximum Value of an Ordered Triplet II](../leetcode/2874.maximum-value-of-an-ordered-triplet-ii.md)|Medium|
 |[581. Shortest Unsorted Continuous Subarray](../leetcode/581.shortest-unsorted-continuous-subarray.md)|Medium|
 |[941. Valid Mountain Array](../leetcode/941.valid-mountain-array.md)|Easy|
 |[845. Longest Mountain in Array](../leetcode/845.longest-mountain-in-array.md)|Medium|
@@ -53,7 +73,6 @@
 ### [Sorting](../topics/sorting.md)
 | Problem          | Difficulty |
 |------------------|------------|
-|[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
 |[912. Sort an Array](../topics/sorting.md)|Medium|
 |[75. Sort Colors](../leetcode/75.sort-colors.md)|Medium|
 |[148. Sort List](../leetcode/148.sort-list.md)|Medium|

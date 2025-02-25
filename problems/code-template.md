@@ -279,6 +279,19 @@ fun getTotalNodes(head: ListNode?, k: Int): ListNode? {
 }
 ```
 
+## Special
+```kotlin
+/**
+ Replace character with the next or previous character in the alphabet.
+ For example, 'a' -> 'b' or 'a' -> 'z'.
+ */
+// Helper function to compute cyclic cost between two characters.
+fun cost(a: Char, b: Char): Int {
+    val diff = kotlin.math.abs(a - b)
+    return minOf(diff, 26 - diff)
+}
+```
+
 ## CodeForces
 ```kotlin
 import java.io.PrintWriter

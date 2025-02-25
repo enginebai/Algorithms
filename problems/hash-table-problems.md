@@ -109,6 +109,8 @@
 |[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
 
 > TODO: |[2090. K Radius Subarray Averages](../leetcode/2090.k-radius-subarray-averages.md)|Medium (1358)|
+> 
+> TODO: [一、前缀和](https://huxulm.github.io/lc-rating/list/data_structure#f8304de0ff361c714ff1219e031f1439)
 
 ## Explanation
 * [380. Insert Delete GetRandom O(1)](https://www.youtube.com/watch?v=jE6VIeQxzLU)

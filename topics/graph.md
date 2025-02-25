@@ -1,7 +1,8 @@
 # Graph
 A graph `G = (V, E)`, consists of `V` (set of *vertices*) and `E` (*edges* of vertices). 
 
-* There are *undirected* and *directed* graph, the pair `(x, y)` and `(y, x)` represent the same edge in a undirected graph, whereas, that are two different edges in directed graph, where `(x, y)` represents `x` (head) to `y` (tail).
+There are some key properties of graph:
+* There are *undirected* and *directed* graph, the pair `(x, y)` and `(y, x)` represent the same edge in a undirected graph, whereas, that are two different edges in directed graph, where `(x, y)` represents `x` (source) to `y` (destination).
 * The graph can be *weighted* or *unweighted*, the edge has a *weight* in weighted graph, and the value can be *positive* or *negative*.
 * The graph can be *cyclic* or *acyclic*, the graph has a cycle if there is a path from a vertex to itself.
 * The graph can be *connected* or *disconnected*, the graph is connected if there is a path from every vertex to every other vertex. 
@@ -13,15 +14,16 @@ A graph `G = (V, E)`, consists of `V` (set of *vertices*) and `E` (*edges* of ve
 ![Graph](../media/graph.png)
 
 ## Representation
-There are three criteria to determine the graph representation:
-1. Space complexity to store a graph.
-2. Time complexity to determine whether a given edge exists in the graph.
-3. Time complexity to find the adjacent vertices (neighbors) of a given vertex.
+There are some criterias to determine the graph representation:
+* Time complexity.
+* Space complexity.
+* **Traversal of Adjacent Vertices (per vertex)**: Time complexity to traverse all adjacent vertices of a given vertex.
+* **Edge existence checks  (`(u -> v)` exists?)**: Time complexity to determine whether a given edge exists in the graph.
 
 We can represent a graph `G = (V, E)` in the following ways:
 
 ### Adjacency List
-In adjacency list, we use an array of linked lists (or array or list) to represent the graph, where each vertex is associated a list of its adjacent vertices by linked list.
+In adjacency list, we use an array of linked lists (or array, list, or set) to represent the graph, where each vertex is associated a list of its adjacent vertices by a collection of vertices.
 
 ```kotlin
 // 1 -> 2 -> 4 -> 5 -> 6
@@ -37,22 +39,31 @@ v2.next = ListNode(1)
 
 // Using array of linked list
 val adjacencyList = arrayOf(
-    v1,
-    v2,
+    v1, // [1] -> [2, 4, 5, 6]
+    v2, // [2] -> [1, 4]
     ...
 )
 
 // or using array of list
-val verticesCount = 10
+val verticesCount = ...
 val graph = Array(verticesCount) { mutableListOf<Int>() }
 // or using hash set
 val graph = Array(verticesCount) { hashSetOf<Int>() }
-graph[0].add(1)
+graph[0].add(1) // edge 0 -> 1
 graph[1].add(0) // for undirected graph
 graph[1].contains(2) // O(|V|)
 
-// or using 2D array
-val graph2 = Array<IntArray>() // [[1,2,3],[0,2],[0,1,3],[0,2]]
+// or using 2D array: index is the vertex, and the value is the adjacent vertices.
+// 0 -> 1, 2, 3
+// 1 -> 0, 2
+// 2 -> 0, 1, 3
+// 3 -> 0, 2
+val graph2: Array<IntArray> = arrayOf(
+    intArrayOf(1, 2, 3),    // node 0 has 1, 2, 3
+    intArrayOf(0, 2),       // node 1 has 0, 2
+    intArrayOf(0, 1, 3),    // node 2 has 0, 1, 3
+    intArrayOf(0, 2)        // node 3 has 0, 2
+)
 ```
 
 * The adjacent vertices of each vertex in adjacency list are typically stored in an arbitrary order.
@@ -60,9 +71,10 @@ val graph2 = Array<IntArray>() // [[1,2,3],[0,2],[0,1,3],[0,2]]
 * We also can associate *weight* on the edge by storing the weight on the node of the adjacency list. (linked list node can attach extra properties)
 
 #### Complexity
-1. o
-
-> |V| means the size of V.
+* Time complexity: `O(|V| + |E|)`, where `|V|` is the number of vertices and `|E|` is the number of edges.
+* Space complexity: `Θ(|V| + |E|)`, where `|V|` is the number of vertices and `|E|` is the number of edges.
+* Time complexity to traverse all adjacent vertices of a given vertex: `O(degree(v))`, where `degree(v)` is the number of adjacent vertices of vertex `v`.
+* Time complexity to determine whether a given edge exists in the graph: `O(degree(v))`, where `degree(v)` is the number of adjacent vertices of vertex `v`.
 
 ### Adjacency Matrix
 We define a `|V| x |V|` matrix `A` such that `A[i][j] = 1` if there is an edge, `0` otherwise. (Or we can use boolean)
@@ -105,17 +117,21 @@ val directedGraph = arrayOf(
 )
 ```
 
-* We prefer adjacency matrix when the graph are *dense*.
+
+It's simple to implement, but the space complexity is `Θ(|V|^2)`, which is not efficient when `|V|` is large. We prefer adjacency matrix when the graph are *dense* (`E ~= V^2`).
 * We can update the edge or check the existence of edge in constant time.
 * `A` is equal to the *transpose* of matrix `A` for undirected graph.
 * We also can define `A[i][j] = w` for weighted graph.
 
 #### Complexity
-1. Space complexity to store a graph: `Θ(|V| ^ 2)`, the undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix.
-2. Time complexity to determine whether a given edge exists in the graph: `O(1)`
-3. Time complexity to find the adjacent vertices (neighbors) of a given vertex: `O(1)`
+* Time complexity: `O(|V|^2)`
+* Space complexity: `Θ(|V|^2)`, the undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix.
+* Time complexity to traverse all adjacent vertices of a given vertex: `O(|V|)`
+* Time complexity to determine whether a given edge exists in the graph: `O(1)`
 
 ### Hash Tables
+It's similar to adjacency list, but we use hash table to store the adjacent vertices of each vertex. It's efficient for *edge existence checks* (`O(1)` lookup) which is faster than adjacency list.
+
 ```kotlin
 val graph: HashMap<Int, HashSet<Int>() = hashMapOf(
     1: setOf(2, 4, 5, 6),
@@ -124,9 +140,28 @@ val graph: HashMap<Int, HashSet<Int>() = hashMapOf(
 ```
 
 #### Complexity
-1. Space complexity to store a graph: `Θ(|V| + |E|)`
-2. Time complexity to determine whether a given edge exists in the graph: `O(1)`
-3. Time complexity to find the adjacent vertices (neighbors) of a given vertex: `O(1)`
+* Time complexity: `O(|V| + |E|)`
+* Space complexity: `Θ(|V| + |E|)`
+* Time complexity to traverse all adjacent vertices of a given vertex: `O(degree(v))`
+* Time complexity to determine whether a given edge exists in the graph: `O(1)`
+
+### Edge List
+We store the edges of the graph in a list, where each edge is a tuple `(u, v, value)`. It's efficient for *edge-center* operations where the edges are processed sequentially, but inefficient for *Edge existence checks* (`O(|E|)` lookup).
+
+```kotlin
+val edges = listOf(
+    Triple(1, 2, 8),    // edge 1 -> 2 with weight 8
+    Triple(1, 4, 5),    // edge 1 -> 4 with weight 5
+    Triple(1, 5, 6),    // edge 1 -> 5 with weight 6
+    ...
+)
+```
+
+#### Complexity
+* Time complexity: `O(|V| * |E|)`
+* Space complexity: `Θ(|E|)`
+* Time complexity to traverse all adjacent vertices of a given vertex: `O(|E|)`
+* Time complexity to determine whether a given edge exists in the graph: `O(|E|)`
 
 ## Breadth-first Search (BFS)
 Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s`. It visits all vertices at level `k` before visiting level `k + 1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.
@@ -270,4 +305,20 @@ In another way, you can run DFS first and sort the vertices by finish time desce
 It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to insert first of linked list.
 
 ## Union Find
->> TODO:
+并查集（Union Find）结构是 *二叉树结构* 的衍生，用于高效解决无向图的连通性问题，可以在 `O(1)` 时间内合并两个连通分量，在 O(1) 时间内查询两个节点是否连通，在 O(1) 时间内查询连通分量的数量。
+
+```java
+class UF {
+    // 初始化并查集，包含 n 个节点，时间复杂度 O(n)
+    public UF(int n);
+
+    // 连接节点 p 和节点 q，时间复杂度 O(1)
+    public void union(int p, int q);
+
+    // 查询节点 p 和节点 q 是否连通（是否在同一个连通分量内），时间复杂度 O(1)
+    public boolean connected(int p, int q);
+
+    // 查询当前的连通分量数量，时间复杂度 O(1)
+    public int count();
+}
+```

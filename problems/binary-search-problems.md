@@ -9,6 +9,9 @@
 |@@[826. Most Profit Assigning Work](../leetcode/826.most-profit-assigning-work.md)|Medium (1708)|
 
 > * https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/ 1387
+> * https://leetcode.com/problems/range-frequency-queries/description/ 1702
+> * https://leetcode.com/problems/count-the-number-of-fair-pairs/description/ 1720
+> * https://leetcode.com/problems/minimum-absolute-sum-difference/description/ 1934
 
 ### Search the First/Last Position
 | Problem          | Difficulty |
@@ -32,11 +35,19 @@
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
 
 > * https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/description/ 1542
+> * https://leetcode.com/problems/minimum-number-of-seconds-to-make-mountain-height-zero/description/ 1694
+> * https://leetcode.com/problems/minimum-time-to-repair-cars/description/ 1915
 
 #### Maximum Value
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[2226. Maximum Candies Allocated to K Children](../leetcode/2226.maximum-candies-allocated-to-k-children.md)|Medium (1646)|
+
+> * https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-ii/description/ 1773
+> * https://leetcode.com/problems/find-the-maximum-number-of-marked-indices/description/ 1843
+> * https://leetcode.com/problems/maximum-number-of-removable-characters/description/ 1912
+> * https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/description/ 1929
+> * https://leetcode.com/problems/maximum-number-of-alloys/description/ 1981
 
 #### Minimize the Maximum Value
 | Problem          | Difficulty |
@@ -46,20 +57,29 @@
 
 > * https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/description/ 1940
 > * https://leetcode.com/problems/minimize-maximum-of-array/description/ 1965
+> * https://leetcode.com/problems/house-robber-iv/description/ 2081
 > * https://leetcode.com/problems/swim-in-rising-water/description/ 2096, similar to [1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)
+> * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/description/ 2155
 
 #### Maximize the Minimum Value
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[1552. Magnetic Force Between Two Balls](../leetcode/1552.magnetic-force-between-two-balls.md)|Medium (1919)|
 
-### Kth Smallest/Largest Element
-> Some can be solved by heap.
+> * My contest https://leetcode.com/problems/maximize-score-of-numbers-in-ranges/description/ 1768
+> * https://leetcode.com/problems/find-the-safest-path-in-a-grid/description/ 2153
 
+### Kth Smallest/Largest Element
 | Problem          | Difficulty |
 |------------------|------------|
-> https://leetcode.com/problems/find-k-th-smallest-pair-distance/description/
-> https://leetcode.com/problems/nth-magical-number/description/ 1897
+|**[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)**|Medium|
+|@@**[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)**|Medium|
+
+> Some can be solved by heap. Consider to merge this section with heap problems.
+> * https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/description/ h
+> * https://leetcode.com/problems/find-k-th-smallest-pair-distance/description/
+> * https://leetcode.com/problems/nth-magical-number/description/ 1897
+> * https://leetcode.com/problems/ugly-number-iii/description/ 2039
 
 ### Search in Matrix
 | Problem          | Difficulty |
@@ -67,7 +87,6 @@
 |**[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)**|Medium|
 |[1351. Count Negative Numbers in a Sorted Matrix](../leetcode/1351.count-negative-numbers-in-a-sorted-matrix.md)|Easy|
 |**[240. Search a 2D Matrix II](../leetcode/240.search-a-2d-matrix-ii.md)**|Medium|
-|**[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)**|Medium|
 
 > * https://leetcode.com/problems/find-a-peak-element-ii/
 
@@ -92,8 +111,10 @@
 
 > * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
 > * https://leetcode.com/problems/peak-index-in-a-mountain-array/description/ m
+> * https://leetcode.com/problems/find-a-peak-element-ii/description/ m
 > * https://leetcode.com/problems/kth-missing-positive-number/description/ e
 > * **https://leetcode.com/problems/median-of-two-sorted-arrays/description/**
+> * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/ h
 
 ## Explanation
 * [34. Find First and Last Position of Element in Sorted Array](https://www.youtube.com/watch?v=sX5IbSSNKXI)
@@ -114,4 +135,4 @@
 * [162. Find Peak Element](https://www.youtube.com/watch?v=esY2RWhmZ74)
 * [287. Find the Duplicate Number](https://www.youtube.com/watch?v=86co28GuZ5U)
 * [33. Search in Rotated Sorted Array](https://github.com/wisdompeak/LeetCode/tree/master/Binary_Search/033.Search-in-Rotated-Sorted-Array)
-* [153. Find Minimum in Rotated Sorted Array](https://github.com/wisdompeak/LeetCode/tree/master/Binary_Search/153.Find-Minimum-in-Rotated-Sorted-Array)
+* [153. Find Minimum in Rotated Sorted Array](https://www.youtube.com/watch?v=JxoTDj-7tmo)

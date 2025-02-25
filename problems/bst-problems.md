@@ -11,11 +11,13 @@
 |[530. Minimum Absolute Difference in BST](../leetcode/530.minimum-absolute-difference-in-bst.md)|Easy|
 |**[173. Binary Search Tree Iterator](../leetcode/173.binary-search-tree-iterator.md)**|Medium|
 
-> * https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/ e
+> * https://leetcode.com/problems/all-elements-in-two-binary-search-trees/description/ 1260
+> * https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/ 1303
+> * https://leetcode.com/problems/range-sum-of-bst/ 1335
 > * https://leetcode.com/problems/find-mode-in-binary-search-tree/description/ e
 > * **https://leetcode.com/problems/recover-binary-search-tree/description/** m
-> * https://leetcode.com/problems/all-elements-in-two-binary-search-trees/description/ 1260
-> * https://leetcode.com/problems/range-sum-of-bst/ e
+> * https://leetcode.com/problems/convert-bst-to-greater-tree/description/ m
+> * https://leetcode.com/problems/closest-nodes-queries-in-a-binary-search-tree/description/ 1596
 > * https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/description/ 1913
 
 ### Structure

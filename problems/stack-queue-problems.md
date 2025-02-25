@@ -3,6 +3,7 @@
 ### Stack Basics
 | Problem          | Difficulty |
 |------------------|------------|
+|**[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)**|Easy (1227)|
 |**[155. Min Stack](../leetcode/155.min-stack.md)**|Easy|
 |[232. Implement Queue using Stacks](../leetcode/232.implement-queue-using-stacks.md)|Easy|
 |[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
@@ -11,6 +12,7 @@
 |[71. Simplify Path](../leetcode/71.simplify-path.md)|Medium|
 |@@**[636. Exclusive Time of Functions](../leetcode/636.exclusive-time-of-functions.md)**|Medium|
 
+> * My contest https://leetcode.com/problems/find-mirror-score-of-a-string/description/ 1578
 > * **https://leetcode.com/problems/maximum-frequency-stack/description/** h 2027
 >
 > * Solved: https://leetcode.com/problems/build-an-array-with-stack-operations/description/ 1180 
@@ -44,6 +46,7 @@
 |@@[1963. Minimum Number of Swaps to Make the String Balanced](../leetcode/1963.minimum-number-of-swaps-to-make-the-string-balanced.md)|Medium (1688)|
 
 > * **https://leetcode.com/problems/remove-invalid-parentheses/description/** h
+> https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/description/ 2037
 
 ### Remove Adjacent Items
 | Problem          | Difficulty |
@@ -53,8 +56,10 @@
 
 > * https://leetcode.com/problems/make-the-string-great/description/ 1344
 > * https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/description/ 1426
+> * https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/description/ 1510
 > * **https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/description/** 1541
 > * https://leetcode.com/problems/maximum-score-from-removing-substrings/description/ 1868
+> * https://leetcode.com/problems/robot-collisions/description/ 2091
 > * Solved: https://leetcode.com/problems/minimum-string-length-after-removing-substrings 1282 // Easy to solve by stack and learned two pointers approach, 2024/10/30
 
 ### Monotonic Stack
@@ -72,6 +77,7 @@
 |**[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)**|Hard|
 |[2866. Beautiful Towers II](../leetcode/2866.beautiful-towers-ii.md)|Medium (2071)|
 
+> TODO: Update problems from [单调栈](https://huxulm.github.io/lc-rating/list/monotonic_stack)
 > * https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/description/ 1212
 > * https://leetcode.com/problems/next-greater-node-in-linked-list/ 1570
 > * https://leetcode.com/problems/maximum-width-ramp/description/ 1607
@@ -92,7 +98,7 @@
 > * https://leetcode.com/problems/reveal-cards-in-increasing-order/description/ 1686
 > * https://leetcode.com/problems/dota2-senate/description/ m
 > * **https://leetcode.com/problems/design-circular-deque/description/** m
-> * https://leetcode.com/problems/design-front-middle-back-queue/description/ m
+> * https://leetcode.com/problems/design-front-middle-back-queue/description/ 1610
 
 ### Monotonic Queue
 | Problem          | Difficulty |
@@ -100,6 +106,7 @@
 |**[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)**|Hard|
 
 > * https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/ 1672
+> * https://leetcode.com/problems/continuous-subarrays/description/ 1940
 
 ## Explanation
 * [155. Min Stack](https://www.youtube.com/watch?v=e3s8LZc6Cdo)

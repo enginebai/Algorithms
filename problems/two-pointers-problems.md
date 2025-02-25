@@ -9,9 +9,15 @@
 |**[658. Find K Closest Elements](../leetcode/658.find-k-closest-elements.md)**|Medium|
 |@@[611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium|
 |@@[475. Heaters](../leetcode/475.heaters.md)|Medium|
+|[948. Bag of Tokens](../leetcode/948.bag-of-tokens.md)|Medium (1762)|
 |@@[1775. Equal Sum Arrays With Minimum Number of Operations](../leetcode/1775.equal-sum-arrays-with-minimum-number-of-operations.md)|Medium (1850)|
 
+> * https://leetcode.com/problems/apply-operations-to-an-array/description/ 1223
+> * https://leetcode.com/problems/number-of-arithmetic-triplets/description/ 1203
 > * Solved: https://leetcode.com/problems/valid-palindrome/description/ e
+> * https://leetcode.com/problems/count-the-number-of-fair-pairs/description/ 1720
+> * https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/description/ 1817
+> * https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/description/ 2276
 
 ### nSum Problemm
 | Problem          | Difficulty |
@@ -39,6 +45,21 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[1574. Shortest Subarray to be Removed to Make Array Sorted](../leetcode/1574.shortest-subarray-to-be-removed-to-make-array-sorted.md)|Medium (1931)|
+
+### 双序列双指针
+| Problem          | Difficulty |
+|------------------|------------|
+|[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
+|[925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy|
+|**[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)**|Easy (1227)|
+
+> * https://leetcode.com/problems/minimum-common-value/description/ 1249
+> * https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/description/ 1514
+> * https://leetcode.com/problems/move-pieces-to-obtain-a-string/description/ 1693
+> * https://leetcode.com/problems/swap-adjacent-in-lr-string/description/ 1938
+> * https://leetcode.com/problems/get-the-maximum-score/description/ 1961
+
+> TODO: [六、分组循环](https://huxulm.github.io/lc-rating/list/slide_window#e2c6649d1f133fbf4f20570940a5bd04)
 
 ## Explanation
 * [11. Container With Most Water](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/011.Container-With-Most-Water)

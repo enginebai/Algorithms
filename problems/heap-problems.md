@@ -11,9 +11,13 @@
 |@@**[1834. Single-Threaded CPU](../leetcode/1834.single-threaded-cpu.md)**|Medium (1797)|
 |**[502. IPO](../leetcode/502.ipo.md)**|Hard|
 
-> * https://leetcode.com/problems/trapping-rain-water-ii/description/ h
+> * https://leetcode.com/problems/maximum-product-after-k-increments/description/ 1685
+> * https://leetcode.com/problems/minimum-number-of-seconds-to-make-mountain-height-zero/description/ 1695
+> * https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/description/ 1695
+> * https://leetcode.com/problems/design-task-manager/description/ 1807
+> * https://leetcode.com/problems/maximum-average-pass-ratio/description/ 1817
+> * https://leetcode.com/problems/construct-target-array-with-multiple-sums/description/ 2014
 > * https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/ 2014
-> * https://leetcode.com/problems/construct-target-array-with-multiple-sums/description/ 2014 h
 > * https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/description/ h
 > * https://leetcode.com/problems/maximum-subsequence-score/description/ 2056
 > * https://leetcode.com/problems/maximum-performance-of-a-team/description/ 2091
@@ -34,7 +38,7 @@
 |[973. K Closest Points to Origin](../leetcode/973.k-closest-points-to-origin.md)|Medium|
 |@@[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
 
-### Reorganization
+### Rearrangement
 | Problem          | Difficulty |
 |------------------|------------|
 |@@**[767. Reorganize String](../leetcode/767.reorganize-string.md)**|Medium (1681)|
@@ -43,6 +47,7 @@
 |@@**[621. Task Scheduler](../leetcode/621.task-scheduler.md)**|Medium|
 
 > * https://leetcode.com/problems/distant-barcodes/description/ 1701
+> * https://leetcode.com/problems/maximum-number-of-weeks-for-which-you-can-work/description/ 1803
 
 ### Merge K Sorted
 | Problem          | Difficulty |

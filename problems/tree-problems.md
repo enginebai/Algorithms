@@ -26,6 +26,9 @@
 > * https://leetcode.com/problems/flip-equivalent-binary-trees/description/ 1477
 > * https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/description/ e
 > * https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/description/ 1534
+> * https://leetcode.com/problems/k-th-largest-perfect-subtree-size-in-binary-tree/description/ 1603
+> * 
+> * https://leetcode.com/problems/binary-tree-coloring-game/description/ 1741
 
 ### Distance
 | Problem          | Difficulty |
@@ -112,8 +115,10 @@
 |**[236. Lowest Common Ancestor of a Binary Tree](../leetcode/236.lowest-common-ancestor-of-a-binary-tree.md)**|Medium|
 |[1161. Maximum Level Sum of a Binary Tree](../leetcode/1161.maximum-level-sum-of-a-binary-tree.md)|Medium|
 
+> * https://leetcode.com/problems/reachable-nodes-with-restrictions/description/ 1476
 > * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1561
 > * https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/ 1607
+> * https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/description/ 1633
 > * https://leetcode.com/problems/distribute-coins-in-binary-tree/description/ 1709
 > * https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/description/ 1805
 > * https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/ h 1675
@@ -130,6 +135,9 @@
 | Problem          | Difficulty |
 |------------------|------------|
 > * Solved: https://leetcode.com/problems/count-complete-tree-nodes/description/, special case of binary tree traversal, more references: https://labuladong.online/algo/data-structure/count-complete-tree-nodes/ + https://programmercarl.com/0222.%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0.html#%E6%80%9D%E8%B7%AF
+
+> * https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/description/ 1439
+> * https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/description/ 1544
 
 ### Backtracking
 | Problem          | Difficulty |

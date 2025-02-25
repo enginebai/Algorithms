@@ -7,8 +7,6 @@
 |[1544. Make The String Great](../leetcode/1544.make-the-string-great.md)|Easy|
 |[392. Is Subsequence](../leetcode/392.is-subsequence.md)|Easy|
 |[792. Number of Matching Subsequences](../leetcode/792.number-of-matching-subsequences.md)|Medium|
-|[925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy|
-|**[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)**|Easy (1227)|
 |[1461. Check If a String Contains All Binary Codes of Size K](../leetcode/1461.check-if-a-string-contains-all-binary-codes-of-size-k.md)|Medium (1504)|
 
 ### Equal Strings
