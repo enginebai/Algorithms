@@ -370,7 +370,7 @@ knapsack(values.size, capacity)
 ### Top-Down DP
 Let `dp[i][j]` represent the maximum value of capacity `j` from considering the items of size `i` (from `0` to `i - 1` items, i.e. `values[0:i-1]`)
 
-> **Note**: We have to keep in mind what the `dp[i][w]` stands for.
+> **NOTE**: We have to keep in mind what the `dp[i][w]` stands for.
 
 > We might skip this approach, we just start from bottom-up DP solution for knapsack problem.
 
@@ -425,7 +425,7 @@ fun knapsack(): Int {
 * **Time Complexity**: `O(W * N)`, where `N` is the number of items, and `W` for storing every possible weights range from 0 ~ `W` of the capacity.
 * **Space Complexity**: `O(W * N)` for 2D array for memoization.
 
-> **Note**: Mind the iteration variable, for `values` and `weights`, make sure to minus one, but does have to for `dp[i][w]`!!
+> **NOTE**: Mind the iteration variable, for `values` and `weights`, make sure to minus one, but does have to for `dp[i][w]`!!
 
 ### Bottom-Up DP (Space Optimization, 1D DP) 
 For `dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i]] + values[i])`, what we use is the previous row only, the idea to reduce the space is to copy `dp[i - 1]` to `dp[i]`. (2D to 1D)
@@ -510,7 +510,7 @@ Suppose we update `dp[8]` from `dp[3]` for item `i` (which weight is 5), and we'
 > * https://leetcode.com/problems/coin-change-2/discuss/176706/Beginner-Mistake%3A-Why-an-inner-loop-for-coins-doensn't-work-Java-Soln
 > * https://leetcode.com/problems/coin-change-2/discuss/141076/Unbounded-Knapsack/180294
 
-> **Note**: For bottom-up 2D DP of 0/1 knapsack problem, we **CAN** exchange the order of two for-loop, however, space optimization and unbounded knapsack solution, **the for-loop order matters!!**
+> **NOTE**: For bottom-up 2D DP of 0/1 knapsack problem, we **CAN** exchange the order of two for-loop, however, space optimization and unbounded knapsack solution, **the for-loop order matters!!**
 
 ## Unbounded Knapsack Problems
 The difference between [0/1 Knapsack Problem](#0-1-knapsack-problem) is that we can put the unlimited amount of items into knapsack (with capacity limit).

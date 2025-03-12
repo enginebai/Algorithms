@@ -38,6 +38,8 @@
 |[973. K Closest Points to Origin](../leetcode/973.k-closest-points-to-origin.md)|Medium|
 |@@[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
 
+> * My contest https://leetcode.com/problems/choose-k-elements-with-maximum-sum/solutions/
+
 ### Rearrangement
 | Problem          | Difficulty |
 |------------------|------------|
@@ -59,6 +61,7 @@
 
 > * https://leetcode.com/problems/super-ugly-number/description/ m
 > * https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/description/ 2133
+> * https://leetcode.com/problems/k-th-smallest-prime-fraction/description/ 2168
 > * https://leetcode.com/problems/find-k-th-smallest-pair-distance/description/ h
 > * **https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/description/** h
 > * ~~https://leetcode.com/problems/minimize-deviation-in-array/description/~~ 2533
@@ -83,4 +86,5 @@
 |------------------|------------|
 > * https://leetcode.com/problems/design-a-number-container-system/description/ 1540
 > * https://leetcode.com/problems/design-a-food-rating-system/description/ 1781
+> * https://leetcode.com/problems/most-frequent-ids/description/ 1793
 > * **https://leetcode.com/problems/stock-price-fluctuation/description/** 1831
