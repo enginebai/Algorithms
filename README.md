@@ -16,9 +16,9 @@ This project offers a curated collection of notes and resources covering fundame
 - [Heap & Priority Queue](./topics/heap.md)
 - [Graph](./topics/graph.md)
 - [Recursion](./topics/recursion.md)
+- [Shortest Path](./topics/shortest-path.md)
 - [Dynamic Programming](./topics/dynamic-programming.md)
 - [Greedy](./topics/greedy.md)
-- [Shortest Path](./topics/shortest-path.md)
 - [Interval](./topics/interval.md)
 - [Backtracking](./topics/backtracking.md)
 

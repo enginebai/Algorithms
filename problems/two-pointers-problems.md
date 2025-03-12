@@ -7,8 +7,6 @@
 |[1750. Minimum Length of String After Deleting Similar Ends](../leetcode/1750.minimum-length-of-string-after-deleting-similar-ends.md)|Medium (1501)|
 |**[11. Container With Most Water](../leetcode/11.container-with-most-water.md)**|Medium|
 |**[658. Find K Closest Elements](../leetcode/658.find-k-closest-elements.md)**|Medium|
-|@@[611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium|
-|@@[475. Heaters](../leetcode/475.heaters.md)|Medium|
 |[948. Bag of Tokens](../leetcode/948.bag-of-tokens.md)|Medium (1762)|
 |@@[1775. Equal Sum Arrays With Minimum Number of Operations](../leetcode/1775.equal-sum-arrays-with-minimum-number-of-operations.md)|Medium (1850)|
 
@@ -18,6 +16,11 @@
 > * https://leetcode.com/problems/count-the-number-of-fair-pairs/description/ 1720
 > * https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/description/ 1817
 > * https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/description/ 2276
+
+### 3 Pointers
+| Problem          | Difficulty |
+|------------------|------------|
+|@@[611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium|
 
 ### nSum Problemm
 | Problem          | Difficulty |
@@ -52,6 +55,7 @@
 |[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
 |[925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy|
 |**[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)**|Easy (1227)|
+|@@[475. Heaters](../leetcode/475.heaters.md)|Medium|
 
 > * https://leetcode.com/problems/minimum-common-value/description/ 1249
 > * https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/description/ 1514

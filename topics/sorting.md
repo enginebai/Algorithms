@@ -212,6 +212,8 @@ val intervals = arrayOf(
 
 // Sort the intervals by the start time
 intervals.sortBy { it[0] }
+// Sort the intervals by the start time, then the end time
+intervals.sortWith(compareBy({ it[0] }, { it[1] }))
 ```
 
 ### `Array`

@@ -613,7 +613,7 @@ fun bfs(input, visited) {
 }
 ```
 
-> **Note**: Sometime we will use *shortest distance* as visited, we only enqueue the next node with shortest distance from the current node.
+> **NOTE**: Sometime we will use *shortest distance* as visited, we only enqueue the next node with shortest distance from the current node.
 
 ```kotlin
 if (distance[next] >= distance[current] + 1) {

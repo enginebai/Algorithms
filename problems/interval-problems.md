@@ -3,70 +3,74 @@
 ### Line Sweep 一维差分（扫描线）
 | Problem          | Difficulty |
 |------------------|------------|
-|**[56. Merge Intervals](../leetcode/56.merge-intervals.md)**|Medium|
-|**[57. Insert Interval](../leetcode/57.insert-interval.md)**|Medium|
-|**[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)**|Medium|
-|**[729. My Calendar I](../leetcode/729.my-calendar-i.md)**|Medium|
 |**[1094. Car Pooling](../leetcode/1094.car-pooling.md)**|Medium (1441)|
+|[2848. Points That Intersect With Cars](../leetcode/2848.points-that-intersect-with-cars.md)|Medium (1229)|
+|[1893. Check if All the Integers in a Range Are Covered](../leetcode/1893.check-if-all-the-integers-in-a-range-are-covered.md)|Easy (1307)|
+|[3355. Zero Array Transformation I](../leetcode/3355.zero-array-transformation-i.md)|Medium (1638)|
 |[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)|
+|[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
+|[2381. Shifting Letters II](../leetcode/2381.shifting-letters-ii.md)|Medium (1793)|
 
-> * https://leetcode.com/problems/count-tested-devices-after-test-operations/description/ 1169
-> * https://leetcode.com/problems/points-that-intersect-with-cars/description/ 1229
-> * https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/description/ 1307
-> * https://leetcode.com/problems/maximum-population-year/description/ 1370
-> * https://leetcode.com/problems/corporate-flight-bookings/description/ 1569
-> * https://leetcode.com/problems/zero-array-transformation-i/description/ 1591
-> * **https://leetcode.com/problems/my-calendar-ii/description/** 
-> * https://leetcode.com/problems/count-ways-to-group-overlapping-ranges/description/ 1631
-> * https://leetcode.com/problems/employee-free-time/description/ 1710 (Premium)
-> * https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/description/ 1713
-> * https://leetcode.com/problems/shifting-letters-ii/description/ 1793
 > * https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/description/ 1835
-> * https://leetcode.com/problems/maximum-sum-obtained-of-any-permutation/description/ 1871
 > * https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/description/ 1872
-> * https://leetcode.com/problems/zero-array-transformation-ii/solutions/ 1913
+> * *https://leetcode.com/problems/zero-array-transformation-ii 1913*
 > * **https://leetcode.com/problems/number-of-flowers-in-full-bloom/** 2022
-> * **https://leetcode.com/problems/my-calendar-iii/description/** h
 > * **https://leetcode.com/problems/maximum-profit-in-job-scheduling/**
+> * https://leetcode.com/problems/minimum-interval-to-include-each-query/description/ 2286
 > * https://leetcode.com/problems/the-skyline-problem/description/ h
+> ----
+> * Solved: https://leetcode.com/problems/count-tested-devices-after-test-operations/description/ 1169
+> * Solved: https://leetcode.com/problems/maximum-population-year/description/ 1370
+> * Solved: https://leetcode.com/problems/corporate-flight-bookings/description/ 1569
 
-### 不相交区间
-| Problem          | Difficulty |
-|------------------|------------|
-
-> * **https://leetcode.com/problems/non-overlapping-intervals/description/** 8k m
-> * https://leetcode.com/problems/maximum-length-of-pair-chain/description/ m
-> * My contest https://leetcode.com/problems/select-k-disjoint-special-substrings/description/
-
-### 区间分组
-| Problem          | Difficulty |
-|------------------|------------|
-> * https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups 1713
-> * **https://leetcode.com/problems/meeting-rooms-ii/** (Premium)
-
-### 区间选点
-| Problem          | Difficulty |
-|------------------|------------|
-|**[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)**|Medium|
-
-### 区间覆盖
-| Problem          | Difficulty |
-|------------------|------------|
-|[45. Jump Game II](../leetcode/45.jump-game-ii.md)|Medium|
-
-> * **https://leetcode.com/problems/video-stitching/description/** 1746
-> * **https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/** 1885
-
-### 合并区间
+### Interval
 | Problem          | Difficulty |
 |------------------|------------|
 |**[56. Merge Intervals](../leetcode/56.merge-intervals.md)**|Medium|
 |**[57. Insert Interval](../leetcode/57.insert-interval.md)**|Medium|
 |[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
 |**[763. Partition Labels](../leetcode/763.partition-labels.md)**|Medium|
+|**[729. My Calendar I](../leetcode/729.my-calendar-i.md)**|Medium|
 
 > * https://leetcode.com/problems/count-days-without-meetings/description/ 1483
-> * https://leetcode.com/problems/count-ways-to-group-overlapping-ranges/description/ 1632
+> * https://leetcode.com/problems/find-right-interval/description/
+
+> * **https://leetcode.com/problems/my-calendar-ii/description/** m, at most one conflict
+> * **https://leetcode.com/problems/my-calendar-iii/description/** h, return most frequent overlap, similar to [253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)
+> * **https://leetcode.com/problems/meeting-rooms-iii/** h (Premium)
+> * |[759. Employee Free Time](../leetcode/759.employee-free-time.md)|Hard (1710)|
+> ----
+> * Solved: https://leetcode.com/problems/count-ways-to-group-overlapping-ranges/description/ 1632
+
+### Interval Greedy
+#### 2.1 不相交区间
+| Problem          | Difficulty |
+|------------------|------------|
+|[252. Meeting Rooms](../leetcode/252.meeting-rooms-i.md)|Prenium|
+|**[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)**|Medium|
+|**[435. Non-overlapping Intervals](../leetcode/435.non-overlapping-intervals.md)**|Medium|
+|[646. Maximum Length of Pair Chain](../leetcode/646.maximum-length-of-pair-chain.md)|Medium|
+
+> * My contest https://leetcode.com/problems/select-k-disjoint-special-substrings/description/
+
+#### 2.2 区间分组
+| Problem          | Difficulty |
+|------------------|------------|
+|**[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)**|Prenium|
+|[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
+
+#### 2.3 区间选点
+| Problem          | Difficulty |
+|------------------|------------|
+|**[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)**|Medium|
+
+#### 2.4 区间覆盖
+| Problem          | Difficulty |
+|------------------|------------|
+|[45. Jump Game II](../leetcode/45.jump-game-ii.md)|Medium|
+
+> * **https://leetcode.com/problems/video-stitching/description/** 1746
+> * **https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/** 1885
 
 ### 其他区间贪心
 | Problem          | Difficulty |
@@ -75,6 +79,7 @@
 > * https://leetcode.com/problems/two-best-non-overlapping-events/description/ 1883
 > * https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/ 2015
 
+----
 > TODO: Update problem listing from https://huxulm.github.io/lc-rating/list/data_structure `八、树状数组和线段树`, most of problems are beyond my rating now.
 
 ### 树状数组
@@ -85,7 +90,9 @@
 | Problem          | Difficulty |
 |------------------|------------|
 
+> * https://leetcode.cn/problems/my-calendar-i/solutions/1646079/by-lfool-xvpv/
+> * https://leetcode.cn/problems/my-calendar-i/solutions/1646264/by-jiang-hui-4-pyfn/
+> * **My contest: https://leetcode.com/problems/fruits-into-baskets-iii/description/** 【线段树：为什么要这样设计？【力扣周赛 440】-哔哩哔哩】 https://b23.tv/NyYEU6j
+
 ### Resources
 * ✅ [Study guidelines](https://leetcode.com/discuss/study-guide/2166045/)
-* [Video](https://www.bilibili.com/video/BV1qY411n7Qs/?vd_source=2f62e0e1762a6703c96771d3baa35968)
-* [Segment Tree](https://leetcode.cn/problems/my-calendar-i/solutions/1646264/by-jiang-hui-4-pyfn/)
