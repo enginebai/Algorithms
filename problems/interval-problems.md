@@ -1,19 +1,23 @@
 ## Intervals
 
-### Line Sweep 一维差分（扫描线）
+## Basic
 | Problem          | Difficulty |
 |------------------|------------|
 |**[56. Merge Intervals](../leetcode/56.merge-intervals.md)**|Medium|
 |**[57. Insert Interval](../leetcode/57.insert-interval.md)**|Medium|
 |**[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)**|Medium|
-|**[729. My Calendar I](../leetcode/729.my-calendar-i.md)**|Medium|
+
+> https://leetcode.com/problems/find-right-interval/description/
+
+### Line Sweep 一维差分（扫描线）
+| Problem          | Difficulty |
+|------------------|------------|
 |**[1094. Car Pooling](../leetcode/1094.car-pooling.md)**|Medium (1441)|
+|[2848. Points That Intersect With Cars](../leetcode/2848.points-that-intersect-with-cars.md)|Medium (1229)|
+|[1893. Check if All the Integers in a Range Are Covered](../leetcode/1893.check-if-all-the-integers-in-a-range-are-covered.md)|Easy (1307)|
+|**[729. My Calendar I](../leetcode/729.my-calendar-i.md)**|Medium|
 |[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)|
 
-> * https://leetcode.com/problems/count-tested-devices-after-test-operations/description/ 1169
-> * https://leetcode.com/problems/points-that-intersect-with-cars/description/ 1229
-> * https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/description/ 1307
-> * https://leetcode.com/problems/maximum-population-year/description/ 1370
 > * https://leetcode.com/problems/corporate-flight-bookings/description/ 1569
 > * https://leetcode.com/problems/zero-array-transformation-i/description/ 1591
 > * **https://leetcode.com/problems/my-calendar-ii/description/** 
@@ -28,7 +32,11 @@
 > * **https://leetcode.com/problems/number-of-flowers-in-full-bloom/** 2022
 > * **https://leetcode.com/problems/my-calendar-iii/description/** h
 > * **https://leetcode.com/problems/maximum-profit-in-job-scheduling/**
+> * https://leetcode.com/problems/minimum-interval-to-include-each-query/description/ 2286
 > * https://leetcode.com/problems/the-skyline-problem/description/ h
+>
+> * Solved: https://leetcode.com/problems/count-tested-devices-after-test-operations/description/ 1169
+> * Solved: https://leetcode.com/problems/maximum-population-year/description/ 1370
 
 ### 不相交区间
 | Problem          | Difficulty |
@@ -84,6 +92,8 @@
 ### 线段树
 | Problem          | Difficulty |
 |------------------|------------|
+
+> * **My contest: https://leetcode.com/problems/fruits-into-baskets-iii/description/** 【线段树：为什么要这样设计？【力扣周赛 440】-哔哩哔哩】 https://b23.tv/NyYEU6j
 
 ### Resources
 * ✅ [Study guidelines](https://leetcode.com/discuss/study-guide/2166045/)

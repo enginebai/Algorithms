@@ -2,6 +2,7 @@
 
 ## Common Code Snippets
 ```kotlin
+// Grid directions
 private val directions = arrayOf(
     intArrayOf(-1, 0),  // Up
     intArrayOf(1, 0),   // Down
@@ -22,7 +23,50 @@ val count = IntArray(26)
 for (c in s) {
     count[c - 'a']++
 }
+```
 
+## Subarray
+### Iterate K size 
+* Brute force
+```kotlin
+fun subarray(nums: IntArray, k: Int) {
+    val n = nums.size
+    for (i in 0..n - k) {
+        for (j in i until i + k) {
+            print("${nums[j]}, ")
+        }
+        println()
+    }
+}
+```
+* Fixed window
+```kotlin
+// General sliding window
+val n = nums.size
+var left = 0
+var right = 0
+for (right in 0 until n) {
+    // Expand the window
+
+    // Shrink the window
+    if (right - left + 1 > k) {
+        // Shrink the window
+        left++
+    }
+}
+
+// Fixed-size sliding window
+for (right in 0 until n) {
+    // Expand the window
+
+    if (right >= k) {
+        // Shrink the window
+    }
+
+    if (right >= k - 1) {
+        // Calculate the result
+    }
+}
 ```
 
 ## Binary Search
@@ -38,9 +82,20 @@ fun binarySearch(nums: IntArray, target: Int): Int {
 }
 ```
 
-## Grid DFS
+## Grid - DFS
 > TODO
 ```kotlin
+val m = grid.size
+val n = grid[0].size
+val visited = HashSet<Pair<Int, Int>>()
+for (i in 0 until m) {
+    for (j in 0 until n) {
+        if (grid[i][j] == TODO) {
+            dfs(grid, i, j, visited)
+        }
+    }
+}
+
 fun dfs(grid: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>>) {
     val m = grid.size
     val n = grid[0].size
@@ -55,30 +110,13 @@ fun dfs(grid: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>>)
         dfs(grid, x + d[0], y + d[1]) 
     }
 }
-
-fun dfs(grid: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>>) {
-    val m = grid.size
-    val n = grid[0].size
-    visited.add(x to y)
-    
-    for (d in directions) {
-        val newX = x + d[0]
-        val newY = y + d[1]
-        if (newX !in 0 until m) return
-        if (newY !in 0 until n) return
-        if (grid[newX][newY] != 1) return
-        if (visited.contains(newX to newY)) return
-        
-        dfs(grid, x + d[0], y + d[1]) 
-    }
-}
 ```     
 
-## Grid Area
+## Grid - Area
 Calculate the area of `1's` in the grid.
 > TODO
 
-## Component Counts
+## Grid - Component Counts
 Count the number of components in the grid.
 > TODO
 
@@ -96,22 +134,6 @@ private fun buildGraph(edges: Array<IntArray>): HashMap<Int, HashSet<Int>> {
         graph.computeIfAbsent(b) { hashSetOf() }.add(a)
     }
     return graph
-}
-```
-
-## Tree BFS
-```kotlin
-fun bfs(root: TreeNode?) {
-    if (root == null) return
-    val queue: ArrayDeque<TreeNode> = ArrayDeque()
-    queue.offer(root)
-    while (queue.isNotEmpty()) {
-        val size = queue.size
-        repeat(size) {
-            val node = queue.poll()
-            // TODO: Implement the BFS logic here
-        }
-    }
 }
 ```
 
@@ -177,6 +199,22 @@ answer += (...).toLong()
 answer %= 1_000_000_007
 
 return answer.toInt()
+```
+
+## Tree BFS
+```kotlin
+fun bfs(root: TreeNode?) {
+    if (root == null) return
+    val queue: ArrayDeque<TreeNode> = ArrayDeque()
+    queue.offer(root)
+    while (queue.isNotEmpty()) {
+        val size = queue.size
+        repeat(size) {
+            val node = queue.poll()
+            // TODO: Implement the BFS logic here
+        }
+    }
+}
 ```
 
 ## Find the Largest Two Numbers
