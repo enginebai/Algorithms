@@ -18,6 +18,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |**[1. Two Sum](../leetcode/1.two-sum.md)**|Easy|
+|[1679. Max Number of K-Sum Pairs](../leetcode/1679.max-number-of-k-sum-pairs.md)|Medium (1345)|
 |@@[1346. Check If N and Its Double Exist](../leetcode/1346.check-if-n-and-its-double-exist.md)|Easy (1225)|
 |@@[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium|
 |@@[532. K-diff Pairs in an Array](../leetcode/532.k-diff-pairs-in-an-array.md)|Medium|
@@ -104,13 +105,14 @@
 ### Prefix Sum
 | Problem          | Difficulty |
 |------------------|------------|
+|[303. Range Sum Query - Immutable](../leetcode/303.range-sum-query-immutable.md)|Easy|
 |[1588. Sum of All Odd Length Subarrays](../leetcode/1588.sum-of-all-odd-length-subarrays.md)|Easy|
 |@@**[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)**|Medium|
 |[2559. Count Vowel Strings in Ranges](../leetcode/2559.count-vowel-strings-in-ranges.md)|Medium|
 
-> TODO: |[2090. K Radius Subarray Averages](../leetcode/2090.k-radius-subarray-averages.md)|Medium (1358)|
-> 
-> TODO: [一、前缀和](https://huxulm.github.io/lc-rating/list/data_structure#f8304de0ff361c714ff1219e031f1439)
+> * TODO: [一、前缀和](https://huxulm.github.io/lc-rating/list/data_structure#f8304de0ff361c714ff1219e031f1439)
+> * TODO: |[2090. K Radius Subarray Averages](../leetcode/2090.k-radius-subarray-averages.md)|Medium (1358)|
+> * https://leetcode.com/problems/special-array-ii/description/ 1523
 
 ## Explanation
 * [380. Insert Delete GetRandom O(1)](https://www.youtube.com/watch?v=jE6VIeQxzLU)

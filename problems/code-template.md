@@ -23,6 +23,18 @@ val count = IntArray(26)
 for (c in s) {
     count[c - 'a']++
 }
+
+// Check if the string is a palindrome
+private fun String.isPal(): Boolean {
+    var i = 0
+    var j = this.length - 1
+    while (i < j) {
+        if (this[i] != this[j]) return false
+        i++
+        j--
+    }
+    return true
+}
 ```
 
 ## Subarray
@@ -83,7 +95,6 @@ fun binarySearch(nums: IntArray, target: Int): Int {
 ```
 
 ## Grid - DFS
-> TODO
 ```kotlin
 val m = grid.size
 val n = grid[0].size

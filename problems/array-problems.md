@@ -1,25 +1,28 @@
 ## [Array](../topics/array.md)
 
-> ✅ Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
->
-> TODO: Practice https://blog.faangshui.com/p/before-leetcode
-> 
-> TODO: Understand how to iterate in diagonal, see [Code Template](../problems/code-template.md#diagonal-traversal)
->
-> https://huxulm.github.io/lc-rating/list/data_structure 常用枚举技巧、*前缀和
+> * ✅ Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
+> * https://huxulm.github.io/lc-rating/list/data_structure 常用枚举技巧
+> * TODO: Practice https://blog.faangshui.com/p/before-leetcode
+> * TODO: Understand how to iterate in diagonal, see [Code Template](../problems/code-template.md#diagonal-traversal)
 
 ### Enumeration
+#### 枚舉右，維護左
+| Problem          | Difficulty |
+|------------------|------------|
+|[1512. Number of Good Pairs](../leetcode/1512.number-of-good-pairs.md)|Easy|
+|[1679. Max Number of K-Sum Pairs](../leetcode/1679.max-number-of-k-sum-pairs.md)|Medium (1345)|
+|[1010. Pairs of Songs With Total Durations Divisible by 60](../leetcode/1010.pairs-of-songs-with-total-durations-divisible-by-60.md)|Medium (1377)|
+|**[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)**|Easy|
+|[624. Maximum Distance in Arrays](../leetcode/624.maximum-distance-in-arrays.md)|Medium|
+|[1031. Maximum Sum of Two Non-Overlapping Subarrays](../leetcode/1031.maximum-sum-of-two-non-overlapping-subarrays.md)|Medium (1680)|
+|[1014. Best Sightseeing Pair](../leetcode/1014.best-sightseeing-pair.md)|Medium (1730)|
+|[1814. Count Nice Pairs in an Array](../leetcode/1814.count-nice-pairs-in-an-array.md)|Medium (1737)|
+
+#### 枚舉中間
 | Problem          | Difficulty |
 |------------------|------------|
 |[2909. Minimum Sum of Mountain Triplets II](../leetcode/2909.minimum-sum-of-mountain-triplets-ii.md)|Medium (1478)|
 |[2874. Maximum Value of an Ordered Triplet II](../leetcode/2874.maximum-value-of-an-ordered-triplet-ii.md)|Medium (1583)|
-
-> Only get the problems rating from 1500 ~ 2000
-> * https://leetcode.com/problems/unique-length-3-palindromic-subsequences/description/ 1533
-> * https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/description/ 1680
-> * https://leetcode.com/problems/best-sightseeing-pair/description/ 1730
-> * https://leetcode.com/problems/count-nice-pairs-in-an-array/description/ 1737
-> * https://leetcode.com/problems/find-indices-with-index-and-value-difference-ii/description/ 1763
 
 ### Movement
 | Problem          | Difficulty |
