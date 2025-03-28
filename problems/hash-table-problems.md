@@ -18,6 +18,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |**[1. Two Sum](../leetcode/1.two-sum.md)**|Easy|
+|[1679. Max Number of K-Sum Pairs](../leetcode/1679.max-number-of-k-sum-pairs.md)|Medium (1345)|
 |@@[1346. Check If N and Its Double Exist](../leetcode/1346.check-if-n-and-its-double-exist.md)|Easy (1225)|
 |@@[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium|
 |@@[532. K-diff Pairs in an Array](../leetcode/532.k-diff-pairs-in-an-array.md)|Medium|

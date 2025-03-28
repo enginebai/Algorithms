@@ -243,7 +243,6 @@ class DynamicArrayQueue<T>: Queue<T> {
 ```
 
 There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `head` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce [*Circular Queue*](../leetcode/622.design-circular-queue.md).
-
 ## Kotlin APIs
 ### Stack
 ```kotlin

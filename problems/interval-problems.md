@@ -46,7 +46,7 @@
 #### 2.1 不相交区间
 | Problem          | Difficulty |
 |------------------|------------|
-|[252. Meeting Rooms](../leetcode/252.meeting-rooms-i.md)|Prenium|
+|[252. Meeting Rooms](../leetcode/252.meeting-rooms-i.md)|Premium|
 |**[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)**|Medium|
 |**[435. Non-overlapping Intervals](../leetcode/435.non-overlapping-intervals.md)**|Medium|
 |[646. Maximum Length of Pair Chain](../leetcode/646.maximum-length-of-pair-chain.md)|Medium|
@@ -56,7 +56,7 @@
 #### 2.2 区间分组
 | Problem          | Difficulty |
 |------------------|------------|
-|**[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)**|Prenium|
+|**[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)**|Premium|
 |[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
 
 #### 2.3 区间选点

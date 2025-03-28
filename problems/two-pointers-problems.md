@@ -26,6 +26,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[167. Two Sum II - Input Array Is Sorted](../leetcode/167.two-sum-ii-input-array-is-sorted.md)|Medium|
+|[1679. Max Number of K-Sum Pairs](../leetcode/1679.max-number-of-k-sum-pairs.md)|Medium (1345)|
 |**[15. 3Sum](../leetcode/15.3sum.md)**|Medium|
 |[16. 3Sum Closest](../leetcode/16.3sum-closest.md)|Medium|
 |@@[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium|
