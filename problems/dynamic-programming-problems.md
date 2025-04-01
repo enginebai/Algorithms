@@ -1,19 +1,12 @@
 ## [Dynamic Programming](../topics/dynamic-programming.md)
 
-> Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
->
-> Problem listing: https://huxulm.github.io/lc-rating/list/dp 
+> * Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
+> * Problem listing: https://huxulm.github.io/lc-rating/list/dp 
 
+### Basic
 | Problem          | Difficulty |
 |------------------|------------|
 |[509. Fibonacci Number](../leetcode/509.fibonacci-number.md)|Easy|
-|[70. Climbing Stairs](../leetcode/70.climbing-stairs.md)|Easy|
-|[746. Min Cost Climbing Stairs](../leetcode/746.min-cost-climbing-stairs.md)|Easy|
-|[198. House Robber](../leetcode/198.house-robber.md)|Medium|
-|[213. House Robber II](../leetcode/213.house-robber-ii.md)|Medium|
-|[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
-|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Medium|
-|[152. Maximum Product Subarray](../leetcode/152.maximum-product-subarray.md)|Medium|
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 |[263. Ugly Number](../leetcode/263.ugly-number.md)|Easy|
 |[264. Ugly Number II](../leetcode/264.ugly-number-ii.md)|Medium|
@@ -21,6 +14,27 @@
 |[983. Minimum Cost For Tickets](../leetcode/983.minimum-cost-for-tickets.md)|Medium|
 |[1235. Maximum Profit in Job Scheduling](../leetcode/1235.maximum-profit-in-job-scheduling.md)|Hard|
 |[32. Longest Valid Parentheses](../leetcode/32.longest-valid-parentheses.md)|Hard|
+
+### Climb Stairs
+| Problem          | Difficulty |
+|------------------|------------|
+|[70. Climbing Stairs](../leetcode/70.climbing-stairs.md)|Easy|
+|[746. Min Cost Climbing Stairs](../leetcode/746.min-cost-climbing-stairs.md)|Easy|
+|[377. Combination Sum IV](../leetcode/377.combination-sum-iv.md)|Medium|
+
+### House Robber
+| Problem          | Difficulty |
+|------------------|------------|
+|[198. House Robber](../leetcode/198.house-robber.md)|Medium|
+|[213. House Robber II](../leetcode/213.house-robber-ii.md)|Medium|
+|[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
+
+### Maximum Subarray Sum
+| Problem          | Difficulty |
+|------------------|------------|
+|[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Medium|
+|[152. Maximum Product Subarray](../leetcode/152.maximum-product-subarray.md)|Medium|
+|[1749. Maximum Absolute Sum of Any Subarray](../leetcode/1749.maximum-absolute-sum-of-any-subarray.md)|Medium (1541)|
 
 ### Matrix
 | Problem          | Difficulty |

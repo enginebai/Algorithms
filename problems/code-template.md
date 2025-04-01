@@ -87,10 +87,63 @@ fun binarySearch(nums: IntArray, target: Int): Int {
     var left = TODO()
     var right = TODO()
     while (left <= right) {
-        val mid = left + (right - left) / 2
-        // TODO: Implement the binary search logic here
+        val middle = left + (right - left) / 2
+        if (nums[middle] == target) {
+            return middle
+        } else if (nums[middle] < target) {
+            left = middle + 1
+        } else {
+            right = middle - 1
+        }
     }
     return -1
+}
+```
+### Find the first element that satisfies the condition
+```js
+X X X O O O O O O O
+      ^
+
+left = 0 ~ n
+```
+```kotlin
+fun binarySearch(nums: IntArray, target: Int): Int {
+    var left = 0
+    var right = nums.size - 1
+    while (left <= right) {
+        val middle = left + (right - left) / 2
+        val isValid = ...
+        if (isValid) {
+            right = middle - 1
+        } else {
+            left = middle + 1
+        }
+    }
+    return if (left in 0 until nums.size) left else -1
+}
+```
+
+### Find the last element that satisfies the condition
+```js
+O O O O X X X X
+      ^
+
+right = -1 ~ n - 1
+```
+```kotlin
+fun binarySearch(nums: IntArray, target: Int): Int {
+    var left = 0
+    var right = nums.size - 1
+    while (left <= right) {
+        val middle = left + (right - left) / 2
+        val isValid = ...
+        if (isValid) {
+            left = middle + 1
+        } else {
+            right = middle - 1
+        }
+    }   
+    return if (right in 0 until nums.size) right else -1
 }
 ```
 

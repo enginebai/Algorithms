@@ -218,13 +218,27 @@ intervals.sortWith(compareBy({ it[0] }, { it[1] }))
 
 ### `Array`
 ```kotlin
-val nums: Array<IntArray> = ...
+val nums: IntArray = ...
 
 // Sort array in-place
 nums.sort()
 nums.sortDescending()
 nums.sortBy { it[0] }
 nums.sortByDescending { it[0] }
+
+// Sort array with index (preserve the original index for each element after sorting)
+val nums: IntArray = ...
+val sortedWithIndex: List<IndexedValue<Int>> = nums.withIndex().sortedBy { it.value }
+for ((index, value) in sortedWithIndex) {
+    ...
+}
+
+// Or alternatively, we create a new array of index and sorted by its value
+val nums: IntArray = ...
+val indices: List<Int> = nums.indices.sortedBy { nums[it] }
+for (i in nums.indices) {
+    val value = nums[indices[i]]
+}
 ``` 
 
 > Sample usage: [1636. Sort Array by Increasing Frequency](../leetcode/1636.sort-array-by-increasing-frequency.md)
