@@ -79,14 +79,6 @@
 > * https://leetcode.com/problems/verifying-an-alien-dictionary/description/ 1299
 > * https://leetcode.com/problems/isomorphic-strings/description/ e
 
-### Intersection
-| Problem          | Difficulty |
-|------------------|------------|
-|**[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)**|Easy|
-
-> * https://leetcode.com/problems/intersection-of-two-arrays/submissions/ e
-> * https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/ e
-
 ### Other
 | Problem          | Difficulty |
 |------------------|------------|

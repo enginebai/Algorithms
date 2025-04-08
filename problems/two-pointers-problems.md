@@ -50,6 +50,15 @@
 |------------------|------------|
 |@@[1574. Shortest Subarray to be Removed to Make Array Sorted](../leetcode/1574.shortest-subarray-to-be-removed-to-make-array-sorted.md)|Medium (1931)|
 
+### Intersection
+| Problem          | Difficulty |
+|------------------|------------|
+|**[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)**|Easy|
+|**[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)**|Medium|
+
+> * https://leetcode.com/problems/intersection-of-two-arrays/submissions/ e
+> * https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/ e
+
 ### 双序列双指针
 | Problem          | Difficulty |
 |------------------|------------|
