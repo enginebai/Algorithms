@@ -203,17 +203,16 @@ val sortedByList: List<Int> = nums.sortedWith(compareBy<Int> { countMap[it] }.th
 val sortedByList: List<Int> = nums.sortedWith(compareBy<Int>({ countMap[it] }, { -it }))
 
 // For 2D array
-val intervals = arrayOf(
-    intArrayOf(1, 3),
-    intArrayOf(2, 6),
-    intArrayOf(8, 10),
-    intArrayOf(15, 18)
-)
+val intervals = Array<IntArray>(...)
 
 // Sort the intervals by the start time
 intervals.sortBy { it[0] }
 // Sort the intervals by the start time, then the end time
 intervals.sortWith(compareBy({ it[0] }, { it[1] }))
+// Sort the intervals by the start time ascending, then the end time descending
+intervals.sortWith(compareBy({ it[0] }, { -it[1] }))
+// Or equivalently
+intervals.sortWith(compareBy<IntArray> { it[0] }.thenByDescending { it[1] })
 ```
 
 ### `Array`

@@ -45,39 +45,51 @@
 
 ### Interval Greedy
 #### 2.1 不相交区间
+
+> Given a collections of intervals, find the maximum number of intervals that are non-overlapping.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |[252. Meeting Rooms](../leetcode/252.meeting-rooms-i.md)|Premium|
 |**[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)**|Medium|
 |**[435. Non-overlapping Intervals](../leetcode/435.non-overlapping-intervals.md)**|Medium|
 |[646. Maximum Length of Pair Chain](../leetcode/646.maximum-length-of-pair-chain.md)|Medium|
+|[1288. Remove Covered Intervals](../leetcode/1288.remove-covered-intervals.md)|Medium (1375)|
+|[2054. Two Best Non-Overlapping Events](../leetcode/2054.two-best-non-overlapping-events.md)|Medium (1883)|
 
-> * My contest https://leetcode.com/problems/select-k-disjoint-special-substrings/description/
+> * My contest https://leetcode.com/problems/select-k-disjoint-special-substrings/description/ 2220
 
 #### 2.2 区间分组
+
+> Given a collections of intervals, find the minimum number of groups that can be formed by the intervals.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |**[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)**|Premium|
 |[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
 
 #### 2.3 区间选点
+
+> Given a collections of intervals, find the minimum number of points that can be covered by the intervals.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |**[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)**|Medium|
 
 #### 2.4 区间覆盖
+
+> Given a collections of intervals, find the minimum number of intervals that can be covered by the intervals.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |[45. Jump Game II](../leetcode/45.jump-game-ii.md)|Medium|
-
-> * **https://leetcode.com/problems/video-stitching/description/** 1746
-> * **https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/** 1885
+|[1024. Video Stitching](../leetcode/1024.video-stitching.md)|Medium (1746)|
+|[1326. Minimum Number of Taps to Open to Water a Garden](../leetcode/1326.minimum-number-of-taps-to-open-to-water-a-garden.md)|Hard (1885)|
 
 ### 其他区间贪心
 | Problem          | Difficulty |
 |------------------|------------|
 > * https://leetcode.com/problems/remove-covered-intervals/description/ 1375
-> * https://leetcode.com/problems/two-best-non-overlapping-events/description/ 1883
 > * https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/ 2015
 
 ----
