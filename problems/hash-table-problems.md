@@ -1,6 +1,6 @@
-## [Hash Table](../topics/hash-table.md)
+# [Hash Table](../topics/hash-table.md)
 
-### Design
+## Design
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
@@ -14,7 +14,7 @@
 
 > * **https://leetcode.com/problems/all-oone-data-structure/description/ hard**
 
-### Existance
+## Existance
 | Problem          | Difficulty |
 |------------------|------------|
 |**[1. Two Sum](../leetcode/1.two-sum.md)**|Easy|
@@ -31,7 +31,7 @@
 > * Solved: https://leetcode.com/problems/most-common-word/description/ 1297
 > * Solved: https://leetcode.com/problems/path-crossing/description/ e 1508
 
-### Duplicates
+## Duplicates
 | Problem          | Difficulty |
 |------------------|------------|
 |**[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)**|Easy|
@@ -41,7 +41,7 @@
 > * Solved: https://leetcode.com/problems/uncommon-words-from-two-sentences/description/ 1259
 > * Solved: https://leetcode.com/problems/unique-morse-code-words/description/ 1307
 
-### Counting
+## Counting
 | Problem          | Difficulty |
 |------------------|------------|
 |**[242. Valid Anagram](../leetcode/242.valid-anagram.md)**|Easy|
@@ -70,7 +70,7 @@
 > * https://leetcode.com/problems/second-largest-digit-in-a-string/description/ 1341
 > * https://leetcode.com/problems/subdomain-visit-count/description/ 1377
 
-### Mapping
+## Mapping
 | Problem          | Difficulty |
 |------------------|------------|
 |@@**[290. Word Pattern](../leetcode/290.word-pattern.md)**|Easy|
@@ -79,13 +79,13 @@
 > * https://leetcode.com/problems/verifying-an-alien-dictionary/description/ 1299
 > * https://leetcode.com/problems/isomorphic-strings/description/ e
 
-### Other
+## Other
 | Problem          | Difficulty |
 |------------------|------------|
 |**[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)**|Medium|
 |**[133. Clone Graph](../leetcode/133.clone-graph.md)**|Medium|
 
-### Cyclic Sort
+## Cyclic Sort
 | Problem          | Difficulty |
 |------------------|------------|
 |**[41. First Missing Positive](../leetcode/41.first-missing-positive.md)**|Hard|
@@ -94,7 +94,8 @@
 |@@[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
 |@@[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
 
-### Prefix Sum Basic
+## Prefix Sum 
+### Basic
 | Problem          | Difficulty |
 |------------------|------------|
 |[303. Range Sum Query - Immutable](../leetcode/303.range-sum-query-immutable.md)|Easy|
@@ -103,9 +104,8 @@
 |[2389. Longest Subsequence With Limited Sum](../leetcode/2389.longest-subsequence-with-limited-sum.md)|Medium (1387)|
 |[53. Maximum Subarray](../leetcode/53.maximum-subarray.md)|Medium|
 |[1749. Maximum Absolute Sum of Any Subarray](../leetcode/1749.maximum-absolute-sum-of-any-subarray.md)|Medium (1541)|
-|[2055. Plates Between Candles](../leetcode/2055.plates-between-candles.md)|Medium (1819)|
+|[2055. Plates Between Candles](../leetcode/2055.plates-between-candle.md)|Medium (1819)|
 
-> * Source: [一、前缀和](https://huxulm.github.io/lc-rating/list/data_structure#f8304de0ff361c714ff1219e031f1439)
 > * TODO: |[2090. K Radius Subarray Averages](../leetcode/2090.k-radius-subarray-averages.md)|Medium (1358)|
 > * https://leetcode.com/problems/special-array-ii/description/ 1523
 
@@ -114,7 +114,7 @@
 |------------------|------------|
 |@@**[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)**|Medium|
 
-> * Source: [前缀和与哈希表](https://huxulm.github.io/lc-rating/list/data_structure#57bd9b702cc3a23859ac62ef7232ab19)
+> * TODO: [前缀和与哈希表](https://huxulm.github.io/lc-rating/list/data_structure#57bd9b702cc3a23859ac62ef7232ab19)
 
 ## Explanation
 * [380. Insert Delete GetRandom O(1)](https://www.youtube.com/watch?v=jE6VIeQxzLU)

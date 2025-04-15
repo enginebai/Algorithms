@@ -1,5 +1,5 @@
-## [Binary Search](../topics/binary-search.md)
-### Basic
+# [Binary Search](../topics/binary-search.md)
+## Basic
 | Problem          | Difficulty |
 |------------------|------------|
 |**[704. Binary Search](../leetcode/704.binary-search.md)**|Easy|
@@ -11,9 +11,11 @@
 > * https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/ 1387
 > * https://leetcode.com/problems/range-frequency-queries/description/ 1702
 > * https://leetcode.com/problems/count-the-number-of-fair-pairs/description/ 1720
+> * https://leetcode.com/problems/most-beautiful-item-for-each-query/description/ 1724
 > * https://leetcode.com/problems/minimum-absolute-sum-difference/description/ 1934
+> * Solved: https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/description/ 1195
 
-### Search the First/Last Position
+## Search the First/Last Position
 | Problem          | Difficulty |
 |------------------|------------|
 |**[278. First Bad Version](../leetcode/278.first-bad-version.md)**|Easy|
@@ -22,8 +24,8 @@
 |@@[475. Heaters](../leetcode/475.heaters.md)|Medium|
 |@@[611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium|
 
-### Search on Value
-#### Minimum Value
+## Search on Value
+### Minimum Value
 | Problem          | Difficulty |
 |------------------|------------|
 |**[875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)**|Medium (1766)|
@@ -31,14 +33,12 @@
 |[1870. Minimum Speed to Arrive on Time](../leetcode/1870.minimum-speed-to-arrive-on-time.md)|Medium (1676)|
 |@@**[1011. Capacity To Ship Packages Within D Days](../leetcode/1011.capacity-to-ship-packages-within-d-days.md)**|Medium (1725)|
 |@@**[1482. Minimum Number of Days to Make m Bouquets](../leetcode/1482.minimum-number-of-days-to-make-m-bouquets.md)**|Medium (1945)|
-|@@[1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)|Medium (1947)|
-|[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium|
 
 > * https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/description/ 1542
 > * https://leetcode.com/problems/minimum-number-of-seconds-to-make-mountain-height-zero/description/ 1694
 > * https://leetcode.com/problems/minimum-time-to-repair-cars/description/ 1915
 
-#### Maximum Value
+### Maximum Value
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[2226. Maximum Candies Allocated to K Children](../leetcode/2226.maximum-candies-allocated-to-k-children.md)|Medium (1646)|
@@ -49,19 +49,20 @@
 > * https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/description/ 1929
 > * https://leetcode.com/problems/maximum-number-of-alloys/description/ 1981
 
-#### Minimize the Maximum Value
+### Minimize the Maximum Value
 | Problem          | Difficulty |
 |------------------|------------|
 |@@**[410. Split Array Largest Sum](../leetcode/410.split-array-largest-sum.md)**|Hard|
 |@@[2064. Minimized Maximum of Products Distributed to Any Store](../leetcode/2064.minimized-maximum-of-products-distributed-to-any-store.md)|Medium (1886)|
+|@@[1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)|Medium (1947)|
 
 > * https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/description/ 1940
 > * https://leetcode.com/problems/minimize-maximum-of-array/description/ 1965
-> * https://leetcode.com/problems/house-robber-iv/description/ 2081
 > * https://leetcode.com/problems/swim-in-rising-water/description/ 2096, similar to [1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)
+> * [2560. House Robber IV](../leetcode/2560.house-robber-iv.md) 2081
 > * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/description/ 2155
 
-#### Maximize the Minimum Value
+### Maximize the Minimum Value
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[1552. Magnetic Force Between Two Balls](../leetcode/1552.magnetic-force-between-two-balls.md)|Medium (1919)|
@@ -81,7 +82,7 @@
 > * https://leetcode.com/problems/nth-magical-number/description/ 1897
 > * https://leetcode.com/problems/ugly-number-iii/description/ 2039
 
-### Search in Matrix
+## Search in Matrix
 | Problem          | Difficulty |
 |------------------|------------|
 |**[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)**|Medium|
@@ -90,14 +91,14 @@
 
 > * https://leetcode.com/problems/find-a-peak-element-ii/
 
-### Design
+## Design
 | Problem          | Difficulty |
 |------------------|------------|
 |**[729. My Calendar I](../leetcode/729.my-calendar-i.md)**|Medium|
 |**[981. Time Based Key-Value Store](../leetcode/981.time-based-key-value-store.md)**|Medium|
 |@@**[1146. Snapshot Array](../leetcode/1146.snapshot-array.md)**|Medium (1770)|
 
-### Other
+## Other
 | Problem          | Difficulty |
 |------------------|------------|
 |[69. Sqrt(x)](../leetcode/69.sqrt(x).md)|Easy|

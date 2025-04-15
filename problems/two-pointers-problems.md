@@ -1,6 +1,6 @@
-## Two Pointers
+# Two Pointers
 
-### Left/Right Pointers
+## Left/Right Pointers
 | Problem          | Difficulty |
 |------------------|------------|
 |[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
@@ -10,19 +10,14 @@
 |[948. Bag of Tokens](../leetcode/948.bag-of-tokens.md)|Medium (1762)|
 |@@[1775. Equal Sum Arrays With Minimum Number of Operations](../leetcode/1775.equal-sum-arrays-with-minimum-number-of-operations.md)|Medium (1850)|
 
+> * Solved: https://leetcode.com/problems/valid-palindrome/description/ e
 > * https://leetcode.com/problems/apply-operations-to-an-array/description/ 1223
 > * https://leetcode.com/problems/number-of-arithmetic-triplets/description/ 1203
-> * Solved: https://leetcode.com/problems/valid-palindrome/description/ e
 > * https://leetcode.com/problems/count-the-number-of-fair-pairs/description/ 1720
 > * https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/description/ 1817
 > * https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/description/ 2276
 
-### 3 Pointers
-| Problem          | Difficulty |
-|------------------|------------|
-|@@[611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium|
-
-### nSum Problemm
+## nSum Problems
 | Problem          | Difficulty |
 |------------------|------------|
 |[167. Two Sum II - Input Array Is Sorted](../leetcode/167.two-sum-ii-input-array-is-sorted.md)|Medium|
@@ -32,7 +27,7 @@
 |@@[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium|
 |@@[923. 3Sum With Multiplicity](../leetcode/923.3sum-with-multiplicity.md)|Medium (1710)|
 
-### Read/Write Pointers
+## Read/Write Pointers
 | Problem          | Difficulty |
 |------------------|------------|
 |**[27. Remove Element](../leetcode/27.remove-element.md)**|Easy|
@@ -45,12 +40,12 @@
 |@@[922. Sort Array By Parity II](../leetcode/922.sort-array-by-parity-ii.md)|Easy (1173)|
 |@@[202. Happy Number](../leetcode/202.happy-number.md)**|Easy|
 
-### Same Direction
+## Same Direction
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[1574. Shortest Subarray to be Removed to Make Array Sorted](../leetcode/1574.shortest-subarray-to-be-removed-to-make-array-sorted.md)|Medium (1931)|
 
-### Intersection
+## Intersection
 | Problem          | Difficulty |
 |------------------|------------|
 |**[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)**|Easy|
@@ -59,7 +54,7 @@
 > * https://leetcode.com/problems/intersection-of-two-arrays/submissions/ e
 > * https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/ e
 
-### 双序列双指针
+## 双序列双指针
 | Problem          | Difficulty |
 |------------------|------------|
 |[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
@@ -68,12 +63,42 @@
 |@@[475. Heaters](../leetcode/475.heaters.md)|Medium|
 
 > * https://leetcode.com/problems/minimum-common-value/description/ 1249
-> * https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/description/ 1514
+> * https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/description/ 1281
+> * https://leetcode.com/problems/adding-spaces-to-a-string/description/ 1315
+> * https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/description/ 1514
 > * https://leetcode.com/problems/move-pieces-to-obtain-a-string/description/ 1693
 > * https://leetcode.com/problems/swap-adjacent-in-lr-string/description/ 1938
 > * https://leetcode.com/problems/get-the-maximum-score/description/ 1961
 
-> TODO: [六、分组循环](https://huxulm.github.io/lc-rating/list/slide_window#e2c6649d1f133fbf4f20570940a5bd04)
+## 子序列
+| Problem          | Difficulty |
+|------------------|------------|
+
+> * https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/description/
+> * https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/description/ 1362
+
+## 3 Pointers
+| Problem          | Difficulty |
+|------------------|------------|
+|@@[611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium|
+
+> * https://leetcode.com/problems/number-of-arithmetic-triplets/description/ 1203
+> * https://leetcode.com/problems/count-the-number-of-fair-pairs/description/ 1720
+> * https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/description/ 1817
+> * https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/ 2092
+
+## 分组循环
+| Problem          | Difficulty |
+|------------------|------------|
+|[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
+
+> * https://leetcode.com/problems/consecutive-characters/description/ 1165
+> * https://leetcode.com/problems/longest-turbulent-subarray/description/ 1393
+> * https://leetcode.com/problems/summary-ranges/description/ 
+> * https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/description/ 1427
+> * https://leetcode.com/problems/longest-mountain-in-array/description/ 1436
+> * https://leetcode.com/problems/count-number-of-homogenous-substrings/description/ 1490
+> * https://leetcode.com/problems/minimum-time-to-make-rope-colorful/description/ 1574
 
 ## Explanation
 * [11. Container With Most Water](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/011.Container-With-Most-Water)

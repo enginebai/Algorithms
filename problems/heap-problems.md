@@ -1,6 +1,6 @@
-## [Heap Problems](../topics/heap.md)
+# [Heap Problems](../topics/heap.md)
 
-### Basic
+## Basic
 | Problem          | Difficulty |
 |------------------|------------|
 |**[1046. Last Stone Weight](../leetcode/1046.last-stone-weight.md)**|Easy (1172)|
@@ -28,7 +28,7 @@
 > * Solved: https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/ 1418 // A very basic heap problem. 2024/10/30
 > * Solved: https://leetcode.com/problems/seat-reservation-manager/description/ 1428 // Very straightforward problem. 2024/11/02
 
-### Top K
+## Top K
 | Problem          | Difficulty |
 |------------------|------------|
 |**[215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md)**|Medium|
@@ -40,7 +40,7 @@
 
 > * My contest https://leetcode.com/problems/choose-k-elements-with-maximum-sum/solutions/
 
-### Rearrangement
+## Rearrangement
 | Problem          | Difficulty |
 |------------------|------------|
 |@@**[767. Reorganize String](../leetcode/767.reorganize-string.md)**|Medium (1681)|
@@ -51,7 +51,7 @@
 > * https://leetcode.com/problems/distant-barcodes/description/ 1701
 > * https://leetcode.com/problems/maximum-number-of-weeks-for-which-you-can-work/description/ 1803
 
-### Merge K Sorted
+## Merge K Sorted
 | Problem          | Difficulty |
 |------------------|------------|
 |**[23. Merge k Sorted Lists](../leetcode/23.merge-k-sorted-lists.md)**|Hard|
@@ -66,22 +66,23 @@
 > * **https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/description/** h
 > * ~~https://leetcode.com/problems/minimize-deviation-in-array/description/~~ 2533
 
-### 事後諸葛
+## 事後諸葛
 | Problem          | Difficulty |
 |------------------|------------|
 |**[1642. Furthest Building You Can Reach](../leetcode/1642.furthest-building-you-can-reach.md)**|Medium (1962)|
 
+> * TODO: [力扣加加](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/heap-2)
 > * **https://leetcode.com/problems/course-schedule-iii/description/** h
 > * **https://leetcode.com/problems/minimum-number-of-refueling-stops/description/** 2074
 
-### Two Heaps
+## Two Heaps
 | Problem          | Difficulty |
 |------------------|------------|
 > * **https://leetcode.com/problems/kth-largest-element-in-a-stream/** e
 > * **https://leetcode.com/problems/find-median-from-data-stream/description/** h
 > * **https://leetcode.com/problems/sliding-window-median/description/** h
 
-### Lazy Deletion
+## Lazy Deletion
 | Problem          | Difficulty |
 |------------------|------------|
 > * https://leetcode.com/problems/design-a-number-container-system/description/ 1540

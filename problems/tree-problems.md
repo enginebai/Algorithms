@@ -12,6 +12,8 @@
 |[1026. Maximum Difference Between Node and Ancestor](../leetcode/1026.maximum-difference-betwwen-node-and-ancestor.md)|Medium (1446)|
 |[1315. Sum of Nodes with Even-Valued Grandparent](../leetcode/1315.sum-of-nodes-with-even-valued-grandparent.md)|Medium (1426)|
 
+> * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1561
+
 ### Bottom-Up
 | Problem          | Difficulty |
 |------------------|------------|
@@ -116,7 +118,6 @@
 |[1161. Maximum Level Sum of a Binary Tree](../leetcode/1161.maximum-level-sum-of-a-binary-tree.md)|Medium|
 
 > * https://leetcode.com/problems/reachable-nodes-with-restrictions/description/ 1476
-> * https://leetcode.com/problems/time-needed-to-inform-all-employees/ 1561
 > * https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/ 1607
 > * https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/description/ 1633
 > * https://leetcode.com/problems/distribute-coins-in-binary-tree/description/ 1709
