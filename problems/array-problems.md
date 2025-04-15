@@ -1,8 +1,8 @@
 ## [Array](../topics/array.md)
 
 > * ✅ Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
-> * https://huxulm.github.io/lc-rating/list/data_structure 常用枚举技巧
-> * TODO: Practice https://blog.faangshui.com/p/before-leetcode
+> * ✅ https://huxulm.github.io/lc-rating/list/data_structure 常用枚举技巧
+> * ✅ TODO: Practice https://blog.faangshui.com/p/before-leetcode
 > * TODO: Understand how to iterate in diagonal, see [Code Template](../problems/code-template.md#diagonal-traversal)
 
 ### Enumeration

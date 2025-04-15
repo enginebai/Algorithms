@@ -1,6 +1,6 @@
-## Sliding Window
+# Sliding Window
 
-### Fixed Size Window
+## Fixed Size Window
 | Problem          | Difficulty |
 |------------------|------------|
 |[1456. Maximum Number of Vowels in a Substring of Given Length](../leetcode/1456.maximum-number-of-vowels-in-a-substring-of-given-length.md)|Medium (1263)|
@@ -20,12 +20,13 @@
 > * https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/description/ 1360
 > * **https://leetcode.com/problems/grumpy-bookstore-owner/description/ 1418**
 > * https://leetcode.com/problems/maximum-sum-of-almost-unique-subarray/description/ 1545
+> * ---- Advanced (Optional) ----
 > * https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/description/ 1748
 > * https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/description/ 1748
 > * https://leetcode.com/problems/sliding-subarray-beauty/description/ 1785
 > * https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/description/ 2005
 
-### Longest Window
+## Longest Window
 | Problem          | Difficulty |
 |------------------|------------|
 |**[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)**|Medium|
@@ -40,10 +41,11 @@
 > * https://leetcode.com/problems/find-the-longest-semi-repetitive-substring/description/ 1501
 > * https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/description/ 1535
 > * https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/ 1817
+> * ---- Advanced (Optional) ----
 > * https://leetcode.com/problems/frequency-of-the-most-frequent-element/description/ 1876
 > * https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/description/ 1947
 > * https://leetcode.com/problems/find-the-longest-equal-subarray/description/ 1976
-> * https://leetcode.com/problems/maximum-white-tiles-covered-by-a-carpet/ 2021
+> * TODO: https://leetcode.com/problems/maximum-white-tiles-covered-by-a-carpet/ 2021
 > * TODO: My contest [3413. Maximum Coins From K Consecutive Bags](../leetcode/3413.maximum-coins-from-k-consecutive-bags.md) 2373
 
 > * Solved: https://leetcode.com/problems/get-equal-substrings-within-budget/description/ 1496
@@ -53,7 +55,7 @@
 > TODO: Add the definition of `* Window: ...` for each problem below.
 > ------------
 
-### Shortest Window
+## Shortest Window
 | Problem          | Difficulty |
 |------------------|------------|
 |**[209. Minimum Size Subarray Sum](../leetcode/209.minimum-size-subarray-sum.md)**|Medium|
@@ -63,8 +65,8 @@
 > * https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string/ 1482
 > * TODO: My contest [2875. Minimum Size Subarray in Infinite Array](../leetcode/2875.minimum-size-subarray-in-infinite-array.md)
 
-### Subarray Count
-#### 越長越合法
+## Subarray Count
+### 越長越合法
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[3325. Count Substrings With K-Frequency Characters I](../leetcode/3325.count-substrings-with-k-frequency-characters-i.md)|Medium (1454)|
@@ -75,7 +77,7 @@
 > * https://leetcode.com/problems/count-the-number-of-good-subarrays/description/ 1892
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/ 2210, similar problem to `2799. Count Complete Subarrays in an Array`
 
-#### 越短越合法
+### 越短越合法
 | Problem          | Difficulty |
 |------------------|------------|
 |**[713. Subarray Product Less Than K](../leetcode/713.subarray-product-less-than-k.md)**|Medium|
@@ -85,11 +87,10 @@
 > * https://leetcode.com/problems/continuous-subarrays/description/ 1940
 > * https://leetcode.com/problems/subarrays-with-k-different-integers/description/ 2210
 
-### General Sliding Window
+## General Sliding Window
 | Problem          | Difficulty |
 |------------------|------------|
 |**[239. Sliding Window Maximum](../leetcode/239.sliding-window-maximium.md)**|Hard|
-|[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
 
 > * https://leetcode.com/problems/binary-subarrays-with-sum/description/ 1591
 > * **https://leetcode.com/problems/count-number-of-nice-subarrays/description/ 1623**

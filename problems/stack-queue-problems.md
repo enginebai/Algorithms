@@ -63,30 +63,52 @@
 > * Solved: https://leetcode.com/problems/minimum-string-length-after-removing-substrings 1282 // Easy to solve by stack and learned two pointers approach, 2024/10/30
 
 ### Monotonic Stack
+#### Basic
 | Problem          | Difficulty |
 |------------------|------------|
+|**[739. Daily Temperatures](../leetcode/739.daily-temperatures.md)**|Medium|
 |**[496. Next Greater Element I](../leetcode/496.next-greater-element-i.md)**|Easy|
 |[503. Next Greater Element II](../leetcode/503.next-greater-element-ii.md)|Medium|
-|**[739. Daily Temperatures](../leetcode/739.daily-temperatures.md)**|Medium|
 |[901. Online Stock Span](../leetcode/901.online-stock-span.md)|Medium (1709)|
-|@@[402. Remove K Digits](../leetcode/402.remove-k-digits.md)|Medium (1800)|
-|**[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)**|Hard|
-|[907. Sum of Subarray Minimums](../leetcode/907.sum-of-subarray-minimums.md)|Medium (1976)|
-|[2104. Sum of Subarray Ranges](../leetcode/2104.sum-of-subarray-ranges.md)|Medium (2000)|
-|[316. Remove Duplicate Letters](../leetcode/316.remove-duplicate-letters.md)|Medium (2184?)|
-|**[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)**|Hard|
-|[2866. Beautiful Towers II](../leetcode/2866.beautiful-towers-ii.md)|Medium (2071)|
 
-> TODO: Update problems from [单调栈](https://huxulm.github.io/lc-rating/list/monotonic_stack)
 > * https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/description/ 1212
+> * https://leetcode.com/problems/car-fleet/description/ 1678
+
+#### Advanced (Optional)
+| Problem          | Difficulty |
+|------------------|------------|
+
 > * https://leetcode.com/problems/next-greater-node-in-linked-list/ 1570
 > * https://leetcode.com/problems/maximum-width-ramp/description/ 1607
-> * https://leetcode.com/problems/find-the-most-competitive-subsequence/description/ 1802
 > * https://leetcode.com/problems/longest-well-performing-interval/description/ 1908
-> * https://leetcode.com/problems/maximum-score-of-a-good-subarray/description/ 1945
 > * **https://leetcode.com/problems/132-pattern/** 2000
+> * TODO: [2866. Beautiful Towers II](../leetcode/2866.beautiful-towers-ii.md) 2071
+> ----
+
+#### Rectangle
+| Problem          | Difficulty |
+|------------------|------------|
+|**[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)**|Hard|
+|**[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)**|Hard|
+|**[85. Maximal Rectangle](../leetcode/85.maximal-rectangle.md)**|Hard|
+
+> * https://leetcode.com/problems/maximum-score-of-a-good-subarray/description/ 1945
+
+#### Contributions
+| Problem          | Difficulty |
+|------------------|------------|
+|[907. Sum of Subarray Minimums](../leetcode/907.sum-of-subarray-minimums.md)|Medium (1976)|
+|[2104. Sum of Subarray Ranges](../leetcode/2104.sum-of-subarray-ranges.md)|Medium (2000)|
+
 > * https://leetcode.com/problems/maximum-subarray-min-product/description/ 2051
-> * https://leetcode.com/problems/maximal-rectangle/description/ h
+
+#### Lexicographical
+| Problem          | Difficulty |
+|------------------|------------|
+|**[402. Remove K Digits](../leetcode/402.remove-k-digits.md)**|Medium (1800)|
+|[316. Remove Duplicate Letters](../leetcode/316.remove-duplicate-letters.md)|Medium (2184?)|
+
+> * https://leetcode.com/problems/find-the-most-competitive-subsequence/description/ 1802
 
 ### Queue Basics
 | Problem          | Difficulty |

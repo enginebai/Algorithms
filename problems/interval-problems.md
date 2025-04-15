@@ -1,6 +1,8 @@
-## Intervals
+# Intervals
 
-### Line Sweep 一维差分（扫描线）
+* [Study guidelines](https://leetcode.com/discuss/study-guide/2166045/)
+
+## Line Sweep 一维差分（扫描线）
 | Problem          | Difficulty |
 |------------------|------------|
 |**[1094. Car Pooling](../leetcode/1094.car-pooling.md)**|Medium (1441)|
@@ -23,7 +25,7 @@
 > * Solved: https://leetcode.com/problems/maximum-population-year/description/ 1370
 > * Solved: https://leetcode.com/problems/corporate-flight-bookings/description/ 1569
 
-### Interval
+## Interval
 | Problem          | Difficulty |
 |------------------|------------|
 |**[56. Merge Intervals](../leetcode/56.merge-intervals.md)**|Medium|
@@ -35,7 +37,7 @@
 > * TODO: [56. Merge Intervals](../leetcode/56.merge-intervals.md) to be solved by [line sweep](https://leetcode.com/problems/merge-intervals/submissions/1582918717)
 > * https://leetcode.com/problems/count-days-without-meetings/description/ 1483
 > * https://leetcode.com/problems/find-right-interval/description/
-
+> ---
 > * **https://leetcode.com/problems/my-calendar-ii/description/** m, at most one conflict
 > * **https://leetcode.com/problems/my-calendar-iii/description/** h, return most frequent overlap, similar to [253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)
 > * **https://leetcode.com/problems/meeting-rooms-iii/** h (Premium)
@@ -43,8 +45,8 @@
 > ----
 > * Solved: https://leetcode.com/problems/count-ways-to-group-overlapping-ranges/description/ 1632
 
-### Interval Greedy
-#### 2.1 不相交区间
+## Greedy - Interval
+### 2.1 不相交区间
 
 > Given a collections of intervals, find the maximum number of intervals that are non-overlapping.
 
@@ -59,7 +61,7 @@
 
 > * My contest https://leetcode.com/problems/select-k-disjoint-special-substrings/description/ 2220
 
-#### 2.2 区间分组
+### 2.2 区间分组
 
 > Given a collections of intervals, find the minimum number of groups that can be formed by the intervals.
 
@@ -68,7 +70,7 @@
 |**[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)**|Premium|
 |[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
 
-#### 2.3 区间选点
+### 2.3 区间选点
 
 > Given a collections of intervals, find the minimum number of points that can be covered by the intervals.
 
@@ -76,7 +78,7 @@
 |------------------|------------|
 |**[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)**|Medium|
 
-#### 2.4 区间覆盖
+### 2.4 区间覆盖
 
 > Given a collections of intervals, find the minimum number of intervals that can be covered by the intervals.
 
@@ -89,23 +91,19 @@
 ### 其他区间贪心
 | Problem          | Difficulty |
 |------------------|------------|
-> * https://leetcode.com/problems/remove-covered-intervals/description/ 1375
 > * https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/ 2015
 
 ----
 > TODO: Update problem listing from https://huxulm.github.io/lc-rating/list/data_structure `八、树状数组和线段树`, most of problems are beyond my rating now.
 
-### 树状数组
+## 树状数组
 | Problem          | Difficulty |
 |------------------|------------|
  
-### 线段树
+## 线段树
 | Problem          | Difficulty |
 |------------------|------------|
 
 > * https://leetcode.cn/problems/my-calendar-i/solutions/1646079/by-lfool-xvpv/
 > * https://leetcode.cn/problems/my-calendar-i/solutions/1646264/by-jiang-hui-4-pyfn/
 > * **My contest: https://leetcode.com/problems/fruits-into-baskets-iii/description/** 【线段树：为什么要这样设计？【力扣周赛 440】-哔哩哔哩】 https://b23.tv/NyYEU6j
-
-### Resources
-* ✅ [Study guidelines](https://leetcode.com/discuss/study-guide/2166045/)

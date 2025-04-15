@@ -14,8 +14,6 @@
 
 > * Solved: https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/description/ 1151
 > * Solved: https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/description/ 1310
-> * **https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/** m
-> * https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/ 1782
 
 ### Remove
 | Problem          | Difficulty |
@@ -42,6 +40,7 @@
 |@@**[24. Swap Nodes in Pairs](../leetcode/24.swap-nodes-in-pairs.md)**|Medium|
 
 > * Solved, to note: **https://leetcode.com/problems/reverse-nodes-in-k-group/description/** h
+> * https://leetcode.com/problems/reverse-nodes-in-even-length-groups/description/ 1685
 
 ### Two Pointers
 | Problem          | Difficulty |
@@ -84,6 +83,9 @@
 |**[146. LRU Cache](../leetcode/146.lru-cache.md)**|Medium|
 
 > * **https://leetcode.com/problems/linked-list-random-node/description/** m
+> * **https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/** m
+> * https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/description/ 1571
+> * https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/ 1782
 > ----
 > * **https://leetcode.com/problems/lfu-cache/description/** hard
 > * https://leetcode.com/problems/all-oone-data-structure/description/ hard

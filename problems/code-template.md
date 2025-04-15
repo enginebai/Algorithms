@@ -333,18 +333,32 @@ fun reverseArray(nums: IntArray, start: Int, end: Int) {
 
 ## Diagonal Traversal
 > Works, but need to understand how it works.
+The selected code iterates over the bottom-left diagonals of a square grid (2D array) and collects the elements into a list. Here's a breakdown:  
+1. Outer Loop (`for (k in 0 until n)`):  
+    * `k` represents the diagonal offset from the main diagonal (starting from the top-left corner).
+    * For example, when `k = 0`, it processes the main diagonal. When `k = 1`, it processes the diagonal below the main diagonal, and so on.
+2. Inner Loop (`for (i in k until n)`):  
+    * `i` iterates over the rows starting from the diagonal offset `k` to the last row.
+3. Column Index Calculation (`val j = i - k`):  
+    * For each row `i`, the column index `j` is calculated as `i - k`. This ensures that the element at `(i, j)` lies on the current diagonal.
+4. Adding Elements to the List (`diagonal.add(grid[i][j])`):  
+    * The element at position `(i, j)` in the grid is added to the diagonal list.
+
 ```kotlin
 fun diagonalTraversal(grid: Array<IntArray>) {
+    val diagonal = mutableListOf<Int>()
+    val n = grid.size
     // Traverse bottom-left diagonals
     /**
-    * 1
-    * 2 3
-    * 4 5 6
-    */ 
+     * 1
+     * 2 3
+     * 4 5 6
+     * 1 -> 3 -> 6, 2 -> 5, 4
+     */
     for (k in 0 until n) { // k represents the diagonal offset from the main diagonal
         for (i in k until n) {
             val j = i - k
-            println(grid[i][j])
+            diagonal.add(grid[i][j])
         }
     }
 
@@ -353,6 +367,7 @@ fun diagonalTraversal(grid: Array<IntArray>) {
      * 7 8 9
      *   5 6
      *     4
+     * 7 -> 6 -> 4, 8 -> 5, 9
      */
     for (k in 1 until n) { // k represents the diagonal offset from the main diagonal (starting from 1)
         for (j in k until n) {
