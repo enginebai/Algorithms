@@ -38,14 +38,15 @@
 |**[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)**|Easy|
 |**[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)**|Medium|
 |@@**[24. Swap Nodes in Pairs](../leetcode/24.swap-nodes-in-pairs.md)**|Medium|
+|[25. Reverse Nodes in k-Group](../leetcode/25.reverse-nodes-in-k-group.md)|Hard|
 
-> * Solved, to note: **https://leetcode.com/problems/reverse-nodes-in-k-group/description/** h
 > * https://leetcode.com/problems/reverse-nodes-in-even-length-groups/description/ 1685
 
 ### Two Pointers
 | Problem          | Difficulty |
 |------------------|------------|
 |**[19. Remove Nth Node From End of List](../leetcode/19.remove-nth-node-from-end-of-list.md)**|Medium|
+|[61. Rotate List](../leetcode/61.rotate-list.md)|Medium|
 |@@[143. Reorder List](../leetcode/143.reorder-list.md)|Medium|
 |**[141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)**|Easy|
 |[142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)|Medium|
@@ -53,7 +54,6 @@
 |[86. Partition List](../leetcode/86.partition-list.md)|Medium|
 |[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
 
-> * **https://leetcode.com/problems/rotate-list/description/** m
 > * https://leetcode.com/problems/swapping-nodes-in-a-linked-list/description/ 1386
 
 ### Middle
@@ -81,11 +81,10 @@
 |[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium|
 |**[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)**|Medium|
 |**[146. LRU Cache](../leetcode/146.lru-cache.md)**|Medium|
+|[430. Flatten a Multilevel Doubly Linked List](../leetcode/430.flatten-a-multilevel-doubly-linked-list.md)|Medium|
+|[382. Linked List Random Node](../leetcode/382.linked-list-random-node.md)|Medium|
+|[1171. Remove Zero Sum Consecutive Nodes from Linked List](../leetcode/1171.remove-zero-sum-consecutive-nodes-from-linked-list.md)|Medium (1782)|
 
-> * **https://leetcode.com/problems/linked-list-random-node/description/** m
-> * **https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/** m
-> * https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/description/ 1571
-> * https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/ 1782
 > ----
 > * **https://leetcode.com/problems/lfu-cache/description/** hard
 > * https://leetcode.com/problems/all-oone-data-structure/description/ hard
