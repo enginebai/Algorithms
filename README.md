@@ -1,31 +1,35 @@
 Data Structures & Algorithms
 ========
 
-This project offers a curated collection of notes and resources covering fundamental and widely used data structures and algorithms. It is designed to help software engineers to prepare for coding interviews and learn more about computer science. For each topic, we provide a set of LeetCode problems and their solutions to practice after studying. You can follow the study path from beginner to intermediate level from the roadmap below, making your learning journey both structured and enjoyable. Happy coding!!
+![Cover](./media/cover.png)
+This project offers a curated collection of notes and resources covering fundamental and widely used data structures and algorithms. It is designed to help software engineers to prepare for coding interviews and learn more about the fundamentals of computer science. For each topic, we provide a set of LeetCode problems and their solutions to practice after studying. You can follow the study path from beginner to intermediate level from the roadmap below, making your learning journey both structured and enjoyable. Happy coding!!
 
 ## Study Topics
 - [Introduction](./topics/introduction.md)
 - [Complexity](./topics/complexity.md)
-- [Array & String](./topics/array.md)
+- [Array & String](./topics/array.md) 
+    - [Array](./problems/array-problems.md)
+    - [String](./problems/string-problems.md)
+    - [Two Pointers](./problems/two-pointers-problems.md)
+    - [Sliding Window](./problems/sliding-window-problems.md)
 - [Sorting](./topics/sorting.md)
-- [Hash Table](./topics/hash-table.md)
-- [Binary Search](./topics/binary-search.md)
-- [Linked List](./topics/linked-list.md)
-- [Stack & Queue](./topics/stack-queue.md)
+- [Hash Table](./topics/hash-table.md) ([Problems](./problems/hash-table-problems.md))
+- [Binary Search](./topics/binary-search.md) ([Problems](./problems/binary-search-problems.md))
+- [Linked List](./topics/linked-list.md) ([Problems](./problems/linked-list-problems.md))
+- [Stack & Queue](./topics/stack-queue.md) ([Problems](./problems/stack-queue-problems.md))
 - [Tree](./topics/tree.md)
-- [Heap & Priority Queue](./topics/heap.md)
-- [Graph](./topics/graph.md)
-- [Recursion](./topics/recursion.md)
+    - [Tree](./problems/tree-problems.md)
+    - [Binary Search Tree](./problems/bst-problems.md)
+- [Heap & Priority Queue](./topics/heap.md) ([Problems](./problems/heap-problems.md))
+- [Graph](./topics/graph.md) ([Problems](./problems/graph-problems.md))
 - [Shortest Path](./topics/shortest-path.md)
-- [Dynamic Programming](./topics/dynamic-programming.md)
-- [Greedy](./topics/greedy.md)
-- [Interval](./topics/interval.md)
-- [Backtracking](./topics/backtracking.md)
-
-## Problems & Solutions
-- [LeetCode Problem Listing](./problems/README.md)
+- [Recursion](./topics/recursion.md)
+- [Dynamic Programming](./topics/dynamic-programming.md) ([Problems](./problems/dynamic-programming-problems.md))
+- [Greedy](./topics/greedy.md) ([Problems](./problems/greedy-problems.md))
+- [Interval](./topics/interval.md) ([Problems](./problems/interval-problems.md))
+- [Design](./problems/design-problems.md)
+- [Backtracking](./topics/backtracking.md) ([Problems](./problems/backtracking-problems.md))
 - [Mistakes Notebooks](./problems/mistakes.md)
-- [Problem Solving Techniques](./topics/problem-solving.md)
 
 ## Roadmap
 This study path designed to guide you from a beginner to an intermediate level, covering the essential topics in this project. It's important to note that certain topics are prerequisites for others. For example, you should master "graph" before studying "shortest path".
