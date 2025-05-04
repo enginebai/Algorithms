@@ -1,0 +1,73 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## Note Formats
+There are some rules to follow for the format of the notes:
+- Explicitly mention **using syntax highlighting** in code blocks:
+```kotlin
+// Used in solutions
+```
+
+```js
+// Used in examples, test cases, etc.
+```
+- Enclose with backticks (`) for:
+    - Any symbol or variable name (e.g., `N`, `root`, `next`, `child`)
+    - Function names (e.g., `flatten`, `dfs`)
+    - Complexity notations (e.g., `O(N)` where `N` is...)
+    - Technical terms when referenced in text
+    - File names or paths
+- Before showing code, first summarize the key idea in 1-2 sentences. I want to train myself to think at the "idea" level, not just the "implementation" level.
+- For the problemreference, please search the existing note files in this project, and link to them in the similar problems section.
+- There are some good examples for format and structure of the notes:
+    - @923.3sum-with-multiplicity.md
+    - @2779.maximum-beauty-of-an-array-after-applying-operation.md
+
+### Structure
+Please follow the structure of the notes below:
+
+```md
+# @Problem Title
+
+## Hints
+
+## Breakdowns
+
+> 1. ...
+
+Solution ...
+
+> 2. ...
+
+Solution ...
+
+## Key Insights
+
+...
+
+## $APPROACH_NAME$ (Please replace with the name of the approach, such as `Binary Search`, `DFS` ...etc.)
+
+// Code here
+
+- **Time Complexity**: ...
+- **Space Complexity**: ...
+
+## $APPROACH_NAME 2$ (If there are multiple approaches, please replace with the name of the approach as same as above)
+
+// Code here
+
+- **Time Complexity**: ...
+- **Space Complexity**: ...
+
+## Edge Cases
+
+## Pitfalls
+
+## Similar or Follow-up Problems
+
+- @Problem Title
+- @Problem Title
+```
+

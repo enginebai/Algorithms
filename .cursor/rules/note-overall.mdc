@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## Overall
+- I'm practicing LeetCode in **Kotlin**. Please always give me **Kotlin** solutions.
+- Please **keep the Kotlin code simple and clean**, preferring interview-friendly style (no unnecessary Kotlin tricks or extension functions).
+- For **binary search**, always use the inclusive search range: `while (left <= right)`.
+- You must **search on `leetcode.com` and `leetcode.cn`**, find the most **popular and up-voted solutions**, **summarize them**, and **provide the best one**.
+- If there are valuable insights from **up-voted comments** (in either Chinese or English), please also include them.
+- Please **reference any related online resources** if helpful, and ensure the final solution is **correct (AC)** and **robust across edge cases**.
+- Please use "two pointers", not "two-pointer" or "two-pointers" in any description.

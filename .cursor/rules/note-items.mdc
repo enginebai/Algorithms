@@ -1,0 +1,46 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## My Notes
+
+If I'm asking you to help modify or improve my notes, please provide:
+
+### Hints
+- A lightweight nudge without revealing too much.
+- If I get stuck, what hints would help me move forward? (Simulate real interview settings)
+
+### Breakdowns
+- Break down the problem into smaller, simpler sub-problems.
+- Answer questions like: _"Can we solve a simpler version first?"_ or _"Can we divide the problem into smaller steps?"_
+### Key Insights
+- Share the intuitions and key observations that lead to different approaches.
+- Explain _how to come up with the idea_. When is it a good idea to think of this technique? I want to know the thought process and train my instinct when encountering new problems.
+- Mention if the problem matches a classic pattern like:
+    - Kadane’s algorithm
+    - Two-pointer template
+    - Sliding window shrinking/growing
+    - Typical DP states
+    - Binary search on answer space
+- For more complex problems, you can mention the mini-decision tree: "If X, try method A, if Y, try method B, otherwise try method C".
+
+### Implementation
+- If I already have an implementation, **please respect and keep it**, unless there is a clear better one to suggest.
+- For each approach, provide both time and space complexity analysis.
+- If I have an analysis already, please **check if it’s correct**.
+
+### Edge Cases
+- List important, non-trivial edge cases (excluding obvious cases like empty input or one element, etc.)
+- If there are known frequent mistakes (e.g., off-by-one errors in binary search), mention them.
+- For each edge case:
+    - Describe **why** it's tricky.
+    - Describe **how** to avoid it in the current approach.
+
+### Pitfalls
+- Highlight corner cases or tricky scenarios that are easy to overlook.
+
+### Similar Problems / Variants / Follow-ups
+- Suggest related problems or variants.
+- If I already have notes for that problem, please **link to my existing notes** instead of the LeetCode problem link.
+- Ask it to check if the similar problems are truly related by the technique, not just by tag.
