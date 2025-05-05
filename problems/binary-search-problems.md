@@ -10,12 +10,13 @@
 
 > * https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/ 1387
 > * https://leetcode.com/problems/range-frequency-queries/description/ 1702
-> * https://leetcode.com/problems/count-the-number-of-fair-pairs/description/ 1720
 > * https://leetcode.com/problems/most-beautiful-item-for-each-query/description/ 1724
 > * https://leetcode.com/problems/minimum-absolute-sum-difference/description/ 1934
 > * Solved: https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/description/ 1195
 
 ## Search the First/Last Position
+> Or find the lower/upper bound of a target.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |**[278. First Bad Version](../leetcode/278.first-bad-version.md)**|Easy|
@@ -23,6 +24,8 @@
 |**[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)**|Medium|
 |@@[475. Heaters](../leetcode/475.heaters.md)|Medium|
 |@@[611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium|
+|[1855. Maximum Distance Between a Pair of Values](../leetcode/1855.maximum-distance-between-a-pair-of-values.md)|Medium (1514)|
+|[2563. Count the Number of Fair Pairs](../leetcode/2563.count-the-number-of-fair-pairs.md)|Medium (1720)|
 
 ## Search on Value
 ### Minimum Value
