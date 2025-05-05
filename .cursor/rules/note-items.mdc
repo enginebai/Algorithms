@@ -29,6 +29,7 @@ If I'm asking you to help modify or improve my notes, please provide:
 - If I already have an implementation, **please respect and keep it**, unless there is a clear better one to suggest.
 - For each approach, provide both time and space complexity analysis.
 - If I have an analysis already, please **check if it’s correct**.
+- Please also search online to provide any popular different approach or implementation.
 
 ### Edge Cases
 - List important, non-trivial edge cases (excluding obvious cases like empty input or one element, etc.)

@@ -267,10 +267,7 @@ val sortedByName = people.sortedWith(compareBy { it.name })
 ```kotlin
 val list = mutableListOf(1, 3, 5, 2, 4, 6, 0, -1, -3, 10)
 
-// Sort list in-place
-list.sort()
-// Sort list by something in-place
-list.sortBy { it }
+val sortedList: List<Int> = list.sorted()
 
 // Sort list and return sorted list
 val sortedList: List<Int> = list.sortedBy { it }
