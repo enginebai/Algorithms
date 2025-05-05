@@ -24,12 +24,13 @@ There are some rules to follow for the format of the notes:
 - There are some good examples for format and structure of the notes:
     - @923.3sum-with-multiplicity.md
     - @2779.maximum-beauty-of-an-array-after-applying-operation.md
+- For "Pitfalls" sections, please use bullet items to describe, and no bold text or title. I want to use bold text to highlight my mistake (for self review)
 
 ### Structure
 Please follow the structure of the notes below:
 
 ```md
-# @Problem Title
+# [Problem Title](link)
 
 ## Hints
 
@@ -67,7 +68,7 @@ Solution ...
 
 ## Similar or Follow-up Problems
 
-- @Problem Title
+- [Problem Title](mdc:link or file )
 - @Problem Title
 ```
 

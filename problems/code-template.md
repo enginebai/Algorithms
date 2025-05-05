@@ -35,11 +35,13 @@ private fun String.isPal(): Boolean {
     }
     return true
 }
+
+val vowels = setOf('a', 'e', 'i', 'o', 'u')
 ```
 
 ## Subarray
 ### Iterate K size 
-* Brute force
+* Brute force:
 ```kotlin
 fun subarray(nums: IntArray, k: Int) {
     val n = nums.size
@@ -51,7 +53,7 @@ fun subarray(nums: IntArray, k: Int) {
     }
 }
 ```
-* Fixed window
+* Fixed window:
 ```kotlin
 // General sliding window
 val n = nums.size

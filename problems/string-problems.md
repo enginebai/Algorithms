@@ -5,7 +5,6 @@
 |[387. First Unique Character in a String](../leetcode/387.first-unique-character-in-a-string.md)|Easy|
 |[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
 |[1544. Make The String Great](../leetcode/1544.make-the-string-great.md)|Easy|
-|[392. Is Subsequence](../leetcode/392.is-subsequence.md)|Easy|
 |[792. Number of Matching Subsequences](../leetcode/792.number-of-matching-subsequences.md)|Medium|
 |[1461. Check If a String Contains All Binary Codes of Size K](../leetcode/1461.check-if-a-string-contains-all-binary-codes-of-size-k.md)|Medium (1504)|
 
