@@ -29,6 +29,8 @@
 
 ## Search on Value
 ### Minimum Value
+> This also includes minimize the maximum value.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |**[875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)**|Medium (1766)|
@@ -36,12 +38,12 @@
 |[1870. Minimum Speed to Arrive on Time](../leetcode/1870.minimum-speed-to-arrive-on-time.md)|Medium (1676)|
 |@@**[1011. Capacity To Ship Packages Within D Days](../leetcode/1011.capacity-to-ship-packages-within-d-days.md)**|Medium (1725)|
 |@@**[1482. Minimum Number of Days to Make m Bouquets](../leetcode/1482.minimum-number-of-days-to-make-m-bouquets.md)**|Medium (1945)|
-
-> * https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/description/ 1542
-> * https://leetcode.com/problems/minimum-number-of-seconds-to-make-mountain-height-zero/description/ 1694
-> * https://leetcode.com/problems/minimum-time-to-repair-cars/description/ 1915
+|[1283. Find the Smallest Divisor Given a Threshold](../leetcode/1283.find-the-smallest-divisor-given-a-threshold.md)|Medium (1542)|
+|[2594. Minimum Time to Repair Cars](../leetcode/2594.minimum-time-to-repair-cars.md)|Medium (1915)|
 
 ### Maximum Value
+> This also includes maximize the minimum value.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[2226. Maximum Candies Allocated to K Children](../leetcode/2226.maximum-candies-allocated-to-k-children.md)|Medium (1646)|
@@ -58,11 +60,11 @@
 |@@**[410. Split Array Largest Sum](../leetcode/410.split-array-largest-sum.md)**|Hard|
 |@@[2064. Minimized Maximum of Products Distributed to Any Store](../leetcode/2064.minimized-maximum-of-products-distributed-to-any-store.md)|Medium (1886)|
 |@@[1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)|Medium (1947)|
+|[2439. Minimize Maximum of Array](../leetcode/2439.minimize-maximum-of-array.md)|Medium (1965)|
+|[1760. Minimum Limit of Balls in a Bag](../leetcode/1760.minimum-limit-of-balls-in-a-bag.md)|Medium (1940)|
+|[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium (2081)|
 
-> * https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/description/ 1940
-> * https://leetcode.com/problems/minimize-maximum-of-array/description/ 1965
 > * https://leetcode.com/problems/swim-in-rising-water/description/ 2096, similar to [1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)
-> * [2560. House Robber IV](../leetcode/2560.house-robber-iv.md) 2081
 > * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/description/ 2155
 
 ### Maximize the Minimum Value
@@ -80,6 +82,7 @@
 |@@**[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)**|Medium|
 
 > Some can be solved by heap. Consider to merge this section with heap problems.
+> * https://leetcode.com/problems/kth-missing-positive-number/description/ e
 > * https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/description/ h
 > * https://leetcode.com/problems/find-k-th-smallest-pair-distance/description/
 > * https://leetcode.com/problems/nth-magical-number/description/ 1897
@@ -115,8 +118,6 @@
 
 > * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
 > * https://leetcode.com/problems/peak-index-in-a-mountain-array/description/ m
-> * https://leetcode.com/problems/find-a-peak-element-ii/description/ m
-> * https://leetcode.com/problems/kth-missing-positive-number/description/ e
 > * **https://leetcode.com/problems/median-of-two-sorted-arrays/description/**
 > * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/ h
 
