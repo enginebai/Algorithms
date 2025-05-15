@@ -106,6 +106,18 @@ Given sorted array (might contain duplicates), we can use the same approach ment
 ## Variants
 > TODO: Study [Binary Search 101](https://leetcode.com/problems/binary-search/solutions/423162/Binary-Search-101-The-Ultimate-Binary-Search-Handbook/)
 
+Recommended template from [Lee](https://leetcode.com/problems/house-robber-iv/solutions/3143697/java-c-python-binary-search-o-1-space):
+```js
+while (left < right) {
+    int mid = (left + right) / 2;
+    if (condition)
+        right = mid;
+    else
+        left = mid + 1;
+}
+return left;
+```
+
 ```kotlin
 fun binarySearch(A: IntArray, target: Int): Int {
     var left = 0

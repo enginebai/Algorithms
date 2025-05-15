@@ -29,48 +29,42 @@
 
 ## Search on Value
 ### Minimum Value
+> - "Search the First/Last Position" is the prerequisite of "Search on Value".
+> - This also includes "minimize the maximum value". I order these problems by similarity, not by difficulty.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |**[875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)**|Medium (1766)|
-|@@**[2187. Minimum Time to Complete Trips](../leetcode/2187.minimum-time-to-complete-trips.md)**|Medium (1640)|
-|[1870. Minimum Speed to Arrive on Time](../leetcode/1870.minimum-speed-to-arrive-on-time.md)|Medium (1676)|
 |@@**[1011. Capacity To Ship Packages Within D Days](../leetcode/1011.capacity-to-ship-packages-within-d-days.md)**|Medium (1725)|
+|@@**[410. Split Array Largest Sum](../leetcode/410.split-array-largest-sum.md)**|Hard|
+|[1760. Minimum Limit of Balls in a Bag](../leetcode/1760.minimum-limit-of-balls-in-a-bag.md)|Medium (1940)|
+|@@**[2187. Minimum Time to Complete Trips](../leetcode/2187.minimum-time-to-complete-trips.md)**|Medium (1640)|
+|[2594. Minimum Time to Repair Cars](../leetcode/2594.minimum-time-to-repair-cars.md)|Medium (1915)|
+|[1283. Find the Smallest Divisor Given a Threshold](../leetcode/1283.find-the-smallest-divisor-given-a-threshold.md)|Medium (1542)|
+|@@[2064. Minimized Maximum of Products Distributed to Any Store](../leetcode/2064.minimized-maximum-of-products-distributed-to-any-store.md)|Medium (1886)|
+|[1870. Minimum Speed to Arrive on Time](../leetcode/1870.minimum-speed-to-arrive-on-time.md)|Medium (1676)|
 |@@**[1482. Minimum Number of Days to Make m Bouquets](../leetcode/1482.minimum-number-of-days-to-make-m-bouquets.md)**|Medium (1945)|
+|[2439. Minimize Maximum of Array](../leetcode/2439.minimize-maximum-of-array.md)|Medium (1965)|
+|[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium (2081)|
+|@@[1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)|Medium (1947)|
 
-> * https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/description/ 1542
-> * https://leetcode.com/problems/minimum-number-of-seconds-to-make-mountain-height-zero/description/ 1694
-> * https://leetcode.com/problems/minimum-time-to-repair-cars/description/ 1915
+> * https://leetcode.com/problems/swim-in-rising-water/description/ 2096, similar to [1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)
+> * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/description/ 2155
 
 ### Maximum Value
+> This also includes maximize the minimum value.
+
 | Problem          | Difficulty |
 |------------------|------------|
 |@@[2226. Maximum Candies Allocated to K Children](../leetcode/2226.maximum-candies-allocated-to-k-children.md)|Medium (1646)|
+|@@[1552. Magnetic Force Between Two Balls](../leetcode/1552.magnetic-force-between-two-balls.md)|Medium (1919)|
 
+> * My contest https://leetcode.com/problems/maximize-score-of-numbers-in-ranges/description/ 1768
 > * https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-ii/description/ 1773
 > * https://leetcode.com/problems/find-the-maximum-number-of-marked-indices/description/ 1843
 > * https://leetcode.com/problems/maximum-number-of-removable-characters/description/ 1912
 > * https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/description/ 1929
 > * https://leetcode.com/problems/maximum-number-of-alloys/description/ 1981
-
-### Minimize the Maximum Value
-| Problem          | Difficulty |
-|------------------|------------|
-|@@**[410. Split Array Largest Sum](../leetcode/410.split-array-largest-sum.md)**|Hard|
-|@@[2064. Minimized Maximum of Products Distributed to Any Store](../leetcode/2064.minimized-maximum-of-products-distributed-to-any-store.md)|Medium (1886)|
-|@@[1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)|Medium (1947)|
-
-> * https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/description/ 1940
-> * https://leetcode.com/problems/minimize-maximum-of-array/description/ 1965
-> * https://leetcode.com/problems/swim-in-rising-water/description/ 2096, similar to [1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)
-> * [2560. House Robber IV](../leetcode/2560.house-robber-iv.md) 2081
-> * https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/description/ 2155
-
-### Maximize the Minimum Value
-| Problem          | Difficulty |
-|------------------|------------|
-|@@[1552. Magnetic Force Between Two Balls](../leetcode/1552.magnetic-force-between-two-balls.md)|Medium (1919)|
-
-> * My contest https://leetcode.com/problems/maximize-score-of-numbers-in-ranges/description/ 1768
 > * https://leetcode.com/problems/find-the-safest-path-in-a-grid/description/ 2153
 
 ### Kth Smallest/Largest Element
@@ -80,6 +74,7 @@
 |@@**[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)**|Medium|
 
 > Some can be solved by heap. Consider to merge this section with heap problems.
+> * https://leetcode.com/problems/kth-missing-positive-number/description/ e
 > * https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/description/ h
 > * https://leetcode.com/problems/find-k-th-smallest-pair-distance/description/
 > * https://leetcode.com/problems/nth-magical-number/description/ 1897
@@ -101,6 +96,16 @@
 |**[981. Time Based Key-Value Store](../leetcode/981.time-based-key-value-store.md)**|Medium|
 |@@**[1146. Snapshot Array](../leetcode/1146.snapshot-array.md)**|Medium (1770)|
 
+## Rotated Array
+| Problem          | Difficulty |
+|------------------|------------|
+|**[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)**|Medium|
+|**[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)**|Medium|
+
+> * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
+> * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/ h
+
+
 ## Other
 | Problem          | Difficulty |
 |------------------|------------|
@@ -110,15 +115,9 @@
 |[1095. Find in Mountain Array](../leetcode/1095.find-in-mountain-array.md)|Hard (1827)|
 |**[287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)**|Medium|
 |[540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium|
-|**[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)**|Medium|
-|**[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)**|Medium|
 
-> * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 8k m
 > * https://leetcode.com/problems/peak-index-in-a-mountain-array/description/ m
-> * https://leetcode.com/problems/find-a-peak-element-ii/description/ m
-> * https://leetcode.com/problems/kth-missing-positive-number/description/ e
 > * **https://leetcode.com/problems/median-of-two-sorted-arrays/description/**
-> * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/ h
 
 ## Explanation
 * [34. Find First and Last Position of Element in Sorted Array](https://www.youtube.com/watch?v=sX5IbSSNKXI)

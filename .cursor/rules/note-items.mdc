@@ -3,9 +3,9 @@ description:
 globs: 
 alwaysApply: true
 ---
-## My Notes
+## Note Items
 
-If I'm asking you to help modify or improve my notes, please provide:
+If I'm asking you to help modify or improve my notes, please provide the following sections and notes:
 
 ### Hints
 - A lightweight nudge without revealing too much.
@@ -14,6 +14,7 @@ If I'm asking you to help modify or improve my notes, please provide:
 ### Breakdowns
 - Break down the problem into smaller, simpler sub-problems.
 - Answer questions like: _"Can we solve a simpler version first?"_ or _"Can we divide the problem into smaller steps?"_
+
 ### Key Insights
 - Share the intuitions and key observations that lead to different approaches.
 - Explain _how to come up with the idea_. When is it a good idea to think of this technique? I want to know the thought process and train my instinct when encountering new problems.

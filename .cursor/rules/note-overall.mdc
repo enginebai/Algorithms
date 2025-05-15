@@ -3,12 +3,27 @@ description:
 globs: 
 alwaysApply: true
 ---
-## Overall
+## Overall Rules for Notes
 - I'm practicing LeetCode in **Kotlin**. Please always give me **Kotlin** solutions.
 - Please **keep the Kotlin code simple and clean**, preferring interview-friendly style (no unnecessary Kotlin tricks or extension functions).
-- For **binary search**, always use the inclusive search range: `while (left <= right)`.
 - You must **search on `leetcode.com` and `leetcode.cn`** for that problem, find the most **popular and up-voted solutions**, **summarize them**, and **provide the best one**, if there are multiple popular solutions, please also include them. (At most 3 solutions)
-- If there are valuable insights from **up-voted comments** (in either Chinese or English), please also include them.
 - Please **reference any related online resources** if helpful, and ensure the final solution is **correct (AC)** and **robust across edge cases**.
+- If there are valuable insights from **up-voted comments** (in either Chinese or English) during the search, please also include them.
 - Please use the word "two pointers", not "two-pointer" or "two-pointers" in any description.
 - If the descriptions are sentence, please add `.` at the end of sentence, especially for single sentence.
+
+## Existing Note (If Exists)
+- If I have some existing notes / implementations / WA, please preserve it in a clearly labeled "My Original Notes" section at the end of the file. Then also provide your implementation with comments or explain (from your search result above) 
+- For the existing notes reference, please use file link `@problem-number.@problem-slug.md`, don't prefix `mdc:leetcode/`, and please verify to ensure that file exists from the link reference.
+- For the implementation, don't write the line comment: `// Used in solutions`.
+
+> The following sections is topic specific, please always follow if the problem or approach fits the topic
+
+## Binary Search
+- For **binary search**, always use the inclusive search range: `while (left <= right)`.
+- Please always elaborate further the key intuition, explain how to observe/analyze/breakdown the problem and figure out that we can solve this problem by binary search approach.
+- For the problem type: "binary search on value", please always provide the following items in `Key Insights` section:
+    - Monotonicity
+    - Lower bound
+    - Upper bound
+    - Feasibility
