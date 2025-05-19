@@ -78,8 +78,9 @@
 ## Two Heaps
 | Problem          | Difficulty |
 |------------------|------------|
+|[295. Find Median from Data Stream](../leetcode/295.find-median-from-data-stream.md)|Hard|
+
 > * **https://leetcode.com/problems/kth-largest-element-in-a-stream/** e
-> * **https://leetcode.com/problems/find-median-from-data-stream/description/** h
 > * **https://leetcode.com/problems/sliding-window-median/description/** h
 
 ## Lazy Deletion

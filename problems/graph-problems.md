@@ -14,26 +14,31 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[841. Keys and Rooms](../leetcode/841.keys-and-rooms.md)|Medium (1412)|
+|[1306. Jump Game III](../leetcode/1306.jump-game-iii.md)|Medium (1396)|
 |@@**[133. Clone Graph](../leetcode/133.clone-graph.md)**|Medium|
 |**[399. Evaluate Division](../leetcode/399.evaluate-division.md)**|Medium|
 |@@[2192. All Ancestors of a Node in a Directed Acyclic Graph](../leetcode/2192.all-ancestors-of-a-node-in-a-directed-acyclic-graph.md)|Medium (1787)|
 |[2101. Detonate the Maximum Bombs](../leetcode/2101.detonate-the-maximum-bombs.md)|Medium (1880)|
+|[721. Accounts Merge](../leetcode/721.accounts-merge.md)|Medium|
+|[2092. Find All People With Secret](../leetcode/2092.find-all-people-with-secret.md)|Medium (2003)|
 
 > * **https://leetcode.com/problems/number-of-provinces/description/**
-> * **https://leetcode.com/problems/accounts-merge/**
-> * https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/description/ 1489
+> * Solved, https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/description/ 1489
 > * Solved, https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/description/ 1512
 > * https://leetcode.com/problems/number-of-enclaves/submissions/ 1615
 > * https://leetcode.com/problems/maximum-number-of-moves-in-a-grid/description/ 1625
 > * https://leetcode.com/problems/remove-methods-from-project/description/ 1710
-> * https://leetcode.com/problems/flower-planting-with-no-adjacent/description/ 1712
 > * https://leetcode.com/problems/count-the-number-of-complete-components/description/ 1769
 > * https://leetcode.com/problems/maximize-amount-after-two-days-of-conversions/description/ 1787
-> * https://leetcode.com/problems/find-all-people-with-secret/description/ 2003
->
-> Poor problem description:
-> * [2492. Minimum Score of a Path Between Two Cities](../leetcode/2492.minimum-score-of-a-path-between-two-cities.md)
-> * https://leetcode.com/problems/minimize-malware-spread/description/ 1868
+
+### Tree-like
+| Problem          | Difficulty |
+|------------------|------------|
+|**[1443. Minimum Time to Collect All Apples in a Tree](../leetcode/1443.minimum-time-to-collect-all-apples-in-a-tree.md)**|Medium (1682)|
+|[1530. Number of Good Leaf Nodes Pairs](../leetcode/1530.number-of-good-leaf-nodes-pairs.md)|Medium (1745)|
+|[1519. Number of Nodes in the Sub-Tree With the Same Label](../leetcode/1519.number-of-nodes-in-the-sub-tree-with-the-same-label.md)|Medium (1809)|
+
+> * My contest: https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/ 2011
 
 ## Connected Components
 | Problem          | Difficulty |
@@ -56,14 +61,12 @@
 |[1971. Find if Path Exists in Graph](../leetcode/1971.find-if-path-exists-in-graph.md)|Easy|
 |[797. All Paths From Source to Target](../leetcode/797.all-paths-from-source-to-target.md)|Medium (1383)|
 
-## Tree-like
+## Bipartite
 | Problem          | Difficulty |
 |------------------|------------|
-|**[1443. Minimum Time to Collect All Apples in a Tree](../leetcode/1443.minimum-time-to-collect-all-apples-in-a-tree.md)**|Medium (1682)|
-|[1530. Number of Good Leaf Nodes Pairs](../leetcode/1530.number-of-good-leaf-nodes-pairs.md)|Medium (1745)|
-
-> * https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/description/ 1809
-> * My contest: https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/ 2011
+|**[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)**|Medium|
+|[886. Possible Bipartition](../leetcode/886.possible-bipartition.md)|Medium|
+|[1042. Flower Planting With No Adjacent](../leetcode/1042.flower-planting-with-no-adjacent.md)|Medium (1712)|
 
 ## Topological Sort
 | Problem          | Difficulty |
@@ -80,51 +83,37 @@
 > * https://leetcode.com/problems/build-a-matrix-with-conditions/description/ 1960
 > * https://leetcode.com/problems/parallel-courses-iii/ 2084
 
-## Bipartite
-| Problem          | Difficulty |
-|------------------|------------|
-|**[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)**|Medium|
-|[886. Possible Bipartition](../leetcode/886.possible-bipartition.md)|Medium|
-
 ## BFS
-| Problem          | Difficulty |
-|------------------|------------|
-|@@**[994. Rotting Oranges](../leetcode/994.rotting-orange.md)**|Medium|
-|@@**[127. Word Ladder](../leetcode/127.word-ladder.md)**|Hard|
-|[433. Minimum Genetic Mutation](../leetcode/433.minimum-genetic-mutation.md)|Medium|
-|[1926. Nearest Exit from Entrance in Maze](../leetcode/1926.nearest-exit-from-entrance-in-maze.md)|Medium (1638)|
-|[1129. Shortest Path with Alternating Colors](../leetcode/1129.shortest-path-with-alternating-colors.md)|Medium (1779)|
-|@@**[934. Shortest Bridge](../leetcode/934.shortest-bridge.md)**|Medium (1825)|
-|@@**[1293. Shortest Path in a Grid with Obstacles Elimination](../leetcode/1293.shortest-path-in-a-grid-with-obstacles-elimination.md)**|Hard (1967)|
 
 > * https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/description/ 1567
 > * https://leetcode.com/problems/get-watched-videos-by-your-friends/description/ 1652
-> * https://leetcode.com/problems/map-of-highest-peak/description/ 1782
+> * https://leetcode.com/problems/map-of-highest-peak/description/ 1782, as same as [542. 01 Matrix](../leetcode/542.01-matrix.md)
 > * https://leetcode.com/problems/minimum-sideway-jumps/description/ 1778
 > * https://leetcode.com/problems/shortest-cycle-in-a-graph/description/ 1904
 > * **https://leetcode.com/problems/bus-routes/description/** 1964
 > * https://leetcode.com/problems/snakes-and-ladders/description/ 2019
-> * https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations/description/ 2022
 > * https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/description/ 2068
 > * https://leetcode.com/problems/cut-off-trees-for-golf-event/description/ h
 
-## Shortest Path Faster Algorithm (SPFA)
+### Single-source BFS
 | Problem          | Difficulty |
 |------------------|------------|
-|**[542. 01 Matrix](../leetcode/542.01-matrix.md)**|Medium|
-|@@**[1514. Path with Maximum Probability](../leetcode/1514.path-with-maximum-probability.md)**|Medium|
-|[1162. As Far from Land as Possible](../leetcode/1162.as-far-from-land-as-possible.md)|Medium (1666)|
-
-## Shortest Path
-| Problem          | Difficulty |
-|------------------|------------|
-|**[787. Cheapest Flights Within K Stops](../leetcode/787.cheapest-flights-within-k-stops.md)**|Medium|
-|**[743. Network Delay Time](../leetcode/743.network-delay-time.md)**|Medium|
+|@@**[127. Word Ladder](../leetcode/127.word-ladder.md)**|Hard|
 |[1091. Shortest Path in Binary Matrix](../leetcode/1091.shortest-path-in-binary-matrix.md)|Medium|
-|**[1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)**|Medium (1947)|
+|[433. Minimum Genetic Mutation](../leetcode/433.minimum-genetic-mutation.md)|Medium|
+|[1926. Nearest Exit from Entrance in Maze](../leetcode/1926.nearest-exit-from-entrance-in-maze.md)|Medium (1638)|
+|[1129. Shortest Path with Alternating Colors](../leetcode/1129.shortest-path-with-alternating-colors.md)|Medium (1779)|
+|@@**[934. Shortest Bridge](../leetcode/934.shortest-bridge.md)**|Medium (1825)|
+|[752. Open the Lock](../leetcode/752.open-the-lock.md)|Medium (1877)|
+|@@**[1293. Shortest Path in a Grid with Obstacles Elimination](../leetcode/1293.shortest-path-in-a-grid-with-obstacles-elimination.md)**|Hard (1967)|
+|[3552. Grid Teleportation Traversal](../leetcode/3552.grid-teleportation-traversal.md)|Medium|
 
-> * TODO: Review the notes + implementations
-> * TODO: [三、最短路](https://huxulm.github.io/lc-rating/list/graph#d17b01d268e9087e7c0011ea7925843f)
+### Multi-source BFS
+| Problem          | Difficulty |
+|------------------|------------|
+|@@**[994. Rotting Oranges](../leetcode/994.rotting-orange.md)**|Medium|
+|**[542. 01 Matrix](../leetcode/542.01-matrix.md)**|Medium|
+|[1162. As Far from Land as Possible](../leetcode/1162.as-far-from-land-as-possible.md)|Medium (1666)|
 
 ## To Classify
 | Problem          | Difficulty |

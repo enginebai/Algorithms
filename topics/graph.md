@@ -218,6 +218,54 @@ fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
 ### Time Complexity
 All vertices will be enqueued and dequeued at most once, it takes `O(|V|)` for all vertices. The adjacency list of each vertex is scanned only when the vertex is dequeued, it is scanned at most once, it takes `O(|E|)`, thus the total running time if `O(|V| + |E|)` (linear time, all vertices and edges are visited at most once).
 
+### BFS Shortest Path
+With explicit `source` and `destination`, we can use BFS to find the shortest path from `source` to `destination`.
+```kotlin
+val queue = ArrayDeque<Node>()
+var distance = 0
+val visited = HashSet<Node>()
+queue.addLast(source)
+visited.add(source)
+
+while (queue.isNotEmpty()) {
+    val size = queue.size
+    repeat(size) {
+        val node = queue.removeFirst()
+        if (node == destination) return distance
+        graph[node].forEach { v ->
+            if (!visited.contains(v)) {
+                queue.addLast(v)
+                visited.add(v)
+            }
+        }
+    }
+}
+return -1
+```
+
+Without explicit `source` and `destination`, we can use BFS to find the shortest path from `source` to `destination`.
+```kotlin
+val queue = ArrayDeque<Node>()
+var distance = 0
+val visited = HashSet<Node>()
+queue.addLast(source)
+visited.add(source)
+
+while (queue.isNotEmpty()) {
+    val size = queue.size
+    repeat(size) {
+        val node = queue.removeFirst()
+        graph[node].forEach { v ->
+            if (!visited.contains(v)) {
+                queue.addLast(v)
+                visited.add(v)
+            }
+        }
+    }
+}
+return -1
+```
+
 ## Depth-first Search (DFS)
 For graph, We will discover all vertices (fully depth-first search) and construct depth-first search tree (forest), we use the similar color scheme (to BFS) and provides some timestapms while searching. Each vertices has two timestampes: *discover* (first discovered, and grayed) and *finish* (finishing examining its adjaceny list and blacken)
 
@@ -303,6 +351,52 @@ In another way, you can run DFS first and sort the vertices by finish time desce
 
 ### Time Complexity
 It takes `O(|V| + |E|)` as same as depth-first search, since it takes `O(1)` to insert first of linked list.
+
+## 0-1 BFS
+It’s a specialized form of BFS used to solve shortest path in graphs where all edges weights are either `0` or `1`.
+
+### When to Use
+- Graph has `0` and `1` weight edges.
+- Single source shortest path.
+- Better than Dijkstra's algorithm: `O(V + E)` over `O(E log V)`.
+
+### How It Works
+We always process `0` weight edges first by enqueuing to the front. Otherwise, we enqueue to the back as normal BFS. This ensure the nodes reached with smaller cost (weight `0`) are processed first, like Dijkstra, but without priority queue.
+
+- Use a deque to store the nodes.
+- For each adjacent node:
+    - If edge weight is `0`, enqueue to the front.
+    - If edge weight is `1`, enqueue to the back.
+
+
+```kotlin
+fun zeroOneBFS(graph: Array<IntArray>, start: Int, n: Int): Array<IntArray> {
+    val distance = Array(m) { IntArray(n) { Int.MAX_VALUE } }
+    val deque: Deque<Int> = ArrayDeque()
+
+    distance[start] = 0
+    deque.addFirst(start)
+
+    while (deque.isNotEmpty()) {
+        val node = deque.removeFirst()
+        for ((adjacent, weight) in graph[node]) {
+            val newDistance = distance[node] + weight
+            if (newDistance < distance[adjacent]) {
+                distance[adjacent] = newDistance
+                // Key points: We enqueue high weight first.
+                if (weight == 0) deque.addFirst(adjacent)
+                else deque.addLast(adjacent)
+            }
+        }
+    }
+
+    return distance
+}
+```
+
+- **Time Complexity**: `O(V + E)`
+- **Space Complexity**: `O(V + E)` for graph + deque
+
 
 ## Union Find
 并查集（Union Find）结构是 *二叉树结构* 的衍生，用于高效解决无向图的连通性问题，可以在 `O(1)` 时间内合并两个连通分量，在 O(1) 时间内查询两个节点是否连通，在 O(1) 时间内查询连通分量的数量。
