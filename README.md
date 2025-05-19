@@ -22,7 +22,7 @@ This project offers a curated collection of notes and resources covering fundame
     - [Binary Search Tree](./problems/bst-problems.md)
 - [Heap & Priority Queue](./topics/heap.md) ([Problems](./problems/heap-problems.md))
 - [Graph](./topics/graph.md) ([Problems](./problems/graph-problems.md))
-- [Shortest Path](./topics/shortest-path.md)
+- [Shortest Path](./topics/shortest-path.md) ([Problems](./problems/shortest-path-problems.md))
 - [Recursion](./topics/recursion.md)
 - [Dynamic Programming](./topics/dynamic-programming.md) ([Problems](./problems/dynamic-programming-problems.md))
 - [Greedy](./topics/greedy.md) ([Problems](./problems/greedy-problems.md))
