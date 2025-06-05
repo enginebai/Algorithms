@@ -29,7 +29,10 @@ This project offers a curated collection of notes and resources covering fundame
 - [Interval](./topics/interval.md) ([Problems](./problems/interval-problems.md))
 - [Design](./problems/design-problems.md)
 - [Backtracking](./topics/backtracking.md) ([Problems](./problems/backtracking-problems.md))
+
+## Personal Records
 - [Mistakes Notebooks](./problems/mistakes.md)
+- [Contest Records](./problems/contests.md)
 
 ## Roadmap
 This study path designed to guide you from a beginner to an intermediate level, covering the essential topics in this project. It's important to note that certain topics are prerequisites for others. For example, you should master "graph" before studying "shortest path".

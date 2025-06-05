@@ -106,6 +106,7 @@
 |@@**[934. Shortest Bridge](../leetcode/934.shortest-bridge.md)**|Medium (1825)|
 |[752. Open the Lock](../leetcode/752.open-the-lock.md)|Medium (1877)|
 |@@**[1293. Shortest Path in a Grid with Obstacles Elimination](../leetcode/1293.shortest-path-in-a-grid-with-obstacles-elimination.md)**|Hard (1967)|
+|[3568. Minimum Moves to Clean the Classroom](../leetcode/3568.minimum-moves-to-clean-the-classroom.md)|Hard|
 |[3552. Grid Teleportation Traversal](../leetcode/3552.grid-teleportation-traversal.md)|Medium|
 
 ### Multi-source BFS

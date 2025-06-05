@@ -1,6 +1,6 @@
 ## [Stack & Queue](../topics/stack-queue.md)
 
-### Stack Basics
+### General Applications
 | Problem          | Difficulty |
 |------------------|------------|
 |**[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)**|Easy (1227)|
@@ -11,10 +11,8 @@
 |**[946. Validate Stack Sequences](../leetcode/946.validate-stack-sequences.md)**|Medium (1461)|
 |[71. Simplify Path](../leetcode/71.simplify-path.md)|Medium|
 |@@**[636. Exclusive Time of Functions](../leetcode/636.exclusive-time-of-functions.md)**|Medium|
+|[895. Maximum Frequency Stack](../leetcode/895.maximum-frequency-stack.md)|Hard (2027)|
 
-> * My contest https://leetcode.com/problems/find-mirror-score-of-a-string/description/ 1578
-> * **https://leetcode.com/problems/maximum-frequency-stack/description/** h 2027
->
 > * Solved: https://leetcode.com/problems/build-an-array-with-stack-operations/description/ 1180 
 > * Solved: https://leetcode.com/problems/design-a-stack-with-increment-operation/description/ 1285 // Using array + top pointer to simulate stack, should have very clear definition of the top pointer. 2024/10/21
 > * Solved: https://leetcode.com/problems/baseball-game/description/ // To get previous elements, use stack. 2024/10/21
@@ -83,7 +81,6 @@
 > * https://leetcode.com/problems/longest-well-performing-interval/description/ 1908
 > * **https://leetcode.com/problems/132-pattern/** 2000
 > * TODO: [2866. Beautiful Towers II](../leetcode/2866.beautiful-towers-ii.md) 2071
-> ----
 
 #### Rectangle
 | Problem          | Difficulty |
