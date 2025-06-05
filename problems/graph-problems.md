@@ -61,7 +61,7 @@
 |[1971. Find if Path Exists in Graph](../leetcode/1971.find-if-path-exists-in-graph.md)|Easy|
 |[797. All Paths From Source to Target](../leetcode/797.all-paths-from-source-to-target.md)|Medium (1383)|
 
-## Bipartite
+## Graph Coloring
 | Problem          | Difficulty |
 |------------------|------------|
 |**[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)**|Medium|
@@ -106,6 +106,7 @@
 |@@**[934. Shortest Bridge](../leetcode/934.shortest-bridge.md)**|Medium (1825)|
 |[752. Open the Lock](../leetcode/752.open-the-lock.md)|Medium (1877)|
 |@@**[1293. Shortest Path in a Grid with Obstacles Elimination](../leetcode/1293.shortest-path-in-a-grid-with-obstacles-elimination.md)**|Hard (1967)|
+|[3568. Minimum Moves to Clean the Classroom](../leetcode/3568.minimum-moves-to-clean-the-classroom.md)|Hard|
 |[3552. Grid Teleportation Traversal](../leetcode/3552.grid-teleportation-traversal.md)|Medium|
 
 ### Multi-source BFS

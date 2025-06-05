@@ -34,26 +34,27 @@ interface Stack<T> {
 
 ```kotlin
 data class Node<T>(
-    val data: T,
+    val value: T,
     var next: Node<T>? = null
 )
 
 class LinkedListStack<T>: Stack<T> {
 
+    // head is the top of the stack
     private var head: Node<T>? = null
 
     override fun push(item: T) {
-        val newNode = Node(data = item, next = head)
+        val newNode = Node(value = item, next = head)
         head = newNode
     }
 
     override fun pop(): T? {
-        val item = head?.data
+        val item = head?.value
         head = head?.next
         return item
     }
 
-    override fun peek(): T? = head?.data
+    override fun peek(): T? = head?.value
     override fun isEmpty(): Boolean = head == null
 }
 ```
@@ -63,7 +64,7 @@ class LinkedListStack<T>: Stack<T> {
 
 #### By Array
 
-> NOTE: We can use 0 (first free index) or -1 (last used index) for `top`.
+> NOTE: We can use `-1` (last used index) or `0` (first free index) for `top`.
 
 ```kotlin
 class StaticArrayStack<T>(private val capacity: Int): Stack<T> {
@@ -77,7 +78,6 @@ class StaticArrayStack<T>(private val capacity: Int): Stack<T> {
 
     override fun pop(): T? {
         if (isEmpty()) throw StackUnderflowException("Stack is empty")
-        // Top will be ahead by one when calling push(), so we have to decrement first
         return array.getOrNull(top--)
     }
 
@@ -135,9 +135,9 @@ For the problems when we're looking for **the next (previous) greater (less) ite
 A *queue* is an order list in which all insertions take place at one end, called the *rear* (tail), while all deletions take place at aonther end, called the *head* (front). It acts as *First In First Out (FIFO)*, the first inserted element will be removed first.
 
 ``` 
-        -------
+       -------
 Head <- ABCDE <- Rear
-        -------
+       -------
 ```
 
 There are some applications of queue:
@@ -170,79 +170,84 @@ class LinkedListQueue<T>: Queue<T> {
     private var size = 0
 
     override fun enqueue(item: T) {
-        val newNode = Node(data = item)
-        if (isEmpty()) {
-            head = newNode
-            rear = newNode
+        val newNode = Node(value = item)
+        if (rear != null) {
+            rear.next = newNode
         } else {
-            rear?.next = newNode
-            rear = newNode
+            // Special case when the queue is empty and then enqueue the first item
+            head = newNode
         }
+        rear = newNode
         size++
     }
 
     override fun dequeue(): T? {
-        if (isEmpty()) return null
-        val value = head?.data
+        val value = head?.value
         head = head?.next
         size--
+        // Special case when the queue becomes empty after dequeue the last item
         if (isEmpty()) rear = null
         return value
     }
 
-    override fun peek(): T? = head?.data
-    override fun rear(): T? = rear?.data
+    override fun peek(): T? = head?.value
+    override fun rear(): T? = rear?.value
     override fun isEmpty(): Boolean = size == 0
 }
 ```
+All operations take `O(1)` time.
 
-Here we have to update `head` and `rear` node when enqueue and dequeue, it's the special cases for empty queue. All operations take `O(1)` time.
+Or equivalently, we can implement using doubly linked list with a sentinel node to avoid the special cases for empty queue. We set up a fixed head and rear node to avoid the null check when enqueue and dequeue. (Same idea from [146. LRU Cache](../leetcode/146.lru-cache.md))
+
+```js
+sentinel <-> node1 <-> node2 <-> ... <-> sentinel
+   ↑                                        ↑
+ head                                     rear
+```
+
+```kotlin
+class DoublyLinkedListQueue<T>: Queue<T> {
+    private var head = Node<T>(value = null)
+    private var rear = Node<T>(value = null)
+
+    init {
+        // We connect the head and rear together at the beginning
+        head.next = rear
+        rear.prev = head
+    }
+
+    override fun enqueue(item: T) {
+        val newNode = Node(value = item)
+
+        val last = rear.prev
+        last.next = newNode
+        newNode.prev = last
+
+        newNode.next = rear
+        rear.prev = newNode
+    }
+
+    override fun dequeue(): T? {
+        if (isEmpty()) return null
+        val first = head.next
+        val value = first?.value
+    
+        val next = first.next
+        next?.prev = head
+        head.next = next
+
+        return value
+    }
+
+    override fun peek(): T? = head.next?.value
+    override fun rear(): T? = rear.prev?.value
+    override fun isEmpty(): Boolean = head.next == rear
+}
+```
 
 #### By Array
-```kotlin
-class StaticArrayQueue<T>(private val capacity: Int) : Queue<T> {
+We can use [*Circular Queue*](../leetcode/622.design-circular-queue.md) for the implementation to reuse the space more efficiently.
 
-    private val array = arrayOfNulls<Any>(capacity)
-    private var head = 0
-    private var rear = -1
-    private var size = 0
-
-    override fun enqueue(item: T) {
-        if (size == capacity) throw OverflowException("Queue is full")
-        array[++rear] = item
-        size++
-    }
-
-    override fun dequeue(): T? {
-        if (isEmpty()) throw UnderflowException("Queue is empty")
-        size--
-        return array.getOrNull(head++) as T?
-    }
-
-    override fun peek(): T? = array.getOrNull(head)
-    override fun rear(): T? = array.getOrNull(rear)
-    override fun isEmpty(): Boolean = size == 0
-}
-
-class DynamicArrayQueue<T>: Queue<T> {
-    private val dynamicArray = mutableListOf<T>()
-
-    override fun enqueue(item: T) {
-        dynamicArray.add(item)
-    }
-
-    override fun dequeue(): T? {
-        if (dynamicArray.isEmpty()) return null
-        return dynamicArray.removeAt(0)
-    }
-
-    override fun peek(): T? = dynamicArray.firstOrNull()
-    override fun rear(): T? = dynamicArray.lastOrNull()
-    override fun isEmpty(): Boolean = dynamicArray.isEmpty()
-}
-```
-
-There is a drawback from the above implementation, our size is limited even if we dequeue all elements (we move `head` to the end of array when dequeue, but won't start from 0 again). To solve this case, we introduce [*Circular Queue*](../leetcode/622.design-circular-queue.md).
 ## Kotlin APIs
 ### Stack
 ```kotlin
@@ -264,11 +269,32 @@ queue.addLast(1)
 
 val firstValue = queue.removeFirst()
 val lastValue = queue.removeLast()
-queue.poll()
+queue.poll() // removeFirst()
+queue.pollLast() // removeLast()
 
+queue.peekFirst()
 queue.first()
+queue.peekLast()
 queue.last()
 
 queue.size
 queue.isNotEmpty()
 ```
+
+| Operation             | `Stack<T>` (Java) | `ArrayDeque<T>`                     | `LinkedList<T>`             | Notes                                             |
+| --------------------- | ----------------- | ----------------------------------- | --------------------------- | ------------------------------------------------- |
+| **Push (Stack)**      | `push(item)`      | `push(item)`                        | `push(item)`                | `ArrayDeque` & `LinkedList` use `Deque` interface |
+| **Pop (Stack)**       | `pop()`           | `pop()`                             | `pop()`                     | Removes first element (top of stack)              |
+| **Peek (Stack)**      | `peek()`          | `peek()`                            | `peek()`                    | Returns first without removing                    |
+| **Enqueue (Queue)**   | `add(item)`       | `addLast(item)` / `offerLast(item)` | `add(item)` / `offer(item)` | Adds to the rear (tail)                           |
+| **Dequeue**           | `remove()`        | `removeFirst()` / `pollFirst()`     | `remove()` / `poll()`       | Removes from the front (head)                     |
+| **Peek (Queue)**      | `peek()`          | `peekFirst()`                       | `peek()` / `element()`      | Peeks at front element                            |
+| **Is Empty**          | `isEmpty()`       | `isEmpty()`                         | `isEmpty()`                 | –                                                 |
+| **Size**              | `size`            | `size`                              | `size`                      | –                                                 |
+| **Add to Front**      | –                 | `addFirst(item)`                    | `addFirst(item)`            | For Deque behavior                                |
+| **Add to Back**       | –                 | `addLast(item)`                     | `addLast(item)`             | –                                                 |
+| **Remove from Front** | –                 | `removeFirst()`                     | `removeFirst()`             | –                                                 |
+| **Remove from Back**  | –                 | `removeLast()`                      | `removeLast()`              | –                                                 |
+| **Peek Front**        | –                 | `peekFirst()`                       | `peekFirst()`               | –                                                 |
+| **Peek Back**         | –                 | `peekLast()`                        | `peekLast()`                | –                                                 |
+| **Thread Safe**       | ✅ (synchronized)  | ❌ (not thread-safe)                 | ❌                           | Use `Collections.synchronized...` if needed       |

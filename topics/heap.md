@@ -196,19 +196,23 @@ val minHeap = PriorityQueue<Int>() // By default, it's min heap
 val minHeap = PriorityQueue<Int>() { n1, n2 -> n1 - n1 }
 
 val maxHeap = PriorityQueue<Int>() { n1, n2 -> n2 - n1 }
-val maxHeap = PriorityQueue(reverseOrder<Int>())
-val maxHeap = PriorityQueue(compareByDescending<Int> { it })
+val maxHeap = PriorityQueue<Int>(reverseOrder())
+val maxHeap = PriorityQueue<Int>(compareByDescending { it })
 
 // Create a max heap based on the values in count
 val count = IntArray(26)
 // We store the index in the heap
-val maxHeap = PriorityQueue(compareByDescending<Int> { count[it] })
+val maxHeap = PriorityQueue<Int>(compareByDescending { count[it] })
 
 // Compare the count first, if the count is the same, compare the value
-val maxHeap = PriorityQueue(compareByDescending<Int> { count[it] }.thenBy{ it })
+val maxHeap = PriorityQueue<Int>(compareByDescending { count[it] }.thenBy{ it })
 
 data class Person(val name: String, val age: Int)
-val peopleQueue = PriorityQueue(compareByDescending<Person> { it.age })
+val peopleQueue = PriorityQueue<Person>(compareByDescending { it.age })
+
+data class Task(val taskId: Int, val priority: Int)
+val tasks = PriorityQueue<Task>(compareByDescending<Task> { it.priority }.thenByDescending { it.taskId })
+
 
 maxHeap.add(1) / offer(1)   // Adds an element to the queue `O(log n)`.
 maxHeap.remove() / poll()   // Removes and returns the element with the highest priority `O(log n)`.
@@ -219,7 +223,7 @@ maxHeap.size()
 maxHeap.isNotEmpty()
 ```
 
-## Full Code
+## Full Implementation
 ```kotlin
 interface MyPriorityQueue {
     fun buildMaxHeap(array: IntArray)

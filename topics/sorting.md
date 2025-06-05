@@ -290,19 +290,8 @@ set.remove(1)
 1 in set        // Check if the element is in the set
 
 // Get the elements in ordered set
-set.first()     // Get the smallest element
+set.first()     // Get the smallest element by default, if we have reversed comparator, it will get the largest element
 set.pollFirst() // Remove and get the smallest element
-set.last()      // Get the largest element
+set.last()      // Get the largest element (same as above)
 set.pollLast()  // Remove and get the largest element
 ```
-
-## Resources
-- CLRS
-- [MIT](https://ocw.mit.edu/courses/6-046j-introduction-to-algorithms-sma-5503-fall-2005/video_galleries/video-lectures)
-- [基本資料結構系列文章](http://alrightchiu.github.io/SecondRound/mu-lu-yan-suan-fa-yu-zi-liao-jie-gou.html)
-- ~~Fundamental of Data Structure~~ // Similar to CLRS
-- CTCI
-- [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-8) // Animation of sorting algorithm with steps in the code
-- [Coding Interview University](https://github.com/jwasham/coding-interview-university#sorting)
-- [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/sorting-searching/) // Simple notes + time complexity tables
-- [Tech-Interview-Cheat-Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#sorting-algorithms) // Simple notes

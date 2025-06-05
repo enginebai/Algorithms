@@ -12,7 +12,7 @@
 |[1512. Number of Good Pairs](../leetcode/1512.number-of-good-pairs.md)|Easy|
 |[1679. Max Number of K-Sum Pairs](../leetcode/1679.max-number-of-k-sum-pairs.md)|Medium (1345)|
 |[1010. Pairs of Songs With Total Durations Divisible by 60](../leetcode/1010.pairs-of-songs-with-total-durations-divisible-by-60.md)|Medium (1377)|
-|**[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)**|Easy|
+|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
 |[624. Maximum Distance in Arrays](../leetcode/624.maximum-distance-in-arrays.md)|Medium|
 |[1031. Maximum Sum of Two Non-Overlapping Subarrays](../leetcode/1031.maximum-sum-of-two-non-overlapping-subarrays.md)|Medium (1680)|
 |[1014. Best Sightseeing Pair](../leetcode/1014.best-sightseeing-pair.md)|Medium (1730)|

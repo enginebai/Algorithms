@@ -3,28 +3,28 @@
 ## Design
 | Problem          | Difficulty |
 |------------------|------------|
-|@@[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
-|**[706. Design HashMap](../leetcode/706.design-hashmap.md)**|Medium|
+|[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
+|[706. Design HashMap](../leetcode/706.design-hashmap.md)|Medium|
 |[535. Encode and Decode TinyURL](../leetcode/535.encode-and-decode-tinyurl.md)|Medium|
-|**[380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)**|Medium|
-|@@[381. Insert Delete GetRandom O(1) - Duplicates allowed](../leetcode/381.insert-delete-getrandom-o1-duplicates-allowed.md)|Hard|
-|@@[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
+|[380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)|Medium|
+|[381. Insert Delete GetRandom O(1) - Duplicates allowed](../leetcode/381.insert-delete-getrandom-o1-duplicates-allowed.md)|Hard|
+|[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
 |[1396. Design Underground System](../leetcode/1396.design-underground-system.md)|Medium|
-|**[146. LRU Cache](../leetcode/146.lru-cache.md)**|Medium|
+|[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
 
-> * **https://leetcode.com/problems/all-oone-data-structure/description/ hard**
+> * https://leetcode.com/problems/all-oone-data-structure/description/ hard
 
 ## Existance
 | Problem          | Difficulty |
 |------------------|------------|
-|**[1. Two Sum](../leetcode/1.two-sum.md)**|Easy|
+|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
 |[1679. Max Number of K-Sum Pairs](../leetcode/1679.max-number-of-k-sum-pairs.md)|Medium (1345)|
-|@@[1346. Check If N and Its Double Exist](../leetcode/1346.check-if-n-and-its-double-exist.md)|Easy (1225)|
-|@@[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium|
-|@@[532. K-diff Pairs in an Array](../leetcode/532.k-diff-pairs-in-an-array.md)|Medium|
-|**[128. Longest Consecutive Sequence](../leetcode/128.longest-consecutive-sequence.md)**|Medium|
-|**[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)**|Medium|
-|@@[923. 3Sum With Multiplicity](../leetcode/923.3sum-with-multiplicity.md)|Medium (1710)|
+|[1346. Check If N and Its Double Exist](../leetcode/1346.check-if-n-and-its-double-exist.md)|Easy (1225)|
+|[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium|
+|[532. K-diff Pairs in an Array](../leetcode/532.k-diff-pairs-in-an-array.md)|Medium|
+|[128. Longest Consecutive Sequence](../leetcode/128.longest-consecutive-sequence.md)|Medium|
+|[36. Valid Sudoku](../leetcode/36.valid-sudoku.md)|Medium|
+|[923. 3Sum With Multiplicity](../leetcode/923.3sum-with-multiplicity.md)|Medium (1710)|
 
 > * Solved: https://leetcode.com/problems/jewels-and-stones/description/ 1164
 > * Solved: https://leetcode.com/problems/largest-substring-between-two-equal-characters/description/ 1281
@@ -34,8 +34,8 @@
 ## Duplicates
 | Problem          | Difficulty |
 |------------------|------------|
-|**[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)**|Easy|
-|**[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)**|Easy|
+|[217. Contains Duplicate](../leetcode/217.contains-duplicate.md)|Easy|
+|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
 
 > * Solved: https://leetcode.com/problems/unique-email-addresses/description/ 1199
 > * Solved: https://leetcode.com/problems/uncommon-words-from-two-sentences/description/ 1259
@@ -44,12 +44,12 @@
 ## Counting
 | Problem          | Difficulty |
 |------------------|------------|
-|**[242. Valid Anagram](../leetcode/242.valid-anagram.md)**|Easy|
-|**[169. Majority Element](../leetcode/169.majority-element.md)**|Easy|
-|@@[697. Degree of an Array](../leetcode/697.degree-of-an-array.md)|Easy|
+|[242. Valid Anagram](../leetcode/242.valid-anagram.md)|Easy|
+|[169. Majority Element](../leetcode/169.majority-element.md)|Easy|
+|[697. Degree of an Array](../leetcode/697.degree-of-an-array.md)|Easy|
 |[1002. Find Common Characters](../leetcode/1002.find-common-characters.md)|Easy|
-|@@**[554. Brick Wall](../leetcode/554.brick-wall.md)**|Medium|
-|@@[916. Word Subsets](../leetcode/916.word-subsets.md)|Medium (1624)|
+|[554. Brick Wall](../leetcode/554.brick-wall.md)|Medium|
+|[916. Word Subsets](../leetcode/916.word-subsets.md)|Medium (1624)|
 
 > * https://leetcode.com/problems/number-of-good-pairs/description/ 1160
 > * https://leetcode.com/problems/ransom-note/description/ e
@@ -73,8 +73,8 @@
 ## Mapping
 | Problem          | Difficulty |
 |------------------|------------|
-|@@**[290. Word Pattern](../leetcode/290.word-pattern.md)**|Easy|
-|**[49. Group Anagrams](../leetcode/49.group-anagrams.md)**|Medium|
+|[290. Word Pattern](../leetcode/290.word-pattern.md)|Easy|
+|[49. Group Anagrams](../leetcode/49.group-anagrams.md)|Medium|
 
 > * https://leetcode.com/problems/verifying-an-alien-dictionary/description/ 1299
 > * https://leetcode.com/problems/isomorphic-strings/description/ e
@@ -82,17 +82,17 @@
 ## Other
 | Problem          | Difficulty |
 |------------------|------------|
-|**[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)**|Medium|
-|**[133. Clone Graph](../leetcode/133.clone-graph.md)**|Medium|
+|[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
+|[133. Clone Graph](../leetcode/133.clone-graph.md)|Medium|
 
 ## Cyclic Sort
 | Problem          | Difficulty |
 |------------------|------------|
-|**[41. First Missing Positive](../leetcode/41.first-missing-positive.md)**|Hard|
-|**[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)**|Medium|
+|[41. First Missing Positive](../leetcode/41.first-missing-positive.md)|Hard|
+|[442. Find All Duplicates in an Array](../leetcode/442.find-all-duplicates-in-an-array.md)|Medium|
 |[448. Find All Numbers Disappeared in an Array](../leetcode/448.find-all-numbers-disappeared-in-an-array.md)|Easy|
-|@@[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
-|@@[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
+|[645. Set Mismatch](../leetcode/645.set-mismatch.md)|Easy|
+|[268. Missing Number](../leetcode/268.missing-number.md)|Easy|
 
 ## Prefix Sum 
 ### Basic
@@ -112,7 +112,7 @@
 ### Prefix Sum + Hash Table
 | Problem          | Difficulty |
 |------------------|------------|
-|@@**[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)**|Medium|
+|[560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md)|Medium|
 
 > * TODO: [前缀和与哈希表](https://huxulm.github.io/lc-rating/list/data_structure#57bd9b702cc3a23859ac62ef7232ab19)
 
