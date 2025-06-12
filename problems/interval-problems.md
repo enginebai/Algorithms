@@ -5,7 +5,7 @@
 ## Line Sweep 一维差分（扫描线）
 | Problem          | Difficulty |
 |------------------|------------|
-|**[1094. Car Pooling](../leetcode/1094.car-pooling.md)**|Medium (1441)|
+|[1094. Car Pooling](../leetcode/1094.car-pooling.md)|Medium (1441)|
 |[2848. Points That Intersect With Cars](../leetcode/2848.points-that-intersect-with-cars.md)|Medium (1229)|
 |[1893. Check if All the Integers in a Range Are Covered](../leetcode/1893.check-if-all-the-integers-in-a-range-are-covered.md)|Easy (1307)|
 |[3355. Zero Array Transformation I](../leetcode/3355.zero-array-transformation-i.md)|Medium (1638)|
@@ -16,8 +16,8 @@
 > * https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/description/ 1835
 > * https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/description/ 1872
 > * *https://leetcode.com/problems/zero-array-transformation-ii 1913*
-> * **https://leetcode.com/problems/number-of-flowers-in-full-bloom/** 2022
-> * **https://leetcode.com/problems/maximum-profit-in-job-scheduling/**
+> * https://leetcode.com/problems/number-of-flowers-in-full-bloom/ 2022
+> * https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 > * https://leetcode.com/problems/minimum-interval-to-include-each-query/description/ 2286
 > * https://leetcode.com/problems/the-skyline-problem/description/ h
 > ----
@@ -28,19 +28,19 @@
 ## Interval
 | Problem          | Difficulty |
 |------------------|------------|
-|**[56. Merge Intervals](../leetcode/56.merge-intervals.md)**|Medium|
-|**[57. Insert Interval](../leetcode/57.insert-interval.md)**|Medium|
+|[56. Merge Intervals](../leetcode/56.merge-intervals.md)|Medium|
+|[57. Insert Interval](../leetcode/57.insert-interval.md)|Medium|
 |[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
-|**[763. Partition Labels](../leetcode/763.partition-labels.md)**|Medium|
-|**[729. My Calendar I](../leetcode/729.my-calendar-i.md)**|Medium|
+|[763. Partition Labels](../leetcode/763.partition-labels.md)|Medium|
+|[729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium|
 
 > * TODO: [56. Merge Intervals](../leetcode/56.merge-intervals.md) to be solved by [line sweep](https://leetcode.com/problems/merge-intervals/submissions/1582918717)
 > * https://leetcode.com/problems/count-days-without-meetings/description/ 1483
 > * https://leetcode.com/problems/find-right-interval/description/
 > ---
-> * **https://leetcode.com/problems/my-calendar-ii/description/** m, at most one conflict
-> * **https://leetcode.com/problems/my-calendar-iii/description/** h, return most frequent overlap, similar to [253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)
-> * **https://leetcode.com/problems/meeting-rooms-iii/** h (Premium)
+> * https://leetcode.com/problems/my-calendar-ii/description/ m, at most one conflict
+> * https://leetcode.com/problems/my-calendar-iii/description/ h, return most frequent overlap, similar to [253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)
+> * https://leetcode.com/problems/meeting-rooms-iii/ h (Premium)
 > * |[759. Employee Free Time](../leetcode/759.employee-free-time.md)|Hard (1710)|
 > ----
 > * Solved: https://leetcode.com/problems/count-ways-to-group-overlapping-ranges/description/ 1632
@@ -53,8 +53,8 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[252. Meeting Rooms](../leetcode/252.meeting-rooms-i.md)|Premium|
-|**[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)**|Medium|
-|**[435. Non-overlapping Intervals](../leetcode/435.non-overlapping-intervals.md)**|Medium|
+|[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)|Medium|
+|[435. Non-overlapping Intervals](../leetcode/435.non-overlapping-intervals.md)|Medium|
 |[646. Maximum Length of Pair Chain](../leetcode/646.maximum-length-of-pair-chain.md)|Medium|
 |[1288. Remove Covered Intervals](../leetcode/1288.remove-covered-intervals.md)|Medium (1375)|
 |[2054. Two Best Non-Overlapping Events](../leetcode/2054.two-best-non-overlapping-events.md)|Medium (1883)|
@@ -67,7 +67,7 @@
 
 | Problem          | Difficulty |
 |------------------|------------|
-|**[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)**|Premium|
+|[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)|Premium|
 |[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
 
 ### 2.3 区间选点
@@ -76,7 +76,7 @@
 
 | Problem          | Difficulty |
 |------------------|------------|
-|**[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)**|Medium|
+|[452. Minimum Number of Arrows to Burst Balloons](../leetcode/452.minimum-number-of-arrows-to-burst-balloons.md)|Medium|
 
 ### 2.4 区间覆盖
 
@@ -106,4 +106,4 @@
 
 > * https://leetcode.cn/problems/my-calendar-i/solutions/1646079/by-lfool-xvpv/
 > * https://leetcode.cn/problems/my-calendar-i/solutions/1646264/by-jiang-hui-4-pyfn/
-> * **My contest: https://leetcode.com/problems/fruits-into-baskets-iii/description/** 【线段树：为什么要这样设计？【力扣周赛 440】-哔哩哔哩】 https://b23.tv/NyYEU6j
+> * My contest: https://leetcode.com/problems/fruits-into-baskets-iii/description/ 【线段树：为什么要这样设计？【力扣周赛 440】-哔哩哔哩】 https://b23.tv/NyYEU6j

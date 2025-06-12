@@ -1,3 +1,8 @@
+## Unfamiliar Patterns
+
+
+
+
 ## P0
 > Very unfamilar with the problems, need to practice a lot.
 

@@ -213,7 +213,6 @@ val peopleQueue = PriorityQueue<Person>(compareByDescending { it.age })
 data class Task(val taskId: Int, val priority: Int)
 val tasks = PriorityQueue<Task>(compareByDescending<Task> { it.priority }.thenByDescending { it.taskId })
 
-
 maxHeap.add(1) / offer(1)   // Adds an element to the queue `O(log n)`.
 maxHeap.remove() / poll()   // Removes and returns the element with the highest priority `O(log n)`.
 maxHeap.peek()              // Returns the element with the highest priority without removing it `O(1)`.
