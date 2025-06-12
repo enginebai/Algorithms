@@ -62,6 +62,7 @@
 |[2337. Move Pieces to Obtain a String](../leetcode/2337.move-pieces-to-obtain-a-string.md)|Medium (1693)|
 |[777. Swap Adjacent in LR String](../leetcode/777.swap-adjacent-in-lr-string.md)|Medium (1938)|
 
+> * https://leetcode.com/problems/multiply-strings/description/
 > * https://leetcode.com/problems/minimum-common-value/description/ 1249
 > * https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/description/ 1281
 > * https://leetcode.com/problems/adding-spaces-to-a-string/description/ 1315

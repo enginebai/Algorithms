@@ -258,6 +258,12 @@ val item = stack.pop()
 stack.peek()
 stack.size
 stack.isNotEmpty()
+
+// Or we can use ArrayDeque as a stack (recommended)
+val stack = ArrayDeque<Int>()
+stack.addLast(1)    // push
+stack.removeLast()  // pop
+stack.last()        // peek
 ```
 
 ### Queue
@@ -272,10 +278,10 @@ val lastValue = queue.removeLast()
 queue.poll() // removeFirst()
 queue.pollLast() // removeLast()
 
-queue.peekFirst()
 queue.first()
-queue.peekLast()
+queue.peekFirst()
 queue.last()
+queue.peekLast()
 
 queue.size
 queue.isNotEmpty()
