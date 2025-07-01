@@ -52,7 +52,7 @@ while (left <= right) {
 return result
 ```
 
-## Find the first/left-most (last/right-most) element that satifies the condition
+## Find the first/leftmost (last/rightmost) element that satifies the condition
 ```js
 X X X O O O O O
       ^ // The first element that satifies the condition
@@ -81,11 +81,10 @@ For example, to find the smallest (largest) number which is greater (smaller) or
           R
 ```
 
-> Sample problems: [278. First Bad Version](../leetcode/278.first-bad-version.md)
->
-> Sample problem: [35. Search Insert Position](../leetcode/35.search-insert-position.md)
+> - Sample problems: [278. First Bad Version](../leetcode/278.first-bad-version.md)
+> - Sample problem: [35. Search Insert Position](../leetcode/35.search-insert-position.md)
 
-## Find the First/Last Position of Target in Sorted Array
+### Find the First/Last Position of Target in Sorted Array
 Given sorted array (might contain duplicates), we can use the same approach mentioned above to find the first/last position of element in sorted array. We apply the same conditions when `target < middle` and `middle < target` as normal binary search, the different part is when `target == middle`:
 
 * To find the first position, we should keep searching the left part because we don't know if current `middle` is the first element, and return `left` pointer when while loop breaks.
@@ -100,10 +99,9 @@ Given sorted array (might contain duplicates), we can use the same approach ment
  L    M     R
 ```
 
-> Sample problem: [34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)
+> -Sample problem: [34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)
 
-
-## Variants
+## (Optional)Variants
 > TODO: Study [Binary Search 101](https://leetcode.com/problems/binary-search/solutions/423162/Binary-Search-101-The-Ultimate-Binary-Search-Handbook/)
 
 Recommended template from [Lee](https://leetcode.com/problems/house-robber-iv/solutions/3143697/java-c-python-binary-search-o-1-space):
