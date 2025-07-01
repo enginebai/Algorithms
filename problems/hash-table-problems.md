@@ -3,21 +3,21 @@
 ## Design
 | Problem          | Difficulty |
 |------------------|------------|
-|[705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
-|[706. Design HashMap](../leetcode/706.design-hashmap.md)|Medium|
+|A. [705. Design HashSet](../leetcode/705.design-hashset.md)|Easy|
+|A.[706. Design HashMap](../leetcode/706.design-hashmap.md)|Medium|
 |[535. Encode and Decode TinyURL](../leetcode/535.encode-and-decode-tinyurl.md)|Medium|
-|[380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)|Medium|
+|A. [380. Insert Delete GetRandom O(1)](../leetcode/380.insert-delete-getrandom-o1.md)|Medium|
 |[381. Insert Delete GetRandom O(1) - Duplicates allowed](../leetcode/381.insert-delete-getrandom-o1-duplicates-allowed.md)|Hard|
 |[355. Design Twitter](../leetcode/355.design-twitter.md)|Medium|
 |[1396. Design Underground System](../leetcode/1396.design-underground-system.md)|Medium|
-|[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
+|A. [146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
 
 > * https://leetcode.com/problems/all-oone-data-structure/description/ hard
 
 ## Existance
-| Problem          | Difficulty |
-|------------------|------------|
-|[1. Two Sum](../leetcode/1.two-sum.md)|Easy|
+| Problem          | Difficulty | Note |
+|------------------|------------|------|
+|A. [1. Two Sum](../leetcode/1.two-sum.md)|Easy| Emumeration + Hash Table |
 |[1679. Max Number of K-Sum Pairs](../leetcode/1679.max-number-of-k-sum-pairs.md)|Medium (1345)|
 |[1346. Check If N and Its Double Exist](../leetcode/1346.check-if-n-and-its-double-exist.md)|Easy (1225)|
 |[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium|
