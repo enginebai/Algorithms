@@ -19,18 +19,18 @@
 |A. [278. First Bad Version](../leetcode/278.first-bad-version.md)|Easy|
 |A. [35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy| Why returning`left`? |
 |A. [34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
-|C3. [611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium|How to iterate the 3 pointers and update count correctly?|
 |C3.[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)| Distance is `2 * k`|
-|[1855. Maximum Distance Between a Pair of Values](../leetcode/1855.maximum-distance-between-a-pair-of-values.md)|Medium (1514)| [TODO]() |
-|[2563. Count the Number of Fair Pairs](../leetcode/2563.count-the-number-of-fair-pairs.md)|Medium (1720)| [TODO]() |
+|C3. [611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium |How to iterate the 3 pointers and update count correctly? |
+|[2563. Count the Number of Fair Pairs](../leetcode/2563.count-the-number-of-fair-pairs.md)|Medium (1720)| `count(<=R) - count(<=L-1)`. Two pointers. |
 
 ### Two Sequences + Two Pointers
 | Problem          | Difficulty | Note |
 |------------------|------------|------|
 |C2. [2300. Successful Pairs of Spells and Potions](../leetcode/2300.successful-pairs-of-spells-and-potions.md)|Medium (1476)| Sort and binary search. |
-|C3. [826. Most Profit Assigning Work](../leetcode/826.most-profit-assigning-work.md)|Medium (1708)| Pre-compute the max profit for each difficulty. |
+|B. [826. Most Profit Assigning Work](../leetcode/826.most-profit-assigning-work.md)|Medium (1708)| Pre-compute the max profit for each difficulty. |
 |B. [475. Heaters](../leetcode/475.heaters.md)|Medium| Find the closest heater for each house. |
-|C2. [633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium| [TODO]() |
+|B. [633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium| Binary search, two pointers, hash table. |
+|[1855. Maximum Distance Between a Pair of Values](../leetcode/1855.maximum-distance-between-a-pair-of-values.md)|Medium (1514)| Classic binary search and two pointers. |
 
 ## Search on Value
 ### Minimum Value
@@ -42,7 +42,7 @@
 |------------------|------------|------|
 |A. [875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)|Medium (1766)|Eat more, shorter total time.|
 |A. [1011. Capacity To Ship Packages Within D Days](../leetcode/1011.capacity-to-ship-packages-within-d-days.md)|Medium (1725)| Larger capacity, less ship days. Split logic. | 
-|A.[410. Split Array Largest Sum](../leetcode/410.split-array-largest-sum.md)|Hard| Key intuition and split logic. |
+|A. [410. Split Array Largest Sum](../leetcode/410.split-array-largest-sum.md)|Hard| Key intuition and split logic. |
 |C2. [1760. Minimum Limit of Balls in a Bag](../leetcode/1760.minimum-limit-of-balls-in-a-bag.md)|Medium (1940)| How to calculate operations count? |
 |[2187. Minimum Time to Complete Trips](../leetcode/2187.minimum-time-to-complete-trips.md)|Medium (1640)|
 |[2594. Minimum Time to Repair Cars](../leetcode/2594.minimum-time-to-repair-cars.md)|Medium (1915)|
@@ -98,7 +98,7 @@
 ## Design
 | Problem          | Difficulty | Note |
 |------------------|------------|------|
-|A. [729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium| Maintain a sorted container and binary search the insert position. |
+|A. [729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium| Maintain a sorted container and binary search the insert position. (`TreeMap`, Line Sweep, `List`, BST) |
 |A. [981. Time Based Key-Value Store](../leetcode/981.time-based-key-value-store.md)|Medium|
 |A. [1146. Snapshot Array](../leetcode/1146.snapshot-array.md)|Medium (1770)|
 

@@ -1,13 +1,13 @@
 # Two Pointers
 
 ## Left/Right Pointers
-| Problem          | Difficulty |
-|------------------|------------|
-|[344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
-|[1750. Minimum Length of String After Deleting Similar Ends](../leetcode/1750.minimum-length-of-string-after-deleting-similar-ends.md)|Medium (1501)|
-|[11. Container With Most Water](../leetcode/11.container-with-most-water.md)|Medium|
-|[658. Find K Closest Elements](../leetcode/658.find-k-closest-elements.md)|Medium|
-|[948. Bag of Tokens](../leetcode/948.bag-of-tokens.md)|Medium (1762)|
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
+|A. [344. Reverse String](../leetcode/344.reverse-string.md)|Easy|
+|C3. [1750. Minimum Length of String After Deleting Similar Ends](../leetcode/1750.minimum-length-of-string-after-deleting-similar-ends.md)|Medium (1501)| How not to intersect? |
+|A. [11. Container With Most Water](../leetcode/11.container-with-most-water.md)|Medium| How to move the pointer? |
+|A. [658. Find K Closest Elements](../leetcode/658.find-k-closest-elements.md)|Medium| While more than `k` elements, shrink the window by moving longer distance. |
+|C3. [948. Bag of Tokens](../leetcode/948.bag-of-tokens.md)|Medium (1762)| Simulate greedily. |
 |[1775. Equal Sum Arrays With Minimum Number of Operations](../leetcode/1775.equal-sum-arrays-with-minimum-number-of-operations.md)|Medium (1850)|
 
 > * Solved: https://leetcode.com/problems/valid-palindrome/description/ e
@@ -15,51 +15,58 @@
 > * https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/description/ 2276
 
 ## nSum Problems
-| Problem          | Difficulty |
-|------------------|------------|
-|[167. Two Sum II - Input Array Is Sorted](../leetcode/167.two-sum-ii-input-array-is-sorted.md)|Medium|
-|[1679. Max Number of K-Sum Pairs](../leetcode/1679.max-number-of-k-sum-pairs.md)|Medium (1345)|
-|[15. 3Sum](../leetcode/15.3sum.md)|Medium|
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
+|A. [1. Two Sum](../leetcode/1.two-sum.md)|Easy| 
+|A. [167. Two Sum II - Input Array Is Sorted](../leetcode/167.two-sum-ii-input-array-is-sorted.md)|Medium|
+|C3. [1679. Max Number of K-Sum Pairs](../leetcode/1679.max-number-of-k-sum-pairs.md)|Medium (1345)| Count two sum == k. |
+|A. [15. 3Sum](../leetcode/15.3sum.md)|Medium| How to avoid duplicate triplets? |
 |[16. 3Sum Closest](../leetcode/16.3sum-closest.md)|Medium|
-|[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium|
-|[923. 3Sum With Multiplicity](../leetcode/923.3sum-with-multiplicity.md)|Medium (1710)|
+|[633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium| 
+|B. [923. 3Sum With Multiplicity](../leetcode/923.3sum-with-multiplicity.md)|Medium (1710)| Key intution + implementation details. |
 
 ## Read/Write Pointers
-| Problem          | Difficulty |
-|------------------|------------|
+> In this section, please pay attention to the definition of write pointer. Always have a clear definition of write pointer:
+> - The next position to write.
+> - The current written position.
+
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
 |[27. Remove Element](../leetcode/27.remove-element.md)|Easy|
-|[283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
-|[977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
-|[26. Remove Duplicates from Sorted Array](../leetcode/26.remove-duplicates-from-sorted-array.md)|Easy|
-|[80. Remove Duplicates from Sorted Array II](../leetcode/80.remove-duplicates-from-sorted-array-ii.md)|Medium|
-|[1089. Duplicate Zeros](../leetcode/1089.duplicate-zeros.md)|Easy (1262)|
-|[905. Sort Array By Parity](../leetcode/905.sort-array-by-parity.md)|Easy|
-|[922. Sort Array By Parity II](../leetcode/922.sort-array-by-parity-ii.md)|Easy (1173)|
+|A. [283. Move Zeroes](../leetcode/283.move-zeros.md)|Easy|
+|B. [977. Squares of a Sorted Array](../leetcode/977.squares-of-a-sorted-array.md)|Easy|
+|A.[26. Remove Duplicates from Sorted Array](../leetcode/26.remove-duplicates-from-sorted-array.md)|Easy|
+|A.[80. Remove Duplicates from Sorted Array II](../leetcode/80.remove-duplicates-from-sorted-array-ii.md)|Medium| Generalize to allow duplicate number appear at most `k` times. |
+|C2.[1089. Duplicate Zeros](../leetcode/1089.duplicate-zeros.md)|Easy (1262)|
+|B. [905. Sort Array By Parity](../leetcode/905.sort-array-by-parity.md)|Easy| `Even / Odd` |
+|C3. [922. Sort Array By Parity II](../leetcode/922.sort-array-by-parity-ii.md)|Easy (1173)| In-place: Find missplaced odd and even elements, and swap them. |
 |[202. Happy Number](../leetcode/202.happy-number.md)|Easy|
 
 ## Same Direction
 | Problem          | Difficulty |
 |------------------|------------|
-|[1574. Shortest Subarray to be Removed to Make Array Sorted](../leetcode/1574.shortest-subarray-to-be-removed-to-make-array-sorted.md)|Medium (1931)|
+|C3. [1574. Shortest Subarray to be Removed to Make Array Sorted](../leetcode/1574.shortest-subarray-to-be-removed-to-make-array-sorted.md)|Medium (1931)|
 
 ## Intersection
 | Problem          | Difficulty |
 |------------------|------------|
-|[350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
+|A. [350. Intersection of Two Arrays II](../leetcode/350.intersection-of-two-arrays-ii.md)|Easy|
 |[986. Interval List Intersections](../leetcode/986.interval-list-intersections.md)|Medium|
 
 > * https://leetcode.com/problems/intersection-of-two-arrays/submissions/ e
 > * https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/ e
 
-## 双序列双指针
-| Problem          | Difficulty |
-|------------------|------------|
-|[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
-|[925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy|
-|[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy (1227)|
+## Two Sequences + Two Pointers
+> Some common problems are listed in [Binary Search Problems](../problems/binary-search-problems.md#two-sequences--two-pointers).
+
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
+|A.[88. Merge Sorted Array](../leetcode/88.merge-sorted-array.md)|Easy|
+|C3. [925. Long Pressed Name](../leetcode/925.long-pressed-name.md)|Easy| Implementation details. |
+|B. [844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy (1227)| Implementation details. |
 |[475. Heaters](../leetcode/475.heaters.md)|Medium|
 |[1855. Maximum Distance Between a Pair of Values](../leetcode/1855.maximum-distance-between-a-pair-of-values.md)|Medium (1514)|
-|[2337. Move Pieces to Obtain a String](../leetcode/2337.move-pieces-to-obtain-a-string.md)|Medium (1693)|
+|C3. [2337. Move Pieces to Obtain a String](../leetcode/2337.move-pieces-to-obtain-a-string.md)|Medium (1693)| Implementation details. |
 |[777. Swap Adjacent in LR String](../leetcode/777.swap-adjacent-in-lr-string.md)|Medium (1938)|
 
 > * https://leetcode.com/problems/multiply-strings/description/
@@ -71,7 +78,7 @@
 ### 子序列
 | Problem          | Difficulty |
 |------------------|------------|
-|[392. Is Subsequence](../leetcode/392.is-subsequence.md)|Easy|
+|A. [392. Is Subsequence](../leetcode/392.is-subsequence.md)|Easy|
 > * https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/description/
 > * https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/description/ 1362
 
@@ -79,22 +86,24 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium|
-|[2563. Count the Number of Fair Pairs](../leetcode/2563.count-the-number-of-fair-pairs.md)|Medium (1720)|
+|C3. [2563. Count the Number of Fair Pairs](../leetcode/2563.count-the-number-of-fair-pairs.md)|Medium (1720)|
 
 > * https://leetcode.com/problems/number-of-arithmetic-triplets/description/ 1203
 > * https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/description/ 1817
 > * https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/ 2092
 
 ## 分组循环 (Group by Consecutive)
+> All are C3. 
+
 | Problem          | Difficulty |
 |------------------|------------|
 |[1446. Consecutive Characters](../leetcode/1446.consecutive-characters.md)|Easy (1165)|
+|[1578. Minimum Time to Make Rope Colorful](../leetcode/1578.minimum-time-to-make-rope-colorful.md)|Medium (1574)|
 |[228. Summary Ranges](../leetcode/228.summary-ranges.md)|Easy|
-|[978. Longest Turbulent Subarray](../leetcode/978.longest-turbulent-subarray.md)|Medium (1393)|
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
+|[978. Longest Turbulent Subarray](../leetcode/978.longest-turbulent-subarray.md)|Medium (1393)|
 |[1887. Reduction Operations to Make the Array Elements Equal](../leetcode/1887.reduction-operations-to-make-the-array-elements-equal.md)|Medium (1427)|
 |[845. Longest Mountain in Array](../leetcode/845.longest-mountain-in-array.md)|Medium (1436)|
-|[1578. Minimum Time to Make Rope Colorful](../leetcode/1578.minimum-time-to-make-rope-colorful.md)|Medium (1574)|
 
 > TODO: To understand [1887. Reduction Operations to Make the Array Elements Equal](../leetcode/1887.reduction-operations-to-make-the-array-elements-equal.md), and [845. Longest Mountain in Array](../leetcode/845.longest-mountain-in-array.md).
 > * https://leetcode.com/problems/count-number-of-homogenous-substrings/ 1490

@@ -72,7 +72,7 @@ The running time of insertion is `O(1)` and deletion is also `O(1)` if the list 
 > We assume that hash function calculation takes `O(1)` time.
 
 #### Analysis of Searching
-> It might be OK to skip this part.
+> It might be OK to skip this part for interview preparation.
 
 Given a hash table `T` with `m` slots that stores `n` elements, *load factor* `n / m` (i.e. `items size / table size`) defines the average number of elements stored in the chain of one slot.
 

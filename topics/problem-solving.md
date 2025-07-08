@@ -191,7 +191,7 @@ fun slidingWindowsProblem(sequence: Sequence<T>) {
 
 ### Approaches
 * Hash Map / Set / Fixed-size array: input has fixed range of value, such as lowercase letters (`IntArray(26)`), number ranges `1..n`, etc.
-* Cyclic sort or use array itself as hash table and index as key.
+* Cycle sort or use array itself as hash table and index as key.
 * [Two Sum](../leetcode/1.two-sum.md): Iterate the array, check its **complement** `target - current state` exists and update the result, and store current state to hash table as you've seen.
 
 ## [Sorting](../topics/sorting.md)
