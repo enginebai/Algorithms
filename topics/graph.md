@@ -218,6 +218,9 @@ fun <T> breadthFirstSearch(graph: Map<Node<T>, Set<Node<T>>>, source: Node<T>) {
 ### Time Complexity
 All vertices will be enqueued and dequeued at most once, it takes `O(|V|)` for all vertices. The adjacency list of each vertex is scanned only when the vertex is dequeued, it is scanned at most once, it takes `O(|E|)`, thus the total running time if `O(|V| + |E|)` (linear time, all vertices and edges are visited at most once).
 
+### Space Complexity
+We use a queue to store the vertices to visit, it takes `O(|V|)` space.
+
 ### BFS Shortest Path
 With explicit `source` and `destination`, we can use BFS to find the shortest path from `source` to `destination`.
 ```kotlin
@@ -327,6 +330,9 @@ private fun dfs(graph: Map<Node<T>, Set<Node<T>>, source: Node<T>) {
 
 ### Time Complexity
 We visit each vertex once, which takes `O(|V|)`, and for each vertex, we visit all adjacent vertices once, which takes `O(|E|)`. We visit all vertices and edges once, therefore the running time of DFS is `Θ(|V| + |E|)`.
+
+### Space Complexity
+We use a stack (or function call stack) to store the vertices to visit, it takes `O(|V|)` space.
 
 ## Topological Sort
 A *topological sort* of a directed acyclic graph (DAG) is a *linear ordering* of all vertices such that `(x, y)` which `x` appears before `y` in the ordering.

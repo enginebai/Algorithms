@@ -69,6 +69,7 @@ class LinkedListStack<T>: Stack<T> {
 ```kotlin
 class StaticArrayStack<T>(private val capacity: Int): Stack<T> {
     private val array = arrayOfNulls<T>(capacity)
+    // Top is the current written index
     private var top = -1
 
     override fun push(item: T) {
