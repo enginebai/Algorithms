@@ -43,6 +43,7 @@
 |[63. Unique Paths II](../leetcode/63.unique-paths.ii.md)|Medium|
 |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
+| [221. Maximal Square](../leetcode/221.maximal-square.md)                                               | Medium     | DP, `dp[i][j] = min(↑,←,↖)+1`. |
 
 ### Knapsack
 | Problem          | Difficulty |
