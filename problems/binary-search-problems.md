@@ -2,7 +2,7 @@
 ## Basic
 | Problem          | Difficulty |
 |------------------|------------|
-|A. [704. Binary Search](../leetcode/704.binary-search.md)|Easy|
+|[704. Binary Search](../leetcode/704.binary-search.md)|Easy|
 |[374. Guess Number Higher or Lower](../leetcode/374.guess-number-higher-or-lower.md)|Easy|
 
 > * https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/ 1387
@@ -16,40 +16,34 @@
 
 | Problem          | Difficulty | Note |
 |------------------|------------|------|
-|A. [278. First Bad Version](../leetcode/278.first-bad-version.md)|Easy|
-|A. [35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy| Why returning`left`? |
-|A. [34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|
-|C3.[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)| Distance is `2 * k`|
-|C3. [611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium |How to iterate the 3 pointers and update count correctly? |
+|[278. First Bad Version](../leetcode/278.first-bad-version.md)|Easy|
+|[35. Search Insert Position](../leetcode/35.search-insert-position.md)|Easy| Why returning`left`? |
+|[34. Find First and Last Position of Element in Sorted Array](../leetcode/34.find-first-and-last-position-of-element-in-sorted-array.md)|Medium|Lower and upper bound.|
+|[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)| Distance is `2 * k`. |
+|[611. Valid Triangle Number](../leetcode/611.valid-triangle-number.md)|Medium |How to iterate the 3 pointers and update count correctly? Sort + fix `i`, search with two pointers or binary search. |
 |[2563. Count the Number of Fair Pairs](../leetcode/2563.count-the-number-of-fair-pairs.md)|Medium (1720)| `count(<=R) - count(<=L-1)`. Two pointers. |
 
-### Two Sequences + Two Pointers
-| Problem          | Difficulty | Note |
-|------------------|------------|------|
-|C2. [2300. Successful Pairs of Spells and Potions](../leetcode/2300.successful-pairs-of-spells-and-potions.md)|Medium (1476)| Sort and binary search. |
-|B. [826. Most Profit Assigning Work](../leetcode/826.most-profit-assigning-work.md)|Medium (1708)| Pre-compute the max profit for each difficulty. |
-|B. [475. Heaters](../leetcode/475.heaters.md)|Medium| Find the closest heater for each house. |
-|B. [633. Sum of Square Numbers](../leetcode/633.sum-of-square-numbers.md)|Medium| Binary search, two pointers, hash table. |
-|[1855. Maximum Distance Between a Pair of Values](../leetcode/1855.maximum-distance-between-a-pair-of-values.md)|Medium (1514)| Classic binary search and two pointers. |
+## Two Pointers on Two Sorted Sequences
+See [Two Pointers on Two Sorted Sequences](./two-pointers-problems.md#two-pointers-on-two-sorted-sequences).
 
 ## Search on Value
 ### Minimum Value
 > - "Search the First/Last Position" is the prerequisite of "Search on Value".
-> - This also includes "minimize the maximum value". I order these problems by similarity, not by difficulty.
+> - This also includes "minimize the maximum value". Order these problems by similarity, not by difficulty.
 > - **Review Notes**: Please review the lower, upper bound, monotonicity, **feasibility check** for all problems.
 
 | Problem          | Difficulty | Note |
 |------------------|------------|------|
-|A. [875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)|Medium (1766)|Eat more, shorter total time.|
-|A. [1011. Capacity To Ship Packages Within D Days](../leetcode/1011.capacity-to-ship-packages-within-d-days.md)|Medium (1725)| Larger capacity, less ship days. Split logic. | 
-|A. [410. Split Array Largest Sum](../leetcode/410.split-array-largest-sum.md)|Hard| Key intuition and split logic. |
-|C2. [1760. Minimum Limit of Balls in a Bag](../leetcode/1760.minimum-limit-of-balls-in-a-bag.md)|Medium (1940)| How to calculate operations count? |
+|[875. Koko Eating Bananas](../leetcode/875.koko-eating-bananas.md)|Medium (1766)|Eat more, shorter total time.|
+|[1011. Capacity To Ship Packages Within D Days](../leetcode/1011.capacity-to-ship-packages-within-d-days.md)|Medium (1725)| Larger capacity, less ship days. Split logic. | 
+|[410. Split Array Largest Sum](../leetcode/410.split-array-largest-sum.md)|Hard| Key intuition and split logic. |
+|[1760. Minimum Limit of Balls in a Bag](../leetcode/1760.minimum-limit-of-balls-in-a-bag.md)|Medium (1940)| How to calculate operations count? |
 |[2187. Minimum Time to Complete Trips](../leetcode/2187.minimum-time-to-complete-trips.md)|Medium (1640)|
 |[2594. Minimum Time to Repair Cars](../leetcode/2594.minimum-time-to-repair-cars.md)|Medium (1915)|
 |[1283. Find the Smallest Divisor Given a Threshold](../leetcode/1283.find-the-smallest-divisor-given-a-threshold.md)|Medium (1542)|
-|B. [2064. Minimized Maximum of Products Distributed to Any Store](../leetcode/2064.minimized-maximum-of-products-distributed-to-any-store.md)|Medium (1886)|
+|[2064. Minimized Maximum of Products Distributed to Any Store](../leetcode/2064.minimized-maximum-of-products-distributed-to-any-store.md)|Medium (1886)|
 |[1870. Minimum Speed to Arrive on Time](../leetcode/1870.minimum-speed-to-arrive-on-time.md)|Medium (1676)|
-|C1. [1482. Minimum Number of Days to Make m Bouquets](../leetcode/1482.minimum-number-of-days-to-make-m-bouquets.md)|Medium (1945)|
+|[1482. Minimum Number of Days to Make m Bouquets](../leetcode/1482.minimum-number-of-days-to-make-m-bouquets.md)|Medium (1945)|
 |[2439. Minimize Maximum of Array](../leetcode/2439.minimize-maximum-of-array.md)|Medium (1965)|
 |[2560. House Robber IV](../leetcode/2560.house-robber-iv.md)|Medium (2081)|
 |[1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)|Medium (1947)|
@@ -62,8 +56,8 @@
 
 | Problem          | Difficulty |
 |------------------|------------|
-|B. [2226. Maximum Candies Allocated to K Children](../leetcode/2226.maximum-candies-allocated-to-k-children.md)|Medium (1646)|
-|B. [1552. Magnetic Force Between Two Balls](../leetcode/1552.magnetic-force-between-two-balls.md)|Medium (1919)|
+|[2226. Maximum Candies Allocated to K Children](../leetcode/2226.maximum-candies-allocated-to-k-children.md)|Medium (1646)|
+|[1552. Magnetic Force Between Two Balls](../leetcode/1552.magnetic-force-between-two-balls.md)|Medium (1919)|
 
 > * My contest https://leetcode.com/problems/maximize-score-of-numbers-in-ranges/description/ 1768
 > * https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-ii/description/ 1773
@@ -74,13 +68,14 @@
 > * https://leetcode.com/problems/find-the-safest-path-in-a-grid/description/ 2153
 
 ### Kth Smallest/Largest Element
+> Some can be solved by heap. Consider to merge this section with heap problems.
+
 | Problem          | Difficulty | Note |
 |------------------|------------|------|
-|[1539. Kth Missing Positive Number](../leetcode/1539.kth-missing-positive-number.md)|Easy| Key intuition of missing count and what to return. |
-|A. [378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium| First element that has `count(≤ x) == k`. |
-|A. [373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)|Medium|
+|[1539. Kth Missing Positive Number](../leetcode/1539.kth-missing-positive-number.md)|Easy| Key intuition: Counting missing = `arr[i] - (i + 1)`. |
+|[378. Kth Smallest Element in a Sorted Matrix](../leetcode/378.kth-smallest-element-in-a-sorted-matrix.md)|Medium| First element that has `count(≤ x) == k`. |
+|[373. Find K Pairs with Smallest Sums](../leetcode/373.find-k-pairs-with-smallest-sums.md)|Medium|
 
-> Some can be solved by heap. Consider to merge this section with heap problems.
 > * https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/description/ h
 > * https://leetcode.com/problems/find-k-th-smallest-pair-distance/description/
 > * https://leetcode.com/problems/nth-magical-number/description/ 1897
@@ -89,36 +84,36 @@
 ## Search in Matrix
 | Problem          | Difficulty | Note |
 |------------------|------------|------|
-|A. [74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium| Key difference between [240.](../leetcode/240.search-a-2d-matrix-ii.md) |
-|B. [1351. Count Negative Numbers in a Sorted Matrix](../leetcode/1351.count-negative-numbers-in-a-sorted-matrix.md)|Easy| `count(≤ x)`. |
-|A. [240. Search a 2D Matrix II](../leetcode/240.search-a-2d-matrix-ii.md)|Medium| Key intuition + `count(≤ x)`. |
+|[74. Search a 2D Matrix](../leetcode/74.search-a-2d-matrix.md)|Medium| Key difference between [240.](../leetcode/240.search-a-2d-matrix-ii.md) |
+|[1351. Count Negative Numbers in a Sorted Matrix](../leetcode/1351.count-negative-numbers-in-a-sorted-matrix.md)|Easy| `count(≤ x)`. |
+|[240. Search a 2D Matrix II](../leetcode/240.search-a-2d-matrix-ii.md)|Medium| Start from top-right or bottom-left + `count(≤ x)`. |
 
 > * https://leetcode.com/problems/find-a-peak-element-ii/
 
 ## Design
 | Problem          | Difficulty | Note |
 |------------------|------------|------|
-|A. [729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium| Maintain a sorted container and binary search the insert position. (`TreeMap`, Line Sweep, `List`, BST) |
-|A. [981. Time Based Key-Value Store](../leetcode/981.time-based-key-value-store.md)|Medium|
-|A. [1146. Snapshot Array](../leetcode/1146.snapshot-array.md)|Medium (1770)|
+|[729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium| Maintain a sorted container and binary search the insert position. (`TreeMap`, Sorted List, Line Sweep, BST) |
+|[981. Time Based Key-Value Store](../leetcode/981.time-based-key-value-store.md)|Medium| Last previous timestamp <= `timestamp`. |
+|[1146. Snapshot Array](../leetcode/1146.snapshot-array.md)|Medium (1770)| Record the change log and binary search on it. |
 
 ## Rotated Array
 | Problem          | Difficulty | Note |
 |------------------|------------|------|
-|B. [33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium| One part is sorted |
-|B. [81. Search in Rotated Sorted Array II](../leetcode/81.search-in-rotated-sorted-array-ii.md)|Medium| Key difference between [33.](../leetcode/33.search-in-rotated-sorted-array.md) |
-|B. [153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium|
+|[33. Search in Rotated Sorted Array](../leetcode/33.search-in-rotated-sorted-array.md)|Medium| One part is sorted. |
+|[81. Search in Rotated Sorted Array II](../leetcode/81.search-in-rotated-sorted-array-ii.md)| Medium| Key difference between [33.](../leetcode/33.search-in-rotated-sorted-array.md). Handle duplicates. |
+|[153. Find Minimum in Rotated Sorted Array](../leetcode/153.find-minimum-in-rotated-sorted-array.md)|Medium| List all combinations of rotation and observe the pattern. |
 
 > * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/ h
 
 ## Other
 | Problem          | Difficulty | Note |
 |------------------|------------|------|
-|A. [69. Sqrt(x)](../leetcode/69.sqrt(x).md)|Easy| Last number that meets the condition. |
-|B. [162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
+|[69. Sqrt(x)](../leetcode/69.sqrt(x).md)|Easy| Last number `<= x`. |
+|[162. Find Peak Element](../leetcode/162.find-peak-element.md)|Medium|
 |[1095. Find in Mountain Array](../leetcode/1095.find-in-mountain-array.md)|Hard (1827)|
-|B. [287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)|Medium| `count(≤ x)` <= `x`. |
-|B. [540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium| Relation between index and number. |
+|[287. Find the Duplicate Number](../leetcode/287.find-the-duplicate-number.md)|Medium| `count(≤ x)` <= `x`. |
+|[540. Single Element in a Sorted Array](../leetcode/540.single-element-in-a-sorted-array.md)|Medium| Relation between index and number. |
 
 > * https://leetcode.com/problems/peak-index-in-a-mountain-array/description/ m
 > * https://leetcode.com/problems/median-of-two-sorted-arrays/description/

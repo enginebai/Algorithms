@@ -2,15 +2,15 @@
 
 * [Study guidelines](https://leetcode.com/discuss/study-guide/2166045/)
 
-## Line Sweep 一维差分（扫描线）
-| Problem          | Difficulty |
-|------------------|------------|
+## Line Sweep
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
 |[1094. Car Pooling](../leetcode/1094.car-pooling.md)|Medium (1441)|
 |[2848. Points That Intersect With Cars](../leetcode/2848.points-that-intersect-with-cars.md)|Medium (1229)|
 |[1893. Check if All the Integers in a Range Are Covered](../leetcode/1893.check-if-all-the-integers-in-a-range-are-covered.md)|Easy (1307)|
 |[3355. Zero Array Transformation I](../leetcode/3355.zero-array-transformation-i.md)|Medium (1638)|
 |[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)|
-|[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
+|[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)| Max overlap = min groups. |
 |[2381. Shifting Letters II](../leetcode/2381.shifting-letters-ii.md)|Medium (1793)|
 
 > * https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/description/ 1835
@@ -68,7 +68,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)|Premium|
-|[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
+|**[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
 
 ### 2.3 区间选点
 

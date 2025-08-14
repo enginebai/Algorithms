@@ -3,8 +3,8 @@
 ## Basic
 | Problem          | Difficulty |
 |------------------|------------|
-|[787. Cheapest Flights Within K Stops](../leetcode/787.cheapest-flights-within-k-stops.md)|Medium|
 |[743. Network Delay Time](../leetcode/743.network-delay-time.md)|Medium|
+|[787. Cheapest Flights Within K Stops](../leetcode/787.cheapest-flights-within-k-stops.md)|Medium|
 |[1631. Path With Minimum Effort](../leetcode/1631.path-with-minimum-effort.md)|Medium (1947)|
 
 > * TODO: Review the notes + implementations
@@ -20,7 +20,6 @@
 
 
 ## Dijkstra's Algorithm
-
 | Problem          | Difficulty |
 |------------------|------------|
 |[1514. Path with Maximum Probability](../leetcode/1514.path-with-maximum-probability.md)|Medium|

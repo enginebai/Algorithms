@@ -21,6 +21,7 @@
 |[70. Climbing Stairs](../leetcode/70.climbing-stairs.md)|Easy|
 |[746. Min Cost Climbing Stairs](../leetcode/746.min-cost-climbing-stairs.md)|Easy|
 |[377. Combination Sum IV](../leetcode/377.combination-sum-iv.md)|Medium|
+|[740. Delete and Earn](../leetcode/740.delete-and-earn.md)|Medium|
 
 ### House Robber
 | Problem          | Difficulty |
@@ -43,6 +44,7 @@
 |[63. Unique Paths II](../leetcode/63.unique-paths.ii.md)|Medium|
 |[139. Word Break](../leetcode/139.word-break.md)|Medium|
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
+|[221. Maximal Square](../leetcode/221.maximal-square.md)                                               | Medium     | DP, `dp[i][j] = min(↑,←,↖)+1`. |
 
 ### Knapsack
 | Problem          | Difficulty |
@@ -51,7 +53,7 @@
 |[494. Target Sum](../leetcode/494.target-sum.md)|Medium|
 |[279. Perfect Squares](../leetcode/279.perfect-squares.md)|Medium|
 |[322. Coin Change](../leetcode/322.coin-change.md)|Medium|
-|[518. Coin Change 2](../leetcode/518.coin-change-2.md)|Medium|
+|[518. Coin Change 2](../leetcode/518.coin-change-ii.md)|Medium|
 |[1155. Number of Dice Rolls With Target Sum](../leetcode/1155.number-of-dice-rolls-with-target-sum.md)|Medium|
 
 ### LCS + LIS + Palindrome

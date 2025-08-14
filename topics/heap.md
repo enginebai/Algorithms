@@ -1,5 +1,6 @@
 # Heap
-A *(binary) heap* a is specialized [tree](../topics/tree.md)-based data structure that meets the following criteria:
+
+A _(binary) heap_ a is specialized [tree](../topics/tree.md)-based data structure that meets the following criteria:
 
 1. It's a complete binary tree.
 2. The value of each node satifies a **heap property**, there are two kinds of heap: max / min. In a max heap, the value of every parent is greater than or equals to it all chidren. The largest element in a max heap is at the root.
@@ -7,16 +8,18 @@ A *(binary) heap* a is specialized [tree](../topics/tree.md)-based data structur
 ![Binary Heap](../media/binary-heap.png)
 
 We use array to represent the binary heap, so that
-* `A[0]` is the root, it represents the max or min value.
+
+- `A[0]` is the root, it represents the max or min value.
 
 And given `i` index of node:
-* `floor((i - 1) / 2` is the parent index. (`floor(i / 2)` for 1-based index)
-* `i * 2 + 1` is the left index. (`2 * i`)
-* `i * 2 + 2` is right index. (`2 * i + 1`)
-* `heapSize` return the actual used size of heap in the array, which `heapSize <= A.size`
 
-> * We might use 1-based index for convenient.
-> * The index implicitly plays the role of the pointers.
+- `floor((i - 1) / 2` is the parent index. (`floor(i / 2)` for 1-based index)
+- `i * 2 + 1` is the left index. (`2 * i`)
+- `i * 2 + 2` is right index. (`2 * i + 1`)
+- `heapSize` return the actual used size of heap in the array, which `heapSize <= A.size`
+
+> - We might use 1-based index for convenient.
+> - The index implicitly plays the role of the pointers.
 
 ```kotlin
 // We also can use this as min heap.
@@ -49,6 +52,7 @@ And the max heap property is `A[parentIndex(i)] >= A[i]`, and min heap property 
 > We will use max heap as example in the whoe
 
 ## Heapify
+
 When we modify the element of the heap, for example, inserting a new value, might violate the max/min heap property, so we have to heapify until it meets the property again.
 
 ```kotlin
@@ -62,11 +66,11 @@ fun heapifyDown(A, i: Int) {
     if (A[leftIndex] != null && A[largestIndex] < A[leftIndex]) {
         largestIndex = leftIndex
     }
-    
+
     if (A[rightIndex] != null && A[largestIndex] < A[rightIndex]) {
         largestIndex = rightIndex
     }
-    
+
     if (largestIndex != i) {
         swap(A[largestIndex], A[i])
         heapifyDown(A, largestIndex)
@@ -74,7 +78,7 @@ fun heapifyDown(A, i: Int) {
 }
 
 // We compare with it parent and shift up
-fun heapifyUp(A, i: Int) { 
+fun heapifyUp(A, i: Int) {
     while (hasParent(i) && A[parentIndex(i)] < A[i]) {
         swap(parentIndex(i), i)
         heapifyUp(A, parentIndex(i))
@@ -91,7 +95,8 @@ private fun swap(first: Int, second: Int) {
 It takes `O(lg n)`, since it goes down at most the height of the binary tree.
 
 ## Priority Queue
-The *priority queue* ADT keeps track of the order of items so that it's capable of accessing/removing the most important item quickly. It's the most popular application of heap.
+
+The _priority queue_ ADT keeps track of the order of items so that it's capable of accessing/removing the most important item quickly. It's the most popular application of heap.
 
 ```kotlin
 interface PriorityQueue<T> {
@@ -104,7 +109,8 @@ interface PriorityQueue<T> {
 ```
 
 ## Operations
-* Build the heap: We build a max heap by running `heapifyDown()` from the bottom to up of the array. That is, all the nodes having children nodes, from index `floor(A.size / 2)` down to 0. (from the last item to the first is also right, just wasting time on the leaf)
+
+- Build the heap: We build a max heap by running `heapifyDown()` from the bottom to up of the array. That is, all the nodes having children nodes, from index `floor(A.size / 2)` down to 0. (from the last item to the first is also right, just wasting time on the leaf)
 
 ```kotlin
 fun buildMaxHeap(A) {
@@ -160,13 +166,14 @@ private fun ensureExtraCapacity() {
 All operations takes `O(lg n)` except for `peek()`, which takes `O(1)` only.
 
 Different time complexity of different implementation of priority queue:
-| Operations         | peek   | insert    | poll/delete|
+| Operations | peek | insert | poll/delete|
 |--------------------|--------|-----------|-----------|
-| Linked List        | `O(1)` | `O(n)`    | `O(1)`    |
+| Linked List | `O(1)` | `O(n)` | `O(1)` |
 | Binary Search Tree | `O(1)` | `O(lg n)` | `O(lg n)` |
-| Binary Heap        | `O(1)` | `O(lg n)` | `O(lg n)` |
+| Binary Heap | `O(1)` | `O(lg n)` | `O(lg n)` |
 
 ## Heap Sort
+
 Max heap property shows that the value of first item is the maximum, and other part is unordered, so if we would to sort in ascending order, there are our steps:
 
 1. Run `buildMaxHeap(A)` so that `A[0]` will be the largest item. (`[Largest item | Unordered items]`)
@@ -188,30 +195,31 @@ fun heapSort(A) {
 
 ![Heap Sort](../media/heap-sort.png)
 
-* **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
+- **Time Complexity**: `buildMapHeap(A)` takes `O(n)`, and `n - 1` elements run `heapifyDown()`, which takes `O(n - 1) * O(lg n)` = `O(n lg n)`.
 
 ## Kotlin APIs
+
 ```kotlin
 val minHeap = PriorityQueue<Int>() // By default, it's min heap
 val minHeap = PriorityQueue<Int>() { n1, n2 -> n1 - n1 }
 
 val maxHeap = PriorityQueue<Int>() { n1, n2 -> n2 - n1 }
-val maxHeap = PriorityQueue<Int>(reverseOrder())
-val maxHeap = PriorityQueue<Int>(compareByDescending { it })
+val maxHeap = PriorityQueue(reverseOrder<Int>())
+val maxHeap = PriorityQueue(compareByDescending<Int> { it })
 
 // Create a max heap based on the values in count
 val count = IntArray(26)
 // We store the index in the heap
-val maxHeap = PriorityQueue<Int>(compareByDescending { count[it] })
+val maxHeap = PriorityQueue(compareByDescending<Int> { count[it] })
 
 // Compare the count first, if the count is the same, compare the value
-val maxHeap = PriorityQueue<Int>(compareByDescending { count[it] }.thenBy{ it })
+val maxHeap = PriorityQueue(compareByDescending<Int> { count[it] }.thenBy{ it })
 
 data class Person(val name: String, val age: Int)
-val peopleQueue = PriorityQueue<Person>(compareByDescending { it.age })
+val peopleQueue = PriorityQueue(compareByDescending<Person> { it.age })
 
 data class Task(val taskId: Int, val priority: Int)
-val tasks = PriorityQueue<Task>(compareByDescending<Task> { it.priority }.thenByDescending { it.taskId })
+val tasks = PriorityQueue(compareByDescending<Task> { it.priority }.thenByDescending { it.taskId })
 
 maxHeap.add(1) / offer(1)   // Adds an element to the queue `O(log n)`.
 maxHeap.remove() / poll()   // Removes and returns the element with the highest priority `O(log n)`.
@@ -223,6 +231,70 @@ maxHeap.isNotEmpty()
 ```
 
 ## Full Implementation
+
+```kotlin
+class MinHeap(val capacity: Int) {
+
+    private val values = IntArray(capacity)
+    var size = 0
+        private set
+
+    fun add(num: Int) {
+        values[size] = num
+        size++
+        heapifyUp(size - 1)
+    }
+
+    private fun heapifyUp(i: Int) {
+        var parentIndex = i.parentIndex()
+        if (parentIndex >= 0 && values[i] < values[parentIndex]) {
+            values.swap(i, parentIndex)
+            heapifyUp(parentIndex)
+        }
+    }
+
+    fun poll(): Int {
+        val first = peek()
+        values[0] = values[size - 1]
+        size--
+        heapifyDown(0)
+        return first
+    }
+
+    private fun heapifyDown(i: Int) {
+        var minIndex = i
+        val leftIndex = i.leftIndex()
+        val rightIndex = i.rightIndex()
+        if (leftIndex < size && values[leftIndex] < values[minIndex]) {
+            minIndex = leftIndex
+        }
+        if (rightIndex < size && values[rightIndex] < values[minIndex]) {
+            minIndex = rightIndex
+        }
+        if (i != minIndex) {
+            values.swap(i, minIndex)
+            heapifyDown(minIndex)
+        }
+    }
+
+    fun peek(): Int {
+        return values[0]
+    }
+
+    private fun Int.parentIndex() = (this - 1) / 2
+    private fun Int.leftIndex() = this * 2 + 1
+    private fun Int.rightIndex() = this * 2 + 2
+
+    private fun IntArray.swap(i: Int, j: Int) {
+        val temp = this[i]
+        this[i] = this[j]
+        this[j] = temp
+    }
+}
+```
+
+Implemented the `PriorityQueue` interface:
+
 ```kotlin
 interface MyPriorityQueue {
     fun buildMaxHeap(array: IntArray)

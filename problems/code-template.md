@@ -1,6 +1,7 @@
 # Code Templates
 
 ## Common Code Snippets
+
 ```kotlin
 // Grid directions
 private val directions = arrayOf(
@@ -10,7 +11,21 @@ private val directions = arrayOf(
     intArrayOf(0, 1)    // Right
 )
 
+// Built-in function
 "string".reversed()
+
+// TC: O(n), SC: O(n)
+private fun String.reverse(): String {
+    val chars = this.toCharArray()
+    var left = 0
+    var right = chars.size - 1
+    while (left < right) {
+        chars.swap(left, right)
+        left++
+        right--
+    }
+    return String(chars)
+}
 
 fun IntArray.swap(i: Int, j: Int) {
     val temp = this[i]
@@ -40,8 +55,11 @@ val vowels = setOf('a', 'e', 'i', 'o', 'u')
 ```
 
 ## Subarray
-### Iterate K size 
-* Brute force:
+
+### Iterate K size
+
+- Brute force:
+
 ```kotlin
 fun subarray(nums: IntArray, k: Int) {
     val n = nums.size
@@ -53,7 +71,9 @@ fun subarray(nums: IntArray, k: Int) {
     }
 }
 ```
-* Fixed window:
+
+- Fixed window:
+
 ```kotlin
 // General sliding window
 val n = nums.size
@@ -84,6 +104,7 @@ for (right in 0 until n) {
 ```
 
 ## Binary Search
+
 ```kotlin
 fun binarySearch(nums: IntArray, target: Int): Int {
     var left = TODO()
@@ -101,13 +122,16 @@ fun binarySearch(nums: IntArray, target: Int): Int {
     return -1
 }
 ```
+
 ### Find the first element that satisfies the condition
+
 ```js
 X X X O O O O O O O
       ^
 
 left = 0 ~ n
 ```
+
 ```kotlin
 fun binarySearch(nums: IntArray, target: Int): Int {
     var left = 0
@@ -126,12 +150,14 @@ fun binarySearch(nums: IntArray, target: Int): Int {
 ```
 
 ### Find the last element that satisfies the condition
+
 ```js
 O O O O X X X X
       ^
 
 right = -1 ~ n - 1
 ```
+
 ```kotlin
 fun binarySearch(nums: IntArray, target: Int): Int {
     var left = 0
@@ -144,12 +170,13 @@ fun binarySearch(nums: IntArray, target: Int): Int {
         } else {
             right = middle - 1
         }
-    }   
+    }
     return if (right in 0 until nums.size) right else -1
 }
 ```
 
 ## Grid - DFS
+
 ```kotlin
 val m = grid.size
 val n = grid[0].size
@@ -173,21 +200,27 @@ fun dfs(grid: Array<IntArray>, x: Int, y: Int, visited: HashSet<Pair<Int, Int>>)
     visited.add(x to y)
 
     for (d in directions) {
-        dfs(grid, x + d[0], y + d[1]) 
+        dfs(grid, x + d[0], y + d[1])
     }
 }
-```     
+```
 
 ## Grid - Area
+
 Calculate the area of `1's` in the grid.
+
 > TODO
 
 ## Grid - Component Counts
+
 Count the number of components in the grid.
+
 > TODO
 
 ## Build Graph from Edges
+
 > TODO
+
 ```kotlin
 // Undirected graph
 private fun buildGraph(edges: Array<IntArray>): HashMap<Int, HashSet<Int>> {
@@ -204,6 +237,7 @@ private fun buildGraph(edges: Array<IntArray>): HashMap<Int, HashSet<Int>> {
 ```
 
 ## Grid BFS
+
 ```kotlin
 // in main function
 val m = grid.size
@@ -253,10 +287,13 @@ while (queue.isNotEmpty()) {
 ```
 
 ## BFS Shortest Path
+
 ```kotlin
+
 ```
 
 ## Return the Answer Modulo 1e9 + 7
+
 ```kotlin
 var answer = 0L // Define as Long
 
@@ -268,6 +305,7 @@ return answer.toInt()
 ```
 
 ## Tree BFS
+
 ```kotlin
 fun bfs(root: TreeNode?) {
     if (root == null) return
@@ -284,6 +322,7 @@ fun bfs(root: TreeNode?) {
 ```
 
 ## Find the Largest Two Numbers
+
 ```kotlin
 // Allow duplicates
 fun findLargestTwoNumbers(nums: IntArray) {
@@ -302,6 +341,7 @@ fun findLargestTwoNumbers(nums: IntArray) {
 ```
 
 ## Two Sum in Sorted Array
+
 Two pointers approach to check if two elements that can sum up to `k`.
 
 ```kotlin
@@ -319,6 +359,7 @@ fun twoSum(A: IntArray, k: Int): Boolean {
 ```
 
 ## Reverse Array in Specific Range
+
 Avoid iterating `i` from `start` to `end`, it's error-prone.
 
 ```kotlin
@@ -334,17 +375,19 @@ fun reverseArray(nums: IntArray, start: Int, end: Int) {
 ```
 
 ## Diagonal Traversal
+
 > Works, but need to understand how it works.
-The selected code iterates over the bottom-left diagonals of a square grid (2D array) and collects the elements into a list. Here's a breakdown:  
-1. Outer Loop (`for (k in 0 until n)`):  
-    * `k` represents the diagonal offset from the main diagonal (starting from the top-left corner).
-    * For example, when `k = 0`, it processes the main diagonal. When `k = 1`, it processes the diagonal below the main diagonal, and so on.
-2. Inner Loop (`for (i in k until n)`):  
-    * `i` iterates over the rows starting from the diagonal offset `k` to the last row.
-3. Column Index Calculation (`val j = i - k`):  
-    * For each row `i`, the column index `j` is calculated as `i - k`. This ensures that the element at `(i, j)` lies on the current diagonal.
-4. Adding Elements to the List (`diagonal.add(grid[i][j])`):  
-    * The element at position `(i, j)` in the grid is added to the diagonal list.
+> The selected code iterates over the bottom-left diagonals of a square grid (2D array) and collects the elements into a list. Here's a breakdown:
+
+1. Outer Loop (`for (k in 0 until n)`):
+   - `k` represents the diagonal offset from the main diagonal (starting from the top-left corner).
+   - For example, when `k = 0`, it processes the main diagonal. When `k = 1`, it processes the diagonal below the main diagonal, and so on.
+2. Inner Loop (`for (i in k until n)`):
+   - `i` iterates over the rows starting from the diagonal offset `k` to the last row.
+3. Column Index Calculation (`val j = i - k`):
+   - For each row `i`, the column index `j` is calculated as `i - k`. This ensures that the element at `(i, j)` lies on the current diagonal.
+4. Adding Elements to the List (`diagonal.add(grid[i][j])`):
+   - The element at position `(i, j)` in the grid is added to the diagonal list.
 
 ```kotlin
 fun diagonalTraversal(grid: Array<IntArray>) {
@@ -381,7 +424,9 @@ fun diagonalTraversal(grid: Array<IntArray>) {
 ```
 
 ## Get `k` Nodes
+
 Get the first `k` nodes from the linked list and disconnect the rest. If `k` is more than the length of the linked list, return the whole linked list.
+
 ```kotlin
 fun getTotalNodes(head: ListNode?, k: Int): ListNode? {
     if (head == null || k == 0) return null
@@ -399,6 +444,7 @@ fun getTotalNodes(head: ListNode?, k: Int): ListNode? {
 ```
 
 ## Special
+
 ```kotlin
 /**
  Replace character with the next or previous character in the alphabet.
@@ -412,6 +458,7 @@ fun cost(a: Char, b: Char): Int {
 ```
 
 ## CodeForces
+
 ```kotlin
 import java.io.PrintWriter
 import java.util.StringTokenizer

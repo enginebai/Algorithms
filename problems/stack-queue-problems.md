@@ -1,17 +1,17 @@
 ## [Stack & Queue](../topics/stack-queue.md)
 
 ### General Applications
-| Problem          | Difficulty |
-|------------------|------------|
-|[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy (1227)|
-|[155. Min Stack](../leetcode/155.min-stack.md)|Easy|
-|[232. Implement Queue using Stacks](../leetcode/232.implement-queue-using-stacks.md)|Easy|
-|[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy|
-|[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium (1453)|
-|[946. Validate Stack Sequences](../leetcode/946.validate-stack-sequences.md)|Medium (1461)|
-|[71. Simplify Path](../leetcode/71.simplify-path.md)|Medium|
-|[636. Exclusive Time of Functions](../leetcode/636.exclusive-time-of-functions.md)|Medium|
-|[895. Maximum Frequency Stack](../leetcode/895.maximum-frequency-stack.md)|Hard (2027)|
+| Problem          | Difficulty | Note |
+|------------------|------------|--------|
+|[844. Backspace String Compare](../leetcode/844.backspace-string-compare.md)|Easy (1227)| 
+|[155. Min Stack](../leetcode/155.min-stack.md)|Easy| Two stacks for `O(1)` min. |
+|[232. Implement Queue using Stacks](../leetcode/232.implement-queue-using-stacks.md)|Easy| Flush only when `pop` is called. |
+|[225. Implement Stack using Queues](../leetcode/225.implement-stack-using-queues.md)|Easy| Rotation trick to maintain top. |
+|**[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium (1453)| Doubly linked list. |
+|[946. Validate Stack Sequences](../leetcode/946.validate-stack-sequences.md)|Medium (1461)| Be able to pop when peek matches the popped array. |
+|[71. Simplify Path](../leetcode/71.simplify-path.md)|Medium| Handle `.` and `..` and other cases. |
+|[636. Exclusive Time of Functions](../leetcode/636.exclusive-time-of-functions.md)|Medium| A -> B, A lends time to B. `A.time -= B.time` |
+|**[895. Maximum Frequency Stack](../leetcode/895.maximum-frequency-stack.md)|Hard (2027)| Bucket of stacks or heap with `(freq, index)` as state. |
 
 > * Solved: https://leetcode.com/problems/build-an-array-with-stack-operations/description/ 1180 
 > * Solved: https://leetcode.com/problems/design-a-stack-with-increment-operation/description/ 1285 // Using array + top pointer to simulate stack, should have very clear definition of the top pointer. 2024/10/21
@@ -19,28 +19,29 @@
 > * Solved: https://leetcode.com/problems/removing-stars-from-a-string/description/ 1347 // Very easy problem, mind the edge case. 2024/10/21
 
 ### Nested Structure
-| Problem          | Difficulty |
-|------------------|------------|
+| Problem          | Difficulty | Note |
+|------------------|------------|--------|
 |[150. Evaluate Reverse Polish Notation](../leetcode/150.evaluate-reverse-polish-notation.md)|Medium|
 |[1190. Reverse Substrings Between Each Pair of Parentheses](../leetcode/1190.reverse-substrings-between-each-pair-of-parentheses.md)|Medium (1485)|
-|[394. Decode String](../leetcode/394.decode-string.md)|Medium|
-|[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium (1562)|
-|[1106. Parsing A Boolean Expression](../leetcode/1106.parsing-a-boolean-expression.md)|Hard (1880)|
-|[227. Basic Calculator II](../leetcode/227.basic-calculator-ii.md)|Medium|
-|[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
-|[726. Number of Atoms](../leetcode/726.number-of-atoms.md)|Hard|
+|[394. Decode String](../leetcode/394.decode-string.md)|Medium| `Multi-digit[xyz]` patterns. |
+|**[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium (1562)|
+|**[341. Flatten Nested List Iterator](../leetcode/341.flatten-nested-list-iterator.md)|Medium|
+|**[1106. Parsing A Boolean Expression](../leetcode/1106.parsing-a-boolean-expression.md)|Hard (1880)| Recursion. |
+|**[227. Basic Calculator II](../leetcode/227.basic-calculator-ii.md)|Medium| How to handle `-` at first and flush the last number. |
+|**[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
+|[726. Number of Atoms](../leetcode/726.number-of-atoms.md)|Hard| Merge counts when pop. |
 
 ### Parentheses
-| Problem          | Difficulty |
-|------------------|------------|
+| Problem          | Difficulty | Note |
+|------------------|------------|--------|
 |[20. Valid Parentheses](../leetcode/20.valid-parentheses.md)|Easy|
 |[1614. Maximum Nesting Depth of the Parentheses](../leetcode/1614.maximum-nesting-depth-of-the-parentheses.md)|Easy (1322)|
 |[1021. Remove Outermost Parentheses](../leetcode/1021.remove-outermost-parentheses.md)|Easy (1311)|
-|[921. Minimum Add to Make Parentheses Valid](../leetcode/921.minimum-add-to-make-parentheses-valid.md)|Medium (1242)|
+|**[921. Minimum Add to Make Parentheses Valid](../leetcode/921.minimum-add-to-make-parentheses-valid.md)|Medium (1242)|
 |[1249. Minimum Remove to Make Valid Parentheses](../leetcode/1249.minimum-remove-to-make-valid-parentheses.md)|Medium (1657)|
-|[1541. Minimum Insertions to Balance a Parentheses String](../leetcode/1541.minimum-insertions-to-balance-a-parentheses-string.md)|Medium (1759)|
-|[678. Valid Parenthesis String](../leetcode/678.valid-parenthesis-string.md)|Medium (1700)|
-|[1963. Minimum Number of Swaps to Make the String Balanced](../leetcode/1963.minimum-number-of-swaps-to-make-the-string-balanced.md)|Medium (1688)|
+|**[1541. Minimum Insertions to Balance a Parentheses String](../leetcode/1541.minimum-insertions-to-balance-a-parentheses-string.md)|Medium (1759)| Check 2 `))`, then 1 `(`. |
+|**[678. Valid Parenthesis String](../leetcode/678.valid-parenthesis-string.md)|Medium (1700)| Greedy range `[min,max]`. |
+|**[1963. Minimum Number of Swaps to Make the String Balanced](../leetcode/1963.minimum-number-of-swaps-to-make-the-string-balanced.md)|Medium (1688)|
 
 > * **https://leetcode.com/problems/remove-invalid-parentheses/description/** h
 > https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/description/ 2037

@@ -2,7 +2,7 @@
 The *dynamic programming* (DP) generalizes *divide and conquer* method, solves problems by combining the solutions to subproblems.
 
 ## Overview
-The basic idea of dynamic programming is to split the problem into subproblems, solve those subproblems and reuse the solutions to the subproblems.
+The basic idea of dynamic programming is to break down the problem into subproblems, solve those subproblems and reuse the solutions to the subproblems.
 
 We are going to break down a problem into a series of overlapping subproblems (top-down), and build up solutions from bottom subproblems to larger subproblems, and finally to the original problem (bottom-up). 
 
@@ -101,7 +101,7 @@ The problem meets the following characteristics:
 
 For some problems, we have to return the optimal value among DP table, not just `dp[0]` or `dp[n]` itself.
 
-#### Steps of Dynamic Programming
+### Steps of Dynamic Programming
 1. **Identify Category**: Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know. ([Source](https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions))
 
 | Category                                     | Example Problem                                                                                                                                                      |

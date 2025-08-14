@@ -6,11 +6,12 @@
 |[707. Design Linked List](../leetcode/707.design-linked-list.md)|Medium|
  
 ### Traversal
-| Problem          | Difficulty |
-|------------------|------------|
-|[2181. Merge Nodes in Between Zeros](../leetcode/2181.merge-nodes-in-between-zeros.md)|Medium (1333)|
-|[817. Linked List Components](../leetcode/817.linked-list-components.md)|Medium (1428)|
-|[725. Split Linked List in Parts](../leetcode/725.split-linked-list-in-parts.md)|Medium|
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
+|[2181. Merge Nodes in Between Zeros](../leetcode/2181.merge-nodes-in-between-zeros.md)|Medium (1333)| Sum values until zero, build new node per segment. |
+|[817. Linked List Components](../leetcode/817.linked-list-components.md)|Medium (1428)| Check next to see if it's the end. |
+|[725. Split Linked List in Parts](../leetcode/725.split-linked-list-in-parts.md)|Medium| Compute length, distribute remainder one by one. |
+|[430. Flatten a Multilevel Doubly Linked List](../leetcode/430.flatten-a-multilevel-doubly-linked-list.md)|Medium| Preorder traversal. |
 
 > * Solved: https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/description/ 1151
 > * Solved: https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/description/ 1310
@@ -33,35 +34,35 @@
 > * https://leetcode.com/problems/insertion-sort-list/description/ m
 
 ### Reverse
-| Problem          | Difficulty |
-|------------------|------------|
-|[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy|
-|[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)|Medium|
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
+|[206. Reverse Linked List](../leetcode/206.reverse-linked-list.md)|Easy| Preserve `next` before reversing. |
+|[92. Reverse Linked List II](../leetcode/92.reverse-linked-list-ii.md)|Medium| Locate `beforeLeft` and `afterRight`, then reverse. |
 |[24. Swap Nodes in Pairs](../leetcode/24.swap-nodes-in-pairs.md)|Medium|
-|[25. Reverse Nodes in k-Group](../leetcode/25.reverse-nodes-in-k-group.md)|Hard|
+|[25. Reverse Nodes in k-Group](../leetcode/25.reverse-nodes-in-k-group.md)|Hard| Count `k` nodes, reverse, relink. |
 
 > * https://leetcode.com/problems/reverse-nodes-in-even-length-groups/description/ 1685
 
 ### Two Pointers
-| Problem          | Difficulty |
-|------------------|------------|
-|[19. Remove Nth Node From End of List](../leetcode/19.remove-nth-node-from-end-of-list.md)|Medium|
-|[61. Rotate List](../leetcode/61.rotate-list.md)|Medium|
-|[143. Reorder List](../leetcode/143.reorder-list.md)|Medium|
-|[141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)|Easy|
-|[142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)|Medium|
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
+|[19. Remove Nth Node From End of List](../leetcode/19.remove-nth-node-from-end-of-list.md)|Medium| `fast` goes `n` steps, then move together. |
+|[61. Rotate List](../leetcode/61.rotate-list.md)|Medium| `fast` goes `k` steps, then move together. |
+|[143. Reorder List](../leetcode/143.reorder-list.md)|Medium| Find middle, reverse second half, merge two halves. |
+|[141. Linked List Cycle](../leetcode/141.linked-list-cycle.md)|Easy| `fast` and `slow` move together, if they meet, there is a cycle. |
+|[142. Linked List Cycle II](../leetcode/142.linked-list-cycle-ii.md)|Medium| `fast` and `slow` move together, if they meet, there is a cycle. |
 |[328. Odd Even Linked List](../leetcode/328.odd-even-linked-list.md)|Medium|
 |[86. Partition List](../leetcode/86.partition-list.md)|Medium|
-|[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy|
+|[160. Intersection of Two Linked Lists](../leetcode/160.intersection-of-two-linked-lists.md)|Easy| Walk A→B, B→A; meet at intersection. |
 
 > * https://leetcode.com/problems/swapping-nodes-in-a-linked-list/description/ 1386
 
 ### Middle
-| Problem          | Difficulty |
-|------------------|------------|
-|[876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)|Easy|
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
+|[876. Middle of the Linked List](../leetcode/876.middle-of-the-linked-list.md)|Easy| Initialize `fast` and `slow` at head, `fast` goes `2` steps, `slow` goes `1` step. |
 |[2095. Delete the Middle Node of a Linked List](../leetcode/2095.delete-the-middle-node-of-a-linked-list.md)|Medium|
-|[234. Palindrome Linked List](../leetcode/234.palindrome-linked-list.md)|Easy|
+|[234. Palindrome Linked List](../leetcode/234.palindrome-linked-list.md)|Easy| Find middle, reverse second half, compare two halves. |
 > * https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/ 1317
 
 ### Merge
@@ -76,14 +77,13 @@
 > * https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/description/ 1393
 
 ### Other
-| Problem          | Difficulty |
-|------------------|------------|
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
 |[1472. Design Browser History](../leetcode/1472.design-browser-history.md)|Medium|
 |[138. Copy List with Random Pointer](../leetcode/138.copy-list-with-random-pointers.md)|Medium|
 |[146. LRU Cache](../leetcode/146.lru-cache.md)|Medium|
-|[430. Flatten a Multilevel Doubly Linked List](../leetcode/430.flatten-a-multilevel-doubly-linked-list.md)|Medium|
 |[382. Linked List Random Node](../leetcode/382.linked-list-random-node.md)|Medium|
-|[1171. Remove Zero Sum Consecutive Nodes from Linked List](../leetcode/1171.remove-zero-sum-consecutive-nodes-from-linked-list.md)|Medium (1782)|
+|[1171. Remove Zero Sum Consecutive Nodes from Linked List](../leetcode/1171.remove-zero-sum-consecutive-nodes-from-linked-list.md)|Medium (1782)| Detect repeated prefix sum, cut nodes in between. |
 
 > ----
 > * https://leetcode.com/problems/lfu-cache/description/ hard

@@ -9,17 +9,9 @@ There are some key properties of graph:
 * For the edge `e = (x, y)`, we will say `e` is an *incoming* edge of `y` and an *outgoing* edge of `x`.
 * The *in-degree* and *out-degree* of a vertex denotes the number of incoming and outgoing edges of the vertex. 
 
-> We refer to *out-degree* when mentioned witout specified.
-
 ![Graph](../media/graph.png)
 
 ## Representation
-There are some criterias to determine the graph representation:
-* Time complexity.
-* Space complexity.
-* **Traversal of Adjacent Vertices (per vertex)**: Time complexity to traverse all adjacent vertices of a given vertex.
-* **Edge existence checks  (`(u -> v)` exists?)**: Time complexity to determine whether a given edge exists in the graph.
-
 We can represent a graph `G = (V, E)` in the following ways:
 
 ### Adjacency List
@@ -51,7 +43,7 @@ val graph = Array(verticesCount) { mutableListOf<Int>() }
 val graph = Array(verticesCount) { hashSetOf<Int>() }
 graph[0].add(1) // edge 0 -> 1
 graph[1].add(0) // for undirected graph
-graph[1].contains(2) // O(|V|)
+graph[1].contains(2) // O(|V|) for linked list, O(1) for hash set
 
 // or using 2D array: index is the vertex, and the value is the adjacent vertices.
 // 0 -> 1, 2, 3
@@ -68,16 +60,28 @@ val graph2: Array<IntArray> = arrayOf(
 
 * The adjacent vertices of each vertex in adjacency list are typically stored in an arbitrary order.
 * We prefer adjacency list when the graph are *sparse*.
-* We also can associate *weight* on the edge by storing the weight on the node of the adjacency list. (linked list node can attach extra properties)
+* We also can associate *weight* on the edge by storing the weight on the node of the adjacency list. `data class Node(val value: Int, val weight: Int)` (linked list node can attach extra properties)
 
 #### Complexity
-* Time complexity: `O(|V| + |E|)`, where `|V|` is the number of vertices and `|E|` is the number of edges.
-* Space complexity: `Θ(|V| + |E|)`, where `|V|` is the number of vertices and `|E|` is the number of edges.
-* Time complexity to traverse all adjacent vertices of a given vertex: `O(degree(v))`, where `degree(v)` is the number of adjacent vertices of vertex `v`.
-* Time complexity to determine whether a given edge exists in the graph: `O(degree(v))`, where `degree(v)` is the number of adjacent vertices of vertex `v`.
+* Time complexity: `O(V + E)`, where `V` is the number of vertices and `E` is the number of edges.
+* Space complexity: `O(V + E)`, where `V` is the number of vertices and `E` is the number of edges.
+
+### Hash Tables
+It's similar to adjacency list, but we use hash table to store the adjacent vertices of each vertex. It's efficient for *edge existence checks* (`O(1)` lookup) which is faster than adjacency list.
+
+```kotlin
+val graph: HashMap<Int, HashSet<Int>() = hashMapOf(
+    1: setOf(2, 4, 5, 6),
+    2: setOf(1, 4),
+)
+```
+
+#### Complexity
+* Time complexity: `O(V + E)`
+* Space complexity: `O(V + E)`
 
 ### Adjacency Matrix
-We define a `|V| x |V|` matrix `A` such that `A[i][j] = 1` if there is an edge, `0` otherwise. (Or we can use boolean)
+We define a `|V| x |V|` matrix `A` such that `A[i][j] = 1` (Or boolean) if there is an edge, `0` otherwise. Or `A[i][j] = w` for weighted graph.
 
 ```
 Undirected          Directed
@@ -117,36 +121,16 @@ val directedGraph = arrayOf(
 )
 ```
 
-
-It's simple to implement, but the space complexity is `Θ(|V|^2)`, which is not efficient when `|V|` is large. We prefer adjacency matrix when the graph are *dense* (`E ~= V^2`).
+It's simple to implement, but the space complexity is `Θ(V^2)`, which is not efficient when `V` is large. We prefer adjacency matrix when the graph are *dense* (`E ~= V^2`).
 * We can update the edge or check the existence of edge in constant time.
 * `A` is equal to the *transpose* of matrix `A` for undirected graph.
-* We also can define `A[i][j] = w` for weighted graph.
 
 #### Complexity
-* Time complexity: `O(|V|^2)`
-* Space complexity: `Θ(|V|^2)`, the undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix.
-* Time complexity to traverse all adjacent vertices of a given vertex: `O(|V|)`
-* Time complexity to determine whether a given edge exists in the graph: `O(1)`
-
-### Hash Tables
-It's similar to adjacency list, but we use hash table to store the adjacent vertices of each vertex. It's efficient for *edge existence checks* (`O(1)` lookup) which is faster than adjacency list.
-
-```kotlin
-val graph: HashMap<Int, HashSet<Int>() = hashMapOf(
-    1: setOf(2, 4, 5, 6),
-    2: setOf(1, 4),
-)
-```
-
-#### Complexity
-* Time complexity: `O(|V| + |E|)`
-* Space complexity: `Θ(|V| + |E|)`
-* Time complexity to traverse all adjacent vertices of a given vertex: `O(degree(v))`
-* Time complexity to determine whether a given edge exists in the graph: `O(1)`
+* Time complexity: `O(V^2)`
+* Space complexity: `O(V^2)`, the undirected graph has a symmetric matrix, it has additional space to store `(x, y)` and `(y, x)` of the same edge, some applications will store only in half to save memory or use *sparse* matrix.
 
 ### Edge List
-We store the edges of the graph in a list, where each edge is a tuple `(u, v, value)`. It's efficient for *edge-center* operations where the edges are processed sequentially, but inefficient for *Edge existence checks* (`O(|E|)` lookup).
+We store the edges of the graph in a list, where each edge is a tuple `(u, v, weight)`. It's efficient for *edge-center* operations where the edges are processed sequentially, but inefficient for *Edge existence checks* (`O(|E|)` lookup).
 
 ```kotlin
 val edges = listOf(
@@ -160,8 +144,6 @@ val edges = listOf(
 #### Complexity
 * Time complexity: `O(|V| * |E|)`
 * Space complexity: `Θ(|E|)`
-* Time complexity to traverse all adjacent vertices of a given vertex: `O(|E|)`
-* Time complexity to determine whether a given edge exists in the graph: `O(|E|)`
 
 ## Breadth-first Search (BFS)
 Given a graph `G = (V, E)` (undirected or directed) and source `s`, we "discover" every vertex that is reachable from `s`. It visits all vertices at level `k` before visiting level `k + 1`. It computes the *distance* from `s` to each reachable vertex, and produces a *breadth-first tree* (shortest path) with root `s` with all reachable vertices.
@@ -404,21 +386,200 @@ fun zeroOneBFS(graph: Array<IntArray>, start: Int, n: Int): Array<IntArray> {
 - **Space Complexity**: `O(V + E)` for graph + deque
 
 
-## Union Find
-并查集（Union Find）结构是 *二叉树结构* 的衍生，用于高效解决无向图的连通性问题，可以在 `O(1)` 时间内合并两个连通分量，在 O(1) 时间内查询两个节点是否连通，在 O(1) 时间内查询连通分量的数量。
+## Union Find (Disjoin Set Union, DSU)
+_Union Find_ is a data structure to efficiently keep track of which elements belong to the same group (set, parent or root) and to merge groups. Union Find treats each node as a _disjoint set_ (part of a tree), each set is represented by its _root_ (parent) node.
 
-```java
-class UF {
-    // 初始化并查集，包含 n 个节点，时间复杂度 O(n)
-    public UF(int n);
+There are two main operations:
+1. `find(x)`: Find the root (representative of the set) of `x`.
+2. `union(x, y)`: Merge the sets of `x` and `y` into one.
 
-    // 连接节点 p 和节点 q，时间复杂度 O(1)
-    public void union(int p, int q);
+> 并查集（Union Find）结构是 *二叉树结构* 的衍生，用于高效解决无向图的连通性问题，可以在 `O(1)` 时间内合并两个连通分量，在 `O(1)` 时间内查询两个节点是否连通，在 `O(1)` 时间内查询连通分量的数量。
 
-    // 查询节点 p 和节点 q 是否连通（是否在同一个连通分量内），时间复杂度 O(1)
-    public boolean connected(int p, int q);
-
-    // 查询当前的连通分量数量，时间复杂度 O(1)
-    public int count();
+The pseudocode is as follows:
+```js
+function ConnectedComponent(G: {V, E}) {
+    for each vertex v in G:
+        do MakeSet(v)
+    for each edge (u, v) in E:
+        if FindSet(u) != FindSet(v)
+            then Union(u, v)
 }
+
+function MakeSet(x) {
+    parent[x] <- x
+    rank[x] <- 0
+}
+
+function FindSet(x) {
+    if x != parent[x]
+        then parent[x] <- FindSet(parent[x])
+    return parent[x]
+}
+
+function Union(x, y) {
+    Link(FindSet(x), FindSet(y))
+}
+
+function Link(x, y) {
+    if rank[x] > rank[y]
+        then p[y] <- x
+        else p[x] <- y
+            if rank[x] == rank[y]
+                then rank[y] <- rank[y] + 1
+}
+```
+
+### Example
+```js
+// Graph:
+a --- b --- c      e --- f      h
+
+// Initial:
+{a}, {b}, {c}, {e}, {f}, {h}
+
+// Union: (a, b)
+{a,b}   {c}   {e}   {f}   {h}
+// Union: (b, c)
+{a,b,c}       {e}   {f}   {h}
+// Union: (e, f)
+{a,b,c}       {e,f}       {h}
+
+Final parent ≈ [0,0,0,3,3,5]
+```
+
+### Typical Use Cases
+- Connectivity in graph: Check if two nodes are connected.
+- Count connected components in graph.
+- Cycle detection.
+- Grouping / merging items.
+
+### Optimizations
+1. Path compression: In `find(x)`, we flatten the tree by making all nodes point directly to the root. This reduces the tree height and speeds up future queries.
+
+> 讓 `find(x)` 操作中，把所有節點都直接連到 root，縮短未來查找時間。
+
+```js
+// Root of each set:
+a
+  \
+   b // parent[b] = a
+    \
+     c // parent[c] = b
+      \
+       d // parent[d] = c
+
+// After path compression: We change the parent of each node to `a`
+        a
+    /  /  \
+   b  c    d // parent[b] == parent[c] == parent[d] == a
+```
+
+2. Union by rank: In `union(x, y)`, we always attach the smaller tree to the root of the larger tree. This keeps the tree balanced and speeds up future queries.
+
+> 總是把較小（或較淺）集合接到較大（或較深）集合下，避免退化成鏈狀。
+
+### Implementation
+```kotlin
+class UnionFind(n: Int) {
+    // MakeSet(x)
+    // We can use hash table if node count is not 0 ~ n - 1
+    private val parent = IntArray(n) { it }
+    private val size = IntArray(n) { 1 } // Used as rank, each set has 1 node initially.
+    // Counting the number of connected components, we decrease when union two sets successfully.
+    private var componentCount = n
+
+    // FindSet(x)
+    // This function will completely flattens the entire tree.
+    fun find(x: Int): Int {
+        if (x != parent[x]) {
+            parent[x] = find(parent[x]) // Path compression
+        }
+        return parent[x]
+    }
+
+    // Iterative FindSet(x)
+    // This function shortens the path about half way. (see below)
+    fun find(x: Int): Int {
+        var v = x
+        while (v != parent[v]) {
+            parent[v] = parent[parent[v]] // Update v.parent to grandparent
+            v = parent[v]                 // Climb to grandparent
+        }
+        return v
+    }
+
+    // Union(x, y)
+    fun union(x: Int, y: Int): Boolean {
+        val parentX = find(x)
+        val parentY = find(y)
+
+        if (parentX == parentY) return false
+
+        // Union by rank (size)
+        // Link(x, y)
+        if (size[parentX] < size[parentY]) { // If y is larger
+            // Attach x to y
+            parent[parentX] = parentY
+            size[parentY] += size[parentX]
+        } else { // x >= y, attach y to x
+            parent[parentY] = parentX
+            size[parentX] += size[parentY]
+        }
+        // Decrease the connected component count when union two sets successfully.
+        componentCount--
+        return true
+    }
+
+    // Some useful functions
+    fun getComponentCount() = componentCount
+    fun getSize(x: Int) = size[find(x)]
+    fun isConnected(x: Int, y: Int) = find(x) == find(y)
+}
+```
+
+### Complexity
+- **Time Complexity**: `O(α(n))` for `find(x)` and `union(x, y)`, where `α(n)` is the inverse Ackermann function. It's near `O(1)` time.
+- **Space Complexity**: `O(n)` for the parent and rank arrays.
+
+### How iterative `find(x)` works?
+Let's trace `find(3)`:
+```js
+parernt = [0, 0, 1, 2]
+Tree structure:
+           0 (root)
+          /      
+         1
+        /
+       2
+      /
+     3
+
+Step 1: v = 3
+    - parent[3] = 2 ≠ 3, so continue
+    - parent[3] = parent[parent[3]] = parent[2] = 1 // path compression
+    - v = parent[3] = 1
+
+parent = [0, 0, 1, 1]
+           0 (root)
+          /      
+         1 (v)
+        / \
+       2   3
+    
+Step 2: v = 1  
+    - parent[1] = 0 ≠ 1, so continue
+    - parent[1] = parent[parent[1]] = parent[0] = 0 (path compression)
+    - v = parent[1] = 0
+
+parent = [0, 0, 1, 1]
+           0 (root) (v)
+          /      
+         1
+        / \
+       2   3
+
+Step 3: v = 0
+    - parent[0] = 0 = 0, so break
+    - Return 0
+
 ```
