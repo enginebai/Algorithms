@@ -1,13 +1,15 @@
 # Shortest Path
+
 ![Weighted Graph](../media/weighted-graph.png)
 
-* For weighted directed graph, we define the shorted path is the lowest weight path from source `s` to each vertex `v`.
-* The [BFS](../topics/graph.md#breadth-first-search-bfs) is a shortest path algorithm on unweighted graph (unit weight).
-* A *negative-weight cycle* is a path starting and ending at the same vertex with the weight of path is less than 0, and if there is a egative-weight cycle reachable from `s`, then the shortest-path weight are not well defined. (We can keep going from 4 -> 5 -> 6 and back to 4, the total distance keeps decreasing by -11 for this circle) So there is no the shortest path for the graph with negative-weight cycle. (But positive-weight cycle is allowed)
+- For weighted directed graph, we define the shorted path is the lowest weight path from source `s` to each vertex `v`.
+- The [BFS](../topics/graph.md#breadth-first-search-bfs) is a shortest path algorithm on unweighted graph (unit weight).
+- A _negative-weight cycle_ is a path starting and ending at the same vertex with the weight of path is less than 0, and if there is a egative-weight cycle reachable from `s`, then the shortest-path weight are not well defined. (We can keep going from 4 -> 5 -> 6 and back to 4, the total distance keeps decreasing by -11 for this circle) So there is no the shortest path for the graph with negative-weight cycle. (But positive-weight cycle is allowed)
 
 To find the shortest path, we maintain two attributes for every node in the graph:
-* `v.distance`: upper bound weight of path from source `s` to `v`. (distance estimate of the shortest path)
-* `v.predecessor`: the chain of predecessors originating at the vertex `v` runs backwards along a shortest path from `s` to `v`. (used to backtrace to find the shortest path)
+
+- `v.distance`: upper bound weight of path from source `s` to `v`. (distance estimate of the shortest path)
+- `v.predecessor`: the chain of predecessors originating at the vertex `v` runs backwards along a shortest path from `s` to `v`. (used to backtrace to find the shortest path)
 
 > Notation: `d` means distance, `w` means weight for short in the following note.
 
@@ -23,10 +25,10 @@ if d(s, v) > d(s, u) + w(u, v)
 If the distance of the path passing `u` is less than the current path, then we can find a shorter path through edge `(u, v)`, and we have to update the current path. This gives us the general idea of finding the shortest path: **Relaxation**.
 
 ## Relaxation
-The single-source shortest path algorithm use the technique of *relaxation*, the process of *relaxing* an edge `(u, v)` consists of testing whether we can improve the current shortest path from `s` to `v` found so far by "going through the edge `(u, v)`".
 
-If `d(s, v)` > `d(s, u)` + `w(u, v)` for some edge `u`, then triangle inequality is violated, and we have to fix by lowering `d(s, v)` = `d(s, u)` + `w(u, v)`, that is, *relaxing* edge by passing through `u`.
+The single-source shortest path algorithm use the technique of _relaxation_, the process of _relaxing_ an edge `(u, v)` consists of testing whether we can improve the current shortest path from `s` to `v` found so far by "going through the edge `(u, v)`".
 
+If `d(s, v)` > `d(s, u)` + `w(u, v)` for some edge `u`, then triangle inequality is violated, and we have to fix by lowering `d(s, v)` = `d(s, u)` + `w(u, v)`, that is, _relaxing_ edge by passing through `u`.
 
 > Triangle inequality: `s(s, v)` <= `s(s, u)` + `w(u, v)`, means that we can't find the shortest path from `s` to `v` through another vertex `u` anymore.
 
@@ -59,10 +61,11 @@ fun initializeRelaxation(G, s) {
 }
 ```
 
-The shortest path algorithms, including *Bellman-Ford*, *DAG Relaxation*, and *Dijkstra*, all call the `initialize()` and repeatedly call `relax()` on edges, they differ in how many times and the order in which they relax edges.
+The shortest path algorithms, including _Bellman-Ford_, _DAG Relaxation_, and _Dijkstra_, all call the `initialize()` and repeatedly call `relax()` on edges, they differ in how many times and the order in which they relax edges.
 
 ## Bellman-Ford Algorithm
-The *Bellman-Ford* algorithm solves the single source shortest path problem in the graph in which edge weights may be negative. (also might contain cycle) The algorithm can not only find the path, but also detect if there is negative-weight cycle in the graph.
+
+The _Bellman-Ford_ algorithm solves the single source shortest path problem in the graph in which edge weights may be negative. (also might contain cycle) The algorithm can not only find the path, but also detect if there is negative-weight cycle in the graph.
 
 The algorithm is straightforward: initialize relaxation, and then relax every edges in `|V| - 1` times.
 
@@ -86,14 +89,15 @@ fun bellmanFord(G, s): Boolean {
         }
     }
     return true
-} 
+}
 ```
 
 > Take a look at the sameple at P.589 of CLRS.
 
-**Idea!** The shortest path contains at most `|V| - 1` edges as it traverses any vertex of the graph at most once. Here we can conduct *graph duplication*: make `|V| + 1` level of copies. (Level 0 is for initialization, Level 1 ~ (`|V|` - 1) for relaxation, and last level for check negative-weight cycle.)
+**Idea!** The shortest path contains at most `|V| - 1` edges as it traverses any vertex of the graph at most once. Here we can conduct _graph duplication_: make `|V| + 1` level of copies. (Level 0 is for initialization, Level 1 ~ (`|V|` - 1) for relaxation, and last level for check negative-weight cycle.)
 
 ![Bellman-Ford](../media/shortest-path-bellman-ford.png)
+
 > Source: [MIT Open Courseware - Introduction To Algorithms - Bellman-Ford](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec12/)
 
 1. `k` represents level. `k` = 0 for relax initialization.
@@ -103,13 +107,16 @@ fun bellmanFord(G, s): Boolean {
 For the graph copy, we run `|V| + 1` round of relaxation for every edges. At level `|V| - 1`, we will get the shortest path, and the last round will know if the graph contains negative-weight cycle. (still can relax, violates triangle inequality)
 
 ### Time Complexity
+
 The algorithm runs `|V|` rounds and each round performs on each edges, so it takes `O(|V|*|E|)` time. However, we can obtain significatn savings by stoping relaxation round for which no edge relaxation is modifying.
 
 ### Space Complexity
+
 We duplciate the graph `O(|V|)` times, so the space complexity will be `O(|V| * (|V| + |E|))`.
 
 ## DAG Relaxation
-**Idea!** Maintain a distance estimation `d(s, v)` (initially infinite) for each vertex, then find an edge violates the *triangle inequality*, go through that edge to gradually lower the distance estimation until `d(s, v)` is the shortest-path weight `s(s, v)`. It takes `O(|V| + |E|)` time.
+
+**Idea!** Maintain a distance estimation `d(s, v)` (initially infinite) for each vertex, then find an edge violates the _triangle inequality_, go through that edge to gradually lower the distance estimation until `d(s, v)` is the shortest-path weight `s(s, v)`. It takes `O(|V| + |E|)` time.
 
 > DAG = Directed Acyclic Graph, negative weight may exist, but there is no any cycle.
 
@@ -129,15 +136,23 @@ fun dagShortestPath(G, s) {
 > Take a look at the sameple at P.593 of CLRS.
 
 ## Dijkstra's Algorithm
-The *Dijkstra's algorithm* is asymptotically faster than Bellman-Ford, but only applies to graphs containing non-negative edge weights.
+
+Dijkstra's algorithm is a greedy algorithm that finds the shortest path from a source node to all other nodes in a graph. The _Dijkstra's algorithm_ is asymptotically faster than Bellman-Ford, but only applies to graphs containing non-negative edge weights. It works when:
+
+- Graph is weighted.
+- All edge weights are non-negative.
+- Single source shortest path.
 
 **Analogy!** Think of a graph as a network of pipes, we turn one a water faucet at source `s`, and the water will reach each vertex in the order of their shortest distance from source.
 
-**Idea!!** 
-* We maintain `S` representing the vertices whose final shortest-path estimate have already been determined. (We use minimum priority queue)
-* Repeatedly select a vertex `v` from `V - S` with minimum shortest-path estimate and relax its all out-going edges.
+**Idea!!**
+
+- We maintain `S` representing the vertices whose final shortest-path estimate have already been determined. (We use minimum heap)
+- Repeatedly select a vertex `v` from `V - S` with minimum shortest-path estimate and relax its all out-going edges.
 
 > We always choose the "closest" vertex with minumum distance estimate, we say that is uses a greedy strategy.
+
+Here is the pseudo code:
 
 ```kotlin
 fun dijkstra(G, s) {
@@ -161,16 +176,52 @@ fun dijkstra(G, s) {
 > Source: [MIT Open Courseware - Introduction To Algorithms - Dijkstra's Algorithm](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec13/)
 
 1. Enqueue `s`, `a`, `b`, `c`, `d` into queue.
-2. Initialize relaxation.
+2. Initialize relaxation with `s` as source.
 3. Extract minimum from queue: `s`.
 4. Relax all out-going edges of `s`, update distance estimate of `a` and `c`.
-4. Extract minimum from queue: `c`.
-5. Relax all out-going edges of `c`, update distance estimate of `a`, `b` and `d`.
-6. And so on.
-> Take a look at the sameple at P.596 of CLRS.
+5. Extract minimum from queue: `c`.
+6. Relax all out-going edges of `c`, update distance estimate of `a`, `b` and `d`.
+7. And so on.
+   > Take a look at the sameple at P.596 of CLRS.
 
-### Time Complexity
-The running time depends on how the priority queue is implemented, we can achieve `O(V * lg V + E)` with *Fibonacci Heap* and `O(V ^ 2 + E)` with *Binary Heap*.
+### Implementation
+
+```kotlin
+data class Edge(val to: Int, val weight: Int)
+
+fun dijkstra(n: Int, graph: List<List<Edge>>, source: Int): IntArray {
+    val distance = IntArray(n) { Int.MAX_VALUE }
+    val minHeap = PriorityQueue<Pair<Int, Int>>(compareBy { it.second })
+    distance[source] = 0
+    minHeap.add(source to 0)
+
+    while (minHeap.isNotEmpty()) {
+        val (node, dist) = minHeap.poll()
+        if (distance[node] < dist) continue // Skip stale item
+        for ((adj, w) in graph[node]) {
+            if (distance[node] + w < distance[adj]) {
+                distance[adj] = distance[node] + w
+                minHeap.add(adj to distance[adj])
+            }
+        }
+    }
+    return distance
+}
+```
+
+### Complexity Analysis
+
+- **Time Complexity**: `O((V + E) * log V)`
+
+  - Heap pop: `<= (V + E)` total pops x `O(log V)` per pop = `O((E + V) * log V)`
+  - Edge scanning + relaxation: `O(E)`
+  - Heap push for relaxation: `E` pushes x `O(log V)` per push = `O(E log V)`
+
+- **Space Complexity**: `O(V + E)`
+  - Graph: `O(V + E)` for adjacency list, or `O(V^2)` for adjacency matrix.
+  - Distance array: `O(V)`
+  - MinHeap: `O(V)` in the worst case (all nodes in heap)
 
 ## All-Pairs Shortest Path
-> // TODO: study if necessary.
+
+> TODO: study if necessary.

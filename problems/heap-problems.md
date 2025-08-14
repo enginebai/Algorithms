@@ -1,14 +1,14 @@
 # [Heap Problems](../topics/heap.md)
 
 ## Basic
-| Problem          | Difficulty |
-|------------------|------------|
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
 |[1046. Last Stone Weight](../leetcode/1046.last-stone-weight.md)|Easy (1172)|
 |[1337. The K Weakest Rows in a Matrix](../leetcode/1337.the-k-weakest-rows-in-a-matrix.md)|Easy|
 |[2336. Smallest Number in Infinite Set](../leetcode/2336.smallest-number-in-infinite-set.md)|Easy|
-|[1845. Seat Reservation Manager](../leetcode/1845.seat-reservation-manager.md)|Medium|
+|**[1845. Seat Reservation Manager](../leetcode/1845.seat-reservation-manager.md)|Medium| Here is optimal heap solution. |
 |[2462. Total Cost to Hire K Workers](../leetcode/2462.total-cost-to-hire-k-workers.md)|Medium (1763)|
-|[1834. Single-Threaded CPU](../leetcode/1834.single-threaded-cpu.md)|Medium (1797)|
+|**[1834. Single-Threaded CPU](../leetcode/1834.single-threaded-cpu.md)|Medium (1797)|
 |[502. IPO](../leetcode/502.ipo.md)|Hard|
 
 > * https://leetcode.com/problems/maximum-product-after-k-increments/description/ 1685
@@ -37,8 +37,8 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[703. Kth Largest Element in a Stream](../leetcode/703.kth-largest-element-in-a-stream.md)|Easy|
-|[215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md)|Medium|
-|[347. Top K Frequent Elements](../leetcode/347.top-k-frequent-elements.md)|Medium|
+|**[215. Kth Largest Element in an Array](../leetcode/215.kth-largest-element-in-an-array.md)|Medium|
+|**[347. Top K Frequent Elements](../leetcode/347.top-k-frequent-elements.md)|Medium|
 |[692. Top K Frequent Words](../leetcode/692.top-k-frequent-words.md)|Medium|
 |[451. Sort Characters By Frequency](../leetcode/451.sort-charaters-by-frequency.md)|Medium|
 |[973. K Closest Points to Origin](../leetcode/973.k-closest-points-to-origin.md)|Medium|
@@ -49,7 +49,7 @@
 ## Rearrangement
 | Problem          | Difficulty |
 |------------------|------------|
-|[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium (1681)|
+|**[767. Reorganize String](../leetcode/767.reorganize-string.md)|Medium (1681)|
 |[984. String Without AAA or BBB](../leetcode/984.string-without-aaa-or-bbb.md)|Medium (1474)|
 |[1405. Longest Happy String](../leetcode/1405.longest-happy-string.md)|Medium (1820)|
 |[621. Task Scheduler](../leetcode/621.task-scheduler.md)|Medium|

@@ -405,20 +405,147 @@ fun zeroOneBFS(graph: Array<IntArray>, start: Int, n: Int): Array<IntArray> {
 
 
 ## Union Find
-并查集（Union Find）结构是 *二叉树结构* 的衍生，用于高效解决无向图的连通性问题，可以在 `O(1)` 时间内合并两个连通分量，在 O(1) 时间内查询两个节点是否连通，在 O(1) 时间内查询连通分量的数量。
+_Union Find_ is a data structure to efficiently keep track of which elements belong to the same group (set, parent or root) and to merge groups. Union Find treats each node as a _disjoint set_ (part of a tree), each set is represented by its _root_ (parent) node.
 
-```java
-class UF {
-    // 初始化并查集，包含 n 个节点，时间复杂度 O(n)
-    public UF(int n);
+There are two main operations:
+1. `find(x)`: Find the root (representative of the set) of `x`.
+2. `union(x, y)`: Merge the sets of `x` and `y` into one.
 
-    // 连接节点 p 和节点 q，时间复杂度 O(1)
-    public void union(int p, int q);
+> 并查集（Union Find）结构是 *二叉树结构* 的衍生，用于高效解决无向图的连通性问题，可以在 `O(1)` 时间内合并两个连通分量，在 `O(1)` 时间内查询两个节点是否连通，在 `O(1)` 时间内查询连通分量的数量。
 
-    // 查询节点 p 和节点 q 是否连通（是否在同一个连通分量内），时间复杂度 O(1)
-    public boolean connected(int p, int q);
+The pseudocode is as follows:
+```js
+function ConnectedComponent(G: {V, E}) {
+    for each vertex v in G:
+        do MakeSet(v)
+    for each edge (u, v) in E:
+        if FindSet(u) != FindSet(v)
+            then Union(u, v)
+}
 
-    // 查询当前的连通分量数量，时间复杂度 O(1)
-    public int count();
+function MakeSet(x) {
+    parent[x] <- x
+    rank[x] <- 0
+}
+
+function FindSet(x) {
+    if x != parent[x]
+        then parent[x] <- FindSet(parent[x])
+    return parent[x]
+}
+
+function Union(x, y) {
+    Link(FindSet(x), FindSet(y))
+}
+
+function Link(x, y) {
+    if rank[x] > rank[y]
+        then p[y] <- x
+        else p[x] <- y
+            if rank[x] == rank[y]
+                then rank[y] <- rank[y] + 1
 }
 ```
+
+### Example
+```js
+// Graph:
+a --- b --- c      e --- f      h
+
+// Initial:
+{a}, {b}, {c}, {e}, {f}, {h}
+
+// Union: (a, b)
+{a,b}   {c}   {e}   {f}   {h}
+// Union: (b, c)
+{a,b,c}       {e}   {f}   {h}
+// Union: (e, f)
+{a,b,c}       {e,f}       {h}
+
+Final parent ≈ [0,0,0,3,3,5]
+```
+
+### Typical Use Cases
+- Connectivity in graph: Check if two nodes are connected.
+- Count connected components in graph.
+- Cycle detection.
+- Grouping / merging items.
+
+### Optimizations
+1. Path compression: In `find(x)`, we flatten the tree by making all nodes point directly to the root. This reduces the tree height and speeds up future queries.
+
+> 讓 `find(x)` 操作中，把所有節點都直接連到 root，縮短未來查找時間。
+
+```js
+// Root of each set:
+a
+  \
+   b // parent[b] = a
+    \
+     c // parent[c] = b
+      \
+       d // parent[d] = c
+
+// After path compression: We change the parent of each node to `a`
+        a
+    /  /  \
+   b  c    d // parent[b] == parent[c] == parent[d] == a
+```
+
+2. Union by rank: In `union(x, y)`, we always attach the smaller tree to the root of the larger tree. This keeps the tree balanced and speeds up future queries.
+
+> 總是把較小（或較淺）集合接到較大（或較深）集合下，避免退化成鏈狀。
+
+### Implementation
+```kotlin
+class UnionFind(n: Int) {
+    // MakeSet(x)
+    // We can use hash table if node count is not 0 ~ n - 1
+    private val parent = IntArray(n) { it }
+    private val size = IntArray(n) { 1 } // Used as rank, each set has 1 node initially.
+    // Counting the number of connected components, we decrease when union two sets successfully.
+    private var componentCount = n
+
+    // FindSet(x)
+    fun find(x: Int): Int {
+        if (x != parent[x]) {
+            parent[x] = find(parent[x]) // Path compression
+        }
+        return parent[x]
+    }
+
+    // Union(x, y)
+    fun union(x: Int, y: Int): Boolean {
+        val parentX = find(x)
+        val parentY = find(y)
+
+        if (parentX == parentY) return false
+
+        // Union by rank
+        // Link(x, y)
+        if (size[parentX] > size[parentY]) { // If x is larger
+            // Attach y to x
+            parent[parentY] = parentX
+            size[parentX] += size[parentY]
+        } else if (size[parentX] < size[parentY]) {
+            parent[parentX] = parentY
+            size[parentY] += size[parentX]
+        } else {
+            parent[parentY] = parentX
+            size[parentX] += size[parentY]
+        }
+        // Decrease the connected component count when union two sets successfully.
+        componentCount--
+        return true
+    }
+
+    // Some useful functions
+    fun getComponentCount() = componentCount
+    fun getSize(x: Int) = size[find(x)]
+    fun isConnected(x: Int, y: Int) = find(x) == find(y)
+}
+```
+
+### Complexity
+- **Time Complexity**: `O(α(n))` for `find(x)` and `union(x, y)`, where `α(n)` is the inverse Ackermann function. It's near `O(1)` time.
+- **Space Complexity**: `O(n)` for the parent and rank arrays.

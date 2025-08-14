@@ -4,18 +4,17 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[1456. Maximum Number of Vowels in a Substring of Given Length](../leetcode/1456.maximum-number-of-vowels-in-a-substring-of-given-length.md)|Medium (1263)|
-|[1984. Minimum Difference Between Highest and Lowest of K Scores](../leetcode/1984.minimum-difference-between-highest-and-lowest-of-k-scores.md)|Easy (1306)|
+|[1984. Minimum Difference Between Highest and Lowest of K Scores](../leetcode/1984.minimum-difference-between-highest-and-lowest-of-k-scores.md)|Easy (1306)| How to iterate and manipulate the index correctly? |
 |[1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](../leetcode/1343.number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.md)|Medium (1317)|
 |[2090. K Radius Subarray Averages](../leetcode/2090.k-radius-subarray-averages.md)|Medium (1358)|
 |[1876. Substrings of Size Three with Distinct Characters](../leetcode/1876.substrings-of-size-three-with-distinct-characters.md)|Easy|
-|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy|
+|[219. Contains Duplicate II](../leetcode/219.contains-duplicate-ii.md)|Easy| How to implement fixed size and general sliding window? |
 |[438. Find All Anagrams in a String](../leetcode/438.find-all-anagrams-in-a-string.md)|Medium|
 |[567. Permutation in String](../leetcode/567.permutation-in-string.md)|Medium|
 |[1052. Grumpy Bookstore Owner](../leetcode/1052.grumpy-bookstore-owner.md)|Medium (1418)|
-|[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium (1552)|
 |[1423. Maximum Points You Can Obtain from Cards](../leetcode/1423.maximum-points-you-can-obtain-from-cards.md)|Medium (1573)|
 |[1652. Defuse the Bomb](../leetcode/1652.defuse-the-bomb.md)|Easy (1416)|
-|[2134. Minimum Swaps to Group All 1's Together II](../leetcode/2134.minimum-swaps-to-group-all-1s-together-ii.md)|Medium (1748)|
+|[2134. Minimum Swaps to Group All 1's Together II](../leetcode/2134.minimum-swaps-to-group-all-1s-together-ii.md)|Medium (1748)| Key observation |
 
 > * https://leetcode.com/problems/maximum-average-subarray-i/description/ e
 > * https://leetcode.com/problems/find-the-k-beauty-of-a-number/ 1279
@@ -29,14 +28,15 @@
 > * https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/description/ 2005
 
 ## Longest Window
-| Problem          | Difficulty |
-|------------------|------------|
-|[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium|
+| Problem          | Difficulty | Note |
+|------------------|------------|------|
+|[3. Longest Substring Without Repeating Characters](../leetcode/3.longest-substring-without-repeating-characters.md)|Medium| Hash set or hash table (Preferred) |
+|[2461. Maximum Sum of Distinct Subarrays With Length K](../leetcode/2461.maximum-sum-of-distinct-subarrays-with-length-k.md)|Medium (1552)|
 |[1695. Maximum Erasure Value](../leetcode/1695.maximum-erasure-value.md)|Medium (1528)|
-|[1493. Longest Subarray of 1's After Deleting One Element](../leetcode/1493.longest-subarray-of-1s-after-deleting-one-element.md)|Medium (1423)|
 |[1004. Max Consecutive Ones III](../leetcode/1004.max-consecutive-ones-iii.md)|Medium (1656)|
-|[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium|
-|[904. Fruit Into Baskets](../leetcode/904.fruit-into-baskets.md)|Medium (1516)|
+|[1493. Longest Subarray of 1's After Deleting One Element](../leetcode/1493.longest-subarray-of-1s-after-deleting-one-element.md)|Medium (1423)|
+|[424. Longest Repeating Character Replacement](../leetcode/424.longest-repeating-character-replacement.md)|Medium| Why tracking the max frequency only? |
+|[904. Fruit Into Baskets](../leetcode/904.fruit-into-baskets.md)|Medium (1516)| Remove the key from the map if the count is `0`. | 
 |[2779. Maximum Beauty of an Array After Applying Operation](../leetcode/2779.maximum-beauty-of-an-array-after-applying-operation.md)|Medium (1638)|
 |[1658. Minimum Operations to Reduce X to Zero](../leetcode/1658.minimum-operations-to-reduce-x-to-zero.md)|Medium (1817)|
 |[1838. Frequency of the Most Frequent Element](../leetcode/1838.frequency-of-the-most-frequent-element.md)|Medium (1876)|
@@ -66,12 +66,29 @@
 |[2875. Minimum Size Subarray in Infinite Array](../leetcode/2875.minimum-size-subarray-in-infinite-array.md)|Medium (1913)|
 
 > * https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string/ 1482
+> * https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/ 2306
 
 ## Subarray Count
 ### 越長越合法
 一般要写 `ans += left`。
 
-内层循环结束后，`[left,right]` 这个子数组是不满足题目要求的，但在退出循环之前的最后一轮循环，`[left−1,right]` 是满足题目要求的。由于子数组越长，越能满足题目要求，所以除了 `[left−1,right]`，还有 `[left−2,right]`, `[left−3,right]`, `...`, `[0,right]` 都是满足要求的。也就是说，当右端点固定在 `right` 时，左端点在 `0`, `1`, `2`, `...`, `left−1` 的所有子数组都是满足要求的，这一共有 `left` 个。
+内层循环结束后，`[left,right]` 这个子数组是不满足题目要求的，但在退出循环之前的最后一轮循环，`[left−1,right]` 是满足题目要求的。
+
+```js
+ 0  1  2  3  4  5
+[i, j, k, a, b, a, ...]
+          ^^^^^^^
+             L
+                R
+          a, b, a
+       k, a, b, a
+    j, k, a, b, a
+ i, j, k, a, b, a
+
+ans += left // which is 4
+```
+
+由于子数组越长，越能满足题目要求，所以除了 `[left−1,right]`，还有 `[left−2,right]`, `[left−3,right]`, `...`, `[0,right]` 都是满足要求的。也就是说，当右端点固定在 `right` 时，左端点在 `0`, `1`, `2`, `...`, `left−1` 的所有子数组都是满足要求的，这一共有 `left` 个。
 
 > Source: https://leetcode.cn/discuss/post/0viNMK/
 
@@ -86,6 +103,16 @@
 
 ### 越短越合法
 一般要写 `ans += right - left + 1`。
+
+```js
+[10,  5,  2,  6], k = 100
+      L       R = 60 < 100 // meet the condition
+     [5,  2,  6]
+         [2,  6]
+             [6]
+
+ans += right - left + 1 // which is 3
+```
 
 内层循环结束后，`[left,right]` 这个子数组是满足题目要求的。由于子数组越短，越能满足题目要求，所以除了 `[left,right]`，还有 `[left+1,right]`, `[left+2,right]`, `...`, `[right,right]` 都是满足要求的。也就是说，当右端点固定在 `right` 时，左端点在 `left`, `left+1`, `left+2`, `...`, `right` 的所有子数组都是满足要求的，这一共有 `right - left + 1` 个。
 

@@ -20,7 +20,6 @@
 
 
 ## Dijkstra's Algorithm
-
 | Problem          | Difficulty |
 |------------------|------------|
 |[1514. Path with Maximum Probability](../leetcode/1514.path-with-maximum-probability.md)|Medium|

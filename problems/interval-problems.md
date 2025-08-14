@@ -68,7 +68,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)|Premium|
-|[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
+|**[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
 
 ### 2.3 区间选点
 
