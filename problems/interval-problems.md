@@ -65,10 +65,10 @@
 
 > Given a collections of intervals, find the minimum number of groups that can be formed by the intervals.
 
-| Problem          | Difficulty |
-|------------------|------------|
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
 |[253. Meeting Rooms II](../leetcode/253.meeting-rooms-ii.md)|Premium|
-|**[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)|
+|**[2406. Divide Intervals Into Minimum Number of Groups](../leetcode/2406.divide-intervals-into-minimum-number-of-groups.md)|Medium (1713)| Min-heap of `ends` = among active meetings, the one that ends earliest is the only one you can possibly reuse. |
 
 ### 2.3 区间选点
 

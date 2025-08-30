@@ -75,7 +75,7 @@ Dijkstra's algorithm is a greedy algorithm that finds the shortest path from a s
 
 > We always choose the "closest" vertex with minumum distance estimate, we say that is uses a greedy strategy.
 
-Here is the pseudo code:
+Here is the pseudo code (textbook version):
 
 ```kotlin
 fun dijkstra(G, s) {
@@ -108,6 +108,7 @@ fun dijkstra(G, s) {
    > Take a look at the sameple at P.596 of CLRS.
 
 ### Implementation
+Please remember that `dist, node` popped from the heap represents the distance from source to `node`. It may or may not be the shortest distance (it may be stale). So we need to skip it if it's stale.
 
 ```kotlin
 data class Edge(val weight: Int, val to: Int)
@@ -122,10 +123,37 @@ fun dijkstra(n: Int, graph: List<List<Edge>>, source: Int): IntArray {
         val (dist, node) = minHeap.poll()
         if (distance[node] < dist) continue // Skip stale item
         for ((w, adj) in graph[node]) {
-            if (distance[node] + w < distance[adj]) {
+            // Please note we can write `distance[adj] > dist + w`, use the `dist` 
+            // from heap, not the distance array if we skip the stale item.
+            if (distance[adj] > distance[node] + w ) {
                 distance[adj] = distance[node] + w
                 minHeap.add(distance[adj] to adj)
             }
+        }
+    }
+    return distance
+}
+
+// Variant: use visited set to skip stale items.
+
+fun dijkstra(n: Int, graph: List<List<Edge>>, source: Int): IntArray {
+    val distance = IntArray(n) { Int.MAX_VALUE }
+    val minHeap = PriorityQueue(compareBy<Pair<Int, Int>> { it.first })
+    distance[source] = 0
+    minHeap.add(0 to source)
+    val visited = HashSet<Int>()
+
+    while (minHeap.isNotEmpty()) {
+        val (dist, node) = minHeap.poll()
+        if (visited.contains(node)) continue // Skip stale item
+
+        // The first time we visit a "unvisited" node, we have found its shortest distance.
+        distance[node] = dist
+        visited.add(node)
+        for ((w, adj) in graph[node]) {
+            // No need to check distance before enqueue.
+            // And we don't mark adj as visited here, because we may have multiple paths to the same node.
+            minHeap.add(w + dist to adj)
         }
     }
     return distance
@@ -136,9 +164,9 @@ fun dijkstra(n: Int, graph: List<List<Edge>>, source: Int): IntArray {
 
 - **Time Complexity**: `O((V + E) * log V)`
 
-  - Heap pop: `<= (V + E)` total pops x `O(log V)` per pop = `O((E + V) * log V)`
+  - Heap pop: `<= (V + E)` total pops * `O(log V)` per pop = `O((V + E) * log V)`
   - Edge scanning + relaxation: `O(E)`
-  - Heap push for relaxation: `E` pushes x `O(log V)` per push = `O(E log V)`
+  - Heap push for relaxation: `E` pushes * `O(log V)` per push = `O(E log V)`
 
 - **Space Complexity**: `O(V + E)`
   - Graph: `O(V + E)` for adjacency list, or `O(V^2)` for adjacency matrix.
@@ -223,7 +251,8 @@ fun dagShortestPath(G, s) {
 
 > TODO: study if necessary.
 
-## Dijkstra Canonical
+## References
+### Dijkstra Canonical
 ```kotlin
 /**
  * A canonical and correct implementation of Dijkstra's algorithm.

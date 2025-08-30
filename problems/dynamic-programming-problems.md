@@ -37,12 +37,11 @@
 |[152. Maximum Product Subarray](../leetcode/152.maximum-product-subarray.md)|Medium|
 |[1749. Maximum Absolute Sum of Any Subarray](../leetcode/1749.maximum-absolute-sum-of-any-subarray.md)|Medium (1541)|
 
-### Matrix
+### Grid
 | Problem          | Difficulty |
 |------------------|------------|
 |[62. Unique Paths](../leetcode/62.unique-paths.md)|Medium|
 |[63. Unique Paths II](../leetcode/63.unique-paths.ii.md)|Medium|
-|[139. Word Break](../leetcode/139.word-break.md)|Medium|
 |[64. Minimum Path Sum](../leetcode/64.minimum-path-sum.md)|Medium|
 |[221. Maximal Square](../leetcode/221.maximal-square.md)                                               | Medium     | DP, `dp[i][j] = min(↑,←,↖)+1`. |
 
@@ -76,6 +75,15 @@
 |[122. Best Time to Buy and Sell Stock II](../leetcode/122.best-time-to-buy-and-sell-stock-ii.md)|Medium|
 |[123. Best Time to Buy and Sell Stock III](../leetcode/123.best-time-to-buy-and-sell-stock-iii.md)|Hard|
 |[309. Best Time to Buy and Sell Stock with Cooldown](../leetcode/309.best-time-to-buy-and-sell-stock-with-cooldown.md)|Medium|
+
+### 劃分型
+#### 判定能否划分
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
+|**[139. Word Break](../leetcode/139.word-break.md)|Medium| Iterate each substring, try all possible splits for each substring. |
+
+
+
 
 ### Problem Lists
 > * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions

@@ -121,7 +121,7 @@ val directedGraph = arrayOf(
 )
 ```
 
-It's simple to implement, but the space complexity is `Θ(V^2)`, which is not efficient when `V` is large. We prefer adjacency matrix when the graph are *dense* (`E ~= V^2`).
+It's simple to implement, but the space complexity is `Θ(V^2)`, which is not efficient when `V` is large. We prefer adjacency matrix when the graph are *dense* (`E ~= V^2` 稠密图：边的数量级和 `n^2` 相当的图。)
 * We can update the edge or check the existence of edge in constant time.
 * `A` is equal to the *transpose* of matrix `A` for undirected graph.
 
