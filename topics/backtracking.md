@@ -71,8 +71,3 @@ fun dfs(candidates: IntArray, startIndex: Int, target: Int, combination: Mutable
 3. `nums` 元素唯一，但是可以複選。
 
 以上面幾種變形再加上一些其他限制，例如只能取 `k` 個元素當作題目。
-
-## Resources
-* [代码随想录](https://github.com/youngyangyang04/leetcode-master#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95)
-* [回溯算法秒杀所有排列/组合/子集问题](https://labuladong.github.io/algo/1/9/)
-* [Time Complexity Analysis](https://leetcode.com/discuss/interview-question/3055778/how-to-calculate-runtime-of-backtracking-algorithm-in-interview)

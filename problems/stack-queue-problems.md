@@ -86,6 +86,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)|Hard|
+|[3676. Count Bowl Subarrays](../leetcode/3676.count-bowl-subarrays.md)|Medium|
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[85. Maximal Rectangle](../leetcode/85.maximal-rectangle.md)|Hard|
 
