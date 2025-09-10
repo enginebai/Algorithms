@@ -23,13 +23,13 @@
 |------------------|------------|--------|
 |[150. Evaluate Reverse Polish Notation](../leetcode/150.evaluate-reverse-polish-notation.md)|Medium|
 |[1190. Reverse Substrings Between Each Pair of Parentheses](../leetcode/1190.reverse-substrings-between-each-pair-of-parentheses.md)|Medium (1485)|
-|[394. Decode String](../leetcode/394.decode-string.md)|Medium| `Multi-digit[xyz]` patterns. |
 |**[856. Score of Parentheses](../leetcode/856.score-of-parentheses.md)|Medium (1562)|
 |**[341. Flatten Nested List Iterator](../leetcode/341.flatten-nested-list-iterator.md)|Medium|
+|[394. Decode String](../leetcode/394.decode-string.md)|Medium| `Multi-digit[xyz]` patterns. |
 |**[1106. Parsing A Boolean Expression](../leetcode/1106.parsing-a-boolean-expression.md)|Hard (1880)| Recursion. |
+|[726. Number of Atoms](../leetcode/726.number-of-atoms.md)|Hard| Merge counts when pop. |
 |**[227. Basic Calculator II](../leetcode/227.basic-calculator-ii.md)|Medium| How to handle `-` at first and flush the last number. |
 |**[224. Basic Calculator](../leetcode/224.basic-calculator.md)|Hard|
-|[726. Number of Atoms](../leetcode/726.number-of-atoms.md)|Hard| Merge counts when pop. |
 
 ### Parentheses
 | Problem          | Difficulty | Note |
@@ -86,6 +86,7 @@
 | Problem          | Difficulty |
 |------------------|------------|
 |[42. Trapping Rain Water](../leetcode/42.trapping-rain-water.md)|Hard|
+|[3676. Count Bowl Subarrays](../leetcode/3676.count-bowl-subarrays.md)|Medium|
 |[84. Largest Rectangle in Histogram](../leetcode/84.largest-rentangle-in-histogram.md)|Hard|
 |[85. Maximal Rectangle](../leetcode/85.maximal-rectangle.md)|Hard|
 

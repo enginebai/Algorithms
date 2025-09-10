@@ -48,6 +48,8 @@ fun isOverlapped(a: IntArray, b: IntArray): Boolean {
 
 If there is a common point(s) `X` in the valid range of `maxOf(a[0], b[0])..minOf(a[1], b[1])` between the two intervals, the two intervals are overlapped.
 
+> If the interval is `[open, end)`, then we check `maxOf(a[0], b[0]) < minOf(a[1], b[1])`. (No equal)
+
 ### Examples
 * Overlapping `[1, 3]` and `[2, 5]`:
     * `max(1, 2) = 2`
@@ -61,8 +63,37 @@ Since `2 <= 3`, there are common points in `[2, 3]`, the two intervals are overl
 
 Since `5 > 3`, there is no common point in `[5, 3]`, the two intervals are not overlapped.
 
+### Equivalent Checking
+We can check if the two intervals are not overlapped:
+* A is completed before B starts.
+* B is completed before A starts.
+```js
+|------|      |------|       
+       ^      ^
+     a[1] < b[0]  
+     b[1] < a[0]
+```
+```kotlin
+private fun isOverlapped(a: IntArray, b: IntArray): Boolean {
+    // Not (Not overlapped) = Overlapped
+    return (
+        a[1] < b[0] ||
+        b[1] < a[0]
+    ).not()
+}
+```
+
+Or checking if the two intervals are overlapped: `a.start < b.end AND b.start < a.end`, this works for all possible cases as well:
+
+```kotlin
+private fun isOverlapped(a: IntArray, b: IntArray): Boolean {
+    // Not (Not overlapped) = Overlapped
+    return a[0] <= b[1] && b[0] <= a[1]
+}
+```
+
 ----
-Or equivalently, we list all possible cases where the two intervals are overlapped. The two intervals are overlapped if they are partially or fully overlapped.
+(Not recommended) Or equivalently, we list all possible cases where the two intervals are overlapped. The two intervals are overlapped if they are partially or fully overlapped.
 ```js
 // Partially overlapped or touching.
 Case 1:
@@ -107,23 +138,6 @@ fun isOverlapped(a: IntArray, b: IntArray): Boolean {
         //   |--|
         // |----------|
         b[0] <= a[0] && a[1] <= b[1]
-}
-```
-
-Or we can check if the two intervals are not overlapped:
-```js
-|------|      |------|       
-       ^      ^
-     a[1] < b[0]  
-     b[1] < a[0]
-```
-```kotlin
-private fun isOverlapped(a: IntArray, b: IntArray): Boolean {
-    // Not (Not overlapped) = Overlapped
-    return (
-        a[1] < b[0] ||
-        b[1] < a[0]
-    ).not()
 }
 ```
 

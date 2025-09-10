@@ -108,14 +108,14 @@
 |[752. Open the Lock](../leetcode/752.open-the-lock.md)|Medium (1877)|
 |[3552. Grid Teleportation Traversal](../leetcode/3552.grid-teleportation-traversal.md)|Medium|
 
-### Multi-source BFS
+### Multi-Source BFS
 | Problem          | Difficulty | Notes |
 |------------------|------------|------------|
 |**[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
 |**[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium| Distance matrix, no visited set needed. OR 2-pass DP. |
 |[1162. As Far from Land as Possible](../leetcode/1162.as-far-from-land-as-possible.md)|Medium (1666)|
 
-### Multi-state BFS
+### Multi-State BFS
 | Problem          | Difficulty |
 |------------------|------------|
 |**[1293. Shortest Path in a Grid with Obstacles Elimination](../leetcode/1293.shortest-path-in-a-grid-with-obstacles-elimination.md)|Hard (1967)|

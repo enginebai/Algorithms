@@ -1,5 +1,7 @@
 # Sorting
-## Insertion 
+
+## Insertion
+
 **Idea!** Insert the `A[j]` into `A[1..j - 1]` sorted sorted sequence. It's efficient for sorting a small number of elements and the numbers are **sorted in place**.
 
 ```kotlin
@@ -16,41 +18,36 @@ fun insertionSort(A) {
 }
 ```
 
-* **Time Complexity**: It takes `O(n^2)`, The while loop (finding the right position to insert) takes `SUM(i = 2 to n) { j - 1 }` = `O(n^2)`.
-* **Space Complexity**: `O(n)` sorted in place.
+- **Time Complexity**: It takes `O(n^2)`, The while loop (finding the right position to insert) takes `SUM(i = 2 to n) { j - 1 }` = `O(n^2)`.
+- **Space Complexity**: `O(n)` sorted in place.
 
 ## Merge Sort
-**Idea!** We will use *divide-and-conquer* approach to implement merge sort.
+
+**Idea!** We will use _divide-and-conquer_ approach to implement merge sort.
 
 For example, `A = [5, 2, 4, 7, 1, 3, 2, 6]`:
-* **Divide**: Divide `n` elements sequence into subsequences of `n/2` elements.
+
+- **Divide**: Divide `n` elements sequence into subsequences of `n/2` elements.
 
 ```js
-[5, 2, 4, 7, 1, 3, 2, 6]
-
-[5, 2, 4, 7] [1, 3, 2, 6]
-
-[5, 2] [4, 7] [1, 3] [2, 6]
-
-[5] [2] [4] [7] [1] [3] [2] [6]
+[5, 2, 4, 7, 1, 3, 2, 6][(5, 2, 4, 7)][(1, 3, 2, 6)][(5, 2)][(4, 7)][(1, 3)][
+  (2, 6)
+][5][2][4][7][1][3][2][6];
 ```
-* **Conquer**: Sort the two subsequences recursively using merge sort.
+
+- **Conquer**: Sort the two subsequences recursively using merge sort.
 
 ```js
 // It's sorted trivially for one element.
-[5] [2] [4] [7] [1] [3] [2] [6]
+[5][2][4][7][1][3][2][6];
 ```
 
-* **Combine**: Merge two sorted subsequences.
+- **Combine**: Merge two sorted subsequences.
 
 ```js
-[5] [2] [4] [7] [1] [3] [2] [6]
-
-[2, 5] [4, 7] [1, 3] [2, 6]
-
-[2, 4, 5, 7] [1, 2, 3, 6]
-
-[1, 2, 2, 3, 4, 5, 6, 7]
+[5][2][4][7][1][3][2][6][(2, 5)][(4, 7)][(1, 3)][(2, 6)][(2, 4, 5, 7)][
+  (1, 2, 3, 6)
+][(1, 2, 2, 3, 4, 5, 6, 7)];
 ```
 
 ```kotlin
@@ -95,20 +92,21 @@ mergeSort(nums)
 
 > See the sameple at P.30 of CLRS.
 
-* **Time Complexity**: `O(n log n)` from recurrence `T(n) = T(n/2) + Θ(n)` and solved by *[master method](../topics/recursion.md)*. (See P.35 of CLRS.)
-* **Space Complexity**: `O(n)`, extra space to copy array for merging, it's still `O(n)`.
+- **Time Complexity**: `O(n log n)` from recurrence `T(n) = T(n/2) + Θ(n)` and solved by _[master method](../topics/recursion.md)_. (See P.35 of CLRS.)
+- **Space Complexity**: `O(n)`, extra space to copy array for merging, it's still `O(n)`.
 
 ## Quick Sort
-It uses *divide-and-conquer* approach, sorts in place (beats the merge sort), and is efficient (`O(n log n)`) on average.
 
-* **Divide**: Partition the array `A` into two subarrays and pick a *pivot* value `X` such that every element in `A[p...q - 1]` is <= `X` and `A[q + 1..r] >= X`.
+It uses _divide-and-conquer_ approach, sorts in place (beats the merge sort), and is efficient (`O(n log n)`) on average.
+
+- **Divide**: Partition the array `A` into two subarrays and pick a _pivot_ value `X` such that every element in `A[p...q - 1]` is <= `X` and `A[q + 1..r] >= X`.
 
 ```
 A is partition into | <= X | X | >= X |
 ```
 
-* **Conquer**: Recursively sort 2 subarrays.
-* **Combine**: The 2 subarrays are sorted in place, it's trivial in this step.
+- **Conquer**: Recursively sort 2 subarrays.
+- **Combine**: The 2 subarrays are sorted in place, it's trivial in this step.
 
 ```kotlin
 private fun partition(A: IntArray, start: Int, end: Int): Int {
@@ -150,11 +148,14 @@ quickSort(A, 0, A.size - 1)
 ```
 
 ### Time Complexity
+
 #### Worst Case
-* Sorted or reversed sorted array.
-* One subarray has no elements after partition.
+
+- Sorted or reversed sorted array.
+- One subarray has no elements after partition.
 
 The recurrence is
+
 ```
 T(n) = T(0) + T(n - 1) + Θ(n)
 ```
@@ -162,21 +163,27 @@ T(n) = T(0) + T(n - 1) + Θ(n)
 Based on [recursion tree method](../topics/recursion.md#time-complexity-recurrences), we can get `cn + c(n - 1) + c(n - 2) + ... + 2c + c` = `SUM(i = 1 to n) { i }` = `O(n^2)`. For space complexity, it takes `O(n)` for recursive function call stack.
 
 #### Best Case
+
 The partition generates a balanced two subarrays, that is `n/2` size, the recurrence will be `T(n) = T(n/2) + Θ(n)`, which is `O(n log n)`.
 
 #### Average Case
+
 It takes `O(n log n)` on average if we can add randomization to pick the pivot in order to obtain good average case performance over all inputs. (See the comment of above code). For space complexity, it takes `O(lg n)` on average for recursive function call stack.
 
 ## Heap Sort
+
 See [Heap](../topics/heap.md) topic.
 
 ## Counting Sort
+
 > TODO
 
 ## Kotlin APIs
+
 > All the following sorting APIs can append `Descreasing` to sort in descending order.
 
 ### `IntArray`
+
 ```kotlin
 val nums = intArrayOf(...)
 
@@ -216,6 +223,7 @@ intervals.sortWith(compareBy<IntArray> { it[0] }.thenByDescending { it[1] })
 ```
 
 ### `Array`
+
 ```kotlin
 val nums: IntArray = ...
 
@@ -238,11 +246,12 @@ val indices: List<Int> = nums.indices.sortedBy { nums[it] }
 for (i in nums.indices) {
     val value = nums[indices[i]]
 }
-``` 
+```
 
 > Sample usage: [1636. Sort Array by Increasing Frequency](../leetcode/1636.sort-array-by-increasing-frequency.md)
 
 ### `Comparable`
+
 ```kotlin
 data class Person(val name: String, val age: Int) : Comparable<Person> {
     override fun compareTo(other: Person): Int {
@@ -264,6 +273,7 @@ val sortedByName = people.sortedWith(compareBy { it.name })
 ```
 
 ### `List`
+
 ```kotlin
 val list = mutableListOf(1, 3, 5, 2, 4, 6, 0, -1, -3, 10)
 
@@ -279,19 +289,38 @@ list.sortWith { n1, n2 -> n2 - n1 }
 ```
 
 ### `TreeSet`
+
 ```kotlin
 val set = TreeSet<Int>()
 val customSet = TreeSet<Int>(compareByDescending { it })
 val people = TreeSet<Person>(compareBy { it.age })
 
 // Normal set operation
-set.add(1)      
+set.add(1)
 set.remove(1)
-1 in set        // Check if the element is in the set
+if (1 in set) { ... }        // Check if the element is in the set
 
 // Get the elements in ordered set
 set.first()     // Get the smallest element by default, if we have reversed comparator, it will get the largest element
 set.pollFirst() // Remove and get the smallest element
 set.last()      // Get the largest element (same as above)
 set.pollLast()  // Remove and get the largest element
+
+// Navigable operations (same as TreeMap)
+val lower: Int? = set.lower(123)    // Greatest element < 123
+val higher: Int? = set.higher(123)  // Least element > 123
+val floor: Int? = set.floor(123)    // Greatest element <= 123
+val ceiling: Int? = set.ceiling(123) // Least element >= 123
 ```
+
+| Operation      | Method                      | Description               | Time Complexity |
+| -------------- | --------------------------- | ------------------------- | --------------- |
+| **Add**        | `set.add(e)`                | Add element               | O(log n)        |
+| **Remove**     | `set.remove(e)`             | Remove element            | O(log n)        |
+| **Contains**   | `e in set`                  | Check if element exists   | O(log n)        |
+| **First/Last** | `first()`, `last()`         | Min/max element           | O(log n)        |
+| **Poll**       | `pollFirst()`, `pollLast()` | Remove and return min/max | O(log n)        |
+| **Lower**      | `lower(e)`                  | Greatest element **<** e  | O(log n)        |
+| **Floor**      | `floor(e)`                  | Greatest element **≤** e  | O(log n)        |
+| **Higher**     | `higher(e)`                 | Least element **>** e     | O(log n)        |
+| **Ceiling**    | `ceiling(e)`                | Least element **≥** e     | O(log n)        |

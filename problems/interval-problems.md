@@ -1,4 +1,4 @@
-# Intervals
+# [Intervals](../topics/interval.md)
 
 * [Study guidelines](https://leetcode.com/discuss/study-guide/2166045/)
 

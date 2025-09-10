@@ -73,16 +73,3 @@ Recursive algorithm involves a function calling itself with smaller instance, si
 * Make sure to define **all** base cases to cover.
 * Recursion is useful for *permutation*, it generates all combinations and tree-based problems.
 * Recursion implicitly uses a [stack](../topics/stack-queue.md), hence, the recursive algorithm can be rewritten iteratively using a stack. (Mind the stack overflow issue).
-
-## Resources
-- [X] [Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/recursion)
-- [X] CLRS // Recurrences
-- [ ] CTCI
-- [ ] LC Learn 
-    - [X] [Part 1](https://leetcode.com/explore/learn/card/recursion-i/) 
-    - [ ] [Part 2](https://leetcode.com/explore/learn/card/recursion-ii/)
-- [X] [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/recursion/)
-- [X] [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/#sequence-9)
-- [X] [Tech-Interview-Cheat-Sheet](https://github.com/TSiege/Tech-Interview-Cheat-Sheet#recursive-algorithms)
-- [X] ~~[Coding Interview University](https://github.com/jwasham/coding-interview-university#recursion)~~ // Old standford videos
-

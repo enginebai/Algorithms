@@ -37,6 +37,9 @@
 |[152. Maximum Product Subarray](../leetcode/152.maximum-product-subarray.md)|Medium|
 |[1749. Maximum Absolute Sum of Any Subarray](../leetcode/1749.maximum-absolute-sum-of-any-subarray.md)|Medium (1541)|
 
+> * https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/description/
+> * https://leetcode.com/problems/k-concatenation-maximum-sum/description/
+
 ### Grid
 | Problem          | Difficulty |
 |------------------|------------|

@@ -14,6 +14,7 @@ This project offers a curated collection of notes and resources covering fundame
     - [Sliding Window](./problems/sliding-window-problems.md)
 - [Sorting](./topics/sorting.md)
 - [Hash Table](./topics/hash-table.md) ([Problems](./problems/hash-table-problems.md))
+    - [Prefix Sum](./topics/prefix-sum.md) ([Problems](./problems/prefix-sum-problems.md))
 - [Binary Search](./topics/binary-search.md) ([Problems](./problems/binary-search-problems.md))
 - [Linked List](./topics/linked-list.md) ([Problems](./problems/linked-list-problems.md))
 - [Stack & Queue](./topics/stack-queue.md) ([Problems](./problems/stack-queue-problems.md))

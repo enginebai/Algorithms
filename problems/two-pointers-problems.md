@@ -96,7 +96,7 @@
 > * https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/description/
 > * https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/description/ 1362
 
-## 分组循环 (Group by Consecutive)
+## Group By Consecutive (分组循环)
 
 | Problem          | Difficulty | Notes |
 |------------------|------------|-------|
@@ -111,6 +111,7 @@
 
 > TODO: To understand [1887. Reduction Operations to Make the Array Elements Equal](../leetcode/1887.reduction-operations-to-make-the-array-elements-equal.md), and [845. Longest Mountain in Array](../leetcode/845.longest-mountain-in-array.md).
 > * https://leetcode.com/problems/count-number-of-homogenous-substrings/ 1490
+> * Solved, https://leetcode.com/problems/count-alternating-subarrays/description/
 > * https://leetcode.com/problems/unique-substrings-in-wraparound-string/description/
 
 ## Explanation

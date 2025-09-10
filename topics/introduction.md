@@ -106,9 +106,3 @@ See [Complexity](./complexity.md) topic.
     * Divide and Conquer
     * Dynamic Programming
     * Greedy
-
-## Resources
-- [X] Fundamental of Data Structure - Introduction
-- [X] CLRS - Introduction
-- [X] [MIT 6.006 Introduction to Algorithm - Lecture 1: Algorithms and Computation](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-1-algorithms-and-computation/)
-- [X] [MIT 6.006 Introduction to Algorithm - Lecture 2: Data Structures and Dynamic Arrays](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/lecture-videos/lecture-2-data-structures-and-dynamic-arrays/)

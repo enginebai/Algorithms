@@ -484,7 +484,8 @@ class UnionFind(n: Int) {
     // MakeSet(x)
     // We can use hash table if node count is not 0 ~ n - 1
     private val parent = IntArray(n) { it }
-    private val size = IntArray(n) { 1 } // Used as rank, each set has 1 node initially.
+    // Used as rank, each set has 1 node initially.
+    private val size = IntArray(n) { 1 } 
     // Counting the number of connected components, we decrease when union two sets successfully.
     private var componentCount = n
 
@@ -510,6 +511,7 @@ class UnionFind(n: Int) {
 
     // Union(x, y)
     fun union(x: Int, y: Int): Boolean {
+        // Please note that it's not get the parent directly `parent[x]`, we need to use `find(x)` to get the root of the set.
         val parentX = find(x)
         val parentY = find(y)
 
@@ -536,6 +538,8 @@ class UnionFind(n: Int) {
     fun isConnected(x: Int, y: Int) = find(x) == find(y)
 }
 ```
+
+> For hash table implementation, please refer to [721. Accounts Merge](../leetcode/721.accounts-merge.md).
 
 ### Complexity
 - **Time Complexity**: `O(α(n))` for `find(x)` and `union(x, y)`, where `α(n)` is the inverse Ackermann function. It's near `O(1)` time.

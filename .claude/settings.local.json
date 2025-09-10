@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:docs.anthropic.com)"
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(kotlinc:*)",
+      "Bash(java:*)"
     ]
   },
   "outputStyle": "default"

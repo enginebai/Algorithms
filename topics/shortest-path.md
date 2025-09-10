@@ -125,7 +125,7 @@ fun dijkstra(n: Int, graph: List<List<Edge>>, source: Int): IntArray {
         for ((w, adj) in graph[node]) {
             // Please note we can write `distance[adj] > dist + w`, use the `dist` 
             // from heap, not the distance array if we skip the stale item.
-            if (distance[adj] > distance[node] + w ) {
+            if (distance[adj] > distance[node] + w) {
                 distance[adj] = distance[node] + w
                 minHeap.add(distance[adj] to adj)
             }
