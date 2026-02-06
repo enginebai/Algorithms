@@ -105,14 +105,20 @@
 |[1578. Minimum Time to Make Rope Colorful](../leetcode/1578.minimum-time-to-make-rope-colorful.md)|Medium (1574)|
 |[228. Summary Ranges](../leetcode/228.summary-ranges.md)|Easy| Longest increasing streak. |
 |[674. Longest Continuous Increasing Subsequence](../leetcode/674.longest-continuous-increasing-subsequence.md)|Easy|
-|[978. Longest Turbulent Subarray](../leetcode/978.longest-turbulent-subarray.md)|Medium (1393)|
+|[2760. Longest Even Odd Subarray With Threshold](../leetcode/2760.longest-even-odd-subarray-with-threshold.md)|Medium|
 |[1887. Reduction Operations to Make the Array Elements Equal](../leetcode/1887.reduction-operations-to-make-the-array-elements-equal.md)|Medium (1427)|
 |[845. Longest Mountain in Array](../leetcode/845.longest-mountain-in-array.md)|Medium (1436)|
 
 > TODO: To understand [1887. Reduction Operations to Make the Array Elements Equal](../leetcode/1887.reduction-operations-to-make-the-array-elements-equal.md), and [845. Longest Mountain in Array](../leetcode/845.longest-mountain-in-array.md).
-> * https://leetcode.com/problems/count-number-of-homogenous-substrings/ 1490
+> * Solved,https://leetcode.com/problems/count-number-of-homogenous-substrings/ 1490, similar to [1446. Consecutive Characters](../leetcode/1446.consecutive-characters.md)
 > * Solved, https://leetcode.com/problems/count-alternating-subarrays/description/
 > * https://leetcode.com/problems/unique-substrings-in-wraparound-string/description/
+
+### Group By Edges
+| Problem          | Difficulty | Notes |
+|------------------|------------|-------|
+|[978. Longest Turbulent Subarray](../leetcode/978.longest-turbulent-subarray.md)|Medium (1393)|
+|[413. Arithmetic Slices](../leetcode/413.arithmetic-slices.md)|Medium|
 
 ## Explanation
 * [11. Container With Most Water](https://github.com/wisdompeak/LeetCode/tree/master/Two_Pointers/011.Container-With-Most-Water)

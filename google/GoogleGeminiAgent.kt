@@ -680,3 +680,178 @@ fun meetingRooms(nums: Array<IntArray>): Int {
     }
     return minHeap.size
 }
+
+fun hasCycle(graph: Array<List<Int>>): Boolean {
+    val n = graph.size
+    val visited = BooleanArray(n)
+    for (i in 0 until n) {
+        if (!visited[i]) {
+            if (dfs(graph, i, visited)) return true
+        }
+    }
+    return false
+}
+
+fun dfs(graph: Array<List<List>>, i: Int, parent: Int, visited: BooleanArray): Boolean {
+    if (visited[i] == true) return true
+    visited[i] = true
+    for (adj in graph[i]) {
+        // Case A: It's the path we just came from. Ignore.
+        if (adj == parent) continue
+        // Case B: We've visited before and it's not a turn-around, it's cycle.
+        if (visited[adj]) return true
+        // Case C: Visit the neighbor.
+        if (dfs(graph, adj, i, visited)) return true
+    }
+    return false
+}
+
+/**
+ * Convert [x, x, x, y, y, y, y] into [(x: 3), (y: 4)]
+ */
+fun compress(a: IntArray): List<Pair<Int, Int>> {
+    var i = 0
+    val vector = mutableListOf<Pair<Int, Int>>()
+    while (i < a.size) {
+        val start = i
+        i++
+        while (i < a.size && a[i] == a[start]) {
+            i++
+        }
+        val count = i - start
+        vector.add(a[start] to count)
+    }
+    return vector
+}
+
+fun product(a: IntArray, b: IntArray): Long {
+    val vectorA = compress(a)
+    val vectorB = compress(b)
+    val m = vectorA.size
+    val n = vectorB.size
+
+    if (m == 0 || n == 0) return 0L
+
+    var i = 0
+    var j = 0
+    var countA = vectorA[i].second
+    var countB = vectorB[j].second
+    var product = 0L
+    while (i < m && j < n) {
+        val minCount = minOf(countA, countB)
+        product += minCount.toLong() * (vectorA[i].first * vectorB[j].first)
+        countA -= minCount
+        if (countA == 0) {
+            i++
+            if (i < m) countA = vectorA[i].second
+        }
+        countB -= minCount
+        if (countB == 0) {
+            j++
+            if (j < n) countB = vectorB[j].second
+        }
+    }
+}
+
+/**
+(2: 9) 
+         i
+(3: 2), (4: 3), (5: 4)
+                        j
+countA = 0
+countB = 0
+minCount = 4
+product = 2 * (2 * 3) + 3 * (2 * 4) + 4 * (2 * 5)
+ */
+
+fun product(a: IntArray, b: IntArray): Long {
+    val vectorA = compress(a)
+    val vectorB = compress(b)
+    val m = vectorA.size
+    val n = vectorB.size
+
+    var i = 0
+    var j = 0
+
+    var remainingA: Pair<Int, Int>? = null
+    var remainingB: Pair<Int, Int>? = null
+
+    var product = 0L
+    while (i < m || j < n) {
+
+        var item1: Pair<Int, Int>? = null
+        var item2: Pair<Int, Int>? = null
+
+        if (remainingA != null && j < n) {
+            item1 = remainingA
+            item2 = vectorB[j]
+        } else if (remainingB != null && i < m) {
+            item1 = vectorA[i]
+            item2 = remainingB
+        } else if (i < m && j < n) {
+            item1 = vectorA[i]
+            item2 = vectorB[j]
+        }
+        if (item1 != null && item2 != null) {
+            if (item1.second == item2.second) {
+                product += (item1.first.toLong() * item2.first) * item1.second
+                i++
+                j++
+                remainingA = null
+                remainingB = null
+            } else {
+                val minCount = minOf(item1.second, item2.second)
+                product += (item1.first.toLong() * item2.first) * minCount
+                if (item1.second > item2.second) {
+                    remainingA = item1.first to (item1.second - minCount)
+                    j++
+                    remainingB = null
+                } else {
+                    remainingB = item2.first to (item2.second - minCount)
+                    i++
+                    remainingA = null
+                }
+            }
+        } else {
+            throw Exception()
+        }
+    }
+    return product
+}
+
+fun findMaxConsecutiveOnes(nums: IntArray): Int {
+    var count = 0
+    var ans = 0
+    for (i in nums.indices) {
+        if (nums[i] == 1) {
+            count++
+        } else {
+            count = 0
+        }
+        ans = maxOf(ans, count)
+    }
+    return ans
+}
+
+/**
+[_, _, i, _, _, j, _]
+                ^
+ 0  1  2              
+[2, 1, 3]
+    i     
+[0  0  2]
+ */
+fun getMaximumScores(nums: IntArray): Long {
+    var scores = 0L
+    val n = nums.size
+    val dp = LongArray(n)
+    for (i in nums.indices) {
+        // Take it
+        val takeIt = dp[i] + arr[i]
+        val nextIndex = i + arr[i]
+        if (nextIndex < n) dp[nextIndex] += takeIt
+        if (i + 1 < n) dp[i + 1] = maxOf(dp[i + 1], dp[i])
+        maxScores = maxOf(maxScores, takeIt)
+    }
+    return scrores
+}
