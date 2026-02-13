@@ -31,7 +31,7 @@
 > * https://leetcode.com/problems/count-the-number-of-complete-components/description/ 1769
 > * https://leetcode.com/problems/maximize-amount-after-two-days-of-conversions/description/ 1787
 
-### Tree-like
+### Tree in Graph
 | Problem          | Difficulty |
 |------------------|------------|
 |[1376. Time Needed to Inform All Employees](../leetcode/1376.time-needed-to-inform-all-employees.md)|Medium (1560)|
