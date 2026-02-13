@@ -110,24 +110,28 @@ fun dijkstra(G, s) {
 ### Implementation
 Please remember that `dist, node` popped from the heap represents the distance from source to `node`. It may or may not be the shortest distance (it may be stale). So we need to skip it if it's stale.
 
+> Please note that we use **strictly greater than** `>` to skip the stale and relaxation.
+
 ```kotlin
 data class Edge(val weight: Int, val to: Int)
 
 fun dijkstra(n: Int, graph: List<List<Edge>>, source: Int): IntArray {
-    val distance = IntArray(n) { Int.MAX_VALUE }
+    val distances = IntArray(n) { Int.MAX_VALUE }
     val minHeap = PriorityQueue(compareBy<Pair<Int, Int>> { it.first })
     distance[source] = 0
     minHeap.add(0 to source)
 
     while (minHeap.isNotEmpty()) {
         val (dist, node) = minHeap.poll()
-        if (distance[node] < dist) continue // Skip stale item
+        if (distances[node] < dist) continue // Skip stale item
+
+        // (Optional) Check if we reach the target
+        if (node == target) { ...}
+
         for ((w, adj) in graph[node]) {
-            // Please note we can write `distance[adj] > dist + w`, use the `dist` 
-            // from heap, not the distance array if we skip the stale item.
-            if (distance[adj] > distance[node] + w) {
-                distance[adj] = distance[node] + w
-                minHeap.add(distance[adj] to adj)
+            if (distances[adj] > dist + w) {
+                distances[adj] = dist + w
+                minHeap.add(distances[adj] to adj)
             }
         }
     }
@@ -137,7 +141,7 @@ fun dijkstra(n: Int, graph: List<List<Edge>>, source: Int): IntArray {
 // Variant: use visited set to skip stale items.
 
 fun dijkstra(n: Int, graph: List<List<Edge>>, source: Int): IntArray {
-    val distance = IntArray(n) { Int.MAX_VALUE }
+    val distances = IntArray(n) { Int.MAX_VALUE }
     val minHeap = PriorityQueue(compareBy<Pair<Int, Int>> { it.first })
     distance[source] = 0
     minHeap.add(0 to source)
@@ -148,7 +152,7 @@ fun dijkstra(n: Int, graph: List<List<Edge>>, source: Int): IntArray {
         if (visited.contains(node)) continue // Skip stale item
 
         // The first time we visit a "unvisited" node, we have found its shortest distance.
-        distance[node] = dist
+        distances[node] = dist
         visited.add(node)
         for ((w, adj) in graph[node]) {
             // No need to check distance before enqueue.

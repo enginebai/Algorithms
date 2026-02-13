@@ -31,7 +31,7 @@
 > * https://leetcode.com/problems/count-the-number-of-complete-components/description/ 1769
 > * https://leetcode.com/problems/maximize-amount-after-two-days-of-conversions/description/ 1787
 
-### Tree-like
+### Tree in Graph
 | Problem          | Difficulty |
 |------------------|------------|
 |[1376. Time Needed to Inform All Employees](../leetcode/1376.time-needed-to-inform-all-employees.md)|Medium (1560)|
@@ -84,48 +84,13 @@
 > * https://leetcode.com/problems/build-a-matrix-with-conditions/description/ 1960
 > * https://leetcode.com/problems/parallel-courses-iii/ 2084
 
-## BFS
-
-> * https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/description/ 1567
-> * https://leetcode.com/problems/get-watched-videos-by-your-friends/description/ 1652
-> * https://leetcode.com/problems/map-of-highest-peak/description/ 1782, as same as [542. 01 Matrix](../leetcode/542.01-matrix.md)
-> * https://leetcode.com/problems/minimum-sideway-jumps/description/ 1778
-> * https://leetcode.com/problems/shortest-cycle-in-a-graph/description/ 1904
-> * https://leetcode.com/problems/bus-routes/description/ 1964
-> * https://leetcode.com/problems/snakes-and-ladders/description/ 2019
-> * https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/description/ 2068
-> * https://leetcode.com/problems/cut-off-trees-for-golf-event/description/ h
-
-### Single-source BFS
-| Problem          | Difficulty |
-|------------------|------------|
-|[127. Word Ladder](../leetcode/127.word-ladder.md)|Hard|
-|[1091. Shortest Path in Binary Matrix](../leetcode/1091.shortest-path-in-binary-matrix.md)|Medium|
-|[433. Minimum Genetic Mutation](../leetcode/433.minimum-genetic-mutation.md)|Medium|
-|[1926. Nearest Exit from Entrance in Maze](../leetcode/1926.nearest-exit-from-entrance-in-maze.md)|Medium (1638)|
-|[1129. Shortest Path with Alternating Colors](../leetcode/1129.shortest-path-with-alternating-colors.md)|Medium (1779)|
-|**[934. Shortest Bridge](../leetcode/934.shortest-bridge.md)|Medium (1825)|
-|[752. Open the Lock](../leetcode/752.open-the-lock.md)|Medium (1877)|
-|[3552. Grid Teleportation Traversal](../leetcode/3552.grid-teleportation-traversal.md)|Medium|
-
-### Multi-Source BFS
-| Problem          | Difficulty | Notes |
-|------------------|------------|------------|
-|**[994. Rotting Oranges](../leetcode/994.rotting-orange.md)|Medium|
-|**[542. 01 Matrix](../leetcode/542.01-matrix.md)|Medium| Distance matrix, no visited set needed. OR 2-pass DP. |
-|[1162. As Far from Land as Possible](../leetcode/1162.as-far-from-land-as-possible.md)|Medium (1666)|
-
-### Multi-State BFS
-| Problem          | Difficulty |
-|------------------|------------|
-|**[1293. Shortest Path in a Grid with Obstacles Elimination](../leetcode/1293.shortest-path-in-a-grid-with-obstacles-elimination.md)|Hard (1967)|
-|[3568. Minimum Moves to Clean the Classroom](../leetcode/3568.minimum-moves-to-clean-the-classroom.md)|Hard|
-
 ## Union Find
 | Problem          | Difficulty |
 |------------------|------------|
 |**[547. Number of Provinces](../leetcode/547.number-of-provinces.md)|Medium|
 |[684. Redundant Connection](../leetcode/684.redundant-connection.md)|Medium|
+|[721. Accounts Merge](../leetcode/721.accounts-merge.md)|Medium|
+|[2316. Count Unreachable Pairs of Nodes in an Undirected Graph](../leetcode/2316.count-unreachable-pairs-of-nodes-in-an-undirected-graph.md)|Medium (1604)|
 
 > TODO: [七、并查集](https://huxulm.github.io/lc-rating/list/data_structure)
 

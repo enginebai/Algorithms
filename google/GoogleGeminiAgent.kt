@@ -833,25 +833,529 @@ fun findMaxConsecutiveOnes(nums: IntArray): Int {
     return ans
 }
 
-/**
-[_, _, i, _, _, j, _]
-                ^
- 0  1  2              
-[2, 1, 3]
-    i     
-[0  0  2]
- */
-fun getMaximumScores(nums: IntArray): Long {
-    var scores = 0L
-    val n = nums.size
-    val dp = LongArray(n)
-    for (i in nums.indices) {
-        // Take it
-        val takeIt = dp[i] + arr[i]
-        val nextIndex = i + arr[i]
-        if (nextIndex < n) dp[nextIndex] += takeIt
-        if (i + 1 < n) dp[i + 1] = maxOf(dp[i + 1], dp[i])
-        maxScores = maxOf(maxScores, takeIt)
+fun replace(s: String, visited: HashSet<String>): String {
+    for (c in s) {
+        if (c == '%') {
+            if (starting) {
+                if (variable.isEmpty) throw Exception(variable is empty)
+                if (variable !in dict) throw Exception(No key)
+                if (variable in visited) throw Exception(cycle)
+
+                if (variable !in memo) {
+                    visited.add(variable)
+                    resolvedValue = replace(dict[variable], visited)
+                    memo[variable] = resolvedValue
+                    visited.remove(variable)
+                }
+                output.append(memo[variable]!!)
+                starting = false
+                variable.clear()
+            } else {
+                starting = true
+            }
+        } else {
+            if (starting) variable.append(c)
+            else output.append(c)
+        }
     }
-    return scrores
+    if (starting) throw Exception(Unmatched %)
+    return output
 }
+
+dict = {XYZ: "123 %HELLO%", HELLO: "WORLD %XYZ%"}
+replace('ABC, %XYZ%, X, X, %HELLO%', {})
+              ^^^^^
+    XYZ = replace('123 %HELLO%'', {XYZ})
+                       ^^^^^^^
+        HELLO = replace('WORLD %XYZ%', {XYZ, HELLO})
+                               ^^^^^
+
+fun bfsStandard(startNode: Int): IntArray {
+    val distances = IntArray(n) { Int.MAX_VALUE }
+    val queue = ArrayDeque<Int>()
+    queue.addLast(startNode)
+    distances[startNode] = 0
+    while (queue.isNotEmpty()) {
+        val node = queue.removeFirst()
+
+        graph[node].forEach { adj ->
+            if (distances[adj] == Int.MAX_VALUE) {
+                distances[adj] = distances[node] + 1
+                queue.addLast(adj)
+            }
+        }
+    }
+    return distances
+}
+
+fun bfsLevelByLevel(startNode: Int): IntArray {
+    val distances = IntArray(n) { Int.MAX_VALUE }
+    val queue = ArrayDeque<Int>()
+    val visited = BooleanArray(n)
+    queue.addLast(startNode)
+    visited[startNode] = true
+
+    var distance = 0
+    while (queue.isNotEmpty()) {
+        val size = queue.size
+        repeat (size) {
+            val node = queue.removeFirst()
+            distances[node] = distance
+            for (adj in graph[node]) {
+                if (visited[adj]) continue
+
+                visited[adj] = true
+                queue.addLast(adj)
+            }
+        }
+        distance++
+    }
+    return distances
+}
+
+fun bfsRelaxation(startNode: Int): IntArray {
+    val distances = IntArray(n) { Int.MAX_VALUE }
+    val queue = ArrayDeque<Int>()
+    queue.addLast(startNode)
+    distances[startNode] = 0
+    while (queue.isNotEmpty()) {
+        val node = queue.removeFirst()
+        for (adj in adjList[node]) {
+            if (distances[adj] > distances[node] + 1) {
+                distances[adj] = distances[node] + 1
+                queue.addLast(adj)
+            }
+        }
+    }
+    return distances
+}
+
+class IslandShape(private val grid: Array<IntArray>) {
+    fun countDistinctIslands(): Int {
+        val allVisited = HashSet<Cell>()
+        val shapeSet = HashSet<String>()
+        for (i in 0 until m) {
+            for (j in 0 until n) {
+                if (grid[i][j] !in allVisited) {
+                    val island = HashSet<Cell>()
+                    dfs(i, j, island)
+
+                }
+            }
+        }
+        return shapeSet
+    }
+
+    private fun normalizeIsland(island: HashSet<Cell>): String {
+        val variants = Array<String>(8)
+        for (i in variants.indices) {
+            val newShape = HashSet<Cell>()
+            for ((x, y) in island) {
+                val (newX, newY) = when (i) {
+                    0 -> x to y
+                    1 -> (y, -x) // rotate 90
+                    2 -> (-x, -y) // rotate 180
+                    3 -> (-y, x) // rotate 270
+                    4 -> (x, -y) // reflect horizontally
+                    5 -> (-x, y) // reflect vertically
+                    6 -> (-y, -x) // reflect y = -x
+                    7 -> (y, x) // reflect y = x
+                newShape.add(newX, newY)
+            }
+            newShap =
+        }
+        variants.sort()
+        return variants.first()
+    }
+}
+
+/**
+(x, y)
+(-1, 2)
+       _   * (2, 1)
+       |   
+-|-|-|-|-|-|-|-
+       |
+   *   - (-2, -1)
+       |
+       _ * (1, -2)
+ */
+
+data class Node(
+    val id: Long,
+    val name: String, 
+    val directories: List<Node>?
+)
+
+fun findSameNameAncestors(root: Node?, k: Int): List<String> {
+    if (root == null) return emptyList()
+
+    val answer = mutableListOf<String>()
+    val map = HashMap<String, HashSet<Node>>()
+    checkAncestors(root, map, answer)
+    return answer
+}
+
+private fun checkAncestors(root: Node?, ancestorsMap: HashMap<String, HashSet<Node>>, answer: MutableList<String>, k: Int, window: ArrayQueue<Node>) {
+    if (root == null) return
+    if (root.name in ancestorsMap) {
+        answer.add(root.id)
+    }
+    val ancestors = ancestorsMap.getOrPut(ancestors.name) { HashSet<Node> }
+    ancestors.add(root)
+    window.addLast(root)
+    while (window.size > k) {
+        val removed = window.removeFirst()
+        ancestorsMap[removed.name]?.remove(removed)
+        if (ancestorsMap[removed.name]?.isEmpty() == true) ancestorsMap.remove(removed.name)
+    }
+    for (dir in root.directories) {
+        checkAncestors(dir, ancestorsMap, answer)
+    }
+    ancestors.remove(root)
+    window.removeLast()
+}
+
+// -----------------------------------------------------------------------------------
+min=14, max=oo, v1, 1
+min = -oo, max = 8, v2, 2
+min = 12, max = 16, v3, 3
+
+events =         TreeSet (for line sweep) TreeMap (For query later)
+(-oo, v2, 2, S)  {(v2, 2)}                {-oo: 2}
+(8, v2, 2, E)    {}                       {-oo, 2, 9: null}
+(12, v3, 3, S)   {(v3, 3)}                {-oo, 2, 9: null, 12: 3}
+(14, v1, 1, S)   {(v3, 3)/(v1, 1)}        {-oo, 2, 9: null, 12: 3, 14: 3}
+(16, v3, 3, E)   {(v1, 1)}                {-oo, 2, 9: null, 12: 3, 14: 3, 17: 1}  
+(oo, v1, 1, E)   {}                       
+
+RO = {}
+
+OS = 3
+OS = 11
+OS = 14
+OS = 7
+OS = 20
+
+// -----------------------------------------------------------------------------------
+private var i = 0
+fun eval(expression: String): Float {
+    val n = expression.length
+    val first = expression[0]
+    if (first == '-' || first.isDigit()) {
+        return parseNumber()
+    } else {
+        val functionName = expression.substring(i, i + 3)
+        i += 3
+        i++ // Skip '('
+
+        val operand1 = eval(expression)
+        i++ // Skip ','
+        val operand2 = eval(expression)
+        i++ // Skip ')'
+
+        return operations[functionName]?.invoke(operand1, operand2) ?: 0.0f
+    }
+}
+
+private val operations: Map<String, (Double, Double) -> Double> = mapOf(
+    "ADD" to :add)
+
+private fun parseNumber(): Float {
+    var sign = 1
+    if (i < n && expression[i] == '-') {
+        sign = -1
+        i++
+    }
+    var num = 0
+    while (i < n && expression[i].isDigit()) {
+        num = num * 10 + (expression[i] - '0')
+        i++
+    }
+    if (i < n && expression[i] == '.') {
+        i++
+        var decimal = 1f
+        while (i < 0 && expression[i].isDigit() {
+            decimal /= 10f
+            num += decimal * (expression[i] - '0')
+            i++
+        }
+    }
+    return sign * num
+}
+
+fun simplifyExpressionOneLevel(exp: String): String {
+    var globalSign = 1
+    var localSign = 1
+    var letter = 'a'
+    val coef = IntArray(26)
+    for (c in exp) {
+        if (c.isLetter()) {
+            coef[c - 'a'] += globalSign * localSign
+        } else if (c == '+') {
+            localSign = 1 * globalSign
+        } else if (c == '-') {
+            localSign = -1 * globalSign
+        } else if (c == '(') {
+            globalSign = localSign
+            localSign = 1
+        } else if (c == ')') {
+            globalSign = 1
+            localSign = 1
+        }
+    }
+    return output(coef)
+}
+
+fun simplifyExpression(exp: String): String {
+    val globalSign = ArrayDeque<Int>()
+    globalSign.addLast(1)
+    val coef = IntArray(26)
+    var localSign = 1
+    for (c in exp) {
+        when {
+            c.isLetter -> {
+                coef[c - 'a'] = globalSign.last() * localSign
+            }
+            c == '+' -> {
+                localSign = 1
+            }   
+            c == '-' -> {
+                localSign = -1
+            }
+            c == '(' -> {
+                globalSign.addLast(globalSign.last() * localSign)
+                localSign = 1
+            }
+            else -> {
+                globalSign.removeLast()
+                localSign = 1
+            }
+        }
+    }
+    return output(coef)
+}
+
+
+
+fun getShipDays(weights: IntArray, capacity: Int): Int {
+    var day = 1
+    val load = 0
+    for (w in weights) {
+        if (load + w > capacity) {
+            day++
+            load = 0
+        }
+        load += w
+    }
+    return day
+}
+
+/**
+altitudes = [5, 4, 1, 6, 2]
+                ^        ^
+fountains = [1, 4]
+ */
+
+fun getFlooded(altitudes: IntArray, f: IntArray): BooleanArray {
+    val n = altitudes.size
+    val answers = BooleanArray(n)
+
+    f.sort()
+    for (i in altitudes.indices) {
+        val a = altitudes[i]
+
+        val prev = findPrev(a, f)
+        val next = findNext(a, f)
+        if (prev != -1 && next != -1) {
+            val d1 = abs(i - prev)
+            val d2 = abs(i - next)
+            if (d1 == d2) {
+                if (f[prev] >= a || f[next] >= a) answer[i] = true
+            } else if (d1 < d2) {
+                if (f[prev] >= a) answer[i] = true
+            } else if (d1 > d2) {
+                if (f[next] >= a) answer[i] = true
+            }
+        }
+    }
+    return answers
+}
+
+// Find the last position which f[i] <= a
+private fun findPrev(a: Int, f: IntArray): Int {
+    var left = 0
+    var right = f.size - 1
+    while (left <= right) {
+        val middle = left + (right - left) / 2
+        if (f[middle] <= a) {
+            left = middle + 1
+        } else {
+            right = middle - 1
+        }
+    }
+    return if (right in 0 until f.size) right else -1
+}
+
+// Find the first position which a <= f[i]
+private fun findNext(a: Int, f: IntArray): Int {
+    var left = 0
+    var right = f.size - 1
+    while (left <= right) {
+        val middle = left + (right - left) / 2
+        if (a <= f[middle]) {
+            right = middle - 1
+        } else {
+            left = middle + 1
+        }
+    }
+    return if (left in 0 until f.size) left else -1
+}
+
+fun getFlooded(altitudes: IntArray, f: IntArray): BooleanArray {
+    val m = altitudes.size
+    val n = f.size
+    val answers = BooleanArray(m)
+
+    altitudes.sort()
+    f.sort()
+    var j = 0
+    for (i in altitudes.indices) {
+        val a = altitudes[i]
+        // Iterate to find the next closest one
+        while (j < n && f[j] < a) {
+            j++
+        }
+
+        if (j == 0) { // There is no previous one [a] [f1, f2, ...fn]
+        } else if (j == n) { // There is no next one, [f1, f2, ...fn] [a]
+        } else {
+        }
+
+
+    }
+    return answers
+}
+
+fun groupByConsecutive(nums: IntArray) {
+    val n = nums.size
+    var i = 0
+    var answer = 0
+    while (i < n) {
+        var start = i
+        i++
+        while (i < n && nums[i - 1] + 1 == nums[i]) {
+            i++
+        }
+        answer = maxOf(ans, i - start)
+    }
+    return answer
+}
+
+/**
+ k is odd, k = 3
+    [-, - , ..., -, -]
+    [-, -, ...., -, +]
+ k is even, 
+ */
+fun maxKProduct(nums: IntArray, k: Int): Long {
+    var maxProduct = 1L
+    nums.sort()
+    var left = 0
+    var right = nums.lastIndex
+    var kk = k
+
+    /**
+    [0, 1, 2, 3, 4], k = 2
+     */
+    if (k % 2 == 1) {
+        if (nums.last() < 0) {
+            // Find the less negative product
+            for (i in nums.lastIndex downTo nums.lastIndex - k + 1) {
+                maxProduct *= nums[i]
+            }
+            return maxProduct
+        }
+
+        if (nums[left] <= nums[right]) {
+            maxProduct *= nums[right--]
+        } else {
+            maxProduct *= nums[left++]
+        }
+        kk--
+    }
+    while (kk > 0) {
+        val leftPart = nums[left] * nums[left + 1]
+        var rightPart = nums[right - 1] * nums[right]
+        if (leftPart <= rightPart) {
+            maxProduct *= rightPart
+            right -= 2
+        } else {
+            maxProduct *= leftPart
+            left += 2
+        }
+        kk -= 2
+    }
+    return maxProduct
+}
+
+/**
+n = 6
+0  1  2  3  4  5
+O, O, O, _, _, _ i = 0 = p[2] * 1L
+O, O, _, _, _, O i = 1 = p[1] * s[0]
+O, _, _, _, O, O i = 2 = p[0] * s[1]
+_, _, _, O, O, O i = 3 = 1L * s[2]
+            <- i
+         2, 1, 0
+k = 3
+ */
+fun maxKProduct(nums: IntArray, k: Int): Long {
+    val n = nums.size
+    nums.sort()
+    val prefix = LongArray(n)
+    val suffix = LongArray(n)
+
+    prefix[0] = nums[0]
+    for (i in 1 until n) {
+        prefix[i] = nums[i] * prefix[i - 1]
+    }
+    suffix[0] = nums[n - 1]
+    for (i in 1 until n) {
+        suffix[i] = nums[n - 1 - i] * suffix[i - 1]
+    }
+
+    var maxProduct = 1L
+    for (i in 0..k) {
+        val p = if (k - 1 - i >= 0) prefix[k - 1 - i] else 1L
+        val s = if (i - 1 >= 0) suffix[i - 1] else 1L
+        maxProduct = maxOf(maxProduct, p * s)
+    }
+
+    return maxProduct
+}
+
+fun isKInsertions(s1: String, s2: String, k: Int): Boolean {
+    val split1 = s1.split(" ")
+    val split2 = s2.split(" ")
+    if (split2.size < split1.size) return isSingleInsertion(s2, s1)
+
+    // Check if s2 is a insertion of s1
+    var i = 0
+    var j = 0
+    while (j < split2.size) {
+        if (i < split1.size && split1[i] == split2[j]) {
+            i++
+            j++
+            inGap = false
+        } else {
+            if (!inGap) {
+                inGap = true
+                gaps++
+            }
+            j++
+        }
+    }
+    return i == split1.size && gaps == k
+}
+    

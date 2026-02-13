@@ -75,9 +75,9 @@
 #### Advanced (Optional)
 | Problem          | Difficulty |
 |------------------|------------|
+|[962. Maximum Width Ramp](../leetcode/962.maximum-width-ramp.md)|Medium|
 
 > * https://leetcode.com/problems/next-greater-node-in-linked-list/ 1570
-> * https://leetcode.com/problems/maximum-width-ramp/description/ 1607
 > * https://leetcode.com/problems/longest-well-performing-interval/description/ 1908
 > * **https://leetcode.com/problems/132-pattern/** 2000
 > * TODO: [2866. Beautiful Towers II](../leetcode/2866.beautiful-towers-ii.md) 2071

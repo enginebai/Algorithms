@@ -396,6 +396,10 @@ There are two main operations:
 > 并查集（Union Find）结构是 *二叉树结构* 的衍生，用于高效解决无向图的连通性问题，可以在 `O(1)` 时间内合并两个连通分量，在 `O(1)` 时间内查询两个节点是否连通，在 `O(1)` 时间内查询连通分量的数量。
 
 The pseudocode is as follows:
+> 核心概念就是：
+> - 一開始每個節點都是自己一組。
+> - 如果兩個節點有一個邊連接，代表這兩個節點應屬於同一組。所以如果他們現在是不同組，那就把他們變成同一組。
+
 ```js
 function ConnectedComponent(G: {V, E}) {
     for each vertex v in G:
@@ -479,6 +483,10 @@ a
 > 總是把較小（或較淺）集合接到較大（或較深）集合下，避免退化成鏈狀。
 
 ### Implementation
+
+> - For hash table implementation, please refer to [721. Accounts Merge](../leetcode/721.accounts-merge.md).
+> - To find any information of a node (such as the tree size), please use `find(x)` to get the root of the set, then get the information from the root node, **NOT `x` itself**!!
+
 ```kotlin
 class UnionFind(n: Int) {
     // MakeSet(x)
@@ -490,6 +498,7 @@ class UnionFind(n: Int) {
     private var componentCount = n
 
     // FindSet(x)
+    // Path compression
     // This function will completely flattens the entire tree.
     fun find(x: Int): Int {
         if (x != parent[x]) {
@@ -515,9 +524,11 @@ class UnionFind(n: Int) {
         val parentX = find(x)
         val parentY = find(y)
 
+        // Already in the same family tree
         if (parentX == parentY) return false
 
         // Union by rank (size)
+        // Attach the smaller tree under the larger tree
         // Link(x, y)
         if (size[parentX] < size[parentY]) { // If y is larger
             // Attach x to y
@@ -534,12 +545,10 @@ class UnionFind(n: Int) {
 
     // Some useful functions
     fun getComponentCount() = componentCount
-    fun getSize(x: Int) = size[find(x)]
+    fun getSize(x: Int) = size[find(x)] // Not `size[x]` directly.
     fun isConnected(x: Int, y: Int) = find(x) == find(y)
 }
 ```
-
-> For hash table implementation, please refer to [721. Accounts Merge](../leetcode/721.accounts-merge.md).
 
 ### Complexity
 - **Time Complexity**: `O(α(n))` for `find(x)` and `union(x, y)`, where `α(n)` is the inverse Ackermann function. It's near `O(1)` time.

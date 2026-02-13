@@ -33,6 +33,7 @@
 |[55. Jump Game](../leetcode/55.jump-game.md)|Medium|
 |[763. Partition Labels](../leetcode/763.partition-labels.md)|Medium|
 |[729. My Calendar I](../leetcode/729.my-calendar-i.md)|Medium|
+|[3047. Find the Largest Area of Square Inside Two Rectangles](../leetcode/3047.find-the-largest-area-of-square-inside-two-rectangles.md)|Medium|
 
 > * TODO: [56. Merge Intervals](../leetcode/56.merge-intervals.md) to be solved by [line sweep](https://leetcode.com/problems/merge-intervals/submissions/1582918717)
 > * https://leetcode.com/problems/count-days-without-meetings/description/ 1483

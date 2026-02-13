@@ -86,8 +86,6 @@
 |**[139. Word Break](../leetcode/139.word-break.md)|Medium| Iterate each substring, try all possible splits for each substring. |
 
 
-
-
 ### Problem Lists
 > * https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
 > * https://leetcode.com/discuss/general-discussion/592146/dynamic-programming-summary
