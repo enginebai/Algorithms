@@ -53,11 +53,10 @@ For example, `A = [5, 2, 4, 7, 1, 3, 2, 6]`:
 ```kotlin
 fun mergeSort(nums: IntArray): IntArray {
     if (nums.size > 1) {
-        val middle = nums.size / 2
-        // Not 0..middle / middel + 1 until nums.size, this will cause stack overflow.
-        // Take a look at size 2.
-        val leftArray = mergeSort(nums.sliceArray(0 until middle))
-        val rightArray = mergeSort(nums.sliceArray(middle until nums.size))
+        // middle = left + (right - left) / 2
+        val middle = 0 + (nums.size - 1 - 0) / 2 
+        val leftArray = mergeSort(nums.sliceArray(0..middle))
+        val rightArray = mergeSort(nums.sliceArray(middle + 1 until nums.size))
         return merge(leftArray, rightArray)
     } else {
         return nums

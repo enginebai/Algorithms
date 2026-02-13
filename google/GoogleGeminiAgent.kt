@@ -833,25 +833,4 @@ fun findMaxConsecutiveOnes(nums: IntArray): Int {
     return ans
 }
 
-/**
-[_, _, i, _, _, j, _]
-                ^
- 0  1  2              
-[2, 1, 3]
-    i     
-[0  0  2]
- */
-fun getMaximumScores(nums: IntArray): Long {
-    var scores = 0L
-    val n = nums.size
-    val dp = LongArray(n)
-    for (i in nums.indices) {
-        // Take it
-        val takeIt = dp[i] + arr[i]
-        val nextIndex = i + arr[i]
-        if (nextIndex < n) dp[nextIndex] += takeIt
-        if (i + 1 < n) dp[i + 1] = maxOf(dp[i + 1], dp[i])
-        maxScores = maxOf(maxScores, takeIt)
-    }
-    return scrores
-}
+

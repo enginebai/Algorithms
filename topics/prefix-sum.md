@@ -27,9 +27,9 @@ prefix   = [2, 5, 6, 8]
 // prefix[2] = nums[0] + nums[1] + nums[2] = 6
 ```
 
-**Formula**: `sumRange(L, R) = prefix[R] - prefix[L - 1]`
+**Formula**: `sumRange(L, R) = prefix[R] - prefix[L - 1]` or `sumRange(L + 1, R) = prefix[R] - prefix[L]`.
 
-**Edge case**: Need special handling when `L == 0`
+**Edge case**: Need special handling when `L == 0` (i.e., `L - 1 < 0`), `sumRange(0, R) = prefix[R]` if `L == 0`.
 
 ```kotlin
 // Build prefix sum array
@@ -66,6 +66,10 @@ fun sumRange(prefix: IntArray, left: Int, right: Int): Int {
 
 `prefix[i]` = sum of first `i` elements = sum of `nums[0..i-1]` (exclusive of `nums[i]`)
 
+Natural interpretation of prefix sum:
+- `prefix[i]` = "sum of first i elements"
+- `prefix[0]` = "sum of first 0 elements" = 0 ✓
+
 ```js
 nums     = [2, 3, 1, 2]
 index       0  1  2  3
@@ -78,11 +82,6 @@ index       0  1  2  3  4
 // prefix[2] = nums[0] + nums[1] = 5
 // prefix[3] = nums[0] + nums[1] + nums[2] = 6
 ```
-
-> Natural interpretation of prefix sum:
->
-> - prefix[i] = "sum of first i elements"
-> - prefix[0] = "sum of first 0 elements" = 0 ✓
 
 **Formula**: `sumRange(L, R) = prefix[R + 1] - prefix[L]`
 
@@ -130,7 +129,6 @@ fun sumRange(prefix: IntArray, left: Int, right: Int): Int {
 ## Pitfalls
 
 - **Off-by-one errors**: Be careful with the indexing convention you choose. Stick to one convention consistently.
-- **Integer overflow**: Use `Long` for large sums or products.
 - **Base case for prefix sum**: When using prefix sum with hash table, remember to initialize `countMap[0] = 1` to handle cases where `prefixSum == k`.
 - **Negative numbers**: Prefix sum works with negative numbers, but sliding window often doesn't (can't shrink window reliably).
 - **Empty prefix**: `prefix[0] = 0` for sum, `prefix[0] = 1` for product.
