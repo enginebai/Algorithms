@@ -62,13 +62,6 @@
 |**[79. Word Search](../leetcode/79.word-search.md)|Medium| Path finding, need backtracking. |
 |[980. Unique Paths III](../leetcode/980.unique-paths-iii.md)|Hard|
 
-## Graph Coloring
-| Problem          | Difficulty |
-|------------------|------------|
-|[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)|Medium|
-|[886. Possible Bipartition](../leetcode/886.possible-bipartition.md)|Medium|
-|[1042. Flower Planting With No Adjacent](../leetcode/1042.flower-planting-with-no-adjacent.md)|Medium (1712)|
-
 ## Topological Sort
 | Problem          | Difficulty |
 |------------------|------------|
@@ -94,5 +87,9 @@
 
 > TODO: [七、并查集](https://huxulm.github.io/lc-rating/list/data_structure)
 
-## Explanation
-> TODO: Add explanation videos
+## Graph Coloring
+| Problem          | Difficulty |
+|------------------|------------|
+|[785. Is Graph Bipartite?](../leetcode/785.is-graph-bipartite.md)|Medium|
+|[886. Possible Bipartition](../leetcode/886.possible-bipartition.md)|Medium|
+|[1042. Flower Planting With No Adjacent](../leetcode/1042.flower-planting-with-no-adjacent.md)|Medium (1712)|
