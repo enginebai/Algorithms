@@ -16,6 +16,7 @@
 |[1306. Jump Game III](../leetcode/1306.jump-game-iii.md)|Medium (1396)|
 |**[133. Clone Graph](../leetcode/133.clone-graph.md)|Medium|
 |[399. Evaluate Division](../leetcode/399.evaluate-division.md)|Medium|
+|[1466. Reorder Routes to Make All Paths Lead to the City Zero](../leetcode/1466.reorder-routes-to-make-all-paths-lead-to-the-city-zero.md)|Medium (1633)|
 |**[2192. All Ancestors of a Node in a Directed Acyclic Graph](../leetcode/2192.all-ancestors-of-a-node-in-a-directed-acyclic-graph.md)|Medium (1787)| Very tricky way to build topological sort. |
 |[2101. Detonate the Maximum Bombs](../leetcode/2101.detonate-the-maximum-bombs.md)|Medium (1880)|
 |**[721. Accounts Merge](../leetcode/721.accounts-merge.md)|Medium|
@@ -84,8 +85,11 @@
 |[684. Redundant Connection](../leetcode/684.redundant-connection.md)|Medium|
 |[721. Accounts Merge](../leetcode/721.accounts-merge.md)|Medium|
 |[2316. Count Unreachable Pairs of Nodes in an Undirected Graph](../leetcode/2316.count-unreachable-pairs-of-nodes-in-an-undirected-graph.md)|Medium (1604)|
+|[990. Satisfiability of Equality Equations](../leetcode/990.satisfiability-of-equality-equations.md)|Medium (1638)|
 
 > TODO: [七、并查集](https://huxulm.github.io/lc-rating/list/data_structure)
+> Solved:
+> https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/
 
 ## Graph Coloring
 | Problem          | Difficulty |

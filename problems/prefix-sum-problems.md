@@ -20,5 +20,8 @@
 | Problem                                                                | Difficulty |
 | ---------------------------------------------------------------------- | ---------- |
 | [560. Subarray Sum Equals K](../leetcode/560.subarray-sum-equals-k.md) | Medium     |
+|[1524. Number of Sub-arrays With Odd Sum](../leetcode/1524.number-of-sub-arrays-with-odd-sum.md)|Medium (1610)|
+
+> Solved: https://leetcode.com/problems/count-number-of-nice-subarrays, very similar to 560
 
 > - TODO: [前缀和与哈希表](https://huxulm.github.io/lc-rating/list/data_structure#57bd9b702cc3a23859ac62ef7232ab19)

@@ -195,6 +195,12 @@ val sortedMap = map.toSortedMap()
 // Sort the map by value (returns LinkedHashMap to preserve order)
 val sortedByValueAsc = map.entries.sortedBy { it.value }.associate { it.key to it.value }
 val sortedByValueDesc = map.entries.sortedByDescending { it.value }.associate { it.key to it.value }
+// Sort by multiple comparisons (for tie-breaker)
+val sortedByValueAndKey = map.entries.sortedWith(
+        compareBy<MutableMap.MutableEntry<String, Int>> { it.value }.thenBy { it.key }
+
+val graph = HashMap<Int, HashSet<Int>>()
+graph.getOrPut(a) { hashSetOf() }.add(b)
 ```
 
 #### `TreeMap`

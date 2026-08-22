@@ -30,6 +30,7 @@
 |------------------|------------|
 |[1221. Split a String in Balanced Strings](https://leetcode.com/problems/split-a-string-in-balanced-strings/description/)|Easy (1219)|
 |[605. Can Place Flowers](../leetcode/605.can-place-flowers.md)|Easy|
+|[2086. Minimum Number of Food Buckets to Feed the Hamsters](../leetcode/2086.minimum-number-of-food-buckets-to-feed-the-hamsters.md)|Medium (1622)|
 |[1529. Minimum Suffix Flips](../leetcode/1529.minimum-suffix-flips.md)|Medium (1392)|
 |[861. Score After Flipping Matrix](../leetcode/861.score-after-flipping-matrix.md)|Medium (1818)|
 

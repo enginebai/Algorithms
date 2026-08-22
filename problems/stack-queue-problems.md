@@ -114,11 +114,11 @@
 |[622. Design Circular Queue](../leetcode/622.design-circular-queue.md)|Medium|
 |[1823. Find the Winner of the Circular Game](../leetcode/1823.find-the-winner-of-the-circular-game.md)|Medium|
 |[641. Design Circular Deque](../leetcode/641.design-circular-deque.md)|Medium|
+|[1670. Design Front Middle Back Queue](../leetcode/1670.design-front-middle-back-queue.md)|Medium|
 
 > * https://leetcode.com/problems/number-of-recent-calls/description/ 1337
 > * https://leetcode.com/problems/reveal-cards-in-increasing-order/description/ 1686
 > * https://leetcode.com/problems/dota2-senate/description/ m
-> * https://leetcode.com/problems/design-front-middle-back-queue/description/ 1610
 
 ### Monotonic Queue
 | Problem          | Difficulty |

@@ -387,11 +387,14 @@ fun zeroOneBFS(graph: Array<IntArray>, start: Int, n: Int): Array<IntArray> {
 
 
 ## Union Find (Disjoin Set Union, DSU)
-_Union Find_ is a data structure to efficiently keep track of which elements belong to the same group (set, parent or root) and to merge groups. Union Find treats each node as a _disjoint set_ (part of a tree), each set is represented by its _root_ (parent) node.
+_Union Find_ is a data structure to efficiently keep track of which elements belong to the same group (set, parent or root) and to merge groups. As its cores, it answers one fundamental question efficiently: *"Are these two elements in the same group?"*
+
+### How it Works?
+Union Find treats each node as a _disjoint set_ (part of a tree), each set is represented by its _root_ node (parent, the canonical group leader).
 
 There are two main operations:
-1. `find(x)`: Find the root (representative of the set) of `x`.
-2. `union(x, y)`: Merge the sets of `x` and `y` into one.
+1. `find(x)`: Find the root (representative of the set) of `x`. If `find(A) == find(B)`, they are connected.
+2. `union(x, y)`: Merge the sets that contains `x` and `y` into one. To merge, we find their roots, then point one root to another.
 
 > 并查集（Union Find）结构是 *二叉树结构* 的衍生，用于高效解决无向图的连通性问题，可以在 `O(1)` 时间内合并两个连通分量，在 `O(1)` 时间内查询两个节点是否连通，在 `O(1)` 时间内查询连通分量的数量。
 
@@ -458,6 +461,7 @@ Final parent ≈ [0,0,0,3,3,5]
 - Grouping / merging items.
 
 ### Optimizations
+There are two core optimizations that makes DSU fast:
 1. Path compression: In `find(x)`, we flatten the tree by making all nodes point directly to the root. This reduces the tree height and speeds up future queries.
 
 > 讓 `find(x)` 操作中，把所有節點都直接連到 root，縮短未來查找時間。
@@ -473,14 +477,16 @@ a
        d // parent[d] = c
 
 // After path compression: We change the parent of each node to `a`
-        a
-    /  /  \
-   b  c    d // parent[b] == parent[c] == parent[d] == a
+       a
+    /  |  \
+   b   c   d // parent[b] == parent[c] == parent[d] == a
 ```
 
 2. Union by rank: In `union(x, y)`, we always attach the smaller tree to the root of the larger tree. This keeps the tree balanced and speeds up future queries.
 
 > 總是把較小（或較淺）集合接到較大（或較深）集合下，避免退化成鏈狀。
+
+Together, these optimizations bring the amortized time complexity per operation down to $O(\alpha(N))$, where $\alpha$ is the Inverse Ackermann function—effectively constant time ($O(1)$) for all practical inputs.
 
 ### Implementation
 

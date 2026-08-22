@@ -96,8 +96,8 @@ ans += left // which is 4
 |------------------|------------|
 |[3325. Count Substrings With K-Frequency Characters I](../leetcode/3325.count-substrings-with-k-frequency-characters-i.md)|Medium (1454)|
 |[2799. Count Complete Subarrays in an Array](../leetcode/2799.count-complete-subarrays-in-an-array.md)|Medium (1397)|
+|[1358. Number of Substrings Containing All Three Characters](../leetcode/1358.number-of-substrings-containing-all-three-characters.md)|Medium (1646)|
 
-> * https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/description/ 1646
 > * https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/description/ 1700
 > * https://leetcode.com/problems/count-the-number-of-good-subarrays/description/ 1892
 
@@ -140,9 +140,9 @@ ans += right - left + 1 // which is 3
 
 | Problem          | Difficulty |
 |------------------|------------|
+|[1248. Count Number of Nice Subarrays](../leetcode/1248.count-number-of-nice-subarrays.md)|Medium (1623)|
 
 > * https://leetcode.com/problems/binary-subarrays-with-sum/description/ 1591
-> * https://leetcode.com/problems/count-number-of-nice-subarrays/description/ 1623
 
 > TODO: https://huxulm.github.io/lc-rating/list/slide_window#12212548d1984e7442fb1759acf6f690
 
