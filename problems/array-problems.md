@@ -15,6 +15,9 @@
 | [1014. Best Sightseeing Pair](../leetcode/1014.best-sightseeing-pair.md)                                                             | Medium (1730) | Seen `values[i] + i`, enumerate `values[j] - j`. |
 | [1814. Count Nice Pairs in an Array](../leetcode/1814.count-nice-pairs-in-an-array.md)                                               | Medium (1737) | Seen `A - rev(A)`, enumerate `B - rev(B)`. |
 
+> Solved: https://leetcode.com/problems/count-number-of-bad-pairs/description/ 1622
+
+
 #### 枚舉中間
 
 | Problem                                                                                                       | Difficulty    | Note |

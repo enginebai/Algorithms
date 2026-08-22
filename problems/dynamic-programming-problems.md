@@ -1,8 +1,5 @@
 ## [Dynamic Programming](../topics/dynamic-programming.md)
 
-> * Problem listing: https://leetcode.cn/circle/discuss/E3yavq/#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%AF%87
-> * Problem listing: https://huxulm.github.io/lc-rating/list/dp 
-
 ### Basic
 | Problem          | Difficulty |
 |------------------|------------|
@@ -20,8 +17,10 @@
 |------------------|------------|
 |[70. Climbing Stairs](../leetcode/70.climbing-stairs.md)|Easy|
 |[746. Min Cost Climbing Stairs](../leetcode/746.min-cost-climbing-stairs.md)|Easy|
+|[3693. Climbing Stairs II](../leetcode/3693.climbing-stairs-ii.md)|Medium (1560)|
 |[377. Combination Sum IV](../leetcode/377.combination-sum-iv.md)|Medium|
-|[740. Delete and Earn](../leetcode/740.delete-and-earn.md)|Medium|
+|[518. Coin Change 2](../leetcode/518.coin-change-ii.md)|Medium|
+|[2466. Count Ways to Build Good Strings](../leetcode/2466.count-ways-to-build-good-strings.md)|Medium (1694)|
 
 ### House Robber
 | Problem          | Difficulty |
@@ -29,6 +28,7 @@
 |[198. House Robber](../leetcode/198.house-robber.md)|Medium|
 |[213. House Robber II](../leetcode/213.house-robber-ii.md)|Medium|
 |[337. House Robber III](../leetcode/337.house-robber-iii.md)|Medium|
+|[740. Delete and Earn](../leetcode/740.delete-and-earn.md)|Medium|
 
 ### Maximum Subarray Sum
 | Problem          | Difficulty |
