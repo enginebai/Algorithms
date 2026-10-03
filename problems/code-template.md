@@ -286,12 +286,6 @@ while (queue.isNotEmpty()) {
 }
 ```
 
-## BFS Shortest Path
-
-```kotlin
-
-```
-
 ## Return the Answer Modulo 1e9 + 7
 
 ```kotlin
